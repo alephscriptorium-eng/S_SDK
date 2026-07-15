@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:pub.escrivivir.co)",
+      "WebFetch(domain:escrivivir.co)"
+    ]
+  }
+}
