@@ -18,10 +18,15 @@ Platón). Así tres fuentes rinden cuatro holones.
 | 02 | [Logos (Sócrates/Platón)](holones/02-logos.md) | racional — la razón busca el Bien tras las apariencias | juntura 01↔03 | pendiente |
 | 03 | [Revelación (Cristo)](holones/03-revelacion.md) | personal — el Bien se hace persona, la gracia rompe el destino | fuente directa | pendiente |
 | 04 | [Razón inmanente (Ilustración)](holones/04-ilustracion.md) | embudo — seculariza la promesa, un solo método legítimo | fuente directa | pendiente |
-| 05 | [Sospecha (Nietzsche/Marx/Freud)](holones/05-sospecha.md) | desenmascara el embudo — la razón como máscara | a generar | cabo suelto |
-| 06 | [Posmodernidad (Lyotard/Foucault)](holones/06-posmodernidad.md) | fin de los metarrelatos — todo fragmenta | a generar | cabo suelto |
+| 05 | [Sospecha (Nietzsche/Marx/Freud)](holones/05-sospecha.md) | desenmascara el embudo — la razón como máscara | a generar | cabo suelto narrativo · **anclado**: el agujero negro (`aleph-scriptorium/plan/`, digestión S0/S3/S4) |
+| 06 | [Posmodernidad (Lyotard/Foucault)](holones/06-posmodernidad.md) | fin de los metarrelatos — todo fragmenta | a generar | cabo suelto narrativo · **anclado**: la constelación spinoff (registry + r/s/h, S1/S2) |
+| 07 | [SCRIPT_SDK (la holarquía como método)](holones/07-script-sdk.md) | holárquica — el método que sostiene fragmentos sin metarrelato | **emergente** — juntura 06↔07 | activo |
 
 Tres fuentes entran (01, 03, 04); 02 se destila de la juntura; 05 y 06 quedan
-como cabo suelto, para generarse en ronda posterior por la misma ley de
-junturas. Cada holón vive en `holones/`; el material excedente de las
-grietas, en `holones/junturas/`. Plantilla: `holones/TEMPLATE.md`.
+como cabo suelto narrativo, ya **anclados a piezas técnicas** (2026-07-15,
+rutas absolutas — la pieza es una: el plan del spinoff, partido en sus dos
+naturalezas). El 07 **emergió al escribirse este registro**: el registro de
+holones se descubrió siendo él mismo un holón — esta codebase, que relee y
+ancla a todos los anteriores sin contenerlos. Cada holón vive en `holones/`;
+el material excedente de las grietas, en `holones/junturas/`. Plantilla:
+`holones/TEMPLATE.md`.

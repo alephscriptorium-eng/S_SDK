@@ -14,4 +14,7 @@ Junturas activas (una por par consecutivo de holones vivos):
 - [`02-03-logos-revelacion.md`](02-03-logos-revelacion.md) — el logos da lengua a la Encarnación.
 - [`03-04-revelacion-ilustracion.md`](03-04-revelacion-ilustracion.md) — la gracia se universaliza en razón.
 
-Cabo suelto: `04-05` y `05-06` se abrirán al generar los holones 05 y 06.
+- [`05-06-sospecha-constelacion.md`](05-06-sospecha-constelacion.md) — lo que la sospecha desentierra, la constelación lo federa (pieza: el INVENTARIO del plan spinoff).
+- [`06-07-posmodernidad-metodo.md`](06-07-posmodernidad-metodo.md) — de la fragmentación al método: el registro se descubre holón.
+
+Cabo suelto: `04-05` se abrirá al generar narrativamente el holón 05.
