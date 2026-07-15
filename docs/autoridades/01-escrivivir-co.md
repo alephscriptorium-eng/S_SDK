@@ -27,4 +27,4 @@ Ocio, cultura, sociedad, ecología.
 - Investigación P2P/WebRTC.
 
 ## Contacto
-secretaria@escrivivir.co · Twitch / Kick / YouTube.
+secretaria@escrivivir.co 
