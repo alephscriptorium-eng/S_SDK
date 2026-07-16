@@ -40,7 +40,7 @@ de scrum**, jamás la moneda (DE-5, DE-6).
 
 ## Ola D1 — Las Notas (las piezas del pack)
 
-- 🔶 **WP-D10 · Nota 1 · La forma M** *(agente pendiente · 2026-07-16)* — la M en una página, **como forma, no
+- ✅ **WP-D10 · Nota 1 · La forma M** *(aceptado · 2026-07-16)* — la M en una página, **como forma, no
   como física**, en **dos estratos con su sello** (DA-2 cerrada): (1) la
   **lección** — hechos de manual con consenso (cinco teorías-fragmento como
   nodos, dualidades T/S como junturas, formulación completa que nadie

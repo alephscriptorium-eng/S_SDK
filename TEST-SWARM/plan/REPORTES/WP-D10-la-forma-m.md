@@ -97,4 +97,6 @@ Ninguno bloqueante.
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+- **Estado:** Aceptado ✅
+- **CA:** verificados (`validar-ensayo.sh` VERDE; diff `main...wp/d10-la-forma-m` solo `TEST-SWARM/`; entregable `NOTAS/nota-1-la-forma-m.md` + reporte)
+- **Merge a `main`:** 2026-07-16 (merge commit `wp/d10-la-forma-m` → `main`, `1f0a810`)
