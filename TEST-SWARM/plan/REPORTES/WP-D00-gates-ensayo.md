@@ -5,7 +5,7 @@
 | agente | worker WP-D00 |
 | fecha | 2026-07-16 |
 | rama | `wp/d00-gates-ensayo` |
-| commits | `2208952`, `2dfe8bd`, _(corregido en commit …)_ |
+| commits | `2208952`, `2dfe8bd`, `9ec2cd3` (corregido tras devolución) |
 | estado propuesto | devuelto-corregido |
 
 ## Qué se hizo
