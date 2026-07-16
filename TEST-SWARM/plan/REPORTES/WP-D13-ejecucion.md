@@ -5,7 +5,7 @@
 | agente | worker D13 (subagente) |
 | fecha | 2026-07-16 |
 | rama | `wp/d13-ejecucion` |
-| commits | `36ea4a7` |
+| commits | `c95e6a8` |
 | estado propuesto | listo para revisión |
 
 ## Qué se hizo
@@ -30,7 +30,7 @@ Preparing worktree (new branch 'wp/d13-ejecucion')
 HEAD is now at e6e4d8c docs(TEST-SWARM): aceptar WP-D11 en backlog y reporte
 
 $ cd C:/Users/aleph/SCRIPT_SDK-wp-d13 && git commit ...
-[wp/d13-ejecucion 36ea4a7] docs(TEST-SWARM): Nota 3 — ejecución trazada modo Nota G
+[wp/d13-ejecucion c95e6a8] docs(TEST-SWARM): Nota 3 — ejecución trazada modo Nota G
  2 files changed, 181 insertions(+)
 
 $ cd C:/Users/aleph/SCRIPT_SDK-wp-d13/TEST-SWARM && bash validar-ensayo.sh
