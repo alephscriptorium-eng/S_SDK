@@ -88,4 +88,6 @@ Ninguno bloqueante.
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+- **Estado:** Aceptado ✅
+- **CA:** verificados (diff solo `TEST-SWARM/`, entregable `GUION.md` + reporte)
+- **Merge a `main`:** 2026-07-16 (fast-forward `wp/d01-guion-pack` → `main`)
