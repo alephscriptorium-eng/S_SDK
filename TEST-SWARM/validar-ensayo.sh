@@ -183,6 +183,8 @@ gate_c_verificado() {
 
   while IFS= read -r -d '' md; do
     [[ "${modo}" != "violacion" ]] && excluir_escaneo_normal "${md}" && continue
+    # meta del ensayo (reportes WP), no pack — evita falsos positivos por evidencia literal
+    [[ "${modo}" != "violacion" && "${md}" == *"/plan/REPORTES/"* ]] && continue
     # acta v1 histórica: fuente con sellos narrativos, fuera del pack nuevo
     [[ "${modo}" != "violacion" && "${md}" == *"Municiones"* ]] && continue
     local num=0

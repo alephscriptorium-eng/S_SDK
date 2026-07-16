@@ -5,8 +5,8 @@
 | agente | worker WP-D00 |
 | fecha | 2026-07-16 |
 | rama | `wp/d00-gates-ensayo` |
-| commits | `2208952`, `2dfe8bd` |
-| estado propuesto | listo para revisión |
+| commits | `2208952`, `2dfe8bd`, _(corregido en commit …)_ |
+| estado propuesto | devuelto-corregido |
 
 ## Qué se hizo
 
@@ -17,24 +17,31 @@ con fixtures sintéticos y modo `--violacion` (a|b|c|d|e|todas) para demostrar
 rojo por cada tipo. Sin desviaciones del WP; no se tocó GUION.md ni entregables
 de D01.
 
+**Corrección tras devolución:** gate (c) escaneaba `plan/REPORTES/` y la
+evidencia literal del reporte (salida de `--violacion c`) se interpretaba como
+ruta Verificado real. Se excluyó `plan/REPORTES/` del escaneo gate (c) en modo
+normal — meta del ensayo, no pack (análogo a la exclusión de `plan/` en gate e).
+
 ## Archivos tocados
 
-- `TEST-SWARM/validar-ensayo.sh` — creado: script raíz con gates a–e y modo violación
+- `TEST-SWARM/validar-ensayo.sh` — creado: script raíz con gates a–e y modo violación; corregido: exclusión `plan/REPORTES/` en gate (c)
 - `TEST-SWARM/pruebas-violacion/gate-a-fuera-test-swarm.txt` — creado: fixture gate (a)
 - `TEST-SWARM/pruebas-violacion/gate-b-nombre-ingles/legacy-readme.md` — creado: fixture gate (b)
 - `TEST-SWARM/pruebas-violacion/gate-c-ruta-fantasma.md` — creado: fixture gate (c)
 - `TEST-SWARM/pruebas-violacion/gate-d-arbol-copiado/zeus/config.json` — creado: fixture gate (d)
 - `TEST-SWARM/pruebas-violacion/gate-e-moneda.md` — creado: fixture gate (e)
+- `TEST-SWARM/plan/REPORTES/WP-D00-gates-ensayo.md` — actualizado: evidencia y corrección
 
 ## Evidencia
 
-### Verde — TEST-SWARM actual (post-commit)
+### Verde — TEST-SWARM actual (post-corrección)
 
 ```
 validar-ensayo.sh — repo: /c/Users/aleph/SCRIPT_SDK-wp-d00
 base: main | ámbito: TEST-SWARM/
 
 === Gate (a): diff solo dentro de TEST-SWARM/ ===
+  ✓ TEST-SWARM/plan/REPORTES/WP-D00-gates-ensayo.md
   ✓ TEST-SWARM/pruebas-violacion/gate-a-fuera-test-swarm.txt
   ✓ TEST-SWARM/pruebas-violacion/gate-b-nombre-ingles/legacy-readme.md
   ✓ TEST-SWARM/pruebas-violacion/gate-c-ruta-fantasma.md
@@ -56,7 +63,7 @@ base: main | ámbito: TEST-SWARM/
 
 
 --- Resumen ---
-  OK:   10
+  OK:   11
   FAIL: 0
 RESULTADO: VERDE
 ```
@@ -76,7 +83,7 @@ RESULTADO: ROJO
 RESULTADO: ROJO
 
 === Gate (c): rutas bajo sello Verificado existen ===
-  ✗ Verificado → ruta inexistente: SCRIPT_SDK/ruta/que/no/existe.md (en pruebas-violacion/gate-c-ruta-fantasma.md:3)
+  ✗ ruta inexistente bajo sello (fixture): SCRIPT_SDK/ruta/que/no/existe.md (en pruebas-violacion/gate-c-ruta-fantasma.md:3)
 RESULTADO: ROJO
 
 === Gate (d): cero árboles copiados de otros mundos ===
@@ -98,9 +105,9 @@ cd ../SCRIPT_SDK-wp-d00/TEST-SWARM && bash validar-ensayo.sh --violacion todas
 
 ## Auto-revisión (PRACTICAS §4 — con honestidad)
 
-- [x] Diff solo dentro de TEST-SWARM/: sí; solo `TEST-SWARM/validar-ensayo.sh` y `TEST-SWARM/pruebas-violacion/`
+- [x] Diff solo dentro de TEST-SWARM/: sí; solo `TEST-SWARM/validar-ensayo.sh`, `TEST-SWARM/pruebas-violacion/` y reporte
 - [x] Cero árboles/ficheros copiados de otros mundos (salvo `fanzine.css` con cabecera): sí; fixtures son sintéticos mínimos
-- [x] Sellos con fuente; rutas citadas existentes: gate (c) verde; sin sellos Verificado con rutas en plan/ actual
+- [x] Sellos con fuente; rutas citadas existentes: gate (c) verde; `plan/REPORTES/` excluido del escaneo (meta, no pack)
 - [x] Nombres en castellano, sin transición: `validar-ensayo.sh`, `pruebas-violacion/`; sin `legacy` fuera de fixtures
 - [x] Sin fluff ni promesa de futuro sin `<pendiente>`; las Notas, no el pitch: sí (solo código instrumental)
 - [x] Cero moneda; munición = idea/obra; cifras en puntos de scrum (gate e): gate (e) excluye `plan/` y acta v1 histórica del ámbito pack
@@ -109,10 +116,12 @@ cd ../SCRIPT_SDK-wp-d00/TEST-SWARM && bash validar-ensayo.sh --violacion todas
 - [x] Gates ejecutados de verdad: sí; salida literal arriba
 - [x] Commits convencionales: `test(TEST-SWARM): gates a–e del ensayo con fixtures de violación`
 - [x] Diff solo del alcance: sí; WP-D00 únicamente
+- [x] Corrección devolución: exclusión `plan/REPORTES/` en gate (c); evidencia verde/rojo re-ejecutada
 
 ## Hallazgos fuera de alcance
 
 - Gate (e) requiere excluir `plan/` (meta que describe los patrones prohibidos) y el acta v1 histórica para ser verde sobre el árbol actual; documentado en el script.
+- Gate (c) requiere excluir `plan/REPORTES/` (meta con evidencia literal de salidas de gate) para evitar falsos positivos; análogo a gate (e).
 - `grep` dentro de bucles `while read` cuelga en Git Bash Windows; el script usa `[[ =~ ]]` y lectura con `tr -d '\r'`.
 
 ## Dudas / bloqueos
@@ -123,4 +132,4 @@ Ninguno.
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+_(vacío — pendiente de re-revisión)_
