@@ -49,34 +49,16 @@ git push -u origin main
 
 ## Dry-run (worker — sin tocar `main` ni `draft`)
 
-El worker **no ejecuta** los pasos 4–5. Tras el paso 3 verifica el árbol en
-`main-sitio`, borra la rama de usar-y-tirar y limpia `../_ensayo`. `main` y
-`draft` deben quedar con el mismo SHA que antes.
+El worker **no ejecuta** los pasos 4–5. Ejecutar desde la raíz del repo:
 
 ```bash
-MAIN_ANTES=$(git rev-parse main)
-DRAFT_ANTES=$(git rev-parse draft)
-
-cp -r TEST-SWARM ../_ensayo
-git checkout --orphan main-sitio
-git rm -rf .
-mkdir docs && cp -r ../_ensayo/docs/* docs/
-rm -rf TEST-SWARM
-cp -r ../_ensayo TEST-SWARM && rm -rf TEST-SWARM/docs
-git add docs TEST-SWARM && git commit -m "docs: pack demo + ensayo para Pages (dry-run)"
-
-# Verificación (CA del WP)
-test "$(git rev-list --count main-sitio)" -eq 1
-test -d docs && test -d TEST-SWARM && test ! -d TEST-SWARM/docs
-! test -e HIPOTESIS.md && ! test -e DEVOPS && ! test -e LLM.md
-
-git checkout wp/d22-estreno-publico
-git branch -D main-sitio
-rm -rf ../_ensayo
-
-test "$(git rev-parse main)" = "$MAIN_ANTES"
-test "$(git rev-parse draft)" = "$DRAFT_ANTES"
+bash TEST-SWARM/estreno-dry-run.sh
 ```
+
+El script crea `main-sitio`, verifica el árbol (huérfana, solo `docs/` +
+`TEST-SWARM/`, sin backstage ni sitio duplicado), borra la rama de
+usar-y-tirar y limpia `../_ensayo`. `main` y `draft` deben quedar con el mismo
+SHA que antes.
 
 ---
 
