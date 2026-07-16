@@ -5,7 +5,7 @@
 | agente | worker WP-D21 |
 | fecha | 2026-07-16 |
 | rama | `wp/d21-acta-ensayo` |
-| commits | _(tras commit de entrega)_ |
+| commits | `bbca9de` |
 | estado propuesto | listo para revisión |
 
 ## Qué se hizo
@@ -61,8 +61,27 @@ citadas en `ACTA-ENSAYO.md` §IV.
 
 ```
 $ cd C:/Users/aleph/SCRIPT_SDK-wp-d21/TEST-SWARM && bash validar-ensayo.sh
-(ver salida post-commit abajo)
+validar-ensayo.sh — repo: /c/Users/aleph/SCRIPT_SDK-wp-d21
+base: main | ámbito: TEST-SWARM/
+
+=== Gate (a): diff solo dentro de TEST-SWARM/ ===
+  ✓ TEST-SWARM/ACTA-ENSAYO.md
+  ✓ TEST-SWARM/plan/REPORTES/WP-D21-acta-ensayo.md
+
+=== Gate (c): rutas bajo sello Verificado existen ===
+  ✓ todas las rutas Verificado comprobadas (post-corrección pseudo-ruta en §V)
+
+=== Gate (e): cero moneda / munición=dinero en el pack ===
+  ✓ sin patrones monetarios/munición-dinero en el pack
+
+--- Resumen ---
+  OK:   81
+  FAIL: 0
+RESULTADO: VERDE
 ```
+
+**Nota:** primera pasada ROJA en gate (c) por `s://…` en tabla §V (misma clase de
+falso positivo que D10); corregido antes del commit `bbca9de`.
 
 ## Auto-revisión (PRACTICAS §4 — con honestidad)
 
