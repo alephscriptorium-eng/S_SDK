@@ -14,7 +14,7 @@ Cómo relee y reinterpreta a los holones anteriores (solo si hay antecesor).
 
 ## Juntura de entrada
 Qué grieta del holón anterior hace posible a este. Enlaza a
-`docs/holones/junturas/`.
+`holones/junturas/`.
 
 ## Encarnación técnica
 **Ancla:** ruta absoluta a la codebase (DS-5: apuntar, no contener) |
@@ -26,7 +26,9 @@ Qué grieta del holón anterior hace posible a este. Enlaza a
 ### Plan de armado
 Cómo se compone esta pieza desde SCRIPT_SDK — qué se consume del registry,
 qué queda en la codebase anclada, y qué juntura técnica lo une. Armarse
-*desde*, nunca *dentro*: sin submodules, sin copiar árboles.
+*desde*, nunca *dentro*: el veto es **inflar o copiar árboles**. El
+submodule-como-puntero lo decide cada mundo en su propio plan (precedente:
+DE-1 de emmanuel-sdk, submodule = puntero git, no copia).
 
 ## Material
 (contenido propio del holón — lo vierte la fuente en la próxima ronda)
