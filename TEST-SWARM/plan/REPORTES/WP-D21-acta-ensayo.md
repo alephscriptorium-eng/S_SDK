@@ -115,4 +115,9 @@ Ninguno.
 
 ## Revisión del orquestador
 
-_(pendiente)_
+**Aceptado ✅** (2026-07-16)
+
+1. `validar-ensayo.sh` VERDE en worktree D21 (82 OK, 0 FAIL; gates a–e).
+2. `ACTA-ENSAYO.md` con inventario D00–D20, commits y reportes enlazados; devolución D00 §IV; veredicto explícito §VIII.
+3. Diff de merge: solo `ACTA-ENSAYO.md` + reporte WP-D21 (gate a).
+4. Hallazgos obligatorios del veredicto quedan para mantenimiento / D22; no bloquean aceptación de la retrospectiva.

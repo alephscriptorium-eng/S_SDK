@@ -153,7 +153,7 @@ de scrum**, jamás la moneda (DE-5, DE-6).
   pack; la moira funciona en Pages (JS estático); `origin` sin rastro de
   `draft`.
 
-- 🔶 **WP-D21 · Acta del ensayo** *(agente pendiente · 2026-07-16)* — retrospectiva del ensayo general: qué
+- ✅ **WP-D21 · Acta del ensayo** *(aceptado · 2026-07-16)* — retrospectiva del ensayo general: qué
   enseñó el protocolo (fricciones, tiempos, devoluciones, huecos de los
   roles), como insumo para el primer swarm real.
   **CA:** acta con evidencia (rutas a reportes y commits de este mismo
