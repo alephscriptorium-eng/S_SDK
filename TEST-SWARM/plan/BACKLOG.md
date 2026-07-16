@@ -40,7 +40,7 @@ de scrum**, jamás la moneda (DE-5, DE-6).
 
 ## Ola D1 — Las Notas (las piezas del pack)
 
-- ⬜ **WP-D10 · Nota 1 · La forma M** — la M en una página, **como forma, no
+- 🔶 **WP-D10 · Nota 1 · La forma M** *(agente pendiente · 2026-07-16)* — la M en una página, **como forma, no
   como física**, en **dos estratos con su sello** (DA-2 cerrada): (1) la
   **lección** — hechos de manual con consenso (cinco teorías-fragmento como
   nodos, dualidades T/S como junturas, formulación completa que nadie
@@ -54,7 +54,7 @@ de scrum**, jamás la moneda (DE-5, DE-6).
   afirmación física fuera de procedencia citada o `<pendiente>`; gate (c)
   verde.
 
-- ⬜ **WP-D11 · Nota 2 · La máquina y sus partes** — descripción estilo
+- 🔶 **WP-D11 · Nota 2 · La máquina y sus partes** *(agente pendiente · 2026-07-16)* — descripción estilo
   Menabrea del método (la máquina) + el espejo M↔casa. La máquina: dos leyes
   (ceguera ascendente / acceso descendente), crecimiento por junturas,
   sellos, registry. Correspondencias mínimas del espejo: teoría ↔ mundo
@@ -77,7 +77,7 @@ de scrum**, jamás la moneda (DE-5, DE-6).
   reproducible por un lector sin contexto; cada paso con su sello; gates
   verdes.
 
-- ⬜ **WP-D12 · Reedición del acta (v2)** — el acta Municiones saneada, como
+- 🔶 **WP-D12 · Reedición del acta (v2)** *(agente pendiente · 2026-07-16)* — el acta Municiones saneada, como
   **sección propia al cierre del pack** (DA-3 cerrada): el último acto de
   `index.html`, no página aparte. Correcciones respecto a v1: (a)
   **munición = ideas/obra** para disidentes narrativos (línea Ibáñez),
