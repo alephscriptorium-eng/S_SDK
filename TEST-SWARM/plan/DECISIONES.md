@@ -36,12 +36,18 @@ decisión, consecuencia. Las abiertas (DA-n) las resuelve el custodio.
   constelación (coherente con el mapa de masas del inversor), jamás
   unidades monetarias. El acta v1 = fuente histórica intocada; el acta v2
   (WP-D12) la corrige. Decisión del custodio.
-- **DE-7 · 2026-07-16 · Canal de publicación: repo dedicado + Pages.** El
-  escenario se publica en `github.com/alephscriptorium-eng/S_SDK` (rama
-  `main`) servido por GitHub Pages. **Solo escenario**: el backstage
-  (SCRIPT_SDK entero, plan/, fuentes) permanece local. Estilo release
-  (DS-5): lo que merece compartirse, se publica a un canal; el árbol de
-  trabajo no se expone.
+- **DE-7 · 2026-07-16 · Canal de publicación: `main` huérfana en este mismo
+  repo.** Se conserva el *fin* (el backstage no se expone) y se fija el
+  *mecanismo* elegido por el custodio: publicar a
+  `github.com/alephscriptorium-eng/S_SDK` (remote `origin`) desde SCRIPT_SDK,
+  con **`main` huérfana = solo `docs/`** (la doc para Pages, sin historia ni
+  árbol backstage) y **`draft` = backstage local que JAMÁS se empuja** (el
+  custodio ya creó `draft` desde `main`, `e18ff9c`, como copia del
+  backstage). Pages sirve `main` /docs. La orfandad es la garantía: `main`
+  no puede filtrar la raíz backstage (HIPOTESIS, DEVOPS, LLM.md,
+  autoridades) porque no la contiene. **Ampliada por DA-4:** `main` lleva
+  `docs/` (el sitio) **y** `TEST-SWARM/` (el ensayo conservado, sin
+  duplicar el sitio). Runbook literal en WP-D22.
 - **DE-8 · 2026-07-16 · Look: la plantilla fanzine de la casa.** El pack y
   el acta v2 se maquetan sobre el poster-template monocromo de
   pub.escrivivir.co (procedencia:
@@ -53,21 +59,38 @@ decisión, consecuencia. Las abiertas (DA-n) las resuelve el custodio.
 
 ## Abiertas (bloquean lo indicado)
 
-- **DA-2 · Estatuto de la analogía M** *(bloquea el tono de WP-D10)* —
-  siempre **como forma, no como física** (DE-4); queda por decidir el sello:
-  ¿lore firmado como pagaré (al modo de `SCRIPT_SDK/DEVOPS/VISION.md`
-  §lore) o ilustración didáctica sin compromiso? Cambia el sello del tramo
-  entero. *(Recomendación registrada: lore firmado — la analogía ya está
-  firmada como pagaré; rebajarla a didáctica la desdice.)*
-- **DA-3 · Relación Notas ↔ acta v2** *(bloquea WP-D12)* — ¿el acta v2 se
-  integra dentro del pack como sección final, lo acompaña como pieza
-  hermana enlazada, o vive solo?
-- **DA-4 · Tras el estreno** *(no bloquea)* — ¿el ensayo se conserva como
-  documentación del método (insumo de WP-D21) o se demuele (DE-0 lo
-  permite)? Decisión del custodio tras leer el feedback de los ángeles.
+*(ninguna — todas las decisiones abiertas están cerradas a 2026-07-16)*
 
 ## Cerradas
 
 - **DA-1 · Formato final del pack** — **cerrada 2026-07-16 (custodio):** HTML
   autocontenido (`index.html`) sobre plantilla fanzine (DE-8), publicado por
   Pages (DE-7). Desbloquea WP-D20.
+- **DA-2 · Estatuto de la analogía M** — **cerrada 2026-07-16 (custodio):
+  dos estratos, cada uno con su sello, nunca mezclados.** En paladino:
+  cuando el pack habla de la M, dice dos cosas distintas y las distingue.
+  (1) **La lección** — hechos de manual (cinco teorías de cuerdas,
+  dualidades que las traducen, formulación completa que nadie tiene):
+  divulgación con consenso, sello **Verificado** + fuente pública. El
+  visitante se lleva la clase gratis, venga o no por el producto.
+  (2) **La apuesta** — que esa forma sea un holón 06, que el centro vacío
+  delate un peldaño faltante, que lo abra un taller mixto: lore de la casa,
+  ya firmado como pagaré (`SCRIPT_SDK/DEVOPS/VISION.md` §lore), sello
+  **Doctrina**, declarado apuesta y pendiente de auditoría (05). El lector
+  sabe siempre cuándo está en clase y cuándo en la casa de apuestas.
+  Desbloquea el tono de WP-D10.
+- **DA-3 · Relación Notas ↔ acta v2** — **cerrada 2026-07-16 (custodio
+  delega, decide el plan): sección propia al cierre del pack.** El pack ES
+  la v2 de la web (el diseño absorbió ese concepto); el acta no es página
+  aparte ni pie de página: es el **último acto**, sección entera y suya
+  dentro de `index.html`, con su moira. Desbloquea WP-D12.
+- **DA-4 · Tras el estreno** — **cerrada 2026-07-16 (custodio):
+  conservar.** El ensayo (TEST-SWARM entero: plan, GUION, NOTAS, actas) se
+  añade al git y **se publica junto con `docs/`** en la `main` huérfana: el
+  método a la vista es parte de la demostración. Nota al push: TEST-SWARM
+  incluye el acta v1 (.htm) como fuente histórica declarada; si el custodio
+  no la quiere pública, la excluye en WP-D22.
+- **DA-5 · Credencial de publicación** — **cerrada 2026-07-16 (custodio):
+  nadie hace push salvo el custodio.** Los workers jamás empujan; el 403
+  (`denied to escrivivir-co`) es asunto del custodio fuera del plan. El
+  runbook de WP-D22 termina donde empieza el push.

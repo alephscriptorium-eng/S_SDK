@@ -39,8 +39,9 @@ Reporte: TEST-SWARM/plan/REPORTES/WP-D01-guion-pack.md
 Lecturas extra:
 - plan/VISION.md §el género (las Notas), §la idea y §candados
 - plan/DECISIONES.md DE-2/DE-4/DE-5/DE-6 (tramos, género Lovelace,
-  munición≠moneda, punto de scrum) y DA-2/DA-3 (abiertas: no las
-  resuelvas; el guion las señala como bifurcaciones del custodio)
+  munición≠moneda, punto de scrum) y las DA cerradas — en especial DA-2
+  (dos estratos lección/apuesta, cada uno con su sello) y DA-3 (el acta v2
+  es sección final propia del pack)
 - ../Municiones — acta de inversión en una página.htm (SOLO lectura: los
   sellos y la moira a respetar; OJO contaminación de v1 —munición=pólvora=
   dinero— que el guion NO hereda: el acta v2 la corrige, WP-D12)

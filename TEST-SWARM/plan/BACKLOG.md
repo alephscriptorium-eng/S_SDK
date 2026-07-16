@@ -40,14 +40,19 @@ de scrum**, jamás la moneda (DE-5, DE-6).
 
 ## Ola D1 — Las Notas (las piezas del pack)
 
-- ⬜ **WP-D10 · Nota 1 · La forma M** *(tono bloqueado por DA-2)* — la M en
-  una página, **como forma, no como física**. Cinco teorías-fragmento
-  (nodos), dualidades T/S como junturas (aristas), y el **centro vacío**: M
-  no es una sexta teoría sino la afirmación de que falta el peldaño.
-  Entregable: `NOTAS/nota-1-la-forma-m.md` (topología + mapa).
+- ⬜ **WP-D10 · Nota 1 · La forma M** — la M en una página, **como forma, no
+  como física**, en **dos estratos con su sello** (DA-2 cerrada): (1) la
+  **lección** — hechos de manual con consenso (cinco teorías-fragmento como
+  nodos, dualidades T/S como junturas, formulación completa que nadie
+  tiene), sello Verificado + fuente pública; (2) la **apuesta** — el centro
+  vacío leído como peldaño faltante (holón 06), sello Doctrina con ancla al
+  pagaré (`SCRIPT_SDK/DEVOPS/VISION.md` §lore), declarada apuesta. Entregable:
+  `NOTAS/nota-1-la-forma-m.md` (topología + mapa).
   **CA:** cinco nodos y sus dualidades nombradas con fuente pública citada;
-  el centro representado como vacío, no como nodo; ninguna afirmación física
-  fuera de procedencia citada o `<pendiente>`; gate (c) verde.
+  el centro representado como vacío, no como nodo; **cada afirmación
+  asignada a su estrato y sello, sin mezcla** (lección≠apuesta); ninguna
+  afirmación física fuera de procedencia citada o `<pendiente>`; gate (c)
+  verde.
 
 - ⬜ **WP-D11 · Nota 2 · La máquina y sus partes** — descripción estilo
   Menabrea del método (la máquina) + el espejo M↔casa. La máquina: dos leyes
@@ -72,15 +77,17 @@ de scrum**, jamás la moneda (DE-5, DE-6).
   reproducible por un lector sin contexto; cada paso con su sello; gates
   verdes.
 
-- ⬜ **WP-D12 · Reedición del acta (v2)** *(bloqueado por DA-3)* — el acta
-  Municiones saneada, sobre plantilla fanzine (DE-8). Correcciones respecto
-  a v1: (a) **munición = ideas/obra** para disidentes narrativos (línea
-  Ibáñez), pólvora fuera; (b) **100.000 puntos de scrum** repartidos sobre
-  los backlogs de la constelación (40k taller / 25k federación / 25k obra /
+- ⬜ **WP-D12 · Reedición del acta (v2)** — el acta Municiones saneada, como
+  **sección propia al cierre del pack** (DA-3 cerrada): el último acto de
+  `index.html`, no página aparte. Correcciones respecto a v1: (a)
+  **munición = ideas/obra** para disidentes narrativos (línea Ibáñez),
+  pólvora fuera; (b) **100.000 puntos de scrum** repartidos sobre los
+  backlogs de la constelación (40k taller / 25k federación / 25k obra /
   10k fondo, re-denominados), jamás unidades monetarias; (c) género
   comparecencia/demostración, no solicitud; la moira se conserva. El HTML
   v1 (`../Municiones — acta de inversión en una página.htm`) **no se toca**:
-  fuente histórica. Entregable en `TEST-SWARM/` (formato según DA-1).
+  fuente histórica. Entregable: `ACTA-V2.md` en `TEST-SWARM/` (el contenido
+  de la sección; D20 la maqueta).
   **CA:** gate (e) verde (cero moneda, cero munición=dinero); sellos con
   fuente; puntos de scrum suman 100.000; moira operativa.
 
@@ -96,21 +103,56 @@ de scrum**, jamás la moneda (DE-5, DE-6).
   máquina acaba de correr delante de usted; el vacío queda declarado — y el
   acta v2 dice cuántos puntos de obra cuesta abrirlo». Una sola pieza
   navegable (`index.html`, DA-1): guion → Nota 1 → Nota 2 → Nota 3 →
-  superposición → acta v2.
-  **CA:** navegable de punta a punta; la superposición conmuta entre ambas
-  rotulaciones sin cambiar la topología; fidelidad a la plantilla (sin
-  fuentes nuevas, sin colores fuera de la paleta mono, sin modo oscuro
-  inventado); `assets/fanzine.css` con cabecera de procedencia; gates
-  verdes; ningún `<pendiente>` sin declarar en el propio pack.
+  superposición → **acta v2 como sección final propia** (DA-3: el último
+  acto, dentro de la misma página). **Sitio construido en `TEST-SWARM/docs/`**
+  (`index.html` + `assets/fanzine.css` + lo que enlace) — esa carpeta es la
+  que WP-D22 publica.
+  **CA:** navegable de punta a punta; el sitio vive en `TEST-SWARM/docs/`;
+  la superposición conmuta entre ambas rotulaciones sin cambiar la
+  topología; fidelidad a la plantilla (sin fuentes nuevas, sin colores fuera
+  de la paleta mono, sin modo oscuro inventado); `assets/fanzine.css` con
+  cabecera de procedencia; gates verdes; ningún `<pendiente>` sin declarar
+  en el propio pack.
 
-- ⬜ **WP-D22 · El estreno público** *(depende de ✅ de D20)* — publicar el
-  escenario al canal: los artefactos del pack (index.html + NOTAS + acta v2
-  + assets) al repo dedicado `github.com/alephscriptorium-eng/S_SDK` (rama
-  `main`), y push. La activación de GitHub Pages es paso **manual del
-  custodio**. El repo dedicado contiene **solo escenario**: ni `plan/`, ni
-  HIPOTESIS, ni fuentes, ni backstage.
-  **CA:** URL viva sirviendo `index.html`; la moira funciona en Pages (JS
-  estático); grep del repo dedicado: cero backstage.
+- ⬜ **WP-D22 · El estreno público (runbook de publicación)** *(depende de
+  ✅ de D20)* — publicar a `origin`
+  (`github.com/alephscriptorium-eng/S_SDK`) desde ESTE repo (DE-7 ampliada
+  por DA-4): `main` **huérfana = `docs/` (el sitio) + `TEST-SWARM/` (el
+  ensayo conservado)**; `draft` = backstage local que **nunca** se sube. El
+  worker deja el runbook escrito y **probado en seco** (dry-run: crea la
+  huérfana en una rama de usar-y-tirar, verifica el árbol, y la borra sin
+  tocar `main` ni `draft`); **el push y Pages son actos exclusivos del
+  custodio** (DA-5: nadie más empuja, nunca).
+
+  Runbook (Git Bash; `draft` ya conserva el backstage = `e18ff9c`):
+  ```bash
+  # 0. PRECONDICIONES: WP-D20 ✅ (sitio en TEST-SWARM/docs/).
+  #    NUNCA:  git push origin draft   (draft es backstage, se queda en local)
+  # 1. Salvar el ensayo FUERA del repo (checkout --orphan arrastra el árbol).
+  cp -r TEST-SWARM ../_ensayo
+  # 2. Rama huérfana, sin historia ni árbol backstage.
+  git checkout --orphan main-sitio
+  git rm -rf .                          # vacía árbol e índice heredados
+  # 3. El sitio a docs/ raíz; el ensayo a TEST-SWARM/ (sin duplicar el sitio).
+  #    Nada de la raíz backstage: ni HIPOTESIS, ni DEVOPS, ni LLM.md, ni docs/autoridades.
+  mkdir docs && cp -r ../_ensayo/docs/* docs/
+  cp -r ../_ensayo TEST-SWARM && rm -rf TEST-SWARM/docs
+  #    (llamada del custodio, DA-4: excluir aquí el acta v1 .htm si no la quiere pública)
+  git add docs TEST-SWARM && git commit -m "docs: pack demo + ensayo para Pages"
+  # 4. main pasa a ser la huérfana; el backstage sigue vivo en draft.
+  git branch -D main                    # su historia sigue en draft
+  git branch -m main-sitio main
+  rm -rf ../_ensayo
+  # 5. (SOLO CUSTODIO) push y Pages:
+  git push -u origin main
+  #    GitHub → Settings → Pages → Deploy from branch → main → /docs → Save
+  ```
+  **CA:** en seco — `main-sitio` resulta huérfana (`git log` sin ancestros)
+  y contiene solo `docs/` + `TEST-SWARM/` (grep: cero raíz backstage
+  —HIPOTESIS, DEVOPS, LLM.md, autoridades—; sin sitio duplicado); `main` y
+  `draft` intactas tras el dry-run. Real (custodio): URL viva sirviendo el
+  pack; la moira funciona en Pages (JS estático); `origin` sin rastro de
+  `draft`.
 
 - ⬜ **WP-D21 · Acta del ensayo** — retrospectiva del ensayo general: qué
   enseñó el protocolo (fricciones, tiempos, devoluciones, huecos de los
