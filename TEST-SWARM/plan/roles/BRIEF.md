@@ -242,3 +242,56 @@ Notas del orquestador:
 
 Empieza: sitúate en rama/worktree, lee PRACTICAS entero, luego implementa.
 ```
+
+---
+
+## Lote activo — WP-D20 *(asignado 2026-07-16)*
+
+**Depende de ✅ D10, D11, D12, D13** (contenido en main). Un solo worker; sitio
+en `TEST-SWARM/docs/` para que WP-D22 publique.
+
+### WP-D20
+
+```text
+(rol) TEST-SWARM/plan/roles/WORKER.md
+
+WP: WP-D20 · Pack ensamblado
+Rama: wp/d20-pack-ensamblado
+Worktree: ../SCRIPT_SDK-wp-d20
+Reporte: TEST-SWARM/plan/REPORTES/WP-D20-pack-ensamblado.md
+
+Lecturas extra:
+- GUION.md (mapa del pack + Remate R.1–R.6: superposición, acta, sellos, moira)
+- plan/DECISIONES.md DA-1/DA-3/DE-8 (index.html fanzine; acta como último acto;
+  plantilla mono sin CDNs)
+- plan/PRACTICAS.md §1 (autocontención) y §3 (checklist)
+- plan/BACKLOG.md WP-D20 (CA literal)
+- NOTAS/nota-1-la-forma-m.md, nota-2-la-maquina.md, nota-3-la-ejecucion.md
+  (contenido a integrar; no reescribir salvo typos obvios)
+- TEST-SWARM/ACTA-V2.md (sección final; §Notas para WP-D20)
+- TEST-SWARM/Municiones — acta de inversión en una página.htm (SOLO lectura:
+  patrón .stats-bar + countdown; NO heredar moneda ni munición=pólvora)
+- Procedencia fanzine (SOLO lectura, copia-release): DE-8 en DECISIONES —
+  `aleph-scriptorium\BlockchainComPort\OASIS_PUB\EXTENSIONS\LANDINGPAGE\docs\poster-template\`
+
+Notas del orquestador:
+- Entregable único: **sitio navegable** bajo `TEST-SWARM/docs/` (`index.html` +
+  `assets/fanzine.css` + enlaces relativos). Crear `docs/` si no existe.
+- Orden de la página (DA-1): orientación/guion → Nota 1 → Nota 2 → Nota 3 →
+  **superposición** (R.1) → **acta v2** como última `<section>` propia (DA-3).
+- Superposición: un `<pre class="diagram">` ASCII; JS inline conmuta etiquetas
+  M ↔ casa **sin mover topología**; centro vacío visible en ambas rotulaciones.
+- Sellos en pantalla (R.5): Verificado → `.kw`; Doctrina → `.kw-inv`; Pendiente →
+  `.stamp`. Moira (R.4): `.stats-bar` + countdown JS; textos de ACTA-V2.md.
+- `assets/fanzine.css`: copia-release con **cabecera de procedencia** (gate d);
+  paleta mono (#000/#fff, Courier); sin fuentes nuevas ni modo oscuro inventado.
+- Cada `<pendiente>` del markdown debe quedar visible en HTML (`.stamp` o texto
+  declarado); no tapar cabos sueltos.
+- No editar BACKLOG, GUION.md, NOTAS (salvo corrección mínima acordada en
+  reporte), gates (`validar-ensayo.sh`), ni acta v1 `.htm`.
+- Gates **verdes** antes de parar: `./TEST-SWARM/validar-ensayo.sh` desde raíz.
+- Commits: feat(TEST-SWARM): … o docs(TEST-SWARM): … (solo bajo TEST-SWARM/)
+
+Empieza: sitúate en rama/worktree, lee PRACTICAS entero, luego implementa.
+```
+
