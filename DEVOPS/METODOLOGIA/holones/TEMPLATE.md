@@ -16,5 +16,17 @@ Cómo relee y reinterpreta a los holones anteriores (solo si hay antecesor).
 Qué grieta del holón anterior hace posible a este. Enlaza a
 `docs/holones/junturas/`.
 
+## Encarnación técnica
+**Ancla:** ruta absoluta a la codebase (DS-5: apuntar, no contener) |
+`<pendiente>`
+**Verificada:** fecha de última comprobación de que la ruta existe
+**Registry:** paquete(s) en `npm.scriptorium.escrivivir.co`, si publica |
+`<pendiente>`
+
+### Plan de armado
+Cómo se compone esta pieza desde SCRIPT_SDK — qué se consume del registry,
+qué queda en la codebase anclada, y qué juntura técnica lo une. Armarse
+*desde*, nunca *dentro*: sin submodules, sin copiar árboles.
+
 ## Material
 (contenido propio del holón — lo vierte la fuente en la próxima ronda)

@@ -14,7 +14,7 @@ descendente**). La capa de aplicación (L7) se vivió como techo: "el fin del
 mundo", que es como se vive todo holón desde dentro.
 
 SCRIPT_SDK es pieza compatible con ese stack que **ocupa todos los tramos**
-para emerger una capa nueva, donde genera **contenido y agencia**:
+para emerger una capa nueva, donde genera **contenido y agencia** —plataforma de gamificación:
 
 - **hacia fuera** de L7 — orquestación de mundos y agentes sobre las
   aplicaciones. Conjetura macro: `<pendiente de confirmación — GRAVEDAD>`.

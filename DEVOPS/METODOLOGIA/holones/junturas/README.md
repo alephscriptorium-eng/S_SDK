@@ -12,6 +12,8 @@ Junturas activas (una por par consecutivo de holones vivos):
 
 - [`01-02-mythos-logos.md`](01-02-mythos-logos.md) — el logos late en el mito.
 - [`02-03-logos-revelacion.md`](02-03-logos-revelacion.md) — el logos da lengua a la Encarnación.
+  Material excedente: [`2026-07-16-dossier-holon-03-future-machine.md`](2026-07-16-dossier-holon-03-future-machine.md)
+  — el dossier de brainstorming que parió el ancla del 03 (ex-`wip/`, archivado al anclarse el mundo emmanuel).
 - [`03-04-revelacion-ilustracion.md`](03-04-revelacion-ilustracion.md) — la gracia se universaliza en razón.
 
 - [`05-06-sospecha-constelacion.md`](05-06-sospecha-constelacion.md) — lo que la sospecha desentierra, la constelación lo federa (pieza: el INVENTARIO del plan spinoff).
