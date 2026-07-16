@@ -94,4 +94,6 @@ Ninguno. Listo para revisión del orquestador.
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+- **Estado:** Aceptado ✅
+- **CA:** verificados (`validar-ensayo.sh` VERDE en worktree; diff `main...wp/d11-la-maquina` solo `TEST-SWARM/NOTAS/nota-2-la-maquina.md` + reporte; gate (c) 40 rutas Verificado; gates a–e verdes)
+- **Merge a `main`:** 2026-07-16 (fast-forward `wp/d11-la-maquina` → `main`, `1c8e80d`)

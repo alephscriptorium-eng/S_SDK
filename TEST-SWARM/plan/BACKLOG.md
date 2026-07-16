@@ -54,7 +54,7 @@ de scrum**, jamás la moneda (DE-5, DE-6).
   afirmación física fuera de procedencia citada o `<pendiente>`; gate (c)
   verde.
 
-- 🔶 **WP-D11 · Nota 2 · La máquina y sus partes** *(agente pendiente · 2026-07-16)* — descripción estilo
+- ✅ **WP-D11 · Nota 2 · La máquina y sus partes** *(aceptado · 2026-07-16)* — descripción estilo
   Menabrea del método (la máquina) + el espejo M↔casa. La máquina: dos leyes
   (ceguera ascendente / acceso descendente), crecimiento por junturas,
   sellos, registry. Correspondencias mínimas del espejo: teoría ↔ mundo
