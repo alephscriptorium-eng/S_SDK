@@ -132,4 +132,6 @@ Ninguno.
 
 ## Revisión del orquestador
 
-_(vacío — pendiente de re-revisión)_
+- **Estado:** Aceptado ✅
+- **CA:** verificados (`validar-ensayo.sh` VERDE; `--violacion todas` ROJO en gates a–e; diff `main...wp/d00-gates-ensayo` solo `TEST-SWARM/`)
+- **Merge a `main`:** 2026-07-16 (merge commit `wp/d00-gates-ensayo` → `main`)

@@ -14,7 +14,7 @@ de scrum**, jamás la moneda (DE-5, DE-6).
 
 ## Ola D0 — El suelo del ensayo
 
-- ⬜ **WP-D00 · Gates del ensayo** — test raíz ejecutable (script, patrón
+- ✅ **WP-D00 · Gates del ensayo** *(aceptado · 2026-07-16)* — test raíz ejecutable (script, patrón
   grep + existencia): (a) el diff no toca nada fuera de `TEST-SWARM/`;
   (b) nombres de fichero en castellano, sin restos ingleses; (c) toda ruta
   citada bajo sello Verificado existe en disco; (d) cero árboles copiados
@@ -26,7 +26,7 @@ de scrum**, jamás la moneda (DE-5, DE-6).
   **CA:** rojo con violación sintética de cada tipo (a–e); verde sobre
   TEST-SWARM.
 
-- ⬜ **WP-D01 · Guion del pack** — la partitura de las tres Notas para el
+- ✅ **WP-D01 · Guion del pack** *(aceptado · 2026-07-16)* — la partitura de las tres Notas para el
   ángel, con su efecto declarado: **Nota 1 «esto es la teoría M»** →
   legitimidad (fragmentos federados es arquitectura de primera división, no
   caos); **Nota 2 «estas son sus partes, y este el producto»** →
