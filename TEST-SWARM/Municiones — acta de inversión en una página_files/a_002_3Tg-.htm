@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><!-- frame-runtime --><!-- base href="https://69837a63-8585-4b24-bf86-40c090332d75.frame.claudeusercontent.com/_f/1784215506-2df3/" --><script>window.__FRAME_PREAMBLE={"capabilities":{"downloads":"downloads.DUzXFHNF.js","mcp":"mcp.CLzOm9JX.js","permissions":"permissions.C9OCnDjh.js","self":"self.DqF_PxOe.js"},"transforms":"_transforms.DYk1Ltlh.js","comments":"_comments.Dp6RDy7J.js"}</script><script>(function(){"use strict";const ce="modulepreload",le=function(e){return"/"+e},ue={},x=function(t,n,u){let o=Promise.resolve();function s(f){const a=new Event("vite:preloadError",{cancelable:!0});if(a.payload=f,window.dispatchEvent(a),!a.defaultPrevented)throw f}return o.then(f=>{for(const a of f||[])a.status==="rejected"&&s(a.reason);return t().catch(s)})},K=["light","dark","system"];function G(e){if(e==null||typeof e!="object")return!1;const t=e.__frame_init;return t!=null&&typeof t=="object"}function J(e){return e!=null&&typeof e=="object"&&e.__frame_size_poke===!0}function V(e){if(e==null||typeof e!="object")return!1;const t=e.__frame_theme;if(t==null||typeof t!="object")return!1;const n=t.theme;return typeof n=="string"&&K.includes(n)}function Y(e){try{typeof reportError=="function"?reportError(e):setTimeout(()=>{throw e},0)}catch{}}function z(e){if(window===top||e.type==="auxclick"&&e.button!==1)return;const t=e.composedPath?e.composedPath():[e.target];let n=null;for(let f=0;f<t.length;f++){const a=t[f];if(a&&a.matches&&a.matches("a[href],area[href]")){n=a;break}}if(!n&&e.target&&e.target.closest&&(n=e.target.closest("a[href],area[href]")),!n)return;const u=n.getAttribute("href");if(!u)return;let o,s;try{o=new URL(u,document.baseURI),s=new URL(document.baseURI).origin}catch{return}(o.protocol==="http:"||o.protocol==="https:")&&o.origin!==s&&(e.preventDefault(),parent.postMessage({__frame_nav:!0,url:o.href},"*"))}const D={};function T(e){if(window===top)return;const t=Date.now();t-(D[e]||0)<500||(D[e]=t,parent.postMessage({__frame_engaged:!0,kind:e},"*"))}const Q=2e3,U=["wheel","touchstart","touchmove","keydown","pointerdown"];let B=0;function X(e){e.isTrusted&&(B=Date.now())}function Z(){addEventListener("click",z,!0),addEventListener("auxclick",z,!0)}function ee(){for(let e=0;e<U.length;e++)addEventListener(U[e],X,{capture:!0,passive:!0});addEventListener("scroll",e=>{e.isTrusted&&Date.now()-B<Q&&T("scroll")},{capture:!0,passive:!0}),addEventListener("pointermove",e=>{e.isTrusted&&T("pointer")},{capture:!0,passive:!0}),addEventListener("click",e=>{e.isTrusted&&T("click")},{capture:!0,passive:!0})}function te(e,t,n){const u=[...t.values()].filter(o=>o.targets.some(s=>s.startsWith(e+".")));return{wrap(o,s){const f=`${e}.${o}`,a=u.filter(i=>i.targets.includes(f));return a.length===0?(...i)=>{try{return s(...i)}catch(p){return Promise.reject(p)}}:(...i)=>{let p=i;for(const c of a){const l=c.module.parameters;if(l)try{p=l(p)}catch{return Promise.reject({code:"transform_error",id:c.id,scope:e,message:"parameters transform failed"})}}let h;try{h=s(...p)}catch(c){h=Promise.reject(c)}return h.then(c=>{for(let l=a.length-1;l>=0;l--){const m=a[l],d=m.module.returns;if(d)try{c=d(c)}catch{return n({id:m.id,scope:e,leg:"returns"}),c}}return c},c=>{for(let l=a.length-1;l>=0;l--){const m=a[l],d=m.module.throws;if(d)try{c=d(c)}catch{return n({id:m.id,scope:e,leg:"throws"}),Promise.reject(c)}}return Promise.reject(c)})}}}}function ne(e,t,n,u=()=>{}){const o=new Set(e.changes??[]),s=new Map;for(const f of o){const a=t[f];a&&s.set(f,a)}return{contract:e.contract,changes:o,flags:new Set(e.flags??[]),capabilities:e.capabilities??{},capBudgets:e.capBudgets??{},transforms:s,shellOrigin:n.shellOrigin,mount:n.mount,pipe:f=>te(f,s,u)}}(function(){const e=Object.defineProperty,t=globalThis,n=["RTCPeerConnection","webkitRTCPeerConnection","RTCDataChannel","RTCIceCandidate","RTCSessionDescription","RTCRtpSender","RTCRtpReceiver"];let u=0;for(let o=0;o<n.length;o++){const s=n[o];try{e(t,s,{value:void 0,writable:!1,configurable:!1})}catch{try{delete t[s]}catch{}try{e(t,s,{value:void 0,writable:!1,configurable:!0})}catch{}}typeof t[s]=="function"&&u++}if(u&&window!==top)try{parent.postMessage({__frame_rtc_lockdown_failed:u},"*")}catch{}})();const re=1e4,oe=Object.freeze([...window.__FRAME_PREAMBLE?.origins??["https://claude.ai","https://preview.claude.ai"]]);function se(e){for(const t of oe)if(t.endsWith(":*"))try{const n=new URL(e);if(`${n.protocol}//${n.hostname}:*`===t)return!0}catch{}else if(e===t)return!0;return!1}const R=Object.freeze({...window.__FRAME_PREAMBLE?.capabilities??{}}),A=window.__FRAME_PREAMBLE?.transforms,k=window.__FRAME_PREAMBLE?.comments,C=/^[\w.-]+\.js$/,ie=/^[a-z][a-z0-9_-]{0,63}$/;let F=null,v=null;function N(e,t,n){try{Object.defineProperty(e,t,{value:n,writable:!1,configurable:!1,enumerable:!0})}catch{try{Object.defineProperty(e,t,{value:n,writable:!1,configurable:!0,enumerable:!0})}catch{}}}let I=!1;function H(e){const t=document.documentElement;e==="light"||e==="dark"?(t.dataset.theme=e,t.style.colorScheme=e,I=!0):I&&(delete t.dataset.theme,t.style.colorScheme="",I=!1)}const E={mcp:{watchTool:{handlerArg:3}}},P=new Map;function ae(e,t){const n=P.get(e);if(!n)return;Object.assign(n.impl,t),n.impl.__settled=()=>Promise.reject({code:"capability_removed",message:`${e}: method not in this runtime`});const u=n.queue;n.queue=[];for(const o of u){const s=t[o.method];if(s)if(E[e]?.[o.method])try{o.resolve(s(...o.args))}catch{O(o,E[e][o.method].handlerArg,{code:"transform_error",message:`${e}.${o.method} rejected its arguments`})}else s(...o.args).then(o.resolve,o.reject);else{const f={code:"capability_removed",message:`${e}.${o.method} is not in this runtime`},a=E[e]?.[o.method];if(a){O(o,a.handlerArg,f);continue}o.reject(f)}}}function $(e,t){const n=P.get(e);if(!n)return;n.impl.__settled=()=>Promise.reject(t);const u=n.queue;n.queue=[];for(const o of u){const s=E[e]?.[o.method];if(s){O(o,s.handlerArg,t);continue}o.reject(t)}}function O(e,t,n){if(e.syncState?.dead)return;const u=e.args[t];typeof u=="function"&&queueMicrotask(()=>{if(!e.syncState?.dead)try{u({type:"error",error:n})}catch(o){Y(o)}})}const q=Object.getOwnPropertyDescriptor(window,"claude");if(window!==top&&!(q&&q.writable===!1)){Z(),ee();const e=q?.value??{};N(window,"claude",e);const t=i=>{const p={impl:Object.create(null),queue:[]};P.set(i,p);const h=new Proxy(p.impl,{get:(c,l)=>{if(typeof l!="string"||l==="then"||l==="toJSON"||l==="valueOf")return;if(l==="toString")return Object.prototype.toString;const m=E[i]?.[l];return m?(...d)=>{if(typeof d[m.handlerArg]!="function")throw new TypeError(`${i}.${l} requires a handler function`);const g=c[l];if(g)return g(...d);if(c.__settled){const _={dead:!1},S={args:[...d],syncState:_};return c.__settled().catch(j=>O(S,m.handlerArg,j)),()=>{_.dead=!0}}let y=null;const w={dead:!1};return p.queue.push({method:l,args:d,resolve:_=>{y=typeof _=="function"?_:null,w.dead&&y?.()},reject:()=>{},syncState:w}),()=>{w.dead=!0,y?.()}}:(...d)=>{const g=c[l]??c.__settled;return g?g(...d):new Promise((y,w)=>{p.queue.push({method:l,args:d,resolve:y,reject:w})})}},set:()=>!1});N(e,i,h)};for(const i of Object.keys(R)){if(e[i]!==void 0){N(e,i,e[i]);continue}t(i)}let n=null,u=null,o=0;const s=i=>{i.source!==parent||!se(i.origin)||G(i.data)&&(n=i.data.__frame_init,v=i.origin,removeEventListener("message",s),clearTimeout(o),u?.())};addEventListener("message",s),parent.postMessage({__frame_connect:!0},"*");const f=new Promise(i=>{u=i,o=setTimeout(()=>{removeEventListener("message",s),i()},re)}),a=document.readyState==="loading"?new Promise(i=>document.addEventListener("DOMContentLoaded",()=>i(),{once:!0})):Promise.resolve();f.then(async()=>{if(!n||!v){for(const r of P.keys())$(r,{code:"not_granted",message:"frame initialization did not arrive - capability unavailable"});return}H(n.theme);const i=v;let p=!1;addEventListener("message",r=>{if(r.source!==parent||r.origin!==i)return;V(r.data)&&H(r.data.__frame_theme.theme);const b=r.data?.__fc_mode;b&&typeof b=="object"&&!p&&k&&C.test(k)&&(p=!0,h(k).then(L=>L.install?.(i,b.on===!0)).catch(()=>{}))});const h=r=>x(()=>import("/_runtime/"+r),void 0),c=Object.keys(n.capabilities??{});for(const r of c)Object.hasOwn(R,r)||ie.test(r)&&e[r]===void 0&&(t(r),$(r,{code:"capability_disabled",message:"capability not in this runtime generation"}));const l=c.filter(r=>Object.hasOwn(R,r)).map(r=>[r,R[r]]).filter(r=>typeof r[1]=="string"&&C.test(r[1])),[m,...d]=await Promise.allSettled([A&&C.test(A)?h(A):Promise.resolve({}),...l.map(([,r])=>h(r))]),g=v;F=ne(n,m.status==="fulfilled"&&m.value?.TRANSFORMS||{},{shellOrigin:g,mount:ae},r=>parent.postMessage({__frame_cap_telemetry:r},g));const y=r=>parent.postMessage({__frame_cap_telemetry:{kind:"cap-load-error",cap:r}},g),w=F;d.forEach((r,b)=>{const L=l[b][0];if(r.status!=="fulfilled"){y(L);return}try{r.value?.install?.(w)}catch{y(L)}});for(const[r,b]of P)b.queue.length===0&&Object.keys(b.impl).length>0||$(r,{code:c.includes(r)?"capability_disabled":"not_granted",message:"capability not available in this session"});await a,parent.postMessage({__frame_ready:!0},v);let _=-1,S=0;const j=()=>{S=0;const r=Math.max(document.documentElement.scrollHeight,document.body?document.body.scrollHeight:0);r!==_&&(_=r,parent.postMessage({__frame_size:!0,h:r},g))},M=()=>{S||(S=setTimeout(j,200))},W=new ResizeObserver(M);W.observe(document.documentElement),document.body&&W.observe(document.body),document.addEventListener("load",M,!0),document.fonts?.ready.then(M,()=>{}),addEventListener("beforeprint",()=>{_=-1,j()}),M(),addEventListener("message",r=>{r.source!==parent||r.origin!==g||J(r.data)&&(_=-1,M())})})}})();</script><!-- /frame-runtime --><meta charset="utf8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}</style></head><body>
+<title>Municiones — acta de inversión en una página</title>
+<style>
+  :root {
+    --papel: #EBE7DC;
+    --papel-hueso: #E2DDCF;
+    --tinta: #211D18;
+    --tinta-suave: #6E6759;
+    --sello: #A32C22;
+    --verificado: #33654A;
+    --pendiente: #99671E;
+    --regla: #B9B2A0;
+    --regla-fuerte: #211D18;
+    --serif: "Palatino Linotype", Palatino, "Book Antiqua", "Iowan Old Style", "URW Palladio L", Georgia, serif;
+    --mono: "Cascadia Code", Consolas, "SF Mono", Menlo, "DejaVu Sans Mono", monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --papel: #171410;
+      --papel-hueso: #201C15;
+      --tinta: #E8E2D2;
+      --tinta-suave: #9D9585;
+      --sello: #DE5F53;
+      --verificado: #7DB795;
+      --pendiente: #D2A055;
+      --regla: #453F33;
+      --regla-fuerte: #E8E2D2;
+    }
+  }
+  :root[data-theme="light"] {
+    --papel: #EBE7DC;
+    --papel-hueso: #E2DDCF;
+    --tinta: #211D18;
+    --tinta-suave: #6E6759;
+    --sello: #A32C22;
+    --verificado: #33654A;
+    --pendiente: #99671E;
+    --regla: #B9B2A0;
+    --regla-fuerte: #211D18;
+  }
+  :root[data-theme="dark"] {
+    --papel: #171410;
+    --papel-hueso: #201C15;
+    --tinta: #E8E2D2;
+    --tinta-suave: #9D9585;
+    --sello: #DE5F53;
+    --verificado: #7DB795;
+    --pendiente: #D2A055;
+    --regla: #453F33;
+    --regla-fuerte: #E8E2D2;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--papel);
+    color: var(--tinta);
+    font-family: var(--serif);
+    font-size: 1.0625rem;
+    line-height: 1.68;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ————— franja de la moira ————— */
+  .moira {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    background: var(--tinta);
+    color: var(--papel);
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    padding: 0.55rem 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.6ch;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .moira strong {
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: var(--papel);
+  }
+  .moira .lema { opacity: 0.75; }
+
+  /* ————— composición general ————— */
+  .hoja {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: 0 1.4rem 4rem;
+  }
+  section { margin-top: 4.2rem; }
+
+  /* ————— portada ————— */
+  .portada {
+    text-align: center;
+    padding: 3.4rem 0 2.6rem;
+    border-bottom: 4px double var(--regla-fuerte);
+  }
+  .portada .casa {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--tinta-suave);
+    margin: 0 0 2.2rem;
+  }
+  .portada h1 {
+    font-size: clamp(2.7rem, 10vw, 5.4rem);
+    font-weight: 700;
+    letter-spacing: 0.085em;
+    margin: 0;
+    line-height: 1.05;
+    text-wrap: balance;
+  }
+  .portada .para {
+    font-style: italic;
+    font-size: clamp(1.15rem, 3vw, 1.5rem);
+    margin: 0.7rem 0 0;
+    color: var(--tinta);
+  }
+  .portada .filete {
+    border: none;
+    border-top: 1px solid var(--regla-fuerte);
+    width: 9rem;
+    margin: 2.1rem auto 0;
+  }
+  .portada .fleuron {
+    font-size: 1.15rem;
+    margin: 1.4rem 0 0;
+    color: var(--sello);
+  }
+  .portada .naturaleza {
+    max-width: 34rem;
+    margin: 1.5rem auto 0;
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--tinta-suave);
+    text-wrap: balance;
+  }
+  .cifra {
+    display: inline-block;
+    margin-top: 2.2rem;
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    border: 2px solid var(--tinta);
+    padding: 0.7rem 1.1rem;
+    text-transform: uppercase;
+  }
+  .cifra b { color: var(--sello); }
+
+  /* ————— cabeceras de sección ————— */
+  .rotulo {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    border-bottom: 1px solid var(--regla-fuerte);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.6rem;
+  }
+  .rotulo .n {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    color: var(--sello);
+  }
+  .rotulo h2 {
+    font-size: 1.55rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    margin: 0;
+    text-transform: uppercase;
+    text-wrap: balance;
+  }
+  .rotulo .apostilla {
+    margin-left: auto;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--tinta-suave);
+    white-space: nowrap;
+  }
+  @media (max-width: 560px) {
+    .rotulo { flex-wrap: wrap; }
+    .rotulo .apostilla { margin-left: 0; white-space: normal; }
+  }
+
+  p { margin: 0 0 1.05rem; }
+  .hoja a { color: var(--sello); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  em { font-style: italic; }
+
+  blockquote {
+    margin: 1.4rem 0 1.4rem 0;
+    padding: 0.2rem 0 0.2rem 1.2rem;
+    border-left: 3px solid var(--sello);
+    font-style: italic;
+    font-size: 1.08rem;
+  }
+  blockquote .ruta { margin-top: 0.45rem; }
+
+  .ruta {
+    display: block;
+    font-family: var(--mono);
+    font-style: normal;
+    font-size: 0.72rem;
+    color: var(--tinta-suave);
+    word-break: break-all;
+    letter-spacing: 0.01em;
+  }
+  .ruta::before { content: "⌘ "; color: var(--sello); }
+
+  code {
+    font-family: var(--mono);
+    font-size: 0.85em;
+    background: var(--papel-hueso);
+    padding: 0.08em 0.35em;
+    border-radius: 2px;
+  }
+
+  /* ————— sellos ————— */
+  .sello {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    border: 2px solid currentColor;
+    border-radius: 2px;
+    padding: 0.22rem 0.55rem;
+    transform: rotate(-2deg);
+    white-space: nowrap;
+  }
+  .sello.v { color: var(--verificado); }
+  .sello.d { color: var(--tinta-suave); }
+  .sello.p { color: var(--pendiente); transform: rotate(1.5deg); }
+
+  .leyenda {
+    list-style: none;
+    margin: 1.6rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 0.9rem;
+  }
+  .leyenda li {
+    display: grid;
+    grid-template-columns: 8.5rem 1fr;
+    gap: 1rem;
+    align-items: start;
+  }
+  .leyenda .sello { justify-self: start; margin-top: 0.15rem; }
+  @media (max-width: 560px) {
+    .leyenda li { grid-template-columns: 1fr; gap: 0.3rem; }
+  }
+
+  /* ————— comparecen ————— */
+  .parte { margin-bottom: 1.9rem; }
+  .parte h3 {
+    font-size: 1.02rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 0 0 0.4rem;
+  }
+  .parte h3 .quien { color: var(--sello); }
+
+  /* ————— inventario / municiones ————— */
+  .municion {
+    border-top: 1px solid var(--regla);
+    padding: 1.5rem 0 0.6rem;
+    margin-top: 1.5rem;
+  }
+  .municion:first-of-type { border-top: none; margin-top: 0; padding-top: 0.4rem; }
+  .municion header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.9rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.7rem;
+  }
+  .municion .ordinal {
+    font-weight: 700;
+    font-size: 0.82rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--tinta-suave);
+  }
+  .municion h3 {
+    font-size: 1.3rem;
+    margin: 0;
+    font-weight: 700;
+    text-wrap: balance;
+  }
+  .municion header .sellos { margin-left: auto; display: flex; gap: 0.5rem; }
+  @media (max-width: 560px) {
+    .municion header .sellos { margin-left: 0; }
+  }
+  .apunte {
+    font-style: italic;
+    color: var(--tinta-suave);
+    font-size: 0.98rem;
+  }
+
+  /* ————— renuncias ————— */
+  .renuncias { border-top: 1px solid var(--regla-fuerte); }
+  .renuncia {
+    display: grid;
+    grid-template-columns: minmax(11rem, 1fr) 1.6fr;
+    gap: 1.2rem;
+    padding: 1.05rem 0;
+    border-bottom: 1px solid var(--regla);
+  }
+  .renuncia dt {
+    font-weight: 700;
+    font-size: 1.05rem;
+    text-wrap: balance;
+  }
+  .renuncia dd { margin: 0; font-size: 0.98rem; }
+  .renuncia dd .mecanismo {
+    font-family: var(--mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--sello);
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  @media (max-width: 560px) {
+    .renuncia { grid-template-columns: 1fr; gap: 0.4rem; }
+  }
+  .renuncias-cierre {
+    margin-top: 1.3rem;
+    font-style: italic;
+    color: var(--tinta-suave);
+  }
+
+  /* ————— pagaré ————— */
+  .partida {
+    display: grid;
+    grid-template-columns: 7.5rem 1fr;
+    gap: 1.2rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--regla);
+    align-items: baseline;
+  }
+  .partida .monto {
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: 1.05rem;
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+  }
+  .partida h3 {
+    margin: 0 0 0.3rem;
+    font-size: 1.06rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .partida p { margin: 0; font-size: 0.98rem; }
+  .partida.total {
+    border-bottom: 4px double var(--regla-fuerte);
+    border-top: 1px solid var(--regla-fuerte);
+  }
+  .partida.total .monto, .partida.total h3 { color: var(--sello); }
+  @media (max-width: 560px) {
+    .partida { grid-template-columns: 5.4rem 1fr; gap: 0.8rem; }
+    .partida .monto { font-size: 0.9rem; }
+  }
+  .clausula {
+    margin-top: 1.8rem;
+    border: 2px solid var(--tinta);
+    padding: 1.3rem 1.4rem 1.1rem;
+    position: relative;
+  }
+  .clausula .titulillo {
+    position: absolute;
+    top: -0.8rem;
+    left: 1rem;
+    background: var(--papel);
+    padding: 0 0.6rem;
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--sello);
+  }
+  .clausula p:last-child { margin-bottom: 0; }
+
+  /* ————— otorgan / firma ————— */
+  .otorgan .peroracion {
+    font-size: 1.22rem;
+    font-style: italic;
+    text-wrap: balance;
+  }
+  .firmas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.6rem;
+    margin-top: 3.4rem;
+  }
+  .firma {
+    border-top: 1px solid var(--tinta);
+    padding-top: 0.55rem;
+    font-size: 0.9rem;
+  }
+  .firma .rol {
+    font-family: var(--mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--tinta-suave);
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+  @media (max-width: 560px) { .firmas { grid-template-columns: 1fr; gap: 1.8rem; } }
+  .fecha {
+    text-align: center;
+    margin-top: 3.2rem;
+    font-style: italic;
+  }
+  .fecha .fleuron { color: var(--sello); font-style: normal; }
+
+  .letra-chica {
+    margin-top: 3.4rem;
+    border-top: 1px solid var(--regla);
+    padding-top: 1.1rem;
+    font-size: 0.82rem;
+    color: var(--tinta-suave);
+  }
+  .letra-chica p { margin-bottom: 0.5rem; }
+
+  /* ————— colapso ————— */
+  .velo {
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    background: color-mix(in srgb, var(--papel) 82%, transparent);
+    backdrop-filter: grayscale(0.9) blur(1.5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+    text-align: center;
+    padding: 2rem;
+    cursor: pointer;
+  }
+  .velo[hidden] { display: none; }
+  .sello-caducado {
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: clamp(1.6rem, 6vw, 3rem);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--sello);
+    border: 6px double var(--sello);
+    padding: 1.2rem 2rem;
+    transform: rotate(-7deg);
+  }
+  .velo .glosa {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--tinta);
+    max-width: 30rem;
+  }
+  .velo button {
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    background: var(--tinta);
+    color: var(--papel);
+    border: none;
+    padding: 0.85rem 1.5rem;
+    cursor: pointer;
+  }
+  .velo button:hover { background: var(--sello); }
+
+  :focus-visible {
+    outline: 2px solid var(--sello);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .sello-caducado { animation: estampar 240ms cubic-bezier(0.2, 1.4, 0.4, 1) both; }
+    @keyframes estampar {
+      from { transform: rotate(-7deg) scale(2.4); opacity: 0; }
+      to   { transform: rotate(-7deg) scale(1); opacity: 1; }
+    }
+  }
+</style>
+
+<div class="moira" id="moira" aria-live="off">
+  <span>LEY DE LA MOIRA — esta acta caduca en <strong id="cuenta">05:44</strong> si usted no actúa.</span>
+  <span class="lema">Como toda ronda del sistema. Mientras lee, vive.</span>
+</div>
+
+<main class="hoja">
+
+  <header class="portada">
+    <p class="casa">Escrivivir.co, productora · Registro Scriptorium · MMXXVI</p>
+    <h1>MUNICIONES</h1>
+    <p class="para">para disidentes narrativos</p>
+    <hr class="filete">
+    <p class="naturaleza">Acta de inversión en una página. Sin metarrelato, sin palo de hockey,
+    sin promesa de verdad: cada afirmación lleva su sello, y lo no verificado
+    se declara en vez de venderse.</p>
+    <p class="cifra">Se solicitan: <b>cien mil (100.000) unidades</b> · se ofrece: arquitectura, no fe</p>
+    <p class="fleuron">⁂</p>
+  </header>
+
+  <section>
+    <div class="rotulo">
+      <span class="n">I</span>
+      <h2>Advertencia al lector</h2>
+      <span class="apostilla">de cómo se lee esta acta</span>
+    </div>
+    <p>Esta casa escribe bajo una regla capital que a usted le va a gustar:</p>
+    <blockquote>
+      «Si tu memoria interna y la codebase discrepan, la codebase es la verdad.»
+      <span class="ruta">SCRIPT_SDK\LLM.md — regla capital</span>
+    </blockquote>
+    <p>La misma ley rige esta página. Tres sellos, y ninguno se estampa sin fuente:</p>
+    <ul class="leyenda">
+      <li><span class="sello v">Verificado</span>
+        <span>Comprobado en disco y en código, con ruta absoluta. No se fíe: vaya a mirarlo.</span></li>
+      <li><span class="sello d">Doctrina</span>
+        <span>Compromiso de diseño escrito y vigente en el repositorio. No es un hecho:
+        es ley de la casa, y solo se deroga por escrito, a la vista de todos.</span></li>
+      <li><span class="sello p">Pendiente</span>
+        <span>Cabo suelto declarado. El reglamento prohíbe taparlo sin fuente
+        — «alucinación soberbia», lo llama.</span></li>
+    </ul>
+    <p style="margin-top:1.4rem">De curvas de mercado, tamaño de oportunidad y demás teología: nada.
+    Quien afirma el futuro pretende <em>acceso descendente desde un peldaño que aún no existe</em>.
+    Aquí se inventaría lo que hay, se declara lo que falta, y se le deja a usted el juicio
+    — que es suyo, como todo lo demás en este sistema.</p>
+  </section>
+
+  <section>
+    <div class="rotulo">
+      <span class="n">II</span>
+      <h2>Comparecen</h2>
+    </div>
+
+    <div class="parte">
+      <h3>De una parte, <span class="quien">la productora</span></h3>
+      <p><strong>Escrivivir.co</strong> — revista digital abierta («Escrituras &amp; Vivencias»),
+      economía fraterna y ética, comunicación descentralizada P2P, licencia pública abierta.
+      En el registro consta con un rol sin eufemismo: <em>«quien pone los dólares»</em>.
+      <span class="ruta">SCRIPT_SDK\docs\autoridades\01-escrivivir-co.md</span></p>
+    </div>
+
+    <div class="parte">
+      <h3>De otra, <span class="quien">la constelación</span></h3>
+      <p>No una app: una familia de codebases federadas bajo el marco <strong>Scriptorium</strong>
+      — la <em>Hackería</em> (taller: herramientas, SDKs, agentes), el <em>Parlament</em>
+      (gobernanza) y las <em>Future Rooms</em> (sesiones e indexado de corpus).
+      El registro que las ancla, SCRIPT_SDK, tiene dos días de vida y veinticuatro ficheros;
+      los mundos que ancla llevan años de cantera.
+      <span class="ruta">SCRIPT_SDK\docs\autoridades\02-scriptorium.md · C:\Users\aleph\OASIS\SCRIPTORIUM_V0\</span></p>
+    </div>
+
+    <div class="parte">
+      <h3>Y de otra, <span class="quien">usted, el compareciente</span></h3>
+      <p>A quien no se le pide fe. Venga con la sospecha puesta: esta acta está
+      compuesta para resistirla, no para esquivarla.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="rotulo">
+      <span class="n">III</span>
+      <h2>Exponen</h2>
+      <span class="apostilla">inventario de municiones</span>
+    </div>
+
+    <article class="municion">
+      <header>
+        <span class="ordinal">Primero.</span>
+        <h3>Hay un cosmos, y funciona</h3>
+        <span class="sellos"><span class="sello v">Verificado</span></span>
+      </header>
+      <p><strong>zeus-sdk</strong>, motor transmedia: <em>«Un solo juego, un solo contrato»</em>.
+      Una sola autoridad muta el mundo; todos los demás proyectan y emiten intenciones.
+      El contrato entero cabe en cuatro palabras: <code>state | intent | track | ledger</code>.
+      Los jugadores no consumen el mapa: lo inflan, cachando y curando volúmenes de datos
+      que son suyos.</p>
+      <p class="ruta">zeus-sdk\plan\VISION.md §principios · zeus-sdk\VOLUMES\volumes.json</p>
+    </article>
+
+    <article class="municion">
+      <header>
+        <span class="ordinal">Segundo.</span>
+        <h3>El poder caduca por diseño</h3>
+        <span class="sellos"><span class="sello v">Verificado</span></span>
+      </header>
+      <blockquote>
+        «La ronda CADUCA. Esto lo cambia todo.»
+        <span class="ruta">zeus-sdk\packages\arg\spec\CASOS.md §1</span>
+      </blockquote>
+      <p>Si nadie actúa, el mundo muere solo: colapso calculado y verificado al decimal
+      (~6 minutos, 20 riadas). La autoridad no se hereda ni se atrinchera: se re-gana
+      ronda a ronda, o expira. El fin del mundo está escrito <em>dentro</em> del mundo.</p>
+      <p class="apunte">La franja superior de esta acta obedece la misma ley.
+      ¿No me cree? Deje de actuar seis minutos.</p>
+    </article>
+
+    <article class="municion">
+      <header>
+        <span class="ordinal">Tercero.</span>
+        <h3>La epoché es del usuario</h3>
+        <span class="sellos"><span class="sello d">Doctrina</span></span>
+      </header>
+      <p><strong>Bot Hilbert</strong> (AgentLoreSDK): agentes que cartografían todas las
+      posiciones de un tema sin colapsarlas en una. Tercer axioma del cartógrafo, literal:
+      <em>«la epoché es del usuario»</em> — nada se crea sin consenso explícito, colapsar es
+      derecho de la persona, y el diseño lo asegura con candados: <em>sin admin-override</em>.
+      Es el reverso exacto del feed que decide por usted qué pensar.</p>
+      <p class="ruta">emmanuel-sdk\AgentLoreSDK\.github\skills\cristalizador\SKILL.md · emmanuel-sdk\plan\DECISIONES.md</p>
+    </article>
+
+    <article class="municion">
+      <header>
+        <span class="ordinal">Cuarto.</span>
+        <h3>Corpus propios, no audiencias cautivas</h3>
+        <span class="sellos"><span class="sello d">Doctrina</span> <span class="sello p">Pendiente</span></span>
+      </header>
+      <p><strong>emmanuel-sdk</strong>: volúmenes privados y máquinas de agentes.
+      La <em>Document Machine</em> lleva del corpus a la voz; la <em>Vector Machine</em>,
+      del corpus a la consulta; la <em>Future Machine</em>, del corpus al grafo de futuros
+      posibles, y del grafo a la obra dramática. Quien narra posee los medios de narración.
+      Papel primero: el plan está escrito; la SPEC, declarada pendiente — y así consta.</p>
+      <p class="ruta">emmanuel-sdk\plan\VISION.md · SCRIPT_SDK\...\junturas\2026-07-16-dossier-holon-03-future-machine.md</p>
+    </article>
+
+    <article class="municion">
+      <header>
+        <span class="ordinal">Quinto.</span>
+        <h3>Apuntar, no contener</h3>
+        <span class="sellos"><span class="sello d">Doctrina</span></span>
+      </header>
+      <p>Regla DS-5 de la casa: el registro no almacena los mundos — los ancla por ruta.
+      Todo se compone desde registry propio (<code>npm.scriptorium.escrivivir.co</code>),
+      federación por mesh P2P (HTTPS/WSS), endpoints MCP. Traducción: no hay jaula que
+      abandonar, porque no hay jaula. Usted se va cuando quiera, y se va con lo suyo.</p>
+      <p class="ruta">SCRIPT_SDK\DEVOPS\VISION.md §misión · SCRIPT_SDK\DEVOPS\METODOLOGIA\holones\07-script-sdk.md</p>
+    </article>
+
+    <article class="municion">
+      <header>
+        <span class="ordinal">Sexto.</span>
+        <h3>Hasta la ceguera es ley</h3>
+        <span class="sellos"><span class="sello v">Verificado</span></span>
+      </header>
+      <p>El mundo zeus no sabe que el registro que lo ancla existe, y está prohibido
+      decírselo: <em>«JAMÁS añadir puntero de vuelta»</em>. Cada capa sirve a la superior
+      sin poder concebirla — como TCP no sabe de HTTP. Y el método no se exime a sí mismo:
+      el registro deja escrito que <em>no puede auditarse solo</em>, y declara la tarea de
+      su propia auditoría como cabo suelto. Un sistema que legisla contra su propia
+      soberbia: eso no se ve en un pitch.</p>
+      <p class="ruta">SCRIPT_SDK\DEVOPS\METODOLOGIA\holones\01-mythos.md §regla dura · DEVOPS\VISION.md §guarda del 07</p>
+    </article>
+  </section>
+
+  <section>
+    <div class="rotulo">
+      <span class="n">IV</span>
+      <h2>Renuncias</h2>
+      <span class="apostilla">lo que esta casa no hará — y qué lo impide</span>
+    </div>
+    <dl class="renuncias">
+      <div class="renuncia">
+        <dt>No habrá feed que decida por usted</dt>
+        <dd><span class="mecanismo">mecanismo</span>
+        La epoché es del usuario: axioma con candados de diseño, sin admin-override.
+        No es una política de empresa; es un invariante del contrato.</dd>
+      </div>
+      <div class="renuncia">
+        <dt>No habrá jaula</dt>
+        <dd><span class="mecanismo">mecanismo</span>
+        DS-5, apuntar no contener: sus volúmenes son suyos, la federación es P2P,
+        y la salida es un derecho de arquitectura — no una tarifa.</dd>
+      </div>
+      <div class="renuncia">
+        <dt>No habrá verdad central</dt>
+        <dd><span class="mecanismo">mecanismo</span>
+        «Sostener fragmentos sin metarrelato»: el registro ancla y relee; no dicta.
+        La misión, escrita, es esa — no otra vestida de esa.</dd>
+      </div>
+      <div class="renuncia">
+        <dt>No habrá trono</dt>
+        <dd><span class="mecanismo">mecanismo</span>
+        La moira: toda autoridad caduca si no se re-gana con obra, ronda a ronda.
+        Verificado al decimal en el código del mundo.</dd>
+      </div>
+      <div class="renuncia">
+        <dt>No habrá exit</dt>
+        <dd><span class="mecanismo">mecanismo</span>
+        Economía fraterna que circula: obra, taller y federación bajo licencia abierta
+        vAIGPLv1. Retorno sobre lo producido, no sobre lo especulado.</dd>
+      </div>
+    </dl>
+    <p class="renuncias-cierre">Nótese que ninguna renuncia descansa en la virtud de nadie.
+    Las virtudes se traicionan; la arquitectura hay que derribarla — y esta se publica
+    en abierto, para que cualquiera vea venir la excavadora.</p>
+  </section>
+
+  <section>
+    <div class="rotulo">
+      <span class="n">V</span>
+      <h2>El pagaré</h2>
+      <span class="apostilla">en qué se convierten las cien mil</span>
+    </div>
+    <p>Esta sección no lleva sello <em>Verificado</em>, y sería sospechoso que lo llevara:
+    es la parte que se firma, no la que se comprueba. Propuesta de partida, a deliberar
+    donde se delibera todo — en el Parlament:</p>
+
+    <div class="partida">
+      <span class="monto">40.000</span>
+      <div>
+        <h3>El taller (Hackería)</h3>
+        <p>Pasar las máquinas de papel a SPEC y de SPEC a código; publicar los SDKs al
+        registry. Obra verificable en cada ronda, con ruta, como todo aquí.</p>
+      </div>
+    </div>
+    <div class="partida">
+      <span class="monto">25.000</span>
+      <div>
+        <h3>La federación</h3>
+        <p>VPS, registry npm, mesh P2P, endpoints MCP: la infraestructura de la que
+        cualquiera puede desertar llevándose lo suyo. Se financia precisamente
+        <em>porque</em> no retiene a nadie.</p>
+      </div>
+    </div>
+    <div class="partida">
+      <span class="monto">25.000</span>
+      <div>
+        <h3>La obra</h3>
+        <p>Primeras Future Rooms y producciones del Futures-engine — ramificación
+        dramatúrgica, Layer2 jugado como LARP. El juego tocando calle.</p>
+      </div>
+    </div>
+    <div class="partida">
+      <span class="monto">10.000</span>
+      <div>
+        <h3>El fondo fraterno</h3>
+        <p>Préstamo sostenible del taller a quien produzca en él. La economía que
+        circula empieza circulando.</p>
+      </div>
+    </div>
+    <div class="partida total">
+      <span class="monto">100.000</span>
+      <div><h3>El pagaré completo</h3></div>
+    </div>
+
+    <div class="clausula">
+      <span class="titulillo">Cláusula de la moira</span>
+      <p>El pagaré se libera por rondas trimestrales. Cada ronda se gana con obra
+      verificada — con ruta, como todo en esta acta. <strong>Ronda sin obra: el
+      compromiso caduca solo y el resto vuelve a su mano.</strong> Igual que el mundo:
+      sin acción, colapso.</p>
+      <p>No le pedimos confianza. Le entregamos un mecanismo de desconfianza que funciona.</p>
+    </div>
+
+    <p style="margin-top:1.6rem">El retorno: participación en lo producido — obra, servicios de
+    federación y taller — bajo la licencia abierta de la casa. Retorno que circula,
+    no que acumula. Si lo que busca es una salida, aquí no la hay; si lo que busca
+    es una entrada a la infraestructura narrativa que no le pertenecerá a nadie
+    — tampoco a nosotros —, está usted leyendo su escritura.</p>
+  </section>
+
+  <section class="otorgan">
+    <div class="rotulo">
+      <span class="n">VI</span>
+      <h2>Otorgan</h2>
+    </div>
+    <p class="peroracion">No le pedimos que crea: creer es colapsar, y el colapso es suyo.
+    Le pedimos munición — cien mil unidades de pólvora seca — para sostener abierto
+    un campo donde la narración vuelva a ser de quien narra.</p>
+    <p>Y para que conste donde la memoria no se pierde — en la codebase, que es la
+    verdad —, firman:</p>
+
+    <div class="firmas">
+      <div class="firma">
+        <span class="rol">La productora</span>
+        Escrivivir.co<br>
+        <a href="mailto:secretaria@escrivivir.co">secretaria@escrivivir.co</a>
+      </div>
+      <div class="firma">
+        <span class="rol">El compareciente</span>
+        &nbsp;
+      </div>
+    </div>
+
+    <p class="fecha">En la constelación, a dieciséis de julio de dos mil veintiséis.<br>
+    <span class="fleuron">❦</span></p>
+
+    <div class="letra-chica">
+      <p>Las autoridades de este registro son apócrifas por diseño (AUTORIDADES.md):
+      la ficción honesta se declara. La otra, la que no se declara, suele llamarse pitch.</p>
+      <p>Licencia vAIGPLv1 «Animus Iocandi», v1.0.0-beta.1 · Prosa breve y cervantina
+      por mandato de LLM.md · Todas las rutas citadas existen y pueden visitarse:
+      el repo es la verdad.</p>
+    </div>
+  </section>
+
+</main>
+
+<div class="velo" id="velo" hidden="" role="alertdialog" aria-label="Ronda caducada">
+  <div class="sello-caducado">Ronda caducada</div>
+  <p class="glosa">Nadie actuó, y lo que no se re-gana, expira. Así funciona el sistema
+  que esta acta le propone financiar — acaba usted de verlo funcionar.</p>
+  <button type="button" id="reabrir">Abrir otra ronda</button>
+</div>
+
+<script>
+  (function () {
+    var DURACION = 360; // segundos — colapso verificado en zeus: ~6 min
+    var restante = DURACION;
+    var caducada = false;
+    var cuenta = document.getElementById('cuenta');
+    var velo = document.getElementById('velo');
+    var moira = document.getElementById('moira');
+
+    function pinta() {
+      var m = Math.floor(restante / 60);
+      var s = restante % 60;
+      cuenta.textContent = (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+    }
+
+    function colapsa() {
+      caducada = true;
+      velo.hidden = false;
+      moira.setAttribute('aria-live', 'polite');
+      cuenta.textContent = '00:00';
+    }
+
+    function reabre() {
+      caducada = false;
+      restante = DURACION;
+      velo.hidden = true;
+      pinta();
+    }
+
+    function actividad() {
+      if (!caducada) { restante = DURACION; }
+    }
+
+    ['scroll', 'pointerdown', 'pointermove', 'keydown', 'touchstart'].forEach(function (ev) {
+      window.addEventListener(ev, actividad, { passive: true });
+    });
+
+    velo.addEventListener('click', reabre);
+    document.getElementById('reabrir').addEventListener('click', function (e) {
+      e.stopPropagation();
+      reabre();
+    });
+
+    setInterval(function () {
+      if (caducada) { return; }
+      restante -= 1;
+      if (restante <= 0) { colapsa(); } else { pinta(); }
+    }, 1000);
+
+    pinta();
+  })();
+</script>
+
+</body></html>
