@@ -295,3 +295,82 @@ Notas del orquestador:
 Empieza: sitúate en rama/worktree, lee PRACTICAS entero, luego implementa.
 ```
 
+
+---
+
+## Lote activo — Cierre ola D2 *(asignado 2026-07-16)*
+
+Paralelo: dos chats worker (D21 + D22), cada uno con su worktree. **D20 ya ✅**
+en main (`TEST-SWARM/docs/` listo). Merge sugerido: **independientes** (D21 solo
+`plan/`; D22 entrega runbook/script bajo `TEST-SWARM/` + evidencia de dry-run en
+reporte). **Ningún worker hace `git push`** (DA-5).
+
+### WP-D22
+
+```text
+(rol) TEST-SWARM/plan/roles/WORKER.md
+
+WP: WP-D22 · El estreno público (runbook de publicación)
+Rama: wp/d22-estreno-publico
+Worktree: ../SCRIPT_SDK-wp-d22
+Reporte: TEST-SWARM/plan/REPORTES/WP-D22-estreno-publico.md
+
+Lecturas extra:
+- plan/BACKLOG.md WP-D22 (CA literal + runbook bash embebido)
+- plan/DECISIONES.md DE-7/DA-4/DA-5 (main huérfana docs+TEST-SWARM; draft
+  jamás push; push solo custodio)
+- plan/PRACTICAS.md §1 (autocontención del diff del worker) y §3
+- TEST-SWARM/docs/ (árbol que debe acabar en docs/ raíz tras publicación)
+- Reporte WP-D20-pack-ensamblado.md (revisión orquestador + gates)
+
+Notas del orquestador:
+- Entregable: runbook **escrito y probado en seco** — p. ej.
+  `TEST-SWARM/plan/runbook-estreno-publico.sh` (Git Bash) que automatice o
+  guíe los pasos 1–4 del BACKLOG; documentar precondiciones (paso 0) y el
+  bloque «SOLO CUSTODIO» (paso 5) sin ejecutarlo.
+- Dry-run: crear rama `main-sitio` huérfana de usar-y-tirar, verificar árbol
+  (solo `docs/` + `TEST-SWARM/`; grep cero raíz backstage; sin duplicar sitio
+  dentro de TEST-SWARM), borrar rama y limpiar **sin tocar** `main` ni `draft`.
+- **PROHIBIDO:** `git push origin draft` o cualquier push. El 403 de credenciales
+  es asunto del custodio fuera del WP.
+- Opcional en dry-run: nota en runbook si el custodio excluye acta v1 `.htm`
+  (DA-4) antes del `git add`.
+- Commits: chore(TEST-SWARM): … o docs(TEST-SWARM): … (diff solo TEST-SWARM/)
+
+Empieza: sitúate en rama/worktree, lee PRACTICAS entero, luego implementa.
+```
+
+### WP-D21
+
+```text
+(rol) TEST-SWARM/plan/roles/WORKER.md
+
+WP: WP-D21 · Acta del ensayo
+Rama: wp/d21-acta-ensayo
+Worktree: ../SCRIPT_SDK-wp-d21
+Reporte: TEST-SWARM/plan/REPORTES/WP-D21-acta-ensayo.md
+
+Lecturas extra:
+- plan/BACKLOG.md WP-D21 (CA literal)
+- plan/VISION.md §el ensayo y candados del protocolo
+- plan/PRACTICAS.md §4 (honestidad en evidencia)
+- plan/roles/README.md (ciclo orquestador/worker/revisión)
+- plan/REPORTES/WP-D00-gates-ensayo.md … WP-D20-pack-ensamblado.md (todos los
+  reportes aceptados del ensayo; commits citados ahí)
+- plan/DECISIONES.md (DE/DA cerradas durante el ensayo — contexto de fricciones)
+
+Notas del orquestador:
+- Entregable único: `TEST-SWARM/plan/ACTA-DEL-ENSAYO.md` — retrospectiva del
+  ensayo general: protocolo (fricciones, tiempos, devoluciones, huecos de roles),
+  como insumo para el primer swarm real.
+- **CA:** evidencia con rutas a reportes y hashes de commits de este ensayo;
+  veredicto explícito «qué cambiar antes del estreno real» (plan/roles,
+  PRACTICAS, gates, paralelismo, merge…).
+- Hechos en pasado; sin pitch ni promesa sin `<pendiente>`. Cero moneda.
+- No tocar `docs/`, NOTAS, gates ni BACKLOG. No push ni merge a main.
+- Gates verdes si el acta cita rutas Verificado bajo TEST-SWARM/.
+- Commits: docs(TEST-SWARM): …
+
+Empieza: sitúate en rama/worktree (crear worktree desde main @ 8631a1b si falta),
+lee PRACTICAS entero, luego implementa.
+```
