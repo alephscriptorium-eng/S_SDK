@@ -99,4 +99,6 @@ _(ninguno)_
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+- **Estado:** Aceptado ✅
+- **CA:** verificados (`validar-ensayo.sh` VERDE en worktree; diff worker solo `nota-3-la-ejecucion.md` + reporte; tabla 18 pasos; operaciones solo Nota 2; paso 17 centro vacío; gates a–e verdes)
+- **Merge a `main`:** 2026-07-16 (merge `wp/d13-ejecucion` → `main`, `fe6d2b36096b9adf4c316beab7dad1c36719db8d`)
