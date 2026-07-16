@@ -14,6 +14,9 @@ Junturas activas (una por par consecutivo de holones vivos):
 - [`02-03-logos-revelacion.md`](02-03-logos-revelacion.md) — el logos da lengua a la Encarnación.
   Material excedente: [`2026-07-16-dossier-holon-03-future-machine.md`](2026-07-16-dossier-holon-03-future-machine.md)
   — el dossier de brainstorming que parió el ancla del 03 (ex-`wip/`, archivado al anclarse el mundo emmanuel).
+  Notaría: [`2026-07-16-dossier-notaria-tres-liturgias.md`](2026-07-16-dossier-notaria-tres-liturgias.md)
+  — cartografía de las tres liturgias (force / dossier-mapa / línea personal), acta de madurez del 02 en 🔴 (0 de 2:
+  faltan WP-E01 y WP-E11 de emmanuel) y decisiones D-N1..D-N4 enunciadas al custodio. Aceptado ✅ 2026-07-16.
 - [`03-04-revelacion-ilustracion.md`](03-04-revelacion-ilustracion.md) — la gracia se universaliza en razón.
 
 - [`05-06-sospecha-constelacion.md`](05-06-sospecha-constelacion.md) — lo que la sospecha desentierra, la constelación lo federa (pieza: el INVENTARIO del plan spinoff).
