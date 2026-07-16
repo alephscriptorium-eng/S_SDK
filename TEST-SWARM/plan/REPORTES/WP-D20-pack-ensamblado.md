@@ -5,7 +5,7 @@
 | agente | worker D20 (subagente) |
 | fecha | 2026-07-16 |
 | rama | `wp/d20-pack-ensamblado` |
-| commits | _(tras commit)_ |
+| commits | `0796ebf` |
 | estado propuesto | listo para revisión |
 
 ## Qué se hizo
