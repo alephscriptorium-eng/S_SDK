@@ -90,4 +90,9 @@ _(ninguno)_
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** (2026-07-16)
+
+1. `validar-ensayo.sh` VERDE en worktree D22 (gates a–e; 82 OK).
+2. `ESTRENO-RUNBOOK.md` + `estreno-dry-run.sh` presentes; dry-run en reporte: huérfana verificada, `main`/`draft` intactas, sin push.
+3. Diff de merge: solo runbook, script y reporte (sin BACKLOG/BRIEF del worker).
+4. Hallazgo `rm -rf TEST-SWARM` antes del `cp`: documentado en runbook/script; sin bloqueo para aceptación.

@@ -114,7 +114,7 @@ de scrum**, jamás la moneda (DE-5, DE-6).
   cabecera de procedencia; gates verdes; ningún `<pendiente>` sin declarar
   en el propio pack.
 
-- 🔶 **WP-D22 · El estreno público (runbook de publicación)** *(agente pendiente · 2026-07-16)* — publicar a `origin`
+- ✅ **WP-D22 · El estreno público (runbook de publicación)** *(aceptado · 2026-07-16)* — publicar a `origin`
   (`github.com/alephscriptorium-eng/S_SDK`) desde ESTE repo (DE-7 ampliada
   por DA-4): `main` **huérfana = `docs/` (el sitio) + `TEST-SWARM/` (el
   ensayo conservado)**; `draft` = backstage local que **nunca** se sube. El
