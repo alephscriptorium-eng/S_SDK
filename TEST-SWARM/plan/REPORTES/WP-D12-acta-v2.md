@@ -87,4 +87,6 @@ _(ninguna)_
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+- **Estado:** Aceptado ✅
+- **CA:** verificados (`validar-ensayo.sh` VERDE en worktree; diff `main..wp/d12-acta-v2` solo `ACTA-V2.md` + reporte; 40k+25k+25k+10k = 100.000 puntos scrum; gate (e) limpio; acta v1 `.htm` sin diff)
+- **Merge a `main`:** 2026-07-16 (merge `wp/d12-acta-v2` → `main`, `e63fb23`)

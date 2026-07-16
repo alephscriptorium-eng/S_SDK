@@ -77,7 +77,7 @@ de scrum**, jamás la moneda (DE-5, DE-6).
   reproducible por un lector sin contexto; cada paso con su sello; gates
   verdes.
 
-- 🔶 **WP-D12 · Reedición del acta (v2)** *(agente pendiente · 2026-07-16)* — el acta Municiones saneada, como
+- ✅ **WP-D12 · Reedición del acta (v2)** *(aceptado · 2026-07-16)* — el acta Municiones saneada, como
   **sección propia al cierre del pack** (DA-3 cerrada): el último acto de
   `index.html`, no página aparte. Correcciones respecto a v1: (a)
   **munición = ideas/obra** para disidentes narrativos (línea Ibáñez),
