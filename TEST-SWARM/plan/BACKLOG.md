@@ -93,7 +93,7 @@ de scrum**, jamás la moneda (DE-5, DE-6).
 
 ## Ola D2 — El estreno
 
-- 🔶 **WP-D20 · Pack ensamblado** *(agente pendiente · 2026-07-16)* — el gran final: **la superposición**,
+- ✅ **WP-D20 · Pack ensamblado** *(aceptado · 2026-07-16)* — el gran final: **la superposición**,
   maquetada sobre la plantilla fanzine (DE-8). Un solo grafo, dos
   rotulaciones conmutables (M ↔ casa), centro vacío en ambas; al conmutar,
   el ángel ve que es la misma forma. Realización fanzine: la superposición

@@ -76,4 +76,10 @@ _(ninguno)_
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** (2026-07-16)
+
+1. `validar-ensayo.sh` VERDE en worktree D20 (gates a–e).
+2. `TEST-SWARM/docs/index.html` navegable: guion → Nota 1–3 → superposición → acta v2 (moira + conmutador M↔casa).
+3. `fanzine.css` con cabecera de procedencia DE-8; gate (d) OK.
+4. Diff de merge: solo `TEST-SWARM/docs/` + reporte (sin arrastre BRIEF/BACKLOG del worker).
+5. Hallazgo volumes: `ACTA-V2.md` sigue citando ruta fantasma `packages/volumes/`; HTML usa `zeus-sdk/VOLUMES/volumes.json` (existe en `OASIS/SCRIPTORIUM_V0/`). Sin bloqueo para D20.
