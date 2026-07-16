@@ -68,7 +68,7 @@ de scrum**, jamás la moneda (DE-5, DE-6).
   con ruta absoluta existente; el centro de ambos grafos marcado vacío;
   gates (c)(d) verdes.
 
-- ⬜ **WP-D13 · Nota 3 · La ejecución trazada** — el corazón Lovelace: correr
+- 🔶 **WP-D13 · Nota 3 · La ejecución trazada** *(agente pendiente · 2026-07-16)* — el corazón Lovelace: correr
   la M-como-forma por la máquina **a mano**, al modo Nota G (Bernoulli sobre
   una máquina sin construir). Tabla de traza: paso · operación del método ·
   entrada · salida · sello — de «registrar fragmento» a «declarar centro

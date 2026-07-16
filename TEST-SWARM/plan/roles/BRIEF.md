@@ -200,3 +200,45 @@ Notas del orquestador:
 
 Empieza: sitúate en rama/worktree, lee PRACTICAS entero, luego implementa.
 ```
+
+---
+
+## Lote activo — WP-D13 *(asignado 2026-07-16)*
+
+**Depende de ✅ WP-D11** (operaciones del método en Nota 2). D10 y D12 ya
+aceptados en main.
+
+### WP-D13
+
+```text
+(rol) TEST-SWARM/plan/roles/WORKER.md
+
+WP: WP-D13 · Nota 3 · La ejecución trazada
+Rama: wp/d13-ejecucion
+Worktree: ../SCRIPT_SDK-wp-d13
+Reporte: TEST-SWARM/plan/REPORTES/WP-D13-la-ejecucion.md
+
+Lecturas extra:
+- GUION.md §Nota 3 (tramos 3.0–3.7 y corrida canónica: arco entrada→máquina→salida→acta)
+- plan/DECISIONES.md DE-4/DE-5/DE-6/DA-3 (modo Nota G; munición≠moneda; acta como cierre)
+- plan/VISION.md §ejecución trazada
+- plan/PRACTICAS.md §1.3 (sellos por paso)
+- NOTAS/nota-1-la-forma-m.md (cinco nodos, dualidades, centro vacío)
+- NOTAS/nota-2-la-maquina.md (operaciones del método: registry, juntura, sello)
+- ACTA-V2.md (desemboque 3.7: comparecencia en puntos de scrum)
+
+Notas del orquestador:
+- Entregable único: TEST-SWARM/NOTAS/nota-3-la-ejecucion.md. Corazón Lovelace:
+  **corre** la M a mano, no explica desde fuera.
+- Tabla de traza (tramo 3.6): columnas paso · operación del método · entrada ·
+  salida · sello — de «registrar fragmento» a «declarar centro vacío».
+- **Solo** operaciones ya definidas en Nota 2; cada paso con sello y fuente;
+  reproducible por lector sin contexto (modo Nota G).
+- Último paso: centro vacío / capa GRAVEDAD·GRAVITÓN como `<pendiente>` donde
+  corresponda; cierre enlazado al acta v2 sin moneda ni promesa futura sin sello.
+- No tocar Nota 1/2, ACTA-V2, gates ni HTML (D20).
+- Gates verdes antes de parar (en especial (c) rutas Verificado).
+- Commits: docs(TEST-SWARM): …
+
+Empieza: sitúate en rama/worktree, lee PRACTICAS entero, luego implementa.
+```
