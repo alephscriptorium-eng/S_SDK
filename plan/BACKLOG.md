@@ -288,37 +288,43 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
 
 ## Ola I3 — Contenido: los holones (primera activación real)
 
-> **Ola I3 en curso 2026-07-19.** I30 ✅ (revisión). Siguiente: I31 ∥ I32
-> (briefs al merge+push I30). I33 tras ambos. Cadencia: merge cada ✅.
+> **Ola I3 en curso 2026-07-19.** I30 ✅ mergeado+pushed. Ahora: I31 ∥ I32
+> 🔶. I33 ⬜ hasta ambos ✅. Cadencia: merge cada ✅.
 
 - ✅ **WP-I30 · Activación en casa** — plan/ consumidor del skill
   `swarm-orquestacion@0.1.0`; instancia `WEBS/` (CANTERA + ENTREGA-CAPA-1)
   vía `site-web`. **CA cumplidos:** Eje IV (scripts skill ejecutados);
   dedup protocolo = 1 (skill); ceguera WEBS = 0.
-  **Aceptado ✅ 2026-07-19** — rama `wp/i30-activacion-en-casa` @ `eb93fe8`
-  (tip; obra @ `9928c46`) · reporte
-  `plan/REPORTES/WP-I30-activacion-en-casa.md`. Desbloquea I31∥I32.
+  **Aceptado ✅ 2026-07-19** — merge `main` @ `3ec7883` (obra rama
+  `wp/i30-activacion-en-casa` @ `eb93fe8`) · reporte
+  `plan/REPORTES/WP-I30-activacion-en-casa.md`. Worktree retirado.
 
-- ⬜ **WP-I31 · Portada + ficha 01 Mythos** — referencias reales
+- 🔶 **WP-I31 · Portada + ficha 01 Mythos** — referencias reales
   verificadas: `z-sdk.escrivivir.co`, `games.z-sdk.escrivivir.co`, registry
   `@zeus` (~19 paquetes), GitHub Releases de startpacks, repos Z_SDK.
   **CA:** cada URL navegada (browser, no solo curl); cada comando npm
   citado probado contra el canal real; sello por afirmación.
-  _I30 ✅ — listo para brief+🔶 al merge+push I30 (paralelo I32)._
+  **Asignado 🔶 2026-07-19** (orquestador): brief
+  `plan/REPORTES/BRIEF-WP-I31-portada-ficha-mythos.md` · rama
+  `wp/i31-portada-ficha-mythos` · worktree `../SCRIPT_SDK-wp-i31`.
+  Paralelo I32.
 
-- ⬜ **WP-I32 · Fichas 02–07 + roadmaps placeholder** — 02 Logos (juntura
+- 🔶 **WP-I32 · Fichas 02–07 + roadmaps placeholder** — 02 Logos (juntura
   01↔03 pendiente de destilar); 03 emmanuel (E0–E3 todo ⬜, «papel
   primero»); 04 AOS/NETWORK-ENGINE; 05–06 aleph-scriptorium (S0–S4, S14 🔶,
   link al Jekyll vivo); 07 el método + pack TEST-SWARM. Formato de roadmap
   uniforme (olas ⬜/🔶/✅) para ir rellenando.
   **CA:** cero promesas sin sello (`<pendiente>` declarado, no vendido); un
   lector distingue el estrato de cada afirmación.
-  _I30 ✅ — listo para brief+🔶 al merge+push I30 (paralelo I31)._
+  **Asignado 🔶 2026-07-19** (orquestador): brief
+  `plan/REPORTES/BRIEF-WP-I32-fichas-roadmaps.md` · rama
+  `wp/i32-fichas-roadmaps` · worktree `../SCRIPT_SDK-wp-i32`.
+  Paralelo I31.
 
 - ⬜ **WP-I33 · El pack TEST-SWARM servido** — DA-4 de TEST-SWARM honrada:
   `TEST-SWARM/docs/index.html` enlazado o servido como ruta estática.
   **CA:** accesible desde portada; moira funcional en Pages.
-  _Depende de I31∥I32 (contenido de portada) — no brief aún._
+  _Depende de I31∥I32 ✅ — no brief aún._
 
 ## Ola I4 — Publicación
 
