@@ -9,10 +9,9 @@ Media: el custodio. Sustituye al handoff del arranque I0 (ciclo cumplido).
 - **Push raíz S_SDK:** hecho → `https://github.com/alephscriptorium-eng/S_SDK`
   · `main` @ `fcbafa0` (y commits posteriores de gobierno I3). Validación
   orquestador+vigilante (DE-I13) implícita en el GO del custodio.
-- **Ola I3 arrancada:** solo **WP-I30** 🔶. Briefs:
-  `plan/REPORTES/BRIEF-OLA-I3.md` +
-  `plan/REPORTES/BRIEF-WP-I30-activacion-en-casa.md`.
-  I31/I32/I33 = ⬜ (I30 bloquea). Cadencia: merge cada ✅ al llegar.
+- **Ola I3:** **WP-I30 ✅** (revisión 2026-07-19; rama
+  `wp/i30-activacion-en-casa` @ `eb93fe8`). Pendiente padre: merge→main +
+  push raíz + briefs I31∥I32. I33 = ⬜ hasta ambos. Cadencia: merge cada ✅.
 - **WP-I40 parcial:** el push de código ya no bloquea; quedan Pages
   Source=Actions, custom domain `s-sdk.escrivivir.co`, DNS/HTTPS (ops).
 - **Skills-library:** remote synced @ `019a90b`; no re-push. Pages library
