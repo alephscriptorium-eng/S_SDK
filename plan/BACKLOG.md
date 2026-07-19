@@ -224,16 +224,18 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   SCRIPT_SDK `main` @ `0c6e342` (merge reporte, sin push raíz). Worktree
   `SCRIPT_SDK-wp-i24` retirado. Siguiente: I25.
 
-- 🔶 **WP-I25 · Primer caso de verificación (Eje IV)** — cargar la fixture
+- ✅ **WP-I25 · Primer caso de verificación (Eje IV)** — cargar la fixture
   `ejemplo-M` a través del skill `vigilancia` y **simular** que un segundo
   holón la consume: skill + instancia producen un pulso/veredicto sin tocar
   SCRIPT_SDK ni nombrar zeus. Prueba de que el contrato es real, no solo que
   compila.
   **CA:** un agente con solo el skill + `instancias/ejemplo-M` reproduce un
   ciclo de vigilancia completo; cero referencias al marco; acta en REPORTES/.
-  **En curso 🔶 2026-07-19** (orquestador): brief emitido
-  `plan/REPORTES/BRIEF-WP-I25-primer-caso-verificacion.md`. Base skills-library
-  `main` @ `fcac110`. NO implementar desde orquestador — 1 worker.
+  **Aceptado ✅ 2026-07-19** (orquestador): CA re-verificado — skills-library
+  `wp/i25-primer-caso-verificacion` @ `dfdb563` (`ensayos/i25-ciclo-M/`
+  pulso+addenda+veredicto; ceguera=0; `ejemplo-M` intacta); SCRIPT_SDK
+  `wp/i25-primer-caso-verificacion` @ `1e6f518` (acta REPORTES). Merge +
+  brief I26 pendientes (no ejecutados en esta revisión).
 
 - ⬜ **WP-I26 · Publicación del paquete** — el swarm publica al registry
   propio (DE-I7) con el **mismo procedimiento que zeus/Verdaccio**
