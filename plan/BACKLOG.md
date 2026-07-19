@@ -234,10 +234,12 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   **Aceptado ✅ 2026-07-19** (orquestador): CA re-verificado — skills-library
   `wp/i25-primer-caso-verificacion` @ `dfdb563` (`ensayos/i25-ciclo-M/`
   pulso+addenda+veredicto; ceguera=0; `ejemplo-M` intacta); SCRIPT_SDK
-  `wp/i25-primer-caso-verificacion` @ `1e6f518` (acta REPORTES). Merge +
-  brief I26 pendientes (no ejecutados en esta revisión).
+  `wp/i25-primer-caso-verificacion` @ `1e6f518`/`041229d` (acta REPORTES).
+  **Merged 2026-07-19:** skills-library `main` @ `7bd0ab7` (pushed DE-I7;
+  tip WP `dfdb563`); SCRIPT_SDK `main` @ `1afef33` (merge reporte, sin push
+  raíz). Worktree `SCRIPT_SDK-wp-i25` retirado. Siguiente: I26.
 
-- ⬜ **WP-I26 · Publicación del paquete** — el swarm publica al registry
+- 🔶 **WP-I26 · Publicación del paquete** — el swarm publica al registry
   propio (DE-I7) con el **mismo procedimiento que zeus/Verdaccio**
   (DE-I12): auth basic `username` + `_password` (base64) + `email` +
   `always-auth` → `npm publish --registry https://npm.scriptorium.escrivivir.co`.
@@ -248,6 +250,9 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   tick de ops del custodio (no bloquea el resto).
   **CA:** `npm view` del paquete resuelve contra el canal real (C8, lección
   startpacks-404); semver inicial; release notes.
+  **En curso 🔶 2026-07-19** (orquestador): brief emitido
+  `plan/REPORTES/BRIEF-WP-I26-publicacion-paquete.md`. Base skills-library
+  `main` @ `7bd0ab7`. NO implementar desde orquestador — 1 worker.
 
 ## Ola I3 — Contenido: los holones (primera activación real)
 
