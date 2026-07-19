@@ -7,7 +7,7 @@
 | rama | `wp/i41-verificacion-sitio-vivo` |
 | worktree | `../SCRIPT_SDK-wp-i41` |
 | base | `main` @ `b04302a` |
-| commits | _(este commit)_ |
+| commits | `938c1d2` docs(plan): reporte WP-I41… |
 | estado propuesto | listo para revisión |
 | push | no (orquestador) |
 
