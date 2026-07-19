@@ -149,4 +149,30 @@ Ninguno. Listo para revisión orquestador → merge a main (sin push worker).
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** — orquestador holón 07 · 2026-07-19 · rama
+`wp/i31-portada-ficha-mythos` @ `41b68d3` (+ commit de esta revisión).
+
+### Verificado
+
+1. **CA-1 URLs navegadas** — z-sdk / games / GitHub Z_SDK + games-library +
+   Releases: títulos del reporte reproducidos en revisión (browser
+   Playwright 2026-07-19: `Zeus SDK`, `Zeus Games Library`).
+2. **CA-2 npm canal real** — muestra `@zeus/protocol@0.2.0` y
+   `@zeus/webrtc-signaling@0.2.1` contra
+   `https://npm.scriptorium.escrivivir.co`; tabla 21 paquetes en ficha.
+3. **CA-3 sello por afirmación** — `docs/holones/01-mythos.md`: cada
+   superficie con **Sello:**; narrativa/ratificación `<pendiente>`.
+4. **CA-4 docs:build + ceguera + HOLONES** — `npm run docs:build` exit 0
+   (~20.1s, revisión); cero OASIS/rutas absolutas en obra I31; gitlinks
+   submodule intactos; diff 02–07 vacío.
+5. **Nav unificado 01–07** — `holonesNav` en `config.mjs` tras FF post-I32;
+   portada tabla 01–07; no pisó fichas 02–07.
+6. **PRACTICAS** — alcance docs/WEBS/reporte; castellano; citar-no-copiar;
+   sellos con fuente; sin fluff.
+
+### Orden de merge
+
+1. Merge `wp/i31-portada-ficha-mythos` → `main` **ya** (I32 ya en main).
+2. BACKLOG I31 🔶→✅; I33 ⬜→🔶 + brief I33; push raíz (cadencia I3).
+3. Retirar worktree `SCRIPT_SDK-wp-i31`.
+4. Lanzar 1 worker I33 — **no** implementar en esta revisión.
