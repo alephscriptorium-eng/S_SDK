@@ -142,12 +142,12 @@ bloquea WP-D31 de aquel mundo, no bloquea este plan.)*
 
 ## Notas no bloqueantes (GO 2026-07-19)
 
-- ⏳ Pages `skills.s-sdk.escrivivir.co` — cubierto por **WP-I27**.
+- ~~Pages `skills.s-sdk.escrivivir.co`~~ — **cerrado** (WP-I27 ✅).
 - ✅ **GO I5** (custodio · 2026-07-19) — cola **WP-I52** 🔶 abierta.
   Entregable = §Nota ciega
   `plan/REPORTES/ENTREGA-VIGIA-2026-07-19b-scrub-rutas.md` (canal
   ENTREGA/vigía; ceguera 07→01). Zeus aplica micro-WP propio; CA I52
   abierto hasta merge + re-verificación vigía. **I52 ≠ I50** (I52 = F6
   scrub; I50 = Sprint 3). **I50/I51** sin GO (no arrancar). **I152 no
-  existe.**
-- I41 ✅ (acta C8); estación/vigilante como insumo ya consumido.
+  existe.** I27 ✅ / I41 ✅ (sin workers vivos que bloqueen la entrega).
+- I41 ✅ (acta C8); I27 ✅ (v0.2); estación/vigilante como insumo.

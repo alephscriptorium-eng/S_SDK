@@ -356,15 +356,25 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
 
 ## Ola I5 — Estabilización zeus (vía canal ENTREGA/vigía — jamás directa)
 
-- ⬜ **WP-I52 · ENTREGA scrub de rutas (URGENTE — antes que I50)** — F6 de
+> **GO I5 · 2026-07-19 (custodio):** cola abierta. Orden real:
+> **I52 (urgente, independiente)** → **I50** (GO aparte) → **I51**
+> (tras Sprint 3). **I152 no existe** (typo «I5/I152» → ola I5 + WP-I52).
+> I52 = solo nota F6 scrub rutas; **no** es parte de I50 (Sprint 3).
+> Ceguera 07→01: jamás tocar zeus directo; solo §Nota vía ENTREGA/vigía.
+
+- 🔶 **WP-I52 · ENTREGA scrub de rutas (URGENTE — antes que I50)** — F6 de
   la intervención: el plan público de Z_SDK cita rutas `SCRIPT_SDK\...` en
   8 ficheros (puntero de vuelta prohibido; sembrado por el canal
-  temp-review). Nota ciega YA preparada:
+  temp-review). Nota ciega:
   `plan/REPORTES/ENTREGA-VIGIA-2026-07-19b-scrub-rutas.md` — encuadre
-  «higiene de portabilidad», prueba de ceguera hecha. Entrega el custodio
-  en quietud de zeus; su orquestador aplica como micro-WP.
-  **Nota GO 2026-07-19:** leak F6 en remoto zeus ⏳; I52 **lista para
-  entrega (I5)** — **no implementar** I50/I52 hasta «GO I5» del custodio.
+  «higiene de portabilidad», prueba de ceguera hecha. Brief:
+  `plan/REPORTES/BRIEF-WP-I52-entrega-scrub-rutas.md`.
+  **GO I5 · 2026-07-19:** gate abierto. Entregable 07 = §Nota (§Lectura
+  interna no sale). Custodio entrega al orquestador zeus; zeus aplica
+  micro-WP propio (scrub por clase). **Independiente de I50** (I50 sigue
+  ⬜). CA abierto hasta merge zeus + re-verificación vigía.
+  **NO worker SCRIPT_SDK** de implementación (ceguera). I27 ✅ (ya no
+  compite).
   **CA:** grep de rutas absolutas locales en main de zeus = 0 (por clase);
   re-verificado por el vigía tras su merge; regla «entregas sin rutas»
   cosida al skill (WP-I27, regla 12).
@@ -373,12 +383,14 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   frágiles restantes de SUS repos (#1 CNAME, #2 guard de base, #5 dist/
   gitignoreado en library, #4 coherencia npm ci, economía CI de A-13, #7
   gap de paths) + **oferta del paquete público de skills** como recurso del
-  registry (blind-safe: un paquete público más). GO del custodio antes de
-  entregar; en quietud; cruzada con las colas vivas del orquestador.
+  registry (blind-safe: un paquete público más). **Distinto de I52** (no
+  incluye el scrub F6). GO del custodio **aparte** antes de entregar; en
+  quietud; cruzada con las colas vivas del orquestador.
   **CA:** prueba de ceguera grep = 0; no duplica colas de zeus.
 
-- ⬜ **WP-I51 · Verificación vigía del sprint** — con el skill `vigilancia`.
-  **CA:** veredictos persistidos en el archivo de vigilancia.
+- ⬜ **WP-I51 · Verificación vigía del sprint** — con el skill `vigilancia`
+  (tras I50 entregada / sprint aplicado). **CA:** veredictos persistidos
+  en el archivo de vigilancia.
 
 ## Ola I6 — Activación en los demás holones (matar las réplicas)
 
@@ -412,7 +424,8 @@ Dentro de I2 el orden es: I20 → (I21∥I22∥I23) → I24 (separación) → I2
 (verificación) → I26 (publish). I24 depende de I23 (necesita el skill donde
 apoyar la fixture) y es donde se corrige el error fundamental DS-5.
 Dentro de I3: I30 → (I31∥I32) → I33. Tras I40 ✅: lote **I41 ∥ I27**
-ambos ✅ (2026-07-19). I5 (I52→I50) con GO I5 del custodio.
+ambos ✅ (2026-07-19). **GO I5** (2026-07-19): **I52 🔶** (nota F6,
+canal ENTREGA; sin worker raíz) → I50 ⬜ → I51 ⬜ (I50/I51 con GO aparte).
 
 ## Verificación end-to-end del conjunto
 
