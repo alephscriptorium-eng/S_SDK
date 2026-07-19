@@ -51,13 +51,36 @@ backstage (`VIGILANCIA/ESTACION.md`, gitignored). Actas de este mundo:
   reintrodujo el patrón); y **regla 1 confirmada en dos mundos** (hueco
   post-merge nuestro + plan sin commitear en zeus pre-U140).
 
+## Re-verificación I52 (2026-07-19 noche · U140 mergeado @ `0e604ae`)
+
+Contra el **main remoto** de zeus (canal real):
+- Clase rutas absolutas (`[A-Za-z]:\Users` · `/c/Users/`): **0 hits** ✅
+- `holón|holarquía`: **0 hits** ✅ (scrub U118 intacto)
+- `SCRIPT_SDK`: **14 hits residuales en UN fichero** — el propio reporte
+  `plan/REPORTES/WP-U140-scrub-rutas-locales.md`, que cita su evidencia de
+  grep con el token en claro (`SCRIPT_SDK=0`). La recursión de la §Nota,
+  un nivel arriba: el reporte que prueba la ausencia lo reintroduce.
+- **Veredicto vigía: I52 NO cierra aún** — falta micro-enmascarado del
+  token en ese reporte (línea ciega para zeus abajo). Los 8 ficheros
+  originales del leak: limpios.
+
+**Micro para zeus (vía custodio):** «El reporte U140 cita en claro el
+token objetivo dentro de su evidencia. Enmascararlo (p.ej. `<token>` o
+`S…_SDK`). CA: grep del token = 0 en TODO el árbol, incluido el propio
+reporte.»
+
+**Lección v0.2 reforzada:** ni notas ni reportes citan el token que mandan
+borrar — la evidencia de grep se enmascara SIEMPRE (2 recursiones en un
+mismo ciclo: §Nota y reporte).
+
+I28 re-verificado de facto: 0 ramas `wp/*` en el hermano (local+remoto,
+post-prune) ✅ · favicon raíz **200** tras redeploy ✅.
+
 ## Gates externos vivos (nunca silencio)
 
-- **GO I5 abierto (2026-07-19):** «esperando: custodio entrega §Nota
-  **I52** → zeus» (`ENTREGA-VIGIA-2026-07-19b-scrub-rutas.md`) +
-  «esperando: merge micro-WP zeus + re-verif vigía (CA I52 · grep clase
-  rutas absolutas = 0)». Leak remoto zeus `⏳ sin re-verificar` hasta
-  ese merge. I52 ≠ I50; I152 no existe.
+- «esperando: micro-enmascarado del token en reporte U140 (zeus, vía
+  custodio) → re-verif final vigía → ✅ I52 del orquestador».
+- I50 sigue ⬜ sin GO (tras cierre real de I52).
 - ~~«esperando: **WP-I27**»~~ — **cerrado** (I27 ✅ · v0.2 + Pages +
   higiene).
 - ~~WP-I40 / I41~~ — **cerrados** (ops + acta C8 ✅).
