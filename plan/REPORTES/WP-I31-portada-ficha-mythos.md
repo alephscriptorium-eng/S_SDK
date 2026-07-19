@@ -6,7 +6,8 @@
 | fecha | 2026-07-19 |
 | rama | `wp/i31-portada-ficha-mythos` |
 | worktree | `C:/Users/aleph/SCRIPT_SDK-wp-i31` |
-| base | `main` @ `bbd1f8b` (post-I32; merge fast-forward desde `9c26edf`) |
+| base | `main` @ `bbd1f8b` (post-I32; FF desde `9c26edf`) |
+| commits | `e089999` docs(docs): portada + ficha 01 Mythos… |
 | estado propuesto | listo para revisión |
 | push | no (orquestador mergea) |
 
