@@ -7,7 +7,7 @@
 | rama | `wp/i33-test-swarm-servido` |
 | worktree | `C:/Users/aleph/SCRIPT_SDK-wp-i33` |
 | base | `main` @ `666cefd` |
-| commits | _(hashes al pie; se rellenan tras commit)_ |
+| commits | `e63f854` docs(docs) · `83bbe21` docs(WEBS) · `f7d6fc6` docs(plan) |
 | estado propuesto | listo para revisión |
 | push | no (orquestador mergea) |
 
