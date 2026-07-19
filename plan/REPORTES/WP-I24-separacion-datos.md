@@ -4,10 +4,10 @@
 | ---- | ----- |
 | agente | worker-i24 (holón 07) |
 | fecha | 2026-07-19 |
-| rama (SCRIPT_SDK) | `wp/i24-separacion-datos` |
+| rama (SCRIPT_SDK) | `wp/i24-separacion-datos` @ `c704ada` |
 | worktree | `C:\Users\aleph\SCRIPT_SDK-wp-i24` |
 | base SCRIPT_SDK | `main` @ `e31933a` |
-| rama (skills-library) | `wp/i24-separacion-datos` @ `fcac110` |
+| rama (skills-library) | `wp/i24-separacion-datos` @ `fcac110` (pushed) |
 | checkout skill | `C:\Users\aleph\S_SDK-skills-library` |
 | base skills-library | `main` @ `cb03e49` |
 | remote skill | origin `wp/i24-separacion-datos` (push DE-I7) |
