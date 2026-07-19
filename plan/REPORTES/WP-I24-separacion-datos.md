@@ -165,4 +165,31 @@ main = ops/orquestador. Push raíz = no (DE-I13 / brief).
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** · 2026-07-19 · orquestador holón 07 (modo REVISIÓN)
+
+### Qué se verificó (canal real)
+
+1. **CA-1** — Datos sesión zeus fuera del índice publicable: `git ls-files`
+   sin `VIGILANCIA/` · `ADDENDA/` · `HANDOFF_*` · `CONECTOR_*`;
+   `git check-ignore` confirma DE-I11 (+ `CONECTOR_*` I24); `RE-PLAN`
+   no tracked en SCRIPT_SDK. Tip `wp/i24-separacion-datos` @ `30c5759`.
+2. **CA-2** — Histórico en disco preservado bajo paths gitignoreados:
+   `VIGILANCIA/{bitacora,anomalias,watch,RE-PLAN,revisiones}`, `ADDENDA/`,
+   `HANDOFF_*`, `TRASH/` — todos presentes; no borrados.
+3. **CA-3** — Fixture `instancias/ejemplo-M/` en skills-library @ `fcac110`;
+   `rg` ceguera (zeus|holón|holarquía|SCRIPT_SDK|S_SDK|juntura|OASIS) = 0.
+4. **CA-4** — `skills/swarm-orquestacion/reference/RE-PLAN-protocolo-swarm.md`
+   existe (ceguera=0); copia local backstage en `VIGILANCIA/` OK; no
+   residuo tracked en núcleo SCRIPT_SDK.
+5. **PRACTICAS** — deltas 1/5/6; DE-I10/I11; alcance solo `.gitignore` +
+   reporte (+ skills-library fixture/doctrina); castellano; sin I25/I26.
+
+### Orden de merge (recomendado — no ejecutado aquí)
+
+1. **skills-library:** merge `wp/i24-separacion-datos` (`fcac110`) → `main`;
+   push origin (DE-I7).
+2. **SCRIPT_SDK:** merge `wp/i24-separacion-datos` (`30c5759` + tip
+   revisión) → `main`; **sin push raíz**.
+3. Limpiar worktree `SCRIPT_SDK-wp-i24` si aplica.
+4. Siguiente: brief WP-I25 (verificación Eje IV con ejemplo-M). Sin
+   implementar I25 en esta revisión.
