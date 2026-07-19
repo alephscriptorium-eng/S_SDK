@@ -159,9 +159,11 @@ bloquea WP-D31 de aquel mundo, no bloquea este plan.)*
 - I41 ✅ (acta C8); I27 ✅ (v0.2); I52 ✅; estación/vigilante como insumo.
 - ✅ **GO I6** (custodio · 2026-07-19) — ola de activación en holones ajenos.
   I60 ✅. **I61 ✅** (2026-07-20 · aleph @ `adf297e` sin push — tick
-  custodio/orquestador aleph). **I62** queda ⬜ ofrecido / espera decisión
-  del orquestador de zeus (Eje V: ofrecer, no imponer; no worker). Ola I6:
-  **cierre parcial**. Acta: `WP-I61-activacion-aleph.md`.
+  custodio/orquestador aleph). **I62** 🔶 — zeus **D-35** adoptó
+  `@alephscript/skills-scriptorium@0.3.0` (referencia versionada;
+  `plan/roles/` copia operativa; sin migración). Gate: pendiente cierre
+  I62 por orquestador/vigía (ver D-35 en main zeus). Ola I6:
+  **cierre parcial**. Acta I61: `WP-I61-activacion-aleph.md`.
 - ✅ **I61 aceptado** (orquestador · 2026-07-20) — CA1–CA6 OK; skill
   `@0.3.0`; S14 intacto; push remoto aleph pendiente canal media.
 

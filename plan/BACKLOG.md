@@ -474,18 +474,20 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   Acta: `plan/REPORTES/WP-I61-activacion-aleph.md` (ref. acta worker en
   aleph @ `adf297e`).
 
-- ⬜ **WP-I62 · zeus (01)** *(ofrecido / espera decisión · Eje V)* — su
-  `plan/roles/` es el ancestro canónico y su swarm está vivo: **NO se toca**;
-  queda **ofrecido** en I50 y lo decide su orquestador. No es tarea de este
-  orquestador; **no se asigna worker**. **CA (si zeus decide):** decisión
-  registrada (adopta / conserva con nota de procedencia); ceguera intacta
-  en ambos casos.
+- 🔶 **WP-I62 · zeus (01)** *(decisión zeus registrada · pendiente cierre
+  orquestador/vigía · Eje V)* — zeus **D-35** adoptó
+  `@alephscript/skills-scriptorium@0.3.0` como referencia versionada
+  canónica; `plan/roles/` permanece copia operativa (sin migración en ese
+  paso). **No worker.** Gate: «zeus D-35 adoptó 0.3.0; pendiente cierre
+  I62 por orquestador S_SDK/vigía» (CA: ver decisión en main de zeus).
+  Tip zeus: ver commit D-35 en `origin/main`.
 
 - **Cierre de ola (Eje IV):** **cumplido por I60** — emmanuel (segundo mundo,
   primer consumidor ajeno) valida el contrato. Backtracking al skill
   (reglas 13/14) = **WP-I29 ✅** (`@0.3.0` · skills `main` @ `5de379b`).
-  **Extra I61 ✅** (2026-07-20). **I62** sigue ⬜ ofrecido.
-  → **ola I6: cierre parcial** (I60✅ I61✅ I62⬜).
+  **Extra I61 ✅** (2026-07-20). **I62** 🔶 (decisión zeus D-35; ✅ formal
+  pendiente orquestador/vigía).
+  → **ola I6: cierre parcial** (I60✅ I61✅ I62🔶).
 
 ---
 
@@ -514,8 +516,8 @@ ambos ✅ (2026-07-19). **I28 ✅** (ola housekeeping V4+V5+V6 cerrada).
 cerrada** (re-verif formal acta WP-I51 @ tips `503b6b8`/`a25ca08`).
 Residual I2.5: **I29 ✅** (skills v0.3.0 / reglas 13–14 · `main` @
 `5de379b`). **GO I6** (custodio · 2026-07-19): lote **I61** → ✅ 2026-07-20
-(I60✅ I61✅; I62 ⬜ ofrecido / espera decisión — no worker). Ola I6:
-**cierre parcial**.
+(I60✅ I61✅; I62 🔶 — zeus D-35 adoptó 0.3.0; pendiente cierre
+orquestador/vigía). Ola I6: **cierre parcial**.
 
 ## Verificación end-to-end del conjunto
 

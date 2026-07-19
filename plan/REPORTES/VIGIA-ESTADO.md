@@ -217,6 +217,28 @@ esta sección; no copia a ciegas). **I51 ✅** asentado por orquestador;
 > versión fijada) · **(b)** conservar copia local con nota de procedencia.
 > CA: la decisión queda registrada; nada más cambia.
 
+### Señal post-decisión zeus (2026-07-20)
+
+Zeus **D-35** adoptó `@0.3.0` (opción a, sin migración inmediata:
+paquete = referencia versionada canónica; `plan/roles/` copia operativa).
+**I62 no ✅ aquí** — gate: «zeus D-35 adoptó 0.3.0; pendiente cierre I62
+por orquestador S_SDK/vigía».
+
+## I62 — re-verificación vigía (2026-07-20 · zeus @ `474d06c`)
+
+- **D-35 verificado en su main remoto:** adopta
+  `@alephscript/skills-scriptorium@0.3.0` como referencia versionada
+  canónica; `plan/roles/` permanece como copia operativa (sin borrado ni
+  migración en este paso); nota archivada en sus entregas.
+- Ceguera de los commits nuevos (`503b6b8..474d06c`): **0 hits**.
+- **CA de I62 CUMPLIDO** en variante mixta — adopta Y conserva con
+  registro formal: la más digna para el mundo cuyo `roles/` es el
+  ancestro del skill. Eje V ejemplar: se ofreció, decidió él.
+- **Veredicto: I62 sellable.** Con I60 ✅ · I61 ✅ (push pendiente tick
+  403 + I63 scrub en el mismo push) · I62 listo → **Ola I6 al borde del
+  cierre total**. Los CUATRO mundos del método referencian o adoptan el
+  skill: 07 autor · 03 activado · 05-06 activado · 01 adoptado por D-35.
+
 ## Rutina al retomar
 
 Pulso: `git fetch` + main vs origin · worktrees/stash/ramas ·
