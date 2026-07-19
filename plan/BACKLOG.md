@@ -288,8 +288,8 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
 
 ## Ola I3 — Contenido: los holones (primera activación real)
 
-> **Ola I3 en curso 2026-07-19.** I30 ✅ · I32 ✅ mergeado+pushed. Ahora:
-> I31 🔶. I33 ⬜ hasta I31∥I32 ✅. Cadencia: merge cada ✅.
+> **Ola I3 en curso 2026-07-19.** I30 ✅ · I31 ✅ · I32 ✅ mergeados+pushed.
+> Ahora: I33 🔶. Cadencia: merge cada ✅.
 
 - ✅ **WP-I30 · Activación en casa** — plan/ consumidor del skill
   `swarm-orquestacion@0.1.0`; instancia `WEBS/` (CANTERA + ENTREGA-CAPA-1)
@@ -299,15 +299,15 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   `wp/i30-activacion-en-casa` @ `eb93fe8`) · reporte
   `plan/REPORTES/WP-I30-activacion-en-casa.md`. Worktree retirado.
 
-- 🔶 **WP-I31 · Portada + ficha 01 Mythos** — referencias reales
+- ✅ **WP-I31 · Portada + ficha 01 Mythos** — referencias reales
   verificadas: `z-sdk.escrivivir.co`, `games.z-sdk.escrivivir.co`, registry
-  `@zeus` (~19 paquetes), GitHub Releases de startpacks, repos Z_SDK.
-  **CA:** cada URL navegada (browser, no solo curl); cada comando npm
-  citado probado contra el canal real; sello por afirmación.
-  **Asignado 🔶 2026-07-19** (orquestador): brief
-  `plan/REPORTES/BRIEF-WP-I31-portada-ficha-mythos.md` · rama
-  `wp/i31-portada-ficha-mythos` · worktree `../SCRIPT_SDK-wp-i31`.
-  Paralelo I32.
+  `@zeus` (21 paquetes sellados), GitHub Releases / repos Z_SDK.
+  **CA cumplidos:** URLs navegadas (browser); npm canal real; sello por
+  afirmación; `docs:build` verde; ceguera; nav Holones 01–07 unificado;
+  fichas 02–07 intactas.
+  **Aceptado ✅ 2026-07-19** — merge `main` @ `072ac6d` (obra rama
+  `wp/i31-portada-ficha-mythos` @ `41b68d3` + revisión) · reporte
+  `plan/REPORTES/WP-I31-portada-ficha-mythos.md`. Worktree retirado.
 
 - ✅ **WP-I32 · Fichas 02–07 + roadmaps placeholder** — 02 Logos (juntura
   01↔03 pendiente de destilar); 03 emmanuel (E0–E3 todo ⬜, «papel
@@ -321,10 +321,13 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   `plan/REPORTES/WP-I32-fichas-roadmaps.md`. Nav Holones 02–07 en
   `config.mjs`; unificar 01 al merge de I31.
 
-- ⬜ **WP-I33 · El pack TEST-SWARM servido** — DA-4 de TEST-SWARM honrada:
+- 🔶 **WP-I33 · El pack TEST-SWARM servido** — DA-4 de TEST-SWARM honrada:
   `TEST-SWARM/docs/index.html` enlazado o servido como ruta estática.
   **CA:** accesible desde portada; moira funcional en Pages.
-  _Depende de I31∥I32 ✅ — no brief aún._
+  **Asignado 🔶 2026-07-19** (orquestador): brief
+  `plan/REPORTES/BRIEF-WP-I33-test-swarm-servido.md` · rama
+  `wp/i33-test-swarm-servido` · worktree `../SCRIPT_SDK-wp-i33`.
+  I31∥I32 ya ✅.
 
 ## Ola I4 — Publicación
 

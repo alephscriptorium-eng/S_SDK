@@ -1,7 +1,7 @@
 # Brief de ola — I3 · Contenido: los holones (primera activación real)
 
-_Orquestador holón 07 · 2026-07-19 · post-merge I30 (push raíz GO)_
-_SCRIPT_SDK `main` @ `3ec7883` (origin). Skills-library `main` @ `019a90b`
+_Orquestador holón 07 · 2026-07-19 · post-✅ I31+I32 (push raíz)_
+_SCRIPT_SDK `main` @ origin (merge I31). Skills-library `main` @ `019a90b`
 (synced; no re-push)._
 
 ---
@@ -9,45 +9,42 @@ _SCRIPT_SDK `main` @ `3ec7883` (origin). Skills-library `main` @ `019a90b`
 ## Orden del lote (dependencias)
 
 ```
-I30 ✅  →  I31 ∥ I32 🔶  →  I33 ⬜
+I30 ✅  →  I31 ✅ ∥ I32 ✅  →  I33 🔶
 ```
 
-- **Hecho:** **WP-I30** ✅ mergeado a `main` + push origin; worktree
-  `SCRIPT_SDK-wp-i30` retirado.
-- **Ahora:** **WP-I31** ∥ **WP-I32** 🔶 — briefs emitidos; 2 workers en
-  paralelo. Frontera: I31 = portada + ficha 01; I32 = fichas 02–07 +
-  roadmaps. No pisar superficies ajenas.
-- **WP-I33** permanece ⬜ hasta ✅+merge de ambos I31 e I32.
+- **Hecho:** **WP-I30** ✅ · **WP-I32** ✅ · **WP-I31** ✅ mergeados a
+  `main` + push. Worktrees I30/I31/I32 retirados. Nav Holones 01–07 unificado.
+- **Ahora:** **WP-I33** 🔶 — brief emitido; 1 worker. Pack TEST-SWARM
+  servido desde la web (DA-4).
 - **WP-I27** (ola I2.5) sigue ⬜ — paralelizable con I3 según handoff;
   **no** arranca en este brief.
 
 ## Cadencia de merge (regla 6 RETRO)
 
-**Merge cada ✅ al llegar** (no esperar el lote entero). Tras ✅ I31 o
-I32 → merge a `main` → push raíz (orquestador). Cuando ambos estén en
-main → brief I33.
+**Merge cada ✅ al llegar.** Tras ✅ I33 → merge a `main` → push raíz
+(orquestador). Cierra ola I3 de contenido.
 
 ## Gobierno (reglas 1–2 RETRO)
 
-- Briefs I31/I32 + BACKLOG 🔶 + HANDOFF se **commitean a main antes** de
-  lanzar los workers.
-- Workers: **no** editan BACKLOG; **no** push raíz (orquestador empuja
+- Brief I33 + BACKLOG 🔶 se **commitean a main antes** de lanzar el worker.
+- Worker: **no** edita BACKLOG; **no** push raíz (orquestador empuja
   tras merge). Skills-library: solo lectura.
 
 ## Gates externos (honestos)
 
-- Push raíz: **hecho** (GO custodio; I30 merge+push 2026-07-19).
+- Push raíz: **hecho** (GO custodio).
 - **WP-I40** restante: Pages Source=Actions + custom domain
   `s-sdk.escrivivir.co` + DNS/HTTPS — **no** cerrado; tick ops pendiente.
-- Pages skills-library (`skills.s-sdk.escrivivir.co`): DNS resuelve; HTTP
-  404 / activación Pages → WP-I27 (no I3).
+  CA «moira en Pages» de I33: verificar en build local / preview; sitio
+  vivo completo sigue I40.
+- Pages skills-library: WP-I27 (no I3).
 - I52: esperando entrega custodio→zeus (fuera de I3).
 
 ## Workers a lanzar ahora
 
 | WP | Estado | Worker |
 |---|---|---|
-| WP-I30 | ✅ | cerrado (merge+push; worktree retirado) |
-| WP-I31 | 🔶 | **1 worker** — `BRIEF-WP-I31-portada-ficha-mythos.md` |
-| WP-I32 | 🔶 | **1 worker** — `BRIEF-WP-I32-fichas-roadmaps.md` |
-| WP-I33 | ⬜ | no lanzar |
+| WP-I30 | ✅ | cerrado |
+| WP-I31 | ✅ | cerrado (merge+push; worktree retirado) |
+| WP-I32 | ✅ | cerrado |
+| WP-I33 | 🔶 | **1 worker** — `BRIEF-WP-I33-test-swarm-servido.md` |
