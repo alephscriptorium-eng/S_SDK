@@ -173,4 +173,36 @@ ops»).
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** · 2026-07-19 · orquestador holón 07 (modo REVISIÓN)
+
+### Qué se verificó (canal real)
+
+1. **CA-1** — `npm view @alephscript/skills-scriptorium
+   --registry=https://npm.scriptorium.escrivivir.co` → `0.1.0`
+   (re-ejecutado en revisión; tarball + `latest: 0.1.0`).
+2. **CA-2** — Semver inicial `0.1.0` en `package.json` @ `3734d01` y
+   publicado en registry.
+3. **CA-3** — Release notes: `CHANGELOG.md` sección `## 0.1.0 — 2026-07-19`
+   (incluido en tarball vía `files`).
+4. **Secrets / DE-I12** — `publish.yml` cablea
+   `${{ secrets.NPM_USERNAME }}` / `${{ secrets.NPM_PASSWORD }}` (nombres
+   exactos; sin `_authToken`). Valores no inspeccionados. Publish local
+   ya cumplió auth Verdaccio (username + `_password` base64).
+5. **Pages 404** — `curl -sI https://skills.s-sdk.escrivivir.co/` →
+   HTTP 404. CNAME + cert approved OK. **Nota, no bloqueo** (CA de I26 =
+   publish/`npm view`/semver/notes; brief: scaffold Pages no bloqueado).
+6. **PRACTICAS** — alcance skills-library + reporte; ceguera 0 en
+   `skills/`; castellano; sin I30+; sin push raíz.
+
+### Orden de merge (recomendado — no ejecutado aquí)
+
+1. **skills-library:** merge `wp/i26-publicacion-paquete` (`3734d01`) →
+   `main`; push origin (DE-I7). Tras merge: `workflow_dispatch` Docs si
+   hace falta contenido vivo en Pages; «Publish package» queda disponible
+   en Actions.
+2. **SCRIPT_SDK:** merge `wp/i26-publicacion-paquete` (tip con esta
+   revisión) → `main`; **sin push raíz**.
+3. Limpiar worktree `SCRIPT_SDK-wp-i26` si aplica.
+4. **Cierre ola I2.** Siguiente ola = I3 (I30+). GO custodio de arranque
+   cubría I0+I1+I2 — **no** emitir brief I30 ni marcar I30 🔶 en esta
+   revisión.
