@@ -326,7 +326,7 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   **CA cumplidos:** enlace real desde portada; moira OK en preview local
   (Pages dominio `<pendiente I40>`); `docs:build` verde; ceguera; pack
   intacto; CANTERA VIVA-OK.
-  **Aceptado ✅ 2026-07-19** — merge `main` @ `fcfa629` (obra rama
+  **Aceptado ✅ 2026-07-19** — merge `main` @ `12ecdbc` (obra rama
   `wp/i33-test-swarm-servido` @ `2b5d38c` + revisión `1f43926`) · reporte
   `plan/REPORTES/WP-I33-test-swarm-servido.md`. Worktree retirado.
   **Ola I3 cerrada.**
