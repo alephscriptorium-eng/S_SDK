@@ -3,3 +3,33 @@ VIGILANCIA/
 ADDENDA/
 HANDOFF_*
 /HIPOTESIS.md
+
+# Dependencias y artefactos Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.tgz
+.npm
+
+# Builds
+dist/
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+coverage/
+.turbo/
+.cache/
+
+# Entorno local
+.env
+.env.*
+!.env.example
+
+# Sistema / editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
