@@ -146,4 +146,35 @@ Ninguno bloqueante. Merge paralelo I31: orquestador resuelve nav 01+02–07.
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** — orquestador holón 07 · 2026-07-19 · rama
+`wp/i32-fichas-roadmaps` @ `2e015ff` (+ commit de esta revisión).
+
+### Verificado
+
+1. **CA-1 cero promesas sin sello** — fichas 02–07: afirmaciones vivas
+   citan DEVOPS/BACKLOG con fecha o quedan `<pendiente>` /
+   `<pendiente de abrir|ratificación|generar>`; I33 solo como pendiente
+   en 07; Jekyll C8 sellado en 06.
+2. **CA-2 estratos** — tabla uniforme Verificado / Asentado (DE-I8) /
+   `<pendiente>` / Roadmap en las seis fichas.
+3. **CA-3 roadmap uniforme** — `## Roadmap` + `| Ola | Estado | Nota |`
+   con ⬜/🔶/✅ en 02–07 (E0–E3, B0–B2, S0–S4/S14, I0–I6).
+4. **CA-4 docs:build + ceguera** — `npm run docs:build` exit 0
+   (reproducido en revisión, ~19.6s); sin rutas OASIS absolutas en
+   `docs/holones/`; HOLONES/ no mutado; sin `01-mythos` ni
+   `docs/index.md` (territorio I31).
+5. **PRACTICAS** — alcance = docs/holones 02–07 + nav + reporte; castellano;
+   citar-no-copiar; sellos con fuente (rutas DEVOPS/junturas/placeholders
+   existen); sin fluff vendido.
+
+### Orden de merge
+
+1. Merge `wp/i32-fichas-roadmaps` → `main` **ya** (CA propio cumple;
+   no esperar I31).
+2. BACKLOG I32 🔶→✅ (commit gobierno en main) + push raíz (cadencia I3).
+3. **Unificación nav con I31:** ambos tocan `docs/.vitepress/config.mjs`
+   (bloque Holones). I31 WIP aún solo enlaza 01; I32 deja 02–07 +
+   comentario. Al merge de I31: unificar `01–07` en un solo bloque nav/
+   sidebar; no pisar hero de `docs/index.md`. Preferir rebase/merge I31
+   **sobre** main post-I32.
+4. I33 sigue ⬜ hasta I31∥I32 ✅.
