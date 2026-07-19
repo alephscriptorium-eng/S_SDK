@@ -11,9 +11,9 @@ Sustituye el handoff post-I40 (I41 ✅ · I27 ✅ · GO I5 abierto).
 - **Ola I3:** I30–I33 ✅ cerrada.
 - **GO I5 ✅** — **I52 🔶** (nota F6 scrub rutas). Entregable = §Nota
   ciega `ENTREGA-VIGIA-2026-07-19b-scrub-rutas.md`. Canal ENTREGA/vigía;
-  **sin worker SCRIPT_SDK** (ceguera 07→01 — no tocar zeus). Zeus aplica
-  micro-WP propio. CA I52 = grep clase rutas absolutas = 0 en main zeus
-  + re-verif vigía tras merge.
+  **sin worker SCRIPT_SDK** (ceguera 07→01 — no tocar zeus). Zeus U140 ✅
+  mergeado (`32e5124` / `465ba99`); **CA I52 abierto** hasta re-verif
+  vigía (grep clase = 0 en main zeus).
 - **I50 ⬜ · I51 ⬜** — sin GO (no arrancar). I52 es **independiente** de
   I50 (solo nota F6; no es Sprint 3). **I152 no existe.**
 
@@ -25,8 +25,10 @@ Sustituye el handoff post-I40 (I41 ✅ · I27 ✅ · GO I5 abierto).
 
 ## Gates externos declarados (nunca silencio)
 
-- «esperando: custodio entrega §Nota I52 → zeus» + «esperando: merge
-  micro-WP zeus + re-verif vigía (CA I52)».
+- ~~«esperando: custodio entrega §Nota I52 → zeus»~~ — **cerrado**
+  (zeus U140 ✅ mergeado · tip `32e5124` / `465ba99`).
+- «esperando: re-verif vigía (CA I52)» — **zeus U140 mergeado; esperando
+  re-verif vigía**. I52 sigue 🔶.
 - ~~«esperando: ops Pages+DNS raíz»~~ — **cerrado** (I40 ✅).
 - ~~«esperando: WP-I41 acta C8»~~ — **cerrado** (I41 ✅).
 - ~~«esperando: WP-I27 v0.2 / Pages library»~~ — **cerrado** (I27 ✅).

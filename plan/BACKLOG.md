@@ -388,6 +388,7 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   interna no sale). Custodio entrega al orquestador zeus; zeus aplica
   micro-WP propio (scrub por clase). **Independiente de I50** (I50 sigue
   ⬜). CA abierto hasta merge zeus + re-verificación vigía.
+  **Gate (2026-07-19):** zeus U140 mergeado (tip merge `32e5124` / WP tip `465ba99` · main Z_SDK `0e604ae`); esperando re-verif vigía. **I52 sigue 🔶** (no cerrar aquí).
   **NO worker SCRIPT_SDK** de implementación (ceguera). I27 ✅ (ya no
   compite).
   **CA:** grep de rutas absolutas locales en main de zeus = 0 (por clase);
