@@ -1,6 +1,21 @@
 # ESTADO DEL VIGÍA — swarm holón 07 (rolling; léeme al retomar vigilancia)
 
-Actualizado: 2026-07-19 (post-revisión Ola I3). Protocolo: skill
+Actualizado: 2026-07-19 (post-revisión I40/I41/I27 · noche).
+
+## Revisión I40/I41/I27 (2026-07-19 noche, de facto — vigía + worker)
+
+| WP | Veredicto vigía | Nota |
+|---|---|---|
+| I40 cierre formal | **Aceptable** | delega en I41 sin inventar ni duplicar |
+| I41 acta C8 sitio | **Aceptable-con-nota** | acta exacta (spot-check re-ejecutado 1:1); ver V5/V6 |
+| I27 skill v0.2 | **Aceptable-con-nota** | 12 reglas cosidas **verbatim** al skill (`reglas-metodo-v02.md`, cruzadas en SKILL/ciclo/ORQUESTADOR); scrub F7 limpio; tarball = declarado; commits de aceptación atómicos (regla 2 cumplida); ver V4 |
+
+Canales reales re-verificados por el vigía: registry `['0.1.0','0.2.0']` ·
+`skills.s-sdk.escrivivir.co` **200** (era 404) · custom.css servido sin
+rutas · favicon raíz 404 (declarado).
+
+Cerrados: ~~V1~~ (custom.css neutral, `5d7b211`) · ~~V2~~ (atomicidad
+cumplida en I27) · ~~V3~~ (ramas i30/i32 borradas). Protocolo: skill
 `vigilancia` (`@alephscript/skills-scriptorium@0.1.0`); doctrina previa en
 backstage (`VIGILANCIA/ESTACION.md`, gitignored). Actas de este mundo:
 `VIGIA-2026-07-19-arranque-I0.md` · `INTERVENCION-2026-07-19-estabilizacion.md`
@@ -26,15 +41,21 @@ backstage (`VIGILANCIA/ESTACION.md`, gitignored). Actas de este mundo:
 
 ## Hallazgos abiertos (por severidad)
 
-- **V1 (menor, público):** `docs/.vitepress/theme/custom.css:2` conserva la
-  ruta absoluta `C:\Users\aleph\OASIS\...` como comentario de procedencia
-  (herencia WP-I10; señalada por I31 e I32 como fuera de alcance — 3 WPs
-  sin corregirla). El repo es público → la ruta está servida en GitHub.
-  Destino: micro en WP-I27 o housekeeping pre-I40-cierre. Regla 12.
-- **V2 (cosmético):** commit `666cefd` mezcla «aceptar I31» + «brief I33»
-  — deuda de commit-atómico ya reconocida para el skill v0.2 (WP-I27).
-- **V3 (higiene):** ramas `wp/i30-*` y `wp/i32-*` mergeadas sin borrar
-  (checklist regla 10; i31/i33 sí se borraron).
+- **V4 (alto, irónico):** las 7 ramas `wp/i20..i27` siguen vivas **local y
+  remoto** en `S_SDK-skills-library` — el mismo WP-I27 que instauró la
+  regla 10 (higiene de cierre) la aplicó en SCRIPT_SDK pero no en el
+  hermano que tocaba (regla 4). El propio reporte lo confesó como «fuera
+  de alcance». Destino: micro housekeeping.
+- **V5 (medio):** favicon raíz 404 + copy stale «<pendiente I40>» en
+  portada — declarados honestamente en I41 pero **sin cola/WP**: sueltos
+  hasta que alguien los recuerde. Mismo micro.
+- **V6 (bajo):** `/guide/publicar-la-web` huérfana (0 enlaces entrantes en
+  docs/) — verificada por URL directa, no navegable por click. Añadir al
+  nav o enlazarla desde portada. Mismo micro.
+- *(v0.2 candidata, del ciclo I52):* las notas de scrub no citan
+  literalmente aquello que mandan borrar (lección de la §Nota que
+  reintrodujo el patrón); y **regla 1 confirmada en dos mundos** (hueco
+  post-merge nuestro + plan sin commitear en zeus pre-U140).
 
 ## Gates externos vivos (nunca silencio)
 
