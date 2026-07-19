@@ -168,6 +168,27 @@ esta sección; no copia a ciegas). **I51 ✅** asentado por orquestador;
 - ~~«esperando: **WP-I28**»~~ — **cerrado** (ola housekeeping
   V4+V5+V6 ✅).
 
+## Review gobierno cierre I5 + GO I6 (2026-07-20 · vigía)
+
+- Secuencia de commits de estado **atómica** (regla 2): I50 ✅ → I29 🔶 →
+  I51 ✅ → I29 ✅ → GO I6/I61 🔶, cada uno su commit. Nota menor
+  recurrente: `5f55cd2` mezcla «I50 ✅» con «brief I51» (clase V2).
+- **I29 re-verificado C8:** registry sirve `['0.1.0','0.2.0','0.3.0']`;
+  reglas 13–14 dentro del paquete (`reglas-metodo-v03.md`, `ejes-ca.md`,
+  `ciclo.md`).
+- **Brief I61 EJEMPLAR:** manda regla 13 con cláusula de parada («si traes
+  contexto de otro marco, PARA y pide reasignación»), CA5 de regla 14
+  (`git log -p` reachable + squash) e incluso la práctica del pipeline
+  («no grep|head && echo OK»). Todo lo aprendido hoy rige en el brief
+  siguiente — el bucle retro→skill→brief cierra a velocidad de un día.
+- Cosmético: la descripción de I50 en BACKLOG conserva la lista original
+  de frágiles (pre-triaje); la realidad entregada (2 ítems) está en la
+  ENTREGA y el ✅ — no amerita corrección.
+- Vigilancia I61: activación en curso sobre `aleph-scriptorium/plan/`
+  (mundo con S14 🔶 vivo — su swarm no debe interrumpirse). Review de
+  facto del vigía cuando entregue: dedup + ceguera árbol E historial +
+  npm view 0.3.0 + S14 intacto.
+
 ## Rutina al retomar
 
 Pulso: `git fetch` + main vs origin · worktrees/stash/ramas ·
