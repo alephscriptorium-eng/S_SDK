@@ -291,24 +291,16 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   Reporte `plan/REPORTES/WP-I28-housekeeping-v4-v5-v6.md`. Worktrees
   retirados. **Ola housekeeping V4+V5+V6 cerrada.**
 
-- 🔶 **WP-I29 · Skill package bump v0.3 — reglas 13/14 (ceguera de
-  activación)** *(GO custodio 2026-07-19 · residual I2.5 / estabilización
-  skills · paralelo a I51)* — cose al skill `swarm-orquestacion` dos reglas
-  nacidas de F8 en I60: **regla 13** (la activación de un mundo la ejecuta
-  un agente **fresco**, que solo conoce el skill, nunca uno con contexto del
-  marco — la fuga fue estructural, no descuido) y **regla 14** (la ceguera se
-  verifica sobre el historial alcanzable `git log -p`, no solo el árbol; fuga
-  en commit intermedio = **squash antes del merge**). Insumo:
-  `plan/RETRO-2026-07-19-metodo.md` §Addendum I60; VIGIA-ESTADO §«Reglas
-  candidatas v0.3». Bump `@alephscript/skills-scriptorium` a **0.3.0** +
-  CHANGELOG, al mismo procedimiento que WP-I27 (v0.2.0). Skills-library
-  `main` @ `6180f9b` (hoy 0.2.0). Brief:
-  `plan/REPORTES/BRIEF-WP-I29-skills-v03-reglas-13-14.md`.
-  **CA:** reglas 13/14 en `reference/reglas-metodo-v02.md` (o sucesor v0.3) y
-  como CA obligatorio en `reference/ejes-ca.md`; publish + `npm view`
-  `@alephscript/skills-scriptorium@0.3.0` resuelve contra el registry real
-  (C8); ceguera del skill = 0 (`comprobar-ceguera.sh` + `git log -p` reachable).
-  **No solapa I51:** I51 = lectura submodules zeus; I29 = skills-library.
+- ✅ **WP-I29 · Skill package bump v0.3 — reglas 13/14 (ceguera de
+  activación)** *(cerrado 2026-07-19 · residual I2.5)* — skill
+  `swarm-orquestacion` con **reglas 13–14** (activación = agente fresco;
+  ceguera sobre historial reachable `git log -p` + práctica `grep -c`/`-q`).
+  Paquete `@alephscript/skills-scriptorium@0.3.0` publicado (`npm view`
+  OK). Contrato `reference/reglas-metodo-v03.md`; CA en `ejes-ca.md`.
+  Skills-library `main` @ `5de379b`. Ceguera árbol + historial = 0.
+  Brief: `plan/REPORTES/BRIEF-WP-I29-skills-v03-reglas-13-14.md`.
+  Reporte: `plan/REPORTES/WP-I29-skills-v03-reglas-13-14.md`.
+  **NO I6** sin GO.
 
 ## Ola I3 — Contenido: los holones (primera activación real)
 
@@ -479,7 +471,7 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
 - **Cierre de ola:** **cumplido por I60** — emmanuel (segundo mundo, primer
   consumidor ajeno) operando con el skill valida el contrato (Eje IV), y la
   re-verificación del orquestador es su evidencia. Backtracking al skill
-  (reglas 13/14) = **WP-I29 🔶** (GO custodio 2026-07-19; brief emitido).
+  (reglas 13/14) = **WP-I29 ✅** (2026-07-19; skills `main` @ `5de379b`).
   I61/I62 son extras, no bloquean.
 
 ---
@@ -496,8 +488,8 @@ Dentro de I3: I30 → (I31∥I32) → I33. Tras I40 ✅: lote **I41 ∥ I27**
 ambos ✅ (2026-07-19). **I28 ✅** (ola housekeeping V4+V5+V6 cerrada).
 **GO I5** (2026-07-19): **I52 ✅** → **I50 ✅** → **I51 ✅** — **ola I5
 cerrada** (re-verif formal acta WP-I51 @ tips `503b6b8`/`a25ca08`).
-**NO I6** sin GO. Residual I2.5: **I29 🔶** (GO custodio · bump skills
-v0.3 / reglas 13–14; worker paralelo — no solapa lectura zeus).
+**NO I6** sin GO. Residual I2.5: **I29 ✅** (skills v0.3.0 / reglas 13–14
+  en `main` @ `5de379b`). Swarm **IDLE** — esperando GO I6.
 
 ## Verificación end-to-end del conjunto
 

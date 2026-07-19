@@ -147,4 +147,17 @@ Ninguno para el CA. `npm view` 0.3.0 + ceguera 0 (árbol + historial) OK.
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** — 2026-07-19 · orquestador holón 07
+
+Verificado:
+1. CA1 — `npm view @alephscript/skills-scriptorium@0.3.0` → `0.3.0`
+   (registry `https://npm.scriptorium.escrivivir.co`; dist-tag `latest`).
+2. CA2 — reglas 13–14 en `reference/reglas-metodo-v03.md`; citadas en
+   `SKILL.md`, `ejes-ca.md`, `ciclo.md`, `ORQUESTADOR.md`.
+3. CA3 — `comprobar-ceguera.sh` → `ceguera: 0`; `git log -p` skill con
+   patrón del script → 0 hits.
+4. CA4 — grep rutas host en cara pública skill = 0.
+5. Diff acotado (skills-library + reporte); sin I6/I51/HOLONES.
+
+Merge library: `wp/i29` → `main` @ `5de379b` (rama wp borrada).
+Merge raíz: reporte → `main`; worktree retirado. **NO I6.**
