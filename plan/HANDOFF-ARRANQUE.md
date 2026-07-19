@@ -12,8 +12,8 @@ Sustituye el handoff post-GO I5 (I52 🔶 · I50 ahora GO aparte).
 - **GO I5 ✅** — **I52 🔶** (nota F6 scrub rutas). Entregable = §Nota
   ciega `ENTREGA-VIGIA-2026-07-19b-scrub-rutas.md`. Canal ENTREGA/vigía;
   **sin worker SCRIPT_SDK** (ceguera 07→01 — no tocar zeus). Zeus U140 ✅
-  mergeado; residual **U141** (enmascarar token en reporte); **CA I52
-  abierto** hasta merge U141 + re-verif vigía.
+  + **U141 ✅ mergeado** (`dcd7892` / `2fd869b`); **I52 sigue 🔶** —
+  esperando re-verif vigía (no ✅ aún).
 - **GO I50 aparte ✅** — **I50 🔶 entregando**. Prep
   `ENTREGA-VIGIA-2026-07-19c-sprint3-GO-prep.md`. **§Nota Sprint 3 aún
   NO redactada** (no inventar; no declarar «entregada a zeus»). Paralelo
@@ -23,15 +23,17 @@ Sustituye el handoff post-GO I5 (I52 🔶 · I50 ahora GO aparte).
 
 | WP | Brief | Acción padre |
 |---|---|---|
-| I52 | `plan/REPORTES/BRIEF-WP-I52-entrega-scrub-rutas.md` | **NO lanzar worker** — esperar U141 + re-verif vigía |
+| I52 | `plan/REPORTES/BRIEF-WP-I52-entrega-scrub-rutas.md` | **NO lanzar worker** — U141 mergeado; esperando re-verif vigía |
 | I50 | `plan/REPORTES/BRIEF-WP-I50-entrega-sprint3.md` | **NO lanzar worker** — redactar §Nota ciega (prep); luego entregar |
 
 ## Gates externos declarados (nunca silencio)
 
 - ~~«esperando: custodio entrega §Nota I52 → zeus»~~ — **cerrado**
   (zeus U140 ✅ mergeado · tip `32e5124` / `465ba99`).
-- «esperando: micro U141 (zeus) + re-verif vigía (CA I52)» — **vivo**.
-  I52 sigue 🔶.
+- ~~«esperando: micro U141 (zeus)»~~ — **cerrado** (U141 ✅ merge
+  `dcd7892`).
+- «esperando: re-verif vigía (CA I52)» — **vivo**. I52 sigue 🔶.
+  Mensaje gate: *U141 mergeado en zeus; esperando re-verif vigía*.
 - «esperando: redacción §Nota ciega Sprint 3 (I50) → entrega a zeus» —
   **vivo**. I50 🔶; I51 ⬜.
 - ~~«esperando: ops Pages+DNS raíz»~~ — **cerrado** (I40 ✅).

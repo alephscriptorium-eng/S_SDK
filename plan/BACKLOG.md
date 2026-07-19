@@ -384,16 +384,12 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   micro-WP propio (scrub por clase). **Independiente de I50** (I50 ahora
   🔶 con GO aparte; §Nota Sprint 3 pendiente). CA abierto hasta merge
   zeus + re-verificación vigía.
-  **Gate (2026-07-19):** zeus U140 mergeado (tip merge `32e5124` / WP tip
-  `465ba99` · main Z_SDK `0e604ae`); re-verif vigía: rutas absolutas = 0,
-  holón/holarquía = 0, 8 ficheros limpios — **PERO** residual: reporte
-  U140 cita el token en claro en evidencia grep. **Residual = micro zeus
-  WP-U141** (enmascarar token en
-  `plan/REPORTES/WP-U140-scrub-rutas-locales.md`; CA grep token = 0
-  incluido el reporte). **I52 sigue 🔶** (no cerrar hasta merge U141 +
-  re-verif vigía).
-  **NO worker SCRIPT_SDK** de implementación (ceguera). I27 ✅ (ya no
-  compite).
+  **Gate (2026-07-19):** **U141 mergeado en zeus** (tip merge `dcd7892` /
+  WP tip `2fd869b` · main Z_SDK `d1eef8f`); residual de reporte U140
+  enmascarado. **I52 sigue 🔶** — **esperando re-verif vigía** (no ✅
+  en este acto). Previo: U140 merge `32e5124` / WP `465ba99` (rutas = 0
+  por clase). **NO worker SCRIPT_SDK** de implementación (ceguera).
+  I27 ✅ (ya no compite).
   **CA:** grep de rutas absolutas locales en main de zeus = 0 (por clase)
   **y** grep del token = 0 en todo el árbol zeus (incl. reporte U140);
   re-verificado por el vigía tras merge U141; regla «entregas sin rutas»

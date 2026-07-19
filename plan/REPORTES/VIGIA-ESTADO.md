@@ -78,8 +78,11 @@ post-prune) ✅ · favicon raíz **200** tras redeploy ✅.
 
 ## Gates externos vivos (nunca silencio)
 
-- «esperando: micro-enmascarado del token en reporte U140 (zeus, vía
-  custodio) → re-verif final vigía → ✅ I52 del orquestador».
+- ~~«esperando: micro-enmascarado del token en reporte U140 (zeus)»~~ —
+  **cerrado** (U141 ✅ merge `dcd7892` / tip `2fd869b` · main
+  `d1eef8f`).
+- «**U141 mergeado en zeus; esperando re-verif vigía**» — **vivo**.
+  I52 sigue 🔶 (NO ✅ hasta re-verif final del vigía).
 - «esperando: §Nota ciega Sprint 3 (I50) — GO aparte recibido; prep
   `ENTREGA-VIGIA-2026-07-19c-sprint3-GO-prep.md`; **no inventar**
   frágiles; I50 🔶 entregando; I51 ⬜».
