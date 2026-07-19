@@ -1,0 +1,65 @@
+# Docs portal → GitHub Pages (WP-I11 / DE-I1 / DE-I2).
+# Fuente: Z_SDK-games-library/.github/workflows/docs.yml (variante library:
+# build → upload-pages-artifact → deploy-pages). Solo lectura OASIS.
+# Build en main + wp/**; deploy solo en main tras build verde.
+# Custom domain: s-sdk.escrivivir.co (CNAME en docs/public/CNAME).
+# Install: npm ci (frágil #4 — S_SDK corrige el npm install de la fuente).
+# Sin spec-gen (frágil #6).
+#
+# Gap paths (frágil #7): el filtro `paths: docs/**` no dispara el workflow
+# si solo cambian package.json / package-lock.json / este YAML. Mitigación:
+# Actions → Docs → Run workflow (workflow_dispatch), o un push que toque
+# docs/** (p. ej. bump de docs/public/CNAME o guía).
+name: Docs
+
+on:
+  push:
+    branches:
+      - main
+      - 'wp/**'
+    paths:
+      - 'docs/**'
+  pull_request:
+    paths:
+      - 'docs/**'
+  workflow_dispatch:
+
+concurrency:
+  group: docs-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: docs:build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Install (npm ci)
+        run: npm ci
+      - name: Build VitePress portal
+        # base `/` (custom domain s-sdk.escrivivir.co; DE-I2)
+        run: npm run docs:build
+      - name: Upload Pages artifact
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/.vitepress/dist
+
+  deploy:
+    name: deploy Pages
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
