@@ -199,7 +199,7 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   **Merged** skill → skills-library `main` @ `cb03e49` (pushed DE-I7);
   reporte → SCRIPT_SDK `main` @ `4cd2d1a` (sin push raíz). Siguiente: I24.
 
-- 🔶 **WP-I24 · Separación de datos + corrección del error fundamental
+- ✅ **WP-I24 · Separación de datos + corrección del error fundamental
   (DS-5)** — el corazón de DE-I10. (1) Los datos de la sesión de vigilancia
   de zeus (`VIGILANCIA/{bitacora,revisiones,anomalias.log,watch.log}`;
   `ADDENDA/` addendas y ENTREGAs; `HANDOFF_*`) **salen del núcleo** de
@@ -215,9 +215,12 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   fixture de-identificada existe y su grep de nombres reales = 0;
   `RE-PLAN-protocolo-swarm.md` (doctrina, no dato) reubicado como fuente
   del skill, no como residuo suelto.
-  **Asignado 🔶 2026-07-19** · brief
-  `plan/REPORTES/BRIEF-WP-I24-separacion-datos.md` · rama
-  `wp/i24-separacion-datos`.
+  **Aceptado ✅ 2026-07-19** (orquestador): CA re-verificado — SCRIPT_SDK
+  `wp/i24-separacion-datos` @ `30c5759` (índice sin VIGILANCIA/ADDENDA/
+  HANDOFF_*/CONECTOR_*; histórico disco OK); skills-library
+  `wp/i24-separacion-datos` @ `fcac110` (`instancias/ejemplo-M/` ceguera=0;
+  RE-PLAN en `skills/swarm-orquestacion/reference/`). Merge pendiente
+  (ambos repos); siguiente: brief I25.
 
 - ⬜ **WP-I25 · Primer caso de verificación (Eje IV)** — cargar la fixture
   `ejemplo-M` a través del skill `vigilancia` y **simular** que un segundo
