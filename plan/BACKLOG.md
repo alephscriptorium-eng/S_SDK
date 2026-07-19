@@ -353,7 +353,7 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   **Acta C8 completa de navegación = WP-I41** (este cierre no inventa
   URLs ni sustituye el acta; I41 la aporta).
 
-- 🔶 **WP-I41 · Verificación C8 del sitio vivo + acta** — navegación real
+- ✅ **WP-I41 · Verificación C8 del sitio vivo + acta** — navegación real
   (browser) de todo enlace del sitio vivo `s-sdk.escrivivir.co`, comandos
   de ejemplo, links cruzados. Acta en REPORTES/. Brief:
   `plan/REPORTES/BRIEF-WP-I41-verificacion-sitio-vivo.md`.
@@ -361,6 +361,11 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   (`plan/REPORTES/VIGIA-ESTADO.md`; addendas/estación si existen — no
   inventar). **CA:** 0 enlaces rotos; 0 comandos que fallen; evidencia
   literal en acta.
+  **Aceptado ✅ 2026-07-19** — merge `main` (obra rama
+  `wp/i41-verificacion-sitio-vivo` @ `0440ace` + sello revisión).
+  CA1–CA4 verificados; `/favicon.ico` raíz 404 = **nota menor** (no
+  enlace). Reporte `plan/REPORTES/WP-I41-verificacion-sitio-vivo.md`.
+  Worktree retirado. No bloquea por I27.
 
 ## Ola I5 — Estabilización zeus (vía canal ENTREGA/vigía — jamás directa)
 
