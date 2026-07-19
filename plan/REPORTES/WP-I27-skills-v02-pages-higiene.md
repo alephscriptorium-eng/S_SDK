@@ -194,4 +194,24 @@ Ninguno para el CA. Pages 200 + `npm view` 0.2.0 OK.
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅ 2026-07-19** (orquestador holón 07 · modo REVISIÓN).
+
+### CA verificados (re-ejecutados)
+
+1. `npm view @alephscript/skills-scriptorium@0.2.0` → `0.2.0` / `latest: 0.2.0` (registry canónico).
+2. Pages `https://skills.s-sdk.escrivivir.co/` → HTTP **200**.
+3. `docs/.vitepress/theme/custom.css` sin path `C:\Users\...` (main aún tenía leak; rama WP limpia).
+4. Skill v0.2: V2 + checklist cierre en `reglas-metodo-v02.md` / `ciclo.md` / `SKILL.md`.
+5. Ceguera `comprobar-ceguera.sh` → `0`; `rg -i zeus` skills/ + publish.yml → 0.
+6. Ramas `wp/i30*`/`wp/i32*` ausentes en S_SDK (locales borradas; remotas no existían).
+
+### PRACTICAS
+
+Alcance acotado (skills-library + custom.css + reporte). Sellos con fuente.
+Sin mutación OASIS/HOLONES/zeus. Sin I41/I50/I52 en la obra.
+
+### Merge (orden)
+
+1. skills-library `wp/i27-skills-v02-pages-higiene` @ `6180f9b` → `main` + push.
+2. SCRIPT_SDK `wp/i27-skills-v02-pages-higiene` → `main` + push raíz.
+3. BACKLOG I27 🔶→✅; `git worktree remove` `SCRIPT_SDK-wp-i27`.
