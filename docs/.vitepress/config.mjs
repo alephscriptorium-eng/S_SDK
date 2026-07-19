@@ -49,12 +49,16 @@ export default defineConfig({
           { text: '01 — Escrivivir.co', link: '/autoridades/01-escrivivir-co' },
           { text: '02 — Scriptorium', link: '/autoridades/02-scriptorium' }
         ]
-      }
+      },
+      { text: 'Publicar la web', link: '/guide/publicar-la-web' }
     ],
     sidebar: [
       {
         text: 'SCRIPT_SDK',
-        items: [{ text: 'Portada', link: '/' }]
+        items: [
+          { text: 'Portada', link: '/' },
+          { text: 'Publicar la web', link: '/guide/publicar-la-web' }
+        ]
       },
       {
         text: 'Holones',

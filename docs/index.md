@@ -55,5 +55,5 @@ npm run docs:dev
 npm run docs:build
 ```
 
-Dominio previsto: `s-sdk.escrivivir.co` (DE-I2). Pages vivo →
-`<pendiente I40>`.
+Dominio: `s-sdk.escrivivir.co` (DE-I2). Sitio vivo en GitHub Pages
+(I40 ✅; acta C8 en I41).
