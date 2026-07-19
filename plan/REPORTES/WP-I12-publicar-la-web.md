@@ -6,7 +6,7 @@
 | fecha | 2026-07-19 |
 | rama | `wp/i12-publicar-la-web` |
 | worktree | `C:\Users\aleph\SCRIPT_SDK-wp-i12` |
-| commits | `863a6ff` docs(docs): guía · _(este reporte)_ |
+| commits | `863a6ff` docs(docs): guía · `3485ec8` docs(plan): reporte |
 | estado propuesto | listo para revisión |
 
 ## Qué se hizo
