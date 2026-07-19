@@ -474,20 +474,24 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   Acta: `plan/REPORTES/WP-I61-activacion-aleph.md` (ref. acta worker en
   aleph @ `adf297e`).
 
-- 🔶 **WP-I62 · zeus (01)** *(decisión zeus registrada · pendiente cierre
-  orquestador/vigía · Eje V)* — zeus **D-35** adoptó
+- ✅ **WP-I62 · zeus (01)** *(aceptado · orquestador · 2026-07-20 · Eje V)* —
+  zeus **D-35** @ `474d06c` adoptó
   `@alephscript/skills-scriptorium@0.3.0` como referencia versionada
   canónica; `plan/roles/` permanece copia operativa (sin migración en ese
-  paso). **No worker.** Gate: «zeus D-35 adoptó 0.3.0; pendiente cierre
-  I62 por orquestador S_SDK/vigía» (CA: ver decisión en main de zeus).
-  Tip zeus: ver commit D-35 en `origin/main`.
+  paso). **No worker.** CA: decisión en main remoto de zeus
+  (`origin/main` = `474d06c`); ceguera commits nuevos
+  (`503b6b8..474d06c`) = 0 (re-verif vigía §I62).
+  **Aceptado ✅ 2026-07-20** (orquestador): D-35 verificado en canal real
+  Z_SDK `origin/main` @ `474d06c` — adopta `@0.3.0` canónico; `plan/roles/`
+  copia operativa; ceguera = 0. Fuente: `plan/REPORTES/VIGIA-ESTADO.md` §I62.
 
 - **Cierre de ola (Eje IV):** **cumplido por I60** — emmanuel (segundo mundo,
   primer consumidor ajeno) valida el contrato. Backtracking al skill
   (reglas 13/14) = **WP-I29 ✅** (`@0.3.0` · skills `main` @ `5de379b`).
-  **Extra I61 ✅** (2026-07-20). **I62** 🔶 (decisión zeus D-35; ✅ formal
-  pendiente orquestador/vigía).
-  → **ola I6: cierre parcial** (I60✅ I61✅ I62🔶).
+  **Extra I61 ✅** (2026-07-20). **I62 ✅** (2026-07-20 · D-35 @ `474d06c`).
+  → **ola I6 cerrada** (I60✅ I61✅ I62✅).
+  Gates externos (no bloquean): push aleph (I61) pendiente custodio;
+  scrub I63 = gate externo.
 
 ---
 
@@ -515,9 +519,10 @@ ambos ✅ (2026-07-19). **I28 ✅** (ola housekeeping V4+V5+V6 cerrada).
 **GO I5** (2026-07-19): **I52 ✅** → **I50 ✅** → **I51 ✅** — **ola I5
 cerrada** (re-verif formal acta WP-I51 @ tips `503b6b8`/`a25ca08`).
 Residual I2.5: **I29 ✅** (skills v0.3.0 / reglas 13–14 · `main` @
-`5de379b`). **GO I6** (custodio · 2026-07-19): lote **I61** → ✅ 2026-07-20
-(I60✅ I61✅; I62 🔶 — zeus D-35 adoptó 0.3.0; pendiente cierre
-orquestador/vigía). Ola I6: **cierre parcial**.
+`5de379b`). **GO I6** (custodio · 2026-07-19): lote **I61** → ✅ 2026-07-20;
+**I62 ✅** 2026-07-20 (zeus D-35 @ `474d06c`). **Ola I6 cerrada**
+(I60✅ I61✅ I62✅). Gates externos: push aleph (I61) pendiente custodio;
+scrub I63.
 
 ## Verificación end-to-end del conjunto
 

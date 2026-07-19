@@ -239,6 +239,16 @@ por orquestador S_SDK/vigía».
   cierre total**. Los CUATRO mundos del método referencian o adoptan el
   skill: 07 autor · 03 activado · 05-06 activado · 01 adoptado por D-35.
 
+### Re-verif cierre formal I62 (2026-07-20 · orquestador S_SDK)
+
+Canal real re-ejecutado: `git -C HOLONES/01-mythos/zeus-sdk fetch origin
+main` → `origin/main` = `474d06cd80d9fb22107299de5f465923f77c71ca`
+(`docs(plan): D-35 adopta skills-scriptorium@0.3.0 como referencia`).
+Ceguera `git log -p 503b6b8..474d06c` (tokens marco): **0 hits** —
+confirma sello previo §I62. **I62 ✅** asentado por orquestador;
+**ola I6 cerrada** (I60✅ I61✅ I62✅). Gates externos (no bloquean):
+push aleph (I61) pendiente custodio; scrub I63.
+
 ## F10 — skills-library servía el tema por defecto (2026-07-20 · custodio)
 
 - **Hallazgo del CUSTODIO** (no del vigía): `skills.s-sdk.escrivivir.co`
