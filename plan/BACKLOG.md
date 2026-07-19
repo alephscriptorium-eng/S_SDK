@@ -372,24 +372,19 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
 > I52 = solo nota F6 scrub rutas; **no** es parte de I50 (Sprint 3).
 > Ceguera 07→01: jamás tocar zeus directo; solo §Nota vía ENTREGA/vigía.
 
-- 🔶 **WP-I52 · ENTREGA scrub de rutas (URGENTE — antes que I50)** — F6 de
+- ✅ **WP-I52 · ENTREGA scrub de rutas (URGENTE — antes que I50)** — F6 de
   la intervención: el plan público de Z_SDK cita rutas `SCRIPT_SDK\...` en
   8 ficheros (puntero de vuelta prohibido; sembrado por el canal
   temp-review). Nota ciega:
   `plan/REPORTES/ENTREGA-VIGIA-2026-07-19b-scrub-rutas.md` — encuadre
   «higiene de portabilidad», prueba de ceguera hecha. Brief:
   `plan/REPORTES/BRIEF-WP-I52-entrega-scrub-rutas.md`.
-  **GO I5 · 2026-07-19:** gate abierto. Entregable 07 = §Nota (§Lectura
-  interna no sale). Custodio entrega al orquestador zeus; zeus aplica
-  micro-WP propio (scrub por clase). **Independiente de I50** (I50 ahora
-  🔶 con GO aparte; §Nota Sprint 3 pendiente). CA abierto hasta merge
-  zeus + re-verificación vigía.
-  **Gate (2026-07-19):** **U141 mergeado en zeus** (tip merge `dcd7892` /
-  WP tip `2fd869b` · main Z_SDK `d1eef8f`); residual de reporte U140
-  enmascarado. **I52 sigue 🔶** — **esperando re-verif vigía** (no ✅
-  en este acto). Previo: U140 merge `32e5124` / WP `465ba99` (rutas = 0
-  por clase). **NO worker SCRIPT_SDK** de implementación (ceguera).
-  I27 ✅ (ya no compite).
+  **Aceptado ✅ 2026-07-19** (orquestador): re-verif vigía FINAL PASS
+  (U141 @ `d1eef8f`; token=0 · rutas=0 · F6 muerto). Fuente:
+  `plan/REPORTES/VIGIA-ESTADO.md` §«Re-verificación FINAL I52». Gate:
+  U141 mergeado (tip merge `dcd7892` / WP tip `2fd869b`); residual U140
+  enmascarado. Previo: U140 merge `32e5124` / WP `465ba99`. **NO worker**
+  SCRIPT_SDK de implementación (ceguera). I27 ✅.
   **CA:** grep de rutas absolutas locales en main de zeus = 0 (por clase)
   **y** grep del token = 0 en todo el árbol zeus (incl. reporte U140);
   re-verificado por el vigía tras merge U141; regla «entregas sin rutas»
@@ -448,7 +443,7 @@ Dentro de I2 el orden es: I20 → (I21∥I22∥I23) → I24 (separación) → I2
 apoyar la fixture) y es donde se corrige el error fundamental DS-5.
 Dentro de I3: I30 → (I31∥I32) → I33. Tras I40 ✅: lote **I41 ∥ I27**
 ambos ✅ (2026-07-19). **I28 ✅** (ola housekeeping V4+V5+V6 cerrada).
-**GO I5** (2026-07-19): **I52 🔶** (nota F6; residual U141 + re-verif) →
+**GO I5** (2026-07-19): **I52 ✅** (re-verif vigía FINAL PASS · U141) →
 **I50 🔶** (aplicada-en-zeus · §Nota entregada; triage U142 ✅) → I51 ⬜.
 
 ## Verificación end-to-end del conjunto
