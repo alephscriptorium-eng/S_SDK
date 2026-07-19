@@ -139,7 +139,8 @@ Ninguno bloqueante. Merge paralelo I31: orquestador resuelve nav 01+02–07.
 
 ## Commits
 
-_(rellenar tras commit; hashes literales)_
+- `dd816f4` — `docs(docs): fichas holones 02–07 + roadmaps uniformes`
+- `a83fa8f` — `docs(plan): reporte WP-I32 fichas-roadmaps`
 
 ---
 
