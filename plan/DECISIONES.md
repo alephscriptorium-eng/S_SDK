@@ -134,7 +134,15 @@ cierra el custodio). Fuente común de las DE: conversación custodio↔Fable,
 ## Abiertas (bloquean lo indicado)
 
 *(ninguna propia viva — DA-I1..I4 cerradas por DE-I8/I9/I10; ticks I24/
-I26-proc/I40 cerrados por DE-I11/I12/I13.)*
+I26-proc/I40 cerrados por DE-I11/I12/I13. I40 ops cerradas formalmente
+2026-07-19 — verificado por custodio/estación; acta C8 = WP-I41.)*
 
 *(Heredada, de TEST-SWARM: DA-6 «la puerta única» sigue abierta allí;
 bloquea WP-D31 de aquel mundo, no bloquea este plan.)*
+
+## Notas no bloqueantes (GO 2026-07-19 — no arrancar)
+
+- ⏳ Pages `skills.s-sdk.escrivivir.co` — cubierto por **WP-I27**.
+- ⏳ Leak F6 remoto zeus — **WP-I52** lista para entrega; **listo cuando
+  GO I5**. No I50/I52 hasta ese GO.
+- I41 usa estación/vigilante del custodio como insumo (no inventar).

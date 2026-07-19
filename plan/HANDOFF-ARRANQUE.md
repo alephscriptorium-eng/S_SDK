@@ -1,61 +1,43 @@
-# HANDOFF — rearranque del swarm (post-intervención 2026-07-19)
+# HANDOFF — rearranque del swarm (post-GO 2026-07-19 · I40 cerrado)
 
-De: interventor (Fable, vigía con mandato ampliado) · Para: orquestador ·
-Media: el custodio. Sustituye al handoff del arranque I0 (ciclo cumplido).
+De: orquestador · Para: workers / vigía / custodio.
+Sustituye el handoff post-intervención (ciclo I3+I40 ops cumplido).
 
-## Estado vivo (orquestador · 2026-07-19, post-GO)
+## Estado vivo (orquestador · 2026-07-19)
 
-- **GO custodio recibido:** push raíz + arranque ola I3.
-- **Push raíz S_SDK:** hecho → `https://github.com/alephscriptorium-eng/S_SDK`
-  · `main` @ `fcbafa0` (y commits posteriores de gobierno I3). Validación
-  orquestador+vigilante (DE-I13) implícita en el GO del custodio.
-- **Ola I3:** **WP-I30 ✅** · **WP-I31 ✅** · **WP-I32 ✅** mergeados+
-  pushed. Worktrees retirados. Nav Holones 01–07 unificado. **I33 🔶**
-  (brief emitido — pack TEST-SWARM servido). Cadencia: merge cada ✅.
-- **WP-I40 parcial:** el push de código ya no bloquea; quedan Pages
-  Source=Actions, custom domain `s-sdk.escrivivir.co`, DNS/HTTPS (ops).
-- **Skills-library:** remote synced @ `019a90b`; no re-push. Pages library
-  404 / scrub «zeus» → sigue en **WP-I27** (⬜; no arrancado en este GO).
+- **I40 ✅** — cierre formal. Pages+DNS+HTTPS **verificado por custodio /
+  estación · 2026-07-19**. Fuente: `plan/REPORTES/VIGIA-ESTADO.md`.
+  Acta C8 completa = **I41** (en curso).
+- **Lote paralelo vivo:** **WP-I41 ∥ WP-I27** (ambos 🔶; briefs emitidos).
+- **Ola I3:** I30–I33 ✅ cerrada.
+- **Skills-library:** `main` @ `019a90b`; push OK (DE-I7). Pages library
+  404 / scrub / v0.2 → **I27**.
 
-## Qué pasó mientras estabas IDLE
+## Briefs del lote
 
-Intervención de estabilización sobre tu sesión I0–I2 (leída íntegra) +
-code review de facto. Tu ejecución: **buena** — 13 WPs limpios, evidencia
-real, cero push indebido. Los defectos eran del método, no tuyos; van
-convertidos en 12 reglas: `plan/RETRO-2026-07-19-metodo.md`. Acta completa:
-`plan/REPORTES/INTERVENCION-2026-07-19-estabilizacion.md`.
+| WP | Brief | Worktree |
+|---|---|---|
+| I41 | `plan/REPORTES/BRIEF-WP-I41-verificacion-sitio-vivo.md` | `../SCRIPT_SDK-wp-i41` |
+| I27 | `plan/REPORTES/BRIEF-WP-I27-skills-v02-pages-higiene.md` | `../SCRIPT_SDK-wp-i27` + hermano skills-library |
 
-Higiene ya hecha (no la repitas): stash drenado, ramas `wp/i*` borradas,
-submodules inicializados en el checkout principal, `TEMP_*` gitignoreado.
+## Notas no bloqueantes (NO arrancar aún)
 
-## Lecturas antes del primer brief
-
-1. `plan/RETRO-2026-07-19-metodo.md` — las 12 reglas RIGEN YA (PRACTICAS
-   deltas 7 y 8 las anclan; el skill v0.2 las absorbe en WP-I27).
-2. BACKLOG actualizado: nueva **Ola I2.5** (WP-I27) y **WP-I52** (urgente,
-   Ola I5).
-3. Acta de la intervención (veredictos por WP, hallazgos F6/F7).
-
-## GO propuesto al custodio — lote de rearranque
-
-_(Histórico del interventor; el GO ya se dio.)_
-
-- **WP-I27** (método v0.2 + scrub «zeus» en library + Pages 404) —
-  prioridad: estrena el checklist de cierre y las 12 reglas. **Aún ⬜**
-  (este GO priorizó push + I30).
-- **Ola I3:** I30 (activación en casa) → luego I31 ∥ I32 → I33. En curso.
-- **WP-I52** no ocupa worker: la nota ya está lista
-  (`ENTREGA-VIGIA-2026-07-19b-scrub-rutas.md`); la entrega el custodio a
-  zeus en quietud; el vigía re-verifica tras su merge.
+- ⏳ Pages skills-library — cubierto por **I27** (en curso).
+- ⏳ Leak F6 en remoto zeus — nota **I52** lista
+  (`ENTREGA-VIGIA-2026-07-19b-scrub-rutas.md`); **listo cuando GO I5**.
+  No implementar I50/I52 ahora.
+- I41 puede usar estación del custodio (`VIGIA-ESTADO.md`) como insumo.
 
 ## Gates externos declarados (nunca silencio)
 
-- «esperando: entrega I52 de custodio a zeus» (repo público — urgente).
-- ~~«esperando: co-firma del push raíz»~~ — **cerrado**: GO custodio +
-  push `main` a origin (DE-I13).
-- «esperando: ops Pages+DNS raíz» (resto de WP-I40 — sitio vivo).
-- «esperando: ops Pages skills-library» (dentro de I27; DNS ya resuelve).
+- «esperando: entrega I52 de custodio a zeus» — **listo cuando GO I5**.
+- ~~«esperando: ops Pages+DNS raíz»~~ — **cerrado** (I40 ✅ · custodio/
+  estación 2026-07-19).
+- «esperando: WP-I41 acta C8 sitio vivo» + «esperando: WP-I27 v0.2/
+  Pages library».
 
-El vigía vuelve a su puesto read-only: pulso de worktrees/locks/CI, review
-de facto por WP cerrado, C8 en todo canal externo. Los «Devueltos» siguen
-siendo señal de salud.
+## Lecturas
+
+1. `plan/RETRO-2026-07-19-metodo.md` — 12 reglas (I27).
+2. `plan/REPORTES/VIGIA-ESTADO.md` — estación (insumo I41; V1–V3 → I27).
+3. BACKLOG: I40 ✅ · I41 🔶 · I27 🔶 · I52 ⬜ (GO I5).

@@ -272,24 +272,33 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
 > `plan/RETRO-2026-07-19-metodo.md` +
 > `plan/REPORTES/INTERVENCION-2026-07-19-estabilizacion.md`.
 
-- ⬜ **WP-I27 · Skill `swarm-orquestacion` v0.2 + scrubs de library** —
-  coser las 12 reglas de la RETRO al skill (gobierno-a-git-primero, commit
-  atómico de estados, stash-limpio, worktrees en repos hermanos, ficheros
-  compartidos asignados en brief, cadencia de merge declarada, integrador≠
-  planificador, canal de ticks a worker vivo, cadena de evidencia auditable,
-  checklist de cierre de ola, patrón-nuevo=DE, entregas sin rutas de
-  origen). Además: scrub F7 (`publish.yml` de la skills-library nombra
-  «zeus» → neutral «Verdaccio canónico») y Pages de la library (404 hoy;
-  CNAME `skills.s-sdk.escrivivir.co`, DNS ya resuelve).
-  **CA:** skill v0.2 publicado (semver menor); grep de mundos reales en la
-  cara pública de la library = 0; checklist de cierre de ola existe en el
-  skill y este mismo WP lo estrena; Pages de la library responde 200 (o
-  gate ops declarado).
+- 🔶 **WP-I27 · Skill package bump v0.2.0 + Pages library + higiene** —
+  ola I2 residual / estabilización library. Brief:
+  `plan/REPORTES/BRIEF-WP-I27-skills-v02-pages-higiene.md`.
+  Alcance:
+  1) Skill `swarm-orquestacion` → **v0.2.0** (12 reglas RETRO + práctica
+     commit atómico gobierno ≠ mezcla aceptación+brief — V2).
+  2) **V1 (real):** scrub en raíz
+     `docs/.vitepress/theme/custom.css` ~L2 — ruta absoluta host
+     `C:\Users\aleph\OASIS\...` en comentario de procedencia (leak público
+     desde I10). Corregir a procedencia relativa / DE-8 sin path absoluto.
+  3) **V2 (cosmético):** documentar/mitigar en skill v0.2 la deuda de
+     commits mezcla (ej. `666cefd` aceptación+brief).
+  4) **V3 (higiene):** borrar ramas locales/remotas `wp/i30`, `wp/i32`
+     (y otras `wp/*` mergeadas obsoletas) en S_SDK.
+  5) Scrub F7 (`publish.yml` library: «zeus» → «Verdaccio canónico»).
+  6) Pages library `skills.s-sdk.escrivivir.co` (arreglar 404 si sigue).
+  7) Publish v0.2 al registry (DE-I12 / secrets NPM_USERNAME/NPM_PASSWORD).
+  **CA:** skill v0.2.0 publicado (`npm view` canal real); grep mundos
+  reales en cara pública library = 0; custom.css sin path absoluto host;
+  checklist cierre de ola en skill + estrenado; Pages library 200 (o gate
+  ops declarado); ramas `wp/*` obsoletas borradas o justificadas.
 
 ## Ola I3 — Contenido: los holones (primera activación real)
 
-> **Ola I3 cerrada 2026-07-19** (I30–I33). IDLE → esperando: ops Pages/DNS
-> (I40). **NO** arrancar I4 sin GO explícito.
+> **Ola I3 cerrada 2026-07-19** (I30–I33). I40 cerrado formalmente
+> (ops verificado custodio/estación). Lote vivo GO 2026-07-19:
+> **WP-I41 ∥ WP-I27**.
 
 - ✅ **WP-I30 · Activación en casa** — plan/ consumidor del skill
   `swarm-orquestacion@0.1.0`; instancia `WEBS/` (CANTERA + ENTREGA-CAPA-1)
@@ -333,24 +342,25 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
 
 ## Ola I4 — Publicación
 
-- ⬜ **WP-I40 · Push inicial + Pages + dominio** — tras **validación
-  orquestador + vigilante** (DE-I13; el vigilante se presentará; mediación
-  transparente), se empuja el raíz; Pages Source=Actions; Custom domain
-  `s-sdk.escrivivir.co` + alta DNS (tick de ops si hace falta) + Enforce
-  HTTPS. Ya no bloqueado por DA-I1 (cerrada DE-I10) ni «solo custodio».
-  **CA:** sitio vivo en el dominio; CI verde; assets sin 404 (base
-  verificado navegando).
-  **Parcial 2026-07-19:** push de `main` a origin **hecho** (GO custodio;
-  DE-I13). Remoto:
-  `https://github.com/alephscriptorium-eng/S_SDK` (deja de estar vacío).
-  **Pendiente ops:** GitHub Pages Source=Actions; custom domain + DNS
-  CNAME → `alephscriptorium-eng.github.io`; Enforce HTTPS; verificar sitio
-  vivo (browser). No marcar ✅ hasta CA completo.
+- ✅ **WP-I40 · Push inicial + Pages + dominio** — tras **validación
+  orquestador + vigilante** (DE-I13), push raíz; Pages Source=Actions;
+  Custom domain `s-sdk.escrivivir.co` + DNS + Enforce HTTPS.
+  **CA:** sitio vivo en el dominio; CI verde; assets sin 404 (base).
+  **Aceptado ✅ 2026-07-19** (orquestador · cierre formal): ops
+  Pages+DNS+HTTPS **verificado por custodio · 2026-07-19** (estación /
+  vigilante). Fuente en repo: `plan/REPORTES/VIGIA-ESTADO.md` (sección
+  «Sitio en producción»). Push `main` a origin ya estaba hecho (DE-I13).
+  **Acta C8 completa de navegación = WP-I41** (este cierre no inventa
+  URLs ni sustituye el acta; I41 la aporta).
 
-- ⬜ **WP-I41 · Verificación C8 del sitio vivo + acta** — navegación real de
-  todo enlace, comandos de ejemplo ejecutados, links cruzados a portales
-  zeus. Acta en REPORTES/.
-  **CA:** 0 enlaces rotos; 0 comandos que fallen; evidencia literal.
+- 🔶 **WP-I41 · Verificación C8 del sitio vivo + acta** — navegación real
+  (browser) de todo enlace del sitio vivo `s-sdk.escrivivir.co`, comandos
+  de ejemplo, links cruzados. Acta en REPORTES/. Brief:
+  `plan/REPORTES/BRIEF-WP-I41-verificacion-sitio-vivo.md`.
+  **Insumo:** estación/vigilante del custodio
+  (`plan/REPORTES/VIGIA-ESTADO.md`; addendas/estación si existen — no
+  inventar). **CA:** 0 enlaces rotos; 0 comandos que fallen; evidencia
+  literal en acta.
 
 ## Ola I5 — Estabilización zeus (vía canal ENTREGA/vigía — jamás directa)
 
@@ -361,6 +371,8 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   `plan/REPORTES/ENTREGA-VIGIA-2026-07-19b-scrub-rutas.md` — encuadre
   «higiene de portabilidad», prueba de ceguera hecha. Entrega el custodio
   en quietud de zeus; su orquestador aplica como micro-WP.
+  **Nota GO 2026-07-19:** leak F6 en remoto zeus ⏳; I52 **lista para
+  entrega (I5)** — **no implementar** I50/I52 hasta «GO I5» del custodio.
   **CA:** grep de rutas absolutas locales en main de zeus = 0 (por clase);
   re-verificado por el vigía tras su merge; regla «entregas sin rutas»
   cosida al skill (WP-I27, regla 12).
@@ -407,8 +419,8 @@ Paralelizables dentro de ola: I01∥I02∥I03 · I10∥I12 · I21∥I22∥I23.
 Dentro de I2 el orden es: I20 → (I21∥I22∥I23) → I24 (separación) → I25
 (verificación) → I26 (publish). I24 depende de I23 (necesita el skill donde
 apoyar la fixture) y es donde se corrige el error fundamental DS-5.
-Dentro de I3: I30 → (I31∥I32) → I33. I27 (I2.5) paralelizable con I3 pero
-fuera de este arranque.
+Dentro de I3: I30 → (I31∥I32) → I33. Tras I40 ✅: lote vivo
+**I41 ∥ I27** (GO custodio 2026-07-19). I5 (I52→I50) solo con GO I5.
 
 ## Verificación end-to-end del conjunto
 
