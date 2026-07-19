@@ -154,15 +154,18 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   sin push raíz. Merge reporte → main + default-branch skills-library
   → main = ops/padre. Cierra arranque ola I2; siguiente I21∥I22∥I23.
 
-- ⬜ **WP-I21 · Skill `swarm-orquestacion`** *(abstraer+mejorar)* —
+- 🔶 **WP-I21 · Skill `swarm-orquestacion`** *(abstraer+mejorar)* —
   protocolo canónico (`TEST-SWARM/plan/roles/`: ORQUESTADOR, WORKER,
   REVISION, CORRECCION, BRIEF + PLANTILLA) con los 5 ejes del RE-PLAN
   cosidos como CA obligatorios. Marco-agnóstico (PRACTICAS delta 5). Cero
   datos de mundo.
   **CA:** un agente fresco monta el plan/ de un mundo nuevo solo con el
   skill; prueba de ceguera en cara pública = 0.
+  **Asignado 🔶 2026-07-19** · brief
+  `plan/REPORTES/BRIEF-WP-I21-skill-swarm-orquestacion.md` · rama
+  `wp/i21-skill-swarm-orquestacion` · paralelo I22∥I23.
 
-- ⬜ **WP-I22 · Skill `site-web`** *(abstraer+mejorar+separar)* — método
+- 🔶 **WP-I22 · Skill `site-web`** *(abstraer+mejorar+separar)* — método
   WEBS (plantillas BASE-1/2/3, backtracking, C8/C9, entrega §E) + protocolo
   ghpages (plantilla docs.yml, config VitePress parametrizada, piel zine,
   checklist dominio/DNS/HTTPS, los 7 frágiles con mitigación). **Separar:**
@@ -170,14 +173,20 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   web zeus, hoy en `OASIS/.../WEBS/`) NO entran al skill — son instancia.
   **CA:** con el skill + un mundo limpio se genera un sitio publicable sin
   consultar zeus; plantillas sin rutas absolutas ni datos de mundo (grep=0).
+  **Asignado 🔶 2026-07-19** · brief
+  `plan/REPORTES/BRIEF-WP-I22-skill-site-web.md` · rama
+  `wp/i22-skill-site-web` · paralelo I21∥I23.
 
-- ⬜ **WP-I23 · Skill `vigilancia`** *(abstraer+mejorar+separar)* — doctrina
+- 🔶 **WP-I23 · Skill `vigilancia`** *(abstraer+mejorar+separar)* — doctrina
   ESTACION v1 (rol read-only, mtime no commits, clases de huérfano, locks,
   C8/C8-ampliado, CA-por-clase, pulso CI) + formato addenda dos-caras con
   prueba de ceguera + `watcher.sh` parametrizado por «el mundo». **Cero
   histórico de zeus dentro** (eso es I24).
   **CA:** skill agnóstico del mundo vigilado; watcher corre contra un repo
   arbitrario; grep de nombres de mundo real en el skill = 0.
+  **Asignado 🔶 2026-07-19** · brief
+  `plan/REPORTES/BRIEF-WP-I23-skill-vigilancia.md` · rama
+  `wp/i23-skill-vigilancia` · paralelo I21∥I22.
 
 - ⬜ **WP-I24 · Separación de datos + corrección del error fundamental
   (DS-5)** — el corazón de DE-I10. (1) Los datos de la sesión de vigilancia
