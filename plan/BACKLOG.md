@@ -281,6 +281,21 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   skills-library `main` @ `6180f9b`; SCRIPT_SDK merge + reporte
   `plan/REPORTES/WP-I27-skills-v02-pages-higiene.md`. Worktree retirado.
 
+- 🔶 **WP-I28 · Housekeeping post-I4** — cierra hallazgos V4+V5+V6 del
+  vigía (`plan/REPORTES/VIGIA-ESTADO.md`). Residual post-I27 / higiene.
+  Brief: `plan/REPORTES/BRIEF-WP-I28-housekeeping-v4-v5-v6.md`.
+  **V4:** en `C:\Users\aleph\S_SDK-skills-library` borrar las 7 ramas
+  `wp/i20`…`wp/i27` (local **y** remoto origin). Aplicar regla 10 /
+  checklist cierre del skill v0.2 al repo hermano (regla 4).
+  **V5:** en S_SDK: añadir favicon (raíz 404 de I41) + quitar copy stale
+  «`<pendiente I40>`» (I40 ya ✅).
+  **V6:** enlazar `/guide/publicar-la-web` en el nav (hoy solo URL
+  directa).
+  **CA:** ramas `wp/i20`–`i27` ausentes en library local+remoto; favicon
+  200 en sitio o en dist; grep `<pendiente I40>` = 0 en docs; nav tiene
+  enlace a la guía; `docs:build` verde.
+  **GO custodio 2026-07-19** (vía padre · nota vigía): un solo micro-WP.
+
 ## Ola I3 — Contenido: los holones (primera activación real)
 
 > **Ola I3 cerrada 2026-07-19** (I30–I33). I40 cerrado formalmente
@@ -424,8 +439,9 @@ Dentro de I2 el orden es: I20 → (I21∥I22∥I23) → I24 (separación) → I2
 (verificación) → I26 (publish). I24 depende de I23 (necesita el skill donde
 apoyar la fixture) y es donde se corrige el error fundamental DS-5.
 Dentro de I3: I30 → (I31∥I32) → I33. Tras I40 ✅: lote **I41 ∥ I27**
-ambos ✅ (2026-07-19). **GO I5** (2026-07-19): **I52 🔶** (nota F6,
-canal ENTREGA; sin worker raíz) → I50 ⬜ → I51 ⬜ (I50/I51 con GO aparte).
+ambos ✅ (2026-07-19). **I28 🔶** (GO housekeeping V4+V5+V6; residual
+I2.5 post-I27). **GO I5** (2026-07-19): **I52 🔶** (nota F6, canal
+ENTREGA; sin worker raíz) → I50 ⬜ → I51 ⬜ (I50/I51 con GO aparte).
 
 ## Verificación end-to-end del conjunto
 
