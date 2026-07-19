@@ -50,5 +50,6 @@ skills-library|s-sdk` = 0.
 ---
 
 Registro: §Nota redactada por el vigía 2026-07-19 (triaje en tabla
-interna). **Entregada** → zeus archivó + triage (U142 ✅ · tip Z_SDK
-`6015d53`; U143/U144 ⬜ sin GO). I50 🔶 aplicada-en-zeus. I51 ⬜.
+interna). **Entregada** → zeus U142 ✅. **I50 ✅ 2026-07-19** (custodio/
+orquestador): U143 ✅ · U144 ✅ · D-34 cerrado · tips `503b6b8` /
+`a25ca08`. Siguiente: **I51 🔶** re-verif.

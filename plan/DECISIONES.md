@@ -149,11 +149,11 @@ bloquea WP-D31 de aquel mundo, no bloquea este plan.)*
   ENTREGA/vigía; ceguera 07→01). Zeus aplica micro-WP propio; CA I52
   abierto hasta merge U141 + re-verificación vigía. **I52 ≠ I50** (I52 =
   F6 scrub; I50 = Sprint 3). **I152 no existe.** I27 ✅ / I41 ✅.
-- ✅ **GO I50 aparte** (usuario/custodio · 2026-07-19) — **WP-I50** 🔶
-  aplicada-en-zeus. Autorizó redactar/entregar Sprint 3. **§Nota
-  entregada** (2026-07-19) vía prep
-  `plan/REPORTES/ENTREGA-VIGIA-2026-07-19c-sprint3-GO-prep.md` → zeus
-  archivó + triage (U142 ✅ · tip Z_SDK `6015d53`; U143/U144 ⬜ sin GO
-  por ítem). **I51 sigue ⬜**. No marca I50 ✅ hasta cierre real
-  (aplicación/descarte de ítems o sellado custodio).
-- I41 ✅ (acta C8); I27 ✅ (v0.2); estación/vigilante como insumo.
+- ✅ **GO I50 aparte** (usuario/custodio · 2026-07-19) — autorizó
+  redactar/entregar Sprint 3. §Nota → U142 ✅ triage. **Cierre I50 ✅
+  2026-07-19** (señal custodio / zeus libera GO): lote D-34 cerrado;
+  **U143 ✅** · **U144 ✅**; tip Z_SDK `503b6b8` · library `a25ca08`;
+  swarm zeus IDLE. Ball → **I51 🔶** (re-verif vigía CAs U143+U144).
+  Prep: `ENTREGA-VIGIA-2026-07-19c-sprint3-GO-prep.md`. Brief I51:
+  `BRIEF-WP-I51-verificacion-sprint3.md`. **NO I6.**
+- I41 ✅ (acta C8); I27 ✅ (v0.2); I52 ✅; estación/vigilante como insumo.

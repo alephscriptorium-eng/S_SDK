@@ -146,12 +146,15 @@ exploración inicial queda saldada.**
 - ~~«esperando: micro-enmascarado del token en reporte U140 (zeus)»~~ —
   **cerrado** (U141 ✅ · main `d1eef8f` · re-verif vigía PASS).
 - ~~«U141 mergeado; esperando re-verif vigía»~~ — **cerrado** (PASS
-  arriba). «esperando: ✅ I52 del orquestador» — trámite.
+  arriba). ~~«esperando: ✅ I52 del orquestador»~~ — **cerrado** (I52 ✅).
 - ~~«esperando: custodio entrega §Nota Sprint 3 → zeus (U142)»~~ —
-  **cerrado** (entregada; zeus U142 ✅ · tip `6015d53`; U143/U144 ⬜
-  sin GO; I50 🔶 aplicada-en-zeus). I51 ⬜ hasta aplicación/descarte.
-- «esperando: GO usuario zeus (U143/U144) o descarte explícito» — **vivo**.
-- ~~I50 sin GO~~ — **cerrado** (GO aparte 2026-07-19; §Nota entregada).
+  **cerrado** (entregada; zeus U142 ✅).
+- ~~«esperando: GO usuario zeus (U143/U144) o descarte explícito»~~ —
+  **cerrado** (señal custodio: D-34 cerrado; **U143 ✅** · **U144 ✅**;
+  tips `503b6b8`/`a25ca08`; zeus IDLE). **I50 ✅** (orquestador).
+- «esperando: ✅ formal I51 del orquestador» — **vivo** (PASS de facto
+  arriba @ tips; brief `BRIEF-WP-I51-verificacion-sprint3.md` · I51 🔶).
+- ~~I50 sin GO~~ — **cerrado** (GO aparte + cierre post-D-34).
 - ~~«esperando: **WP-I27**»~~ — **cerrado** (I27 ✅ · v0.2 + Pages +
   higiene).
 - ~~WP-I40 / I41~~ — **cerrados** (ops + acta C8 ✅).

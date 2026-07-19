@@ -404,25 +404,30 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   re-verificado por el vigía tras merge U141; regla «entregas sin rutas»
   cosida al skill (WP-I27, regla 12).
 
-- 🔶 **WP-I50 · ENTREGA Sprint 3 a zeus** — nota en idioma de zeus con:
+- ✅ **WP-I50 · ENTREGA Sprint 3 a zeus** — nota en idioma de zeus con:
   frágiles restantes de SUS repos (#1 CNAME, #2 guard de base, #5 dist/
   gitignoreado en library, #4 coherencia npm ci, economía CI de A-13, #7
   gap de paths) + **oferta del paquete público de skills** como recurso del
   registry (blind-safe: un paquete público más). **Distinto de I52** (no
   incluye el scrub F6). **GO aparte · 2026-07-19** (usuario/custodio).
-  Estado: **🔶 aplicada-en-zeus** — §Nota entregada; triage zeus
-  registrado. Prep:
-  `plan/REPORTES/ENTREGA-VIGIA-2026-07-19c-sprint3-GO-prep.md` + brief
-  `BRIEF-WP-I50-entrega-sprint3.md`. Zeus: U142 ✅ (archivo + triage);
-  tip `main` Z_SDK `6015d53`; WPs U143/U144 ⬜ (sin GO por ítem; nota =
-  propuesta). **I51 sigue ⬜** (sin GO hasta que zeus aplique ítems).
-  **CA:** prueba de ceguera grep = 0; no duplica colas de zeus — cumplido
-  en recepción; cierre ✅ I50 cuando custodio/orquestador selle tras
-  aplicación o descarte explícito de U143/U144.
+  Prep: `ENTREGA-VIGIA-2026-07-19c-sprint3-GO-prep.md` + brief
+  `BRIEF-WP-I50-entrega-sprint3.md`.
+  **Aceptado ✅ 2026-07-19** (orquestador · señal custodio / zeus libera GO):
+  U142 ✅ recepción; **U143 ✅** CNAME (tip Z_SDK `503b6b8` · library
+  `a25ca08`); **U144 ✅** npm ci consulta (aceptación zeus `ae8d9e1`;
+  library `ad9627c` en ancestro de `a25ca08`). Lote D-34 cerrado; swarm
+  zeus IDLE. Ball → I51.
+  **CA:** prueba de ceguera grep = 0; no duplica colas; sellado tras
+  aplicación U143/U144 — **cumplido**.
 
-- ⬜ **WP-I51 · Verificación vigía del sprint** — con el skill `vigilancia`
-  (tras I50 entregada / sprint aplicado). **CA:** veredictos persistidos
-  en el archivo de vigilancia.
+- 🔶 **WP-I51 · Verificación vigía del sprint** — con el skill `vigilancia`
+  (tras I50 ✅ / Sprint 3 aplicado). Brief:
+  `plan/REPORTES/BRIEF-WP-I51-verificacion-sprint3.md`.
+  **CA:** re-verif CAs de U143+U144 contra `HOLONES/01-mythos/zeus-sdk`
+  @ `503b6b8` y `HOLONES/01-mythos/games-library` @ `a25ca08` (submodule
+  update lectura si hace falta; ceguera 07→01: sin commits en submodules;
+  solo acta); veredictos persistidos en archivo de vigilancia /
+  `plan/REPORTES/WP-I51-*-reverif.md` + VIGIA-ESTADO.
 
 ## Ola I6 — Activación en los demás holones (matar las réplicas)
 
@@ -480,7 +485,8 @@ apoyar la fixture) y es donde se corrige el error fundamental DS-5.
 Dentro de I3: I30 → (I31∥I32) → I33. Tras I40 ✅: lote **I41 ∥ I27**
 ambos ✅ (2026-07-19). **I28 ✅** (ola housekeeping V4+V5+V6 cerrada).
 **GO I5** (2026-07-19): **I52 ✅** (re-verif vigía FINAL PASS · U141) →
-**I50 🔶** (aplicada-en-zeus · §Nota entregada; triage U142 ✅) → I51 ⬜.
+**I50 ✅** (U143+U144 aplicados · D-34 cerrado · tips `503b6b8`/`a25ca08`) →
+**I51 🔶**.
 
 ## Verificación end-to-end del conjunto
 
