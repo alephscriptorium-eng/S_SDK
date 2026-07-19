@@ -6,7 +6,7 @@
 | fecha | 2026-07-19 |
 | rama | `wp/i01-higiene-backstage` |
 | worktree | `C:/Users/aleph/SCRIPT_SDK-wp-i01` |
-| commits | `8c452dc` (higiene); `4881775` (reporte) |
+| commits | `8c452dc` (higiene); `4881775` + `1125f2c` (reporte) |
 | estado propuesto | listo para revisión |
 
 ## Qué se hizo
