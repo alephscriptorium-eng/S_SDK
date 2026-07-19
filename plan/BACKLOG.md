@@ -95,16 +95,21 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   out. Rama `wp/i10-vitepress-piel-zine`. Merge local → `main` @
   `550095d` (sin push; sin conflicto con I12 `docs/guide/`).
 
-- 🔶 **WP-I11 · docs.yml + CNAME** — export de la variante library:
+- ✅ **WP-I11 · docs.yml + CNAME** — export de la variante library:
   triggers push main+`wp/**` con `paths: docs/**`, PR, `workflow_dispatch`,
   concurrency; `npm ci` (frágil #4); `docs/public/CNAME` =
   `s-sdk.escrivivir.co` (frágil #1); sin spec-gen (frágil #6); gap de paths
   documentado (frágil #7).
   **CA:** workflow parsea; build CI verde en rama `wp/`.
-  **Asignado 🔶 2026-07-19** · worker `worker-i11` · rama
-  `wp/i11-docs-yml-cname` · worktree `../SCRIPT_SDK-wp-i11` · brief
-  `plan/REPORTES/BRIEF-WP-I11-docs-yml-cname.md`.
-  Depende de ✅ I10 (merge local `550095d`); I12 ya ✅ en main.
+  **Aceptado ✅ 2026-07-19** (orquestador): CA verificado en worktree
+  `SCRIPT_SDK-wp-i11` @ `c34ec84` — `docs.yml` variante library (`npm ci`,
+  concurrency, deploy solo `main`); `docs/public/CNAME` =
+  `s-sdk.escrivivir.co`; YAML Ruby OK; `npm ci` + `docs:build` EXIT=0
+  re-ejecutado; gap paths #7 en workflow+guía+reporte; guía I12 ancla
+  mínima sin `<pendiente I11>`; Actions remoto ⏳ sin push (aceptable
+  DE-I13 / brief). Rama `wp/i11-docs-yml-cname`. Merge local → `main` @
+  `d61d9a1` (incluye revisión dirty `0a940ca`; sin push; worktree
+  `SCRIPT_SDK-wp-i11` eliminado). Cierra ola I1 (I10+I11+I12 ✅).
 
 - ✅ **WP-I12 · publicar-la-web propia** — `docs/guide/publicar-la-web.md`
   al estilo zeus (la web se documenta a sí misma): ciclo editar/preview/
@@ -130,7 +135,7 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
 > Corrige el error fundamental (DS-5): la vigilancia de zeus es DATO y no
 > pertenece a este repo. Sin remotos aún → se **simula** el ciclo en local.
 
-- ⬜ **WP-I20 · Scaffold del repo skills-library** — repo local
+- 🔶 **WP-I20 · Scaffold del repo skills-library** — repo local
   `S_SDK-skills-library` (checkout hermano; remote lo **crea el swarm** vía
   `gh repo create` — DE-I7): package.json (`@alephscript/skills-scriptorium`
   o scope que fije el custodio), layout estándar de skills (un dir por skill:
@@ -140,6 +145,9 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   `skills.s-sdk.escrivivir.co` — DE-I9). Parejo pleno a la games-library.
   **CA:** formato estándar validado; `npm pack` + install en dir temporal
   (simulación de bajada); docs de la library compilan.
+  **Asignado 🔶 2026-07-19** · worker `worker-i20` · brief
+  `plan/REPORTES/BRIEF-WP-I20-skills-library-scaffold.md`.
+  Depende de ✅ I11 (merge local `d61d9a1`); I21–I26 aún ⬜.
 
 - ⬜ **WP-I21 · Skill `swarm-orquestacion`** *(abstraer+mejorar)* —
   protocolo canónico (`TEST-SWARM/plan/roles/`: ORQUESTADOR, WORKER,
