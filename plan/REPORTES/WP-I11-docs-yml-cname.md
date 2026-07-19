@@ -6,7 +6,7 @@
 | fecha | 2026-07-19 |
 | rama | `wp/i11-docs-yml-cname` |
 | worktree | `C:\Users\aleph\SCRIPT_SDK-wp-i11` |
-| commits | `444b33b` ci(docs); este reporte en el commit `docs(plan)` siguiente |
+| commits | `444b33b` ci(docs); `36b4ab1` docs reporte |
 | estado propuesto | listo para revisión |
 
 ## Qué se hizo
