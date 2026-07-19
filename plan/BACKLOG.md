@@ -456,23 +456,27 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   acta sin sección «Revisión del orquestador»; `REPORTES/PLANTILLA.md` sin
   dedupear. Reporte: `emmanuel-sdk/plan/REPORTES/WP-I60-activacion-skill.md`.
 
-- ○ **WP-I61 · aleph-scriptorium (05–06)** *(opcional · extra)* — ídem sobre
-  su `plan/roles/`; conserva PARTES/ y RECURSOS/ como calibración local.
-  **No es cola pendiente:** el contrato ya quedó validado por I60. Se activa
-  solo si el custodio lo pide, y bajo regla 13 (ejecutor fresco). Sus WPs
-  vivos (S14 🔶) no se interrumpen. **CA (si se activa):** ídem dedup.
+- 🔶 **WP-I61 · aleph-scriptorium (05–06)** *(GO custodio · ola I6 · 2026-07-19)*
+  — ídem sobre su `plan/roles/`; conserva PARTES/ y RECURSOS/ como calibración
+  local. Contrato Eje IV ya validado por I60; este WP es el **extra** que el
+  custodio pide ahora. **Regla 13:** ejecutor fresco (solo skill @ 0.3.0).
+  Sus WPs vivos (S14 🔶) no se interrumpen. Canal: custodio media (PRACTICAS
+  delta 1). Brief: `plan/REPORTES/BRIEF-WP-I61-activacion-aleph.md`.
+  Repo: `C:\Users\aleph\OASIS\aleph-scriptorium` · `ALCANCE_DIFF = plan/`.
+  **CA:** dedup + `npm view` @0.3.0 (C8) + calibración local visible +
+  alcance solo `plan/` + ceguera historial (regla 14) + no tocar cola S14.
 
-- ○ **WP-I62 · zeus (01)** *(opcional · no-acción por diseño)* — su
-  `plan/roles/` es el ancestro canónico y su swarm está vivo: NO se toca;
-  queda **ofrecido** en I50 y lo decide su orquestador (Eje V). No es tarea de
-  este orquestador. **CA (si zeus decide):** decisión registrada (adopta /
-  conserva con nota de procedencia); ceguera intacta en ambos casos.
+- ⬜ **WP-I62 · zeus (01)** *(ofrecido / espera decisión · Eje V)* — su
+  `plan/roles/` es el ancestro canónico y su swarm está vivo: **NO se toca**;
+  queda **ofrecido** en I50 y lo decide su orquestador. No es tarea de este
+  orquestador; **no se asigna worker**. **CA (si zeus decide):** decisión
+  registrada (adopta / conserva con nota de procedencia); ceguera intacta
+  en ambos casos.
 
-- **Cierre de ola:** **cumplido por I60** — emmanuel (segundo mundo, primer
-  consumidor ajeno) operando con el skill valida el contrato (Eje IV), y la
-  re-verificación del orquestador es su evidencia. Backtracking al skill
-  (reglas 13/14) = **WP-I29 ✅** (2026-07-19; skills `main` @ `5de379b`).
-  I61/I62 son extras, no bloquean.
+- **Cierre de ola (Eje IV):** **cumplido por I60** — emmanuel (segundo mundo,
+  primer consumidor ajeno) valida el contrato. Backtracking al skill
+  (reglas 13/14) = **WP-I29 ✅** (`@0.3.0` · skills `main` @ `5de379b`).
+  **GO I6 (2026-07-19):** abre extra **I61 🔶**; I62 sigue ofrecido.
 
 ---
 
@@ -488,8 +492,10 @@ Dentro de I3: I30 → (I31∥I32) → I33. Tras I40 ✅: lote **I41 ∥ I27**
 ambos ✅ (2026-07-19). **I28 ✅** (ola housekeeping V4+V5+V6 cerrada).
 **GO I5** (2026-07-19): **I52 ✅** → **I50 ✅** → **I51 ✅** — **ola I5
 cerrada** (re-verif formal acta WP-I51 @ tips `503b6b8`/`a25ca08`).
-**NO I6** sin GO. Residual I2.5: **I29 ✅** (skills v0.3.0 / reglas 13–14
-  en `main` @ `5de379b`). Swarm **IDLE** — esperando GO I6.
+Residual I2.5: **I29 ✅** (skills v0.3.0 / reglas 13–14 · `main` @
+`5de379b`). **GO I6** (custodio · 2026-07-19): lote arranque **I61 🔶**
+(I60 ya ✅; I62 ⬜ ofrecido / espera decisión — no worker). Paralelismo
+I60∥I61: N/A (I60 cerrado).
 
 ## Verificación end-to-end del conjunto
 
