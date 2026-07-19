@@ -239,6 +239,24 @@ por orquestador S_SDK/vigía».
   cierre total**. Los CUATRO mundos del método referencian o adoptan el
   skill: 07 autor · 03 activado · 05-06 activado · 01 adoptado por D-35.
 
+## F10 — skills-library servía el tema por defecto (2026-07-20 · custodio)
+
+- **Hallazgo del CUSTODIO** (no del vigía): `skills.s-sdk.escrivivir.co`
+  servía VitePress indigo por defecto — `docs/.vitepress/theme/` **ni
+  existía** en la library. DE-8 violado desde I20; ningún CA lo cubría
+  («docs compilan» ≠ «docs visten»); el vigía verificó 200 y scrub, **no
+  el look**. Mea culpa: C8-ampliado a medias.
+- **Fix (micro intervención, DE-I7):** piel zine portada como
+  copia-release con cabecera **neutralizada** (la de S_SDK decía «holón
+  01» — habría reintroducido F7; grep ceguera del css = 0), build verde,
+  push `dd58d43`, Docs run success, **CSS servido re-verificado**:
+  `courier` presente + `--vp-c-brand-1: var(--zine-ink)` pisando el
+  default.
+- **Regla 15 candidata (v0.4):** el CA de una superficie visual incluye
+  **marcadores del tema en el artefacto servido** (grep de tokens de la
+  piel en el CSS de producción), no solo HTTP 200 — extensión de la
+  lección U138 (canal de verificación = canal de uso) al plano visual.
+
 ## Rutina al retomar
 
 Pulso: `git fetch` + main vs origin · worktrees/stash/ramas ·
