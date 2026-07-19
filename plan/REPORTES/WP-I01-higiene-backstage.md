@@ -148,4 +148,23 @@ de datos zeus al estilo I24, falta ese pase (`⏳`) o exención firmada.
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** — 2026-07-19 · orquestador holón 07
+
+### Verificado (canal real, worktree `C:/Users/aleph/SCRIPT_SDK-wp-i01` @ `4d19cda`)
+
+1. `.gitignore`: `VIGILANCIA/`, `ADDENDA/`, `HANDOFF_*`, `/HIPOTESIS.md` (DE-I11).
+2. `HIPOTESIS.md` archivado en `VIGILANCIA/TRASH/HIPOTESIS.md` (49999 B); no en raíz del worktree; `git rm` del índice.
+3. `git ls-files | grep -E '^(VIGILANCIA/|ADDENDA/|HANDOFF_|HIPOTESIS\.md$)'` → ninguno; `git check-ignore -v` confirma las cuatro entradas.
+4. Diff `main...HEAD` solo `.gitignore`, `HIPOTESIS.md`, `plan/REPORTES/WP-I01-…`; sin BACKLOG, sin push (sin upstream), sin I02/I03.
+5. Histórico en disco (checkout main): `HANDOFF_VIGIA_*`, `ADDENDA/`, TRASH/HIPOTESIS presentes; `plan/HANDOFF-ARRANQUE.md` no cae bajo `HANDOFF_*`.
+
+### Decisión sobre el ⏳ grep amplio (estilo I24)
+
+**No bloquea I01.** El CA de I01 («grep de marco sensible en el árbol publicable») se interpreta, con el brief y DE-I11, como exclusión de paths backstage del índice/remoto — verificado (=0). El grep semántico de «datos zeus» sobre el núcleo es el CA explícito de **WP-I24**; el brief de I01 prohíbe ejecutar I24. Queda anotado para I24; no se exige exención de custodio.
+
+### Merge
+
+- Rama: `wp/i01-higiene-backstage` (HEAD `4d19cda`).
+- Orden: mergeable tras I00; **al mergear con I02** unir entradas de `.gitignore` (no pisar) — hallazgo del worker.
+- Padre: puede mergear I01; no esperar I02/I03 para aceptar/mergear I01 (conflicto de gitignore se resuelve al integrar I02).
+- Sin push (DE-I13 / PRACTICAS §6).

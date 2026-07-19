@@ -131,4 +131,32 @@ fresco remoto.
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** — 2026-07-19 · orquestador holón 07 (modo revisión)
+
+### CA verificados (canal real, worktree)
+
+1. Submodules: `zeus-sdk` → `Z_SDK.git`, `games-library` →
+   `Z_SDK-games-library.git` (`.gitmodules` + remotes).
+2. DE-I8: placeholders `HOLONES/03|05|06-*/README.md` modo `100644`;
+   cero entradas 03/05/06 en `.gitmodules`.
+3. Dirty dentro de submodules: `status --porcelain` vacío; gitlinks
+   `160000` @ `0afe1e1` / `b463a1a`.
+4. Ceguera re-ejecutada:
+   `git -C HOLONES/01-mythos/zeus-sdk grep -i "script_sdk|holón|holarquía"`
+   → 0 matches (exit 1).
+5. `git submodule update --init` → exit 0 (smoke en worktree; evidencia
+   clon fresco `file://` en reporte del worker).
+6. Diff `main...HEAD`: solo `.gitmodules`, HOLONES mythos+placeholders,
+   reporte. Cero BACKLOG / I01 / I02 / package.json. Sin push.
+
+### PRACTICAS
+
+Delta 2 (submodules read-only) OK. Delta 1: alcance S_SDK (no solo
+TEST-SWARM) — conforme al brief I0.
+
+### Merge
+
+- Rama `wp/i03-submodules-mythos` @ `1746b87` — **mergeable**.
+- Orden lote I0: I01 → I02 (unión `.gitignore`) → I03 (sin solape con
+  `.gitignore`; submodules independientes).
+- Padre: **no mergear aquí** (orden del custodio / merge coordinado).

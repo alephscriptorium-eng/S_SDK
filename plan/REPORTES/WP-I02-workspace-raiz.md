@@ -126,4 +126,23 @@ Ninguno que bloquee CA. Auth de escritura Verdaccio no requerida aquí
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** · 2026-07-19 · orquestador holón 07 (modo revisión)
+
+### Verificado
+- `package.json`: `engines.node >=22`; scripts planos `docs:dev` /
+  `docs:build` (`vitepress … docs`).
+- `.npmrc`: `@zeus` y `@alephscript` → `https://npm.scriptorium.escrivivir.co`.
+- `.gitignore`: `docs/.vitepress/dist/` + tipicos node (`node_modules/`,
+  logs, `dist/`, `.env`, etc.).
+- C8 re-ejecutado en worktree: `npm install` EXIT=0; `npm view
+  @zeus/protocol` → `0.2.0` (registry real + vía scoped `.npmrc`).
+- Diff `main...HEAD`: solo `.gitignore`, `.npmrc`, `package.json`,
+  `package-lock.json`, `plan/REPORTES/WP-I02-workspace-raiz.md`. Cero
+  BACKLOG / I01 / I03 / HOLONES. Sin upstream → sin push.
+- Hallazgo merge `.gitignore` I01↔I02: documentado; no bloquea.
+  Resolución al merge: **unión** (I01 backstage + I02 node/dist).
+
+### Merge
+Rama `wp/i02-workspace-raiz` @ `35755af`. Merge no ejecutado en esta
+revisión (orden del custodio). Al integrar: resolver `.gitignore` por
+unión; no descartar lado I02.
