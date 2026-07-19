@@ -288,8 +288,8 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
 
 ## Ola I3 — Contenido: los holones (primera activación real)
 
-> **Ola I3 en curso 2026-07-19.** I30 ✅ · I31 ✅ · I32 ✅ mergeados+pushed.
-> Ahora: I33 🔶. Cadencia: merge cada ✅.
+> **Ola I3 cerrada 2026-07-19** (I30–I33). IDLE → esperando: ops Pages/DNS
+> (I40). **NO** arrancar I4 sin GO explícito.
 
 - ✅ **WP-I30 · Activación en casa** — plan/ consumidor del skill
   `swarm-orquestacion@0.1.0`; instancia `WEBS/` (CANTERA + ENTREGA-CAPA-1)
@@ -321,13 +321,15 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   `plan/REPORTES/WP-I32-fichas-roadmaps.md`. Nav Holones 02–07 en
   `config.mjs`; unificar 01 al merge de I31.
 
-- 🔶 **WP-I33 · El pack TEST-SWARM servido** — DA-4 de TEST-SWARM honrada:
-  `TEST-SWARM/docs/index.html` enlazado o servido como ruta estática.
-  **CA:** accesible desde portada; moira funcional en Pages.
-  **Asignado 🔶 2026-07-19** (orquestador): brief
-  `plan/REPORTES/BRIEF-WP-I33-test-swarm-servido.md` · rama
-  `wp/i33-test-swarm-servido` · worktree `../SCRIPT_SDK-wp-i33`.
-  I31∥I32 ya ✅.
+- ✅ **WP-I33 · El pack TEST-SWARM servido** — DA-4 honrada: espejo
+  `TEST-SWARM/docs/` → `/ensayo/` (`docs:sync-ensayo` + `public/ensayo/`).
+  **CA cumplidos:** enlace real desde portada; moira OK en preview local
+  (Pages dominio `<pendiente I40>`); `docs:build` verde; ceguera; pack
+  intacto; CANTERA VIVA-OK.
+  **Aceptado ✅ 2026-07-19** — merge `main` @ `fcfa629` (obra rama
+  `wp/i33-test-swarm-servido` @ `2b5d38c` + revisión `1f43926`) · reporte
+  `plan/REPORTES/WP-I33-test-swarm-servido.md`. Worktree retirado.
+  **Ola I3 cerrada.**
 
 ## Ola I4 — Publicación
 
