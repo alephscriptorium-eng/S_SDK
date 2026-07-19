@@ -425,14 +425,18 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   **CA:** prueba de ceguera grep = 0; no duplica colas; sellado tras
   aplicación U143/U144 — **cumplido**.
 
-- 🔶 **WP-I51 · Verificación vigía del sprint** — con el skill `vigilancia`
+- ✅ **WP-I51 · Verificación vigía del sprint** — con el skill `vigilancia`
   (tras I50 ✅ / Sprint 3 aplicado). Brief:
   `plan/REPORTES/BRIEF-WP-I51-verificacion-sprint3.md`.
+  **Aceptado ✅ 2026-07-19** (orquestador): re-verif formal PASS —
+  acta `plan/REPORTES/WP-I51-verificacion-sprint3.md` (U143 CNAME ambos
+  @ tip · U144 `npm ci`+comentario · ceguera 0 hits; tips `503b6b8` /
+  `a25ca08`). Coherente con VIGIA-ESTADO §I51. **Ola I5 cerrada**
+  (I50+I51+I52 ✅). **NO I6** sin GO.
   **CA:** re-verif CAs de U143+U144 contra `HOLONES/01-mythos/zeus-sdk`
   @ `503b6b8` y `HOLONES/01-mythos/games-library` @ `a25ca08` (submodule
   update lectura si hace falta; ceguera 07→01: sin commits en submodules;
-  solo acta); veredictos persistidos en archivo de vigilancia /
-  `plan/REPORTES/WP-I51-*-reverif.md` + VIGIA-ESTADO.
+  solo acta); veredictos persistidos — **cumplido**.
 
 ## Ola I6 — Activación en los demás holones (matar las réplicas)
 
@@ -490,10 +494,10 @@ Dentro de I2 el orden es: I20 → (I21∥I22∥I23) → I24 (separación) → I2
 apoyar la fixture) y es donde se corrige el error fundamental DS-5.
 Dentro de I3: I30 → (I31∥I32) → I33. Tras I40 ✅: lote **I41 ∥ I27**
 ambos ✅ (2026-07-19). **I28 ✅** (ola housekeeping V4+V5+V6 cerrada).
-**GO I5** (2026-07-19): **I52 ✅** (re-verif vigía FINAL PASS · U141) →
-**I50 ✅** (U143+U144 aplicados · D-34 cerrado · tips `503b6b8`/`a25ca08`) →
-**I51 🔶**. Residual I2.5: **I29 🔶** (GO custodio · bump skills v0.3 /
-reglas 13–14) **∥ I51** (no solapan: library vs lectura zeus).
+**GO I5** (2026-07-19): **I52 ✅** → **I50 ✅** → **I51 ✅** — **ola I5
+cerrada** (re-verif formal acta WP-I51 @ tips `503b6b8`/`a25ca08`).
+**NO I6** sin GO. Residual I2.5: **I29 🔶** (GO custodio · bump skills
+v0.3 / reglas 13–14; worker paralelo — no solapa lectura zeus).
 
 ## Verificación end-to-end del conjunto
 

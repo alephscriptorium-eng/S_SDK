@@ -141,6 +141,13 @@ resueltos (triaje I50); #3/#6 eran de diseño/documentación y quedaron
 mitigados en el export propio. **La deuda de pipeline detectada en la
 exploración inicial queda saldada.**
 
+### Re-verif formal WP-I51 (2026-07-19 · acta) — ✅ orquestador
+
+Acta `plan/REPORTES/WP-I51-verificacion-sprint3.md`: CAs U143/U144/ceguera
+**re-ejecutados** @ tips `503b6b8` / `a25ca08` → **PASS** (coherente con
+esta sección; no copia a ciegas). **I51 ✅** asentado por orquestador;
+**ola I5 cerrada** (I50+I51+I52). **NO I6** sin GO.
+
 ## Gates externos vivos (nunca silencio)
 
 - ~~«esperando: micro-enmascarado del token en reporte U140 (zeus)»~~ —
@@ -152,8 +159,8 @@ exploración inicial queda saldada.**
 - ~~«esperando: GO usuario zeus (U143/U144) o descarte explícito»~~ —
   **cerrado** (señal custodio: D-34 cerrado; **U143 ✅** · **U144 ✅**;
   tips `503b6b8`/`a25ca08`; zeus IDLE). **I50 ✅** (orquestador).
-- «esperando: ✅ formal I51 del orquestador» — **vivo** (PASS de facto
-  arriba @ tips; brief `BRIEF-WP-I51-verificacion-sprint3.md` · I51 🔶).
+- ~~«esperando: ✅ formal I51 del orquestador»~~ — **cerrado** (I51 ✅ ·
+  acta `WP-I51-verificacion-sprint3.md` · ola I5 cerrada). **NO I6** sin GO.
 - ~~I50 sin GO~~ — **cerrado** (GO aparte + cierre post-D-34).
 - ~~«esperando: **WP-I27**»~~ — **cerrado** (I27 ✅ · v0.2 + Pages +
   higiene).
