@@ -67,3 +67,50 @@ confirmando la tesis del RE-PLAN: el aislamiento funciona; los bordes no.
   («procedimiento Verdaccio canónico», sin mundo). Scrub en WP-I27.
 - Pages de la skills-library en 404: activar Pages + CNAME
   (`skills.s-sdk.escrivivir.co`, DNS ya resuelve — verificado 2026-07-19).
+
+## Addendum I60 (2026-07-19) — insumo para el skill v0.3
+
+Segunda activación real del skill (emmanuel, primer consumidor ajeno). El
+contrato funcionó (referencia versionada resoluble en vivo, dedup limpio, la
+auto-revisión del worker cazó su propia fuga). Pero surgió **F8, crítico**,
+del que salen dos reglas nuevas candidatas a coserse al skill:
+
+- **F8 · la ceguera se rompe en el historial, no solo en el árbol.** La v1
+  del acta de emmanuel contenía el nombre del marco en claro; el fix enmascaró
+  el árbol pero el commit intermedio (`72c210e`) quedó como ancestro de `main`
+  y **pusheado al remoto público** — `git show <sha>:...` seguía sirviendo el
+  marco a cualquiera, incluidos los futuros agentes del propio emmanuel, que
+  son a quienes la ley protege. **Causa raíz estructural:** el patrón de grep
+  del worker (sabía exactamente qué tokens ocultar) delata que la activación
+  la ejecutó un agente **que ya conocía el marco**. No fue descuido: fue quién
+  ejecutó. Remediado en I60 con rewrite + force-push (repo recién nacido, 0
+  forks) → `main` colapsado a `90e5354`, ceguera re-verificada sobre
+  `git log -p` = 0.
+
+- **Regla 13 (candidata v0.3) · la activación la ejecuta un agente fresco.**
+  Un mundo se activa con el skill mediante un agente que **solo conoce el
+  skill**, jamás uno con contexto del marco. Un ejecutor que conoce el marco
+  no puede *no* filtrarlo (lo lleva en el prompt); la única garantía es la
+  ignorancia del ejecutor. Pareja de la regla 12 (entregas sin rutas): 12
+  protege el canal entre mundos; 13 protege el acto de activación.
+
+- **Regla 14 (candidata v0.3) · la ceguera se verifica sobre el historial
+  alcanzable, no solo el árbol.** El CA de ceguera corre `git log -p`
+  (historia completa reachable), no solo `git grep` del working tree. Fuga en
+  commit intermedio = **squash antes del merge** (nunca un fix-encima que deja
+  el original en la historia). En remoto público ya empujado: rewrite +
+  force-push mientras el repo sea joven.
+
+**Práctica de la regla 14 (dos incidencias el mismo día, distintos
+agentes):** los pipelines de evidencia validan el **exit del comando de
+medida, no del filtro** — `grep | head && echo OK` evalúa el exit de
+`head` (siempre 0) y canta falsos veredictos en ambos sentidos. Forma
+canónica: `grep -c` y leer el conteo, o `grep -q`. Le pasó al vigía de 07
+(falso PASS en un ls-tree) y al ejecutor del rewrite de emmanuel (falso
+«QUEDA FUGA») en el mismo día; ambos lo cazaron re-midiendo — la regla es
+no tener que cazarlo.
+
+Menores de I60 (para el orquestador de emmanuel cuando toque, no bloquean):
+el acta quedó sin la sección «Revisión del orquestador» rellenada pese al
+merge ✅; y `REPORTES/PLANTILLA.md` no se dedupeó (mismo criterio de
+referencia versionada que se aplicó a los roles debería aplicarle).

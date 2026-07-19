@@ -106,11 +106,10 @@ el fix `8dc898c` enmascaró el árbol pero no purgó el historial —
 `git show 72c210e:...` lo sirve. Además el patrón de grep usado delata que
 la activación la ejecutó un agente **con contexto del marco** (sabía qué
 tokens ocultar): la fuga era estructural, no accidental.
-**Decisión del custodio:** (A) *recomendada* — rewrite/force-push YA
-(repo recién nacido, 0 forks: barato hoy, imposible mañana) · (B) asumir
-el residual y documentarlo como DE en emmanuel. Matiz de severidad: el
-marco es público por diseño en s-sdk.escrivivir.co — la ley protege que
-el ÁRBOL del mundo no lo contenga (dieta de sus agentes), no el secreto.
+**F8 REMEDIADO (opción A ejecutada · re-verificado por el vigía):**
+rewrite + force-push de E_SDK → `origin/main` = `90e5354` (2 commits);
+`72c210e` inalcanzable; `git log -p` del historial completo = 0 hits de
+marco (regla 14 aplicada). I60 ✅ con Eje IV validado, reserva cerrada.
 
 **Menores I60:** acta sin «Revisión del orquestador» rellenada pese al
 merge ✅ · `REPORTES/PLANTILLA.md` no dedupeada (criterio inconsistente).

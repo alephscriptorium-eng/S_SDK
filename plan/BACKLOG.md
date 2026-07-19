@@ -291,6 +291,20 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   Reporte `plan/REPORTES/WP-I28-housekeeping-v4-v5-v6.md`. Worktrees
   retirados. **Ola housekeeping V4+V5+V6 cerrada.**
 
+- ⬜ **WP-I29 · Skill package bump v0.3 — reglas 13/14 (ceguera de
+  activación)** *(candidato · espera GO custodio)* — cose al skill
+  `swarm-orquestacion` dos reglas nacidas de F8 en I60: **regla 13** (la
+  activación de un mundo la ejecuta un agente **fresco**, que solo conoce el
+  skill, nunca uno con contexto del marco — la fuga fue estructural, no
+  descuido) y **regla 14** (la ceguera se verifica sobre el historial
+  alcanzable `git log -p`, no solo el árbol; fuga en commit intermedio =
+  **squash antes del merge**). Insumo: `plan/RETRO-2026-07-19-metodo.md`
+  §Addendum I60. Bump `@alephscript/skills-scriptorium` a v0.3.0 + CHANGELOG,
+  al mismo procedimiento que WP-I27 (v0.2.0).
+  **CA:** reglas 13/14 en `reference/reglas-metodo-v02.md` (o sucesor v0.3) y
+  como CA obligatorio en `reference/ejes-ca.md`; `npm view` resuelve la nueva
+  versión contra el registry real (C8); ceguera del skill = 0.
+
 ## Ola I3 — Contenido: los holones (primera activación real)
 
 > **Ola I3 cerrada 2026-07-19** (I30–I33). I40 cerrado formalmente
@@ -412,24 +426,46 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
 
 ## Ola I6 — Activación en los demás holones (matar las réplicas)
 
-- ⬜ **WP-I60 · emmanuel-sdk (03)** — sin swarm activo (fase papel): su
-  `plan/roles/` se sustituye por activación del skill + calibración local
-  mínima. Canal directo (custodio media).
+- ✅ **WP-I60 · emmanuel-sdk (03)** *(aceptado · orquestador · 2026-07-19 ·
+  Eje IV validado con reserva F8 remediada)* — sin swarm activo (fase papel):
+  su `plan/roles/` se sustituye por activación del skill + calibración local
+  mínima. Canal directo (custodio media). Brief:
+  `plan/REPORTES/BRIEF-WP-I60-activacion-emmanuel.md`. Repo:
+  `E_SDK` (PUBLIC, `github.com/alephscriptorium-eng/E_SDK`, creado por el
+  custodio; fundacional `5bb66e8` + push por el orquestador).
   **CA:** grep dedup — protocolo definido UNA vez; su plan sigue
   autocontenido vía referencia versionada.
+  **Aceptado ✅ 2026-07-19** (orquestador): CA1–CA5 re-verificados —
+  `plan/roles/` = solo README con referencia versionada
+  `@alephscript/skills-scriptorium@0.2.0` (5 prompts genéricos `git rm`);
+  `npm view 0.2.0` resuelve contra registry real (C8); calibración local
+  (submodules §2 + lore-fuera) visible; diff solo `plan/`. **Reserva F8
+  (crítica) remediada:** el acta v1 filtraba el marco en claro y el fix solo
+  enmascaró el árbol, no el historial (`72c210e` pusheado a remoto público).
+  Rewrite: `main` colapsado a un commit limpio `90e5354` + `--force-with-lease`
+  (repo joven, 0 forks); ceguera re-verificada sobre `git log -p` = 0; commit
+  fugado ya no alcanzable (GC de GitHub purga el dangling). Lecciones →
+  reglas 13/14 candidatas v0.3 (`plan/RETRO-2026-07-19-metodo.md` §Addendum
+  I60; registradas en WP-I29). Menores diferidos al orquestador de emmanuel:
+  acta sin sección «Revisión del orquestador»; `REPORTES/PLANTILLA.md` sin
+  dedupear. Reporte: `emmanuel-sdk/plan/REPORTES/WP-I60-activacion-skill.md`.
 
-- ⬜ **WP-I61 · aleph-scriptorium (05–06)** — ídem sobre su `plan/roles/`;
-  conserva PARTES/ y RECURSOS/ como calibración local.
-  **CA:** ídem dedup; sus WPs vivos (S14 🔶) no se interrumpen.
+- ○ **WP-I61 · aleph-scriptorium (05–06)** *(opcional · extra)* — ídem sobre
+  su `plan/roles/`; conserva PARTES/ y RECURSOS/ como calibración local.
+  **No es cola pendiente:** el contrato ya quedó validado por I60. Se activa
+  solo si el custodio lo pide, y bajo regla 13 (ejecutor fresco). Sus WPs
+  vivos (S14 🔶) no se interrumpen. **CA (si se activa):** ídem dedup.
 
-- ⬜ **WP-I62 · zeus (01)** — su `plan/roles/` es el ancestro canónico y su
-  swarm está vivo: NO se toca; queda ofrecido en I50 y decide su
-  orquestador (mediación transparente, Eje V).
-  **CA:** decisión registrada (adopta / conserva con nota de procedencia);
-  ceguera intacta en ambos casos.
+- ○ **WP-I62 · zeus (01)** *(opcional · no-acción por diseño)* — su
+  `plan/roles/` es el ancestro canónico y su swarm está vivo: NO se toca;
+  queda **ofrecido** en I50 y lo decide su orquestador (Eje V). No es tarea de
+  este orquestador. **CA (si zeus decide):** decisión registrada (adopta /
+  conserva con nota de procedencia); ceguera intacta en ambos casos.
 
-- **Cierre de ola:** el segundo mundo operando con el skill valida el
-  contrato (Eje IV); retro al skill (backtracking) con lo aprendido.
+- **Cierre de ola:** **cumplido por I60** — emmanuel (segundo mundo, primer
+  consumidor ajeno) operando con el skill valida el contrato (Eje IV), y la
+  re-verificación del orquestador es su evidencia. Backtracking al skill
+  (reglas 13/14) queda como WP-I29 candidato. I61/I62 son extras, no bloquean.
 
 ---
 
