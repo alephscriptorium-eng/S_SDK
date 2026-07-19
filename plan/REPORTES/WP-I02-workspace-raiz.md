@@ -102,13 +102,14 @@ scripts `docs:*` quedan declarados para I10 (montaje VitePress).
 
 ## Hallazgos fuera de alcance
 
-1. **Conflicto potencial `.gitignore` con WP-I01.** Main no tenía
-   `.gitignore`. I02 crea uno (node + dist + vitepress dist). I01 debe
-   añadir `VIGILANCIA/`, `ADDENDA/`, `HANDOFF_*` (DE-I11). Al mergear
-   ambas ramas que crean el mismo fichero desde cero → conflicto de
-   merge previsible. Resolución sugerida al orquestador: conservar la
-   unión (entradas I02 + I01); **no borrar** `dist/` ni
-   `docs/.vitepress/dist/` en el lado I01.
+1. **Conflicto `.gitignore` con WP-I01 (verificado en worktree I01).**
+   Main no tenía `.gitignore`. I02 crea uno (node + `dist/` +
+   `docs/.vitepress/dist/`). I01 en
+   `C:\Users\aleph\SCRIPT_SDK-wp-i01\.gitignore` (rama
+   `wp/i01-higiene-backstage`) trae solo backstage DE-I11:
+   `VIGILANCIA/`, `ADDENDA/`, `HANDOFF_*`, `/HIPOTESIS.md` — sin
+   `dist/` ni tipicos node. Merge = conflicto de creación dual;
+   resolución: **unión** de ambas listas; no descartar el lado I02.
 2. **`plan/` aún no está en main** (solo working tree del checkout
    principal). Este reporte se commitea en la rama I02 bajo
    `plan/REPORTES/`; el orquestador deberá ordenar el merge con I00/plan
