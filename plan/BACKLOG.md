@@ -154,18 +154,22 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   sin push raíz. Merge reporte → main + default-branch skills-library
   → main = ops/padre. Cierra arranque ola I2; siguiente I21∥I22∥I23.
 
-- 🔶 **WP-I21 · Skill `swarm-orquestacion`** *(abstraer+mejorar)* —
+- ✅ **WP-I21 · Skill `swarm-orquestacion`** *(abstraer+mejorar)* —
   protocolo canónico (`TEST-SWARM/plan/roles/`: ORQUESTADOR, WORKER,
   REVISION, CORRECCION, BRIEF + PLANTILLA) con los 5 ejes del RE-PLAN
   cosidos como CA obligatorios. Marco-agnóstico (PRACTICAS delta 5). Cero
   datos de mundo.
   **CA:** un agente fresco monta el plan/ de un mundo nuevo solo con el
   skill; prueba de ceguera en cara pública = 0.
-  **Asignado 🔶 2026-07-19** · brief
-  `plan/REPORTES/BRIEF-WP-I21-skill-swarm-orquestacion.md` · rama
-  `wp/i21-skill-swarm-orquestacion` · paralelo I22∥I23.
+  **Aceptado ✅ 2026-07-19** (orquestador): CA re-verificado en
+  `C:\Users\aleph\S_SDK-skills-library-wp-i21` @ `c5d44e3` —
+  `montar-plan.sh` monta `plan/` completo; ceguera delta 5 = 0; `npm pack`
+  EXIT=0 (23 files, skill incluido); ejes I–V en `reference/ejes-ca.md`
+  como CA por tipo. **Merged** skill → skills-library `main` @ `b321109`
+  (lote → `cb03e49` pushed); reporte → SCRIPT_SDK `main` @ `100b8a9`
+  (sin push raíz).
 
-- 🔶 **WP-I22 · Skill `site-web`** *(abstraer+mejorar+separar)* — método
+- ✅ **WP-I22 · Skill `site-web`** *(abstraer+mejorar+separar)* — método
   WEBS (plantillas BASE-1/2/3, backtracking, C8/C9, entrega §E) + protocolo
   ghpages (plantilla docs.yml, config VitePress parametrizada, piel zine,
   checklist dominio/DNS/HTTPS, los 7 frágiles con mitigación). **Separar:**
@@ -173,9 +177,13 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   web zeus, hoy en `OASIS/.../WEBS/`) NO entran al skill — son instancia.
   **CA:** con el skill + un mundo limpio se genera un sitio publicable sin
   consultar zeus; plantillas sin rutas absolutas ni datos de mundo (grep=0).
-  **Asignado 🔶 2026-07-19** · brief
-  `plan/REPORTES/BRIEF-WP-I22-skill-site-web.md` · rama
-  `wp/i22-skill-site-web` · paralelo I21∥I23.
+  **Aceptado ✅ 2026-07-19** (orquestador): CA re-verificado en
+  `C:\Users\aleph\S_SDK-skills-library` @ `31b8105` —
+  `generar-sitio.sh` → temp + `docs:build` EXIT=0 DIST_OK
+  (`atlas.ejemplo.co`); ceguera delta 5 = 0; cero rutas OASIS/absolutas;
+  fixture `examples/mundo-limpio/` inventada (sin CANTERA zeus).
+  **Merged** skill → skills-library `main` @ `eafe8fc` (lote → `cb03e49`
+  pushed); reporte → SCRIPT_SDK `main` @ `4421f5c` (sin push raíz).
 
 - ✅ **WP-I23 · Skill `vigilancia`** *(abstraer+mejorar+separar)* — doctrina
   ESTACION v1 (rol read-only, mtime no commits, clases de huérfano, locks,
@@ -188,11 +196,10 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   `C:\Users\aleph\S_SDK-skills-library` @ `bf90627` — `skills/vigilancia/`
   con WORLD_ROOT/OUT_DIR/INTERVAL; watcher contra skills-library + repo
   temp (huérfano); ceguera delta 5 = 0; cero histórico zeus; no I24.
-  Reporte rama `wp/i23-skill-vigilancia` (worktree); sin push raíz.
-  Merge skill + reporte → main = ops/padre tras I21/I22 o en paralelo
-  (paths independientes). Siguiente tras merge I23: brief I24.
+  **Merged** skill → skills-library `main` @ `cb03e49` (pushed DE-I7);
+  reporte → SCRIPT_SDK `main` @ `4cd2d1a` (sin push raíz). Siguiente: I24.
 
-- ⬜ **WP-I24 · Separación de datos + corrección del error fundamental
+- 🔶 **WP-I24 · Separación de datos + corrección del error fundamental
   (DS-5)** — el corazón de DE-I10. (1) Los datos de la sesión de vigilancia
   de zeus (`VIGILANCIA/{bitacora,revisiones,anomalias.log,watch.log}`;
   `ADDENDA/` addendas y ENTREGAs; `HANDOFF_*`) **salen del núcleo** de
@@ -208,6 +215,9 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   fixture de-identificada existe y su grep de nombres reales = 0;
   `RE-PLAN-protocolo-swarm.md` (doctrina, no dato) reubicado como fuente
   del skill, no como residuo suelto.
+  **Asignado 🔶 2026-07-19** · brief
+  `plan/REPORTES/BRIEF-WP-I24-separacion-datos.md` · rama
+  `wp/i24-separacion-datos`.
 
 - ⬜ **WP-I25 · Primer caso de verificación (Eje IV)** — cargar la fixture
   `ejemplo-M` a través del skill `vigilancia` y **simular** que un segundo
