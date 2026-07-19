@@ -4,7 +4,8 @@
 | ---- | ----- |
 | agente | worker-i24 (holón 07) |
 | fecha | 2026-07-19 |
-| rama (SCRIPT_SDK) | `wp/i24-separacion-datos` @ `8735d45` (reporte; gitignore `c704ada`) |
+| rama (SCRIPT_SDK) | `wp/i24-separacion-datos` |
+| commits SCRIPT_SDK | `c704ada` (gitignore + reporte); docs de anclaje en tip |
 | worktree | `C:\Users\aleph\SCRIPT_SDK-wp-i24` |
 | base SCRIPT_SDK | `main` @ `e31933a` |
 | rama (skills-library) | `wp/i24-separacion-datos` @ `fcac110` (pushed) |
