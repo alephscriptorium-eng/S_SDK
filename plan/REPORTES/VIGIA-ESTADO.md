@@ -92,6 +92,36 @@ redactada con solo los 2 vivos (#1 CNAME ×2 repos · #4 npm ci consulta)
 — el token `skills-library` no debe entrar al árbol de zeus). Ceguera
 grep = 0. Fichero: `ENTREGA-VIGIA-2026-07-19c-sprint3-GO-prep.md`.
 
+## Revisión I60 — emmanuel, el segundo consumidor (2026-07-19 noche)
+
+**Eje IV: VALIDADO CON RESERVA.** Lo que funcionó: referencia versionada
+real (`@0.2.0` fijada, `npm view` resuelve en vivo), dedup de los 5 roles
+(-305 líneas), calibración local intacta (E0–E3, DE-n sin tocar), y la
+auto-revisión CA5 **cazó y corrigió** una fuga en su propio ciclo.
+
+**F8 · CRÍTICO — fuga de ceguera en historial público de emmanuel:** el
+commit `72c210e` (ancestro de main, **pusheado a E_SDK**) contiene
+`SCRIPT_SDK` y `holón/holarquía` en claro (primera versión del acta I60);
+el fix `8dc898c` enmascaró el árbol pero no purgó el historial —
+`git show 72c210e:...` lo sirve. Además el patrón de grep usado delata que
+la activación la ejecutó un agente **con contexto del marco** (sabía qué
+tokens ocultar): la fuga era estructural, no accidental.
+**Decisión del custodio:** (A) *recomendada* — rewrite/force-push YA
+(repo recién nacido, 0 forks: barato hoy, imposible mañana) · (B) asumir
+el residual y documentarlo como DE en emmanuel. Matiz de severidad: el
+marco es público por diseño en s-sdk.escrivivir.co — la ley protege que
+el ÁRBOL del mundo no lo contenga (dieta de sus agentes), no el secreto.
+
+**Menores I60:** acta sin «Revisión del orquestador» rellenada pese al
+merge ✅ · `REPORTES/PLANTILLA.md` no dedupeada (criterio inconsistente).
+
+**Reglas candidatas v0.3 (del ciclo I6):**
+13. La activación de un skill la ejecuta un **agente fresco que solo
+    conoce el skill** — jamás uno con contexto del marco.
+14. La ceguera se verifica sobre el **historial alcanzable** (`git log
+    -p`), no solo el árbol — CA-por-clase aplicado a git; si hay fuga en
+    commit intermedio, squash antes del merge.
+
 ## Gates externos vivos (nunca silencio)
 
 - ~~«esperando: micro-enmascarado del token en reporte U140 (zeus)»~~ —
