@@ -138,4 +138,24 @@ autorizado (DE-I13).
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** · 2026-07-19 · orquestador (modo REVISIÓN)
+
+### Verificado
+- Diff `main...c34ec84`: solo `docs.yml`, `docs/public/CNAME`, ancla
+  `publicar-la-web.md`, reporte — alcance OK.
+- Workflow: push `main`+`wp/**` paths `docs/**`, PR, `workflow_dispatch`,
+  concurrency `docs-${{ github.workflow }}-${{ github.ref }}`, `npm ci`,
+  `docs:build`, upload/deploy condicionados a `main` (no PR).
+- `docs/public/CNAME` = `s-sdk.escrivivir.co`; dist copia el CNAME.
+- Sin spec-gen en steps ni en `package.json` `docs:build` (mención solo
+  en comentarios/guía = frágil #6 documentado).
+- Gap paths #7 en cabecera YAML + guía §Publicar + reporte.
+- YAML: `ruby -ryaml` → `RUBY_YAML_OK`; `npm run docs:build` re-ejecutado
+  EXIT=0 en worktree.
+- CI Actions en `wp/` marcado ⏳: **no bloquea** — brief + DE-I13 (sin
+  push raíz); canal CA = build local en rama `wp/`.
+
+### Orden de merge (padre)
+1. Merge local `wp/i11-docs-yml-cname` → `main` (sin push).
+2. Ola I1 cierra (I10 ✅ · I11 ✅ · I12 ✅).
+3. Siguiente lote: ola **I2** — arranque **WP-I20** (scaffold skills-library).
