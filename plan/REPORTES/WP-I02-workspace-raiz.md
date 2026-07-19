@@ -6,7 +6,7 @@
 | fecha | 2026-07-19 |
 | rama | `wp/i02-workspace-raiz` |
 | worktree | `C:\Users\aleph\SCRIPT_SDK-wp-i02` |
-| commits | `84ba6f3` feat package.json/.npmrc · `c8cef5a` chore .gitignore · _(este reporte)_ |
+| commits | `84ba6f3` feat package.json/.npmrc · `c8cef5a` chore .gitignore · `9d39491` docs reporte |
 | estado propuesto | listo para revisión |
 
 ## Qué se hizo
