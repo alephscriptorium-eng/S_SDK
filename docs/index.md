@@ -10,8 +10,8 @@ hero:
       text: 01 · Mythos
       link: /holones/01-mythos
     - theme: alt
-      text: Holones
-      link: /holones/07-script-sdk
+      text: Ensayo TEST-SWARM
+      link: /ensayo/
 features:
   - title: 01 · Mythos
     details: Cosmos zeus — docs z-sdk / games, registry @zeus, anclas HOLONES (verificada I31).
@@ -22,6 +22,9 @@ features:
   - title: 07 · Esta casa
     details: SCRIPT_SDK — método, skills y web fanzine.
     link: /holones/07-script-sdk
+  - title: Ensayo TEST-SWARM
+    details: Pack del ensayo (DA-4) — guion, Notas, acta v2 y moira.
+    link: /ensayo/
   - title: Autoridades
     details: Fichas de productor y marco (escrivivir.co · Scriptorium).
     link: /autoridades/01-escrivivir-co
@@ -39,6 +42,11 @@ features:
 | 06 | Posmodernidad | [06-posmodernidad](/holones/06-posmodernidad) |
 | 07 | SCRIPT_SDK | [07-script-sdk](/holones/07-script-sdk) |
 
+## Ensayo
+
+Pack TEST-SWARM servido en [`/ensayo/`](/ensayo/) (espejo de
+`TEST-SWARM/docs/` vía `npm run docs:sync-ensayo`; DA-4 / WP-I33).
+
 ## Local
 
 ```bash
@@ -47,4 +55,5 @@ npm run docs:dev
 npm run docs:build
 ```
 
-Dominio previsto: `s-sdk.escrivivir.co` (DE-I2). Pages vivo → WP-I40.
+Dominio previsto: `s-sdk.escrivivir.co` (DE-I2). Pages vivo →
+`<pendiente I40>`.

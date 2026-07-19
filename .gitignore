@@ -24,6 +24,9 @@ coverage/
 .turbo/
 .cache/
 
+# WP-I33 — espejo del pack (origen canónico = TEST-SWARM/docs/)
+docs/public/ensayo/
+
 # Entorno local
 .env
 .env.*

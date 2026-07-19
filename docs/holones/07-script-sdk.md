@@ -34,8 +34,10 @@ Ceguera ascendente: no concibe qué vendrá después del método.
 `WEBS/`, `plan/`, ensayo `TEST-SWARM/`.
 **Skills-library:** hermano `S_SDK-skills-library` (skills marco-agnósticos;
 DE-I3 / DE-I7).
-**Pack TEST-SWARM servido en la web:** `<pendiente>` — WP-I33 (no
-implementado en esta ficha; DA-4 de TEST-SWARM se honra allí).
+**Pack TEST-SWARM servido en la web:** [`/ensayo/`](/ensayo/) — espejo
+estático de `TEST-SWARM/docs/` (`npm run docs:sync-ensayo` en
+`docs:dev`/`docs:build`; DA-4 / WP-I33). Contenido doctrinal del pack no
+se reescribe aquí. Sitio en dominio Pages → `<pendiente I40>`.
 
 ## Roadmap
 
@@ -45,8 +47,8 @@ Olas I0–I2 cerradas en plan; I3 en curso; I4+ abiertas.
 | Ola | Estado | Nota |
 | --- | ------ | ---- |
 | I0–I2 — Base / skills | ✅ | Scaffold, skills, separación datos (plan) |
-| I3 — Contenido holones | 🔶 | I31∥I32 en curso; I33 ⬜ (pack servido) |
+| I3 — Contenido holones | 🔶 | I31∥I32 ✅; pack en [`/ensayo/`](/ensayo/) (I33) |
 | I4 — Publicación | ⬜ | I40 Pages/DNS; I41 C8 del sitio vivo |
 | I5 — Estabilización zeus | ⬜ | Canal ENTREGA/vigía; jamás directa |
 | I6 — Activación holones | ⬜ | I60/I61 mediada; I62 no toca roles zeus |
-| Pack TEST-SWARM en docs | ⬜ | I33 — enlace `<pendiente>` hasta ✅ |
+| Pack TEST-SWARM en docs | ✅ | `/ensayo/` servido; Pages dominio `<pendiente I40>` |

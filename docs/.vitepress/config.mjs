@@ -37,7 +37,8 @@ export default defineConfig({
   lang: 'es',
   base: resolveDocsBase(),
   cleanUrls: true,
-  ignoreDeadLinks: false,
+  // /ensayo/ es estático (docs/public/ensayo ← sync TEST-SWARM/docs; WP-I33)
+  ignoreDeadLinks: [/\/ensayo/],
   themeConfig: {
     nav: [
       { text: 'Portada', link: '/' },
