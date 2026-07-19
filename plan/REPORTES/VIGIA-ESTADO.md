@@ -80,7 +80,10 @@ post-prune) ✅ · favicon raíz **200** tras redeploy ✅.
 
 - «esperando: micro-enmascarado del token en reporte U140 (zeus, vía
   custodio) → re-verif final vigía → ✅ I52 del orquestador».
-- I50 sigue ⬜ sin GO (tras cierre real de I52).
+- «esperando: §Nota ciega Sprint 3 (I50) — GO aparte recibido; prep
+  `ENTREGA-VIGIA-2026-07-19c-sprint3-GO-prep.md`; **no inventar**
+  frágiles; I50 🔶 entregando; I51 ⬜».
+- ~~I50 sin GO~~ — **cerrado** (GO aparte 2026-07-19; queda redacción).
 - ~~«esperando: **WP-I27**»~~ — **cerrado** (I27 ✅ · v0.2 + Pages +
   higiene).
 - ~~WP-I40 / I41~~ — **cerrados** (ops + acta C8 ✅).

@@ -147,7 +147,13 @@ bloquea WP-D31 de aquel mundo, no bloquea este plan.)*
   Entregable = §Nota ciega
   `plan/REPORTES/ENTREGA-VIGIA-2026-07-19b-scrub-rutas.md` (canal
   ENTREGA/vigía; ceguera 07→01). Zeus aplica micro-WP propio; CA I52
-  abierto hasta merge + re-verificación vigía. **I52 ≠ I50** (I52 = F6
-  scrub; I50 = Sprint 3). **I50/I51** sin GO (no arrancar). **I152 no
-  existe.** I27 ✅ / I41 ✅ (sin workers vivos que bloqueen la entrega).
+  abierto hasta merge U141 + re-verificación vigía. **I52 ≠ I50** (I52 =
+  F6 scrub; I50 = Sprint 3). **I152 no existe.** I27 ✅ / I41 ✅.
+- ✅ **GO I50 aparte** (usuario/custodio · 2026-07-19) — **WP-I50** 🔶
+  entregando en paralelo a I52 residual. Autoriza redactar/entregar
+  Sprint 3 (frágiles restantes + oferta skills v0.2 registry). **§Nota
+  ciega aún no redactada** — prep
+  `plan/REPORTES/ENTREGA-VIGIA-2026-07-19c-sprint3-GO-prep.md`. No
+  inventar contenido técnico; no marcar I50 ✅; **I51 sigue ⬜**. Zeus:
+  recepción/triage U142+ (sin GO de implementación por ítem hasta nota).
 - I41 ✅ (acta C8); I27 ✅ (v0.2); estación/vigilante como insumo.

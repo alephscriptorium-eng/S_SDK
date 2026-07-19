@@ -381,22 +381,35 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   `plan/REPORTES/BRIEF-WP-I52-entrega-scrub-rutas.md`.
   **GO I5 · 2026-07-19:** gate abierto. Entregable 07 = §Nota (§Lectura
   interna no sale). Custodio entrega al orquestador zeus; zeus aplica
-  micro-WP propio (scrub por clase). **Independiente de I50** (I50 sigue
-  ⬜). CA abierto hasta merge zeus + re-verificación vigía.
-  **Gate (2026-07-19):** zeus U140 mergeado (tip merge `32e5124` / WP tip `465ba99` · main Z_SDK `0e604ae`); esperando re-verif vigía. **I52 sigue 🔶** (no cerrar aquí).
+  micro-WP propio (scrub por clase). **Independiente de I50** (I50 ahora
+  🔶 con GO aparte; §Nota Sprint 3 pendiente). CA abierto hasta merge
+  zeus + re-verificación vigía.
+  **Gate (2026-07-19):** zeus U140 mergeado (tip merge `32e5124` / WP tip
+  `465ba99` · main Z_SDK `0e604ae`); re-verif vigía: rutas absolutas = 0,
+  holón/holarquía = 0, 8 ficheros limpios — **PERO** residual: reporte
+  U140 cita el token en claro en evidencia grep. **Residual = micro zeus
+  WP-U141** (enmascarar token en
+  `plan/REPORTES/WP-U140-scrub-rutas-locales.md`; CA grep token = 0
+  incluido el reporte). **I52 sigue 🔶** (no cerrar hasta merge U141 +
+  re-verif vigía).
   **NO worker SCRIPT_SDK** de implementación (ceguera). I27 ✅ (ya no
   compite).
-  **CA:** grep de rutas absolutas locales en main de zeus = 0 (por clase);
-  re-verificado por el vigía tras su merge; regla «entregas sin rutas»
+  **CA:** grep de rutas absolutas locales en main de zeus = 0 (por clase)
+  **y** grep del token = 0 en todo el árbol zeus (incl. reporte U140);
+  re-verificado por el vigía tras merge U141; regla «entregas sin rutas»
   cosida al skill (WP-I27, regla 12).
 
-- ⬜ **WP-I50 · ENTREGA Sprint 3 a zeus** — nota en idioma de zeus con:
+- 🔶 **WP-I50 · ENTREGA Sprint 3 a zeus** — nota en idioma de zeus con:
   frágiles restantes de SUS repos (#1 CNAME, #2 guard de base, #5 dist/
   gitignoreado en library, #4 coherencia npm ci, economía CI de A-13, #7
   gap de paths) + **oferta del paquete público de skills** como recurso del
   registry (blind-safe: un paquete público más). **Distinto de I52** (no
-  incluye el scrub F6). GO del custodio **aparte** antes de entregar; en
-  quietud; cruzada con las colas vivas del orquestador.
+  incluye el scrub F6). **GO aparte · 2026-07-19** (usuario/custodio;
+  paralelo a I52 residual U141). Estado: **🔶 entregando** — prep en
+  `plan/REPORTES/ENTREGA-VIGIA-2026-07-19c-sprint3-GO-prep.md` + brief
+  `BRIEF-WP-I50-entrega-sprint3.md`. **§Nota ciega aún NO redactada**
+  (no inventar contenido técnico; no marcar «entregada a zeus» hasta
+  §Nota + archivo en zeus). Zeus abre recepción/triage propio (U142+).
   **CA:** prueba de ceguera grep = 0; no duplica colas de zeus.
 
 - ⬜ **WP-I51 · Verificación vigía del sprint** — con el skill `vigilancia`
@@ -436,8 +449,8 @@ Dentro de I2 el orden es: I20 → (I21∥I22∥I23) → I24 (separación) → I2
 apoyar la fixture) y es donde se corrige el error fundamental DS-5.
 Dentro de I3: I30 → (I31∥I32) → I33. Tras I40 ✅: lote **I41 ∥ I27**
 ambos ✅ (2026-07-19). **I28 ✅** (ola housekeeping V4+V5+V6 cerrada).
-**GO I5** (2026-07-19): **I52 🔶** (nota F6, canal ENTREGA; sin worker
-raíz) → I50 ⬜ → I51 ⬜ (I50/I51 con GO aparte).
+**GO I5** (2026-07-19): **I52 🔶** (nota F6; residual U141 + re-verif) →
+**I50 🔶** (GO aparte 2026-07-19; §Nota pendiente) → I51 ⬜.
 
 ## Verificación end-to-end del conjunto
 
