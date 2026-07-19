@@ -4,6 +4,9 @@ ADDENDA/
 HANDOFF_*
 /HIPOTESIS.md
 
+# WP-I24 / DE-I11 — notas de sesión hacia mundos ajenos (dato, no núcleo)
+CONECTOR_*
+
 # Dependencias y artefactos Node
 node_modules/
 npm-debug.log*
