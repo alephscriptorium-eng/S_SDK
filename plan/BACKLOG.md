@@ -135,7 +135,7 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
 > Corrige el error fundamental (DS-5): la vigilancia de zeus es DATO y no
 > pertenece a este repo. Sin remotos aún → se **simula** el ciclo en local.
 
-- 🔶 **WP-I20 · Scaffold del repo skills-library** — repo local
+- ✅ **WP-I20 · Scaffold del repo skills-library** — repo local
   `S_SDK-skills-library` (checkout hermano; remote lo **crea el swarm** vía
   `gh repo create` — DE-I7): package.json (`@alephscript/skills-scriptorium`
   o scope que fije el custodio), layout estándar de skills (un dir por skill:
@@ -145,9 +145,14 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   `skills.s-sdk.escrivivir.co` — DE-I9). Parejo pleno a la games-library.
   **CA:** formato estándar validado; `npm pack` + install en dir temporal
   (simulación de bajada); docs de la library compilan.
-  **Asignado 🔶 2026-07-19** · worker `worker-i20` · brief
-  `plan/REPORTES/BRIEF-WP-I20-skills-library-scaffold.md`.
-  Depende de ✅ I11 (merge local `d61d9a1`); I21–I26 aún ⬜.
+  **Aceptado ✅ 2026-07-19** (orquestador): CA re-verificado en
+  `C:\Users\aleph\S_SDK-skills-library` @ `88217dd` — layout
+  `_plantilla` + package + instancias + docs/CNAME DE-I9; `npm pack` +
+  install temp EXIT=0; `docs:build` EXIT=0; remote gh PUBLIC (DE-I7);
+  ceguera plantilla delta 5 = 0. Reporte rama
+  `wp/i20-skills-library-scaffold` @ `d831e6d` (+ commit revisión);
+  sin push raíz. Merge reporte → main + default-branch skills-library
+  → main = ops/padre. Cierra arranque ola I2; siguiente I21∥I22∥I23.
 
 - ⬜ **WP-I21 · Skill `swarm-orquestacion`** *(abstraer+mejorar)* —
   protocolo canónico (`TEST-SWARM/plan/roles/`: ORQUESTADOR, WORKER,
