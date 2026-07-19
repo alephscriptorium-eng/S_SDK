@@ -375,6 +375,24 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   enlace). Reporte `plan/REPORTES/WP-I41-verificacion-sitio-vivo.md`.
   Worktree retirado. No bloquea por I27.
 
+- 🔶 **WP-I42 · Refresh del sitio: ficha 07 al día + retiro de
+  `/ensayo/`** *(orquestador · 2026-07-20 · DE-I15)* — el sitio vivo
+  quedó **congelado** en la foto del 2026-07-19 (último deploy `Docs`
+  `29702716725`, I28): la ficha 07 presentaba I3 en curso / I4–I6 abiertas
+  (ya cerradas) y se autocontradecía en I40. Causa: los cierres I29–I62
+  tocaron solo `plan/**`, y el workflow filtra `paths: docs/**`
+  (**frágil #7**). Además `4eadc84` borró `TEST-SWARM/` dejando
+  `docs:build` **roto** (`sync-ensayo.mjs` → `exit 1`). Este WP asienta
+  DE-I15 y refresca: (a) ficha 07 → roadmap **I0–I6 ✅** + incoherencia
+  I40 corregida + `/ensayo/` fuera; (b) retirado todo el cableado
+  `/ensayo/` (sync-ensayo, wiring, refs `index`/`config`/`theme`);
+  (c) `docs:build` verde re-verificado sin `TEST-SWARM`.
+  **CA:** `docs:build` EXIT=0 sin `TEST-SWARM`; grep `ensayo|TEST-SWARM`
+  en `docs/` = 0; ficha 07 refleja el BACKLOG (I0–I6 ✅) sin promesas sin
+  sello; C8 del sitio vivo tras el disparo del pipeline (redeploy).
+  **Disparo del pipeline (gate DE-I13):** push raíz / `workflow_dispatch`
+  tras validación orquestador + vigilante — **preparado, no disparado**.
+
 ## Ola I5 — Estabilización zeus (vía canal ENTREGA/vigía — jamás directa)
 
 > **GO I5 · 2026-07-19 (custodio):** cola abierta. Orden real:

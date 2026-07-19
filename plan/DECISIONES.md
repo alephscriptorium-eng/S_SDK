@@ -178,3 +178,17 @@ bloquea WP-D31 de aquel mundo, no bloquea este plan.)*
   Ejecuta el mundo aleph (su orquestador, micro-WP propio); entrega
   enmascarada del vigía (reglas 12/13/14 de serie). Consecuencia: WP-I63
   en Ola I6; PARTES/ sigue gitignorado (local-only, sin scrub).
+
+- **DE-I15 · Retiro de `TEST-SWARM/` del árbol; DA-4 revertida; `/ensayo/`
+  fuera del sitio** *(custodio 2026-07-20).* El pack del ensayo
+  (`TEST-SWARM/`) se retira del árbol de SCRIPT_SDK (borrado en `4eadc84`).
+  Fundamento: el **método** del ensayo ya vive en el skill
+  `swarm-orquestacion@0.3.0` (roles, RE-PLAN, ejes-ca, ciclo, reglas). La
+  **narrativa teatral** (GUION, NOTAS, ACTA-ENSAYO/V2, fanzine) **no** está
+  en el skill; se preserva en el **historial git** (parent de `4eadc84`),
+  no en el árbol vivo. Revierte **DA-4 / DE-I4** (el pack ya no se sirve).
+  Consecuencia: se retira `/ensayo/` del sitio — `scripts/sync-ensayo.mjs`
+  borrado, wiring `docs:sync-ensayo` fuera de `docs:build`/`docs:dev`,
+  referencias en `index.md`/`config.mjs`/`theme/index.js`/ficha 07
+  retiradas; **`docs:build` verde re-verificado** sin `TEST-SWARM`. WP-I33
+  queda como histórico (obra revertida). Se ejecuta en **WP-I42**.

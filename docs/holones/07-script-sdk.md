@@ -31,24 +31,26 @@ Ceguera ascendente: no concibe qué vendrá después del método.
 ## Encarnación técnica
 
 **Ancla:** este workspace (`SCRIPT_SDK`) — `DEVOPS/`, `docs/`, `HOLONES/`,
-`WEBS/`, `plan/`, ensayo `TEST-SWARM/`.
+`WEBS/`, `plan/`.
 **Skills-library:** hermano `S_SDK-skills-library` (skills marco-agnósticos;
-DE-I3 / DE-I7).
-**Pack TEST-SWARM servido en la web:** [`/ensayo/`](/ensayo/) — espejo
-estático de `TEST-SWARM/docs/` (`npm run docs:sync-ensayo` en
-`docs:dev`/`docs:build`; DA-4 / WP-I33). Contenido doctrinal del pack no
-se reescribe aquí. Sitio vivo: `https://s-sdk.escrivivir.co` (I40 ✅).
+DE-I3 / DE-I7) — `swarm-orquestacion`, `site-web`, `vigilancia`, publicados
+como `@alephscript/skills-scriptorium` en el registry propio (v0.3.0).
+**Sitio vivo:** `https://s-sdk.escrivivir.co` (I40 ✅; acta C8 en I41).
 
 ## Roadmap
 
-Formato uniforme. Estados del BACKLOG de este holón (lectura 2026-07-19).
-Olas I0–I2 cerradas en plan; I3 en curso; I4+ abiertas.
+Formato uniforme. Estados del BACKLOG de este holón (lectura 2026-07-20).
+Olas I0–I6 cerradas en plan.
 
 | Ola | Estado | Nota |
 | --- | ------ | ---- |
-| I0–I2 — Base / skills | ✅ | Scaffold, skills, separación datos (plan) |
-| I3 — Contenido holones | 🔶 | I31∥I32 ✅; pack en [`/ensayo/`](/ensayo/) (I33) |
-| I4 — Publicación | ⬜ | I40 Pages/DNS; I41 C8 del sitio vivo |
-| I5 — Estabilización zeus | ⬜ | Canal ENTREGA/vigía; jamás directa |
-| I6 — Activación holones | ⬜ | I60/I61 mediada; I62 no toca roles zeus |
-| Pack TEST-SWARM en docs | ✅ | `/ensayo/` servido; dominio `s-sdk.escrivivir.co` (I40 ✅) |
+| I0 — Cimiento | ✅ | plan/, higiene, workspace, submodules mythos |
+| I1 — Máquina web | ✅ | VitePress + piel zine, docs.yml + CNAME, guía |
+| I2 — Protocolo → skill | ✅ | skills-library, 3 skills, separación datos (DS-5), publish |
+| I3 — Contenido holones | ✅ | portada + fichas 01–07 (I30–I33) |
+| I4 — Publicación | ✅ | sitio vivo Pages + DNS + HTTPS (I40); acta C8 (I41) |
+| I5 — Estabilización zeus | ✅ | vía canal ENTREGA / vigía; jamás directa (I50–I52) |
+| I6 — Activación holones | ✅ | emmanuel · aleph · zeus adoptan el skill (I60–I62) |
+
+Residual abierto: **WP-I63** (scrub de vocabulario en aleph, gate externo).
+Pendiente de tick del custodio: push del mundo aleph (I61).
