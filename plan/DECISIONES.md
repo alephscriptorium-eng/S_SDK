@@ -158,8 +158,9 @@ bloquea WP-D31 de aquel mundo, no bloquea este plan.)*
   `BRIEF-WP-I51-verificacion-sprint3.md`. **NO I6.**
 - I41 ✅ (acta C8); I27 ✅ (v0.2); I52 ✅; estación/vigilante como insumo.
 - ✅ **GO I6** (custodio · 2026-07-19) — ola de activación en holones ajenos.
-  I60 ya ✅ (no reabrir). Lote arranque: **I61 🔶** (aleph-scriptorium;
-  skill `@0.3.0`; regla 13 ejecutor fresco; canal custodio media). **I62**
-  queda ⬜ ofrecido / espera decisión del orquestador de zeus (Eje V:
-  ofrecer, no imponer; no worker que edite `plan/roles/` de zeus). Brief:
-  `BRIEF-WP-I61-activacion-aleph.md`.
+  I60 ✅. **I61 ✅** (2026-07-20 · aleph @ `adf297e` sin push — tick
+  custodio/orquestador aleph). **I62** queda ⬜ ofrecido / espera decisión
+  del orquestador de zeus (Eje V: ofrecer, no imponer; no worker). Ola I6:
+  **cierre parcial**. Acta: `WP-I61-activacion-aleph.md`.
+- ✅ **I61 aceptado** (orquestador · 2026-07-20) — CA1–CA6 OK; skill
+  `@0.3.0`; S14 intacto; push remoto aleph pendiente canal media.

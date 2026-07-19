@@ -456,15 +456,23 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   acta sin sección «Revisión del orquestador»; `REPORTES/PLANTILLA.md` sin
   dedupear. Reporte: `emmanuel-sdk/plan/REPORTES/WP-I60-activacion-skill.md`.
 
-- 🔶 **WP-I61 · aleph-scriptorium (05–06)** *(GO custodio · ola I6 · 2026-07-19)*
-  — ídem sobre su `plan/roles/`; conserva PARTES/ y RECURSOS/ como calibración
-  local. Contrato Eje IV ya validado por I60; este WP es el **extra** que el
-  custodio pide ahora. **Regla 13:** ejecutor fresco (solo skill @ 0.3.0).
-  Sus WPs vivos (S14 🔶) no se interrumpen. Canal: custodio media (PRACTICAS
-  delta 1). Brief: `plan/REPORTES/BRIEF-WP-I61-activacion-aleph.md`.
-  Repo: `C:\Users\aleph\OASIS\aleph-scriptorium` · `ALCANCE_DIFF = plan/`.
+- ✅ **WP-I61 · aleph-scriptorium (05–06)** *(aceptado · orquestador · 2026-07-20 ·
+  ola I6)* — ídem sobre su `plan/roles/`; conserva PARTES/ y RECURSOS/ como
+  calibración local. Contrato Eje IV ya validado por I60; este WP es el
+  **extra** que el custodio pidió. **Regla 13:** ejecutor fresco @ 0.3.0.
+  Sus WPs vivos (S14 🔶) no se interrumpieron. Canal: custodio media
+  (PRACTICAS delta 1). Brief: `plan/REPORTES/BRIEF-WP-I61-activacion-aleph.md`.
+  Repo: `aleph-scriptorium` · rama `wp/i61-activacion-skill` @ `adf297e`
+  (**sin push** — pendiente custodio/orquestador aleph).
   **CA:** dedup + `npm view` @0.3.0 (C8) + calibración local visible +
   alcance solo `plan/` + ceguera historial (regla 14) + no tocar cola S14.
+  **Aceptado ✅ 2026-07-20** (orquestador): CA1–CA6 re-verificados —
+  `plan/roles/` = solo README @`skills-scriptorium@0.3.0` (5 prompts
+  `git rm`); C8 OK; calibración (submodules, asimetría, PARTES/RECURSOS,
+  ARCHIVO/sala) visible; diff solo `plan/`; S14 intacto; ceguera: sin fuga
+  marco 07; `zeus-sdk` en PRACTICAS = preexistente local (menor diferido).
+  Acta: `plan/REPORTES/WP-I61-activacion-aleph.md` (ref. acta worker en
+  aleph @ `adf297e`).
 
 - ⬜ **WP-I62 · zeus (01)** *(ofrecido / espera decisión · Eje V)* — su
   `plan/roles/` es el ancestro canónico y su swarm está vivo: **NO se toca**;
@@ -476,7 +484,8 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
 - **Cierre de ola (Eje IV):** **cumplido por I60** — emmanuel (segundo mundo,
   primer consumidor ajeno) valida el contrato. Backtracking al skill
   (reglas 13/14) = **WP-I29 ✅** (`@0.3.0` · skills `main` @ `5de379b`).
-  **GO I6 (2026-07-19):** abre extra **I61 🔶**; I62 sigue ofrecido.
+  **Extra I61 ✅** (2026-07-20). **I62** sigue ⬜ ofrecido.
+  → **ola I6: cierre parcial** (I60✅ I61✅ I62⬜).
 
 ---
 
@@ -493,9 +502,9 @@ ambos ✅ (2026-07-19). **I28 ✅** (ola housekeeping V4+V5+V6 cerrada).
 **GO I5** (2026-07-19): **I52 ✅** → **I50 ✅** → **I51 ✅** — **ola I5
 cerrada** (re-verif formal acta WP-I51 @ tips `503b6b8`/`a25ca08`).
 Residual I2.5: **I29 ✅** (skills v0.3.0 / reglas 13–14 · `main` @
-`5de379b`). **GO I6** (custodio · 2026-07-19): lote arranque **I61 🔶**
-(I60 ya ✅; I62 ⬜ ofrecido / espera decisión — no worker). Paralelismo
-I60∥I61: N/A (I60 cerrado).
+`5de379b`). **GO I6** (custodio · 2026-07-19): lote **I61** → ✅ 2026-07-20
+(I60✅ I61✅; I62 ⬜ ofrecido / espera decisión — no worker). Ola I6:
+**cierre parcial**.
 
 ## Verificación end-to-end del conjunto
 
