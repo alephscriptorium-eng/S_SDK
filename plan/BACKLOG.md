@@ -375,7 +375,7 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   enlace). Reporte `plan/REPORTES/WP-I41-verificacion-sitio-vivo.md`.
   Worktree retirado. No bloquea por I27.
 
-- 🔶 **WP-I42 · Refresh del sitio: ficha 07 al día + retiro de
+- ✅ **WP-I42 · Refresh del sitio: ficha 07 al día + retiro de
   `/ensayo/`** *(orquestador · 2026-07-20 · DE-I15)* — el sitio vivo
   quedó **congelado** en la foto del 2026-07-19 (último deploy `Docs`
   `29702716725`, I28): la ficha 07 presentaba I3 en curso / I4–I6 abiertas
@@ -390,8 +390,15 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   **CA:** `docs:build` EXIT=0 sin `TEST-SWARM`; grep `ensayo|TEST-SWARM`
   en `docs/` = 0; ficha 07 refleja el BACKLOG (I0–I6 ✅) sin promesas sin
   sello; C8 del sitio vivo tras el disparo del pipeline (redeploy).
-  **Disparo del pipeline (gate DE-I13):** push raíz / `workflow_dispatch`
-  tras validación orquestador + vigilante — **preparado, no disparado**.
+  **Aceptado ✅ 2026-07-20** (orquestador): validación DE-I13
+  orquestador + **vigilante PASS** (5 gates: build EXIT=0 · grep
+  `ensayo|TEST-SWARM` docs/ = 0 · backstage no trackeado · ceguera delta
+  0 fugas · ficha coherente con BACKLOG). Push `origin/main`
+  `7a72e2f..45a328d`; run `Docs` `29707476915` **success**. **C8 sitio
+  vivo:** ficha `/holones/07-script-sdk` = «Olas I0–I6 cerradas» +
+  «lectura 2026-07-20»; `/ensayo/` → **404**; portada sin «Ensayo
+  TEST-SWARM». Commits `4eadc84` (retiro TEST-SWARM) · `18c5fc3`
+  (trim `.gitignore`, DE-I16) · `75a585d` (WP-I42) · `45a328d` (DE-I16).
 
 ## Ola I5 — Estabilización zeus (vía canal ENTREGA/vigía — jamás directa)
 
