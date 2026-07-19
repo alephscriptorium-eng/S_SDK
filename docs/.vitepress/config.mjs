@@ -32,6 +32,18 @@ export default defineConfig({
     nav: [
       { text: 'Portada', link: '/' },
       {
+        text: 'Holones',
+        items: [
+          // 01 — Mythos: territorio I31 (añadir post-merge si falta)
+          { text: '02 — Logos', link: '/holones/02-logos' },
+          { text: '03 — Revelación', link: '/holones/03-revelacion' },
+          { text: '04 — Ilustración', link: '/holones/04-ilustracion' },
+          { text: '05 — Sospecha', link: '/holones/05-sospecha' },
+          { text: '06 — Posmodernidad', link: '/holones/06-posmodernidad' },
+          { text: '07 — SCRIPT_SDK', link: '/holones/07-script-sdk' }
+        ]
+      },
+      {
         text: 'Autoridades',
         items: [
           { text: '01 — Escrivivir.co', link: '/autoridades/01-escrivivir-co' },
@@ -44,6 +56,18 @@ export default defineConfig({
         text: 'SCRIPT_SDK',
         items: [
           { text: 'Portada', link: '/' }
+        ]
+      },
+      {
+        text: 'Holones',
+        items: [
+          // 01 — Mythos: territorio I31 (añadir post-merge si falta)
+          { text: '02 — Logos', link: '/holones/02-logos' },
+          { text: '03 — Revelación', link: '/holones/03-revelacion' },
+          { text: '04 — Ilustración', link: '/holones/04-ilustracion' },
+          { text: '05 — Sospecha', link: '/holones/05-sospecha' },
+          { text: '06 — Posmodernidad', link: '/holones/06-posmodernidad' },
+          { text: '07 — SCRIPT_SDK', link: '/holones/07-script-sdk' }
         ]
       },
       {
