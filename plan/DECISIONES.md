@@ -164,3 +164,15 @@ bloquea WP-D31 de aquel mundo, no bloquea este plan.)*
   **cierre parcial**. Acta: `WP-I61-activacion-aleph.md`.
 - ✅ **I61 aceptado** (orquestador · 2026-07-20) — CA1–CA6 OK; skill
   `@0.3.0`; S14 intacto; push remoto aleph pendiente canal media.
+
+- **DE-I14 · F9 = scrub tipo U140 en aleph-scriptorium — sin exención
+  casa-madre** *(custodio 2026-07-20).* El árbol público de aleph
+  (`escrivivir-co/aleph-scriptorium`, rama `integration/beta/scriptorium`)
+  lleva vocabulario del marco en su `plan/DECISIONES.md` (F9, preexistente
+  a I61). El custodio decide: **scrub de árbol tipo U140** — mismo estándar
+  que zeus (F6): dieta del árbol servido; el residual de historial se asume
+  (paridad con zeus, cuyos commits pre-U140 también lo conservan; el
+  rewrite estilo emmanuel solo fue viable por ser repo de 2 commits).
+  Ejecuta el mundo aleph (su orquestador, micro-WP propio); entrega
+  enmascarada del vigía (reglas 12/13/14 de serie). Consecuencia: WP-I63
+  en Ola I6; PARTES/ sigue gitignorado (local-only, sin scrub).

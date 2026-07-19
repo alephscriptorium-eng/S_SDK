@@ -489,6 +489,17 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
 
 ---
 
+- ⬜ **WP-I63 · Scrub de vocabulario del marco en aleph (DE-I14)** —
+  F9 preexistente: su `plan/DECISIONES.md` público lleva términos del
+  marco. Scrub tipo U140 (árbol, no historial — residual asumido en
+  DE-I14). Lo ejecuta el mundo aleph como micro-WP propio; entrega
+  enmascarada lista: `plan/REPORTES/ENTREGA-VIGIA-2026-07-20-scrub-aleph.md`
+  (patrones partidos, CA por clase). Cabe en el mismo push pendiente de
+  I61 (tick 403 del custodio).
+  **CA:** grep por clase (patrón unido) = 0 en su árbol trackeado;
+  evidencia con patrones partidos; diff solo `plan/`; S14 🔶 intacto;
+  re-verif vigía tras su push.
+
 ## Orden y paralelismo
 
 I0 → I1 ∥ I2 → I3 → I4 · I5 tras I2 (la nota ofrece el paquete ya
