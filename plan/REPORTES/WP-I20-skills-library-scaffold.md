@@ -142,4 +142,36 @@ Ninguno. CA en verde; remote público creado y empujado.
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** · 2026-07-19 · orquestador holón 07 (modo REVISIÓN)
+
+### CA verificados (canal real)
+
+1. **Formato skill** — `C:\Users\aleph\S_SDK-skills-library` @ `88217dd`:
+   `skills/_plantilla/SKILL.md` con frontmatter `name`/`description`; árbol
+   `reference/` · `examples/` · `scripts/`; `instancias/` vacía (+ README);
+   `package.json` `@alephscript/skills-scriptorium@0.1.0` (`private:false`,
+   engines ≥22, `docs:dev`/`docs:build`, `files` = skills+README+LICENSE);
+   `docs/public/CNAME` = `skills.s-sdk.escrivivir.co` (DE-I9);
+   `.github/workflows/docs.yml` export I11 (npm ci, paths docs/**, wp/**,
+   concurrency, deploy solo main).
+2. **`npm pack` + install temp** — re-ejecutado EXIT=0; tarball 8 files;
+   `SKILL.md` presente bajo `node_modules/@alephscript/skills-scriptorium/`.
+3. **`npm run docs:build`** — re-ejecutado EXIT=0 (vitepress 1.6.4).
+4. **Remote DE-I7** — `gh repo view`:
+   https://github.com/alephscriptorium-eng/S_SDK-skills-library PUBLIC;
+   `main` y `wp/i20-skills-library-scaffold` @ `88217dd`.
+5. **Ceguera plantilla (PRACTICAS delta 5)** —
+   `rg 'zeus|holón|holarquía|SCRIPT_SDK|S_SDK|juntura' skills/` → 0.
+   Nota no bloqueante: `package.json` `repository.url` nombra el repo
+   `S_SDK-skills-library` (DE-I3); excepción de metadatos de repo, no de
+   cara de skill. README/LICENSE empaquetados = 0.
+6. **Reporte SCRIPT_SDK** — rama `wp/i20-skills-library-scaffold` @
+   `d831e6d`; diff solo el reporte; sin upstream → sin push raíz.
+
+### Merge (instrucción al padre — no ejecutado aquí)
+
+1. Merge reporte `wp/i20-skills-library-scaffold` → `main` en SCRIPT_SDK
+   (sin push raíz).
+2. Ops skills-library: `gh repo edit … --default-branch main` (hoy default
+   = rama wp; `main` ya existe @ mismo SHA).
+3. Emitir briefs paralelos **I21 ∥ I22 ∥ I23**.
