@@ -159,7 +159,8 @@ mención `0.2.0`.
 
 ```text
 skills-library: 6180f9b feat(skills): swarm-orquestacion v0.2.0 + scrub F7 + notes
-SCRIPT_SDK:     (tip worktree — fix custom.css + este reporte)
+SCRIPT_SDK:     5d7b211 fix(docs): procedencia custom.css sin path host
+SCRIPT_SDK:     8699f4f docs(plan): reporte WP-I27 skills v0.2 + Pages + higiene
 ```
 
 ## Auto-revisión (PRACTICAS §4 + deltas holón 07)
