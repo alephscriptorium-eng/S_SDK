@@ -1,43 +1,40 @@
-# HANDOFF — rearranque del swarm (post-GO 2026-07-19 · I40 cerrado)
+# HANDOFF — rearranque (post-GO I5 · 2026-07-19)
 
 De: orquestador · Para: workers / vigía / custodio.
-Sustituye el handoff post-intervención (ciclo I3+I40 ops cumplido).
+Sustituye el handoff post-I40 (ciclo I41 cerrado; GO I5 abierto).
 
 ## Estado vivo (orquestador · 2026-07-19)
 
-- **I40 ✅** — cierre formal. Pages+DNS+HTTPS **verificado por custodio /
-  estación · 2026-07-19**. Fuente: `plan/REPORTES/VIGIA-ESTADO.md`.
-  Acta C8 completa = **I41** (en curso).
-- **Lote paralelo vivo:** **WP-I41 ∥ WP-I27** (ambos 🔶; briefs emitidos).
+- **I40 ✅** · **I41 ✅** — sitio vivo + acta C8.
+- **I27 🔶** — skill v0.2 + Pages library + higiene (worker vivo;
+  worktree `../SCRIPT_SDK-wp-i27`). **No interrumpir.**
 - **Ola I3:** I30–I33 ✅ cerrada.
-- **Skills-library:** `main` @ `019a90b`; push OK (DE-I7). Pages library
-  404 / scrub / v0.2 → **I27**.
+- **GO I5 ✅** — **I52 🔶** (nota F6 scrub rutas). Entregable = §Nota
+  ciega `ENTREGA-VIGIA-2026-07-19b-scrub-rutas.md`. Canal ENTREGA/vigía;
+  **sin worker SCRIPT_SDK** (ceguera 07→01 — no tocar zeus). Zeus aplica
+  micro-WP propio. CA I52 = grep clase rutas absolutas = 0 en main zeus
+  + re-verif vigía tras merge.
+- **I50 ⬜ · I51 ⬜** — sin GO (no arrancar). I52 es **independiente** de
+  I50 (solo nota F6; no es Sprint 3). **I152 no existe.**
 
-## Briefs del lote
+## Briefs vivos
 
-| WP | Brief | Worktree |
+| WP | Brief | Acción padre |
 |---|---|---|
-| I41 | `plan/REPORTES/BRIEF-WP-I41-verificacion-sitio-vivo.md` | `../SCRIPT_SDK-wp-i41` |
-| I27 | `plan/REPORTES/BRIEF-WP-I27-skills-v02-pages-higiene.md` | `../SCRIPT_SDK-wp-i27` + hermano skills-library |
-
-## Notas no bloqueantes (NO arrancar aún)
-
-- ⏳ Pages skills-library — cubierto por **I27** (en curso).
-- ⏳ Leak F6 en remoto zeus — nota **I52** lista
-  (`ENTREGA-VIGIA-2026-07-19b-scrub-rutas.md`); **listo cuando GO I5**.
-  No implementar I50/I52 ahora.
-- I41 puede usar estación del custodio (`VIGIA-ESTADO.md`) como insumo.
+| I27 | `plan/REPORTES/BRIEF-WP-I27-skills-v02-pages-higiene.md` | Worker vivo — no interrumpir |
+| I52 | `plan/REPORTES/BRIEF-WP-I52-entrega-scrub-rutas.md` | **NO lanzar worker** — custodio entrega §Nota; vigía tras merge zeus |
 
 ## Gates externos declarados (nunca silencio)
 
-- «esperando: entrega I52 de custodio a zeus» — **listo cuando GO I5**.
-- ~~«esperando: ops Pages+DNS raíz»~~ — **cerrado** (I40 ✅ · custodio/
-  estación 2026-07-19).
-- «esperando: WP-I41 acta C8 sitio vivo» + «esperando: WP-I27 v0.2/
-  Pages library».
+- «esperando: custodio entrega §Nota I52 → zeus» + «esperando: merge
+  micro-WP zeus + re-verif vigía (CA I52)».
+- ~~«esperando: ops Pages+DNS raíz»~~ — **cerrado** (I40 ✅).
+- ~~«esperando: WP-I41 acta C8»~~ — **cerrado** (I41 ✅).
+- «esperando: WP-I27 v0.2 / Pages library».
 
 ## Lecturas
 
 1. `plan/RETRO-2026-07-19-metodo.md` — 12 reglas (I27).
-2. `plan/REPORTES/VIGIA-ESTADO.md` — estación (insumo I41; V1–V3 → I27).
-3. BACKLOG: I40 ✅ · I41 🔶 · I27 🔶 · I52 ⬜ (GO I5).
+2. `plan/REPORTES/VIGIA-ESTADO.md` — estación.
+3. BACKLOG: I41 ✅ · I27 🔶 · I52 🔶 (GO I5) · I50/I51 ⬜.
+4. Ceguera: grep marco en nota I52 = 0; jamás editar HOLONES/zeus.

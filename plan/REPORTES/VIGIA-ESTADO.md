@@ -38,14 +38,14 @@ backstage (`VIGILANCIA/ESTACION.md`, gitignored). Actas de este mundo:
 
 ## Gates externos vivos (nunca silencio)
 
-- «esperando: entrega **I52** de custodio a zeus» — nota lista
-  (`ENTREGA-VIGIA-2026-07-19b-scrub-rutas.md`); estado del leak en el
-  remoto de zeus `⏳ sin re-verificar` en esta ronda.
+- **GO I5 abierto (2026-07-19):** «esperando: custodio entrega §Nota
+  **I52** → zeus» (`ENTREGA-VIGIA-2026-07-19b-scrub-rutas.md`) +
+  «esperando: merge micro-WP zeus + re-verif vigía (CA I52 · grep clase
+  rutas absolutas = 0)». Leak remoto zeus `⏳ sin re-verificar` hasta
+  ese merge. I52 ≠ I50; I152 no existe.
 - «esperando: **WP-I27**» (skill v0.2 + scrub «zeus» library + Pages
   library — estado Pages library `⏳ sin re-verificar` en esta ronda).
-- WP-I40: Pages/DNS/HTTPS del raíz **hechos y verificados** (arriba);
-  falta solo el cierre formal del WP con acta (I41: verificación completa
-  + acta — la evidencia de esta estación le sirve de insumo).
+- ~~WP-I40 / I41~~ — **cerrados** (ops + acta C8 ✅).
 
 ## Rutina al retomar
 

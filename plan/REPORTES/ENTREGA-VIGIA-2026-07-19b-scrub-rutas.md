@@ -45,6 +45,9 @@ re-verifica con grep sobre su main y pide que el fix cubra la CLASE
 
 ---
 
-Registro: preparada por la intervención de estabilización 2026-07-19;
-espera entrega del custodio en quietud del swarm de zeus. El vigía
-re-verifica el CA tras el merge (C8: grep real sobre su main).
+Registro: preparada por la intervención de estabilización 2026-07-19.
+**GO I5 · 2026-07-19** — cola abierta; §Nota **autorizada** para entrega
+custodio → orquestador zeus (solo §Nota; sin §Lectura interna). Zeus
+aplica micro-WP propio (scrub por clase). El vigía re-verifica el CA
+tras el merge (C8: grep real sobre main de zeus). WP-I52 🔶 en BACKLOG;
+independiente de I50.

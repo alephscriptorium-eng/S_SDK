@@ -140,9 +140,14 @@ I26-proc/I40 cerrados por DE-I11/I12/I13. I40 ops cerradas formalmente
 *(Heredada, de TEST-SWARM: DA-6 «la puerta única» sigue abierta allí;
 bloquea WP-D31 de aquel mundo, no bloquea este plan.)*
 
-## Notas no bloqueantes (GO 2026-07-19 — no arrancar)
+## Notas no bloqueantes (GO 2026-07-19)
 
 - ⏳ Pages `skills.s-sdk.escrivivir.co` — cubierto por **WP-I27**.
-- ⏳ Leak F6 remoto zeus — **WP-I52** lista para entrega; **listo cuando
-  GO I5**. No I50/I52 hasta ese GO.
-- I41 usa estación/vigilante del custodio como insumo (no inventar).
+- ✅ **GO I5** (custodio · 2026-07-19) — cola **WP-I52** 🔶 abierta.
+  Entregable = §Nota ciega
+  `plan/REPORTES/ENTREGA-VIGIA-2026-07-19b-scrub-rutas.md` (canal
+  ENTREGA/vigía; ceguera 07→01). Zeus aplica micro-WP propio; CA I52
+  abierto hasta merge + re-verificación vigía. **I52 ≠ I50** (I52 = F6
+  scrub; I50 = Sprint 3). **I50/I51** sin GO (no arrancar). **I152 no
+  existe.**
+- I41 ✅ (acta C8); estación/vigilante como insumo ya consumido.
