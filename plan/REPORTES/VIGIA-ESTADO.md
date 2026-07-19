@@ -76,16 +76,31 @@ mismo ciclo: §Nota y reporte).
 I28 re-verificado de facto: 0 ramas `wp/*` en el hermano (local+remoto,
 post-prune) ✅ · favicon raíz **200** tras redeploy ✅.
 
+## Re-verificación FINAL I52 (2026-07-19 noche · U141 @ `d1eef8f`)
+
+Grep sobre TODO el árbol remoto de zeus: `SCRIPT_SDK` = **0** · clase
+rutas = **0** · `holón|holarquía` = **0**. U141 enmascaró su propia
+evidencia. **F6 muerto. Veredicto vigía: I52 PASS — sellable por el
+orquestador** (el ✅ es suyo).
+
+## Triaje I50 (2026-07-19 noche — «no inventar frágiles» pagó)
+
+4 de 6 ítems del plan original YA resueltos en los main vivos de zeus
+(#2 guard existe · #5 dist=0 · #7 documentado · A-13 aplicado). §Nota
+redactada con solo los 2 vivos (#1 CNAME ×2 repos · #4 npm ci consulta)
++ oferta del paquete v0.2 **solo por nombre npm** (sin dominios ni repos
+— el token `skills-library` no debe entrar al árbol de zeus). Ceguera
+grep = 0. Fichero: `ENTREGA-VIGIA-2026-07-19c-sprint3-GO-prep.md`.
+
 ## Gates externos vivos (nunca silencio)
 
 - ~~«esperando: micro-enmascarado del token en reporte U140 (zeus)»~~ —
-  **cerrado** (U141 ✅ merge `dcd7892` / tip `2fd869b` · main
-  `d1eef8f`).
-- «**U141 mergeado en zeus; esperando re-verif vigía**» — **vivo**.
-  I52 sigue 🔶 (NO ✅ hasta re-verif final del vigía).
-- «esperando: §Nota ciega Sprint 3 (I50) — GO aparte recibido; prep
-  `ENTREGA-VIGIA-2026-07-19c-sprint3-GO-prep.md`; **no inventar**
-  frágiles; I50 🔶 entregando; I51 ⬜».
+  **cerrado** (U141 ✅ · main `d1eef8f` · re-verif vigía PASS).
+- ~~«U141 mergeado; esperando re-verif vigía»~~ — **cerrado** (PASS
+  arriba). «esperando: ✅ I52 del orquestador» — trámite.
+- «esperando: custodio entrega §Nota Sprint 3 → zeus (U142)» — la §Nota
+  está LISTA (solo el bloque §Nota; la tabla de triaje NO sale). I51 ⬜
+  hasta que zeus aplique.
 - ~~I50 sin GO~~ — **cerrado** (GO aparte 2026-07-19; queda redacción).
 - ~~«esperando: **WP-I27**»~~ — **cerrado** (I27 ✅ · v0.2 + Pages +
   higiene).
