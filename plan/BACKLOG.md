@@ -128,6 +128,8 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
 
 ## Ola I2 — La abstracción: protocolo fuera de los datos (DE-I10)
 
+> **Ola I2 cerrada 2026-07-19** (I20–I26). IDLE → GO custodio para I3.
+
 > El eje de esta ola. Cada cuerpo (roles del swarm · VIGILANCIA+ADDENDA ·
 > WEBS) pasa por tres movimientos: **(a) abstraer** el método a skill
 > marco-agnóstico · **(b) mejorar** al extraer (coser las lecciones) ·
@@ -239,7 +241,7 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   tip WP `dfdb563`); SCRIPT_SDK `main` @ `1afef33` (merge reporte, sin push
   raíz). Worktree `SCRIPT_SDK-wp-i25` retirado. Siguiente: I26.
 
-- 🔶 **WP-I26 · Publicación del paquete** — el swarm publica al registry
+- ✅ **WP-I26 · Publicación del paquete** — el swarm publica al registry
   propio (DE-I7) con el **mismo procedimiento que zeus/Verdaccio**
   (DE-I12): auth basic `username` + `_password` (base64) + `email` +
   `always-auth` → `npm publish --registry https://npm.scriptorium.escrivivir.co`.
@@ -250,9 +252,18 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   tick de ops del custodio (no bloquea el resto).
   **CA:** `npm view` del paquete resuelve contra el canal real (C8, lección
   startpacks-404); semver inicial; release notes.
-  **En curso 🔶 2026-07-19** (orquestador): brief emitido
-  `plan/REPORTES/BRIEF-WP-I26-publicacion-paquete.md`. Base skills-library
-  `main` @ `7bd0ab7`. NO implementar desde orquestador — 1 worker.
+  **Aceptado ✅ 2026-07-19** (orquestador): canal real re-verificado —
+  `npm view @alephscript/skills-scriptorium
+  --registry=https://npm.scriptorium.escrivivir.co` → `0.1.0`;
+  skills-library `wp/i26-publicacion-paquete` @ `3734d01` (CHANGELOG,
+  `publish.yml` con `NPM_USERNAME`/`NPM_PASSWORD`, DE-I12 sin `_authToken`);
+  reporte SCRIPT_SDK @ `9baeba1` (+ revisión `9ef1755`). Pages HTTP 404 =
+  nota (scaffold/CNAME/cert OK; contenido tras merge Docs) — no bloquea CA.
+  **Merged 2026-07-19:** skills-library `main` @ `019a90b` (pushed DE-I7;
+  tip WP `3734d01`); SCRIPT_SDK `main` @ `5f13952` (merge reporte, sin push raíz).
+  Worktree `SCRIPT_SDK-wp-i26` retirado.
+  **Ola I2 cerrada 2026-07-19.** IDLE esperando GO custodio para I3
+  (I30+) — no brief ni 🔶 I3 hasta GO.
 
 ## Ola I3 — Contenido: los holones (primera activación real)
 
