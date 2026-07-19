@@ -7,14 +7,15 @@ ROT · PENDIENTE. Sin datos de canteras ajenas.
 
 | Ruta | Clase | Nota |
 | ---- | ----- | ---- |
-| `docs/index.md` | VIVA-OK | hero SCRIPT_SDK / Holón 07 |
+| `docs/index.md` | VIVA-OK | hero + tabla holarquía 01–07 (I31) |
+| `docs/holones/01-mythos.md` | VIVA-OK | ficha 01 sellada (I31) |
+| `docs/holones/02-logos.md` … `07-script-sdk.md` | VIVA-OK | fichas I32 |
 | `docs/autoridades/01-escrivivir-co.md` | VIVA-OK | ficha autoridad |
 | `docs/autoridades/02-scriptorium.md` | VIVA-OK | ficha autoridad |
 | `docs/guide/publicar-la-web.md` | VIVA-OK | guía local |
 | `docs/public/CNAME` | ESTABLE | `s-sdk.escrivivir.co` |
-| `docs/.vitepress/config.mjs` | ESTABLE | base `SSDK_DOCS_BASE` |
+| `docs/.vitepress/config.mjs` | ESTABLE | nav Holones 01–07 |
 | `docs/.vitepress/theme/custom.css` | ESTABLE | piel zine DE-8 |
-| Fichas holones 01–07 en docs | PENDIENTE | I31/I32 |
 | Ruta TEST-SWARM servida | PENDIENTE | I33 |
 
 ## Anclas `HOLONES/`

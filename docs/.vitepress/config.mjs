@@ -20,6 +20,16 @@ function resolveDocsBase() {
   return '/';
 }
 
+const holonesNav = [
+  { text: '01 — Mythos', link: '/holones/01-mythos' },
+  { text: '02 — Logos', link: '/holones/02-logos' },
+  { text: '03 — Revelación', link: '/holones/03-revelacion' },
+  { text: '04 — Ilustración', link: '/holones/04-ilustracion' },
+  { text: '05 — Sospecha', link: '/holones/05-sospecha' },
+  { text: '06 — Posmodernidad', link: '/holones/06-posmodernidad' },
+  { text: '07 — SCRIPT_SDK', link: '/holones/07-script-sdk' }
+];
+
 export default defineConfig({
   title: 'SCRIPT_SDK',
   description:
@@ -31,18 +41,7 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: 'Portada', link: '/' },
-      {
-        text: 'Holones',
-        items: [
-          // 01 — Mythos: territorio I31 (añadir post-merge si falta)
-          { text: '02 — Logos', link: '/holones/02-logos' },
-          { text: '03 — Revelación', link: '/holones/03-revelacion' },
-          { text: '04 — Ilustración', link: '/holones/04-ilustracion' },
-          { text: '05 — Sospecha', link: '/holones/05-sospecha' },
-          { text: '06 — Posmodernidad', link: '/holones/06-posmodernidad' },
-          { text: '07 — SCRIPT_SDK', link: '/holones/07-script-sdk' }
-        ]
-      },
+      { text: 'Holones', items: holonesNav },
       {
         text: 'Autoridades',
         items: [
@@ -54,21 +53,11 @@ export default defineConfig({
     sidebar: [
       {
         text: 'SCRIPT_SDK',
-        items: [
-          { text: 'Portada', link: '/' }
-        ]
+        items: [{ text: 'Portada', link: '/' }]
       },
       {
         text: 'Holones',
-        items: [
-          // 01 — Mythos: territorio I31 (añadir post-merge si falta)
-          { text: '02 — Logos', link: '/holones/02-logos' },
-          { text: '03 — Revelación', link: '/holones/03-revelacion' },
-          { text: '04 — Ilustración', link: '/holones/04-ilustracion' },
-          { text: '05 — Sospecha', link: '/holones/05-sospecha' },
-          { text: '06 — Posmodernidad', link: '/holones/06-posmodernidad' },
-          { text: '07 — SCRIPT_SDK', link: '/holones/07-script-sdk' }
-        ]
+        items: holonesNav
       },
       {
         text: 'Autoridades',
