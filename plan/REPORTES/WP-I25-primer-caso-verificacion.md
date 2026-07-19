@@ -136,4 +136,29 @@ Ninguno bloqueante. CA en verde.
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** · 2026-07-19 · orquestador holón 07 (modo REVISIÓN)
+
+### Qué se verificó (canal real)
+
+1. **CA-1** — Ciclo completo con solo skill `vigilancia` + `instancias/ejemplo-M`:
+   ensayos `ensayos/i25-ciclo-M/` @ `dfdb563` (README, `watch.log.sample` con
+   `!!HUERFANO` ×2, addenda dos caras, `veredicto.md`). Fixture canónica
+   sin dirty. WORLD_ROOT = temp mundo M (no SCRIPT_SDK).
+2. **CA-2** — Ceguera = 0: `rg` delta 5
+   (`zeus|holón|holarquía|SCRIPT_SDK|S_SDK|juntura|OASIS`) en
+   `ensayos/i25-ciclo-M/` y `instancias/ejemplo-M/` = 0 matches.
+3. **CA-3** — Acta en
+   `plan/REPORTES/WP-I25-primer-caso-verificacion.md` @ `1e6f518`
+   (evidencia literal de comandos/greps/rutas).
+4. **PRACTICAS** — deltas 1/5/6; alcance solo `ensayos/i25-ciclo-M/` +
+   reporte; sin mutar skill/fixture canónica; sin I26; castellano.
+
+### Orden de merge (recomendado — no ejecutado aquí)
+
+1. **skills-library:** merge `wp/i25-primer-caso-verificacion` (`dfdb563`) →
+   `main`; push origin (DE-I7).
+2. **SCRIPT_SDK:** merge `wp/i25-primer-caso-verificacion` (tip con esta
+   revisión) → `main`; **sin push raíz**.
+3. Limpiar worktree `SCRIPT_SDK-wp-i25` si aplica.
+4. Siguiente: brief WP-I26 (publish, DE-I12 procedimiento zeus/Verdaccio).
+   NO implementar I26 en esta revisión.
