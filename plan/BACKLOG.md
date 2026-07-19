@@ -262,8 +262,8 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   **Merged 2026-07-19:** skills-library `main` @ `019a90b` (pushed DE-I7;
   tip WP `3734d01`); SCRIPT_SDK `main` @ `5f13952` (merge reporte, sin push raíz).
   Worktree `SCRIPT_SDK-wp-i26` retirado.
-  **Ola I2 cerrada 2026-07-19.** IDLE esperando GO custodio para I3
-  (I30+) — no brief ni 🔶 I3 hasta GO.
+  **Ola I2 cerrada 2026-07-19.** GO custodio 2026-07-19 → ola I3
+  arrancada (ver sección I3; push raíz DE-I13 cumplido).
 
 ## Ola I2.5 — Estabilización del método (intervención 2026-07-19)
 
@@ -288,17 +288,26 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
 
 ## Ola I3 — Contenido: los holones (primera activación real)
 
-- ⬜ **WP-I30 · Activación en casa** — este plan/ pasa de interinidad a
+> **Ola I3 arrancada 2026-07-19** (GO custodio). Orden: I30 → I31∥I32 → I33.
+> Solo I30 🔶 ahora. Briefs: `BRIEF-OLA-I3.md` + `BRIEF-WP-I30-*.md`.
+> Cadencia merge: cada ✅ al llegar (regla 6 RETRO).
+
+- 🔶 **WP-I30 · Activación en casa** — este plan/ pasa de interinidad a
   referencia del skill (I21); la capa de contenido se genera con el skill
   `site-web`: instancia en `WEBS/` (CANTERA + ENTREGA-CAPA-1 para esta web).
   **CA:** Eje IV — el propio repo es primer consumidor verificado; grep
   dedup del protocolo = 1 definición (el skill).
+  **Asignado 🔶 2026-07-19** (orquestador): brief
+  `plan/REPORTES/BRIEF-WP-I30-activacion-en-casa.md` · rama
+  `wp/i30-activacion-en-casa` · worktree `../SCRIPT_SDK-wp-i30`.
+  Bloquea I31/I32/I33.
 
 - ⬜ **WP-I31 · Portada + ficha 01 Mythos** — referencias reales
   verificadas: `z-sdk.escrivivir.co`, `games.z-sdk.escrivivir.co`, registry
   `@zeus` (~19 paquetes), GitHub Releases de startpacks, repos Z_SDK.
   **CA:** cada URL navegada (browser, no solo curl); cada comando npm
   citado probado contra el canal real; sello por afirmación.
+  _Depende de ✅ I30 — no brief hasta entonces._
 
 - ⬜ **WP-I32 · Fichas 02–07 + roadmaps placeholder** — 02 Logos (juntura
   01↔03 pendiente de destilar); 03 emmanuel (E0–E3 todo ⬜, «papel
@@ -307,10 +316,12 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   uniforme (olas ⬜/🔶/✅) para ir rellenando.
   **CA:** cero promesas sin sello (`<pendiente>` declarado, no vendido); un
   lector distingue el estrato de cada afirmación.
+  _Depende de ✅ I30 — paralelo con I31 tras I30; no brief aún._
 
 - ⬜ **WP-I33 · El pack TEST-SWARM servido** — DA-4 de TEST-SWARM honrada:
   `TEST-SWARM/docs/index.html` enlazado o servido como ruta estática.
   **CA:** accesible desde portada; moira funcional en Pages.
+  _Depende de I31∥I32 (contenido de portada) — no brief aún._
 
 ## Ola I4 — Publicación
 
@@ -321,6 +332,12 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   HTTPS. Ya no bloqueado por DA-I1 (cerrada DE-I10) ni «solo custodio».
   **CA:** sitio vivo en el dominio; CI verde; assets sin 404 (base
   verificado navegando).
+  **Parcial 2026-07-19:** push de `main` a origin **hecho** (GO custodio;
+  DE-I13). Remoto:
+  `https://github.com/alephscriptorium-eng/S_SDK` (deja de estar vacío).
+  **Pendiente ops:** GitHub Pages Source=Actions; custom domain + DNS
+  CNAME → `alephscriptorium-eng.github.io`; Enforce HTTPS; verificar sitio
+  vivo (browser). No marcar ✅ hasta CA completo.
 
 - ⬜ **WP-I41 · Verificación C8 del sitio vivo + acta** — navegación real de
   todo enlace, comandos de ejemplo ejecutados, links cruzados a portales
@@ -382,6 +399,8 @@ Paralelizables dentro de ola: I01∥I02∥I03 · I10∥I12 · I21∥I22∥I23.
 Dentro de I2 el orden es: I20 → (I21∥I22∥I23) → I24 (separación) → I25
 (verificación) → I26 (publish). I24 depende de I23 (necesita el skill donde
 apoyar la fixture) y es donde se corrige el error fundamental DS-5.
+Dentro de I3: I30 → (I31∥I32) → I33. I27 (I2.5) paralelizable con I3 pero
+fuera de este arranque.
 
 ## Verificación end-to-end del conjunto
 
