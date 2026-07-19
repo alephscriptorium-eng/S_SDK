@@ -121,6 +121,26 @@ merge ✅ · `REPORTES/PLANTILLA.md` no dedupeada (criterio inconsistente).
     -p`), no solo el árbol — CA-por-clase aplicado a git; si hay fuga en
     commit intermedio, squash antes del merge.
 
+## I51 — re-verificación final Ola I5 (2026-07-19 noche · veredicto vigía)
+
+Contra los main remotos (zeus `503b6b8` · library `a25ca08`):
+- **U143 PASS:** `docs/public/CNAME` commiteado en ambos —
+  `z-sdk.escrivivir.co` / `games.z-sdk.escrivivir.co` (frágil #1 muerto).
+- **U144 PASS doble:** la library pasó a `npm ci` **y además** dejó el
+  comentario explicativo («lockfile + .npmrc → registry; mismo canal que
+  portal zeus») — las dos ramas del CA cumplidas a la vez (frágil #4
+  muerto).
+- Ceguera de los commits nuevos: 0 hits ×2 repos.
+- C8 canal real: ambos dominios **200** tras el redeploy que el CNAME
+  disparó; CI+Docs **success ×4** en Z_SDK y library.
+
+**Veredicto: I51 PASS — Ola I5 completa de facto.** El ✅ formal de
+I50/I51 es del orquestador (su gobierno ya lo está asentando). De los 7
+frágiles del pipeline zeus: #1 y #4 muertos hoy; #2/#5/#7/A-13 ya estaban
+resueltos (triaje I50); #3/#6 eran de diseño/documentación y quedaron
+mitigados en el export propio. **La deuda de pipeline detectada en la
+exploración inicial queda saldada.**
+
 ## Gates externos vivos (nunca silencio)
 
 - ~~«esperando: micro-enmascarado del token en reporte U140 (zeus)»~~ —
