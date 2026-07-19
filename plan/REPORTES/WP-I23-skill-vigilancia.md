@@ -117,4 +117,33 @@ Ninguno bloqueante. CA en verde.
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** · 2026-07-19 · orquestador holón 07 (modo REVISIÓN)
+
+### Qué se verificó
+
+1. **CA-1** — Skill agnóstico: `SKILL.md` `name=vigilancia`; params
+   `WORLD_ROOT` / `OUT_DIR` / `INTERVAL`; `scripts/watcher.sh` sin rutas
+   absolutas a mundos reales.
+2. **CA-2** — Watcher contra repo arbitrario: muestreo skills-library +
+   repo temp con `.worktrees/orphan-demo` → `!!HUERFANO`; `index.lock`
+   ausente; no usa `git status`.
+3. **CA-3** — Ceguera delta 5: `rg` mundo/marco/OASIS/rutas locales en
+   `skills/vigilancia/` = 0.
+4. **Alcance** — Solo `skills/vigilancia/` (+ reporte SCRIPT_SDK). Cero
+   histórico zeus. No I21/I22/I24. No mutó `VIGILANCIA/` en SCRIPT_SDK.
+5. **PRACTICAS** — deltas 1, 5, 6; sellos/fuente; castellano; DE-I7 push
+   solo rama WP skills-library @ `bf90627`.
+
+### Orden de merge (recomendado — no ejecutado aún)
+
+I21∥I22 pueden seguir. Paths independientes en skills-library:
+
+1. **skills-library:** merge `wp/i23-skill-vigilancia` → `main` cuando
+   el padre lo autorice (puede ir antes, entre o después de I21/I22;
+   único path `skills/vigilancia/`). Limpiar working tree compartido
+   (`skills/site-web/` untracked de I22, `.tmp-*`) antes del merge;
+   preferir worktree por WP.
+2. **SCRIPT_SDK:** merge reporte `wp/i23-skill-vigilancia` → `main`
+   (junto con el ✅ BACKLOG ya en main, o en el mismo lote padre).
+3. **No** merge I24 hasta I23 en main skills-library.
+4. Sin push raíz desde esta revisión.
