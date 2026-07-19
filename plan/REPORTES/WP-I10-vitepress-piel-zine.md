@@ -6,7 +6,7 @@
 | fecha | 2026-07-19 |
 | rama | `wp/i10-vitepress-piel-zine` |
 | worktree | `C:\Users\aleph\SCRIPT_SDK-wp-i10` |
-| commits | `a80b4e2` feat(docs) VitePress + piel zine · _(este reporte)_ |
+| commits | `a80b4e2` feat(docs) · `386742d` docs reporte |
 | estado propuesto | listo para revisión |
 
 ## Qué se hizo
