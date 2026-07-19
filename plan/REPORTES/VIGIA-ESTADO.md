@@ -189,6 +189,34 @@ esta sección; no copia a ciegas). **I51 ✅** asentado por orquestador;
   facto del vigía cuando entregue: dedup + ceguera árbol E historial +
   npm view 0.3.0 + S14 intacto.
 
+## I61 aleph — pre-push verificado + push preparado (2026-07-20)
+
+- **Regla 14 preventiva (primera vez en orden correcto):** commit I61
+  limpio (0 marco en su patch); `PARTES/` gitignorado (no sale); S14 🔶
+  intacto; el diff de gobierno no añade tokens.
+- **F9 (preexistente, NO de I61):** `plan/DECISIONES.md` de aleph lleva
+  `SCRIPT_SDK/holón/holarquía` (líneas 54–60) heredado de `e5573f8`, **ya
+  público** en su rama `integration/beta/scriptorium`. Clase F6.
+  **Decisión custodio:** scrub (micro tipo U140) o **exención casa-madre**
+  (aleph es a la vez casa madre y holones 05–06) — registrarla en su
+  DECISIONES sea cual sea.
+- Ejecutado localmente: gobierno commiteado (`64612a9`), merge a
+  `integration/beta/scriptorium`, rama `wp/` borrada (regla 10).
+- **Push → 403** (`alephscriptorium-eng` sin permiso en org
+  `escrivivir-co`). DA-5 literal: el push es tick del custodio:
+  `git -C C:/Users/aleph/OASIS/aleph-scriptorium push origin integration/beta/scriptorium`
+- Regla-14-práctica me mordió otra vez (`echo $?` tras `head`): tercera
+  incidencia del día, tercera cazada. El skill v0.3 ya la lleva.
+
+## I62 zeus — línea de decisión lista (entregar cuando quieras)
+
+> **Decisión (registrar en DECISIONES, sin worker):** vuestro `plan/roles/`
+> funciona y es anterior. El paquete `@alephscript/skills-scriptorium`
+> (registry, v0.3.0) ofrece ese mismo protocolo como referencia versionada.
+> Opciones, ambas válidas: **(a)** adoptar (roles/ → README-referencia con
+> versión fijada) · **(b)** conservar copia local con nota de procedencia.
+> CA: la decisión queda registrada; nada más cambia.
+
 ## Rutina al retomar
 
 Pulso: `git fetch` + main vs origin · worktrees/stash/ramas ·
