@@ -14,9 +14,10 @@ ROT · PENDIENTE. Sin datos de canteras ajenas.
 | `docs/autoridades/02-scriptorium.md` | VIVA-OK | ficha autoridad |
 | `docs/guide/publicar-la-web.md` | VIVA-OK | guía local |
 | `docs/public/CNAME` | ESTABLE | `s-sdk.escrivivir.co` |
-| `docs/.vitepress/config.mjs` | ESTABLE | nav Holones 01–07 |
+| `docs/public/ensayo/` | VIVA-OK | espejo `TEST-SWARM/docs/` (sync I33; DA-4) |
+| `docs/.vitepress/config.mjs` | ESTABLE | nav Holones 01–07; ignoreDeadLinks /ensayo/ |
 | `docs/.vitepress/theme/custom.css` | ESTABLE | piel zine DE-8 |
-| Ruta TEST-SWARM servida | PENDIENTE | I33 |
+| Ruta TEST-SWARM servida | VIVA-OK | `/ensayo/` — preview local; Pages dominio `<pendiente I40>` |
 
 ## Anclas `HOLONES/`
 
