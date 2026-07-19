@@ -265,6 +265,27 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   **Ola I2 cerrada 2026-07-19.** IDLE esperando GO custodio para I3
   (I30+) — no brief ni 🔶 I3 hasta GO.
 
+## Ola I2.5 — Estabilización del método (intervención 2026-07-19)
+
+> Nace de la intervención del custodio+vigía tras cerrar I2: el método se
+> está migrando a skill y la experiencia I0–I2 lo rediseña. Evidencia:
+> `plan/RETRO-2026-07-19-metodo.md` +
+> `plan/REPORTES/INTERVENCION-2026-07-19-estabilizacion.md`.
+
+- ⬜ **WP-I27 · Skill `swarm-orquestacion` v0.2 + scrubs de library** —
+  coser las 12 reglas de la RETRO al skill (gobierno-a-git-primero, commit
+  atómico de estados, stash-limpio, worktrees en repos hermanos, ficheros
+  compartidos asignados en brief, cadencia de merge declarada, integrador≠
+  planificador, canal de ticks a worker vivo, cadena de evidencia auditable,
+  checklist de cierre de ola, patrón-nuevo=DE, entregas sin rutas de
+  origen). Además: scrub F7 (`publish.yml` de la skills-library nombra
+  «zeus» → neutral «Verdaccio canónico») y Pages de la library (404 hoy;
+  CNAME `skills.s-sdk.escrivivir.co`, DNS ya resuelve).
+  **CA:** skill v0.2 publicado (semver menor); grep de mundos reales en la
+  cara pública de la library = 0; checklist de cierre de ola existe en el
+  skill y este mismo WP lo estrena; Pages de la library responde 200 (o
+  gate ops declarado).
+
 ## Ola I3 — Contenido: los holones (primera activación real)
 
 - ⬜ **WP-I30 · Activación en casa** — este plan/ pasa de interinidad a
@@ -307,6 +328,17 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   **CA:** 0 enlaces rotos; 0 comandos que fallen; evidencia literal.
 
 ## Ola I5 — Estabilización zeus (vía canal ENTREGA/vigía — jamás directa)
+
+- ⬜ **WP-I52 · ENTREGA scrub de rutas (URGENTE — antes que I50)** — F6 de
+  la intervención: el plan público de Z_SDK cita rutas `SCRIPT_SDK\...` en
+  8 ficheros (puntero de vuelta prohibido; sembrado por el canal
+  temp-review). Nota ciega YA preparada:
+  `plan/REPORTES/ENTREGA-VIGIA-2026-07-19b-scrub-rutas.md` — encuadre
+  «higiene de portabilidad», prueba de ceguera hecha. Entrega el custodio
+  en quietud de zeus; su orquestador aplica como micro-WP.
+  **CA:** grep de rutas absolutas locales en main de zeus = 0 (por clase);
+  re-verificado por el vigía tras su merge; regla «entregas sin rutas»
+  cosida al skill (WP-I27, regla 12).
 
 - ⬜ **WP-I50 · ENTREGA Sprint 3 a zeus** — nota en idioma de zeus con:
   frágiles restantes de SUS repos (#1 CNAME, #2 guard de base, #5 dist/

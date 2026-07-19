@@ -47,3 +47,15 @@ el texto: se referencia (la réplica es el defecto que este plan combate).
      nadie empuja el raíz.
    Auth de escritura al Verdaccio (si falta en `.npmrc`) sigue siendo tick
    de ops del custodio — no inventar credenciales (DE-I12).
+
+7. **El gobierno va a git antes que la obra** (retro I0–I2). El orquestador
+   commitea `plan/` ANTES de abrir el primer brief; cada 🔶/✅/brief es
+   commit atómico inmediato. Al cierre de cada ola, checklist de higiene:
+   `git stash list` vacío · `plan/` sin diff · ramas `wp/*` mergeadas
+   borradas o justificadas. Detalle completo y resto de reglas:
+   `plan/RETRO-2026-07-19-metodo.md` (12 reglas → skill v0.2, WP-I27).
+
+8. **Las entregas entre mundos viajan sin rutas de origen** (retro, regla
+   12 — nace de F6): se entrega contenido pegado o adjunto neutro; la
+   procedencia citable es «nota externa recibida (temp-review, fecha)»,
+   jamás una ruta de disco.
