@@ -1,6 +1,6 @@
 # ESTADO DEL VIGÍA — swarm holón 07 (rolling; léeme al retomar vigilancia)
 
-Actualizado: 2026-07-19 (post-revisión I40/I41/I27 · noche).
+Actualizado: 2026-07-19 (post-I28 ✅ · ola housekeeping V4+V5+V6 cerrada).
 
 ## Revisión I40/I41/I27 (2026-07-19 noche, de facto — vigía + worker)
 
@@ -41,17 +41,11 @@ backstage (`VIGILANCIA/ESTACION.md`, gitignored). Actas de este mundo:
 
 ## Hallazgos abiertos (por severidad)
 
-- **V4 (alto, irónico):** las 7 ramas `wp/i20..i27` siguen vivas **local y
-  remoto** en `S_SDK-skills-library` — el mismo WP-I27 que instauró la
-  regla 10 (higiene de cierre) la aplicó en SCRIPT_SDK pero no en el
-  hermano que tocaba (regla 4). El propio reporte lo confesó como «fuera
-  de alcance». Destino: micro housekeeping.
-- **V5 (medio):** favicon raíz 404 + copy stale «<pendiente I40>» en
-  portada — declarados honestamente en I41 pero **sin cola/WP**: sueltos
-  hasta que alguien los recuerde. Mismo micro.
-- **V6 (bajo):** `/guide/publicar-la-web` huérfana (0 enlaces entrantes en
-  docs/) — verificada por URL directa, no navegable por click. Añadir al
-  nav o enlazarla desde portada. Mismo micro.
+- ~~**V4**~~ · ~~**V5**~~ · ~~**V6**~~ — **cerrados** por **WP-I28 ✅**
+  (2026-07-19): ramas `wp/i20`–`i27` borradas en skills-library
+  local+remoto; favicon raíz en `docs/public/` (vivo 404 hasta redeploy
+  Pages); scrub `<pendiente I40>`; nav `/guide/publicar-la-web`.
+  **Ola housekeeping cerrada.**
 - *(v0.2 candidata, del ciclo I52):* las notas de scrub no citan
   literalmente aquello que mandan borrar (lección de la §Nota que
   reintrodujo el patrón); y **regla 1 confirmada en dos mundos** (hueco
@@ -67,6 +61,8 @@ backstage (`VIGILANCIA/ESTACION.md`, gitignored). Actas de este mundo:
 - ~~«esperando: **WP-I27**»~~ — **cerrado** (I27 ✅ · v0.2 + Pages +
   higiene).
 - ~~WP-I40 / I41~~ — **cerrados** (ops + acta C8 ✅).
+- ~~«esperando: **WP-I28**»~~ — **cerrado** (ola housekeeping
+  V4+V5+V6 ✅).
 
 ## Rutina al retomar
 

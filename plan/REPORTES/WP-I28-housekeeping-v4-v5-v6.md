@@ -153,4 +153,17 @@ Ninguno bloqueante. CA1–CA5 con evidencia literal.
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** — 2026-07-19 · orquestador holón 07
+
+Verificado:
+1. CA1 — `git fetch --prune` + `branch -a | grep -E 'wp/i2[0-7]'` = vacío
+   en `S_SDK-skills-library` (local + remoto).
+2. CA2 — `docs/public/favicon.ico` + dist post-build presentes (9395 B);
+   vivo 404 OK hasta redeploy Pages.
+3. CA3 — grep `<pendiente I40>` en `docs/` = 0.
+4. CA4 — nav + sidebar `/guide/publicar-la-web` en `config.mjs`.
+5. CA5 — reporte `docs:build` EXIT=0; dist con favicon.
+6. Diff acotado (docs + reporte); sin BACKLOG/I50–I52/bump; sin HOLONES.
+
+Merge: `wp/i28-housekeeping-v4-v5-v6` → `main` · worktrees retirados.
+Ola housekeeping V4+V5+V6 **cerrada**.
