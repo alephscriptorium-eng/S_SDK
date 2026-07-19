@@ -81,35 +81,45 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
 
 ## Ola I1 — La máquina de la web (export del procedimiento zeus)
 
-- 🔶 **WP-I10 · VitePress base + piel zine** — `docs/` con config exportada
+- ✅ **WP-I10 · VitePress base + piel zine** — `docs/` con config exportada
   (base parametrizado `SSDK_DOCS_BASE` con guard, frágil #2),
   `theme/custom.css` copia-release con cabecera de procedencia (DE-8);
   `docs/autoridades/` existente integrado en nav.
   **CA:** `docs:build` verde local; sin CDNs ni fuentes web (grep = 0).
-  **Asignado 🔶 2026-07-19** · worker `i10` · rama `wp/i10-vitepress-piel-zine`
-  · worktree `../SCRIPT_SDK-wp-i10` · brief
-  `plan/REPORTES/BRIEF-WP-I10-vitepress-piel-zine.md`.
-  Paralelo con I12; I11 espera merge de I10.
+  **Aceptado ✅ 2026-07-19** (orquestador): CA verificado en worktree
+  `SCRIPT_SDK-wp-i10` @ `5822a63` — `resolveDocsBase` + guard MSYS;
+  `custom.css` DE-8 con cabecera OASIS/zeus; nav `docs/autoridades/`;
+  `docs:build` EXIT=0 re-ejecutado; grep CDN/fuentes = 0; sin
+  docs.yml/CNAME/BACKLOG/push/HOLONES. Fuente config vía OASIS
+  (tabla BACKLOG) aceptable: submodule games-library sin docs checked
+  out. Rama `wp/i10-vitepress-piel-zine`. Merge local → `main` @
+  `550095d` (sin push; sin conflicto con I12 `docs/guide/`).
 
-- ⬜ **WP-I11 · docs.yml + CNAME** — export de la variante library:
+- 🔶 **WP-I11 · docs.yml + CNAME** — export de la variante library:
   triggers push main+`wp/**` con `paths: docs/**`, PR, `workflow_dispatch`,
   concurrency; `npm ci` (frágil #4); `docs/public/CNAME` =
   `s-sdk.escrivivir.co` (frágil #1); sin spec-gen (frágil #6); gap de paths
   documentado (frágil #7).
   **CA:** workflow parsea; build CI verde en rama `wp/`.
-  _Bloqueado hasta ✅ WP-I10 (necesita `docs/` VitePress real)._
+  **Asignado 🔶 2026-07-19** · worker `worker-i11` · rama
+  `wp/i11-docs-yml-cname` · worktree `../SCRIPT_SDK-wp-i11` · brief
+  `plan/REPORTES/BRIEF-WP-I11-docs-yml-cname.md`.
+  Depende de ✅ I10 (merge local `550095d`); I12 ya ✅ en main.
 
-- 🔶 **WP-I12 · publicar-la-web propia** — `docs/guide/publicar-la-web.md`
+- ✅ **WP-I12 · publicar-la-web propia** — `docs/guide/publicar-la-web.md`
   al estilo zeus (la web se documenta a sí misma): ciclo editar/preview/
   build/publicar + checklist ops parejo a z-sdk (Settings→Pages→Source=
   Actions, Custom domain, DNS CNAME → `alephscriptorium-eng.github.io`,
   Enforce HTTPS).
   **CA:** cada comando citado corre tal cual (C8); calza con el workflow
   real, sin pasos inventados.
-  **Asignado 🔶 2026-07-19** · worker `i12` · rama `wp/i12-publicar-la-web`
-  · worktree `../SCRIPT_SDK-wp-i12` · brief
-  `plan/REPORTES/BRIEF-WP-I12-publicar-la-web.md`.
-  Paralelo con I10; no escribe `docs.yml` (eso es I11).
+  **Aceptado ✅ 2026-07-19** (orquestador): CA verificado en worktree
+  `SCRIPT_SDK-wp-i12` @ `439ae77` — guía + checklist; comandos =
+  `package.json` (`docs:dev`/`docs:build`); C8 ejecuta scripts (EXIT≠0
+  por vitepress ausente, honestizado `<pendiente I10>`); workflow/CNAME
+  como `<pendiente I11>` sin inventar ficheros; sin docs.yml/theme/
+  BACKLOG/push. Rama `wp/i12-publicar-la-web`. Merge local → `main` @
+  `439ae77` (fast-forward; sin push). Paralelo seguro con I10.
 
 ## Ola I2 — La abstracción: protocolo fuera de los datos (DE-I10)
 
