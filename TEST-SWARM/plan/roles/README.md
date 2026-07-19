@@ -1,5 +1,12 @@
 # plan/roles — el protocolo del swarm (TEST-SWARM)
 
+> **Puntero, no canónico (I30).** La definición canónica del protocolo vive
+> en el skill `swarm-orquestacion` (`S_SDK-skills-library` @ `019a90b` /
+> `@alephscript/skills-scriptorium@0.1.0`,
+> `skills/swarm-orquestacion/reference/roles/`). Este directorio es el
+> ensayo sellado TEST-SWARM: copia de trabajo para chats locales. No
+> duplicar hacia `plan/roles/` del holón 07.
+
 Derivado del protocolo canónico de los mundos hermanos (@ 2026-07-16),
 autocontenido aquí. Agnóstico de herramienta: cualquier runner los consume
 tal cual.
