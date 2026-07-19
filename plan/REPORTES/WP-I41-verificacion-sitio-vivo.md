@@ -176,4 +176,27 @@ Ninguno bloqueante. CA1–CA4 cumplidos con evidencia literal.
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** — 2026-07-19 · orquestador holón 07 (modo REVISIÓN).
+
+### CA verificados
+1. **0 enlaces rotos (sitio propio):** tabla CA1 + audit `broken = []`;
+   re-spot curl portada/`/ensayo/` → 200. Cumple.
+2. **0 comandos de ejemplo fallidos:** `npm install` / `docs:build` /
+   `docs:dev` EXIT=0 documentados; `npm ci` N/A local honesto. Cumple.
+3. **Acta HTTP/captura por ruta clave:** sí (browser + curl). Cumple.
+4. **Ceguera:** diff = solo este reporte; sin paths host absolutos citados;
+   sin mutar docs/ ni skills-library. Cumple.
+
+### C8 · `/favicon.ico` raíz 404
+**Nota menor, no bloqueo.** CA pide 0 *enlaces* rotos (`<a href>`), no
+assets auto-pedidos por el browser. Re-verificado: raíz `/favicon.ico`
+→ 404; `/ensayo/favicon.ico` → 200. Cosmético VitePress; fuera de
+alcance I41 (hallazgo 1 del worker). No devolver.
+
+### PRACTICAS
+Alcance acotado; sellos con fuente; castellano; sin fluff; I27 no tocado.
+Hallazgos 2–4 (copy stale I40, V1, pack legado) fuera de alcance — ok.
+
+### Merge
+Rama `wp/i41-verificacion-sitio-vivo` @ `0440ace` (+ este sello) →
+`main`; push origen (cadencia + GO); worktree retirar. **No esperar I27.**
