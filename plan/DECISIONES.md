@@ -150,10 +150,10 @@ bloquea WP-D31 de aquel mundo, no bloquea este plan.)*
   abierto hasta merge U141 + re-verificación vigía. **I52 ≠ I50** (I52 =
   F6 scrub; I50 = Sprint 3). **I152 no existe.** I27 ✅ / I41 ✅.
 - ✅ **GO I50 aparte** (usuario/custodio · 2026-07-19) — **WP-I50** 🔶
-  entregando en paralelo a I52 residual. Autoriza redactar/entregar
-  Sprint 3 (frágiles restantes + oferta skills v0.2 registry). **§Nota
-  ciega aún no redactada** — prep
-  `plan/REPORTES/ENTREGA-VIGIA-2026-07-19c-sprint3-GO-prep.md`. No
-  inventar contenido técnico; no marcar I50 ✅; **I51 sigue ⬜**. Zeus:
-  recepción/triage U142+ (sin GO de implementación por ítem hasta nota).
+  aplicada-en-zeus. Autorizó redactar/entregar Sprint 3. **§Nota
+  entregada** (2026-07-19) vía prep
+  `plan/REPORTES/ENTREGA-VIGIA-2026-07-19c-sprint3-GO-prep.md` → zeus
+  archivó + triage (U142 ✅ · tip Z_SDK `6015d53`; U143/U144 ⬜ sin GO
+  por ítem). **I51 sigue ⬜**. No marca I50 ✅ hasta cierre real
+  (aplicación/descarte de ítems o sellado custodio).
 - I41 ✅ (acta C8); I27 ✅ (v0.2); estación/vigilante como insumo.

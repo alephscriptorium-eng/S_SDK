@@ -10,10 +10,12 @@ _Paralelo a I52 🔶 (residual U141). NO I51. NO inventar §Nota falsa._
 
 WP: WP-I50 · ENTREGA Sprint 3 a zeus
 Tipo: canal ENTREGA/vigía (custodio → orquestador zeus)
-Estado: 🔶 entregando — GO recibido; §Nota ciega AÚN PENDIENTE
+Estado: 🔶 aplicada-en-zeus — §Nota entregada; triage zeus (U142 ✅)
 Prep: plan/REPORTES/ENTREGA-VIGIA-2026-07-19c-sprint3-GO-prep.md
 Brief: plan/REPORTES/BRIEF-WP-I50-entrega-sprint3.md
-Entregable futuro: ENTREGA con ## §Nota (ciega) — aún no existe
+Entregable: §Nota ciega entregada → zeus
+  plan/REPORTES/entregas/ENTREGA-2026-07-19-sprint3.md (ruta interna Z_SDK)
+  tip main Z_SDK: 6015d53
 
 Lecturas:
 - plan/BACKLOG.md WP-I50 (CA literal) + frágiles cabecera #1–#7
@@ -35,12 +37,13 @@ Notas del orquestador:
   2) No duplica colas vivas de zeus (triage allí).
   3) Oferta skills v0.2 + frágiles listados sin ampliar alcance.
 
-- Cadencia: I50 🔶 hasta §Nota entregada y triage zeus registrado.
-  Orquestador 07 NO marca ✅ hasta cierre real (nota + recepción).
-- NO I51. NO marcar I52 ✅.
+- Cadencia: I50 🔶 aplicada-en-zeus (§Nota + triage U142 ✅).
+  Orquestador 07 NO marca ✅ hasta cierre real (GO/descarte U143/U144
+  o sellado custodio). I51 ⬜.
+- NO I51. NO marcar I52 ✅ en este acto.
 ```
 
 ## Instrucción al padre
 
-**NO lanzar worker de implementación.** Redactar §Nota ciega (prep) →
-entregar a orquestador zeus → esperar triage. I51 no arranca.
+**NO lanzar worker de implementación.** §Nota ya entregada; triage zeus
+hecho. Esperar GO usuario en zeus (U143/U144) o descarte. I51 no arranca.

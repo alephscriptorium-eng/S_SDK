@@ -400,13 +400,16 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   gitignoreado en library, #4 coherencia npm ci, economía CI de A-13, #7
   gap de paths) + **oferta del paquete público de skills** como recurso del
   registry (blind-safe: un paquete público más). **Distinto de I52** (no
-  incluye el scrub F6). **GO aparte · 2026-07-19** (usuario/custodio;
-  paralelo a I52 residual U141). Estado: **🔶 entregando** — prep en
+  incluye el scrub F6). **GO aparte · 2026-07-19** (usuario/custodio).
+  Estado: **🔶 aplicada-en-zeus** — §Nota entregada; triage zeus
+  registrado. Prep:
   `plan/REPORTES/ENTREGA-VIGIA-2026-07-19c-sprint3-GO-prep.md` + brief
-  `BRIEF-WP-I50-entrega-sprint3.md`. **§Nota ciega aún NO redactada**
-  (no inventar contenido técnico; no marcar «entregada a zeus» hasta
-  §Nota + archivo en zeus). Zeus abre recepción/triage propio (U142+).
-  **CA:** prueba de ceguera grep = 0; no duplica colas de zeus.
+  `BRIEF-WP-I50-entrega-sprint3.md`. Zeus: U142 ✅ (archivo + triage);
+  tip `main` Z_SDK `6015d53`; WPs U143/U144 ⬜ (sin GO por ítem; nota =
+  propuesta). **I51 sigue ⬜** (sin GO hasta que zeus aplique ítems).
+  **CA:** prueba de ceguera grep = 0; no duplica colas de zeus — cumplido
+  en recepción; cierre ✅ I50 cuando custodio/orquestador selle tras
+  aplicación o descarte explícito de U143/U144.
 
 - ⬜ **WP-I51 · Verificación vigía del sprint** — con el skill `vigilancia`
   (tras I50 entregada / sprint aplicado). **CA:** veredictos persistidos
@@ -446,7 +449,7 @@ apoyar la fixture) y es donde se corrige el error fundamental DS-5.
 Dentro de I3: I30 → (I31∥I32) → I33. Tras I40 ✅: lote **I41 ∥ I27**
 ambos ✅ (2026-07-19). **I28 ✅** (ola housekeeping V4+V5+V6 cerrada).
 **GO I5** (2026-07-19): **I52 🔶** (nota F6; residual U141 + re-verif) →
-**I50 🔶** (GO aparte 2026-07-19; §Nota pendiente) → I51 ⬜.
+**I50 🔶** (aplicada-en-zeus · §Nota entregada; triage U142 ✅) → I51 ⬜.
 
 ## Verificación end-to-end del conjunto
 

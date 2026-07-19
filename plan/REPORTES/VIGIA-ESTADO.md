@@ -98,10 +98,11 @@ grep = 0. Fichero: `ENTREGA-VIGIA-2026-07-19c-sprint3-GO-prep.md`.
   **cerrado** (U141 ✅ · main `d1eef8f` · re-verif vigía PASS).
 - ~~«U141 mergeado; esperando re-verif vigía»~~ — **cerrado** (PASS
   arriba). «esperando: ✅ I52 del orquestador» — trámite.
-- «esperando: custodio entrega §Nota Sprint 3 → zeus (U142)» — la §Nota
-  está LISTA (solo el bloque §Nota; la tabla de triaje NO sale). I51 ⬜
-  hasta que zeus aplique.
-- ~~I50 sin GO~~ — **cerrado** (GO aparte 2026-07-19; queda redacción).
+- ~~«esperando: custodio entrega §Nota Sprint 3 → zeus (U142)»~~ —
+  **cerrado** (entregada; zeus U142 ✅ · tip `6015d53`; U143/U144 ⬜
+  sin GO; I50 🔶 aplicada-en-zeus). I51 ⬜ hasta aplicación/descarte.
+- «esperando: GO usuario zeus (U143/U144) o descarte explícito» — **vivo**.
+- ~~I50 sin GO~~ — **cerrado** (GO aparte 2026-07-19; §Nota entregada).
 - ~~«esperando: **WP-I27**»~~ — **cerrado** (I27 ✅ · v0.2 + Pages +
   higiene).
 - ~~WP-I40 / I41~~ — **cerrados** (ops + acta C8 ✅).

@@ -50,5 +50,5 @@ skills-library|s-sdk` = 0.
 ---
 
 Registro: §Nota redactada por el vigía 2026-07-19 (triaje en tabla
-interna). Pendiente: entrega del custodio → zeus archiva (U142) → triage
-suyo → I51 re-verifica lo que se aplique. I50 🔶 hasta entrega efectiva.
+interna). **Entregada** → zeus archivó + triage (U142 ✅ · tip Z_SDK
+`6015d53`; U143/U144 ⬜ sin GO). I50 🔶 aplicada-en-zeus. I51 ⬜.
