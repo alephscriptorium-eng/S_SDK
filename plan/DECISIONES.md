@@ -192,3 +192,15 @@ bloquea WP-D31 de aquel mundo, no bloquea este plan.)*
   referencias en `index.md`/`config.mjs`/`theme/index.js`/ficha 07
   retiradas; **`docs:build` verde re-verificado** sin `TEST-SWARM`. WP-I33
   queda como histórico (obra revertida). Se ejecuta en **WP-I42**.
+
+- **DE-I16 · Relajación puntual de DE-I11: guardas muertas fuera del
+  `.gitignore`** *(custodio 2026-07-20; commit `18c5fc3`).* Se retiran del
+  `.gitignore` las guardas de `HANDOFF_*`, `/HIPOTESIS.md` y `CONECTOR_*`
+  (backstage cuyos ficheros ya no existen ni volverán tras el asentamiento
+  I6/TEST-SWARM). **Se conservan `VIGILANCIA/` y `ADDENDA/`** (directorios
+  aún vivos en local). Decisión del custodio: intencional, no accidental.
+  **Riesgo residual asumido:** si en el futuro reaparece un `HANDOFF_*` o
+  `CONECTOR_*`, ya no queda ignorado por patrón — la ceguera 07→01 de esos
+  ficheros pasa a depender de higiene explícita, no de la red del
+  `.gitignore`. Compatible con DE-I11 en lo esencial (el histórico vivo
+  `VIGILANCIA/` + `ADDENDA/` sigue fuera del remoto).
