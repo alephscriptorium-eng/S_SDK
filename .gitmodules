@@ -1,0 +1,6 @@
+[submodule "HOLONES/01-mythos/zeus-sdk"]
+	path = HOLONES/01-mythos/zeus-sdk
+	url = https://github.com/alephscriptorium-eng/Z_SDK.git
+[submodule "HOLONES/01-mythos/games-library"]
+	path = HOLONES/01-mythos/games-library
+	url = https://github.com/alephscriptorium-eng/Z_SDK-games-library.git
