@@ -288,8 +288,8 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
 
 ## Ola I3 — Contenido: los holones (primera activación real)
 
-> **Ola I3 en curso 2026-07-19.** I30 ✅ mergeado+pushed. Ahora: I31 ∥ I32
-> 🔶. I33 ⬜ hasta ambos ✅. Cadencia: merge cada ✅.
+> **Ola I3 en curso 2026-07-19.** I30 ✅ · I32 ✅ mergeado+pushed. Ahora:
+> I31 🔶. I33 ⬜ hasta I31∥I32 ✅. Cadencia: merge cada ✅.
 
 - ✅ **WP-I30 · Activación en casa** — plan/ consumidor del skill
   `swarm-orquestacion@0.1.0`; instancia `WEBS/` (CANTERA + ENTREGA-CAPA-1)
@@ -309,17 +309,17 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   `wp/i31-portada-ficha-mythos` · worktree `../SCRIPT_SDK-wp-i31`.
   Paralelo I32.
 
-- 🔶 **WP-I32 · Fichas 02–07 + roadmaps placeholder** — 02 Logos (juntura
+- ✅ **WP-I32 · Fichas 02–07 + roadmaps placeholder** — 02 Logos (juntura
   01↔03 pendiente de destilar); 03 emmanuel (E0–E3 todo ⬜, «papel
   primero»); 04 AOS/NETWORK-ENGINE; 05–06 aleph-scriptorium (S0–S4, S14 🔶,
   link al Jekyll vivo); 07 el método + pack TEST-SWARM. Formato de roadmap
   uniforme (olas ⬜/🔶/✅) para ir rellenando.
-  **CA:** cero promesas sin sello (`<pendiente>` declarado, no vendido); un
-  lector distingue el estrato de cada afirmación.
-  **Asignado 🔶 2026-07-19** (orquestador): brief
-  `plan/REPORTES/BRIEF-WP-I32-fichas-roadmaps.md` · rama
-  `wp/i32-fichas-roadmaps` · worktree `../SCRIPT_SDK-wp-i32`.
-  Paralelo I31.
+  **CA cumplidos:** cero promesas sin sello; estratos distinguibles;
+  roadmap uniforme 02–07; `docs:build` verde; ceguera docs/holones.
+  **Aceptado ✅ 2026-07-19** — merge `main` @ `0cee86b` (obra rama
+  `wp/i32-fichas-roadmaps` @ `2e015ff` + revisión `ca2d13d`) · reporte
+  `plan/REPORTES/WP-I32-fichas-roadmaps.md`. Nav Holones 02–07 en
+  `config.mjs`; unificar 01 al merge de I31.
 
 - ⬜ **WP-I33 · El pack TEST-SWARM servido** — DA-4 de TEST-SWARM honrada:
   `TEST-SWARM/docs/index.html` enlazado o servido como ruta estática.
