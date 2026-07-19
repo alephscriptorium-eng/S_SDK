@@ -166,4 +166,28 @@ rama solo local hasta revisión.
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** — orquestador holón 07 · 2026-07-19 · rama
+`wp/i30-activacion-en-casa` @ `9928c46` (+ commit de esta revisión).
+
+### Verificado
+
+1. **CA-1 Eje IV** — scripts `site-web` (`generar-sitio.sh`, `ceguera.sh`) y
+   `swarm-orquestacion` (`montar-plan.sh`, `comprobar-ceguera.sh`) ejecutados;
+   salidas en reporte; instancia real `WEBS/` + `plan/` consumidor @ `0.1.0`.
+2. **CA-2 WEBS/** — árbol con CANTERA + ENTREGA-CAPA-1 + BASE-1/2/3 +
+   CALIBRACION; coherente DE-I6; copy de este mundo.
+3. **CA-3 dedup** — `plan/roles/` ausente; canónico = skill
+   `swarm-orquestacion`; `plan/README` + puntero TEST-SWARM declaran no
+   canónico; grep prompt WORKER bajo `plan/` = 0 hits.
+4. **CA-4 ceguera WEBS** — grep zeus/OASIS/startpack/@zeus/… = 0
+   (reproducido en revisión).
+5. **PRACTICAS** — alcance brief; sin mutar skills-library/HOLONES/BACKLOG
+   (worker); castellano; sellos con fuente; `<pendiente>` I31–I40; sin
+   fluff.
+
+### Orden de merge
+
+1. Merge `wp/i30-activacion-en-casa` → `main`.
+2. BACKLOG I30 🔶→✅ (commit gobierno en main).
+3. Push raíz autorizado (cadencia I3 + GO custodio).
+4. Briefs I31 ∥ I32 → workers; I33 tras ambos ✅.
