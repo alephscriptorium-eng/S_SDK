@@ -114,4 +114,30 @@ Ninguno. Listo para revisión orquestador.
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** — orquestador holón 07 · 2026-07-19 · rama
+`wp/i33-test-swarm-servido` @ `2b5d38c` (+ commit de esta revisión).
+
+### Verificado
+
+1. **CA-1 pack desde portada** — preview `serve dist` · CTA «Ensayo
+   TEST-SWARM» → `/ensayo/` · título `MUNICIONES — las Notas y el acta ·
+   TEST-SWARM` · H1 `TEST-SWARM` (Playwright 2026-07-19).
+2. **CA-2 moira** — `#moira` presente; countdown `05:53`→`05:51`
+   (`ticking: true`); `.stats-bar` = 2. Pages dominio =
+   `<pendiente I40>` (no bloquea I33; brief + DA-4).
+3. **CA-3 docs:build + ceguera + pack intacto** — `npm run docs:build`
+   exit 0; `DIST_OK` `/ensayo/index.html`; `cmp` HTML idéntico a
+   `TEST-SWARM/docs/`; cero OASIS en tocados; HOLONES/ sin diff;
+   alcance docs/WEBS/scripts/package/gitignore/reporte.
+4. **CA-4 CANTERA** — «Ruta TEST-SWARM servida» = **VIVA-OK** (`/ensayo/`
+   preview; Pages `<pendiente I40>`).
+5. **PRACTICAS** — espejo sync (citar-no-copiar pack); castellano; sellos
+   honestos; sin fluff ni reescritura doctrinal.
+
+### Orden de merge
+
+1. Merge `wp/i33-test-swarm-servido` → `main` **ya** (cadencia I3).
+2. BACKLOG I33 🔶→✅; **ola I3 cerrada**; push raíz (GO push I3).
+3. Retirar worktree `SCRIPT_SDK-wp-i33`.
+4. **NO** arrancar I4/I40 sin GO explícito — estado IDLE /
+   «esperando: ops Pages/DNS (I40)».
