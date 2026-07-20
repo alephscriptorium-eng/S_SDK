@@ -6,7 +6,7 @@
 | fecha | 2026-07-20 |
 | rama | `wp/gc-z08-nodered-visor` |
 | worktree | `.claude/worktrees/gc-z08-nodered-visor` |
-| commits | _(ver fin de §evidencia / log)_ |
+| commits | `e3daee8` (obra flows) · tip docs reporte en esta rama |
 | eje(s) CA | IV (Node-RED = segundo cliente del contrato `/runtime`) |
 | alcance lote | **solo f1–f3** (Oreja · Ojo · Ciudad completa) |
 | estado propuesto | listo para revisión (CA vivo parcial: zeus :3017 apagado en esta máquina) |
