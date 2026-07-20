@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "source": "fixture",
+  "note": "Z01 mockdatas/browsers aún no mergeados — volumen vacío de demo para F3.",
+  "volumes": [],
+  "stats": {
+    "files": 0,
+    "bytes": 0,
+    "corpora": 0
+  },
+  "lineas": [],
+  "refreshedAt": null
+}

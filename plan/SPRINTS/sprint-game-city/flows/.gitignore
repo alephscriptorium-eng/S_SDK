@@ -1,0 +1,14 @@
+*.backup
+.config.*/
+.config.nodes.json
+.config.runtime.json
+.config.sessions.json
+.config.users.json
+.env
+.flows.json.bak
+.lib/
+.npm/
+coverage/
+lib/
+node_modules/
+package-lock.json

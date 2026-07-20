@@ -1,0 +1,1057 @@
+[
+  {
+    "id": "z08-f1-oreja",
+    "type": "tab",
+    "label": "F1 Oreja",
+    "disabled": false,
+    "info": "WP-Z08 F1 — Oreja.\n\nEscucha state|track|ledger + SET_STATE en PUBLIC_ROOM y en la room de juego (default POZO_DEMO / ZEUS_GAME_ROOM) vía ws://localhost:3017/runtime (auth dev-secret).\n\nNodos: node-red-contrib-alephscript-core@0.2.0.\nPlantilla de referencia: ScriptoriumVps pub-room-client + WiringEditor examples."
+  },
+  {
+    "id": "z08-f2-ojo",
+    "type": "tab",
+    "label": "F2 Ojo",
+    "disabled": false,
+    "info": "WP-Z08 F2 — Ojo.\n\nWidget dashboard-2-alephscript-rooms en modo external apuntando al mesh zeus :3017.\nMuestra clients/rooms en vivo.\n\nPieza: node-red-dashboard-2-alephscript-rooms@0.2.0."
+  },
+  {
+    "id": "z08-f3-ciudad",
+    "type": "tab",
+    "label": "F3 Ciudad completa",
+    "disabled": false,
+    "info": "WP-Z08 F3 — Ciudad completa (lectura/agregación).\n\nHTTP request a REST zeus:\n- console-monitor :3014 GET /snapshot\n- editor-ui :3012 GET /api/mcp/servers\n- firehose-browser :3016 GET /api/stats\n- cache-browser :3015 GET /api/lineas + /api/stats\n\nDashboard: grupo por distrito (taxonomía cantera) + contadores sys/app/ui/agent/game.\nSi Z01 no entregó volúmenes, cae a fixtures/empty-volume-stats.json."
+  },
+  {
+    "id": "z08-ui-base",
+    "type": "ui-base",
+    "name": "Z08 Visor Ciudad",
+    "path": "/dashboard",
+    "appIcon": "",
+    "includeClientData": true,
+    "acceptsClientConfig": [
+      "ui-notification",
+      "ui-control"
+    ],
+    "showPathInSidebar": false,
+    "headerContent": "page",
+    "navigationStyle": "default",
+    "titleBarStyle": "default",
+    "showReconnectNotification": true,
+    "notificationDisplayTime": 1,
+    "showDisconnectNotification": true,
+    "allowInstall": false
+  },
+  {
+    "id": "z08-ui-theme",
+    "type": "ui-theme",
+    "name": "Z08 Theme",
+    "colors": {
+      "surface": "#111827",
+      "primary": "#38bdf8",
+      "bgPage": "#0b1220",
+      "groupBg": "#111827",
+      "groupOutline": "#1f2937"
+    }
+  },
+  {
+    "id": "z08-page-ops",
+    "type": "ui-page",
+    "name": "Ops · Ciudad",
+    "ui": "z08-ui-base",
+    "path": "/ciudad",
+    "icon": "mdi-city",
+    "layout": "grid",
+    "theme": "z08-ui-theme",
+    "breakpoints": [
+      {
+        "name": "Default",
+        "px": 0,
+        "cols": 3
+      },
+      {
+        "name": "Tablet",
+        "px": 576,
+        "cols": 6
+      },
+      {
+        "name": "Small Desktop",
+        "px": 768,
+        "cols": 9
+      },
+      {
+        "name": "Desktop",
+        "px": 1024,
+        "cols": 12
+      }
+    ],
+    "order": 0,
+    "className": "",
+    "visible": "true",
+    "disabled": "false"
+  },
+  {
+    "id": "z08-grp-rooms",
+    "type": "ui-group",
+    "name": "Rooms (Ojo)",
+    "page": "z08-page-ops",
+    "width": 12,
+    "height": 1,
+    "order": 1,
+    "showTitle": true,
+    "className": "",
+    "visible": true,
+    "disabled": false,
+    "groupType": "default"
+  },
+  {
+    "id": "z08-grp-oreja",
+    "type": "ui-group",
+    "name": "Oreja · canal vivo",
+    "page": "z08-page-ops",
+    "width": 6,
+    "height": 1,
+    "order": 2,
+    "showTitle": true,
+    "className": "",
+    "visible": true,
+    "disabled": false,
+    "groupType": "default"
+  },
+  {
+    "id": "z08-grp-taxonomia",
+    "type": "ui-group",
+    "name": "Taxonomía sys/app/ui/agent/game",
+    "page": "z08-page-ops",
+    "width": 6,
+    "height": 1,
+    "order": 3,
+    "showTitle": true,
+    "className": "",
+    "visible": true,
+    "disabled": false,
+    "groupType": "default"
+  },
+  {
+    "id": "z08-grp-fleet",
+    "type": "ui-group",
+    "name": "Fleet MCP · snapshot",
+    "page": "z08-page-ops",
+    "width": 6,
+    "height": 1,
+    "order": 4,
+    "showTitle": true,
+    "className": "",
+    "visible": true,
+    "disabled": false,
+    "groupType": "default"
+  },
+  {
+    "id": "z08-grp-volumen",
+    "type": "ui-group",
+    "name": "Volumen · browsers",
+    "page": "z08-page-ops",
+    "width": 6,
+    "height": 1,
+    "order": 5,
+    "showTitle": true,
+    "className": "",
+    "visible": true,
+    "disabled": false,
+    "groupType": "default"
+  },
+  {
+    "id": "z08-grp-dist-zigurat",
+    "type": "ui-group",
+    "name": "Distrito · Zigurat",
+    "page": "z08-page-ops",
+    "width": 4,
+    "height": 1,
+    "order": 10,
+    "showTitle": true,
+    "className": "",
+    "visible": true,
+    "disabled": false,
+    "groupType": "default"
+  },
+  {
+    "id": "z08-grp-dist-runtime",
+    "type": "ui-group",
+    "name": "Distrito · Runtime/MCP",
+    "page": "z08-page-ops",
+    "width": 4,
+    "height": 1,
+    "order": 11,
+    "showTitle": true,
+    "className": "",
+    "visible": true,
+    "disabled": false,
+    "groupType": "default"
+  },
+  {
+    "id": "z08-grp-dist-editores",
+    "type": "ui-group",
+    "name": "Distrito · Editores",
+    "page": "z08-page-ops",
+    "width": 4,
+    "height": 1,
+    "order": 12,
+    "showTitle": true,
+    "className": "",
+    "visible": true,
+    "disabled": false,
+    "groupType": "default"
+  },
+  {
+    "id": "z08-grp-dist-lore",
+    "type": "ui-group",
+    "name": "Distrito · Lore/voz",
+    "page": "z08-page-ops",
+    "width": 4,
+    "height": 1,
+    "order": 13,
+    "showTitle": true,
+    "className": "",
+    "visible": true,
+    "disabled": false,
+    "groupType": "default"
+  },
+  {
+    "id": "z08-grp-dist-red",
+    "type": "ui-group",
+    "name": "Distrito · Red/stream",
+    "page": "z08-page-ops",
+    "width": 4,
+    "height": 1,
+    "order": 14,
+    "showTitle": true,
+    "className": "",
+    "visible": true,
+    "disabled": false,
+    "groupType": "default"
+  },
+  {
+    "id": "z08-grp-dist-infra",
+    "type": "ui-group",
+    "name": "Distrito · Infra/UI",
+    "page": "z08-page-ops",
+    "width": 4,
+    "height": 1,
+    "order": 15,
+    "showTitle": true,
+    "className": "",
+    "visible": true,
+    "disabled": false,
+    "groupType": "default"
+  },
+  {
+    "id": "z08-zeus-core-config",
+    "type": "alephscript-core-config",
+    "name": "Zeus /runtime :3017",
+    "serverUrl": "ws://localhost:3017",
+    "namespace": "/runtime",
+    "authToken": "dev-secret",
+    "authRoom": "PUBLIC_ROOM",
+    "authUser": "nr-z08-oreja",
+    "reconnection": true,
+    "reconnectionAttempts": 20,
+    "reconnectionDelay": 2000,
+    "timeout": 10000
+  },
+  {
+    "id": "z08-rooms-external-config",
+    "type": "alephscript-rooms-config",
+    "name": "Zeus Rooms (external)",
+    "mode": "external",
+    "externalUrl": "http://localhost:3017",
+    "namespace": "/runtime",
+    "managedPort": 3010,
+    "managedHost": "127.0.0.1",
+    "pollIntervalMs": 5000
+  },
+  {
+    "id": "f1-inject-start",
+    "type": "inject",
+    "z": "z08-f1-oreja",
+    "name": "Auto-register on deploy",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": true,
+    "onceDelay": "1",
+    "topic": "CLIENT_REGISTER",
+    "payload": "{\"command\":\"register\"}",
+    "payloadType": "json",
+    "x": 190,
+    "y": 80,
+    "wires": [
+      [
+        "f1-client-public",
+        "f1-client-game"
+      ]
+    ]
+  },
+  {
+    "id": "f1-inject-poll-state",
+    "type": "inject",
+    "z": "z08-f1-oreja",
+    "name": "GET_SERVER_STATE 5s",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "5",
+    "crontab": "",
+    "once": true,
+    "onceDelay": "2",
+    "topic": "get_server_state",
+    "payload": "{\"command\":\"get_server_state\"}",
+    "payloadType": "json",
+    "x": 180,
+    "y": 140,
+    "wires": [
+      [
+        "f1-client-public"
+      ]
+    ]
+  },
+  {
+    "id": "f1-client-public",
+    "type": "alephscript-core-client",
+    "z": "z08-f1-oreja",
+    "name": "Oreja PUBLIC_ROOM",
+    "config": "z08-zeus-core-config",
+    "clientName": "nr-z08-oreja-public",
+    "session": "",
+    "clientType": "NodeRedOreja",
+    "defaultRoom": "PUBLIC_ROOM",
+    "autoRegister": true,
+    "autoSubscribe": true,
+    "features": "node-red,alephscript-core,visor-oreja",
+    "x": 430,
+    "y": 100,
+    "wires": [
+      [
+        "f1-filter-kinds"
+      ]
+    ]
+  },
+  {
+    "id": "f1-client-game",
+    "type": "alephscript-core-client",
+    "z": "z08-f1-oreja",
+    "name": "Oreja GAME_ROOM",
+    "config": "z08-zeus-core-config",
+    "clientName": "nr-z08-oreja-game",
+    "session": "",
+    "clientType": "NodeRedOreja",
+    "defaultRoom": "POZO_DEMO",
+    "autoRegister": true,
+    "autoSubscribe": true,
+    "features": "node-red,alephscript-core,visor-oreja",
+    "x": 430,
+    "y": 200,
+    "wires": [
+      [
+        "f1-filter-kinds"
+      ]
+    ]
+  },
+  {
+    "id": "f1-filter-kinds",
+    "type": "function",
+    "z": "z08-f1-oreja",
+    "name": "Filtrar state|track|ledger|SET_STATE + taxonomía",
+    "func": "// Patrón 3d-monitor channels.mjs (lectura; no se importa código).\nconst EVENT_CHANNEL = {\n  PING: 'sys', PONG: 'sys',\n  HORSE: 'agent', RABBIT: 'agent', SPIDER: 'agent',\n  'selection:cast': 'game',\n  SET_STATE: 'ui', ROOM_MESSAGE: 'app',\n  state: 'game', track: 'game', ledger: 'game', intent: 'game'\n};\n\nconst topic = String(msg.topic || '');\nconst payload = msg.payload;\nconst innerEvent = (payload && typeof payload === 'object' && payload.event)\n  ? String(payload.event)\n  : topic;\n\nconst WATCH = new Set(['state', 'track', 'ledger', 'SET_STATE', 'ROOM_MESSAGE']);\nconst kind = (payload && payload.kind) || (payload && payload.data && payload.data.kind) || null;\nconst isKind = kind && ['state', 'track', 'ledger', 'intent'].includes(String(kind));\nconst isWatch = WATCH.has(topic) || WATCH.has(innerEvent) || isKind;\n\nif (!isWatch && topic !== 'auth_error') {\n  return null;\n}\n\nconst channel = EVENT_CHANNEL[innerEvent] || EVENT_CHANNEL[topic] || (isKind ? 'game' : 'app');\nconst counts = context.get('taxonomy') || { sys: 0, app: 0, ui: 0, agent: 0, game: 0 };\ncounts[channel] = (counts[channel] || 0) + 1;\ncontext.set('taxonomy', counts);\n\nconst line = {\n  at: new Date().toISOString(),\n  topic,\n  innerEvent,\n  kind,\n  channel,\n  room: (payload && (payload.room || payload.data && payload.data.room)) || null,\n  from: msg.alephscript && msg.alephscript.clientName\n};\n\nconst recent = context.get('recent') || [];\nrecent.unshift(line);\nif (recent.length > 40) recent.length = 40;\ncontext.set('recent', recent);\n\nmsg.payload = { line, recent, taxonomy: counts };\nmsg.topic = 'oreja:' + channel;\nreturn msg;",
+    "outputs": 1,
+    "timeout": "",
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 720,
+    "y": 140,
+    "wires": [
+      [
+        "f1-debug",
+        "f1-ui-oreja",
+        "f1-ui-taxonomia"
+      ]
+    ]
+  },
+  {
+    "id": "f1-debug",
+    "type": "debug",
+    "z": "z08-f1-oreja",
+    "name": "Oreja events",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": true,
+    "complete": "payload.line",
+    "targetType": "msg",
+    "statusVal": "payload.line.channel",
+    "statusType": "auto",
+    "x": 1000,
+    "y": 80,
+    "wires": []
+  },
+  {
+    "id": "f1-ui-oreja",
+    "type": "ui-template",
+    "z": "z08-f1-oreja",
+    "group": "z08-grp-oreja",
+    "name": "Últimos eventos Oreja",
+    "order": 1,
+    "width": 6,
+    "height": 6,
+    "head": "",
+    "format": "<template>\n  <div style=\"font:12px/1.4 ui-monospace,monospace;white-space:pre-wrap;max-height:280px;overflow:auto\">\n    <div v-for=\"(r,i) in (msg?.payload?.recent || [])\" :key=\"i\">\n      [{{ r.channel }}] {{ r.at }} · {{ r.topic }}/{{ r.innerEvent }} · room={{ r.room }}\n    </div>\n    <div v-if=\"!(msg?.payload?.recent||[]).length\">Esperando state|track|ledger|SET_STATE de :3017…</div>\n  </div>\n</template>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1020,
+    "y": 140,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "f1-ui-taxonomia",
+    "type": "ui-template",
+    "z": "z08-f1-oreja",
+    "group": "z08-grp-taxonomia",
+    "name": "Contadores canal",
+    "order": 1,
+    "width": 6,
+    "height": 4,
+    "head": "",
+    "format": "<template>\n  <div style=\"display:grid;grid-template-columns:repeat(5,1fr);gap:8px;font:13px/1.3 system-ui,sans-serif\">\n    <div v-for=\"k in ['sys','app','ui','agent','game']\" :key=\"k\" style=\"padding:8px;border:1px solid #334155;border-radius:6px;text-align:center\">\n      <div style=\"opacity:.7;text-transform:uppercase;font-size:11px\">{{ k }}</div>\n      <div style=\"font-size:22px;font-weight:600\">{{ (msg?.payload?.taxonomy||{})[k] || 0 }}</div>\n    </div>\n  </div>\n</template>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1010,
+    "y": 200,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "f1-comment",
+    "type": "comment",
+    "z": "z08-f1-oreja",
+    "name": "F1 Oreja · zeus :3017 /runtime · PUBLIC_ROOM + POZO_DEMO",
+    "info": "Auth fabric: {token:'dev-secret', room:'PUBLIC_ROOM', user:'nr-z08-oreja'}.\nGAME_ROOM por defecto POZO_DEMO (override ZEUS_GAME_ROOM / ZEUS_POZO_ROOM).\nSolo escucha; F4 (Mano) emitirá intents — fuera de este lote.",
+    "x": 280,
+    "y": 40,
+    "wires": []
+  },
+  {
+    "id": "f2-refresh",
+    "type": "inject",
+    "z": "z08-f2-ojo",
+    "name": "Refresh rooms 5s",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "5",
+    "crontab": "",
+    "once": true,
+    "onceDelay": "1",
+    "topic": "get_server_state",
+    "payload": "",
+    "payloadType": "date",
+    "x": 180,
+    "y": 120,
+    "wires": [
+      [
+        "f2-rooms-server"
+      ]
+    ]
+  },
+  {
+    "id": "f2-rooms-server",
+    "type": "alephscript-rooms-server",
+    "z": "z08-f2-ojo",
+    "name": "Rooms Server → zeus",
+    "config": "z08-rooms-external-config",
+    "requestStateOnDeploy": true,
+    "x": 420,
+    "y": 120,
+    "wires": [
+      [
+        "f2-rooms-dashboard",
+        "f2-debug"
+      ]
+    ]
+  },
+  {
+    "id": "f2-rooms-dashboard",
+    "type": "alephscript-rooms-dashboard",
+    "z": "z08-f2-ojo",
+    "name": "Rooms Dashboard (Ojo)",
+    "config": "z08-rooms-external-config",
+    "group": "z08-grp-rooms",
+    "order": 0,
+    "width": 12,
+    "height": 10,
+    "title": "Zeus mesh · clients/rooms",
+    "defaultRoom": "PUBLIC_ROOM",
+    "x": 680,
+    "y": 120,
+    "wires": [
+      [
+        "f2-rooms-server",
+        "f2-debug"
+      ]
+    ]
+  },
+  {
+    "id": "f2-debug",
+    "type": "debug",
+    "z": "z08-f2-ojo",
+    "name": "Rooms events",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "x": 930,
+    "y": 180,
+    "wires": []
+  },
+  {
+    "id": "f2-comment",
+    "type": "comment",
+    "z": "z08-f2-ojo",
+    "name": "F2 Ojo · dashboard-2-alephscript-rooms · external :3017",
+    "info": "mode=external · externalUrl=http://localhost:3017 · namespace=/runtime.\nNo embebe mesh propio (eso sería mini-clon Z09).",
+    "x": 290,
+    "y": 40,
+    "wires": []
+  },
+  {
+    "id": "f3-tick",
+    "type": "inject",
+    "z": "z08-f3-ciudad",
+    "name": "Refresh REST 5s",
+    "props": [
+      {
+        "p": "payload"
+      }
+    ],
+    "repeat": "5",
+    "crontab": "",
+    "once": true,
+    "onceDelay": "1.5",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 160,
+    "y": 100,
+    "wires": [
+      [
+        "f3-http-snapshot",
+        "f3-http-servers",
+        "f3-http-firehose",
+        "f3-http-cache-stats",
+        "f3-http-cache-lineas"
+      ]
+    ]
+  },
+  {
+    "id": "f3-http-snapshot",
+    "type": "http request",
+    "z": "z08-f3-ciudad",
+    "name": "GET :3014/snapshot",
+    "method": "GET",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "http://localhost:3014/snapshot",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": true,
+    "headers": [],
+    "x": 400,
+    "y": 40,
+    "wires": [
+      [
+        "f3-tag-snapshot"
+      ]
+    ]
+  },
+  {
+    "id": "f3-http-servers",
+    "type": "http request",
+    "z": "z08-f3-ciudad",
+    "name": "GET :3012/api/mcp/servers",
+    "method": "GET",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "http://localhost:3012/api/mcp/servers",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": true,
+    "headers": [],
+    "x": 420,
+    "y": 100,
+    "wires": [
+      [
+        "f3-tag-servers"
+      ]
+    ]
+  },
+  {
+    "id": "f3-http-firehose",
+    "type": "http request",
+    "z": "z08-f3-ciudad",
+    "name": "GET :3016/api/stats",
+    "method": "GET",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "http://localhost:3016/api/stats",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": true,
+    "headers": [],
+    "x": 400,
+    "y": 160,
+    "wires": [
+      [
+        "f3-tag-firehose"
+      ]
+    ]
+  },
+  {
+    "id": "f3-http-cache-stats",
+    "type": "http request",
+    "z": "z08-f3-ciudad",
+    "name": "GET :3015/api/stats",
+    "method": "GET",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "http://localhost:3015/api/stats",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": true,
+    "headers": [],
+    "x": 400,
+    "y": 220,
+    "wires": [
+      [
+        "f3-tag-cache-stats"
+      ]
+    ]
+  },
+  {
+    "id": "f3-http-cache-lineas",
+    "type": "http request",
+    "z": "z08-f3-ciudad",
+    "name": "GET :3015/api/lineas",
+    "method": "GET",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "http://localhost:3015/api/lineas",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "insecureHTTPParser": false,
+    "authType": "",
+    "senderr": true,
+    "headers": [],
+    "x": 400,
+    "y": 280,
+    "wires": [
+      [
+        "f3-tag-cache-lineas"
+      ]
+    ]
+  },
+  {
+    "id": "f3-tag-snapshot",
+    "type": "function",
+    "z": "z08-f3-ciudad",
+    "name": "tag snapshot",
+    "func": "msg.parts = { id: 'ciudad-agg', type: 'object', key: 'snapshot' };\nmsg.topic = 'snapshot';\nif (msg.statusCode && msg.statusCode >= 400) {\n  msg.payload = { ok: false, statusCode: msg.statusCode, error: msg.payload };\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 640,
+    "y": 40,
+    "wires": [
+      [
+        "f3-join"
+      ]
+    ]
+  },
+  {
+    "id": "f3-tag-servers",
+    "type": "function",
+    "z": "z08-f3-ciudad",
+    "name": "tag servers",
+    "func": "msg.parts = { id: 'ciudad-agg', type: 'object', key: 'servers' };\nmsg.topic = 'servers';\nif (msg.statusCode && msg.statusCode >= 400) {\n  msg.payload = { ok: false, statusCode: msg.statusCode, error: msg.payload };\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 640,
+    "y": 100,
+    "wires": [
+      [
+        "f3-join"
+      ]
+    ]
+  },
+  {
+    "id": "f3-tag-firehose",
+    "type": "function",
+    "z": "z08-f3-ciudad",
+    "name": "tag firehose",
+    "func": "msg.parts = { id: 'ciudad-agg', type: 'object', key: 'firehose' };\nmsg.topic = 'firehose';\nif (msg.statusCode && msg.statusCode >= 400) {\n  msg.payload = { ok: false, statusCode: msg.statusCode, error: msg.payload };\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 640,
+    "y": 160,
+    "wires": [
+      [
+        "f3-join"
+      ]
+    ]
+  },
+  {
+    "id": "f3-tag-cache-stats",
+    "type": "function",
+    "z": "z08-f3-ciudad",
+    "name": "tag cacheStats",
+    "func": "msg.parts = { id: 'ciudad-agg', type: 'object', key: 'cacheStats' };\nmsg.topic = 'cacheStats';\nif (msg.statusCode && msg.statusCode >= 400) {\n  msg.payload = { ok: false, statusCode: msg.statusCode, error: msg.payload };\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 650,
+    "y": 220,
+    "wires": [
+      [
+        "f3-join"
+      ]
+    ]
+  },
+  {
+    "id": "f3-tag-cache-lineas",
+    "type": "function",
+    "z": "z08-f3-ciudad",
+    "name": "tag cacheLineas",
+    "func": "msg.parts = { id: 'ciudad-agg', type: 'object', key: 'cacheLineas' };\nmsg.topic = 'cacheLineas';\nif (msg.statusCode && msg.statusCode >= 400) {\n  msg.payload = { ok: false, statusCode: msg.statusCode, error: msg.payload };\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 650,
+    "y": 280,
+    "wires": [
+      [
+        "f3-join"
+      ]
+    ]
+  },
+  {
+    "id": "f3-join",
+    "type": "join",
+    "z": "z08-f3-ciudad",
+    "name": "Join REST 5",
+    "mode": "custom",
+    "build": "object",
+    "property": "payload",
+    "propertyType": "msg",
+    "key": "topic",
+    "joiner": "\\n",
+    "joinerType": "str",
+    "accumulate": false,
+    "timeout": "4",
+    "count": "5",
+    "reduceRight": false,
+    "reduceExp": "",
+    "reduceInit": "",
+    "reduceInitType": "",
+    "reduceFixup": "",
+    "x": 850,
+    "y": 160,
+    "wires": [
+      [
+        "f3-aggregate"
+      ]
+    ]
+  },
+  {
+    "id": "f3-aggregate",
+    "type": "function",
+    "z": "z08-f3-ciudad",
+    "name": "Agregar fleet + volumen + distritos",
+    "func": "const raw = msg.payload || {};\nconst snapshot = raw.snapshot || { ok: false };\nconst serversBody = raw.servers || {};\nconst firehose = raw.firehose || {};\nconst cacheStats = raw.cacheStats || {};\nconst cacheLineas = raw.cacheLineas || {};\n\nlet servers = [];\nif (Array.isArray(serversBody)) servers = serversBody;\nelse if (Array.isArray(serversBody.servers)) servers = serversBody.servers;\nelse if (serversBody && typeof serversBody === 'object' && serversBody.ok === false) servers = [];\nelse if (serversBody && typeof serversBody === 'object') {\n  servers = Object.keys(serversBody).filter(k => k !== 'ok' && k !== 'statusCode' && k !== 'error')\n    .map(id => ({ id, ...(typeof serversBody[id] === 'object' ? serversBody[id] : {}) }));\n}\n\nconst firehoseDown = !!(firehose && firehose.ok === false);\nconst cacheDown = !!(cacheStats && cacheStats.ok === false);\nconst bothDown = firehoseDown && cacheDown;\nlet volume = {\n  source: bothDown ? 'fixture' : 'live',\n  firehose,\n  cacheStats,\n  cacheLineas,\n  note: null,\n  stats: (cacheStats && cacheStats.stats) || cacheStats || firehose || { files: 0, volumes: [] }\n};\n\nif (bothDown) {\n  // Mirror fixtures/empty-volume-stats.json (Z01 blanda).\n  volume = {\n    ok: true,\n    source: 'fixture',\n    note: 'Z01 pendiente o browsers caídos — demo con volumen vacío (ver flows/fixtures/empty-volume-stats.json)',\n    volumes: [],\n    stats: { files: 0, bytes: 0, corpora: 0 },\n    lineas: [],\n    firehose,\n    cacheStats,\n    cacheLineas\n  };\n}\n\nconst DISTRICTS = {\n  'Zigurat': [/vscode/i, /zigurat/i, /extension/i],\n  'Runtime/MCP': [/mcp/i, /aaia/i, /copilot/i, /state.?machine/i, /novelist/i, /console/i, /editor/i],\n  'Editores': [/blockly/i, /wiring/i, /prolog/i, /typed/i, /workflow/i, /n8n/i, /hypergraph/i],\n  'Lore/voz': [/lore/i, /document/i, /onfalo/i, /vector/i, /asesor/i],\n  'Red/stream': [/stream/i, /bot.?hub/i, /blockchain/i, /network/i, /firehose/i],\n  'Infra/UI': [/vibe/i, /three/i, /ui.?sdk/i, /cache/i, /scriptorium/i, /vps/i]\n};\n\nconst byDistrict = {\n  'Zigurat': [], 'Runtime/MCP': [], 'Editores': [], 'Lore/voz': [], 'Red/stream': [], 'Infra/UI': [], 'Otros': []\n};\n\nfor (const s of servers) {\n  const label = String(s.id || s.name || s.label || JSON.stringify(s)).slice(0, 120);\n  let placed = false;\n  for (const [dist, patterns] of Object.entries(DISTRICTS)) {\n    if (patterns.some(re => re.test(label))) {\n      byDistrict[dist].push(label);\n      placed = true;\n      break;\n    }\n  }\n  if (!placed) byDistrict['Otros'].push(label);\n}\n\nconst health = snapshot.health || snapshot.monitor || {};\nconst summary = {\n  at: new Date().toISOString(),\n  snapshotOk: !(snapshot && snapshot.ok === false),\n  serversCount: servers.length,\n  volumeSource: volume.source,\n  volumeNote: volume.note || null,\n  volumeStats: volume.stats || cacheStats || firehose || null,\n  byDistrict,\n  snapshotHealth: health\n};\n\nmsg.payload = summary;\nmsg.ciudad = { snapshot, servers, volume, byDistrict, summary };\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 1060,
+    "y": 160,
+    "wires": [
+      [
+        "f3-debug",
+        "f3-ui-fleet",
+        "f3-ui-volumen",
+        "f3-ui-zigurat",
+        "f3-ui-runtime",
+        "f3-ui-editores",
+        "f3-ui-lore",
+        "f3-ui-red",
+        "f3-ui-infra"
+      ]
+    ]
+  },
+  {
+    "id": "f3-debug",
+    "type": "debug",
+    "z": "z08-f3-ciudad",
+    "name": "Ciudad agg",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": true,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "payload.serversCount",
+    "statusType": "auto",
+    "x": 1320,
+    "y": 60,
+    "wires": []
+  },
+  {
+    "id": "f3-ui-fleet",
+    "type": "ui-template",
+    "z": "z08-f3-ciudad",
+    "group": "z08-grp-fleet",
+    "name": "Fleet + snapshot",
+    "order": 1,
+    "width": 6,
+    "height": 5,
+    "head": "",
+    "format": "<template>\n  <div style=\"font:13px/1.4 system-ui,sans-serif\">\n    <div><b>servers</b>: {{ msg?.payload?.serversCount ?? '—' }}</div>\n    <div><b>snapshotOk</b>: {{ msg?.payload?.snapshotOk }}</div>\n    <div><b>at</b>: {{ msg?.payload?.at }}</div>\n    <pre style=\"font-size:11px;white-space:pre-wrap;max-height:160px;overflow:auto\">{{ JSON.stringify(msg?.payload?.snapshotHealth || {}, null, 2) }}</pre>\n  </div>\n</template>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1330,
+    "y": 120,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "f3-ui-volumen",
+    "type": "ui-template",
+    "z": "z08-f3-ciudad",
+    "group": "z08-grp-volumen",
+    "name": "Volumen",
+    "order": 1,
+    "width": 6,
+    "height": 5,
+    "head": "",
+    "format": "<template>\n  <div style=\"font:13px/1.4 system-ui,sans-serif\">\n    <div><b>source</b>: {{ msg?.payload?.volumeSource }}</div>\n    <div v-if=\"msg?.payload?.volumeNote\" style=\"opacity:.8\">{{ msg.payload.volumeNote }}</div>\n    <pre style=\"font-size:11px;white-space:pre-wrap;max-height:180px;overflow:auto\">{{ JSON.stringify(msg?.payload?.volumeStats || { volumes: [] }, null, 2) }}</pre>\n  </div>\n</template>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1310,
+    "y": 180,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "f3-ui-zigurat",
+    "type": "ui-template",
+    "z": "z08-f3-ciudad",
+    "group": "z08-grp-dist-zigurat",
+    "name": "Zigurat list",
+    "order": 1,
+    "width": 4,
+    "height": 3,
+    "head": "",
+    "format": "<template><pre style=\"font:11px/1.3 ui-monospace,monospace;white-space:pre-wrap\">{{ (msg?.payload?.byDistrict?.['Zigurat']||[]).join('\\n') || '(vacío)' }}</pre></template>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1320,
+    "y": 240,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "f3-ui-runtime",
+    "type": "ui-template",
+    "z": "z08-f3-ciudad",
+    "group": "z08-grp-dist-runtime",
+    "name": "Runtime list",
+    "order": 1,
+    "width": 4,
+    "height": 3,
+    "head": "",
+    "format": "<template><pre style=\"font:11px/1.3 ui-monospace,monospace;white-space:pre-wrap\">{{ (msg?.payload?.byDistrict?.['Runtime/MCP']||[]).join('\\n') || '(vacío)' }}</pre></template>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1320,
+    "y": 280,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "f3-ui-editores",
+    "type": "ui-template",
+    "z": "z08-f3-ciudad",
+    "group": "z08-grp-dist-editores",
+    "name": "Editores list",
+    "order": 1,
+    "width": 4,
+    "height": 3,
+    "head": "",
+    "format": "<template><pre style=\"font:11px/1.3 ui-monospace,monospace;white-space:pre-wrap\">{{ (msg?.payload?.byDistrict?.['Editores']||[]).join('\\n') || '(vacío)' }}</pre></template>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1320,
+    "y": 320,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "f3-ui-lore",
+    "type": "ui-template",
+    "z": "z08-f3-ciudad",
+    "group": "z08-grp-dist-lore",
+    "name": "Lore list",
+    "order": 1,
+    "width": 4,
+    "height": 3,
+    "head": "",
+    "format": "<template><pre style=\"font:11px/1.3 ui-monospace,monospace;white-space:pre-wrap\">{{ (msg?.payload?.byDistrict?.['Lore/voz']||[]).join('\\n') || '(vacío)' }}</pre></template>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1310,
+    "y": 360,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "f3-ui-red",
+    "type": "ui-template",
+    "z": "z08-f3-ciudad",
+    "group": "z08-grp-dist-red",
+    "name": "Red list",
+    "order": 1,
+    "width": 4,
+    "height": 3,
+    "head": "",
+    "format": "<template><pre style=\"font:11px/1.3 ui-monospace,monospace;white-space:pre-wrap\">{{ (msg?.payload?.byDistrict?.['Red/stream']||[]).join('\\n') || '(vacío)' }}</pre></template>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1310,
+    "y": 400,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "f3-ui-infra",
+    "type": "ui-template",
+    "z": "z08-f3-ciudad",
+    "group": "z08-grp-dist-infra",
+    "name": "Infra list",
+    "order": 1,
+    "width": 4,
+    "height": 3,
+    "head": "",
+    "format": "<template><pre style=\"font:11px/1.3 ui-monospace,monospace;white-space:pre-wrap\">{{ (msg?.payload?.byDistrict?.['Infra/UI']||[]).join('\\n') || '(vacío)' }}</pre></template>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 1310,
+    "y": 440,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "f3-comment",
+    "type": "comment",
+    "z": "z08-f3-ciudad",
+    "name": "F3 Ciudad · REST zeus + distritos + fixture Z01",
+    "info": "Dependencia blanda Z01: si browsers :3015/:3016 no responden o volúmenes vacíos, se usa fixtures/empty-volume-stats.json.\nDistritos etiquetados desde cantera/CIUDAD/01-BARRIOS/_INDICE.md (solo lectura).",
+    "x": 280,
+    "y": 40,
+    "wires": []
+  }
+]
