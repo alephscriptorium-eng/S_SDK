@@ -93,11 +93,9 @@ Z09/Z10; DC-GC-ceguera-marca).
 
 ## WPs (estado canónico)
 
-> Lote post-A1 (2026-07-20 → cerrado 2026-07-21): **Z14 · Z09 · Z10 ✅** —
-> proyección issues local-only. A1✅ desbloqueó Z10/Z06/Z12-f1.
-> Briefs: `plan/REPORTES/BRIEF-WP-Z14-procedencia-estados.md`,
-> `BRIEF-WP-Z09-miniclon-vps-rooms.md`,
-> `BRIEF-WP-Z10-viajes-wiki-linea.md`.
+> Lote GC-2 (GO 2026-07-21, §E REVISION-GC15): **Z03 · Z06 · Z08-f4..5 ·
+> Z12-f1 🔶** — briefs abajo. Z12-f1 soft-block hasta Z06 mergeado.
+> Issues: S_SDK #3 #6 #8 #12 (sync-map). Lote post-A1 Z14·Z09·Z10 ✅ cerrado.
 
 - ✅ **WP-Z01 · Pack mockdatas ciudad → firehose/cache-browser** — track PACK ·
   prio 1 · dep — · eje I (consumidores reales: los 2 browsers arrancados).
@@ -110,9 +108,11 @@ Z09/Z10; DC-GC-ceguera-marca).
   compartido con Z01. Ficha: [WP-Z02](WP-Z02-startpack-ciudad.md). Merged
   games-library `fab17c7` (+ puntero submodule). Publish npm/GitHub pendiente
   autorización. Eje IV diferido. **Remedio procedencia → Z14** (no reabre ✅).
-- ⬜ **WP-Z03 · Juego de engine `ciudad` (patrón pozo)** — track PACK · prio 2 ·
-  dep Z02 · eje IV diferido (segundos clientes del catálogo de intents: Z04 y
-  Z08). Ficha: [WP-Z03](WP-Z03-juego-ciudad.md).
+- 🔶 **WP-Z03 · Juego de engine `ciudad` (patrón pozo)** — track PACK · prio 2 ·
+  dep Z02 ✅ · eje IV diferido (segundos clientes: Z04 y Z08). **Asignado 🔶
+  2026-07-21** · lote GC-2 · brief
+  `plan/REPORTES/BRIEF-WP-Z03-juego-ciudad.md` · rama
+  `wp/gc-z03-juego-ciudad` · issue S_SDK #3. Ficha: [WP-Z03](WP-Z03-juego-ciudad.md).
 - ⬜ **WP-Z04 · Rabbits r/s/h como actores externos (e2e)** — track PACK · prio 2 ·
   dep Z03 (y Z06 para capacidad real) · eje IV (el peer externo ES el segundo
   cliente del contrato rooms/protocol). Ficha: [WP-Z04](WP-Z04-rabbits-rsh.md).
@@ -120,19 +120,22 @@ Z09/Z10; DC-GC-ceguera-marca).
   track ENGINE · prio 3 · disparo: Z08-f6 · eje IV por item; II si un item
   sustituye mecanismo vigente (destino canónico).
   Ficha: [WP-Z05](WP-Z05-engine-evoluciones.md).
-- ⬜ **WP-Z06 · `@zeus/mcp-launcher` — habilitador r/s/h + meta-ops** — track OPS ·
-  prio 2 · dep — · A1✅ (checkout zeus-sdk sano); **⬜ hasta ola GC-2** (sin brief) ·
-  eje I (consumidor real: linea-system+satélite arrancados por tool call).
-  Ficha: [WP-Z06](WP-Z06-mcp-launcher.md).
+- 🔶 **WP-Z06 · `@zeus/mcp-launcher` — habilitador r/s/h + meta-ops** — track OPS ·
+  prio 2 · dep — · A1✅ · eje I (linea-system+satélite por tool call).
+  **Asignado 🔶 2026-07-21** · lote GC-2 · brief
+  `plan/REPORTES/BRIEF-WP-Z06-mcp-launcher.md` · rama
+  `wp/gc-z06-mcp-launcher` · issue S_SDK #6. Ficha: [WP-Z06](WP-Z06-mcp-launcher.md).
 - ⬜ **WP-Z07 · Instancia dramaturgo `ciudad` (capa lectura)** — track PACK ·
   prio 4 · dep Z03 (ledger) · CA propios del kit (validador story-board).
   Ficha: [WP-Z07](WP-Z07-dramaturgo-ciudad.md).
 - ✅ **WP-Z08 · Constelación Node-RED: visor + coordinación + población (169)** —
   track VISOR · prio 2 · eje IV. **Lote GC-1 f1–f3 ✅** (Oreja/Ojo/Ciudad lectura;
-  pack `plan/SPRINTS/sprint-game-city/flows/` @ e3daee8). Caveats: re-validar
-  dashboard vivo con zeus :3017 (**A1✅**; re-smoke aún abierto); F3 volumen
-  tras H1; grep transparencia acotado a `packages/`. **f4+ pendiente** (GC-2/GC-3).
-  Ficha: [WP-Z08](WP-Z08-nodered-visor-ciudad.md).
+  pack `plan/SPRINTS/sprint-game-city/flows/` @ e3daee8). **f4–f5 🔶 GC-2**
+  (Mano + Ciudadano) — **Asignado 🔶 2026-07-21** · brief
+  `plan/REPORTES/BRIEF-WP-Z08-f4-f5-nodered-mano-ciudadano.md` · rama
+  `wp/gc-z08-f4-f5-nodered` · issue S_SDK #8. Apertura = re-smoke f1–f3 +
+  H1 :3015 (§E b). Caveats f1–f3: grep transparencia acotado a `packages/`.
+  **f6+ pendiente** (GC-3). Ficha: [WP-Z08](WP-Z08-nodered-visor-ciudad.md).
 - ✅ **WP-Z09 · Mini-clon local VPS Node-RED + pago deuda rooms** — track OPS ·
   prio 2 · dep — · eje I parcial (pins 0.3.0 + scripts; sin Docker vivo ni
   publish 0.3.x). Aterrizaje `miniclon/` (zeus-sdk A1). **Aceptado ✅**
@@ -157,12 +160,14 @@ Z09/Z10; DC-GC-ceguera-marca).
   V (gates de mutación visibles) + ceguera (el paquete no nombra marco/ciudad/
   NovelistEditor). Precondición: glosario «viaje» (regla 5). Asentado de oferta
   ronda 2 (2026-07-20). Ficha: [WP-Z11](WP-Z11-linea-editor.md).
-- ⬜ **WP-Z12 · Encendido del árbol de vida (lifecycle XState, start/stop real)** —
-  track ENGINE+OPS · prio 2 · **f1 en GC-2** (tras Z06; A1✅), f2/zonas en GC-3 ·
-  dep Z06 (actuadores; Z12 = cerebro, Z06 = brazo) + Z02 (sección `arbol`/catálogo
-  en seeds) + Z03 (round-trip `wake`); alimenta Z08-f4 y Z13 · ejes I/IV/III +
-  ceguera. **⬜ hasta ola** (sin brief). Fusión r3 + r3-b.
-  Ficha: [WP-Z12](WP-Z12-encendido-arbol-vida.md).
+- 🔶 **WP-Z12 · Encendido del árbol de vida (lifecycle XState, start/stop real)** —
+  track ENGINE+OPS · prio 2 · **f1 en GC-2** · dep Z06 (actuadores) + Z02 ✅ +
+  Z03 (round-trip `wake`) · ejes I/IV/III + ceguera. **Asignado 🔶 2026-07-21**
+  · brief `plan/REPORTES/BRIEF-WP-Z12-f1-encendido-arbol-vida.md` · rama
+  `wp/gc-z12-f1-arbol-vida` · issue S_SDK #12. **Bloqueado soft hasta Z06
+  mergeado** (frontera actuador/comportamiento §E c); despacho worker tras
+  Z06 ✅ (Z03 en paralelo OK para contrato wake stub si hace falta). Fusión
+  r3 + r3-b. Ficha: [WP-Z12](WP-Z12-encendido-arbol-vida.md).
 - ⬜ **WP-Z13 · Los tres jugadores: fusión en la trama del SDK** — track PACK
   (lore+flujos) · prio 3 · ola GC-3 · dep Z12-f1 (residentes = edificios en
   `running`) + Z03 + Z04; gancho Z07/Z11 · ejes IV (contrato de mapeo con 2
