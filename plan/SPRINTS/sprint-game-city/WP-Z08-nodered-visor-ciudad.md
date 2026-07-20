@@ -15,7 +15,7 @@
 sin nodo central. Cada instancia Node-RED orquesta un ámbito (un Node-RED las
 ciudades/distritos, otro los locales, otro la plaza/ops…) y hospeda a su población de
 ciudadanos-agentes. Meta: los **169 ciudadanos** del censo
-(`TEMP\material\CIUDAD\GRAFO\print-agentes.txt`) pululando por el mapa.
+(`cantera\CIUDAD\GRAFO\print-agentes.txt`) pululando por el mapa.
 
 **Regla de transparencia:** el juego no sabe que los actores viven en Node-REDs. La
 authority solo ve clients en rooms emitiendo intents con envelope `@zeus/protocol`

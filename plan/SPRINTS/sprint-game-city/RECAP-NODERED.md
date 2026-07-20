@@ -11,7 +11,7 @@ El plan original (Z08 v1) imaginaba UN Node-RED mirando la ciudad. El plan nuevo
 **varios Node-REDs sincronizados con el gamemap, cada uno orquestando un ámbito** —
 uno las ciudades/distritos, otro los locales, otro la plaza/ops… — sin nodo central.
 
-- **Población:** el censo de la ciudad (`TEMP\material\CIUDAD\GRAFO\print-agentes.txt`)
+- **Población:** el censo de la ciudad (`cantera\CIUDAD\GRAFO\print-agentes.txt`)
   da **169 edificios agénticos** (`.agent.md`/`.chatmode.md`) — no 162. El objetivo es
   verlos a todos **pululando**: cada ciudadano = un cliente del mesh (patrón
   `alephscript-rooms-agent-dummy` como títere mínimo; subflows como plantilla de

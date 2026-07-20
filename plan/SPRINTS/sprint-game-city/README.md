@@ -46,8 +46,9 @@ BACKLOG. Su orquestador puede saber que existe este sprint; la mediación es abi
 La cantera vive **versionada como anexo del sprint** en [`cantera/`](cantera/)
 (`CIUDAD\` 56 ficheros ~405 KB + `zeus-notas\` 7): decisión tomada 2026-07-20
 (aporte 1 del feedback aleph) — el sprint ya no depende de una carpeta temporal
-(regla 15 del skill: fuente de verdad en git). `TEMP\material\` queda como origen
-histórico, sin autoridad; si divergen, manda `cantera/`. Sigue vigente la regla 4:
+(regla 15 del skill: fuente de verdad en git). El temporal de origen (movido a
+`TEMP\draft\material\`) queda **sin autoridad**; si divergen, manda `cantera/` —
+y ningún WP debe apuntar ya al temporal. Sigue vigente la regla 4:
 **ningún runtime lee la cantera** — los generadores (Z01/Z02) la transforman en
 datos del repo destino. Codebases externas citadas con ruta absoluta
 (`WiringEditor`, `ScriptoriumVps`, …) siguen siendo referencia de solo lectura.

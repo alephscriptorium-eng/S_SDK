@@ -6,7 +6,7 @@
 | track / prio | PACK / 1 |
 | depende de | — (cero código de engine; el WP de arranque) |
 | base zeus | `packages\mesh\firehose-browser` (`@zeus/firehose-browser` — microposts sobre DISK_01) · `packages\mesh\cache-browser` (`@zeus/cache-browser` — árbol DISK_02/LINEAS, double-viewer dispatch) |
-| cantera | `TEMP\material\CIUDAD\` (fichas, MAPA.md, `GRAFO\handoffs*.tsv` — 513 edges) |
+| cantera | `cantera\CIUDAD\` (fichas, MAPA.md, `GRAFO\handoffs*.tsv` — 513 edges) — anexada en el sprint |
 
 ## Objetivo
 

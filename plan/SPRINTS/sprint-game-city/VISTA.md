@@ -15,9 +15,9 @@
 | Todo subordinado al hueco 05-06 (juntura, INVENTARIO) | El pack ciudad vale **por sí mismo**; retroalimentar a aleph es opcional aguas abajo |
 | Canal único = registry (DS-0) | Consumo directo en disco: los submódulos son hermanos de trabajo |
 
-Cantera de datos: `TEMP\material\CIUDAD\` (24 fichas de barrios, MAPA.md, grafo de 513
-handoffs) y `TEMP\material\zeus-notas\` (fleet MCP, agujero negro, monigotil, launcher)
-— externa y sin trackear, ver aviso en [README.md](README.md).
+Cantera de datos: `cantera\CIUDAD\` (24 fichas de barrios, MAPA.md, grafo de 513
+handoffs) y `cantera\zeus-notas\` (fleet MCP, agujero negro, monigotil, launcher)
+— **anexada y versionada** en el sprint (`cantera/`; ver [README.md](README.md)).
 
 ## 2. Restricciones que CAEN (no cruzan a este sprint)
 
@@ -69,8 +69,8 @@ requiere tocar aleph-scriptorium.
 | `TEMP\block1.md` §5 | Recon zeus verificado: fleet publicada, CI verde, games library | contexto general |
 | `TEMP\block1.md` §4 | Censo estados vivo/latente/muerto/roto de las 24 zonas | **como datos** de seeds/mockdatas (Z01, Z02) |
 | `TEMP\block2.md` §2 | Idea fuerza de las 6 notas; dato Z_SDK-games-library | Z01–Z06 |
-| `TEMP\material\zeus-notas\` 1–5 | Monigotil/GLB, agujero negro MCP↔REST, fleet MCP + puertos, hueco Launcher | Z01, Z05, Z06 |
-| `TEMP\material\CIUDAD\` | MAPA.md (topología), 24 fichas, grafo handoffs.tsv (513 edges), censo agéntico **169** | cantera de Z01, Z02, Z08 |
+| `cantera\zeus-notas\` (ex `TEMP\material\`) 1–5 | Monigotil/GLB, agujero negro MCP↔REST, fleet MCP + puertos, hueco Launcher | Z01, Z05, Z06 |
+| `cantera\CIUDAD\` (ex `TEMP\material\`) | MAPA.md (topología), 24 fichas, grafo handoffs.tsv (513 edges), censo agéntico **169** | cantera de Z01, Z02, Z08 |
 | `WiringEditor\packages\` (aleph, disco) | Nodos `contrib-core`/`dashboard-2-rooms` 0.2.0, flows de ejemplo, notas federación | Z08, Z09, RECURSOS-LIBS |
 | `ScriptoriumVps` + `OASIS_PUB` (aleph, disco) | Anatomía deploy nodered, flows server/cliente, switch, deuda | Z09, RECURSOS-LIBS |
 | Registry Verdaccio (vivo) | 27 paquetes locales: 21 `@zeus/*`, 4 `@alephscript/*`, 2 node-red | RECURSOS-LIBS §4 |

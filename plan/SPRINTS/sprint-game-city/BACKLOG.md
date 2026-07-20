@@ -119,9 +119,9 @@ block2 §6 —
    MCPLauncherServer y los pythons de NETWORK-ENGINE son referencia, nunca dependencia.
 3. **Transparencia para el juego** (Z08): la authority no lleva código Node-RED-aware;
    si un WP lo necesitara, es señal de diseño roto — parar y reabrir el WP.
-4. **Cantera → repo:** ningún runtime lee la cantera (anexada en `cantera/`;
-   `TEMP\material\` = origen histórico sin autoridad) — los generadores (Z01/Z02)
-   copian/transforman a datos versionados del repo destino.
+4. **Cantera → repo:** ningún runtime lee la cantera (anexada en `cantera/`; el
+   temporal de origen, sin autoridad, movido a `TEMP\draft\material\`) — los
+   generadores (Z01/Z02) copian/transforman a datos versionados del repo destino.
 5. **Glosario «viaje» (precondición de Z10/Z11 — micro-acción 1, ronda 2):**
    «**viaje**» = camino origen→destino sobre un grafo (sentido Z10; el que va a
    APIs nuevas). El sentido histórico de `linea-system` («campaña de llenado de
