@@ -83,9 +83,7 @@ Z09/Z10; DC-GC-ceguera-marca).
   (`rmdir` long-path / custodio). No lo usan Z09/Z14.
 - **H1 (abierto):** reiniciar cache-browser `:3015` contra checkout actual
   (`ZEUS_VOLUMES_ROOT`) — **precondición de apertura Z08-f4** (§E b).
-- **Publish GL / push tip (abierto, §E a):** push games-library + SCRIPT_SDK
-  (tip ahead ~33) + runner limpio — **gate temprano de ola GC-2**, no de
-  apertura de briefs. Desbloquea D2 (publish 0.3.x Z09).
+- **Publish GL / push tip (✅ tip remoto 2026-07-21, §E a):** push tip 2026-07-21 · S_SDK `ce56d04` · GL `8a39ece` · zeus `29e9d49`. CI: GL success; zeus CI/Release fail (`npm ci` lock — falta `@zeus/linea-kit@0.2.0`); S_SDK Docs sin run en tip (0 workflows). **Gate tip remoto satisfecho**; residual runner limpio / D2 publish 0.3.x Z09.
 - **Re-smoke Z08 (abierto, prosa → CA de Z08-f4):** dashboard vivo zeus
   `:3017` tras A1✅ — **apertura obligatoria del BRIEF Z08-f4** (§E b).
 - **Higiene doc post-TEMP (§E cola):** VISTA §5 → `CENSO-ESTADOS.md`; README
