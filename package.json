@@ -12,7 +12,8 @@
     "docs:build": "vitepress build docs",
     "skills:sync": "node scripts/sync-claude-skills.mjs",
     "changelog:check": "node node_modules/@alephscript/skills-scriptorium/skills/swarm-orquestacion/scripts/verificar-changelog.mjs --role gobierno --backlog plan/BACKLOG.md --changelog CHANGELOG.md --version I7",
-    "scrum:preview": "node node_modules/@alephscript/skills-scriptorium/skills/swarm-orquestacion/scripts/proyectar-backlog.mjs export --dry-run --backlog plan/BACKLOG.md --map plan/.sync-map.json"
+    "scrum:preview": "node node_modules/@alephscript/skills-scriptorium/skills/swarm-orquestacion/scripts/proyectar-backlog.mjs export --dry-run --backlog plan/BACKLOG.md --map plan/.sync-map.json",
+    "scrum:preview:city": "node node_modules/@alephscript/skills-scriptorium/skills/swarm-orquestacion/scripts/proyectar-backlog.mjs export --dry-run --backlog plan/SPRINTS/sprint-game-city/BACKLOG.md --map plan/SPRINTS/sprint-game-city/.sync-map.json --alcance todos"
   },
   "devDependencies": {
     "@alephscript/skills-scriptorium": "0.x",
