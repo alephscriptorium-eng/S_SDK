@@ -16,7 +16,7 @@
   matices en §Replan post-vigía. Z09 entra en lote inmediato.
 **Ola GC-1.5 (cerrada 2026-07-21):** Z14 · Z09 ✅ — paralelo; paths no se pisan.
   **Tick A1 cerrado** → Z10 brief → **Z10 ✅** (cierra lote post-A1 Z14+Z09+Z10).
-**Ola GC-2 (GO 2026-07-21, vigía §E):** Z03 · Z06 · Z08-f4..5 · Z12-f1 —
+**Ola GC-2 (GO 2026-07-21, vigía §E):** Z03 ✅ · Z06 · Z08-f4..5 · Z12-f1 —
   abrir en paralelo acotado; Z12-f1 soft-block hasta Z06 (ver §Replan GC-1.5).
 **Ola GC-3 (federación y población):** Z04 · Z07 · Z08-f6..7 · Z11 (tras Z04/Z06) ·
 Z12-f2 (cascada/zonas) · Z13 (tras Z12-f1 y Z03) · Z05 (por items, cuando duela)
@@ -91,7 +91,7 @@ Z09/Z10; DC-GC-ceguera-marca).
 
 ## WPs (estado canónico)
 
-> Lote GC-2 (GO 2026-07-21, §E REVISION-GC15): **Z03 · Z06 · Z08-f4..5 ·
+> Lote GC-2 (GO 2026-07-21, §E REVISION-GC15): **Z03 ✅ · Z06 · Z08-f4..5 ·
 > Z12-f1 🔶** — briefs abajo. Z12-f1 soft-block hasta Z06 mergeado.
 > Issues: S_SDK #3 #6 #8 #12 (sync-map). Lote post-A1 Z14·Z09·Z10 ✅ cerrado.
 
@@ -106,11 +106,13 @@ Z09/Z10; DC-GC-ceguera-marca).
   compartido con Z01. Ficha: [WP-Z02](WP-Z02-startpack-ciudad.md). Merged
   games-library `fab17c7` (+ puntero submodule). Publish npm/GitHub pendiente
   autorización. Eje IV diferido. **Remedio procedencia → Z14** (no reabre ✅).
-- 🔶 **WP-Z03 · Juego de engine `ciudad` (patrón pozo)** — track PACK · prio 2 ·
-  dep Z02 ✅ · eje IV diferido (segundos clientes: Z04 y Z08). **Asignado 🔶
-  2026-07-21** · lote GC-2 · brief
-  `plan/REPORTES/BRIEF-WP-Z03-juego-ciudad.md` · rama
-  `wp/gc-z03-juego-ciudad` · issue S_SDK #3. Ficha: [WP-Z03](WP-Z03-juego-ciudad.md).
+- ✅ **WP-Z03 · Juego de engine `ciudad` (patrón pozo)** — track PACK · prio 2 ·
+  dep Z02 ✅ · eje I ✅ · IV diferido (segundos clientes: Z04 y Z08). Pack
+  `@zeus/ciudad` · games-library `0d7d821` (+ puntero submodule). **Aceptado ✅**
+  2026-07-21 (orquestador): e2e join→walk→wake + smoke; horse físico = gap Z06.
+  Brief: [BRIEF-WP-Z03](../../REPORTES/BRIEF-WP-Z03-juego-ciudad.md). Ficha:
+  [WP-Z03](WP-Z03-juego-ciudad.md). Reporte:
+  [WP-Z03](../../REPORTES/WP-Z03-juego-ciudad.md).
 - ⬜ **WP-Z04 · Rabbits r/s/h como actores externos (e2e)** — track PACK · prio 2 ·
   dep Z03 (y Z06 para capacidad real) · eje IV (el peer externo ES el segundo
   cliente del contrato rooms/protocol). Ficha: [WP-Z04](WP-Z04-rabbits-rsh.md).
