@@ -6,7 +6,7 @@
 | fecha | 2026-07-20 |
 | rama | `wp/gc-z09-miniclon-vps-rooms` |
 | worktree | `.claude/worktrees/gc-z09-miniclon-vps-rooms` |
-| commits | _(ver SHA al pie / `git log -1`)_ |
+| commits | `3b26abce5e94516cb6b50e3febfdf576d1337cb7` |
 | eje(s) CA | I (nodos 0.3.x desde registry como consumidor; dashboard rooms) |
 | estado propuesto | listo para revisión (parcial: Docker + smoke vivo deferred; publish 0.3.x auth local pendiente) |
 
@@ -61,6 +61,9 @@ node-red-dashboard-2-alephscript-rooms 0.3.0 ^1.5.0
 # registry (lectura, sin auth)
 curl …/node-red-contrib-alephscript-core → versions: 0.2.0
 curl …/@alephscript/mcp-core-sdk/1.5.0 → HTTP 200
+
+# pack local (core) — artifacts gitignored
+tgz node-red-contrib-alephscript-core 0.3.0 ^1.5.0
 
 # auth local
 npm whoami --registry https://npm.scriptorium.escrivivir.co → ENEEDAUTH
