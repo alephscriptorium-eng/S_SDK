@@ -2,12 +2,13 @@
 
 | dato | valor |
 |---|---|
-| estado | ⬜ |
 | track / prio | VISOR / 2 |
 | depende de | — (fases 1-3 contra zeus tal cual); f6 población plena empuja Z05 items 1-2; sinergias: Z01 (browsers), Z03 (juego), Z09 (switch/clon), Z10 (caminos) |
 | piezas | `node-red-contrib-alephscript-core@0.2.0` + `node-red-dashboard-2-alephscript-rooms@0.2.0` (Verdaccio; fuentes en `WiringEditor\packages\`) — ver [RECURSOS-LIBS](RECURSOS-LIBS.md) §0-2 |
 | enganche clave | **mismo protocolo**: los nodos hablan `@alephscript/mcp-core-sdk` y el socket-server de zeus (`packages\mesh\socket-server`, :3017, ns `/runtime`, auth `{token:'dev-secret',room,user}`) es un wrapper del mismo SDK. Conexión directa, sin adaptador. |
 | redefinición | ver [RECAP-NODERED](RECAP-NODERED.md) §1 — de un visor central a **constelación sin centro** |
+
+> **Estado canónico:** solo en [BACKLOG.md](BACKLOG.md). Esta ficha no lleva glifo de estado.
 
 ## Objetivo
 
@@ -80,6 +81,11 @@ authority solo ve clients en rooms emitiendo intents con envelope `@zeus/protoco
 
 ## Notas
 
+- Transparencia (regla 3): al verificar «cero Node-RED-aware en authority»,
+  acotar `rg` a `packages/` (no al árbol entero del monorepo: prosa en
+  `plan/DATOS.md` y worktrees stale no cuentan).
+- Caveat ops post GC-1: re-smoke dashboard vivo contra zeus :3017 y
+  cache-browser :3015 apuntando al checkout actual (tick A1 + H1 vigía).
 - El visor NO sustituye a browsers ni 3d-monitor: es la capa de ops/población cableable.
 - Con el switch de Z09, cualquier instancia apunta a zeus local (:3017), al mini-clon
   (:3010) o al VPS (`wss://rooms.scriptorium.escrivivir.co`) cambiando `serverUrl`.

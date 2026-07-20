@@ -2,11 +2,12 @@
 
 | dato | valor |
 |---|---|
-| estado | ⬜ |
 | track / prio | PACK / 1 |
 | depende de | — (cero código de engine; el WP de arranque) |
 | base zeus | `packages\mesh\firehose-browser` (`@zeus/firehose-browser` — microposts sobre DISK_01) · `packages\mesh\cache-browser` (`@zeus/cache-browser` — árbol DISK_02/LINEAS, double-viewer dispatch) |
 | cantera | `cantera\CIUDAD\` (fichas, MAPA.md, `GRAFO\handoffs*.tsv` — 513 edges) — anexada en el sprint |
+
+> **Estado canónico:** solo en [BACKLOG.md](BACKLOG.md). Esta ficha no lleva glifo de estado.
 
 ## Objetivo
 
@@ -45,3 +46,6 @@ firehose browser y el cache browser».
 - Es también banco de pruebas para Z02/Z03: los mismos datos que aquí son microposts y
   árbol, en el startpack son `seeds/gamemap.json`. Un solo modelo fuente, tres vistas.
 - Contrastar con `spec\openapi.yaml` de cada browser antes de inventar formato.
+- **Post GC-1 (vigía):** ✅ sostenido. Caveat ops H1: reiniciar `cache-browser` :3015
+  contra el checkout actual (proceso huérfano apuntaba a worktree borrado) — no reabre
+  el WP; ver BACKLOG §Bloqueos / notas ops.

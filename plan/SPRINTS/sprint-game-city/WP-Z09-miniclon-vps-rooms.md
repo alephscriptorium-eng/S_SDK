@@ -2,11 +2,12 @@
 
 | dato | valor |
 |---|---|
-| estado | ⬜ |
 | track / prio | OPS / 2 |
 | depende de | — (independiente; Z08 lo aprovecha vía switch) |
 | fuentes | `ScriptoriumVps\PATTERN-DOCKER\` (Dockerfile nodered, settings.js, compose, `node-red-contribs.json`), `ScriptoriumVps\node-red-projects\` (flows `rooms-mvp-candidate`, `pub-room-client`), `WiringEditor\packages\` (fuentes de los contribs) — detalle en [RECURSOS-LIBS](RECURSOS-LIBS.md) §3 y §6 |
 | deuda que salda | el VPS lleva nodos-cliente de backends que nunca se conectaron; los contribs no están horneados en la imagen; los nodos publican contra SDK `^1.4.0` mientras zeus ya está en `^1.5.0`; y el mundo zeus (:3017) y el fabric rooms del VPS (:3010) son dos islas del mismo protocolo |
+
+> **Estado canónico:** solo en [BACKLOG.md](BACKLOG.md). Esta ficha no lleva glifo de estado.
 
 ## Objetivo
 

@@ -2,11 +2,12 @@
 
 | dato | valor |
 |---|---|
-| estado | ⬜ |
 | track / prio | PACK / 1 |
 | depende de | — (paralelo a Z01; comparte modelo fuente) |
 | base zeus | games-library `packages\startpack-*` (patrón manifest `zeus.startpack/v0` + `seeds/gamemap.json`); `startpack-plaza` ya existe — **revisar solape antes de crear** |
-| cantera | `cantera\CIUDAD\MAPA.md` (topología) + censo de estados (block1 §4, como datos) |
+| cantera | `cantera\CIUDAD\MAPA.md` (topología) + censo de estados (fuente versionada vía [WP-Z14](WP-Z14-procedencia-estados.md); hasta Z14, seeds llevan el atributo sin cita de cantera) |
+
+> **Estado canónico:** solo en [BACKLOG.md](BACKLOG.md). Esta ficha no lleva glifo de estado.
 
 ## Objetivo
 
