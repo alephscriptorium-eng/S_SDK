@@ -12,6 +12,7 @@
     "docs:build": "vitepress build docs"
   },
   "devDependencies": {
+    "@alephscript/skills-scriptorium": "0.x",
     "vitepress": "^1.6.4"
   },
   "license": "UNLICENSED"

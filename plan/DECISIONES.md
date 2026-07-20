@@ -161,11 +161,14 @@ bloquea WP-D31 de aquel mundo, no bloquea este plan.)*
   I60 ✅. **I61 ✅** (2026-07-20 · aleph @ `adf297e` sin push — tick
   custodio/orquestador aleph). **I62** 🔶 — zeus **D-35** adoptó
   `@alephscript/skills-scriptorium@0.3.0` (referencia versionada;
-  `plan/roles/` copia operativa; sin migración). Gate: pendiente cierre
+  `plan/roles/` copia operativa; sin migración) — cita histórica; en holón
+  07 la dependencia pasa a rango `0.x` (efectiva 0.3.4) por **DE-I17**.
+  Gate: pendiente cierre
   I62 por orquestador/vigía (ver D-35 en main zeus). Ola I6:
   **cierre parcial**. Acta I61: `WP-I61-activacion-aleph.md`.
 - ✅ **I61 aceptado** (orquestador · 2026-07-20) — CA1–CA6 OK; skill
-  `@0.3.0`; S14 intacto; push remoto aleph pendiente canal media.
+  `@0.3.0` (cita histórica; rango `0.x` vigente por **DE-I17**); S14
+  intacto; push remoto aleph pendiente canal media.
 
 - **DE-I14 · F9 = scrub tipo U140 en aleph-scriptorium — sin exención
   casa-madre** *(custodio 2026-07-20).* El árbol público de aleph
@@ -183,7 +186,8 @@ bloquea WP-D31 de aquel mundo, no bloquea este plan.)*
   fuera del sitio** *(custodio 2026-07-20).* El pack del ensayo
   (`TEST-SWARM/`) se retira del árbol de SCRIPT_SDK (borrado en `4eadc84`).
   Fundamento: el **método** del ensayo ya vive en el skill
-  `swarm-orquestacion@0.3.0` (roles, RE-PLAN, ejes-ca, ciclo, reglas). La
+  `swarm-orquestacion@0.3.0` (cita histórica; rango `0.x` vigente por
+  **DE-I17**) (roles, RE-PLAN, ejes-ca, ciclo, reglas). La
   **narrativa teatral** (GUION, NOTAS, ACTA-ENSAYO/V2, fanzine) **no** está
   en el skill; se preserva en el **historial git** (parent de `4eadc84`),
   no en el árbol vivo. Revierte **DA-4 / DE-I4** (el pack ya no se sirve).
