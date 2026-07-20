@@ -9,7 +9,7 @@
 | deuda fundacional que toca | refs `linea:*` no montadas en linea-system (BACKLOG-HISTORICO zeus ~L746); pythons de referencia (`segment_linea`, `fetch_wp_historia`, `fetch_snapshot` — DATOS.md §7) fuera del monorepo, en NETWORK-ENGINE |
 
 > **Estado canónico:** solo en [BACKLOG.md](BACKLOG.md). Esta ficha no lleva glifo de estado.
-> **A1:** cerrado 2026-07-20 — checkout zeus-sdk / linea-kit sano; ver BACKLOG §Tick A1.
+> **A1:** cerrado 2026-07-20 — GO con brief en `plan/REPORTES/BRIEF-WP-Z10-viajes-wiki-linea.md`.
 
 ## Objetivo
 

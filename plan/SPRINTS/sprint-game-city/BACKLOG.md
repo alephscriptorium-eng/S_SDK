@@ -15,9 +15,8 @@
 **Ola GC-1 (cerrada de facto 2026-07-20, vigía):** Z01 · Z02 · Z08-f1..3 ✅ —
   matices en §Replan post-vigía. Z09 entra en lote inmediato.
 **Ola GC-1.5 (post-vigía, hoy):** Z14 (procedencia estados) · Z09 (mini-clon) —
-  paralelo; paths no se pisan. **Tick A1 cerrado** → Z10 desbloqueado (brief
-  pendiente).
-**Ola GC-2 (sobre GC-1 + A1✅):** Z03 · Z06 · Z08-f4..5 · Z12-f1 · **Z10**
+  paralelo; paths no se pisan. **Tick A1 cerrado** → Z10 🔶 (brief emitido).
+**Ola GC-2 (sobre GC-1 + A1✅):** Z03 · Z06 · Z08-f4..5 · Z12-f1 · **Z10** (en curso)
 **Ola GC-3 (federación y población):** Z04 · Z07 · Z08-f6..7 · Z11 (tras Z04/Z06) ·
 Z12-f2 (cascada/zonas) · Z13 (tras Z12-f1 y Z03) · Z05 (por items, cuando duela)
 
@@ -62,11 +61,11 @@ Z09/Z10; DC-GC-ceguera-marca).
 
 ## WPs (estado canónico)
 
-> Lote post-A1 (2026-07-20): brief emitido para **Z14 · Z09** — proyección
-> issues local-only. A1✅ desbloqueó Z10/Z06/Z12-f1; **Z10** listo para brief
-> (⬜ → 🔶 en commit de gobierno siguiente).
+> Lote post-A1 (2026-07-20): brief emitido para **Z14 · Z09 · Z10** — proyección
+> issues local-only. A1✅ desbloqueó Z10/Z06/Z12-f1.
 > Briefs: `plan/REPORTES/BRIEF-WP-Z14-procedencia-estados.md`,
-> `BRIEF-WP-Z09-miniclon-vps-rooms.md`.
+> `BRIEF-WP-Z09-miniclon-vps-rooms.md`,
+> `BRIEF-WP-Z10-viajes-wiki-linea.md`.
 
 - ✅ **WP-Z01 · Pack mockdatas ciudad → firehose/cache-browser** — track PACK ·
   prio 1 · dep — · eje I (consumidores reales: los 2 browsers arrancados).
@@ -106,9 +105,9 @@ Z09/Z10; DC-GC-ceguera-marca).
   prio 2 · dep — · eje I (nodos 0.3.x desde **registry**; no toca submódulo
   zeus-sdk caído). Ficha: [WP-Z09](WP-Z09-miniclon-vps-rooms.md).
   Brief: [BRIEF-WP-Z09](../../REPORTES/BRIEF-WP-Z09-miniclon-vps-rooms.md).
-- ⬜ **WP-Z10 · «Viaje»: gestor de caminos wiki → lib sobre linea-kit** — track
+- 🔶 **WP-Z10 · «Viaje»: gestor de caminos wiki → lib sobre linea-kit** — track
   ENGINE · prio 2 · dep — (adaptador gamemap espera Z02/Z03) · A1✅ · eje I/II.
-  Desbloqueado post-A1; brief de arranque pendiente (gobierno).
+  Brief emitido post-A1: [BRIEF-WP-Z10](../../REPORTES/BRIEF-WP-Z10-viajes-wiki-linea.md).
   Ficha: [WP-Z10](WP-Z10-viajes-wiki-linea.md).
 - ⬜ **WP-Z11 · linea-editor: autoría de líneas como server MCP por horse** —
   track ENGINE · prio 3 · ola GC-3 · dep Z06 (launcher) + Z04 (cliente e2e) +
