@@ -22,9 +22,11 @@ Z12-f2 (cascada/zonas) · Z13 (tras Z12-f1 y Z03) · Z05 (por items, cuando duel
 > Lote GC-1 (2026-07-20): brief emitido para **Z01 · Z02 · Z08 (f1–f3)** — proyección
 > issues local-only; workers frescos en paralelo. Ver `plan/REPORTES/BRIEF-WP-Z0{1,2,8}-*.md`.
 
-- 🔶 **WP-Z01 · Pack mockdatas ciudad → firehose/cache-browser** — track PACK ·
+- ✅ **WP-Z01 · Pack mockdatas ciudad → firehose/cache-browser** — track PACK ·
   prio 1 · dep — · eje I (consumidores reales: los 2 browsers arrancados).
-  Ficha: [WP-Z01](WP-Z01-mockdatas-browsers.md). Brief emitido 2026-07-20 · lote GC-1.
+  Ficha: [WP-Z01](WP-Z01-mockdatas-browsers.md). Merged games-library
+  `8c2e6a6` (+ puntero submodule). Pack `@zeus/mockdatas-ciudad`; ceguera
+  cerrada en re-revisión. Viewport HTML pendiente de muestreo.
 - ✅ **WP-Z02 · `@zeus/startpack-ciudad` (seeds desde MAPA.md)** — track PACK ·
   prio 1 · dep — · eje I (engine carga seeds); IV cuando `ciudad-model` sea
   compartido con Z01. Ficha: [WP-Z02](WP-Z02-startpack-ciudad.md). Merged
