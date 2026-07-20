@@ -131,10 +131,12 @@ Z09/Z10; DC-GC-ceguera-marca).
   clientes y ≥2 tipos de jugador; regla 6) + ceguera (lore ciego al marco).
   Brazo ejecutable de [TRAMA-AGUA](TRAMA-AGUA.md). Fusión r3 + r3-b.
   Ficha: [WP-Z13](WP-Z13-tres-jugadores.md).
-- 🔶 **WP-Z14 · Procedencia estados de barrio → cantera versionada** — track PACK ·
+- ✅ **WP-Z14 · Procedencia estados de barrio → cantera versionada** — track PACK ·
   prio 1 · dep Z02 ✅ · micro-WP D1 vigía · eje I (generador regenera seeds desde
   cantera). **No reabre Z02.** Ficha: [WP-Z14](WP-Z14-procedencia-estados.md).
-  Brief: [BRIEF-WP-Z14](../../REPORTES/BRIEF-WP-Z14-procedencia-estados.md).
+  Merged games-library `8a39ece` (+ puntero submodule). Cantera
+  `CENSO-ESTADOS.md` + regeneración determinista evidenciada. Aceptado ✅
+  2026-07-21 (orquestador).
 
 ## Overview (lectura; sin estado — el estado vive arriba)
 
