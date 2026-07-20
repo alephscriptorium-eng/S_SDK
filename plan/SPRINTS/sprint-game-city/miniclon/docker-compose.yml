@@ -1,0 +1,36 @@
+# WP-Z09 mini-clon — Docker DEFERRED (recursos custodio, no fallo de diseño).
+# Retomar con: docker compose up --build
+# No arrancar en estaciones con presión de recursos sin GO del orquestador.
+
+name: miniclon-rooms
+
+services:
+  nodered:
+    build:
+      context: .
+      dockerfile: nodered/Dockerfile
+    image: miniclon-rooms-nodered:local
+    ports:
+      - "1880:1880"
+      - "3010:3010"
+    env_file:
+      - .env
+    environment:
+      PORT: "1880"
+      NODE_RED_USER_DIR: "/data"
+      NODERED_CREDENTIAL_SECRET: "${NODERED_CREDENTIAL_SECRET:?Set NODERED_CREDENTIAL_SECRET in .env}"
+      NODERED_ADMIN_ROOT: "/red"
+      NODERED_HTTP_NODE_ROOT: "/"
+      NODERED_DASHBOARD2_PATH: "/dashboard"
+      NODERED_LOG_LEVEL: "${NODERED_LOG_LEVEL:-info}"
+      ROOMS_BIND_HOST: "${ROOMS_BIND_HOST:-0.0.0.0}"
+      ROOMS_SECRETS_FILE: "/run/secrets/rooms/rooms-secrets.json"
+      ROOMS_DEFAULT_ROOM: "${ROOMS_DEFAULT_ROOM:-ROOMS_LAB}"
+      ROOMS_USER: "${ROOMS_USER:-miniclon-client}"
+      ROOMS_ROOM: "${ROOMS_ROOM:-ROOMS_LAB}"
+      ROOMS_SECRET: "${ROOMS_SECRET:-lab-dev-token}"
+    volumes:
+      - ./data:/data
+      - ./flows:/data/projects:ro
+      - ./secrets:/run/secrets/rooms:ro
+    # Sin red externa oasis_pub_* (receta clon local).

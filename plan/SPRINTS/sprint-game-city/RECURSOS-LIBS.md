@@ -69,6 +69,10 @@ Grep: **cero menciones a node-red dentro de zeus-sdk** — el visor es territori
 El flow referencia secretos vía `$(ROOMS_SECRET)` (env-var syntax de Node-RED) — nunca en claro.
 `COPIA_NODE_RED_settings.js` de WiringEditor es el settings stock, sin switch.
 
+**Operativa del switch (WP-Z09):** tabla + flows local/VPS en
+[`miniclon/README.md`](miniclon/README.md) (aterrizaje sprint; zeus-sdk A1
+pendiente). Docker del clon = deferred por recursos (ver reporte Z09).
+
 ## 4. Registry Verdaccio (`npm.scriptorium.escrivivir.co`) — 27 paquetes locales
 
 - **21 `@zeus/*`** (engine+mesh publicados) · **4 `@alephscript/*`** (`mcp-core-sdk` 1.3/1.4/**1.5.0**,
