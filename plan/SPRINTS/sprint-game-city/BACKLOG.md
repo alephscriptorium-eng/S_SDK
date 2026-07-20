@@ -16,9 +16,31 @@
   matices en §Replan post-vigía. Z09 entra en lote inmediato.
 **Ola GC-1.5 (cerrada 2026-07-21):** Z14 · Z09 ✅ — paralelo; paths no se pisan.
   **Tick A1 cerrado** → Z10 brief → **Z10 ✅** (cierra lote post-A1 Z14+Z09+Z10).
-**Ola GC-2 (sobre GC-1 + A1✅):** Z03 · Z06 · Z08-f4..5 · Z12-f1
+**Ola GC-2 (GO 2026-07-21, vigía §E):** Z03 · Z06 · Z08-f4..5 · Z12-f1 —
+  abrir en paralelo acotado; Z12-f1 soft-block hasta Z06 (ver §Replan GC-1.5).
 **Ola GC-3 (federación y población):** Z04 · Z07 · Z08-f6..7 · Z11 (tras Z04/Z06) ·
 Z12-f2 (cascada/zonas) · Z13 (tras Z12-f1 y Z03) · Z05 (por items, cuando duela)
+
+## Replan post-vigía GC-1.5 (2026-07-21)
+
+Fuente: acta vigía `REVISION-GC15-2026-07-21.md` (scratchpad de sesión del
+vigía; OUT_DIR fuera del mundo — no recrear bajo `TEMP/`). §E copiable:
+
+1. GC-1.5 confirmada de facto (Z14 limpio; Z10/Z09 aceptables-con-notas).
+2. **GO GC-2** (Z03 · Z06 · Z08-f4..5 · Z12-f1) sin condiciones bloqueantes,
+   con 3 recomendaciones de BRIEF:
+   - **(a) Push + runner limpio como gate temprano de la ola** (no de
+     apertura): tip `main` ahead ~33 sin CI = mayor riesgo; desbloquea D2
+     publish 0.3.x. Custodio/ops: push GL+SDK pronto; workers: CA «tip en
+     origin o pedir push» antes de afirmar CI/runner.
+   - **(b) BRIEF Z08-f4 abre con re-smoke f1–f3** (:3017 tras A1) + reinicio
+     cache-browser :3015 (H1).
+   - **(c) Chequeos de entorno:** `git -C <path> rev-parse HEAD` (nunca
+     `test -d .git`); frontera actuador(Z06)/comportamiento(Z12) en fichas.
+3. Micro-acciones no bloqueantes: higiene doc post-TEMP (VISTA §5 →
+   CENSO-ESTADOS, README linaje, regla 4); rename `acceptWalksPozo` →
+   `acceptWalksLocal` (barrido); borrar residual WT z01; atribución
+   `8a39ece` = Z14 (no Z09).
 
 ## Replan post-vigía GC-1 (2026-07-20)
 
@@ -60,9 +82,14 @@ Z09/Z10; DC-GC-ceguera-marca).
   (Windows). **Higiene pendiente:** borrar el directorio residual en quietud
   (`rmdir` long-path / custodio). No lo usan Z09/Z14.
 - **H1 (abierto):** reiniciar cache-browser `:3015` contra checkout actual
-  (`ZEUS_VOLUMES_ROOT`).
-- **Publish GL (abierto):** push games-library + runner limpio (verif. ambiental Z02).
-- **Re-smoke Z08 (abierto, prosa):** dashboard vivo zeus `:3017` tras A1✅.
+  (`ZEUS_VOLUMES_ROOT`) — **precondición de apertura Z08-f4** (§E b).
+- **Publish GL / push tip (abierto, §E a):** push games-library + SCRIPT_SDK
+  (tip ahead ~33) + runner limpio — **gate temprano de ola GC-2**, no de
+  apertura de briefs. Desbloquea D2 (publish 0.3.x Z09).
+- **Re-smoke Z08 (abierto, prosa → CA de Z08-f4):** dashboard vivo zeus
+  `:3017` tras A1✅ — **apertura obligatoria del BRIEF Z08-f4** (§E b).
+- **Higiene doc post-TEMP (§E cola):** VISTA §5 → `CENSO-ESTADOS.md`; README
+  linaje; regla 4 BACKLOG — micro-WP / tick custodio, no bloquea GC-2.
 
 ## WPs (estado canónico)
 
