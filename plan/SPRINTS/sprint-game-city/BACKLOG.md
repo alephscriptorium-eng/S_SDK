@@ -103,10 +103,14 @@ Z09/Z10; DC-GC-ceguera-marca).
   dashboard vivo con zeus :3017 (**A1✅**; re-smoke aún abierto); F3 volumen
   tras H1; grep transparencia acotado a `packages/`. **f4+ pendiente** (GC-2/GC-3).
   Ficha: [WP-Z08](WP-Z08-nodered-visor-ciudad.md).
-- 🔶 **WP-Z09 · Mini-clon local VPS Node-RED + pago deuda rooms** — track OPS ·
-  prio 2 · dep — · eje I (nodos 0.3.x desde **registry**; no toca submódulo
-  zeus-sdk caído). Ficha: [WP-Z09](WP-Z09-miniclon-vps-rooms.md).
-  Brief: [BRIEF-WP-Z09](../../REPORTES/BRIEF-WP-Z09-miniclon-vps-rooms.md).
+- ✅ **WP-Z09 · Mini-clon local VPS Node-RED + pago deuda rooms** — track OPS ·
+  prio 2 · dep — · eje I parcial (pins 0.3.0 + scripts; sin Docker vivo ni
+  publish 0.3.x). Aterrizaje `miniclon/` (zeus-sdk A1). **Aceptado ✅**
+  2026-07-21 (orquestador) con caveats deferred: **D1** Docker compose/up
+  dashboard; **D2** publish 0.3.x Verdaccio (DE-I12); **D3** smoke
+  dashboard+cliente federado; **D4** smoke switch→VPS. Ficha:
+  [WP-Z09](WP-Z09-miniclon-vps-rooms.md). Reporte:
+  [WP-Z09](../../REPORTES/WP-Z09-miniclon-vps-rooms.md).
 - 🔶 **WP-Z10 · «Viaje»: gestor de caminos wiki → lib sobre linea-kit** — track
   ENGINE · prio 2 · dep — (adaptador gamemap espera Z02/Z03) · A1✅ · eje I/II.
   Brief emitido post-A1: [BRIEF-WP-Z10](../../REPORTES/BRIEF-WP-Z10-viajes-wiki-linea.md).
