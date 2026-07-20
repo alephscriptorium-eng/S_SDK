@@ -1,5 +1,31 @@
 # RETRO del método — olas I0–I2 (intervención de estabilización, 2026-07-19)
 
+> **Archivado / superado** (2026-07-20): learnings destilados y absorbidos en
+> el skill `swarm-orquestacion` (`@alephscript/skills-scriptorium@0.3.4`,
+> método v0.4). Se conserva como registro histórico; no se edita su cuerpo.
+> Trazabilidad verificada:
+> - **Reglas 1–12** (gobierno a git, commit atómico por estado, limpieza de
+>   stash, worktree por WP en repos hermanos, autoría de ficheros nuevos,
+>   cadencia de merge, integrador≠planificador, canal formal de ops, cadena de
+>   evidencia sin transcripts, checklist de higiene, patrón→DE-n, entregas sin
+>   rutas) → `reference/reglas-metodo-v02.md` y `reglas-metodo-v03.md` (1–12).
+> - **Reglas 13–14** (activación por agente fresco; ceguera sobre historial
+>   alcanzable) → `reference/reglas-metodo-v03.md` (13–14), origen F8/Addendum I60.
+> - **Práctica de medida** (`grep -c`/`grep -q` vs `grep|head && echo OK`) →
+>   `reference/reglas-metodo-v03.md` §«Práctica de la regla 14 (medida canónica)».
+> - **Contrato vigente v0.4** = v0.3 (1–14) + regla 15 → `reference/reglas-metodo-v04.md`.
+> - Espejo en el plan del holón 07: `plan/PRACTICAS.md` deltas 7 (gobierno a
+>   git), 8 (entregas sin rutas / regla 12) y 9 (contrato 0.3.4).
+> - **F7** (scrub de «zeus» en `publish.yml` de la skills-library + Pages 404)
+>   → cerrado en **WP-I27 ✅** (Pages: nota GO en `plan/DECISIONES.md`).
+> - WPs que cosieron estos learnings al skill: **WP-I27** (v0.2), **WP-I29** (v0.3).
+>
+> **Pendiente de destilar al skill:** ninguno. Los dos «menores de I60» del
+> Addendum (acta de emmanuel sin sección «Revisión del orquestador»;
+> `REPORTES/PLANTILLA.md` sin dedup) son tareas de instancia del orquestador de
+> **emmanuel**, no reglas de método — no son insumo del skill y quedan a criterio
+> de aquel mundo (ya marcadas «no bloquean» en el cuerpo).
+
 Insumo canónico para **WP-I27** (versionar el skill `swarm-orquestacion` a
 v0.2). Fuentes: log íntegro del orquestador (`TEMP_LAS_SWARM_LOG.md`,
 backstage), digest y code-review de facto de la intervención
