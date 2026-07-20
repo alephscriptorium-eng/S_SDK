@@ -6,7 +6,7 @@
 | fecha | 2026-07-20 |
 | rama | `wp/gc-z09-miniclon-vps-rooms` |
 | worktree | `.claude/worktrees/gc-z09-miniclon-vps-rooms` |
-| commits | `3b26abce5e94516cb6b50e3febfdf576d1337cb7` |
+| commits | `3b26abc` (obra) · `e471b0e` (reporte SHA) |
 | eje(s) CA | I (nodos 0.3.x desde registry como consumidor; dashboard rooms) |
 | estado propuesto | listo para revisión (parcial: Docker + smoke vivo deferred; publish 0.3.x auth local pendiente) |
 
