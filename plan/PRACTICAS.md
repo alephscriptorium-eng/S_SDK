@@ -59,3 +59,33 @@ el texto: se referencia (la réplica es el defecto que este plan combate).
    12 — nace de F6): se entrega contenido pegado o adjunto neutro; la
    procedencia citable es «nota externa recibida (temp-review, fecha)»,
    jamás una ruta de disco.
+
+9. **Contrato 0.3.4 adoptado — regla 15 + semver DC-22** (base DE-I17; el
+   método vive en el skill versionado, el mundo lo cita, no lo copia). Se
+   adoptan dos piezas nuevas del skill `swarm-orquestacion` (paquete
+   `@alephscript/skills-scriptorium@0.3.4`, badge de método v0.4):
+   - **Regla 15 — fuente de verdad única + efimeralidad**
+     (`reference/reglas-metodo-v04.md`, publicada en el paquete **0.3.1**,
+     `CHANGELOG §[0.3.1] · WP-05`): el plan trazado en git es la **única**
+     fuente de verdad; memoria interna y carpetas de IDE (`.claude/` etc.)
+     son scratch efímero (se conserva solo su config funcional; se prohíbe
+     dejar en ellas texto de estado/decisiones). Holón 07 **cumple de
+     facto**: su fuente de verdad única es el `plan/` trazado — BACKLOG,
+     DECISIONES, REPORTES —, y por delta 7 **solo el orquestador escribe el
+     BACKLOG** (gobierno a git antes que obra). No se refactoriza nada
+     retro; se **cita**.
+   - **Doctrina semver DC-22 — por versión** (`CHANGELOG.md §[0.3.4]` del
+     skill, estrenada en ese corte · `WP-13`): cambio de **regla de método**
+     → al menos **minor**; **patch** = **sin cambio de contrato**. La
+     «versión de método» (badge) y el «semver de paquete» son ejes
+     distintos, con la correspondencia declarada en el `README.md` raíz del
+     skill. Evidencia por versión en el propio `CHANGELOG` del skill: `0.2.0`
+     y `0.3.0` = **minor** (contrato ampliado: reglas 1–12, luego 13–14);
+     `0.3.1`–`0.3.4` = **patch** publicable por override del custodio
+     (reconciliación de la expansión regla 15 + gates 0.3.x; retarget del
+     0.4.0 previsto). Holón 07 no versiona el skill (lo **consume** con rango
+     `0.x`, DE-I17); solo **cita** la doctrina como contrato del mundo.
+
+   Sin sello de futuro: «cumple de facto» no promete trabajo nuevo — se
+   apoya en prácticas ya vigentes (delta 1 autocontención, delta 7 gobierno
+   a git / orquestador único escritor del BACKLOG). Sin refactor retro.
