@@ -25,10 +25,11 @@ Z12-f2 (cascada/zonas) · Z13 (tras Z12-f1 y Z03) · Z05 (por items, cuando duel
 - 🔶 **WP-Z01 · Pack mockdatas ciudad → firehose/cache-browser** — track PACK ·
   prio 1 · dep — · eje I (consumidores reales: los 2 browsers arrancados).
   Ficha: [WP-Z01](WP-Z01-mockdatas-browsers.md). Brief emitido 2026-07-20 · lote GC-1.
-- 🔶 **WP-Z02 · `@zeus/startpack-ciudad` (seeds desde MAPA.md)** — track PACK ·
+- ✅ **WP-Z02 · `@zeus/startpack-ciudad` (seeds desde MAPA.md)** — track PACK ·
   prio 1 · dep — · eje I (engine carga seeds); IV cuando `ciudad-model` sea
-  compartido con Z01. Ficha: [WP-Z02](WP-Z02-startpack-ciudad.md). Brief emitido
-  2026-07-20 · lote GC-1.
+  compartido con Z01. Ficha: [WP-Z02](WP-Z02-startpack-ciudad.md). Merged
+  games-library `fab17c7` (+ puntero submodule). Publish npm/GitHub pendiente
+  autorización. Eje IV diferido (ciudad-model compartido con Z01).
 - ⬜ **WP-Z03 · Juego de engine `ciudad` (patrón pozo)** — track PACK · prio 2 ·
   dep Z02 · eje IV diferido (segundos clientes del catálogo de intents: Z04 y
   Z08). Ficha: [WP-Z03](WP-Z03-juego-ciudad.md).
