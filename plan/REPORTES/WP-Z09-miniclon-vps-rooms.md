@@ -105,4 +105,17 @@ Eje I (parcial):
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** — 2026-07-21 · orquestador (merge/gobierno). Caveats deferred.
+
+Obra `3b26abc` · reporte `e471b0e`/`6ee8c81` · merge `main` tip post-merge. Diff = `miniclon/**` + reporte + puntero menor `RECURSOS-LIBS` §3. Eje I **parcial** (pins 0.3.0 + scripts + SDK 1.5.0 en registry; sin clon vivo ni 0.3.x publicado). Z10 intacto.
+
+### Deferred explícitos (no bloquean ✅)
+
+| id | ítem | nota |
+| -- | ---- | ---- |
+| D1 | Docker `compose` build/up → `/dashboard/rooms` vivo | recursos custodio; plantilla lista |
+| D2 | Publish nodos **0.3.x** a Verdaccio | auth local ENEEDAUTH; secrets GH OK (DE-I12); registry aún 0.2.0 |
+| D3 | Smoke vivo dashboard + cliente federado | depende D1 (+ D2 para install desde registry) |
+| D4 | Smoke switch flow → VPS `wss://rooms.scriptorium.escrivivir.co` | flows `.local`/`.vps` documentados; vivo deferred |
+
+Hallazgos fuera de alcance (:1880 ocupado; zeus-sdk sin `.git`) no bloquean. Retomar D1–D4 cuando orquestador/custodio levanten recursos + estación publish.
