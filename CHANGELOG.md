@@ -16,9 +16,6 @@ Gate: `npm run changelog:check` (`verificar-changelog.mjs --role gobierno`).
 Abiertos en el BACKLOG, aún **no** ✅ (no derivan entrada cerrada todavía):
 
 - WP-I63 ⬜ · Scrub de vocabulario del marco en aleph (DE-I14) — gate externo.
-- WP-I71 🔶 · Materialización a `.claude/skills/` (espejo zeus U147).
-- WP-I73 🔶 · CHANGELOG de gobierno + gate (esta obra en curso).
-- WP-I74 🔶 · Scrum: proyección BACKLOG→issues (preparar · dry-run).
 
 ## [I7] - 2026-07-20 — Upgrade de skills a 0.3.4 (patrón zeus + contrato nuevo)
 
@@ -27,9 +24,22 @@ Base de decisión: DE-I17. Orden: I70 → { I71 ∥ I73 ∥ I74 }; I72 independi
 - **WP-I70** — Dependencia + rango `0.x`: `package.json` raíz con devDependency
   `@alephscript/skills-scriptorium: 0.x`; `npm install` resuelve **0.3.4** y el
   lockfile fija la efectiva. Aceptado ✅ 2026-07-20 · merge `main` @ `2f25e51`.
+- **WP-I71** — Materialización a `.claude/skills/`: `scripts/sync-claude-skills.mjs`
+  + npm script `skills:sync` materializa las 3 skills (espejo commiteado,
+  procedencia @0.3.4). Hallazgos de integración: negación `.gitignore` para
+  `.claude/skills/vigilancia/` + `.gitattributes eol=lf` (idempotencia).
+  Aceptado ✅ 2026-07-20 · merge `main` @ `33a3abb` (+ higiene `fd32e2b`).
 - **WP-I72** — Adoptar contrato: cita la **regla 15** (fuente de verdad única +
   efimeralidad) y la doctrina **semver DC-22** en `plan/PRACTICAS.md`; holón 07
   cumple de facto. Aceptado ✅ 2026-07-20 · merge `main` @ `aa7a4e4`.
+- **WP-I73** — CHANGELOG de gobierno + gate: este `CHANGELOG.md` (derivado del
+  BACKLOG, WP-id-keyed) + npm script `changelog:check` (gate
+  `verificar-changelog.mjs --role gobierno`). Aceptado ✅ 2026-07-20 · merge
+  `main` @ `ce3969f`.
+- **WP-I74** — Scrum: proyección BACKLOG→issues (dry-run, LOCAL-ONLY DC-15):
+  `proyectar-backlog.mjs` cableado (`scrum:preview`), `plan/.sync-map.json`;
+  proyección real a GitHub **no activada** (requiere GO del custodio). Aceptado
+  ✅ 2026-07-20 · merge `main` @ `5ecbeef`.
 
 ## [I6] - 2026-07-20 — Activación en los demás holones (matar las réplicas)
 

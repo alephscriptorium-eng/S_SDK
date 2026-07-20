@@ -201,8 +201,7 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   **Merged** skill → skills-library `main` @ `cb03e49` (pushed DE-I7);
   reporte → SCRIPT_SDK `main` @ `4cd2d1a` (sin push raíz). Siguiente: I24.
 
-- ✅ **WP-I24 · Separación de datos + corrección del error fundamental
-  (DS-5)** — el corazón de DE-I10. (1) Los datos de la sesión de vigilancia
+- ✅ **WP-I24 · Separación de datos + corrección del error fundamental (DS-5)** — el corazón de DE-I10. (1) Los datos de la sesión de vigilancia
   de zeus (`VIGILANCIA/{bitacora,revisiones,anomalias.log,watch.log}`;
   `ADDENDA/` addendas y ENTREGAs; `HANDOFF_*`) **salen del núcleo** de
   SCRIPT_SDK. (2) Se preservan **backstage en local** (DE-I11): histórico
@@ -291,8 +290,7 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   Reporte `plan/REPORTES/WP-I28-housekeeping-v4-v5-v6.md`. Worktrees
   retirados. **Ola housekeeping V4+V5+V6 cerrada.**
 
-- ✅ **WP-I29 · Skill package bump v0.3 — reglas 13/14 (ceguera de
-  activación)** *(cerrado 2026-07-19 · residual I2.5)* — skill
+- ✅ **WP-I29 · Skill package bump v0.3 — reglas 13/14 (ceguera de activación)** *(cerrado 2026-07-19 · residual I2.5)* — skill
   `swarm-orquestacion` con **reglas 13–14** (activación = agente fresco;
   ceguera sobre historial reachable `git log -p` + práctica `grep -c`/`-q`).
   Paquete `@alephscript/skills-scriptorium@0.3.0` publicado (`npm view`
@@ -375,8 +373,7 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   enlace). Reporte `plan/REPORTES/WP-I41-verificacion-sitio-vivo.md`.
   Worktree retirado. No bloquea por I27.
 
-- ✅ **WP-I42 · Refresh del sitio: ficha 07 al día + retiro de
-  `/ensayo/`** *(orquestador · 2026-07-20 · DE-I15)* — el sitio vivo
+- ✅ **WP-I42 · Refresh del sitio: ficha 07 al día + retiro de `/ensayo/`** *(orquestador · 2026-07-20 · DE-I15)* — el sitio vivo
   quedó **congelado** en la foto del 2026-07-19 (último deploy `Docs`
   `29702716725`, I28): la ficha 07 presentaba I3 en curso / I4–I6 abiertas
   (ya cerradas) y se autocontradecía en I40. Causa: los cierres I29–I62
@@ -575,8 +572,9 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   apoyado en deltas 1/7 vigentes; diff solo PRACTICAS + reporte. Reporte
   `plan/REPORTES/WP-I72-contrato-regla15-semver.md`.
 
-- 🔶 **WP-I71 · Materialización a `.claude/skills/`** *(asignado ·
-  orquestador · 2026-07-20 · dep I70 ✅; espejo zeus U147)* —
+- ✅ **WP-I71 · Materialización a `.claude/skills/`** *(aceptado ·
+  orquestador · 2026-07-20 · merge `main` @ `33a3abb` + higiene `fd32e2b` ·
+  rama `wp/i71-materializar-claude-skills` @ `a9fbce3`)* —
   `scripts/sync-claude-skills.mjs` (Node ESM): copia
   `node_modules/@alephscript/skills-scriptorium/skills/*` → `.claude/skills/`
   excluyendo `_plantilla`; borra-y-recrea cada dir sincronizado (sin arrasar
@@ -587,9 +585,19 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   tras clone). **CA:** `diff -rq` fuente↔espejo idéntico (las 3);
   idempotencia (2ª corrida sin cambios); `skills:sync` reporta versión
   0.3.4. **Sin push.**
+  **Aceptado ✅ 2026-07-20** (orquestador): CA1–CA5 verificados — 3 skills
+  espejo byte-a-byte, `_plantilla` excluido, README lee versión del paquete
+  (0.3.4), 58 ficheros en `.claude/skills/`. Dos hallazgos del worker
+  atendidos en integración: (1) colisión `.gitignore VIGILANCIA/` ↔
+  `.claude/skills/vigilancia/` (case-insensitive Windows) → negación
+  explícita `!.claude/skills/vigilancia/`; (2) churn CRLF que rompía la
+  idempotencia en Windows → `.gitattributes eol=lf` (`fd32e2b`),
+  `skills:sync` idempotente re-verificado (árbol limpio tras sync). Reporte
+  `plan/REPORTES/WP-I71-materializar-claude-skills.md`.
 
-- 🔶 **WP-I73 · CHANGELOG de gobierno + gate** *(asignado · orquestador ·
-  2026-07-20 · dep I70 ✅; nuevo tooling 0.3.4)* — crear `CHANGELOG.md` raíz
+- ✅ **WP-I73 · CHANGELOG de gobierno + gate** *(aceptado · orquestador ·
+  2026-07-20 · merge `main` @ `ce3969f` · rama
+  `wp/i73-changelog-gobierno-gate` @ `12eb5bd`)* — crear `CHANGELOG.md` raíz
   **derivado del BACKLOG** (grueso por
   ola: I0…I7), no changelog de paquete; se **deriva** de los WP ✅, no se
   inventa (C9). Cablear el gate
@@ -598,10 +606,17 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   script `changelog:check`. **CA:** el gate pasa (todo WP ✅ del BACKLOG
   referenciado); `--role` distinto de `gobierno` no corre; CHANGELOG sin
   texto inventado (cada entrada rastrea a un WP ✅). **Sin push.**
+  **Aceptado ✅ 2026-07-20** (orquestador): CA1–CA4 verificados — gate
+  **en vivo** `npm run changelog:check` EXIT=0 (32 WP ✅ referenciados);
+  control negativo `--role paquete` y sin `--role` → EXIT=2 (rehúsa);
+  CHANGELOG derivado del BACKLOG (C9, spot-check I42/I24/I70 rastrean a WP
+  reales); diff = 3 ficheros. Reporte
+  `plan/REPORTES/WP-I73-changelog-gobierno-gate.md`.
 
-- 🔶 **WP-I74 · Scrum: proyección BACKLOG→issues (preparar · dry-run)**
-  *(asignado · orquestador · 2026-07-20 · dep I70 ✅; nuevo tooling
-  0.3.2/0.3.3)* — cablear `proyectar-backlog.mjs`:
+- ✅ **WP-I74 · Scrum: proyección BACKLOG→issues (preparar · dry-run)**
+  *(aceptado · orquestador · 2026-07-20 · merge `main` @ `5ecbeef` · rama
+  `wp/i74-scrum-proyeccion-dryrun` @ `804cf05`)* — cablear
+  `proyectar-backlog.mjs`:
   `plan/.sync-map.json` git-tracked (vacío inicial), `CEGUERA_PATTERN` de
   holón 07 pasado **por env** (NUNCA commiteado), correr solo
   `export --dry-run` (preview, sin API). **LOCAL-ONLY (DC-15):** la
@@ -609,6 +624,14 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   como capacidad lista, **no activada**. **CA:** `--dry-run` produce preview
   coherente con el BACKLOG (WP-id-keyed; ✅→closed, ⬜/🔶→open); export real
   sin opt-in rehúsa (fail-safe); ceguera valida el patrón. **Sin push.**
+  **Aceptado ✅ 2026-07-20** (orquestador): CA1–CA5 verificados en vivo —
+  dry-run lista WP-id-keyed (✅→closed, ⬜/🔶→open); export real sin opt-in
+  → «local-only DC-15» (rehúsa); sin `CEGUERA_PATTERN` → «ceguera DC-12»
+  (rehúsa); `.sync-map.json` `{}` tracked; patrón provisional solo por env
+  (ausente del árbol). **Gates externos para proyección real (NO activada):**
+  (a) GO del custodio + patrón de ceguera definitivo; (b) hallazgo del parser
+  (33/36) — resuelto con el reflow de cabeceras I24/I29/I42 (higiene BACKLOG).
+  Reporte `plan/REPORTES/WP-I74-scrum-proyeccion-dryrun.md`.
 
 ## Orden y paralelismo
 
