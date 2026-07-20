@@ -1,0 +1,514 @@
+# src	dst	label
+aleph	Blueflag	Solicitar auditoría de verdad
+aleph	Blackflag	Solicitar auditoría de sombras
+aleph	Redflag	Solicitar auditoría de estructura
+aleph	Revisor	Solicitar revisión doctrinal
+aleph	yellowflag	Solicitar auditoría de límites
+aleph	Orangeflag	Solicitar auditoría de registro
+aleph	Ox	Consultar oráculo de agentes
+aleph	Indice	Consultar índice DRY
+aleph	plugin-manager	Gestionar plugins
+aleph	plugin_ox_consejoasesor	[CONSEJO-ASESOR] Debatir con el consejo
+aleph	plugin_ox_consejoasesor	[CONSEJO-ASESOR] Pipeline relato
+aleph	plugin_ox_loresdk	[LORE] Crear o alimentar una Voz editorial
+aleph	plugin_ox_vectormachine	[VECTOR] Preparar integración VectorMachine
+aleph	Ox	🎬 Lanzar servidores demo
+aleph	Ox	🛑 Parar servidores demo
+blackflag	Aleph	Llevar crítica a redacción
+blackflag	Redflag	Tensionar con Bandera Roja
+blackflag	yellowflag	Tensionar con Bandera Amarilla
+blackflag	Orangeflag	Tensionar con Bandera Naranja
+blackflag	Revisor	Verificar coherencia doctrinal
+blueflag	Aleph	Llevar crítica a redacción
+blueflag	Blackflag	Tensionar con Bandera Negra
+blueflag	Redflag	Tensionar con Bandera Roja
+blueflag	yellowflag	Tensionar con Bandera Amarilla
+blueflag	Orangeflag	Tensionar con Bandera Naranja
+blueflag	Revisor	Verificar coherencia doctrinal
+cartas-puerta	Vestibulo	Volver a vestíbulo
+cartas-puerta	Aleph	Volver a producción
+indice	Indice	Consultar índice funcional
+indice	Indice	Consultar índice técnico
+indice	Indice	Actualizar índices
+indice	Indice	Validar coherencia pre-commit
+indice	Indice	Diagnosticar índice desactualizado
+indice	Indice	Resolver instrucciones desde Context Pack
+indice	Indice	Consultar Context Pack por dominio
+indice	Indice	Validar coherencia pack ↔ instrucciones
+indice	plugin_ox_vectormachine	Consultar mapa VectorMachineSDK
+indice	Ox	🎬 Lanzar servidores demo
+indice	Ox	🛑 Parar servidores demo
+indice	Indice	Consultar índice archivados
+indice	Indice	Consultar ficha de spike archivado
+indice	Indice	Verificar si spike ya fue investigado
+indice	Indice	🗺️ Mapa estructural para exploración
+indice	Indice	🔍 Detectar lecturas redundantes
+indice	Indice	👥 Consultar sesiones de cotrabajo activas
+indice	Indice	📋 Mapa de sesión de cotrabajo
+orangeflag	Blueflag	Escalar a test de verdad
+orangeflag	Blackflag	Escalar a test de poder
+orangeflag	Redflag	Escalar a test de viabilidad
+orangeflag	yellowflag	Escalar a test de límites
+orangeflag	Aleph	Devolver a producción
+ox	Ox	Generar sección de agentes para README
+ox	Ox	Inicializar setup del workspace
+ox	Ox	Diagnosticar agentes
+ox	Ox	Diagnosticar espejo sala-dossier
+ox	Ox	¿Qué agente uso para...?
+ox	Ox	Listar agentes por capa
+ox	Aleph	Invocar agente de UI
+ox	Blueflag	Invocar agente de Backend
+ox	plugin-manager	Invocar PluginManager
+ox	Indice	Invocar agente Índice
+ox	Ox	Crear release
+ox	Ox	Analizar flujo Copilot Chat
+ox	Ox	Investigar System Message por modelo
+ox	Ox	Listar Context Packs disponibles
+ox	Ox	Recomendar Context Pack según foco
+ox	Ox	Crear nuevo Context Pack
+ox	Ox	Consultar estado DevOps Server
+ox	Ox	🎬 Lanzar servidores demo
+ox	Ox	🛑 Parar servidores demo
+ox	Ox	🔍 Auto-reflexión de sesión
+ox	Ox	🩺 Check de salud periódico
+ox	Ox	📸 Capturar snapshot
+ox	Ox	🧠 Terapia de bridge
+ox	plugin_ox_loresdk	Invocar bridge LoreSDK
+ox	plugin_ox_vectormachine	Invocar bridge VectorMachine
+periodico	Periodico	Editar noticia
+periodico	Periodico	Publicar plana
+periodico	ForoScraper	Scraping de blog como fuente
+periodico	ForoScraper	Scraping de foro como fuente
+periodico	Periodico	Crear noticia desde scraping
+periodico	Blueflag	Invocar Blueflag
+periodico	Blackflag	Invocar Blackflag
+periodico	Redflag	Invocar Redflag
+periodico	yellowflag	Invocar Yellowflag
+periodico	Orangeflag	Invocar Orangeflag
+periodico	GHPages	Publicar noticias en web
+periodico	Periodico	[ARG] Publicar obra como noticia
+periodico	.github/plugins/arg-board/agents/Arrakis	[ARG] Invocar personaje para análisis [nombre]
+periodico	Periodico	[ARG] Crear noticia desde escena [obra]
+periodico	.github/plugins/agent-creator/agents/agent-creator.agent.md	[AGENT-CREATOR] Crear agente periodístico
+periodico	.github/plugins/agent-creator/agents/agent-creator.agent.md	[AGENT-CREATOR] Añadir fuente a agente
+periodico	Periodico	Actualizar portada del número
+periodico	Orangeflag	Invocar Orangeflag para auditar portada
+periodico	GHPages	Publicar portada actualizada
+plugin-manager	PluginManager	Instalar plugin desde ruta
+plugin-manager	PluginManager	Listar plugins instalados
+plugin-manager	PluginManager	Activar plugin en settings
+plugin-manager	PluginManager	Desactivar plugin en settings
+plugin-manager	PluginManager	Desinstalar plugin
+plugin-manager	PluginManager	Ver status de plugins
+plugin-manager	PluginManager	Crear bridge agent
+plugin_ox_aaiaeditor	AAIAEditor	Crear sesión AAIA
+plugin_ox_aaiaeditor	AAIAEditor	Listar FIAs
+plugin_ox_aaiaeditor	AAIAEditor	Operar FIA
+plugin_ox_aaiaeditor	AAIAEditor	Consultar paradigmas
+plugin_ox_agentcreator	plugin_ox_agentcreator	Listar agentes de Agent Creator
+plugin_ox_agentcreator	.github/plugins/agent-creator/agents/agent-creator.agent.md	Invocar AgentCreator
+plugin_ox_agentcreator	.github/plugins/agent-creator/agents/agent-creator.agent.md	Crear nuevo agente especializado
+plugin_ox_agentcreator	.github/plugins/agent-creator/agents/agent-creator.agent.md	Editar agente existente
+plugin_ox_agentcreator	.github/plugins/agent-creator/agents/agent-creator.agent.md	Fusionar agentes
+plugin_ox_agentcreator	.github/plugins/agent-creator/agents/agent-creator.agent.md	Desplegar agente en Teatro ARG
+plugin_ox_agentcreator	plugin_ox_agentcreator	Listar agentes creados
+plugin_ox_agentcreator	plugin_ox_agentcreator	[AgentLoreSDK] Añadir plantillas a agente
+plugin_ox_argboard	plugin_ox_argboard	Listar agentes de ARG Board
+plugin_ox_argboard	.github/plugins/arg-board/agents/arrakis.agent.md	Invocar Arrakis (Director del Teatro)
+plugin_ox_argboard	.github/plugins/arg-board/agents/boe.agent.md	Invocar BOE (Boletín Oficial)
+plugin_ox_argboard	.github/plugins/arg-board/agents/decoherence.agent.md	Invocar Decoherence (Validador)
+plugin_ox_argboard	.github/plugins/arg-board/agents/git-arg.agent.md	Invocar GitARG (Orquestador Git)
+plugin_ox_argboard	.github/plugins/arg-board/agents/heroe.agent.md	Invocar Heroe (Autómata del Camino)
+plugin_ox_argboard	.github/plugins/arg-board/agents/impressjs.agent.md	Invocar ImpressJS (Tableros 3D)
+plugin_ox_argboard	.github/plugins/arg-board/agents/mbox.agent.md	Invocar MBox (Extractor de emails)
+plugin_ox_argboard	.github/plugins/arg-board/agents/platform-com.agent.md	Invocar PlatformCom (Multi-plataforma)
+plugin_ox_argboardapp	plugin_ox_argboardapp	Listar capacidades de ArgBoardApp
+plugin_ox_argboardapp	.github/plugins/arg-board-app/agents/arg-board-app.agent.md	Crear obra de navegación
+plugin_ox_argboardapp	.github/plugins/arg-board-app/agents/arg-board-app.agent.md	Configurar mapa de enlaces
+plugin_ox_argboardapp	.github/plugins/arg-board-app/agents/arg-board-app.agent.md	Ejecutar partida
+plugin_ox_argboardapp	plugin_ox_teatro	Delegar a Teatro
+plugin_ox_argboardapp	plugin_ox_argboard	Delegar a ARG Board
+plugin_ox_blocklyeditor	plugin_ox_blocklyeditor	Listar agentes de Blockly Editor
+plugin_ox_blocklyeditor	.github/plugins/blockly-editor/agents/blockly-editor.agent.md	Abrir editor para personaje
+plugin_ox_blocklyeditor	.github/plugins/blockly-editor/agents/blockly-editor.agent.md	Crear nueva rutina
+plugin_ox_blocklyeditor	.github/plugins/blockly-editor/agents/blockly-editor.agent.md	Guardar rutina
+plugin_ox_blocklyeditor	.github/plugins/blockly-editor/agents/blockly-editor.agent.md	Asignar paleta de paradigma
+plugin_ox_blocklyeditor	.github/plugins/blockly-editor/agents/blockly-editor.agent.md	Exportar código JavaScript
+plugin_ox_blocklyeditor	.github/plugins/blockly-editor/agents/blockly-editor.agent.md	Listar paletas disponibles
+plugin_ox_consejoasesor	plugin_ox_consejoasesor	Listar agentes del Consejo
+plugin_ox_consejoasesor	.github/plugins/consejo-asesor/agents/consejo-asesor.agent.md	Invocar Consejo Asesor
+plugin_ox_consejoasesor	.github/plugins/consejo-asesor/agents/consejo-asesor.agent.md	Debatir tema
+plugin_ox_consejoasesor	.github/plugins/consejo-asesor/agents/consejo-asesor.agent.md	Auditar texto
+plugin_ox_consejoasesor	.github/plugins/consejo-asesor/agents/consejo-asesor.agent.md	Producir articulo
+plugin_ox_consejoasesor	.github/plugins/consejo-asesor/agents/consejo-asesor.agent.md	Corresponsalia
+plugin_ox_consejoasesor	.github/plugins/consejo-asesor/agents/consejo-asesor.agent.md	Crear proyecto ONFALO
+plugin_ox_consejoasesor	.github/plugins/consejo-asesor/agents/consejo-asesor.agent.md	Pipeline relato
+plugin_ox_enciclopedia	plugin_ox_enciclopedia	Listar agentes de Enciclopedia
+plugin_ox_enciclopedia	.github/plugins/enciclopedia/agents/bibliotecario.agent.md	Invocar Bibliotecario
+plugin_ox_enciclopedia	.github/plugins/enciclopedia/agents/tomos/hdf-ernesto-castro.agent.md	Buscar en Historia de la Filosofía
+plugin_ox_foroscraper	plugin_ox_foroscraper	Listar agentes de Foro Scraper
+plugin_ox_foroscraper	.github/plugins/foro-scraper/agents/foro-scraper.agent.md	Invocar ForoScraper
+plugin_ox_foroscraper	.github/plugins/foro-scraper/agents/foro-scraper.agent.md	Iniciar scraping de foro
+plugin_ox_foroscraper	.github/plugins/foro-scraper/agents/foro-scraper.agent.md	Iniciar scraping de blog
+plugin_ox_foroscraper	.github/plugins/foro-scraper/agents/foro-scraper.agent.md	Pausar scraping
+plugin_ox_foroscraper	.github/plugins/foro-scraper/agents/foro-scraper.agent.md	Reanudar scraping
+plugin_ox_foroscraper	.github/plugins/foro-scraper/agents/foro-scraper.agent.md	Ver estado de scraping
+plugin_ox_ghpages	plugin_ox_ghpages	Listar agentes de GH-Pages
+plugin_ox_ghpages	.github/plugins/gh-pages/agents/ghpages.agent.md	Invocar GHPages (Publicador)
+plugin_ox_ghpages	.github/plugins/gh-pages/agents/ghpages.agent.md	Inicializar sitio GitHub Pages
+plugin_ox_ghpages	.github/plugins/gh-pages/agents/ghpages.agent.md	Publicar contenido (modo fusionar)
+plugin_ox_ghpages	.github/plugins/gh-pages/agents/ghpages.agent.md	Publicar contenido (modo reemplazar)
+plugin_ox_hypergrapheditor	plugin_ox_hypergrapheditor	Listar capacidades de HyperGraphEditor
+plugin_ox_hypergrapheditor	.github/plugins/hypergraph-editor/agents/hypergraph-editor.agent.md	Crear mapa de enlaces
+plugin_ox_hypergrapheditor	.github/plugins/hypergraph-editor/agents/hypergraph-editor.agent.md	Navegar grafo
+plugin_ox_hypergrapheditor	.github/plugins/hypergraph-editor/agents/hypergraph-editor.agent.md	Cargar preset MediaWiki
+plugin_ox_hypergrapheditor	.github/plugins/hypergraph-editor/agents/hypergraph-editor.agent.md	Crear fuente de datos
+plugin_ox_hypergrapheditor	plugin_ox_mcppresets	Delegar a MCP Presets
+plugin_ox_loresdk	plugin_ox_loresdk	Listar capacidades del LoreSDK
+plugin_ox_loresdk	LoreSDK	Crear nueva Voz
+plugin_ox_loresdk	LoreSDK	Alimentar corpus
+plugin_ox_loresdk	LoreSDK	Generar poema
+plugin_ox_loresdk	LoreSDK	Ver estado del corpus
+plugin_ox_loresdk	LoreSDK	Publicar catálogo
+plugin_ox_mcppresets	plugin_ox_mcppresets	🚀 Arrancar DevOps Server (mesh:3003)
+plugin_ox_mcppresets	plugin_ox_mcppresets	🚀 Arrancar Preset Service (model:4001)
+plugin_ox_mcppresets	plugin_ox_mcppresets	🚀 Arrancar Zeus UI (zeus:3012)
+plugin_ox_mcppresets	plugin_ox_mcppresets	🚀 Arrancar Launcher (orquestador:3050)
+plugin_ox_mcppresets	plugin_ox_mcppresets	🚀 Arrancar todo el ecosistema
+plugin_ox_mcppresets	plugin_ox_mcppresets	📡 Consultar catálogo MCP vía Zeus
+plugin_ox_mcppresets	plugin_ox_mcppresets	📋 Listar presets disponibles
+plugin_ox_mcppresets	plugin_ox_mcppresets	🔍 Ver estado de servidores
+plugin_ox_mcppresets	plugin_ox_mcppresets	➕ Crear nuevo preset
+plugin_ox_mcppresets	plugin_ox_mcppresets	📤 Exportar preset a JSON
+plugin_ox_mcppresets	plugin_ox_mcppresets	🔗 Asignar preset a agente
+plugin_ox_mcppresets	plugin_ox_mcppresets	🎛️ Launcher: Arrancar servidor por ID
+plugin_ox_mcppresets	plugin_ox_mcppresets	🎛️ Launcher: Arrancar todos los servidores
+plugin_ox_mcppresets	plugin_ox_mcppresets	🎛️ Launcher: Generar mcp.json dinámico
+plugin_ox_mcppresets	plugin_ox_mcppresets	📖 Ver arquitectura MCPGallery
+plugin_ox_mcppresets	plugin_ox_mcppresets	📖 Ver README de submódulo
+plugin_ox_n8neditor	plugin_ox_n8neditor	Listar agentes de N8N Editor
+plugin_ox_n8neditor	.github/plugins/n8n-editor/agents/n8n-editor.agent.md	Abrir editor de workflows
+plugin_ox_n8neditor	.github/plugins/n8n-editor/agents/n8n-editor.agent.md	Crear workflow desde descripción
+plugin_ox_n8neditor	.github/plugins/n8n-editor/agents/n8n-editor.agent.md	Importar workflow JSON
+plugin_ox_n8neditor	.github/plugins/n8n-editor/agents/n8n-editor.agent.md	Exportar workflow para n8n
+plugin_ox_n8neditor	.github/plugins/n8n-editor/agents/n8n-editor.agent.md	Asesorar sobre nodos MCP
+plugin_ox_n8neditor	.github/plugins/n8n-editor/agents/n8n-editor.agent.md	Listar templates disponibles
+plugin_ox_network	plugin_ox_network	Listar capacidades de Network
+plugin_ox_network	.github/plugins/network/agents/network.agent.md	Publicar BOE a Oasis
+plugin_ox_network	.github/plugins/network/agents/network.agent.md	Recibir BOE de Oasis
+plugin_ox_network	.github/plugins/network/agents/network.agent.md	Sincronizar BOEs bidireccional
+plugin_ox_network	.github/plugins/network/agents/network.agent.md	Configurar conexión Oasis
+plugin_ox_network	.github/plugins/network/agents/network.agent.md	Ver status de conexión
+plugin_ox_nodejsnotebooks	NodejsNotebooks	📓 Crear Notebook
+plugin_ox_nodejsnotebooks	NodejsNotebooks	🎛️ Panel de Control (Tasks)
+plugin_ox_nodejsnotebooks	NodejsNotebooks	🔌 Demo MCPGallery
+plugin_ox_nodejsnotebooks	NodejsNotebooks	🤖 Demo BotHubSDK
+plugin_ox_nodejsnotebooks	NodejsNotebooks	🩺 Diagnóstico Stack
+plugin_ox_novelist	plugin_ox_novelist	Listar agentes de Novelist
+plugin_ox_novelist	.github/plugins/novelist/agents/novelist.agent.md	Invocar Novelist
+plugin_ox_novelist	.github/plugins/novelist/agents/novelist.agent.md	Crear nueva obra
+plugin_ox_novelist	.github/plugins/novelist/agents/novelist.agent.md	Crear personaje
+plugin_ox_novelist	.github/plugins/novelist/agents/novelist.agent.md	Crear escena
+plugin_ox_novelist	.github/plugins/novelist/agents/novelist.agent.md	Listar obras
+plugin_ox_novelist	.github/plugins/novelist/agents/novelist.agent.md	Exportar a Teatro
+plugin_ox_novelist	.github/plugins/novelist/agents/novelist.agent.md	Importar del TALLER
+plugin_ox_novelist	.github/plugins/novelist/agents/novelist.agent.md	Sincronizar personajes
+plugin_ox_novelist	.github/plugins/novelist/agents/novelist.agent.md	Verificar servidor MCP
+plugin_ox_openasyncapieditor	.github/plugins/openasyncapi-editor/agents/openasyncapi-editor.agent.md	Listar catálogo de specs
+plugin_ox_openasyncapieditor	.github/plugins/openasyncapi-editor/agents/openasyncapi-editor.agent.md	Catalogar nueva spec
+plugin_ox_openasyncapieditor	.github/plugins/openasyncapi-editor/agents/openasyncapi-editor.agent.md	Validar spec
+plugin_ox_openasyncapieditor	.github/plugins/openasyncapi-editor/agents/openasyncapi-editor.agent.md	Generar cliente
+plugin_ox_openasyncapieditor	.github/plugins/openasyncapi-editor/agents/openasyncapi-editor.agent.md	Setup Swagger UI
+plugin_ox_openasyncapieditor	.github/plugins/openasyncapi-editor/agents/openasyncapi-editor.agent.md	Setup AsyncAPI Studio
+plugin_ox_openasyncapieditor	.github/plugins/openasyncapi-editor/agents/openasyncapi-editor.agent.md	Sincronizar specs
+plugin_ox_prologeditor	plugin_ox_prologeditor	🚀 Levantar Stack (Tasks Individuales)
+plugin_ox_prologeditor	plugin_ox_prologeditor	🩺 Health Check (run_task)
+plugin_ox_prologeditor	plugin_ox_prologeditor	📊 Leer Logs de Task
+plugin_ox_prologeditor	plugin_ox_prologeditor	📋 Ver Guía de Arquitectura
+plugin_ox_prologeditor	plugin_ox_prologeditor	Listar agentes de PrologEditor
+plugin_ox_prologeditor	.github/plugins/prolog-editor/agents/prolog-editor.agent.md	Crear template Prolog
+plugin_ox_prologeditor	.github/plugins/prolog-editor/agents/prolog-editor.agent.md	Ejecutar consulta Prolog
+plugin_ox_prologeditor	.github/plugins/prolog-editor/agents/prolog-editor.agent.md	Exportar Blockly a Prolog
+plugin_ox_prologeditor	.github/plugins/prolog-editor/agents/prolog-editor.agent.md	Listar templates disponibles
+plugin_ox_prologeditor	.github/plugins/prolog-editor/agents/prolog-editor.agent.md	Importar reglas Prolog
+plugin_ox_prologeditor	.github/plugins/prolog-editor/agents/prolog-editor.agent.md	Asignar reglas a agente
+plugin_ox_prologeditor	.github/plugins/prolog-editor/agents/prolog-editor.agent.md	Condición Prolog en estadio
+plugin_ox_prologeditor	plugin_ox_prologeditor	🔄 Gestionar sesión Prolog
+plugin_ox_prologeditor	plugin_ox_prologeditor	📚 Cargar base de conocimiento
+plugin_ox_prologeditor	plugin_ox_prologeditor	🔍 Consulta interactiva Prolog
+plugin_ox_prologeditor	plugin_ox_prologeditor	💾 Persistir regla
+plugin_ox_prologeditor	plugin_ox_prologeditor	📋 Usar template SDK
+plugin_ox_prologeditor	plugin_ox_prologeditor	📡 Verificar telemetría IoT
+plugin_ox_prologeditor	plugin_ox_prologeditor	🧠 Razonamiento SBR
+plugin_ox_prologeditor	plugin_ox_prologeditor	🎭 Sesión agente Teatro (E2E)
+plugin_ox_scrum	.github/plugins/scrum/agents/scrum.agent.md	Planificar nuevo sprint
+plugin_ox_scrum	.github/plugins/scrum/agents/scrum.agent.md	Crear backlog borrador
+plugin_ox_scrum	.github/plugins/scrum/agents/scrum.agent.md	🆕 Generar desde sesión cotrabajo
+plugin_ox_scrum	.github/plugins/scrum/agents/scrum.agent.md	Aprobar épica
+plugin_ox_scrum	.github/plugins/scrum/agents/scrum.agent.md	Actualizar tracking
+plugin_ox_scrum	.github/plugins/scrum/agents/scrum.agent.md	Cerrar sprint
+plugin_ox_scrum	.github/plugins/scrum/agents/scrum.agent.md	Mostrar status (incluye sesiones)
+plugin_ox_scrum	.github/plugins/scrum/agents/scrum.agent.md	🎭 Cargar contexto Lucas
+plugin_ox_scrum	.github/plugins/scrum/agents/scrum.agent.md	📚 Buscar plantilla Scrum
+plugin_ox_scrum	plugin_ox_scrum	Listar capacidades
+plugin_ox_teatro	plugin_ox_teatro	Listar agentes de Teatro
+plugin_ox_teatro	Teatro	Generar obra nueva
+plugin_ox_teatro	Teatro	Instalar obra en cartelera
+plugin_ox_teatro	Teatro	Ejecutar obra (poner en escena)
+plugin_ox_teatro	Teatro	Ver cartelera actual
+plugin_ox_teatro	plugin_ox_agentcreator	Crear personaje para obra
+plugin_ox_teatro	plugin_ox_argboard	Coordinar con ARG_BOARD
+plugin_ox_teatro	plugin_ox_ghpages	Coordinar con GH-PAGES
+plugin_ox_teatro	Ox	Consultar Ox
+plugin_ox_typedprompting	plugin_ox_typedprompting	Listar capacidades de TypedPrompting
+plugin_ox_typedprompting	.github/plugins/typed-prompting/agents/typed-prompting.agent.md	[Asistente] Estudiar caso de uso
+plugin_ox_typedprompting	.github/plugins/typed-prompting/agents/typed-prompting.agent.md	[Asistente] Sugerir ontología existente
+plugin_ox_typedprompting	.github/plugins/typed-prompting/agents/typed-prompting.agent.md	[Gestor] Instalar schema en agente
+plugin_ox_typedprompting	.github/plugins/typed-prompting/agents/typed-prompting.agent.md	[Gestor] Instalar protocolo en flujo ARG
+plugin_ox_typedprompting	.github/plugins/typed-prompting/agents/typed-prompting.agent.md	Validar mensaje contra schema
+plugin_ox_typedprompting	.github/plugins/typed-prompting/agents/typed-prompting.agent.md	Crear schema desde TypeScript
+plugin_ox_typedprompting	.github/plugins/typed-prompting/agents/typed-prompting.agent.md	Abrir editor web
+plugin_ox_typedprompting	plugin_ox_typedprompting	[DevOps] Arrancar servidor TPE
+plugin_ox_typedprompting	plugin_ox_typedprompting	[DevOps] Abrir TPE en navegador
+plugin_ox_typedprompting	Ox	Investigar System Message subyacente
+plugin_ox_typedprompting	Ox	Mapear TypeScript a PromptElement
+plugin_ox_vectormachine	plugin_ox_vectormachine	Listar capacidades de VectorMachine
+plugin_ox_vectormachine	VectorMachine	Mapear stack VectorMachineSDK
+plugin_ox_vectormachine	VectorMachine	Preparar fachada MCP
+plugin_ox_vectormachine	VectorMachine	Estudiar proyecto indexable
+plugin_ox_wireeditor	plugin_ox_wireeditor	Listar capacidades de WireEditor
+plugin_ox_wireeditor	.github/plugins/wire-editor/agents/wire-editor.agent.md	Crear proyecto Node-RED
+plugin_ox_wireeditor	.github/plugins/wire-editor/agents/wire-editor.agent.md	Importar flow JSON
+plugin_ox_wireeditor	.github/plugins/wire-editor/agents/wire-editor.agent.md	Exportar flow a archivo
+plugin_ox_wireeditor	.github/plugins/wire-editor/agents/wire-editor.agent.md	Asesorar sobre nodos
+plugin_ox_wireeditor	.github/plugins/wire-editor/agents/wire-editor.agent.md	Configurar feed asíncrono
+plugin_ox_wireeditor	.github/plugins/wire-editor/agents/wire-editor.agent.md	Ver catálogo de nodos
+plugin_ox_wireeditor	.github/plugins/wire-editor/agents/wire-editor.agent.md	Listar plantillas
+plugin_ox_wireeditor	.github/plugins/wire-editor/agents/wire-editor.agent.md	Sincronizar con submódulo
+plugin_ox_wiringapp	plugin_ox_wiringapp	Listar capacidades de WiringApp
+plugin_ox_wiringapp	.github/plugins/wiring-app/agents/wiring-app.agent.md	Crear flow de juego
+plugin_ox_wiringapp	.github/plugins/wiring-app/agents/wiring-app.agent.md	Importar template wiki-racer
+plugin_ox_wiringapp	.github/plugins/wiring-app/agents/wiring-app.agent.md	Exportar a Node-RED
+plugin_ox_wiringapp	plugin_ox_wireeditor	Delegar a WireEditor
+redflag	Aleph	Llevar crítica a redacción
+redflag	Blackflag	Tensionar con Bandera Negra
+redflag	yellowflag	Tensionar con Bandera Amarilla
+redflag	Orangeflag	Tensionar con Bandera Naranja
+redflag	Revisor	Verificar coherencia doctrinal
+revisor	Aleph	Llevar correcciones a redacción
+revisor	Blackflag	Solicitar auditoría de sombras
+revisor	Redflag	Solicitar auditoría de estructura
+revisor	yellowflag	Solicitar auditoría de límites
+revisor	Orangeflag	Solicitar auditoría de registro
+revisor	GHPages	Publicar capítulo revisado
+revisor	.github/plugins/arg-board/agents/Decoherence	[ARG] Revisar agente de obra [nombre]
+revisor	.github/plugins/arg-board/agents/Decoherence	[ARG] Auditar coherencia de obra [nombre]
+revisor	.github/plugins/arg-board/agents/Decoherence	[ARG] Validar personaje vs agente base
+revisor	.github/plugins/agent-creator/agents/agent-creator.agent.md	[AGENT-CREATOR] Revisar agente creado [nombre]
+revisor	.github/plugins/agent-creator/agents/agent-creator.agent.md	[AGENT-CREATOR] Auditar receta de agente
+revisor	Aleph	Tomar foto de estado del sprint
+vestibulo	CartasPuerta	Mostrar carta-puerta asignada
+vestibulo	Aleph	Volver a producción
+aaia-editor	AAIAEditor	[DevOps] Diseñar arquitectura MCP
+aaia-editor	AAIAEditor	[DevOps] Implementar tool MCP
+aaia-editor	AAIAEditor	[DevOps] Debug servidor
+aaia-editor	AAIAEditor	[DevOps] Testing E2E
+aaia-editor	AAIAEditor	[Usuario] Crear sesión AAIA
+aaia-editor	AAIAEditor	[Usuario] Guía de paradigmas FIA
+aaia-editor	AAIAEditor	[Usuario] Ejecutar paso de FIA
+aaia-editor	AAIAEditor	[Usuario] Enviar percepto a mundo
+aaia-editor	AAIAEditor	[Usuario] Diseñar prompt para FIA
+aaia-editor	AAIAEditor	[Usuario] Descomponer tarea compleja
+aaia-editor	PrologEditor	[Master] Coordinar con @plugin_ox_prologeditor
+aaia-editor	AAIAEditor	[Master] Publicar evento en AAIA_ROOM
+aaia-editor	AAIAEditor	[Master] Orquestar workflow multi-FIA
+aaia-editor	AAIAEditor	[Master] Sincronizar estado de mundo
+aaia-editor	TypedPrompting	Validar mensajes FIA
+aaia-editor	Ox	Consultar oráculo
+agent-creator	AgentCreator	Crear nuevo agente
+agent-creator	AgentCreator	Editar agente creado
+agent-creator	AgentCreator	Fusionar múltiples agentes
+agent-creator	AgentCreator	Conectar fuente adicional
+agent-creator	ForoScraper	Solicitar más datos al Scraper
+agent-creator	PluginManager	Instalar agente en Scriptorium
+agent-creator	Arrakis	Desplegar en Teatro ARG
+agent-creator	BOE	Consultar obras disponibles
+agent-creator	AgentCreator	Exportar cerebro Prolog
+agent-creator	AgentCreator	Validar agente creado
+agent-creator	AgentCreator	Generar cuestionario de validación
+agent-creator	Aleph	Analizar alineamiento
+arg-board-app	ArgBoardApp	Crear obra de navegación
+arg-board-app	ArgBoardApp	Configurar mapa de enlaces
+arg-board-app	ArgBoardApp	Ejecutar partida
+arg-board-app	ArgBoardApp	Registrar en BOE
+arg-board-app	plugin_ox_teatro	Delegar a Teatro
+arg-board-app	plugin_ox_argboard	Delegar a ARG Board
+blockly-editor	BlocklyEditor	Abrir editor para personaje
+blockly-editor	BlocklyEditor	Crear nueva rutina
+blockly-editor	BlocklyEditor	Guardar rutina
+blockly-editor	BlocklyEditor	Asignar paleta de paradigma
+blockly-editor	BlocklyEditor	Exportar código JavaScript
+blockly-editor	BlocklyEditor	Listar paletas disponibles
+consejo-asesor	.github/plugins/consejo-asesor/agents/consejo-asesor.agent.md	Modo DEBATE
+consejo-asesor	.github/plugins/consejo-asesor/agents/consejo-asesor.agent.md	Modo AUDITORIA
+consejo-asesor	.github/plugins/consejo-asesor/agents/consejo-asesor.agent.md	Modo PRODUCCION
+consejo-asesor	.github/plugins/consejo-asesor/agents/consejo-asesor.agent.md	Modo CORRESPONSALIA
+consejo-asesor	.github/plugins/consejo-asesor/agents/consejo-asesor.agent.md	Crear proyecto
+consejo-asesor	.github/plugins/consejo-asesor/agents/consejo-asesor.agent.md	Pipeline relato
+consejo-asesor	plugin_ox_novelist	Exportar a Novelist
+consejo-asesor	periodico	Publicar como noticia
+bibliotecario	HDF-ErnestoCastro	Consultar Historia de la Filosofía
+hdf-ernesto-castro	Bibliotecario	Volver al Bibliotecario
+escribiente	WireEditor	Diseñar flow en WireEditor
+escribiente	WireEditor	Revisar cierre documental
+foro-scraper	ForoScraper	Iniciar scraping de foro
+foro-scraper	ForoScraper	Iniciar scraping de blog
+foro-scraper	ForoScraper	Pausar trabajo activo
+foro-scraper	ForoScraper	Reanudar trabajo pausado
+foro-scraper	ForoScraper	Ver estado de trabajos
+foro-scraper	ForoScraper	Descargar siguiente página/entrada
+ghpages	plugin_ox_ghpages	Consultar índice SPLASH
+ghpages	plugin_ox_ghpages	Actualizar índice SPLASH
+ghpages	plugin_ox_ghpages	Validar sitio localmente
+ghpages	Aleph	Volver a Aleph
+ghpages	Periodico	Volver a Periódico
+ghpages	Revisor	Volver a Revisor
+ghpages	plugin_ox_ghpages	Publicar obra de Teatro
+ghpages	plugin_ox_ghpages	Actualizar cartelera desde obras.json
+ghpages	plugin_ox_ghpages	Destacar obra en escena
+ghpages	plugin_ox_ghpages	Actualizar portada del periódico
+ghpages	Orangeflag	Invocar Orangeflag para auditar portada
+hypergraph-editor	HyperGraphEditor	Crear mapa de enlaces
+hypergraph-editor	HyperGraphEditor	Navegar grafo
+hypergraph-editor	HyperGraphEditor	Crear fuente de datos
+hypergraph-editor	HyperGraphEditor	Cargar preset MediaWiki
+hypergraph-editor	HyperGraphEditor	Listar presets
+hypergraph-editor	plugin_ox_mcppresets	Delegar a MCP Presets
+lore-sdk	LoreSDK	Crear nueva Voz (mod)
+lore-sdk	LoreSDK	Alimentar corpus existente
+lore-sdk	LoreSDK	Generar poema
+lore-sdk	LoreSDK	Ver estado del corpus
+lore-sdk	LoreSDK	Publicar catálogo Jekyll
+lore-sdk	Ox	Consultar @ox
+mcp-presets	McpPresets	Importar preset desde JSON
+mcp-presets	McpPresets	Listar presets disponibles
+mcp-presets	McpPresets	Exportar preset a JSON
+mcp-presets	McpPresets	Asignar preset a agente
+mcp-presets	McpPresets	Desasignar preset de agente
+mcp-presets	McpPresets	Ver esquema PresetModel
+mcp-presets	McpPresets	Listar servidores MCP activos
+mcp-presets	McpPresets	Ver catálogo de la mesh
+n8n-editor	N8NEditor	Abrir editor visual
+n8n-editor	N8NEditor	Crear desde template
+n8n-editor	N8NEditor	Crear desde descripción
+n8n-editor	N8NEditor	Importar workflow
+n8n-editor	N8NEditor	Exportar workflow
+n8n-editor	N8NEditor	Inyectar presets MCP
+n8n-editor	N8NEditor	Validar workflow
+n8n-editor	N8NEditor	Listar templates
+network	Network	Publicar BOE a Oasis
+network	Network	Recibir BOE de Oasis
+network	Network	Sincronizar BOEs bidireccional
+network	Network	Configurar conexión Oasis
+network	Network	Ver status de conexión
+network	plugin_ox_teatro	Invocar Teatro para BOE
+network	plugin_ox_argboard	Invocar ARG_BOARD para plataformas
+nodejs-notebooks	NodejsNotebooks	Panel de Control (Tasks)
+nodejs-notebooks	NodejsNotebooks	Demo MCPGallery
+nodejs-notebooks	NodejsNotebooks	Demo BotHubSDK
+nodejs-notebooks	NodejsNotebooks	Diagnóstico Stack
+nodejs-notebooks	PrologEditor	Colaborar con PrologEditor
+nodejs-notebooks	BotHubSDK	Colaborar con BotHubSDK
+novelist	Novelist	Crear nueva obra
+novelist	Novelist	Crear personaje
+novelist	Novelist	Crear escena
+novelist	Novelist	Listar obras
+novelist	Novelist	Exportar a Teatro
+novelist	Novelist	Importar del TALLER
+novelist	Novelist	Sincronizar personajes
+novelist	Novelist	Verificar servidor MCP
+novelist	Novelist	Consultar estructura de obra
+openasyncapi-editor	OpenAsyncApiEditor	Listar catálogo
+openasyncapi-editor	OpenAsyncApiEditor	Catalogar nueva spec
+openasyncapi-editor	OpenAsyncApiEditor	Validar spec OpenAPI
+openasyncapi-editor	OpenAsyncApiEditor	Validar spec AsyncAPI
+openasyncapi-editor	OpenAsyncApiEditor	Generar cliente TypeScript
+openasyncapi-editor	OpenAsyncApiEditor	Generar cliente Python
+openasyncapi-editor	OpenAsyncApiEditor	Generar stub Node.js
+openasyncapi-editor	OpenAsyncApiEditor	Setup Swagger UI
+openasyncapi-editor	OpenAsyncApiEditor	Setup AsyncAPI Studio
+openasyncapi-editor	OpenAsyncApiEditor	Sincronizar desde origen
+openasyncapi-editor	OpenAsyncApiEditor	Generar documentación estática
+openasyncapi-editor	Ox	Delegar a @ox
+prolog-editor	PrologEditor	🚀 Levantar Stack (Tasks Individuales)
+prolog-editor	PrologEditor	🩺 Health Check
+prolog-editor	PrologEditor	🔍 Verificar Alineamiento
+prolog-editor	PrologEditor	📋 Consultar Guía Arquitectura
+prolog-editor	PrologEditor	Crear template desde descripción
+prolog-editor	PrologEditor	Listar templates
+prolog-editor	PrologEditor	Ejecutar consulta
+prolog-editor	PrologEditor	Validar sintaxis Prolog
+prolog-editor	PrologEditor	Exportar Blockly a Prolog
+prolog-editor	PrologEditor	Asignar reglas a agente
+prolog-editor	PrologEditor	Condición Prolog en estadio
+prolog-editor	PrologEditor	🧠 Crear Brain para Teatro
+nodered-curator	VpsOps	Volver a VpsOps
+nodered-curator	Indice	Consultar Indice
+verdaccio-keeper	VpsOps	Volver a VpsOps
+verdaccio-keeper	Indice	Consultar Indice
+vps-ops	NodeRedCurator	Curar Node-RED
+vps-ops	VerdaccioKeeper	Preparar Verdaccio
+vps-ops	Indice	Consultar Indice
+scrum	Scrum	Planificar sprint (crear referencia)
+scrum	Scrum	Generar borrador detallado
+scrum	Scrum	🆕 Generar desde sesión de cotrabajo
+scrum	Scrum	Aprobar épica (cambiar estado)
+scrum	Scrum	Actualizar tracking (en borrador)
+scrum	Scrum	Cerrar sprint (archivar)
+scrum	Scrum	Mostrar status (incluye sesiones)
+scrum	Aleph	Delegar a Aleph (DevOps)
+scrum	Scrum	📋 Listar sesiones activas
+scrum	Scrum	✅ Cerrar sesión y generar borrador
+scrum	Scrum	🎭 Cargar contexto Lucas
+scrum	Scrum	🧠 Consultar brain Prolog
+scrum	Scrum	📚 Buscar plantilla Scrum
+scrum	Scrum	📸 Registrar snapshot de cierre
+scrum	Scrum	📊 Registrar métricas de sesión
+scrum	ScriptoriumPack	👥 Iniciar sesión de cotrabajo
+scrum	Scrum	📋 Vincular sesión cotrabajo a épica
+scrum	Scrum	✅ Cerrar sesión cotrabajo con tracking
+teatro	Teatro	Generar obra nueva
+teatro	Teatro	Instalar obra en cartelera
+teatro	Teatro	Ejecutar obra (poner en escena)
+teatro	Teatro	Ver cartelera actual
+teatro	plugin_ox_argboard	Delegar a ARG_BOARD (obras)
+teatro	plugin_ox_agentcreator	Delegar a AGENT_CREATOR (personajes)
+teatro	plugin_ox_ghpages	Delegar a GH-PAGES (publicación)
+teatro	Ox	Consultar Ox (oráculo)
+teatro	Teatro	Razonar con personaje (Prolog)
+teatro	Teatro	Cargar pack de obra (Prolog)
+typed-prompting	TypedPrompting	Estudiar caso de uso
+typed-prompting	TypedPrompting	Sugerir ontología existente
+typed-prompting	TypedPrompting	Instalar schema en agente
+typed-prompting	TypedPrompting	Instalar protocolo en flujo ARG
+typed-prompting	TypedPrompting	Validar mensaje
+typed-prompting	TypedPrompting	Listar schemas disponibles
+typed-prompting	TypedPrompting	Crear schema desde TypeScript
+typed-prompting	TypedPrompting	Abrir editor web
+vector-machine	VectorMachine	Mapear stack VectorMachineSDK
+vector-machine	VectorMachine	Preparar fachada MCP
+vector-machine	VectorMachine	Estudiar proyecto indexable
+vector-machine	Indice	Consultar @indice
+wire-editor	WireEditor	Crear nuevo proyecto Node-RED
+wire-editor	WireEditor	Importar flow desde archivo
+wire-editor	WireEditor	Exportar flow a archivo
+wire-editor	WireEditor	Asesorar sobre nodos a usar
+wire-editor	WireEditor	Configurar feed asíncrono
+wire-editor	WireEditor	Listar plantillas disponibles
+wire-editor	WireEditor	Ver catálogo de nodos
+wire-editor	WireEditor	Sincronizar con submódulo
+wiring-app	WiringApp	Crear flow de juego
+wiring-app	WiringApp	Importar template wiki-racer
+wiring-app	WiringApp	Exportar a Node-RED
+wiring-app	WiringApp	Asesorar sobre nodos
+wiring-app	plugin_ox_wireeditor	Delegar a WireEditor

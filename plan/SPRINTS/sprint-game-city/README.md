@@ -41,13 +41,16 @@ BACKLOG. Su orquestador puede saber que existe este sprint; la mediación es abi
 | [RECURSOS-LIBS.md](RECURSOS-LIBS.md) | Catálogo verificado: piezas reusables, puertos, switch local↔VPS, registry. |
 | `WP-Z01..Z10-*.md` | Los 10 WPs con base, entregables y CA. |
 
-## Cantera externa (aviso)
+## Cantera (anexada)
 
-Los WPs citan material que hoy vive **sin trackear** en `TEMP\material\` (CIUDAD, 56
-ficheros ~405 KB; zeus-notas) y codebases externas con ruta absoluta (`WiringEditor`,
-`ScriptoriumVps`, …). Riesgo asumido y acotado: los WP Z01/Z02 transforman la cantera en
-datos del repo al ejecutarse (generadores idempotentes). Decisión pendiente del
-orquestador: si commitear `TEMP\material\CIUDAD\` como anexo del sprint o dejarla externa.
+La cantera vive **versionada como anexo del sprint** en [`cantera/`](cantera/)
+(`CIUDAD\` 56 ficheros ~405 KB + `zeus-notas\` 7): decisión tomada 2026-07-20
+(aporte 1 del feedback aleph) — el sprint ya no depende de una carpeta temporal
+(regla 15 del skill: fuente de verdad en git). `TEMP\material\` queda como origen
+histórico, sin autoridad; si divergen, manda `cantera/`. Sigue vigente la regla 4:
+**ningún runtime lee la cantera** — los generadores (Z01/Z02) la transforman en
+datos del repo destino. Codebases externas citadas con ruta absoluta
+(`WiringEditor`, `ScriptoriumVps`, …) siguen siendo referencia de solo lectura.
 
 ---
 *Cadena de contexto: `TEMP\block1.md` → `block2.md` → `handoff.md` → `TEMP\BACKLOG\`

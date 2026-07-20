@@ -79,6 +79,19 @@
 - **Meta-juego del swarm** — proyectar WPs como misiones en la plaza (adaptador
   `ciudad` del exportador de proyección del skill; mismo modelo que backlog→Issues).
 
+## Cierre del sprint (parte final — no evaporar)
+
+Al cerrar GC-3, el reporte de cierre incluye la **retroalimentación a aleph**
+(aporte 3 del feedback; es evidencia, no un WP nuevo): mapear lo logrado contra
+block2 §6 —
+
+- **Z04 es WP-S20 de facto** (peer externo federando contra el contrato
+  rooms/protocol).
+- **El pack ciudad es el primer consumidor cruzado** de la constelación del
+  holón 06.
+- Lo que la juntura 05-06 pueda citar como evidencia, citarlo ahí con rutas de
+  reporte (la juntura no re-excava; lee el cierre).
+
 ## Reglas del sprint (además de las del skill)
 
 1. **Regla de los dos mundos:** cero nombres del marco/holones dentro de entregables
@@ -88,7 +101,8 @@
    MCPLauncherServer y los pythons de NETWORK-ENGINE son referencia, nunca dependencia.
 3. **Transparencia para el juego** (Z08): la authority no lleva código Node-RED-aware;
    si un WP lo necesitara, es señal de diseño roto — parar y reabrir el WP.
-4. **Cantera → repo:** ningún runtime lee `TEMP\material\` — los generadores (Z01/Z02)
+4. **Cantera → repo:** ningún runtime lee la cantera (anexada en `cantera/`;
+   `TEMP\material\` = origen histórico sin autoridad) — los generadores (Z01/Z02)
    copian/transforman a datos versionados del repo destino.
 5. Contexto histórico y decisiones de vista: [VISTA.md](VISTA.md) y
    [RECAP-NODERED.md](RECAP-NODERED.md). Catálogo técnico: [RECURSOS-LIBS.md](RECURSOS-LIBS.md).

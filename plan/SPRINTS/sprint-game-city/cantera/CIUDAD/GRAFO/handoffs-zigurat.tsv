@@ -1,0 +1,52 @@
+# src	dst	note
+alephscript.demo.runAll	docs/Jekyll	demo.runAll → serve-site
+alephscript.demo.runAll	MCPGallery	demo.runAll → launcher/model/zeus
+alephscript.demo.runAll	NovelistEditor	demo.runAll → novelist + docs:serve
+alephscript.demo.stopAll	MCPGallery+NovelistEditor	dispose demo terminals
+HackerTasks:SCP	Scriptorium (root)	PREFIX_METADATA
+HackerTasks:MCP	MCPGallery	PREFIX_METADATA
+HackerTasks:BHS	BotHubSDK	PREFIX_METADATA
+HackerTasks:AIA	AAIAGallery	PREFIX_METADATA
+HackerTasks:APB	PrologEditor	PREFIX_METADATA
+HackerTasks:NOV	NovelistEditor	PREFIX_METADATA
+HackerTasks:TPE	TypedPromptsEditor	PREFIX_METADATA
+HackerTasks:OAE	openasyncapi-editor (plugin)	PREFIX_METADATA
+HackerTasks:NRE	WiringEditor	PREFIX_METADATA
+HackerTasks:BLE	BlocklyEditor	PREFIX_METADATA
+HackerTasks:JKL	docs/Jekyll	PREFIX_METADATA
+HackerTasks:ZEU	MCPGallery	PREFIX_METADATA
+HackerTasks:ZEUS	MCPGallery	PREFIX_METADATA
+HackerTasks:INS	MCPGallery	PREFIX_METADATA
+HackerTasks:CHS	sockets/mesh	PREFIX_METADATA
+HackerTasks:DMO	demo	PREFIX_METADATA
+HackerTasks:DEMO	demo	PREFIX_METADATA
+ox	alephscript.demo.runAll	run_vscode_command
+ox	alephscript.demo.stopAll	run_vscode_command
+aleph	alephscript.demo.runAll	run_vscode_command
+aleph	alephscript.demo.stopAll	run_vscode_command
+indice	alephscript.demo.runAll	run_vscode_command
+indice	alephscript.demo.stopAll	run_vscode_command
+Zigurat	alephscript.logs.*	10 commands
+Zigurat	alephscript.configs.*	9 commands
+Zigurat	alephscript.sockets.*	8 commands
+Zigurat	alephscript.teatro.*	6 commands
+Zigurat	alephscript.uis.*	6 commands
+Zigurat	alephscript.webview.*	6 commands
+Zigurat	alephscript.mcptree.*	5 commands
+Zigurat	alephscript.analytics.*	5 commands
+Zigurat	alephscript.agents.*	5 commands
+Zigurat	alephscript.ai.*	4 commands
+Zigurat	alephscript.hackerTasksPanel.*	4 commands
+Zigurat	alephscript.aracne.*	3 commands
+Zigurat	alephscript.demo.*	2 commands
+Zigurat	alephscript.terminals.*	2 commands
+Zigurat	alephscript.statusBar.*	2 commands
+Zigurat	alephscript.showStatusPanel.*	1 commands
+Zigurat	alephscript.refreshStatus.*	1 commands
+Zigurat	alephscript.showDashboard.*	1 commands
+Zigurat	alephscript.systemStatus.*	1 commands
+Zigurat	alephscript.quickStart.*	1 commands
+Zigurat	alephscript.emergencyStop.*	1 commands
+Zigurat	alephscript.hackerControlPanel.*	1 commands
+Zigurat	alephscript.hackerCommandPanel.*	1 commands
+Zigurat	alephscript.hackerConfigPanel.*	1 commands

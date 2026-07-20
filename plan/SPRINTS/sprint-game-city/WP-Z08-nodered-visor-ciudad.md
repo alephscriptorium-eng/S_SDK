@@ -54,8 +54,13 @@ authority solo ve clients en rooms emitiendo intents con envelope `@zeus/protoco
    random-walk por calles mientras tanto.
 6. **Población y constelación** — reparto de los 169 por ámbito según censo
    (`print-agentes.txt` agrupa por zona); N instancias Node-RED (mínimo: distritos +
-   locales + plaza/ops), cada una levantando su población. Medir el dolor de snapshots
-   completos → abre formalmente Z05 items 1-2.
+   locales + plaza/ops), cada una levantando su población. **Población por lotes con
+   techo explícito** (aporte 2 feedback aleph): arrancar con `POBLACION_MAX` ≈ 24
+   (uno por zona) y subir por lotes **solo mientras** snapshot/latencia aguanten;
+   el techo vigente se anota en el reporte del WP. El dolor de snapshots completos
+   con el techo alcanzado es la **señal esperada** que abre formalmente Z05 items
+   1-2 — no un bug del juego ni de este WP. Los 169 plenos son meta de Z05+f7, no
+   CA de f6.
 7. **Wishlist zeus←node-red** (alimenta Z05/Z09): republicar nodos sobre SDK `^1.5.0`;
    documentar `catalog:servers` y envelope para consumidores externos; token real por
    room (ownership, Z05 item 3); opcional `@zeus/nodered-kit` (subflow ciudadano +
