@@ -12,6 +12,7 @@
 | Capa | Carpeta | Qué contiene |
 |------|---------|--------------|
 | 0 | `MAPA.md` | Vista de una pantalla: plaza + barrios |
+| 0b | `CENSO-ESTADOS.md` | Tabla canónica barrio-id → estado jugable (24) |
 | 1 | `01-BARRIOS/` | Un barrio = un path de `.gitmodules` |
 | 2 | `02-LOCALES-Y-NAVES/` | Plugins del registry (+ huecos de disco) |
 | 3 | `03-EDIFICIOS/` | Agentes / chatmodes ligados a plaza, barrio o local |
