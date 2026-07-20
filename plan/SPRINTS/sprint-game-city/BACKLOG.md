@@ -51,9 +51,11 @@ Z09/Z10; DC-GC-ceguera-marca).
 
 ## Higiene / ticks abiertos (ops, no WP)
 
-- **Worktree stale Z01** (`zeus-sdk/.worktrees/wp-gc-z01-mockdatas-browsers`,
-  ~node_modules del smoke): **hecho** 2026-07-20 — `git worktree remove` +
-  borrado long-path; no lo usaban Z09/Z14.
+- **Worktree stale Z01** (`zeus-sdk/.worktrees/wp-gc-z01-mockdatas-browsers`):
+  **parcial** 2026-07-20 — `git worktree remove --force` desregistró el WT
+  (ya no aparece en `worktree list`); borrado FS falló por paths largos
+  (Windows). **Higiene pendiente:** borrar el directorio residual en quietud
+  (`rmdir` long-path / custodio). No lo usan Z09/Z14.
 - **H1 (abierto):** reiniciar cache-browser `:3015` contra checkout actual
   (`ZEUS_VOLUMES_ROOT`).
 - **Publish GL (abierto):** push games-library + runner limpio (verif. ambiental Z02).
