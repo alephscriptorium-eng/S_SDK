@@ -6,7 +6,7 @@
 | fecha | 2026-07-21 |
 | rama | `wp/gc-z08-f4-f5-nodered` |
 | worktree | `.worktrees/wp-gc-z08-f4-f5-nodered` |
-| commits | _(ver tip de rama tras commit de obra)_ |
+| commits | `21bd0cf` (obra) · tip `21bd0cf72bd4baf00d2d76192aa44f68e66c98d3` |
 | eje(s) CA | IV (intent válido desde inject; ciudadano como client de room; transparency packages/) |
 | alcance lote | **solo f4–f5** (Mano · Ciudadano) — f1–f3 ya ✅; **no f6+** |
 | estado propuesto | listo para revisión (CA vivo authority ⏳: zeus `:3017` apagado; H1 reinicio ⏳) |
