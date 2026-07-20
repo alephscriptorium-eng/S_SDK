@@ -542,8 +542,9 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
 > (ceguera 07→01). Base de decisión: **DE-I17**. Orden: I70 → { I71 ∥ I73
 > ∥ I74 }; I72 independiente (documental).
 
-- 🔶 **WP-I70 · Dependencia + rango `0.x`** *(asignado · orquestador ·
-  2026-07-20 · espejo zeus U145+D-36)* — `package.json` raíz: devDependency
+- ✅ **WP-I70 · Dependencia + rango `0.x`** *(aceptado · orquestador ·
+  2026-07-20 · merge `main` @ `2f25e51` · rama `wp/i70-dep-rango-0x` @
+  `33af967`)* — `package.json` raíz: devDependency
   `"@alephscript/skills-scriptorium": "0.x"` (el `.npmrc` ya rutea
   `@alephscript` al registry propio). `npm install` resuelve **0.3.4**;
   lockfile fija la efectiva. Prosa `0.3.0`→«rango 0.x» en `plan/DECISIONES.md`
@@ -552,6 +553,11 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   **CA:** `npm view @alephscript/skills-scriptorium --registry=…` resuelve
   (C8); `npm install` EXIT=0; lockfile en 0.3.4; grep «versión fijada» = 0;
   diff solo `package.json`+`package-lock.json`+prosa plan. **Sin push.**
+  **Aceptado ✅ 2026-07-20** (orquestador): CA1–CA4 re-verificados —
+  devDep `"0.x"`; lock resuelve `0.3.4` del registry propio (C8); `README:14`
+  + 3 citas `@0.3.0` de `DECISIONES` cosidas a DE-I17; diff = 5 ficheros vs
+  merge-base. Desviación honesta: `PRACTICAS.md` no editado (no cita versión
+  del skill; lo cubre I72). Reporte `plan/REPORTES/WP-I70-dep-rango-0x.md`.
 
 - ✅ **WP-I72 · Adoptar contrato — regla 15 + semver DC-22** *(aceptado ·
   orquestador · 2026-07-20 · merge `main` @ `aa7a4e4` · rama
@@ -569,8 +575,9 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   apoyado en deltas 1/7 vigentes; diff solo PRACTICAS + reporte. Reporte
   `plan/REPORTES/WP-I72-contrato-regla15-semver.md`.
 
-- ⬜ **WP-I71 · Materialización a `.claude/skills/`** *(dep I70; espejo zeus
-  U147)* — `scripts/sync-claude-skills.mjs` (Node ESM): copia
+- 🔶 **WP-I71 · Materialización a `.claude/skills/`** *(asignado ·
+  orquestador · 2026-07-20 · dep I70 ✅; espejo zeus U147)* —
+  `scripts/sync-claude-skills.mjs` (Node ESM): copia
   `node_modules/@alephscript/skills-scriptorium/skills/*` → `.claude/skills/`
   excluyendo `_plantilla`; borra-y-recrea cada dir sincronizado (sin arrasar
   otros `.claude/`); regenera `.claude/skills/README.md` de procedencia
@@ -581,8 +588,9 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   idempotencia (2ª corrida sin cambios); `skills:sync` reporta versión
   0.3.4. **Sin push.**
 
-- ⬜ **WP-I73 · CHANGELOG de gobierno + gate** *(dep I70; nuevo tooling
-  0.3.4)* — crear `CHANGELOG.md` raíz **derivado del BACKLOG** (grueso por
+- 🔶 **WP-I73 · CHANGELOG de gobierno + gate** *(asignado · orquestador ·
+  2026-07-20 · dep I70 ✅; nuevo tooling 0.3.4)* — crear `CHANGELOG.md` raíz
+  **derivado del BACKLOG** (grueso por
   ola: I0…I7), no changelog de paquete; se **deriva** de los WP ✅, no se
   inventa (C9). Cablear el gate
   `verificar-changelog.mjs --role gobierno --backlog plan/BACKLOG.md
@@ -591,8 +599,9 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   referenciado); `--role` distinto de `gobierno` no corre; CHANGELOG sin
   texto inventado (cada entrada rastrea a un WP ✅). **Sin push.**
 
-- ⬜ **WP-I74 · Scrum: proyección BACKLOG→issues (preparar · dry-run)**
-  *(dep I70; nuevo tooling 0.3.2/0.3.3)* — cablear `proyectar-backlog.mjs`:
+- 🔶 **WP-I74 · Scrum: proyección BACKLOG→issues (preparar · dry-run)**
+  *(asignado · orquestador · 2026-07-20 · dep I70 ✅; nuevo tooling
+  0.3.2/0.3.3)* — cablear `proyectar-backlog.mjs`:
   `plan/.sync-map.json` git-tracked (vacío inicial), `CEGUERA_PATTERN` de
   holón 07 pasado **por env** (NUNCA commiteado), correr solo
   `export --dry-run` (preview, sin API). **LOCAL-ONLY (DC-15):** la
