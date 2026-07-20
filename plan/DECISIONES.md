@@ -204,3 +204,25 @@ bloquea WP-D31 de aquel mundo, no bloquea este plan.)*
   ficheros pasa a depender de higiene explícita, no de la red del
   `.gitignore`. Compatible con DE-I11 en lo esencial (el histórico vivo
   `VIGILANCIA/` + `ADDENDA/` sigue fuera del remoto).
+
+- **DE-I17 · Versionado del skill: rango `0.x`, pin solo de major —
+  upgrade a 0.3.4 con el patrón zeus** *(GO usuario · 2026-07-20; espejo de
+  zeus D-36).* Holón 07 consumía el skill solo como referencia documental
+  (`@0.3.0`). **Decisión:** la dependencia
+  `@alephscript/skills-scriptorium` se declara con rango **`0.x`**
+  (cualquier `0.x.x`; la efectiva la fija `package-lock.json`). **Deroga**
+  el «pin exacto 0.3.0». Se adopta el **mecanismo de zeus**: devDependency
+  en `package.json` raíz + `scripts/sync-claude-skills.mjs` (npm script
+  `skills:sync`) que materializa `node_modules/…/skills/*` → `.claude/skills/`
+  **commiteado** (auditable; la fuente de verdad sigue siendo el paquete
+  versionado). Adoptar una 0.x nueva = `npm update
+  @alephscript/skills-scriptorium` + `npm run skills:sync`, **sin WP** (si
+  un update rompe un CA, se abre WP). Se adopta además el **contrato 0.3.4**:
+  **regla 15** (fuente de verdad única + efimeralidad — holón 07 cumple de
+  facto, solo se cita), doctrina **semver DC-22** (regla de método = minor;
+  patch = sin cambio de contrato), **CHANGELOG de gobierno** (uno por mundo,
+  derivado del BACKLOG, con gate `verificar-changelog.mjs`), y el **scrum**
+  `proyectar-backlog.mjs` (proyección BACKLOG→issues, **LOCAL-ONLY DC-15**
+  por defecto — proyección real a GitHub solo con GO explícito del usuario).
+  Consecuencia: **Ola I7** (WP-I70…I74). Compatible con DE-I3/DE-I10 (el
+  método vive en el skill versionado; el mundo lo referencia, no lo copia).

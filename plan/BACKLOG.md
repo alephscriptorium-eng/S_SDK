@@ -531,6 +531,70 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   evidencia con patrones partidos; diff solo `plan/`; S14 🔶 intacto;
   re-verif vigía tras su push.
 
+## Ola I7 — Upgrade de skills a 0.3.4 (patrón zeus + contrato nuevo)
+
+> **GO usuario · 2026-07-20.** Hoy holón 07 consume el skill solo como
+> *referencia documental* (`@0.3.0` en prosa); no está instalado ni
+> materializado. Esta ola cierra el gap con el patrón que zeus asentó
+> (D-35/D-36/U145/U146/U147) **y** adopta el contrato nuevo de 0.3.4
+> (regla 15, semver DC-22, CHANGELOG de gobierno, scrum). El registry ya
+> va por `0.3.4` (latest). Todo en el repo propio; cero toque a zeus
+> (ceguera 07→01). Base de decisión: **DE-I17**. Orden: I70 → { I71 ∥ I73
+> ∥ I74 }; I72 independiente (documental).
+
+- 🔶 **WP-I70 · Dependencia + rango `0.x`** *(asignado · orquestador ·
+  2026-07-20 · espejo zeus U145+D-36)* — `package.json` raíz: devDependency
+  `"@alephscript/skills-scriptorium": "0.x"` (el `.npmrc` ya rutea
+  `@alephscript` al registry propio). `npm install` resuelve **0.3.4**;
+  lockfile fija la efectiva. Prosa `0.3.0`→«rango 0.x» en `plan/DECISIONES.md`
+  (nota a DE-I17), `plan/PRACTICAS.md`, y arreglo del `0.1.0` stale de
+  `plan/README.md:14`. **No** materializa (eso es I71). Base de I71/I73/I74.
+  **CA:** `npm view @alephscript/skills-scriptorium --registry=…` resuelve
+  (C8); `npm install` EXIT=0; lockfile en 0.3.4; grep «versión fijada» = 0;
+  diff solo `package.json`+`package-lock.json`+prosa plan. **Sin push.**
+
+- 🔶 **WP-I72 · Adoptar contrato — regla 15 + semver DC-22** *(asignado ·
+  orquestador · 2026-07-20 · documental; independiente de I70)* — citar la
+  **regla 15** (fuente de verdad única + efimeralidad) y la doctrina
+  **semver DC-22** (regla de método = minor; patch = sin cambio de contrato)
+  como contrato en `plan/PRACTICAS.md`. Como zeus: holón 07 **cumple de
+  facto** → se cita, sin refactor retro. **No** toca `DECISIONES.md` (para
+  no chocar con DE-I17 de I70). **CA:** regla 15 y DC-22 referenciadas por
+  versión (`reglas-metodo-v04.md` / CHANGELOG 0.3.4); sin promesa sin sello;
+  diff solo `plan/PRACTICAS.md`. **Sin push.**
+
+- ⬜ **WP-I71 · Materialización a `.claude/skills/`** *(dep I70; espejo zeus
+  U147)* — `scripts/sync-claude-skills.mjs` (Node ESM): copia
+  `node_modules/@alephscript/skills-scriptorium/skills/*` → `.claude/skills/`
+  excluyendo `_plantilla`; borra-y-recrea cada dir sincronizado (sin arrasar
+  otros `.claude/`); regenera `.claude/skills/README.md` de procedencia
+  (nombre+versión del `package.json` instalado). npm script `skills:sync`.
+  Materializa las **3 skills** (`site-web`, `swarm-orquestacion`,
+  `vigilancia`); `.claude/skills/` **se commitea** (auditable, reproducible
+  tras clone). **CA:** `diff -rq` fuente↔espejo idéntico (las 3);
+  idempotencia (2ª corrida sin cambios); `skills:sync` reporta versión
+  0.3.4. **Sin push.**
+
+- ⬜ **WP-I73 · CHANGELOG de gobierno + gate** *(dep I70; nuevo tooling
+  0.3.4)* — crear `CHANGELOG.md` raíz **derivado del BACKLOG** (grueso por
+  ola: I0…I7), no changelog de paquete; se **deriva** de los WP ✅, no se
+  inventa (C9). Cablear el gate
+  `verificar-changelog.mjs --role gobierno --backlog plan/BACKLOG.md
+  --changelog CHANGELOG.md` (viene con el paquete instalado) como npm
+  script `changelog:check`. **CA:** el gate pasa (todo WP ✅ del BACKLOG
+  referenciado); `--role` distinto de `gobierno` no corre; CHANGELOG sin
+  texto inventado (cada entrada rastrea a un WP ✅). **Sin push.**
+
+- ⬜ **WP-I74 · Scrum: proyección BACKLOG→issues (preparar · dry-run)**
+  *(dep I70; nuevo tooling 0.3.2/0.3.3)* — cablear `proyectar-backlog.mjs`:
+  `plan/.sync-map.json` git-tracked (vacío inicial), `CEGUERA_PATTERN` de
+  holón 07 pasado **por env** (NUNCA commiteado), correr solo
+  `export --dry-run` (preview, sin API). **LOCAL-ONLY (DC-15):** la
+  proyección real a GitHub **rehúsa sin GO explícito del usuario** — queda
+  como capacidad lista, **no activada**. **CA:** `--dry-run` produce preview
+  coherente con el BACKLOG (WP-id-keyed; ✅→closed, ⬜/🔶→open); export real
+  sin opt-in rehúsa (fail-safe); ceguera valida el patrón. **Sin push.**
+
 ## Orden y paralelismo
 
 I0 → I1 ∥ I2 → I3 → I4 · I5 tras I2 (la nota ofrece el paquete ya
