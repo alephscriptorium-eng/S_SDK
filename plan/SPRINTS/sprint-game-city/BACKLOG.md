@@ -22,7 +22,8 @@ Z12-f2 (cascada/zonas) · Z13 (tras Z12-f1 y Z03) · Z05 (por items, cuando duel
 
 ## Replan post-vigía GC-1 (2026-07-20)
 
-Fuente: `TEMP/vigia/REVISION-GC1-2026-07-20.md` + addendas custodio (GO parcial
+Fuente: acta vigía `REVISION-GC1-2026-07-20` (antes `TEMP/vigia/…`) —
+<pendiente custodio: reubicar acta vigía> + addendas custodio (GO parcial
 Z09/Z10; DC-GC-ceguera-marca).
 
 | Id | Hallazgo | Acción |
@@ -42,7 +43,8 @@ Z09/Z10; DC-GC-ceguera-marca).
 ## Tick A1 (cerrado 2026-07-20)
 
 - **Estado:** cerrado. SHA submodule `7567bf3`. Acta:
-  `TEMP/vigia/REVISION-GC1-2026-07-20.md` §ADDENDUM Tick A1.
+  <pendiente custodio: reubicar acta vigía>
+  (`REVISION-GC1-2026-07-20` §ADDENDUM Tick A1; vivía en `TEMP/vigia/`).
 - **Causa:** limpieza post-GC-1 borró 14 dot-entries de raíz del checkout
   zeus-sdk (incl. gitfile `.git`); módulo git intacto en `7567bf3`.
 - **Remedio:** restaurar gitdir links + `git restore` de los 14. Status limpio,
@@ -51,6 +53,7 @@ Z09/Z10; DC-GC-ceguera-marca).
 
 ## Higiene / ticks abiertos (ops, no WP)
 
+- **TEMP/ retirada por custodio 2026-07-21** — evita dirty en merges (WP-Z14). No recrear; workers: no escribir bajo `TEMP/`. `.gitignore` ignora `TEMP/`. Acta vigía GC-1: <pendiente custodio: reubicar acta vigía>.
 - **Worktree stale Z01** (`zeus-sdk/.worktrees/wp-gc-z01-mockdatas-browsers`):
   **parcial** 2026-07-20 — `git worktree remove --force` desregistró el WT
   (ya no aparece en `worktree list`); borrado FS falló por paths largos
