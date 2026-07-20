@@ -1,0 +1,14 @@
+{
+  "registryPackages": [
+    "@flowfuse/node-red-dashboard",
+    "node-red-dashboard",
+    "node-red-contrib-alephscript-core@0.3.0",
+    "node-red-dashboard-2-alephscript-rooms@0.3.0"
+  ],
+  "workspacePackages": [],
+  "notes": [
+    "Clon Z09: instala nodos 0.3.x desde Verdaccio (npm.scriptorium.escrivivir.co), no desde WiringEditor montado.",
+    "Dep SDK esperada en 0.3.x: @alephscript/mcp-core-sdk@^1.5.0.",
+    "Hasta que 0.3.x esté publicado, usar scripts/build-and-pack.mjs + npm install ./artifacts/*.tgz como fallback local."
+  ]
+}

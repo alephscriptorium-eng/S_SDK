@@ -1,0 +1,12 @@
+# Registry canónico (DE-I12). Auth de escritura: NPM_USERNAME + NPM_PASSWORD
+# (secrets GitHub en zeus-sdk / SCRIPT_SDK). NO uses _authToken.
+#
+# Lectura pública de packs suele funcionar sin auth.
+# Escritura (publish): ver scripts/publish-nodes-0.3.sh
+
+registry=https://registry.npmjs.org/
+@alephscript:registry=https://npm.scriptorium.escrivivir.co/
+
+# Para paquetes Node-RED sin scope, pasar --registry en install/publish:
+#   npm install node-red-contrib-alephscript-core@0.3.0 --registry https://npm.scriptorium.escrivivir.co/
+#   npm publish --registry https://npm.scriptorium.escrivivir.co/
