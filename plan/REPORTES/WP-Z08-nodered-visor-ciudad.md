@@ -121,4 +121,9 @@ Cero diffs en zeus-sdk / games-library (solo lectura).
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** (2026-07-20) — lote GC-1 f1–f3 (Oreja/Ojo/Ciudad lectura).
+
+Caveats:
+- Re-validar dashboard vivo con zeus `:3017`
+- F3 volumen: re-validar tras Z01
+- **f4+ pendiente** (GC-2/GC-3)
