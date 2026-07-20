@@ -13,7 +13,7 @@
 
 **Ola GC-1 (arrancable hoy, sin dependencias):** Z01 · Z02 · Z08-f1..3 · Z10 (lib pura) · Z09
 **Ola GC-2 (sobre GC-1):** Z03 · Z06 · Z08-f4..5
-**Ola GC-3 (federación y población):** Z04 · Z07 · Z08-f6..7 · Z05 (por items, cuando duela)
+**Ola GC-3 (federación y población):** Z04 · Z07 · Z08-f6..7 · Z11 (tras Z04/Z06) · Z05 (por items, cuando duela)
 
 ## WPs (estado canónico)
 
@@ -51,6 +51,14 @@
   real: adaptador/ciudadanos); II en modo concepto (destino canónico de cada
   pieza extraída de wiki-racer; el origen queda intacto como referencia).
   Ficha: [WP-Z10](WP-Z10-viajes-wiki-linea.md).
+- ⬜ **WP-Z11 · linea-editor: autoría de líneas como server MCP por horse** —
+  track ENGINE · prio 3 · ola GC-3 · dep Z06 (launcher) + Z04 (cliente e2e) +
+  Z03 (room); hermano de Z10 (frontera dura: Z10 = caminos/lectura, Z11 =
+  autoría/mutación + export) · ejes I (export → story-board real) + IV (2º
+  cliente: CLI/editor-ui como gate) + II/III (envolver linea-kit, no duplicar) +
+  V (gates de mutación visibles) + ceguera (el paquete no nombra marco/ciudad/
+  NovelistEditor). Precondición: glosario «viaje» (regla 5). Asentado de oferta
+  ronda 2 (2026-07-20). Ficha: [WP-Z11](WP-Z11-linea-editor.md).
 
 ## Overview (lectura; sin estado — el estado vive arriba)
 
@@ -66,6 +74,7 @@
 | [Z08](WP-Z08-nodered-visor-ciudad.md) | Constelación Node-RED (169) | VISOR | 2 | — | IV |
 | [Z09](WP-Z09-miniclon-vps-rooms.md) | Mini-clon local VPS + deuda rooms | OPS | 2 | — | I |
 | [Z10](WP-Z10-viajes-wiki-linea.md) | «Viaje»: caminos wiki → linea-kit | ENGINE | 2 | — | I/II |
+| [Z11](WP-Z11-linea-editor.md) | linea-editor: autoría MCP por horse | ENGINE | 3 | Z06·Z04·Z03 | I/IV/II/III/V |
 
 ## Candidatos GC-4 — profundizar la gamificación (sin abrir; ver [SEMILLA-GAMIFICACION.md](SEMILLA-GAMIFICACION.md))
 
@@ -74,6 +83,9 @@
   alimenta vivo/latente) — la idea más potente del pack, apenas explotada por `wake`.
 - **Ciudadanos con misión** (viajes Z10 como quests; no random-walk decorativo).
 - **Cronista** (el story-board del dramaturgo vuelve al juego como lore visible).
+  Cadena: **Z03 (ledger) + Z07 (validador) + Z11 (export transmedia)** — con Z11
+  asentado pasa de manual a pipeline (ledger → cronista → export Z11 → validador
+  Z07). No abrir antes de esa cadena (micro-acción 2, ronda 2).
 - **Vista 3D** — conectar `operator-ui` (ThreeGamification) como vista de la ciudad
   («varias vistas, un contrato»).
 - **Meta-juego del swarm** — proyectar WPs como misiones en la plaza (adaptador
@@ -91,6 +103,12 @@ block2 §6 —
   holón 06.
 - Lo que la juntura 05-06 pueda citar como evidencia, citarlo ahí con rutas de
   reporte (la juntura no re-excava; lee el cierre).
+- **NovelistEditor** (micro-acción 3, ronda 2): sugerir al futuro INVENTARIO de
+  aleph reclasificarlo de «alinear» a **«absorber-concepto y archivar»** — el
+  concepto (interfaz agéntica de autoría) fue portado a zeus vía Z11; evidencia
+  del recon 2026-07-20 (boceto experimental, árbol plano, transmedia sin código,
+  dep `file:` de lista negra). La decisión es del plan aleph (DAS-1); aquí solo
+  queda la evidencia lista.
 
 ## Reglas del sprint (además de las del skill)
 
@@ -104,5 +122,12 @@ block2 §6 —
 4. **Cantera → repo:** ningún runtime lee la cantera (anexada en `cantera/`;
    `TEMP\material\` = origen histórico sin autoridad) — los generadores (Z01/Z02)
    copian/transforman a datos versionados del repo destino.
-5. Contexto histórico y decisiones de vista: [VISTA.md](VISTA.md) y
+5. **Glosario «viaje» (precondición de Z10/Z11 — micro-acción 1, ronda 2):**
+   «**viaje**» = camino origen→destino sobre un grafo (sentido Z10; el que va a
+   APIs nuevas). El sentido histórico de `linea-system` («campaña de llenado de
+   cache», prompts `propose-viaje`/`execute-viaje`) se renombra «**campaña**» en
+   la primera ocasión que un WP toque esos prompts; hasta entonces la ambigüedad
+   queda registrada aquí como conocida. Ningún WP nombra tools/APIs nuevas con el
+   sentido viejo (homonimia ya mordió una vez: agujero negro, block2 §4.1).
+6. Contexto histórico y decisiones de vista: [VISTA.md](VISTA.md) y
    [RECAP-NODERED.md](RECAP-NODERED.md). Catálogo técnico: [RECURSOS-LIBS.md](RECURSOS-LIBS.md).
