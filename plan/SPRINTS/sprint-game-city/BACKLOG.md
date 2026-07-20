@@ -19,12 +19,16 @@ Z12-f2 (cascada/zonas) · Z13 (tras Z12-f1 y Z03) · Z05 (por items, cuando duel
 
 ## WPs (estado canónico)
 
-- ⬜ **WP-Z01 · Pack mockdatas ciudad → firehose/cache-browser** — track PACK ·
+> Lote GC-1 (2026-07-20): brief emitido para **Z01 · Z02 · Z08 (f1–f3)** — proyección
+> issues local-only; workers frescos en paralelo. Ver `plan/REPORTES/BRIEF-WP-Z0{1,2,8}-*.md`.
+
+- 🔶 **WP-Z01 · Pack mockdatas ciudad → firehose/cache-browser** — track PACK ·
   prio 1 · dep — · eje I (consumidores reales: los 2 browsers arrancados).
-  Ficha: [WP-Z01](WP-Z01-mockdatas-browsers.md).
-- ⬜ **WP-Z02 · `@zeus/startpack-ciudad` (seeds desde MAPA.md)** — track PACK ·
+  Ficha: [WP-Z01](WP-Z01-mockdatas-browsers.md). Brief emitido 2026-07-20 · lote GC-1.
+- 🔶 **WP-Z02 · `@zeus/startpack-ciudad` (seeds desde MAPA.md)** — track PACK ·
   prio 1 · dep — · eje I (engine carga seeds); IV cuando `ciudad-model` sea
-  compartido con Z01. Ficha: [WP-Z02](WP-Z02-startpack-ciudad.md).
+  compartido con Z01. Ficha: [WP-Z02](WP-Z02-startpack-ciudad.md). Brief emitido
+  2026-07-20 · lote GC-1.
 - ⬜ **WP-Z03 · Juego de engine `ciudad` (patrón pozo)** — track PACK · prio 2 ·
   dep Z02 · eje IV diferido (segundos clientes del catálogo de intents: Z04 y
   Z08). Ficha: [WP-Z03](WP-Z03-juego-ciudad.md).
@@ -41,10 +45,11 @@ Z12-f2 (cascada/zonas) · Z13 (tras Z12-f1 y Z03) · Z05 (por items, cuando duel
 - ⬜ **WP-Z07 · Instancia dramaturgo `ciudad` (capa lectura)** — track PACK ·
   prio 4 · dep Z03 (ledger) · CA propios del kit (validador story-board).
   Ficha: [WP-Z07](WP-Z07-dramaturgo-ciudad.md).
-- ⬜ **WP-Z08 · Constelación Node-RED: visor + coordinación + población (169)** —
+- 🔶 **WP-Z08 · Constelación Node-RED: visor + coordinación + población (169)** —
   track VISOR · prio 2 · dep — (f1 hoy) · eje IV (Node-RED = segundo cliente
-  independiente del contrato `/runtime`).
-  Ficha: [WP-Z08](WP-Z08-nodered-visor-ciudad.md).
+  independiente del contrato `/runtime`). **Lote GC-1 = solo f1–f3** (oreja/ojo/
+  ciudad-completa lectura); f4+ fuera de este brief.
+  Ficha: [WP-Z08](WP-Z08-nodered-visor-ciudad.md). Brief emitido 2026-07-20 · lote GC-1.
 - ⬜ **WP-Z09 · Mini-clon local VPS Node-RED + pago deuda rooms** — track OPS ·
   prio 2 · dep — · eje I (los nodos 0.3.x republicados con consumidor real: el
   clon los instala). Ficha: [WP-Z09](WP-Z09-miniclon-vps-rooms.md).
