@@ -50,8 +50,10 @@ Z09/Z10; DC-GC-ceguera-marca).
 
 ## WPs (estado canónico)
 
-> Replan GC-1.5 asentado (2026-07-20). Lote prioritario a brief: **Z14 · Z09**.
-> Z10 encolado (⬜, bloqueado A1; sin brief de arranque). Proyección local-only.
+> Lote GC-1.5 (2026-07-20): brief emitido para **Z14 · Z09** — proyección
+> issues local-only. Z10 encolado (⬜, bloqueado A1; sin brief de arranque).
+> Briefs: `plan/REPORTES/BRIEF-WP-Z14-procedencia-estados.md`,
+> `BRIEF-WP-Z09-miniclon-vps-rooms.md`.
 
 - ✅ **WP-Z01 · Pack mockdatas ciudad → firehose/cache-browser** — track PACK ·
   prio 1 · dep — · eje I (consumidores reales: los 2 browsers arrancados).
@@ -87,10 +89,10 @@ Z09/Z10; DC-GC-ceguera-marca).
   dashboard vivo con zeus :3017 **tras A1**; F3 volumen tras H1; grep
   transparencia acotado a `packages/`. **f4+ pendiente** (GC-2/GC-3).
   Ficha: [WP-Z08](WP-Z08-nodered-visor-ciudad.md).
-- ⬜ **WP-Z09 · Mini-clon local VPS Node-RED + pago deuda rooms** — track OPS ·
+- 🔶 **WP-Z09 · Mini-clon local VPS Node-RED + pago deuda rooms** — track OPS ·
   prio 2 · dep — · eje I (nodos 0.3.x desde **registry**; no toca submódulo
   zeus-sdk caído). Ficha: [WP-Z09](WP-Z09-miniclon-vps-rooms.md).
-  Lote GC-1.5: próximo 🔶.
+  Brief: [BRIEF-WP-Z09](../../REPORTES/BRIEF-WP-Z09-miniclon-vps-rooms.md).
 - ⬜ **WP-Z10 · «Viaje»: gestor de caminos wiki → lib sobre linea-kit** — track
   ENGINE · prio 2 · dep — (adaptador gamemap espera Z02/Z03) · **Bloqueado por
   A1** (base entera `linea-kit` en checkout desmaterializado; **no 🔶**, sin
@@ -116,10 +118,10 @@ Z09/Z10; DC-GC-ceguera-marca).
   clientes y ≥2 tipos de jugador; regla 6) + ceguera (lore ciego al marco).
   Brazo ejecutable de [TRAMA-AGUA](TRAMA-AGUA.md). Fusión r3 + r3-b.
   Ficha: [WP-Z13](WP-Z13-tres-jugadores.md).
-- ⬜ **WP-Z14 · Procedencia estados de barrio → cantera versionada** — track PACK ·
+- 🔶 **WP-Z14 · Procedencia estados de barrio → cantera versionada** — track PACK ·
   prio 1 · dep Z02 ✅ · micro-WP D1 vigía · eje I (generador regenera seeds desde
   cantera). **No reabre Z02.** Ficha: [WP-Z14](WP-Z14-procedencia-estados.md).
-  Lote GC-1.5: próximo 🔶.
+  Brief: [BRIEF-WP-Z14](../../REPORTES/BRIEF-WP-Z14-procedencia-estados.md).
 
 ## Overview (lectura; sin estado — el estado vive arriba)
 
