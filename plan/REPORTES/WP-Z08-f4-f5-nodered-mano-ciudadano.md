@@ -148,4 +148,16 @@ Cero diffs en zeus-sdk / games-library / Z03 / Z06 (solo lectura).
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** — 2026-07-21 · orquestador (merge/gobierno). Caveats deferred.
+
+Obra `21bd0cf` · tip reporte `a60b2bb` · merge `main` @ `cd75428`. Diff = `flows/**` (F4 Mano + F5 Ciudadano + helpers/test) + este reporte. Eje IV offline ✅ (shape intents + transparency `packages/` = 0); authority/fabric vivo ⏳. Z03 ya ✅ en `main` (room ciudad disponible para re-smoke). **f6+ no tocado.**
+
+### Deferred explícitos (no bloquean ✅)
+
+| id | ítem | nota |
+| -- | ---- | ---- |
+| D1 | Re-smoke f1–f3 contra zeus `:3017` (dashboard rooms/fleet/volumen) | socket-server DOWN; deps `@alephscript/mcp-core-sdk` — custodio |
+| D2 | Reinicio H1 cache-browser `:3015` con `ZEUS_VOLUMES_ROOT` canónico | intentado; mismo gap deps; volúmenes en checkout OK |
+| D3 | Authority vivo — inject Mano aceptado + rastros Ciudadano | depende D1 (+ Z03 ✅ ya en main); pozo ≠ walk/wake documentado |
+
+Hallazgos fuera de alcance (path dashboard UI; room `POZO_DEMO` vs ciudad) no bloquean. Retomar D1–D3 cuando custodio levante fabric H1/:3017.

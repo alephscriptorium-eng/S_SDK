@@ -16,7 +16,7 @@
   matices en §Replan post-vigía. Z09 entra en lote inmediato.
 **Ola GC-1.5 (cerrada 2026-07-21):** Z14 · Z09 ✅ — paralelo; paths no se pisan.
   **Tick A1 cerrado** → Z10 brief → **Z10 ✅** (cierra lote post-A1 Z14+Z09+Z10).
-**Ola GC-2 (GO 2026-07-21, vigía §E):** Z03 ✅ · Z06 · Z08-f4..5 · Z12-f1 —
+**Ola GC-2 (GO 2026-07-21, vigía §E):** Z03 ✅ · Z06 · Z08-f4..5 ✅ · Z12-f1 —
   abrir en paralelo acotado; Z12-f1 soft-block hasta Z06 (ver §Replan GC-1.5).
 **Ola GC-3 (federación y población):** Z04 · Z07 · Z08-f6..7 · Z11 (tras Z04/Z06) ·
 Z12-f2 (cascada/zonas) · Z13 (tras Z12-f1 y Z03) · Z05 (por items, cuando duela)
@@ -91,7 +91,7 @@ Z09/Z10; DC-GC-ceguera-marca).
 
 ## WPs (estado canónico)
 
-> Lote GC-2 (GO 2026-07-21, §E REVISION-GC15): **Z03 ✅ · Z06 · Z08-f4..5 ·
+> Lote GC-2 (GO 2026-07-21, §E REVISION-GC15): **Z03 ✅ · Z06 · Z08-f4..5 ✅ ·
 > Z12-f1 🔶** — briefs abajo. Z12-f1 soft-block hasta Z06 mergeado.
 > Issues: S_SDK #3 #6 #8 #12 (sync-map). Lote post-A1 Z14·Z09·Z10 ✅ cerrado.
 
@@ -130,12 +130,13 @@ Z09/Z10; DC-GC-ceguera-marca).
   Ficha: [WP-Z07](WP-Z07-dramaturgo-ciudad.md).
 - ✅ **WP-Z08 · Constelación Node-RED: visor + coordinación + población (169)** —
   track VISOR · prio 2 · eje IV. **Lote GC-1 f1–f3 ✅** (Oreja/Ojo/Ciudad lectura;
-  pack `plan/SPRINTS/sprint-game-city/flows/` @ e3daee8). **f4–f5 🔶 GC-2**
-  (Mano + Ciudadano) — **Asignado 🔶 2026-07-21** · brief
-  `plan/REPORTES/BRIEF-WP-Z08-f4-f5-nodered-mano-ciudadano.md` · rama
-  `wp/gc-z08-f4-f5-nodered` · issue S_SDK #8. Apertura = re-smoke f1–f3 +
-  H1 :3015 (§E b). Caveats f1–f3: grep transparencia acotado a `packages/`.
-  **f6+ pendiente** (GC-3). Ficha: [WP-Z08](WP-Z08-nodered-visor-ciudad.md).
+  pack `plan/SPRINTS/sprint-game-city/flows/` @ e3daee8). **f4–f5 ✅** (Mano +
+  Ciudadano) — obra `21bd0cf` · merge `cd75428`. **Aceptado ✅** 2026-07-21
+  (orquestador) con caveats deferred: **D1** re-smoke f1–f3 `:3017`; **D2** H1
+  `:3015`; **D3** authority vivo Mano/Ciudadano (fabric). Caveats f1–f3: grep
+  transparencia acotado a `packages/`. **f6+ pendiente** (GC-3). Ficha:
+  [WP-Z08](WP-Z08-nodered-visor-ciudad.md). Reporte:
+  [WP-Z08-f4-f5](../../REPORTES/WP-Z08-f4-f5-nodered-mano-ciudadano.md).
 - ✅ **WP-Z09 · Mini-clon local VPS Node-RED + pago deuda rooms** — track OPS ·
   prio 2 · dep — · eje I parcial (pins 0.3.0 + scripts; sin Docker vivo ni
   publish 0.3.x). Aterrizaje `miniclon/` (zeus-sdk A1). **Aceptado ✅**
