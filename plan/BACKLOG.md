@@ -553,8 +553,9 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   (C8); `npm install` EXIT=0; lockfile en 0.3.4; grep «versión fijada» = 0;
   diff solo `package.json`+`package-lock.json`+prosa plan. **Sin push.**
 
-- 🔶 **WP-I72 · Adoptar contrato — regla 15 + semver DC-22** *(asignado ·
-  orquestador · 2026-07-20 · documental; independiente de I70)* — citar la
+- ✅ **WP-I72 · Adoptar contrato — regla 15 + semver DC-22** *(aceptado ·
+  orquestador · 2026-07-20 · merge `main` @ `aa7a4e4` · rama
+  `wp/i72-contrato-regla15-semver` @ `6e31e87`)* — citar la
   **regla 15** (fuente de verdad única + efimeralidad) y la doctrina
   **semver DC-22** (regla de método = minor; patch = sin cambio de contrato)
   como contrato en `plan/PRACTICAS.md`. Como zeus: holón 07 **cumple de
@@ -562,6 +563,11 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   no chocar con DE-I17 de I70). **CA:** regla 15 y DC-22 referenciadas por
   versión (`reglas-metodo-v04.md` / CHANGELOG 0.3.4); sin promesa sin sello;
   diff solo `plan/PRACTICAS.md`. **Sin push.**
+  **Aceptado ✅ 2026-07-20** (orquestador): CA1–CA3 re-verificados —
+  PRACTICAS delta 9 cita regla 15 (paquete 0.3.1, `CHANGELOG §[0.3.1]·WP-05`,
+  spot-check PASS) + semver DC-22 (`§[0.3.4]·WP-13`); «cumple de facto»
+  apoyado en deltas 1/7 vigentes; diff solo PRACTICAS + reporte. Reporte
+  `plan/REPORTES/WP-I72-contrato-regla15-semver.md`.
 
 - ⬜ **WP-I71 · Materialización a `.claude/skills/`** *(dep I70; espejo zeus
   U147)* — `scripts/sync-claude-skills.mjs` (Node ESM): copia
