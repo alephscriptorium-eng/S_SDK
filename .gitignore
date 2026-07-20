@@ -6,6 +6,9 @@ ADDENDA/
 !.claude/skills/vigilancia/
 !.claude/skills/vigilancia/**
 
+# Worktrees efímeros de agentes (harness)
+.claude/worktrees/
+
 # Dependencias y artefactos Node
 node_modules/
 npm-debug.log*

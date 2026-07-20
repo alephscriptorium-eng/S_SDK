@@ -1,0 +1,6 @@
+# WP-I71 — el espejo `.claude/skills/` lo escribe `skills:sync` con LF
+# (copia byte-a-byte del paquete). Forzar LF evita el churn CRLF que
+# `core.autocrlf=true` provocaría: sin esto cada `npm run skills:sync`
+# ensucia el árbol y rompe la idempotencia (CA2 de WP-I71) en Windows.
+.claude/skills/** text eol=lf
+scripts/*.mjs text eol=lf
