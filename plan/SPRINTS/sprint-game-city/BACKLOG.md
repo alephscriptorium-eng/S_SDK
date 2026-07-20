@@ -12,8 +12,10 @@
 ## Olas
 
 **Ola GC-1 (arrancable hoy, sin dependencias):** Z01 · Z02 · Z08-f1..3 · Z10 (lib pura) · Z09
-**Ola GC-2 (sobre GC-1):** Z03 · Z06 · Z08-f4..5
-**Ola GC-3 (federación y población):** Z04 · Z07 · Z08-f6..7 · Z11 (tras Z04/Z06) · Z05 (por items, cuando duela)
+**Ola GC-2 (sobre GC-1):** Z03 · Z06 · Z08-f4..5 · Z12-f1 (catálogo + kit núcleo +
+primer barrio encendible, tras Z06 — paralelo acotado como Z10)
+**Ola GC-3 (federación y población):** Z04 · Z07 · Z08-f6..7 · Z11 (tras Z04/Z06) ·
+Z12-f2 (cascada/zonas) · Z13 (tras Z12-f1 y Z03) · Z05 (por items, cuando duela)
 
 ## WPs (estado canónico)
 
@@ -59,6 +61,21 @@
   V (gates de mutación visibles) + ceguera (el paquete no nombra marco/ciudad/
   NovelistEditor). Precondición: glosario «viaje» (regla 5). Asentado de oferta
   ronda 2 (2026-07-20). Ficha: [WP-Z11](WP-Z11-linea-editor.md).
+- ⬜ **WP-Z12 · Encendido del árbol de vida (lifecycle XState, start/stop real)** —
+  track ENGINE+OPS · prio 2 · **f1 en GC-2** (tras Z06), f2/zonas en GC-3 · dep
+  Z06 (actuadores; Z12 = cerebro, Z06 = brazo) + Z02 (sección `arbol`/catálogo en
+  seeds) + Z03 (round-trip `wake`); alimenta Z08-f4 y Z13 · ejes I (barrio real
+  arrancado e2e, salud confirmada) + IV (dashboard Z08 = 2º cliente del
+  vocabulario de mando) + III (una sola implementación de spawn/kill, en Z06) +
+  ceguera. Fusión de ofertas r3 + r3-b (arquitectura híbrida no-dogma dentro de
+  kit genérico + servicio proyector único).
+  Ficha: [WP-Z12](WP-Z12-encendido-arbol-vida.md).
+- ⬜ **WP-Z13 · Los tres jugadores: fusión en la trama del SDK** — track PACK
+  (lore+flujos) · prio 3 · ola GC-3 · dep Z12-f1 (residentes = edificios en
+  `running`) + Z03 + Z04; gancho Z07/Z11 · ejes IV (contrato de mapeo con 2
+  clientes y ≥2 tipos de jugador; regla 6) + ceguera (lore ciego al marco).
+  Brazo ejecutable de [TRAMA-AGUA](TRAMA-AGUA.md). Fusión r3 + r3-b.
+  Ficha: [WP-Z13](WP-Z13-tres-jugadores.md).
 
 ## Overview (lectura; sin estado — el estado vive arriba)
 
@@ -75,6 +92,8 @@
 | [Z09](WP-Z09-miniclon-vps-rooms.md) | Mini-clon local VPS + deuda rooms | OPS | 2 | — | I |
 | [Z10](WP-Z10-viajes-wiki-linea.md) | «Viaje»: caminos wiki → linea-kit | ENGINE | 2 | — | I/II |
 | [Z11](WP-Z11-linea-editor.md) | linea-editor: autoría MCP por horse | ENGINE | 3 | Z06·Z04·Z03 | I/IV/II/III/V |
+| [Z12](WP-Z12-encendido-arbol-vida.md) | Encendido del árbol de vida (XState) | ENGINE+OPS | 2 | Z06·Z02·Z03 | I/IV/III |
+| [Z13](WP-Z13-tres-jugadores.md) | Los tres jugadores (trama del SDK) | PACK | 3 | Z12-f1·Z03·Z04 | IV |
 
 ## Candidatos GC-4 — profundizar la gamificación (sin abrir; ver [SEMILLA-GAMIFICACION.md](SEMILLA-GAMIFICACION.md))
 
@@ -90,6 +109,10 @@
   («varias vistas, un contrato»).
 - **Meta-juego del swarm** — proyectar WPs como misiones en la plaza (adaptador
   `ciudad` del exportador de proyección del skill; mismo modelo que backlog→Issues).
+- **Trama-agua como mundo del dramaturgo** (ronda 3) — ejes REIC de la instancia
+  `ciudad` derivados de [TRAMA-AGUA](TRAMA-AGUA.md) §5.5 (R=agua/caudal,
+  E=compuertas/gates, I=ventanas/vasos, C=ciclo/retorno); actos etiquetados por tipo
+  de jugador desde el ledger (contrato de mapeo de Z13). Dep: Z07 + Z13.
 
 ## Cierre del sprint (parte final — no evaporar)
 
@@ -129,5 +152,10 @@ block2 §6 —
    la primera ocasión que un WP toque esos prompts; hasta entonces la ambigüedad
    queda registrada aquí como conocida. Ningún WP nombra tools/APIs nuevas con el
    sentido viejo (homonimia ya mordió una vez: agujero negro, block2 §4.1).
-6. Contexto histórico y decisiones de vista: [VISTA.md](VISTA.md) y
-   [RECAP-NODERED.md](RECAP-NODERED.md). Catálogo técnico: [RECURSOS-LIBS.md](RECURSOS-LIBS.md).
+6. **Ningún jugador privilegiado (ronda 3, de TRAMA-AGUA §2):** todo contrato nuevo
+   del pack declara **≥2 tipos de jugador** (experto/humano/agente) como consumidores
+   previstos; si solo puede nombrarse uno, el contrato vuelve a diseño. Es el eje IV
+   del skill elevado a ley de diseño del sprint, no solo CA puntual.
+7. Contexto histórico y decisiones de vista: [VISTA.md](VISTA.md),
+   [RECAP-NODERED.md](RECAP-NODERED.md) y [TRAMA-AGUA.md](TRAMA-AGUA.md) (lore/flujos).
+   Catálogo técnico: [RECURSOS-LIBS.md](RECURSOS-LIBS.md).

@@ -98,3 +98,18 @@ El flow referencia secretos vía `$(ROOMS_SECRET)` (env-var syntax de Node-RED) 
   `/opt/aleph/`) que no viven en esos árboles.
 - Lo único que cerró de verdad en el VPS: **rooms** (validado 2026-05-09). Firehose-node sin
   backend, mcp-devops apagado, contribs sin hornear = la deuda.
+
+## 7. XState 5 en zeus (precedente + doctrina — para WP-Z12)
+
+- **Ya en el monorepo:** `player-ui\src\session-machine.mjs` (+test) — `setup()`,
+  sesión `idle→preparada→activa→cierre`, deck actors
+  `empty→loading→cued→playing→degraded`. xstate 5 ya es dependencia; Z12 no añade dep
+  nueva.
+- **Doctrina de referencia (concepto, no código):** constitución XState de
+  NETWORK-ENGINE (`INSTRUCTIONS\LAYER_0\XSTATE.instructions.md`) — actor-first,
+  `setup()`+`createActor()`, eventos = hechos, jerarquías por `spawnChild`/ActorSystem,
+  checklist anti-legacy (0 `interpret(`/`Machine(`) **adoptada como gate de CA en Z12**.
+- **Máquina implícita a portar como concepto:** mesh vieja `MCPLauncherServer.ts` /
+  `mcp-mesh-sdk` (`ServerStatus`, `intentionalStops`, `restartCount`, health polls,
+  catálogo `app.config.ts`, degradación diagnosticada de Prolog). El bug del campo
+  muerto (`capabilities` vs `capabilitiesCheck`) NO se hereda.

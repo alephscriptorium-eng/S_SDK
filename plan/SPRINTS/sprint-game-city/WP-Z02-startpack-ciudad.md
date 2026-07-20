@@ -24,6 +24,11 @@ que cualquier juego o demo de zeus puede cargar.
    - **24 barrios** como gamethings/anchors con atributo `estado`
      (vivo/latente/muerto/roto) — dato del censo, primer atributo jugable.
    - Calles DRY como enlaces walk entre anchors.
+   - **Sección `arbol`** (fusión r3, para Z12): por barrio, sus edificios (locales/
+     naves de las fichas de cantera) y **maquinarias** = servicios declarados
+     (`id → {cmd, puerto, health, autoRestart, deps, barrio, edificio}` — esquema
+     portado del catálogo de la mesh vieja, un solo campo por dato, validado por
+     schema). Consumida por Z12; **ignorada por el engine de juego** (D-8 intacto).
 3. Nota de solape con `startpack-plaza`: qué reutiliza, qué extiende, qué no duplica.
 
 ## Criterios de aceptación
