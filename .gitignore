@@ -1,6 +1,10 @@
 # WP-I01 / DE-I11 — backstage local (histórico vigilancia; no remoto privado nuevo)
 VIGILANCIA/
 ADDENDA/
+# WP-I71 — el skill materializado `vigilancia` es marco público (NO backstage);
+# se exime de la regla `VIGILANCIA/` (colisión case-insensitive en Windows).
+!.claude/skills/vigilancia/
+!.claude/skills/vigilancia/**
 
 # Dependencias y artefactos Node
 node_modules/
