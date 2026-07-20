@@ -1,8 +1,11 @@
 {
   "name": "sprint-game-city-nodered-visor",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
-  "description": "Node-RED userDir for WP-Z08 f1–f3 (Oreja · Ojo · Ciudad completa). Instancia :1880 contra zeus :3017.",
+  "description": "Node-RED userDir for WP-Z08 f1–f5 (Oreja · Ojo · Ciudad · Mano · Ciudadano). Instancia :1880 contra zeus :3017.",
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
   "dependencies": {
     "@flowfuse/node-red-dashboard": "^1.30.2",
     "node-red-contrib-alephscript-core": "^0.2.0",

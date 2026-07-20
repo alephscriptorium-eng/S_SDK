@@ -456,7 +456,7 @@
     "type": "comment",
     "z": "z08-f1-oreja",
     "name": "F1 Oreja · zeus :3017 /runtime · PUBLIC_ROOM + POZO_DEMO",
-    "info": "Auth fabric: {token:'dev-secret', room:'PUBLIC_ROOM', user:'nr-z08-oreja'}.\nGAME_ROOM por defecto POZO_DEMO (override ZEUS_GAME_ROOM / ZEUS_POZO_ROOM).\nSolo escucha; F4 (Mano) emitirá intents — fuera de este lote.",
+    "info": "Auth fabric: {token:'dev-secret', room:'PUBLIC_ROOM', user:'nr-z08-oreja'}.\nGAME_ROOM por defecto POZO_DEMO (override ZEUS_GAME_ROOM / ZEUS_POZO_ROOM).\nEscucha; F4 Mano emite intents walk/wake (stubs ciudad).",
     "x": 280,
     "y": 40,
     "wires": []
@@ -1053,5 +1053,552 @@
     "x": 280,
     "y": 40,
     "wires": []
+  },
+  {
+    "id": "z08-grp-mano",
+    "type": "ui-group",
+    "name": "Mano · intents",
+    "page": "z08-page-ops",
+    "width": 6,
+    "height": 1,
+    "order": 20,
+    "showTitle": true,
+    "className": "",
+    "visible": true,
+    "disabled": false,
+    "groupType": "default"
+  },
+  {
+    "id": "z08-grp-ciudadano",
+    "type": "ui-group",
+    "name": "Ciudadano · censo",
+    "page": "z08-page-ops",
+    "width": 6,
+    "height": 1,
+    "order": 21,
+    "showTitle": true,
+    "className": "",
+    "visible": true,
+    "disabled": false,
+    "groupType": "default"
+  },
+  {
+    "id": "z08-f4-mano",
+    "type": "tab",
+    "label": "F4 Mano",
+    "disabled": false,
+    "info": "WP-Z08 F4 — Mano.\n\nInject → function (compose envelope walk/wake) → alephscript-core-client ROOM_MESSAGE event=intent.\noperator-bridge portado en helpers/operator-bridge-port.js (globalContext).\nStubs Z03 (game=ciudad); pozo no tiene walk/wake. Aceptación authority = vivo cuando Z03+zeus :3017."
+  },
+  {
+    "id": "z08-f5-ciudadano",
+    "type": "tab",
+    "label": "F5 Ciudadano",
+    "disabled": false,
+    "info": "WP-Z08 F5 — Ciudadano.\n\nSubflow con identidad del censo (aleph). Announce + walk periódico (random-walk calles startpack). Z10 caminos = futuro. NO población plena (f6)."
+  },
+  {
+    "id": "sf-ciudadano",
+    "type": "subflow",
+    "name": "Ciudadano (censo)",
+    "info": "Plantilla ciudadano: announce con identidad censo, walk periódico random-walk, reacción a snapshot (state).\nEnv: CENSUS_ID, HOME_ZONE, GAME_ROOM.",
+    "category": "z08",
+    "in": [
+      {
+        "x": 60,
+        "y": 80,
+        "wires": [
+          {
+            "id": "sf-c-route"
+          }
+        ]
+      }
+    ],
+    "out": [
+      {
+        "x": 780,
+        "y": 80,
+        "wires": [
+          {
+            "id": "sf-c-client",
+            "port": 0
+          }
+        ]
+      }
+    ],
+    "env": [
+      {
+        "name": "CENSUS_ID",
+        "type": "str",
+        "value": "aleph",
+        "ui": {
+          "label": "Censo id"
+        }
+      },
+      {
+        "name": "HOME_ZONE",
+        "type": "str",
+        "value": "plaza",
+        "ui": {
+          "label": "Zona hogar"
+        }
+      },
+      {
+        "name": "GAME_ROOM",
+        "type": "str",
+        "value": "POZO_DEMO",
+        "ui": {
+          "label": "Room juego"
+        }
+      },
+      {
+        "name": "WALK_EVERY_S",
+        "type": "num",
+        "value": "12",
+        "ui": {
+          "label": "Walk cada (s)"
+        }
+      }
+    ],
+    "meta": {
+      "module": "z08-ciudadano",
+      "version": "0.1.0"
+    },
+    "color": "#38bdf8",
+    "icon": "font-awesome/fa-user",
+    "status": {
+      "x": 780,
+      "y": 160,
+      "wires": [
+        {
+          "id": "sf-c-status",
+          "port": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "sf-c-route",
+    "type": "function",
+    "z": "sf-ciudadano",
+    "name": "Route cmd / snapshot",
+    "func": "const stubs = global.get('ciudadIntentStubs');\nconst topic = String(msg.topic || '');\nconst cmd = (msg.payload && msg.payload.cmd) || topic;\n\nif (cmd === 'snapshot' || topic === 'state' || (msg.payload && msg.payload.kind === 'state')) {\n  const state = msg.payload && msg.payload.data ? msg.payload.data : msg.payload;\n  const id = env.get('CENSUS_ID') || 'aleph';\n  const me = state && state.actors && state.actors[id];\n  if (me && me.zone) context.set('zone', me.zone);\n  msg.topic = 'ciudadano:snapshot';\n  msg.payload = { reacted: true, zone: context.get('zone'), actor: me || null };\n  return [null, msg];\n}\n\nif (cmd === 'announce' || topic === 'announce') {\n  msg.topic = 'compose:announce';\n  return [msg, null];\n}\nif (cmd === 'walk' || topic === 'walk') {\n  msg.topic = 'compose:walk';\n  return [msg, null];\n}\nif (cmd === 'tick' || topic === 'tick') {\n  msg.topic = 'compose:walk';\n  return [msg, null];\n}\nreturn null;",
+    "outputs": 2,
+    "timeout": "",
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 220,
+    "y": 80,
+    "wires": [
+      [
+        "sf-c-compose"
+      ],
+      [
+        "sf-c-status"
+      ]
+    ]
+  },
+  {
+    "id": "sf-c-compose",
+    "type": "function",
+    "z": "sf-ciudadano",
+    "name": "Compose announce|walk",
+    "func": "const stubs = global.get('ciudadIntentStubs');\nif (!stubs) {\n  node.error('ciudadIntentStubs missing in globalContext');\n  return null;\n}\nconst id = env.get('CENSUS_ID') || stubs.SAMPLE_CITIZEN.censusId;\nconst home = env.get('HOME_ZONE') || stubs.SAMPLE_CITIZEN.homeZone;\nconst room = env.get('GAME_ROOM') || global.get('ZEUS_GAME_ROOM') || 'POZO_DEMO';\nconst game = global.get('ZEUS_GAME_ID') || 'ciudad';\nlet zone = context.get('zone') || home;\nconst topic = String(msg.topic || '');\n\nlet intent;\nif (topic === 'compose:announce') {\n  intent = stubs.makeAnnounceIntent(id, {\n    zone: home,\n    text: id + ' presente · ' + (stubs.SAMPLE_CITIZEN.agentPath || '')\n  }, { game });\n} else {\n  const hop = stubs.nextRandomWalk(zone);\n  zone = hop.nextZone;\n  context.set('zone', zone);\n  intent = stubs.makeWalkIntent(id, hop, { game });\n}\n\nconst v = stubs.validateCiudadIntent(intent);\nif (!v.ok) {\n  node.status({ fill: 'red', shape: 'ring', text: v.error });\n  msg.payload = { ok: false, error: v.error, intent };\n  return msg;\n}\nnode.status({ fill: 'green', shape: 'dot', text: intent.intent + ' → ' + zone });\nmsg.payload = stubs.toRoomIntentCommand(intent, room);\nmsg.topic = 'intent';\nmsg.ciudadano = { id, zone, intent, valid: true };\nreturn msg;",
+    "outputs": 1,
+    "timeout": "",
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 440,
+    "y": 60,
+    "wires": [
+      [
+        "sf-c-client",
+        "sf-c-status"
+      ]
+    ]
+  },
+  {
+    "id": "sf-c-client",
+    "type": "alephscript-core-client",
+    "z": "sf-ciudadano",
+    "name": "Ciudadano → /runtime",
+    "config": "z08-zeus-core-config",
+    "clientName": "",
+    "session": "",
+    "clientType": "NodeRedCiudadano",
+    "defaultRoom": "POZO_DEMO",
+    "autoRegister": true,
+    "autoSubscribe": true,
+    "features": "node-red,ciudadano,visor-mano",
+    "x": 660,
+    "y": 60,
+    "wires": [
+      [
+        ""
+      ]
+    ]
+  },
+  {
+    "id": "sf-c-status",
+    "type": "function",
+    "z": "sf-ciudadano",
+    "name": "Status payload",
+    "func": "const id = env.get('CENSUS_ID') || 'aleph';\nmsg.payload = {\n  censusId: id,\n  zone: context.get('zone') || env.get('HOME_ZONE') || 'plaza',\n  last: msg.ciudadano || msg.payload,\n  at: new Date().toISOString()\n};\nmsg.topic = 'ciudadano:status';\nreturn msg;",
+    "outputs": 1,
+    "timeout": "",
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 660,
+    "y": 160,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "f4-comment",
+    "type": "comment",
+    "z": "z08-f4-mano",
+    "name": "F4 Mano · inject walk/wake → envelope → intent on GAME_ROOM",
+    "info": "Stubs game=ciudad (Z03). Pozo INTENTS no incluyen walk/wake — documentado.\noperator-bridge: helpers/operator-bridge-port.js vía functionGlobalContext.\nWire: ROOM_MESSAGE event=intent (player-mcp-kit).",
+    "x": 320,
+    "y": 40,
+    "wires": []
+  },
+  {
+    "id": "f4-inject-walk",
+    "type": "inject",
+    "z": "z08-f4-mano",
+    "name": "Inject walk plaza→zigurat",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.5,
+    "topic": "walk",
+    "payload": "{\"linkId\":\"calle-plaza-zigurat\",\"direction\":\"a-to-b\",\"actorId\":\"nr-mano\"}",
+    "payloadType": "json",
+    "x": 200,
+    "y": 100,
+    "wires": [
+      [
+        "f4-compose"
+      ]
+    ]
+  },
+  {
+    "id": "f4-inject-wake",
+    "type": "inject",
+    "z": "z08-f4-mano",
+    "name": "Inject wake barrio",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.5,
+    "topic": "wake",
+    "payload": "{\"barrioId\":\"vscode-extension\",\"actorId\":\"nr-mano\"}",
+    "payloadType": "json",
+    "x": 180,
+    "y": 160,
+    "wires": [
+      [
+        "f4-compose"
+      ]
+    ]
+  },
+  {
+    "id": "f4-inject-bridge-demo",
+    "type": "inject",
+    "z": "z08-f4-mano",
+    "name": "Demo operator-bridge onState",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.5,
+    "topic": "bridge:demo",
+    "payload": "{\"actors\":{\"aleph\":{\"zone\":\"plaza\"},\"nr-mano\":{\"zone\":\"zigurat\"}},\"ts\":1}",
+    "payloadType": "json",
+    "x": 210,
+    "y": 220,
+    "wires": [
+      [
+        "f4-bridge"
+      ]
+    ]
+  },
+  {
+    "id": "f4-compose",
+    "type": "function",
+    "z": "z08-f4-mano",
+    "name": "Compose walk|wake envelope",
+    "func": "const stubs = global.get('ciudadIntentStubs');\nconst bridgeLib = global.get('operatorBridge');\nif (!stubs) {\n  node.error('ciudadIntentStubs missing — check settings.js functionGlobalContext');\n  return null;\n}\nconst room = global.get('ZEUS_GAME_ROOM') || 'POZO_DEMO';\nconst game = global.get('ZEUS_GAME_ID') || 'ciudad';\nconst topic = String(msg.topic || '');\nconst p = msg.payload || {};\nconst actorId = p.actorId || 'nr-mano';\n\nlet intent;\nif (topic === 'wake' || p.intent === 'wake') {\n  intent = stubs.makeWakeIntent(actorId, { barrioId: p.barrioId || 'vscode-extension' }, { game });\n} else if (topic === 'walk' || p.intent === 'walk' || p.linkId) {\n  intent = stubs.makeWalkIntent(actorId, {\n    linkId: p.linkId || 'calle-plaza-zigurat',\n    direction: p.direction || 'a-to-b'\n  }, { game });\n} else if (bridgeLib && (topic === 'operator' || p.role === 'operator')) {\n  intent = stubs.makeOperatorIntent(actorId, p.intent || 'inspect', p.args || p, { game });\n} else {\n  intent = stubs.makeWalkIntent(actorId, {\n    linkId: 'calle-plaza-zigurat',\n    direction: 'a-to-b'\n  }, { game });\n}\n\nconst v = stubs.validateCiudadIntent(intent);\nmsg.mano = { intent, valid: v, at: new Date().toISOString() };\nif (!v.ok) {\n  node.status({ fill: 'red', shape: 'ring', text: v.error });\n  msg.payload = { ok: false, error: v.error, intent };\n  msg.topic = 'mano:invalid';\n  return [null, msg];\n}\nnode.status({ fill: 'green', shape: 'dot', text: intent.intent + ' ok' });\nmsg.payload = stubs.toRoomIntentCommand(intent, room);\nmsg.topic = 'intent';\nreturn [msg, msg];",
+    "outputs": 2,
+    "timeout": "",
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 460,
+    "y": 120,
+    "wires": [
+      [
+        "f4-client",
+        "f4-ui-last"
+      ],
+      [
+        "f4-debug",
+        "f4-ui-last"
+      ]
+    ]
+  },
+  {
+    "id": "f4-bridge",
+    "type": "function",
+    "z": "z08-f4-mano",
+    "name": "operator-bridge onState/onLedger",
+    "func": "const bridgeLib = global.get('operatorBridge');\nif (!bridgeLib) {\n  node.error('operatorBridge missing');\n  return null;\n}\nlet bridge = context.get('bridge');\nif (!bridge) {\n  bridge = bridgeLib.createOperatorBridge();\n  context.set('bridge', bridge);\n}\nconst topic = String(msg.topic || '');\nlet msgs = [];\nlet slice = null;\nif (topic === 'bridge:ledger' || (msg.payload && msg.payload.kind && !msg.payload.actors)) {\n  msgs = bridge.onLedger(msg.payload);\n} else {\n  msgs = bridge.onState(msg.payload || {});\n  slice = bridgeLib.projectOperatorSlice(msg.payload || {});\n}\nmsg.payload = { alephMessages: msgs, slice, at: new Date().toISOString() };\nmsg.topic = 'mano:bridge';\nnode.status({ fill: 'blue', shape: 'dot', text: msgs.length + ' msgs' });\nreturn msg;",
+    "outputs": 1,
+    "timeout": "",
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 460,
+    "y": 220,
+    "wires": [
+      [
+        "f4-debug",
+        "f4-ui-last"
+      ]
+    ]
+  },
+  {
+    "id": "f4-client",
+    "type": "alephscript-core-client",
+    "z": "z08-f4-mano",
+    "name": "Mano → GAME_ROOM",
+    "config": "z08-zeus-core-config",
+    "clientName": "nr-z08-mano",
+    "session": "",
+    "clientType": "NodeRedMano",
+    "defaultRoom": "POZO_DEMO",
+    "autoRegister": true,
+    "autoSubscribe": true,
+    "features": "node-red,alephscript-core,mano",
+    "x": 700,
+    "y": 100,
+    "wires": [
+      [
+        "f4-debug"
+      ]
+    ]
+  },
+  {
+    "id": "f4-debug",
+    "type": "debug",
+    "z": "z08-f4-mano",
+    "name": "Mano events",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "x": 920,
+    "y": 160,
+    "wires": []
+  },
+  {
+    "id": "f4-ui-last",
+    "type": "ui-template",
+    "z": "z08-f4-mano",
+    "group": "z08-grp-mano",
+    "name": "Último intent Mano",
+    "order": 1,
+    "width": 6,
+    "height": 5,
+    "head": "",
+    "format": "<template>\n  <pre style=\"font:12px/1.35 ui-monospace,monospace;white-space:pre-wrap;max-height:240px;overflow:auto\">{{ JSON.stringify(msg?.payload, null, 2) }}</pre>\n</template>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 920,
+    "y": 100,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "f5-comment",
+    "type": "comment",
+    "z": "z08-f5-ciudadano",
+    "name": "F5 Ciudadano · subflow censo aleph · random-walk (no f6)",
+    "info": "Identidad: .github_V1/agents/aleph.agent.md (print-agentes).\nCaminos Z10: no disponibles → nextRandomWalk sobre calles startpack.\nOreja (F1) puede alimentar snapshot → envía topic state al subflow.",
+    "x": 300,
+    "y": 40,
+    "wires": []
+  },
+  {
+    "id": "f5-inject-announce",
+    "type": "inject",
+    "z": "z08-f5-ciudadano",
+    "name": "Announce aleph",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": true,
+    "onceDelay": "2",
+    "topic": "announce",
+    "payload": "{\"cmd\":\"announce\"}",
+    "payloadType": "json",
+    "x": 160,
+    "y": 100,
+    "wires": [
+      [
+        "f5-ciudadano-1"
+      ]
+    ]
+  },
+  {
+    "id": "f5-inject-walk",
+    "type": "inject",
+    "z": "z08-f5-ciudadano",
+    "name": "Walk tick 12s",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "12",
+    "crontab": "",
+    "once": true,
+    "onceDelay": "5",
+    "topic": "tick",
+    "payload": "{\"cmd\":\"tick\"}",
+    "payloadType": "json",
+    "x": 160,
+    "y": 160,
+    "wires": [
+      [
+        "f5-ciudadano-1"
+      ]
+    ]
+  },
+  {
+    "id": "f5-ciudadano-1",
+    "type": "subflow:sf-ciudadano",
+    "z": "z08-f5-ciudadano",
+    "name": "Ciudadano · aleph",
+    "env": [
+      {
+        "name": "CENSUS_ID",
+        "value": "aleph",
+        "type": "str"
+      },
+      {
+        "name": "HOME_ZONE",
+        "value": "plaza",
+        "type": "str"
+      },
+      {
+        "name": "GAME_ROOM",
+        "value": "POZO_DEMO",
+        "type": "str"
+      },
+      {
+        "name": "WALK_EVERY_S",
+        "value": "12",
+        "type": "num"
+      }
+    ],
+    "x": 400,
+    "y": 130,
+    "wires": [
+      [
+        "f5-debug",
+        "f5-ui"
+      ]
+    ]
+  },
+  {
+    "id": "f5-debug",
+    "type": "debug",
+    "z": "z08-f5-ciudadano",
+    "name": "Ciudadano events",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "x": 640,
+    "y": 100,
+    "wires": []
+  },
+  {
+    "id": "f5-ui",
+    "type": "ui-template",
+    "z": "z08-f5-ciudadano",
+    "group": "z08-grp-ciudadano",
+    "name": "Estado ciudadano",
+    "order": 1,
+    "width": 6,
+    "height": 5,
+    "head": "",
+    "format": "<template>\n  <div style=\"font:13px/1.4 system-ui,sans-serif\">\n    <div><b>censo</b> aleph · <code>.github_V1/agents/aleph.agent.md</code></div>\n    <pre style=\"font:11px/1.3 ui-monospace,monospace;white-space:pre-wrap;max-height:200px;overflow:auto\">{{ JSON.stringify(msg?.payload, null, 2) }}</pre>\n  </div>\n</template>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 640,
+    "y": 160,
+    "wires": [
+      []
+    ]
   }
 ]
