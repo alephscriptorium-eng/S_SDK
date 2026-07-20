@@ -13,10 +13,11 @@
 ## Olas
 
 **Ola GC-1 (cerrada de facto 2026-07-20, vigía):** Z01 · Z02 · Z08-f1..3 ✅ —
-  matices en §Replan post-vigía. Z09 entra en lote inmediato; Z10 **no** (A1).
+  matices en §Replan post-vigía. Z09 entra en lote inmediato.
 **Ola GC-1.5 (post-vigía, hoy):** Z14 (procedencia estados) · Z09 (mini-clon) —
-  paralelo; paths no se pisan. Z10 encolado tras tick A1.
-**Ola GC-2 (sobre GC-1 + A1):** Z03 · Z06 · Z08-f4..5 · Z12-f1 · **Z10** (tras A1)
+  paralelo; paths no se pisan. **Tick A1 cerrado** → Z10 desbloqueado (brief
+  pendiente).
+**Ola GC-2 (sobre GC-1 + A1✅):** Z03 · Z06 · Z08-f4..5 · Z12-f1 · **Z10**
 **Ola GC-3 (federación y población):** Z04 · Z07 · Z08-f6..7 · Z11 (tras Z04/Z06) ·
 Z12-f2 (cascada/zonas) · Z13 (tras Z12-f1 y Z03) · Z05 (por items, cuando duela)
 
@@ -31,7 +32,7 @@ Z09/Z10; DC-GC-ceguera-marca).
 | D1 | Procedencia `estado` de barrios sin fuente en cantera | **WP-Z14** (nuevo) |
 | H2 | ¿Ceguera incluye marca aleph/scriptorium? | **DC-GC-ceguera-marca** cerrada — solo método; **no** WP scrub-marca |
 | H1 | cache-browser :3015 huérfano (ZEUS_VOLUMES_ROOT → worktree borrado) | nota ops custodio (reinicio); no bloquea lote |
-| A1 | Submódulo zeus-sdk desregistrado / checkout desmaterializado | **bloqueante** Z10·Z06·Z12-f1·re-smoke Z08 |
+| A1 | Submódulo zeus-sdk desregistrado / checkout desmaterializado | **cerrado 2026-07-20** — ver §Higiene / Tick A1 |
 | M2 | Drift `estado` en fichas WP | higiene: campo quitado; canónico = este BACKLOG |
 | M1 | grep transparencia Z08 demasiado ancho | nota en ficha Z08: acotar a `packages/` |
 | ops | push GL + runner limpio; re-smoke :3017 | custodio / publish; no bloquea Z09·Z14 |
@@ -39,19 +40,31 @@ Z09/Z10; DC-GC-ceguera-marca).
 **Scrub-de-marca:** propuesto como F-candidata por el vigía → **cancelado** por
 [DC-GC-ceguera-marca](DECISIONES.md#dc-gc-ceguera-marca--2026-07-20--cerrada).
 
-## Bloqueos (custodio)
+## Tick A1 (cerrado 2026-07-20)
 
-- **Tick A1:** rematerializar/restaurar checkout `HOLONES/01-mythos/zeus-sdk`
-  (submódulo desregistrado `-7567bf3`, sin `.git`; posible residuo `.worktrees`).
-  Trae `linea-kit` y base de re-smoke. **Bloquea:** Z10 (no 🔶), Z06, Z12-f1,
-  re-smoke Z08 vivo. No bloquea Z09 ni Z14.
-- **H1:** reiniciar cache-browser :3015 contra checkout actual (`ZEUS_VOLUMES_ROOT`).
-- **Publish GL:** push games-library + runner limpio (verif. ambiental Z02).
+- **Estado:** cerrado. SHA submodule `7567bf3`. Acta:
+  `TEMP/vigia/REVISION-GC1-2026-07-20.md` §ADDENDUM Tick A1.
+- **Causa:** limpieza post-GC-1 borró 14 dot-entries de raíz del checkout
+  zeus-sdk (incl. gitfile `.git`); módulo git intacto en `7567bf3`.
+- **Remedio:** restaurar gitdir links + `git restore` de los 14. Status limpio,
+  submodule sano, `linea-kit` + `.npmrc` presentes.
+- **Desbloqueados:** Z10 · Z06 · Z12-f1 · re-smoke Z08.
+
+## Higiene / ticks abiertos (ops, no WP)
+
+- **Worktree stale Z01** (`zeus-sdk/.worktrees/wp-gc-z01-mockdatas-browsers`,
+  ~node_modules del smoke): **hecho** 2026-07-20 — `git worktree remove` +
+  borrado long-path; no lo usaban Z09/Z14.
+- **H1 (abierto):** reiniciar cache-browser `:3015` contra checkout actual
+  (`ZEUS_VOLUMES_ROOT`).
+- **Publish GL (abierto):** push games-library + runner limpio (verif. ambiental Z02).
+- **Re-smoke Z08 (abierto, prosa):** dashboard vivo zeus `:3017` tras A1✅.
 
 ## WPs (estado canónico)
 
-> Lote GC-1.5 (2026-07-20): brief emitido para **Z14 · Z09** — proyección
-> issues local-only. Z10 encolado (⬜, bloqueado A1; sin brief de arranque).
+> Lote post-A1 (2026-07-20): brief emitido para **Z14 · Z09** — proyección
+> issues local-only. A1✅ desbloqueó Z10/Z06/Z12-f1; **Z10** listo para brief
+> (⬜ → 🔶 en commit de gobierno siguiente).
 > Briefs: `plan/REPORTES/BRIEF-WP-Z14-procedencia-estados.md`,
 > `BRIEF-WP-Z09-miniclon-vps-rooms.md`.
 
@@ -77,7 +90,7 @@ Z09/Z10; DC-GC-ceguera-marca).
   sustituye mecanismo vigente (destino canónico).
   Ficha: [WP-Z05](WP-Z05-engine-evoluciones.md).
 - ⬜ **WP-Z06 · `@zeus/mcp-launcher` — habilitador r/s/h + meta-ops** — track OPS ·
-  prio 2 · dep — · **Bloqueado por A1** (base en checkout zeus-sdk caído) ·
+  prio 2 · dep — · A1✅ (checkout zeus-sdk sano); **⬜ hasta ola GC-2** (sin brief) ·
   eje I (consumidor real: linea-system+satélite arrancados por tool call).
   Ficha: [WP-Z06](WP-Z06-mcp-launcher.md).
 - ⬜ **WP-Z07 · Instancia dramaturgo `ciudad` (capa lectura)** — track PACK ·
@@ -86,17 +99,16 @@ Z09/Z10; DC-GC-ceguera-marca).
 - ✅ **WP-Z08 · Constelación Node-RED: visor + coordinación + población (169)** —
   track VISOR · prio 2 · eje IV. **Lote GC-1 f1–f3 ✅** (Oreja/Ojo/Ciudad lectura;
   pack `plan/SPRINTS/sprint-game-city/flows/` @ e3daee8). Caveats: re-validar
-  dashboard vivo con zeus :3017 **tras A1**; F3 volumen tras H1; grep
-  transparencia acotado a `packages/`. **f4+ pendiente** (GC-2/GC-3).
+  dashboard vivo con zeus :3017 (**A1✅**; re-smoke aún abierto); F3 volumen
+  tras H1; grep transparencia acotado a `packages/`. **f4+ pendiente** (GC-2/GC-3).
   Ficha: [WP-Z08](WP-Z08-nodered-visor-ciudad.md).
 - 🔶 **WP-Z09 · Mini-clon local VPS Node-RED + pago deuda rooms** — track OPS ·
   prio 2 · dep — · eje I (nodos 0.3.x desde **registry**; no toca submódulo
   zeus-sdk caído). Ficha: [WP-Z09](WP-Z09-miniclon-vps-rooms.md).
   Brief: [BRIEF-WP-Z09](../../REPORTES/BRIEF-WP-Z09-miniclon-vps-rooms.md).
 - ⬜ **WP-Z10 · «Viaje»: gestor de caminos wiki → lib sobre linea-kit** — track
-  ENGINE · prio 2 · dep — (adaptador gamemap espera Z02/Z03) · **Bloqueado por
-  A1** (base entera `linea-kit` en checkout desmaterializado; **no 🔶**, sin
-  brief de arranque) · eje I/II. Encolado explícito para GO tras tick A1.
+  ENGINE · prio 2 · dep — (adaptador gamemap espera Z02/Z03) · A1✅ · eje I/II.
+  Desbloqueado post-A1; brief de arranque pendiente (gobierno).
   Ficha: [WP-Z10](WP-Z10-viajes-wiki-linea.md).
 - ⬜ **WP-Z11 · linea-editor: autoría de líneas como server MCP por horse** —
   track ENGINE · prio 3 · ola GC-3 · dep Z06 (launcher) + Z04 (cliente e2e) +
@@ -107,10 +119,10 @@ Z09/Z10; DC-GC-ceguera-marca).
   NovelistEditor). Precondición: glosario «viaje» (regla 5). Asentado de oferta
   ronda 2 (2026-07-20). Ficha: [WP-Z11](WP-Z11-linea-editor.md).
 - ⬜ **WP-Z12 · Encendido del árbol de vida (lifecycle XState, start/stop real)** —
-  track ENGINE+OPS · prio 2 · **f1 en GC-2** (tras Z06 + A1), f2/zonas en GC-3 ·
+  track ENGINE+OPS · prio 2 · **f1 en GC-2** (tras Z06; A1✅), f2/zonas en GC-3 ·
   dep Z06 (actuadores; Z12 = cerebro, Z06 = brazo) + Z02 (sección `arbol`/catálogo
   en seeds) + Z03 (round-trip `wake`); alimenta Z08-f4 y Z13 · ejes I/IV/III +
-  ceguera. Fusión r3 + r3-b.
+  ceguera. **⬜ hasta ola** (sin brief). Fusión r3 + r3-b.
   Ficha: [WP-Z12](WP-Z12-encendido-arbol-vida.md).
 - ⬜ **WP-Z13 · Los tres jugadores: fusión en la trama del SDK** — track PACK
   (lore+flujos) · prio 3 · ola GC-3 · dep Z12-f1 (residentes = edificios en
@@ -132,13 +144,13 @@ Z09/Z10; DC-GC-ceguera-marca).
 | [Z03](WP-Z03-juego-ciudad.md) | Juego de engine `ciudad` (patrón pozo) | PACK | 2 | Z02 | IV dif. |
 | [Z04](WP-Z04-rabbits-rsh.md) | Rabbits r/s/h como actores externos (e2e) | PACK | 2 | Z03 (Z06) | IV |
 | [Z05](WP-Z05-engine-evoluciones.md) | Evoluciones de engine | ENGINE | 3 | Z08-f6 | IV/II |
-| [Z06](WP-Z06-mcp-launcher.md) | `@zeus/mcp-launcher` | OPS | 2 | A1 | I |
+| [Z06](WP-Z06-mcp-launcher.md) | `@zeus/mcp-launcher` | OPS | 2 | — (A1✅) | I |
 | [Z07](WP-Z07-dramaturgo-ciudad.md) | Instancia dramaturgo `ciudad` | PACK | 4 | Z03 | kit |
 | [Z08](WP-Z08-nodered-visor-ciudad.md) | Constelación Node-RED (169) | VISOR | 2 | — | IV |
 | [Z09](WP-Z09-miniclon-vps-rooms.md) | Mini-clon local VPS + deuda rooms | OPS | 2 | — | I |
-| [Z10](WP-Z10-viajes-wiki-linea.md) | «Viaje»: caminos wiki → linea-kit | ENGINE | 2 | A1 | I/II |
+| [Z10](WP-Z10-viajes-wiki-linea.md) | «Viaje»: caminos wiki → linea-kit | ENGINE | 2 | — (A1✅) | I/II |
 | [Z11](WP-Z11-linea-editor.md) | linea-editor: autoría MCP por horse | ENGINE | 3 | Z06·Z04·Z03 | I/IV/II/III/V |
-| [Z12](WP-Z12-encendido-arbol-vida.md) | Encendido del árbol de vida (XState) | ENGINE+OPS | 2 | Z06·Z02·Z03·A1 | I/IV/III |
+| [Z12](WP-Z12-encendido-arbol-vida.md) | Encendido del árbol de vida (XState) | ENGINE+OPS | 2 | Z06·Z02·Z03 (A1✅) | I/IV/III |
 | [Z13](WP-Z13-tres-jugadores.md) | Los tres jugadores (trama del SDK) | PACK | 3 | Z12-f1·Z03·Z04 | IV |
 | [Z14](WP-Z14-procedencia-estados.md) | Procedencia estados → cantera | PACK | 1 | Z02 ✅ | I |
 

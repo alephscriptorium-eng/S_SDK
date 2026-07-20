@@ -3,13 +3,13 @@
 | dato | valor |
 |---|---|
 | track / prio | ENGINE / 2 |
-| depende de | — (lib pura); **bloqueado por tick A1** (checkout `zeus-sdk` / `linea-kit` desmaterializado — ver BACKLOG §Bloqueos); consumidores: Z08 (ciudadanos que caminan), Z03 (walks del juego) |
+| depende de | — (lib pura); A1✅ (checkout `zeus-sdk` / `linea-kit` sano — BACKLOG §Tick A1); consumidores: Z08 (ciudadanos que caminan), Z03 (walks del juego) |
 | referencia a extraer | `WiringAppHypergraphEditor` (wiki-racer): `src\juego.ts` (máquina de estados de navegación, `src\estado.ts` Etapa/Error), `src\scraper\engine.ts` (candidatos por enlaces de artículo, Puppeteer), `src\utils\cache.ts` (cache de recorridos en disco, `CRIPTA\tree.json`) |
 | base zeus | `@zeus/linea-kit` (U80/U81 ✅): `conectar-satelite` (remotes wiki/ATProto/SSB), `fetchSnapshot` (wikitext con gate `approve`), `readWikitext`, `segmentar`, curación unificada, schemas+validador · volumen `DISK_02\LINEAS` · `presets-sdk\src\paths\lineas.mjs` · consumidor `packages\mesh\linea-system` |
 | deuda fundacional que toca | refs `linea:*` no montadas en linea-system (BACKLOG-HISTORICO zeus ~L746); pythons de referencia (`segment_linea`, `fetch_wp_historia`, `fetch_snapshot` — DATOS.md §7) fuera del monorepo, en NETWORK-ENGINE |
 
 > **Estado canónico:** solo en [BACKLOG.md](BACKLOG.md). Esta ficha no lleva glifo de estado.
-> **Bloqueo:** no abrir implementación hasta tick A1 (rematerializar checkout zeus-sdk / linea-kit).
+> **A1:** cerrado 2026-07-20 — checkout zeus-sdk / linea-kit sano; ver BACKLOG §Tick A1.
 
 ## Objetivo
 
