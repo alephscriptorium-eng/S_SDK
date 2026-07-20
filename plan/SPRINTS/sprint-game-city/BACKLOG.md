@@ -46,11 +46,12 @@ Z12-f2 (cascada/zonas) · Z13 (tras Z12-f1 y Z03) · Z05 (por items, cuando duel
 - ⬜ **WP-Z07 · Instancia dramaturgo `ciudad` (capa lectura)** — track PACK ·
   prio 4 · dep Z03 (ledger) · CA propios del kit (validador story-board).
   Ficha: [WP-Z07](WP-Z07-dramaturgo-ciudad.md).
-- 🔶 **WP-Z08 · Constelación Node-RED: visor + coordinación + población (169)** —
-  track VISOR · prio 2 · dep — (f1 hoy) · eje IV (Node-RED = segundo cliente
-  independiente del contrato `/runtime`). **Lote GC-1 = solo f1–f3** (oreja/ojo/
-  ciudad-completa lectura); f4+ fuera de este brief.
-  Ficha: [WP-Z08](WP-Z08-nodered-visor-ciudad.md). Brief emitido 2026-07-20 · lote GC-1.
+- ✅ **WP-Z08 · Constelación Node-RED: visor + coordinación + población (169)** —
+  track VISOR · prio 2 · eje IV. **Lote GC-1 f1–f3 ✅** (Oreja/Ojo/Ciudad lectura;
+  pack `plan/SPRINTS/sprint-game-city/flows/` @ e3daee8). Caveats: re-validar
+  dashboard vivo con zeus :3017; F3 volumen re-validar tras Z01. **f4+ pendiente**
+  (GC-2/GC-3). Transparencia: authority sin Node-RED-aware.
+  Ficha: [WP-Z08](WP-Z08-nodered-visor-ciudad.md).
 - ⬜ **WP-Z09 · Mini-clon local VPS Node-RED + pago deuda rooms** — track OPS ·
   prio 2 · dep — · eje I (los nodos 0.3.x republicados con consumidor real: el
   clon los instala). Ficha: [WP-Z09](WP-Z09-miniclon-vps-rooms.md).
