@@ -14,9 +14,9 @@
 
 **Ola GC-1 (cerrada de facto 2026-07-20, vigía):** Z01 · Z02 · Z08-f1..3 ✅ —
   matices en §Replan post-vigía. Z09 entra en lote inmediato.
-**Ola GC-1.5 (post-vigía, hoy):** Z14 (procedencia estados) · Z09 (mini-clon) —
-  paralelo; paths no se pisan. **Tick A1 cerrado** → Z10 🔶 (brief emitido).
-**Ola GC-2 (sobre GC-1 + A1✅):** Z03 · Z06 · Z08-f4..5 · Z12-f1 · **Z10** (en curso)
+**Ola GC-1.5 (cerrada 2026-07-21):** Z14 · Z09 ✅ — paralelo; paths no se pisan.
+  **Tick A1 cerrado** → Z10 brief → **Z10 ✅** (cierra lote post-A1 Z14+Z09+Z10).
+**Ola GC-2 (sobre GC-1 + A1✅):** Z03 · Z06 · Z08-f4..5 · Z12-f1
 **Ola GC-3 (federación y población):** Z04 · Z07 · Z08-f6..7 · Z11 (tras Z04/Z06) ·
 Z12-f2 (cascada/zonas) · Z13 (tras Z12-f1 y Z03) · Z05 (por items, cuando duela)
 
@@ -66,8 +66,8 @@ Z09/Z10; DC-GC-ceguera-marca).
 
 ## WPs (estado canónico)
 
-> Lote post-A1 (2026-07-20): brief emitido para **Z14 · Z09 · Z10** — proyección
-> issues local-only. A1✅ desbloqueó Z10/Z06/Z12-f1.
+> Lote post-A1 (2026-07-20 → cerrado 2026-07-21): **Z14 · Z09 · Z10 ✅** —
+> proyección issues local-only. A1✅ desbloqueó Z10/Z06/Z12-f1.
 > Briefs: `plan/REPORTES/BRIEF-WP-Z14-procedencia-estados.md`,
 > `BRIEF-WP-Z09-miniclon-vps-rooms.md`,
 > `BRIEF-WP-Z10-viajes-wiki-linea.md`.
@@ -114,10 +114,14 @@ Z09/Z10; DC-GC-ceguera-marca).
   dashboard+cliente federado; **D4** smoke switch→VPS. Ficha:
   [WP-Z09](WP-Z09-miniclon-vps-rooms.md). Reporte:
   [WP-Z09](../../REPORTES/WP-Z09-miniclon-vps-rooms.md).
-- 🔶 **WP-Z10 · «Viaje»: gestor de caminos wiki → lib sobre linea-kit** — track
-  ENGINE · prio 2 · dep — (adaptador gamemap espera Z02/Z03) · A1✅ · eje I/II.
-  Brief emitido post-A1: [BRIEF-WP-Z10](../../REPORTES/BRIEF-WP-Z10-viajes-wiki-linea.md).
-  Ficha: [WP-Z10](WP-Z10-viajes-wiki-linea.md).
+- ✅ **WP-Z10 · «Viaje»: gestor de caminos wiki → lib sobre linea-kit** — track
+  ENGINE · prio 2 · dep — (adaptador gamemap espera Z02/Z03; pozo hasta Z03) ·
+  A1✅ · eje I/II. Subpath `@zeus/linea-kit/viaje` · zeus-sdk `29e9d49` (+ puntero
+  submodule). **Aceptado ✅** 2026-07-21 (orquestador): e2e línea+wiki+gate;
+  ceguera método 0; gamemap walks pozo. Brief:
+  [BRIEF-WP-Z10](../../REPORTES/BRIEF-WP-Z10-viajes-wiki-linea.md). Ficha:
+  [WP-Z10](WP-Z10-viajes-wiki-linea.md). Reporte:
+  [WP-Z10](../../REPORTES/WP-Z10-viajes-wiki-linea.md).
 - ⬜ **WP-Z11 · linea-editor: autoría de líneas como server MCP por horse** —
   track ENGINE · prio 3 · ola GC-3 · dep Z06 (launcher) + Z04 (cliente e2e) +
   Z03 (room); hermano de Z10 (frontera dura: Z10 = caminos/lectura, Z11 =
