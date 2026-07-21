@@ -19,9 +19,8 @@
 **Ola GC-2 (cerrada 2026-07-21):** Z03 ✅ · Z06 ✅ · Z08-f4..5 ✅ · Z12-f1 ✅ —
   lote completo; higiene de cierre = §Cola post-GC-2 (A1/re-smoke/push; A2→Z15).
 **Ola GC-3 (abierta 2026-07-21 — federación y población):** lote 🔶
-  **Z04 ✅** · **Z07 ✅** · **Z08 ✅** · **Z15 ✅** (A2). Parked ⬜: Z11 (tras Z04) ·
-  **Z12-f2 despachable** (deps **Z15 ✅** + f1 ✅; abrir 🔶 en commit gobierno propio) ·
-  Z13 (tras Z12-f1·Z03·Z04) · Z05 (por items).
+  **Z04 ✅** · **Z07 ✅** · **Z08 ✅** · **Z15 ✅** (A2) · **Z12-f2 🔶**. Parked ⬜:
+  Z11 (tras Z04) · Z13 (tras Z12-f1·Z03·Z04) · Z05 (por items).
   A1✅ (`npm ci`) no bloquea 🔶 código; **Tick A1b** (runtime deps) bloquea vivos/re-smoke
   D1–D3 / Z04·Z08 — **no** bloqueó merge Z15.
 
@@ -131,8 +130,8 @@ Z09/Z10; DC-GC-ceguera-marca).
 ## WPs (estado canónico)
 
 > Lote GC-2 (**cerrada 2026-07-21**): **Z03 ✅ · Z06 ✅ · Z08-f4..5 ✅ · Z12-f1 ✅**.
-> Lote GC-3 (**abierta**): **Z04 ✅ · Z07 ✅ · Z08 ✅ · Z15 ✅** · parked
-> Z11·**Z12-f2 despachable**·Z13·Z05. Issues: S_SDK #3 #6 #8 #12 (sync-map).
+> Lote GC-3 (**abierta**): **Z04 ✅ · Z07 ✅ · Z08 ✅ · Z15 ✅ · Z12-f2 🔶** · parked
+> Z11·Z13·Z05. Issues: S_SDK #3 #6 #8 #12 (sync-map).
 
 - ✅ **WP-Z01 · Pack mockdatas ciudad → firehose/cache-browser** — track PACK ·
   prio 1 · dep — · eje I (consumidores reales: los 2 browsers arrancados).
@@ -236,9 +235,10 @@ Z09/Z10; DC-GC-ceguera-marca).
   Brief: [BRIEF-WP-Z12-f1](../../REPORTES/BRIEF-WP-Z12-f1-encendido-arbol-vida.md).
   Ficha: [WP-Z12](WP-Z12-encendido-arbol-vida.md). Reporte:
   [WP-Z12-f1](../../REPORTES/WP-Z12-f1-encendido-arbol-vida.md).
-- ⬜ **WP-Z12-f2 · Cascada/zonas + wake Z03 + rollup** — track ENGINE+OPS · prio 2 ·
-  GC-3 · **despachable** (deps Z12-f1 ✅ + Z03 ✅ + **Z15 ✅** intentionalStops read).
-  Abrir 🔶 = commit gobierno propio (V2). Ficha: [WP-Z12](WP-Z12-encendido-arbol-vida.md).
+- 🔶 **WP-Z12-f2 · Cascada/zonas + wake Z03 + rollup** — track ENGINE+OPS · prio 2 ·
+  ola GC-3 · dep Z12-f1 ✅ + Z03 ✅ + **Z15 ✅** (intentionalStops read @ `a4aaf8c`).
+  Brief: [BRIEF-WP-Z12-f2](../../REPORTES/BRIEF-WP-Z12-f2-arbol-cascada.md).
+  Ficha: [WP-Z12](WP-Z12-encendido-arbol-vida.md). Rama: `wp/gc-z12-f2-arbol-cascada`.
 - ⬜ **WP-Z13 · Los tres jugadores: fusión en la trama del SDK** — track PACK
   (lore+flujos) · prio 3 · parked GC-3 · dep Z12-f1 ✅ + Z03 ✅ + Z04; gancho
   Z07/Z11 · ejes IV + ceguera. Brazo ejecutable de [TRAMA-AGUA](TRAMA-AGUA.md).
