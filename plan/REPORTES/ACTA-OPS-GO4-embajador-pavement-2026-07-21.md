@@ -93,3 +93,36 @@ VPS compose sigue en `:latest`; el **clon** fija `5.0.1` para reproducir la vers
 
 - Epic embajador completo.
 - SEMILLA §2–§4/§6 · Z05 items 3–6 (ajenos a este acta).
+
+---
+
+## Addendum · ops residuales (reintento D1) · 2026-07-21 ~22:18 +02
+
+Reintento GO-4 residual **sin abrir epic embajador**.
+
+| id | ítem | veredicto | evidencia |
+| -- | ---- | --------- | --------- |
+| **D1** | smoke Docker `/dashboard/rooms` | **FAIL / defer** (sin cambio) | `com.docker.service` = **Stopped** · `StartType=Manual`; pipe `\\.\pipe\dockerDesktopLinuxEngine` = **False**; `docker ps` → no API (`npipe:////./pipe/dockerDesktopLinuxEngine`); sin proceso `Docker Desktop`; sin `compose up` |
+| **D2** | publish contribs **0.3.0** | **PASS** (reconfirmado) | `npm view … versions` → core `[0.2.0, 0.3.0]` · rooms `[0.1.0, 0.2.0, 0.3.0]`; deps `@0.3.0` → `@alephscript/mcp-core-sdk@^1.5.0` |
+| **manifiesto** | pin Node-RED **5.0.1** + contribs 0.3.x | **PASS** (reconfirmado) | `NODERED_BASE_IMAGE=nodered/node-red:5.0.1` en Dockerfile / compose / `.env.example`; `node-red-contribs.json` → `…-core@0.3.0` + `…-rooms@0.3.0` + nota pin 5.0.1 |
+
+```text
+# D1 — 2026-07-21 22:17+02
+Get-Service com.docker.service → Status=Stopped, StartType=Manual
+Test-Path \\.\pipe\dockerDesktopLinuxEngine → False
+docker info / docker ps → failed to connect to the docker API at
+  npipe:////./pipe/dockerDesktopLinuxEngine
+Get-Process "Docker Desktop" → (ninguno)
+
+# D2 — registry https://npm.scriptorium.escrivivir.co
+node-red-contrib-alephscript-core versions → [ '0.2.0', '0.3.0' ]
+node-red-dashboard-2-alephscript-rooms versions → [ '0.1.0', '0.2.0', '0.3.0' ]
+@0.3.0 dependencies → @alephscript/mcp-core-sdk: ^1.5.0
+```
+
+**Acción pendiente custodio:** levantar Docker Desktop → en `plan/SPRINTS/sprint-game-city/miniclon`: `docker compose up --build` → GET `http://localhost:1880/dashboard/rooms`.
+
+| árbol | SHA al addendum | nota |
+| ----- | --------------- | ---- |
+| SCRIPT_SDK | tip `98dc742` (+ commit de este addendum) | solo acta |
+| zeus-sdk | `fe75269` (submódulo dirty tip local; no bump en este addendum) | fuera de alcance residual D1 |
