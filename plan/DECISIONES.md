@@ -230,3 +230,26 @@ bloquea WP-D31 de aquel mundo, no bloquea este plan.)*
   por defecto — proyección real a GitHub solo con GO explícito del usuario).
   Consecuencia: **Ola I7** (WP-I70…I74). Compatible con DE-I3/DE-I10 (el
   método vive en el skill versionado; el mundo lo referencia, no lo copia).
+
+- **DE-I18 · Rama `draft` = cuaderno del custodio; exenta de poda**
+  *(custodio · GO H2.2 · 2026-07-22).* La rama local `draft` es el **cuaderno
+  del custodio** (notas, borradores, material sin autoridad de plan). **No**
+  se poda en higiene de quietud ni en lotes H1/H2: solo `main` + `draft` como
+  refs locales estables del raíz (acta H2.1 CA5). Consecuencia: ops puede
+  borrar `wp/*` merged; **jamás** `draft` sin GO explícito del custodio.
+
+- **DE-I19 · Cola de GOs post–sprint-game-city (encolada, no abierta)**
+  *(custodio · GO H2.2 · 2026-07-22 · gobierno V2).* Tras C04, los parked
+  pasan a **cola de GOs** visible en
+  [`plan/SPRINTS/sprint-game-city/BACKLOG.md`](SPRINTS/sprint-game-city/BACKLOG.md)
+  §«Cola de GOs post-cierre». Orden (revisable por PO; **cero** ⬜→🔶 en este
+  asiento):
+
+  1. embajador — S_SDK **#22** / **#23** (E01·E02)
+  2. motor — Z_SDK **#5** (Z05 items 3–6 / ACL)
+  3. SEMILLA **§2** / **§6**
+  4. trama-agua
+
+  **Veto:** **E_SDK / DE-I8 fuera de cola** hasta GO custodio propio (no
+  encolar; no abrir; no brief). Encolar ≠ abrir: siguen ⬜ parked hasta GO
+  que emita 🔶 + BRIEF.

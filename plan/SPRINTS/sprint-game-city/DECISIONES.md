@@ -106,8 +106,22 @@ DE-I8 **aplazada** (no bloquea este slice). Brief:
 
 ---
 
+### DC-GC-cola-h22 · 2026-07-22 · **cerrada** (cola sin abrir)
+
+**Tema:** asentar cola de GOs post-cierre (GO H2.2) sin abrir WPs.
+
+**Pregunta:** ¿qué parked pasan a cola ordenada y qué queda vetado?
+
+**Decisión:** cola visible en [BACKLOG §Cola de GOs](BACKLOG.md#cola-de-gos-post-cierre-h22--2026-07-22),
+orden 1→4: embajador #22/#23 → motor #5 → SEMILLA §2/§6 → trama-agua.
+**E_SDK/DE-I8 fuera de cola** (veto hasta GO). Cero ⬜→🔶 en este asiento.
+Espejo raíz: [DE-I19](../../DECISIONES.md).
+
+**Consecuencia:** PO puede reordenar la tabla; orquestador no emite BRIEF ni
+marca 🔶 hasta GO de apertura de un ítem concreto.
+
 ## Abiertas (custodio)
 
 Ninguna decisión de calibración abierta tras DC-GC-siete-plantas /
-DC-GC-campanas-s03 (+ addenda re-scope). Bloqueos operativos → BACKLOG.
-DE-I8 sigue pendiente como horizonte (no bloquea CAMPANAS-city).
+DC-GC-campanas-s03 (+ addenda re-scope) / DC-GC-cola-h22. Bloqueos
+operativos → BACKLOG. DE-I8 sigue **fuera de cola** (horizonte; veto H2.2).
