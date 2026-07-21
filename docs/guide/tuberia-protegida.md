@@ -51,7 +51,18 @@ Ningún ítem sin issue. Cada fila enlaza el tracker real:
 | ACL direccional por peer (default deny donde hay poder real) | [Z_SDK#5](https://github.com/alephscriptorium-eng/Z_SDK/issues/5) |
 | Niveles de federación: lo automático nunca escala a poder | [Z_SDK#6](https://github.com/alephscriptorium-eng/Z_SDK/issues/6) |
 
-Cuando un issue cierre, esta tabla se actualiza. La página no promete
+### Seguimiento en la casa (paraguas)
+
+Misma regla: abierto solo con issue real. Estos son los tickets de la
+casa que enmarcan el residual (no duplican la obra de esta página):
+
+| Tema | Issue |
+| ---- | ----- |
+| Epic embajador (paraguas) | [S_SDK#22](https://github.com/alephscriptorium-eng/S_SDK/issues/22) |
+| Privacidad de federación | [S_SDK#23](https://github.com/alephscriptorium-eng/S_SDK/issues/23) |
+| CAMPANAS (S-03) | [S_SDK#25](https://github.com/alephscriptorium-eng/S_SDK/issues/25) |
+
+Cuando un issue cierre, estas tablas se actualizan. La página no promete
 fechas.
 
 ---
@@ -65,7 +76,9 @@ destinatarios. El transporte al pub de rooms va por WSS/TLS. Eso no
 equivale a «nadie en el planeta puede»; equivale a: sin la clave del
 destinatario / sin romper TLS, un observador de red no lee el plaintext.
 Los huecos abiertos (ssbId en handshake, firma de tarjeta viajera) están
-en [Z_SDK#4](https://github.com/alephscriptorium-eng/Z_SDK/issues/4).
+en [Z_SDK#4](https://github.com/alephscriptorium-eng/Z_SDK/issues/4);
+el tracking de casa es
+[S_SDK#23](https://github.com/alephscriptorium-eng/S_SDK/issues/23).
 
 ### ¿Quién puede arrancar o parar mis servidores?
 
@@ -73,7 +86,9 @@ Hoy el lanzador solo acepta ids del catálogo declarado
 (`@zeus/mcp-launcher`). No hay spawn de comandos libres desde la tool.
 Quién tiene rol de operador en la sala es otra capa (roles globales
 hoy). El endurecimiento por peer es
-[Z_SDK#5](https://github.com/alephscriptorium-eng/Z_SDK/issues/5).
+[Z_SDK#5](https://github.com/alephscriptorium-eng/Z_SDK/issues/5);
+el paraguas embajador en la casa es
+[S_SDK#22](https://github.com/alephscriptorium-eng/S_SDK/issues/22).
 
 ### ¿Qué ve el juego de mi máquina?
 
@@ -101,3 +116,4 @@ registry. Esta página no inventa una licencia paraguas.
 - [Publicar la web](/guide/publicar-la-web) — ciclo de esta casa
 - [01 — Mythos](/holones/01-mythos) — ancla del juego / holón 01
 - Docs del núcleo: [z-sdk.escrivivir.co](https://z-sdk.escrivivir.co/)
+- Costura jugable 01↔03 (parked): [S_SDK#25](https://github.com/alephscriptorium-eng/S_SDK/issues/25)
