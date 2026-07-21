@@ -138,7 +138,7 @@ vigía; OUT_DIR fuera del mundo — no recrear bajo `TEMP/`). §E copiable:
 ## Replan post-vigía GC-1 (2026-07-20)
 
 Fuente: acta vigía `REVISION-GC1-2026-07-20` (antes `TEMP/vigia/…`) —
-<pendiente custodio: reubicar acta vigía> + addendas custodio (GO parcial
+acta TEMP/ irrecuperable; veredictos absorbidos en este fichero + addendas custodio (GO parcial
 Z09/Z10; DC-GC-ceguera-marca).
 
 | Id | Hallazgo | Acción |
@@ -158,7 +158,7 @@ Z09/Z10; DC-GC-ceguera-marca).
 ## Tick A1 (cerrado 2026-07-20)
 
 - **Estado:** cerrado. SHA submodule `7567bf3`. Acta:
-  <pendiente custodio: reubicar acta vigía>
+  acta TEMP/ irrecuperable; veredictos absorbidos en este fichero
   (`REVISION-GC1-2026-07-20` §ADDENDUM Tick A1; vivía en `TEMP/vigia/`).
 - **Causa:** limpieza post-GC-1 borró 14 dot-entries de raíz del checkout
   zeus-sdk (incl. gitfile `.git`); módulo git intacto en `7567bf3`.
@@ -168,7 +168,7 @@ Z09/Z10; DC-GC-ceguera-marca).
 
 ## Higiene / ticks abiertos (ops, no WP)
 
-- **TEMP/ retirada por custodio 2026-07-21** — evita dirty en merges (WP-Z14). No recrear; workers: no escribir bajo `TEMP/`. `.gitignore` ignora `TEMP/`. Acta vigía GC-1: <pendiente custodio: reubicar acta vigía>.
+- **TEMP/ retirada por custodio 2026-07-21** — evita dirty en merges (WP-Z14). No recrear; workers: no escribir bajo `TEMP/`. `.gitignore` ignora `TEMP/`. Acta vigía GC-1: acta TEMP/ irrecuperable; veredictos absorbidos en este fichero.
 - **Worktree stale Z01** (`zeus-sdk/.worktrees/wp-gc-z01-mockdatas-browsers`):
   **parcial** 2026-07-20 — `git worktree remove --force` desregistró el WT
   (ya no aparece en `worktree list`); borrado FS falló por paths largos
