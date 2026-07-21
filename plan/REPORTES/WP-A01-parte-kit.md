@@ -114,4 +114,14 @@ $ git log -p b67b9ca..HEAD -- packages/engine/parte-kit
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** — 2026-07-21 · orquestador (merge/gobierno).
+
+zeus-sdk `main` @ `c7ec7d0` (FF + push `origin/main`) · SCRIPT_SDK submodule → `c7ec7d0`.
+Reporte tip `35c00c8` (obra reporte `c858e91` + anotación SHA; cabecera del reporte cita obra `73a079a` / tip rama `17456b3`).
+
+ParteDeCiudad v1 + `parte-kit` (redactar/render/validar/publicar ledger); tests determinismo/pureza/ceguera/consumidores/frontera; ceguera 0. **WP-A01 ✅** · ARG-1: A01 ✅ · A02 ✅ · A03 parked.
+
+### Verificado (brazo merge/gobierno)
+- Rama zeus `wp/gc-a01-parte-kit` @ `c7ec7d0` · FF → `main` · push tip autorizado (`alephscriptorium-eng`)
+- Rama reporte S_SDK `wp/gc-a01-parte-kit` @ `17456b3` · cherry-pick → `main` · bump submodule zeus
+- Sin force-push; sin reopen Z16 · sin §A3 · sin embajador · sin tocar obra A02 GL
