@@ -2,7 +2,7 @@
 
 | dato | valor |
 |---|---|
-| estado | 🔶 GC-4: **f1** (`GAME_STATE_DELTA`) + **f2** (zonas) abiertos; items 3–6 parked |
+| estado | ✅ GC-4: **f1** (`GAME_STATE_DELTA`) + **f2** (zonas) aceptados; items 3–6 parked |
 | track / prio | ENGINE / 3 |
 | depende de | señales de dolor reales de Z01–Z04 (no especular) — items 1–2: Z04 multi-peer + Z03 mapa |
 | base zeus | `packages\engine\game-engine` (+ `rooms`, `protocol`, `authority-kit`) |
