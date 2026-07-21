@@ -142,4 +142,16 @@ Documentada en `flows/WISHLIST-f7.md` (SDK ^1.5 republicar nodos · catalog:serv
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** — 2026-07-21 · orquestador (merge/gobierno). **Z08 completo ✅** (f1–f7).
+
+Obra `cfd7c57` · tip rama `1c6eb6d` · merge `--no-ff` `main` @ `7dfff87` (sobre main con Z04✅+Z07✅). Diff = `flows/**` (población lote/techo + constelación ≥2 ámbitos + WISHLIST-f7) + este reporte. CA offline 10/10 · transparencia `packages/`=0 · NR `:1884`/`:1885` ✅. Vivos fabric deferidos con intento (brief).
+
+### Deferred explícitos (no bloquean ✅)
+
+| id | ítem | nota |
+| -- | ---- | ---- |
+| D1 | Re-smoke f1–f3 dashboard `:3017` | A1 ops ✅ cerrado; *re-smoke post-A1 en curso/pendiente acta* |
+| D2 | H1 cache-browser `:3015` | idem post-A1; residual ops |
+| D3 | Authority vivo Mano/Ciudadano (+ fan-out F6) | fabric/authority tras re-smoke; no bloquea f6✅ |
+
+Hallazgos (ids censo no únicos / `:1880` ajena) no bloquean. Push S_SDK tip en este gobierno.
