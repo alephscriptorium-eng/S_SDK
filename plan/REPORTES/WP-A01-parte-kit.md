@@ -5,7 +5,7 @@
 | agente | worker gc-a01 (swarm fresco) |
 | fecha | 2026-07-21 |
 | rama | `wp/gc-a01-parte-kit` (zeus-sdk) · reporte en SCRIPT_SDK `wp/gc-a01-parte-kit` |
-| commits | zeus `c7ec7d080ff19aab97ed9a5d324439d77c833045` |
+| commits | zeus `c7ec7d080ff19aab97ed9a5d324439d77c833045` · reporte S_SDK `73a079ab8d94c8ca353cb1fcbf4aa47b2d82f5c7` |
 | eje(s) CA | **I** (tests redactar/render/validar/publicar) · **II** (ParteDeCiudad v1 congelado) · ceguera ampliada |
 | estado propuesto | listo para revisión |
 | issue | LOCAL-ONLY |
@@ -39,7 +39,7 @@ creada desde `b67b9ca`.
 | ---- | --------------- | --- |
 | zeus-sdk | `.worktrees/wp-gc-a01-parte-kit` · `wp/gc-a01-parte-kit` | obra `c7ec7d0` (base `b67b9ca`) |
 | games-library | **no tocado** (main) | `21a6592` |
-| SCRIPT_SDK | rama `wp/gc-a01-parte-kit` (reporte) | tip al commit del reporte |
+| SCRIPT_SDK | rama `wp/gc-a01-parte-kit` (reporte) | `73a079a` |
 
 Env-check (rev-parse, nunca `test -d .git`):
 
