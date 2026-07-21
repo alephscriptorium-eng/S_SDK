@@ -5,7 +5,7 @@
 | agente | worker gc-a02 (swarm) |
 | fecha | 2026-07-21 |
 | rama | `wp/gc-a02-presencia` (games-library) · reporte en SCRIPT_SDK `wp/gc-a02-presencia` |
-| commits | games-library `2b14d360fbdd59c95a35ff75aa077ed929ee4241` · reporte S_SDK _(este commit)_ |
+| commits | games-library `2b14d360fbdd59c95a35ff75aa077ed929ee4241` · reporte S_SDK `5e99b8154ace673c101d6c8ee23dda000ecb3f1d` |
 | eje(s) CA | I (integración loop Z16) · II (contrato SeñalDePresencia; fuentes reales = interfaz) · ceguera ampliada |
 | estado propuesto | listo para revisión |
 
