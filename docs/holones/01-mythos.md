@@ -90,6 +90,13 @@ Cada afirmación lleva sello. Lo no comprobado va como `<pendiente>`.
 Conteo sellado: **21** paquetes con versión. (El brief decía ~19; el
 canal real devolvió 21 el día de la medición.)
 
+**En árbol, no en registry (tip zeus `fe75269`):**
+`@zeus/parte-kit` y `@zeus/acta-kit` viven en
+`packages/engine/*` con `"private": true`. Canal real 2026-07-21 —
+`npm view` de ambos → **404** en
+`https://npm.scriptorium.escrivivir.co` (coherente con Release sin
+publish de esos kits). No inventar fila en la tabla de publicados.
+
 ### GitHub — repos
 
 - **Z_SDK:** https://github.com/alephscriptorium-eng/Z_SDK
