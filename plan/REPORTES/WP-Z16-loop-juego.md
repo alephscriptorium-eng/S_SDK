@@ -105,4 +105,14 @@ Defaults: `LOOP_DEFAULTS` en `contract.mjs`. Eje IV completo queda a Z08/Z17.
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** — 2026-07-21 · orquestador (merge/gobierno).
+
+games-library `main` @ `21a6592` (FF + push `origin/main`) · SCRIPT_SDK submodule → `21a6592`.
+Reporte tip `cb54dd5` (obra reporte `6598f0b` + anotación SHA `cb54dd5`; cabecera del reporte cita obra `6598f0b`).
+
+Reducer puro `@zeus/ciudad` (decay / energía / `snapshot.objetivo`); tests 18/18 + mvp-smoke + loop-smoke; ceguera 0. Eje IV vivo → Z08/Z17. **Z16 ✅** · GC-5 sigue abierta (Z17 🔶).
+
+### Verificado (brazo merge/gobierno)
+- Rama GL `wp/gc-z16-loop-juego` @ `21a6592` · FF → `main` · push tip autorizado (`alephscriptorium-eng`)
+- Rama reporte S_SDK `wp/gc-z16-loop-juego` @ `cb54dd5` · FF → `main` · bump submodule GL
+- Sin force-push; sin tocar Z17 / Z05-f1 / GC-5 §§ parked / sync-map
