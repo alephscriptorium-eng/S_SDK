@@ -152,4 +152,10 @@ FS; merge = orquestador (GATE PRE-MERGE vs M02).
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** (R6 · 2026-07-22).
+
+- CA I/II + ceguera (árbol + `git log -p`) PASS en worktree `399b250`.
+- Tests: 36/36 · `misiones-smoke` OK · cero engine/`domain.mjs`.
+- GATE ∩ M02: `package.json` + `README.md` (lock solo M01; `contract.mjs` solo M02).
+- Orden merge: M01 FF → main; M02 rebase; tip GL `84f9d79` · 40/40 + smokes OK.
+- Acta: [ACTA-V1-1-aceptacion-M01-M02-2026-07-22.md](ACTA-V1-1-aceptacion-M01-M02-2026-07-22.md).

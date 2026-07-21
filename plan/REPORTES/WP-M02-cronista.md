@@ -144,4 +144,10 @@ Ninguno. Push GL tip / bump submodule / merge = orquestador.
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** (R6 · 2026-07-22).
+
+- CA I/II + ceguera (árbol + `git log -p`) PASS en worktree `bf58781`.
+- Tests: 34/34 · `cronista-smoke` + `story-board-reader` OK · cero engine/`domain.mjs`.
+- ∩ real: solo `package.json` + `README.md` (`contract.mjs` exclusivo M02).
+- Rebase sobre main post-M01 → tip `84f9d79` (conflicto `package.json` resuelto aditivo).
+- Acta: [ACTA-V1-1-aceptacion-M01-M02-2026-07-22.md](ACTA-V1-1-aceptacion-M01-M02-2026-07-22.md).

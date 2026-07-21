@@ -10,35 +10,37 @@
 
 ## Olas
 
-**Ola V1-1 (GO-V2 · 2026-07-22 — SEMILLA §3+§4):** lote autorizado
-**WP-M01 🔶** · **WP-M02 🔶**. Track PACK. Cero engine. Proyección issues =
-**LOCAL-ONLY** (sin apply / sin `gh issue create` ahora).
-Briefs: [BRIEF-M01](../../REPORTES/BRIEF-WP-M01-misiones.md) ·
-[BRIEF-M02](../../REPORTES/BRIEF-WP-M02-cronista.md).
+**Ola V1-1 (GO-V2 · 2026-07-22 — SEMILLA §3+§4):** lote **cerrado**
+**WP-M01 ✅** · **WP-M02 ✅**. Track PACK. Cero engine. Tip GL `84f9d79`
+(merge FF M01→M02 rebase). Acta:
+[ACTA-V1-1-M01-M02](../../REPORTES/ACTA-V1-1-aceptacion-M01-M02-2026-07-22.md).
+Proyección: apply + sync-map post-lote (regla 17) en el mismo cierre.
 
 ## WPs
 
-- 🔶 **WP-M01 · Ciudadanos con misión** — SEMILLA §3 · track PACK · dep
+- ✅ **WP-M01 · Ciudadanos con misión** — SEMILLA §3 · track PACK · dep
   Z10 ✅ (grafo) · Z08 población · censo/cantera (verdad zona / barrio que
   decae). Origen/destino sobre grafo; random-walk = idle. **Sin tocar
   engine.** CA: ejes I/II + ceguera. Ficha: [WP-M01](WP-M01-misiones.md).
   Brief: [BRIEF-M01](../../REPORTES/BRIEF-WP-M01-misiones.md).
-  Rama: `wp/v1-m01-misiones`.
+  Reporte: [WP-M01](../../REPORTES/WP-M01-misiones.md).
+  Rama: `wp/v1-m01-misiones` · GL SHA `399b250` · tip lote `84f9d79`.
 
-- 🔶 **WP-M02 · Cronista** — SEMILLA §4 · track PACK · dep Z07 ✅
+- ✅ **WP-M02 · Cronista** — SEMILLA §4 · track PACK · dep Z07 ✅
   story-board · CAMPANAS ✅ (announce suena). Actor rol `dj` lee
   `story-board.json` → re-emite actos como `announce` en plaza.
   **Contrato vinculante:** story-board = sustrato multi-agente (no
   decoración). CA: ejes I/II + ceguera. Ficha: [WP-M02](WP-M02-cronista.md).
   Brief: [BRIEF-M02](../../REPORTES/BRIEF-WP-M02-cronista.md).
-  Rama: `wp/v1-m02-cronista`.
+  Reporte: [WP-M02](../../REPORTES/WP-M02-cronista.md).
+  Rama: `wp/v1-m02-cronista` · GL SHA post-rebase `84f9d79`.
 
 ## Overview
 
-| Id | Título | Track | Deps | Ejes |
-|---|---|---|---|---|
-| [M01](WP-M01-misiones.md) | Ciudadanos con misión (§3) | PACK | Z10·Z08·censo | I/II + ceguera |
-| [M02](WP-M02-cronista.md) | Cronista (§4) | PACK | Z07·CAMPANAS | I/II + ceguera |
+| Id | Título | Track | Deps | Ejes | Estado |
+|---|---|---|---|---|---|
+| [M01](WP-M01-misiones.md) | Ciudadanos con misión (§3) | PACK | Z10·Z08·censo | I/II + ceguera | ✅ |
+| [M02](WP-M02-cronista.md) | Cronista (§4) | PACK | Z07·CAMPANAS | I/II + ceguera | ✅ |
 
 ## Parked / fuera de este sprint
 
@@ -51,4 +53,4 @@ Briefs: [BRIEF-M01](../../REPORTES/BRIEF-WP-M01-misiones.md) ·
 1. Ceguera método/marco en entregables zeus/GL (DC-GC-ceguera-marca: marca OK).
 2. Cero engine / `domain.mjs` / reducer.
 3. No editar BACKLOG city ni fichas Z*/A*/E* de city.
-4. Claim→acta/SHA en cierres. LOCAL-ONLY proyección hasta GO apply.
+4. Claim→acta/SHA en cierres. LOCAL-ONLY proyección hasta GO apply (lote V1-1 cerrado → apply).
