@@ -5,7 +5,7 @@
 | agente | worker · gc-z12-f2 (fresco) |
 | fecha | 2026-07-21 |
 | rama | `wp/gc-z12-f2-arbol-cascada` (zeus-sdk) |
-| commits | zeus-sdk `e7d9766` (base `a4aaf8c` Z15) · **sin push** |
+| commits | zeus-sdk `e7d9766` (base `a4aaf8c` Z15) · **pushed** `origin/main` |
 | eje(s) CA | **I** (cascada/zonas e2e) · **III** (spawn solo Z06) · **IV** (wake Z03 + mando cascada) · ceguera kit |
 | estado propuesto | listo para revisión |
 
@@ -112,4 +112,12 @@ Ninguno bloqueante. Pedir push tip zeus al orquestador cuando revise.
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** — 2026-07-21 · orquestador (merge/gobierno).
+
+zeus-sdk `main` @ `e7d9766` (FF sobre `a4aaf8c` · push `origin/main`) · submodule SCRIPT_SDK → `e7d9766`. Cascada/zonas + rollup ciudad + wake bridge Z03 inyectado + `canRetry` vía actuador. Ejes I/III/IV + ceguera kit OK. Domain Z03 hard-dep / tablero NR = fuera de alcance (no bloquean). **Z12-f2 ✅ — Z12 completo ✅ · Z13 despachable** (deps Z12-f1·Z03·Z04 ✅).
+
+### Verificado (brazo REVISIÓN + merge)
+- Rama `wp/gc-z12-f2-arbol-cascada` tip `e7d9766` · merge FF → `main`; push tip autorizado
+- Frontera Z06 actuador intacta (0 `child_process` en ciudad-lifecycle/src); sin reopen f1/Z15
+- Gates reportados: lifecycle-kit 16/16 · f2+hook 9/9 · e2e f1 6/6; ceguera kit 0
+- Sin force-push; sin BACKLOG en diff zeus
