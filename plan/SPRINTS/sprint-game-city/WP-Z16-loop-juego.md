@@ -2,7 +2,7 @@
 
 | dato | valor |
 |---|---|
-| estado | 🔶 brief emitido (ola GC-5 · GO custodio §1+§5) |
+| estado | ✅ aceptado (ola GC-5 · 2026-07-21 · GL `21a6592`) |
 | track / prio | PACK / 1 · **ola GC-5** |
 | depende de | Z03 ✅ (juego `@zeus/ciudad`) — **no** reabre Z03 |
 | fuente | [SEMILLA-GAMIFICACION.md](SEMILLA-GAMIFICACION.md) §1 |
