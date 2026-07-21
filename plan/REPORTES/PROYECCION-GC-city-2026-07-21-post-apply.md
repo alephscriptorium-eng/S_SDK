@@ -2,54 +2,58 @@
 
 | dato | valor |
 | ---- | ----- |
-| estado | **pendiente auth write** — esqueleto LOCAL-ONLY; no ejecutar |
+| estado | **apply OK** — auth write `alephscriptorium-eng` (scopes repo); push:true S_SDK + Z_SDK |
 | pre | [PROYECCION-GC-city-2026-07-21-post-GC4.md](PROYECCION-GC-city-2026-07-21-post-GC4.md) (dry-run OK) |
-| body panorámica | [PANORAMICA-Z_SDK-2-post-GC4.md](PANORAMICA-Z_SDK-2-post-GC4.md) |
+| body panorámica | [BODY-Z_SDK-2-funcional.md](BODY-Z_SDK-2-funcional.md) (ciego funcional; no ACTA-INTERNA) |
 | cierre evidencia | [CIERRE-sprint-game-city-2026-07-21.md](CIERRE-sprint-game-city-2026-07-21.md) |
-| mapa | `plan/SPRINTS/sprint-game-city/.sync-map.json` — **no editar a mano**; apply/script es la fuente |
+| mapa | `plan/SPRINTS/sprint-game-city/.sync-map.json` — **no editado a mano**; script reafirmó WP-Z01…Z15 → 1…15 |
 
-## Placeholders (rellenar tras apply)
+## Resultado apply (literal)
 
-| ítem | placeholder | valor real post-apply |
-| ---- | ----------- | --------------------- |
-| issue WP-Z15 | `#15` | URL: `https://github.com/alephscriptorium-eng/S_SDK/issues/15` → _TBD_ |
-| sync Z15→#15 | verdad remota | _TBD tras crear/verificar #15_ |
-| apply log S_SDK | stdout `proyectar-backlog.mjs export` | _pegar literal_ |
-| bodies editados | #1–#15 | _contar OK / fallos_ |
-| panorámica Z_SDK #2 | body-file aplicado | URL issue: `https://github.com/alephscriptorium-eng/Z_SDK/issues/2` → _TBD_ |
-| push gobierno | `git push origin HEAD` | rango SHA: `_TBD_.._TBD_` |
-
-## Invariantes (re-chequear post-apply)
-
-- [ ] Z05-f1 **no** reabierto
-- [ ] GC-5 **no** abierto
-- [ ] Z05 issue #5 permanece **open** (parked 3–6)
-- [ ] `.sync-map.json` solo cambia vía herramienta de proyección (si aplica)
-
-## Cola D — orden custodio (NO disparar sin GO auth write)
-
-1. Auth: `gh auth login` o `GH_TOKEN` con scope repo.
-2. Verificar número **15** = WP-Z15 (crear si falta; no asumir).
-3. Push gobierno acumulado: `git push origin HEAD` (SCRIPT_SDK).
-4. Apply proyección S_SDK (mismos flags que post-GC4):
-
-```powershell
-$env:CEGUERA_PATTERN = '<patrón método del mundo>'   # no committear
-$env:PROYECCION_GITHUB = '1'
-node node_modules/@alephscript/skills-scriptorium/skills/swarm-orquestacion/scripts/proyectar-backlog.mjs `
-  export --habilitar-github `
-  --backlog plan/SPRINTS/sprint-game-city/BACKLOG.md `
-  --map plan/SPRINTS/sprint-game-city/.sync-map.json `
-  --alcance todos `
-  --repo alephscriptorium-eng/S_SDK
+```
+[proyectar] ceguera OK (15 WP validados contra el patrón del mundo).
+[proyectar] export  · alcance=todos · 15 proyectado(s), 0 a cerrar · repo=alephscriptorium-eng/S_SDK
+  ✓ actualizado WP-Z01 → #1 (closed)
+  ✓ actualizado WP-Z02 → #2 (closed)
+  ✓ actualizado WP-Z03 → #3 (closed)
+  ✓ actualizado WP-Z04 → #4 (closed)
+  ✓ actualizado WP-Z05 → #5 (open)
+  ✓ actualizado WP-Z06 → #6 (closed)
+  ✓ actualizado WP-Z07 → #7 (closed)
+  ✓ actualizado WP-Z08 → #8 (closed)
+  ✓ actualizado WP-Z09 → #9 (closed)
+  ✓ actualizado WP-Z10 → #10 (closed)
+  ✓ actualizado WP-Z11 → #11 (closed)
+  ✓ actualizado WP-Z12 → #12 (closed)
+  ✓ actualizado WP-Z13 → #13 (closed)
+  ✓ actualizado WP-Z14 → #14 (closed)
+  ✓ actualizado WP-Z15 → #15 (closed)
+[proyectar] sync-map → plan/SPRINTS/sprint-game-city/.sync-map.json
+[proyectar] OK.
 ```
 
-5. Panorámica Z_SDK #2:
+Bodies editados: **15/15 OK**, 0 fallos. Cerrados en apply: #3,#4,#6,#7,#11,#12,#15 (resto ya closed; #5 permanece open).
 
-```powershell
-gh issue edit 2 --repo alephscriptorium-eng/Z_SDK --body-file plan/REPORTES/PANORAMICA-Z_SDK-2-post-GC4.md
-```
+## Valores reales post-apply
 
-6. Completar esta acta (URLs, stdout, SHAs) + commit gobierno de cierre remoto si hace falta.
+| ítem | valor |
+| ---- | ----- |
+| issue WP-Z15 | https://github.com/alephscriptorium-eng/S_SDK/issues/15 (`number`=15 verificado) |
+| sync Z15→#15 | verdad remota: issue #15 existe; mapa `WP-Z15: 15` (sin diff post-script) |
+| panorámica Z_SDK #2 | https://github.com/alephscriptorium-eng/Z_SDK/issues/2 — body-file `BODY-Z_SDK-2-funcional.md` |
+| push gobierno | ver SHA tip tras `git push origin HEAD` (abajo / commit posterior) |
 
-**Hasta aviso:** cero `gh` write, cero push.
+## Invariantes (post-apply)
+
+- [x] Z05-f1 **no** reabierto
+- [x] GC-5 **no** abierto
+- [x] Z05 issue #5 permanece **open** (parked 3–6)
+- [x] `.sync-map.json` no editado a mano
+
+## Cola D — ejecutada
+
+1. Auth write verificada (`alephscriptorium-eng`, push:true).
+2. Issue #15 = WP-Z15 creado y verificado **exactamente 15**.
+3. Apply proyección S_SDK (`PROYECCION_GITHUB=1` + `--habilitar-github`).
+4. Panorámica Z_SDK #2 con body ciego funcional.
+5. Push gobierno acumulado (no force).
