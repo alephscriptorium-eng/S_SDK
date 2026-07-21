@@ -81,7 +81,7 @@ VPS compose sigue en `:latest`; el **clon** fija `5.0.1` para reproducir la vers
 | árbol | SHA | nota |
 | ----- | --- | ---- |
 | zeus-sdk | `b67b9ca` | D-40 + viewer + BACKLOG residual cerrado |
-| SCRIPT_SDK | `c7d3dc2` | acta + miniclon pin 5.0.1 + bump zeus + fix tsconfig publish |
+| SCRIPT_SDK | `c7d3dc2` (obra) · tip `7a12f1d` | acta + miniclon pin 5.0.1 + bump zeus + fix tsconfig publish |
 
 ## Bloqueos
 
