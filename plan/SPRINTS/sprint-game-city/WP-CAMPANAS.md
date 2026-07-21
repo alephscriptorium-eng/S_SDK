@@ -1,38 +1,39 @@
-# WP-CAMPANAS — CAMPANAS (S-03)
+# WP-CAMPANAS — CAMPANAS-city (S-03 re-scope)
 
 | dato | valor |
 |---|---|
-| estado | ⬜ **parked** — candidata · sin GO · no abrir · sin brief |
-| track / prio | SPIN / — |
-| depende de | A01 ✅ · **(i) HOTFIX-ARG-1 verde ✅** · **(ii) tick DE-I8 pend** |
-| DC | [DC-GC-campanas-s03](DECISIONES.md#dc-gc-campanas-s03--2026-07-21--cerrada-candidata-parked) |
+| estado | 🔶 brief emitido / en curso |
+| track / prio | SPIN / 1 |
+| depende de | A01 ✅ · Z17 ✅ · HOTFIX-ARG-1 verde ✅ |
+| DC | [DC-GC-campanas-s03](DECISIONES.md#dc-gc-campanas-s03--2026-07-21--cerrada-candidata-parked) · addenda re-scope |
+| issue | S_SDK #25 |
 
-## Objetivo
+## Objetivo (re-scope 2026-07-21)
 
-Primera costura jugable entre planta 01 (ciudad) y planta 03 (voz / campanas):
-anuncio perceptible en la ciudad cuando el satélite 03 esté listo para sonar.
-Candidata post-ARG-1; **no se abre** hasta condiciones del DC.
+El parte de plaza **SUENA** en la vista (operator-ui / dashboard):
 
-## Condiciones para des-aparcar
+- Un evento sonoro por clase de titular: **despertar · degradar · roto**
+- Toggle de silencio
+- Fuente = **parte-kit** ya fusionado (zeus tip ~`fe75269` / lineage `c7ec7d0`)
+- Zeus/GL-side; **sin** mundo nuevo; **sin** E_SDK (juntura 01↔03 = horizonte
+  declarado en el issue, **no** implementar inflación DE-I8)
 
-1. Runner HOTFIX-ARG-1 verde — **✅** (acta
-   `plan/REPORTES/ACTA-HOTFIX-ARG-1-2026-07-21.md` · CI `29865037586` ·
-   Release `29865037568` @ tip `fe75269`).
-2. Tick custodio: inflar satélite 03 (DE-I8) — **pendiente**.
-3. GO explícito + brief al abrir.
+## Criterios de aceptación
 
-## Criterios de aceptación (cuando abra)
-
-- [ ] Costura 01↔03 verificable (contrato + check), no solo prosa.
-- [ ] Señal / anuncio en plaza sin romper ceguera de entregables de pack.
-- [ ] Dep A01 consumida; no reopen A01.
+- [ ] `claseTitular` / `campanasDesdeParte` en parte-kit (clases ↔ plantillas).
+- [ ] Bridge reconoce ledger `parte` y expone eventos de campana (puro).
+- [ ] operator-ui: suena por clase + toggle silencio en HUD.
+- [ ] Smoke/test evidencia clasificación + mute no dispara tono.
+- [ ] Ceguera 0 en packs tocados; sin embajador; sin DE-I8.
 
 ## Fuera de alcance
 
-- Abrir ahora · brief · ejecutar DE-I8 · HOTFIX nuevo.
+- Inflar `HOLONES/03-emmanuel/` / E_SDK (DE-I8) — horizonte, no obra.
 - Epic embajador (E01) · E02 · E03.
+- Mundo/satélite nuevo · canal de transporte nuevo · LLM.
 
 ## Related
 
 - Mapa: [MAPA-SIETE-PLANTAS.md](MAPA-SIETE-PLANTAS.md) · S-03
-- SEMILLA-ARG nota candidata hermana
+- Fuente: [WP-A01](WP-A01-parte-kit.md) · vista: [WP-Z17](WP-Z17-operator-ui-ciudad.md)
+- Brief: [BRIEF-WP-CAMPANAS](../../REPORTES/BRIEF-WP-CAMPANAS-city.md)

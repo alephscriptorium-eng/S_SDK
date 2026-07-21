@@ -96,10 +96,18 @@ ahora.
 **Consecuencia:** nota en [BACKLOG](BACKLOG.md) §Candidatos y
 [SEMILLA-ARG](SEMILLA-ARG.md). Sin 🔶 · sin WP · sin inflar 03.
 
+**Addenda re-scope · 2026-07-21 (GO gobierno):** se **abre** WP-CAMPANAS con
+alcance reducido — el parte suena en operator-ui (clases despertar/degradar/
+roto + mute), fuente parte-kit ya fusionado, Zeus-side. **No** se ejecuta
+DE-I8 ni se crea E_SDK; la juntura 01↔03 queda como horizonte declarado en
+issue #25. Condición (i) HOTFIX-ARG-1 verde ya cumplida. Condición (ii)
+DE-I8 **aplazada** (no bloquea este slice). Brief:
+[BRIEF-WP-CAMPANAS](../../REPORTES/BRIEF-WP-CAMPANAS-city.md).
+
 ---
 
 ## Abiertas (custodio)
 
 Ninguna decisión de calibración abierta tras DC-GC-siete-plantas /
-DC-GC-campanas-s03. Bloqueos operativos → ver BACKLOG §Olas / §Cola.
-Condiciones de apertura S-03 = ticks externos (HOTFIX-ARG-1 · DE-I8).
+DC-GC-campanas-s03 (+ addenda re-scope). Bloqueos operativos → BACKLOG.
+DE-I8 sigue pendiente como horizonte (no bloquea CAMPANAS-city).

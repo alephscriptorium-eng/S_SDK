@@ -42,10 +42,11 @@
   **Sigue parked sin GO:** §A4–§A6 · SEMILLA §2–§4/§6 · Z05 items 3–6 ·
   epic embajador.
   DC: [DC-GC-arg-1](DECISIONES.md#dc-gc-arg-1--2026-07-21--cerrada).
-  **GO-6a/6b (2026-07-21, sin WP):** mapa
-  [siete plantas](MAPA-SIETE-PLANTAS.md) asentado · candidata **CAMPANAS
-  (S-03) parked** (conds: **(i) HOTFIX-ARG-1 verde ✅** · (ii) tick DE-I8 pend).
-  Acta (i): [ACTA-HOTFIX-ARG-1-2026-07-21](../../REPORTES/ACTA-HOTFIX-ARG-1-2026-07-21.md).
+  **GO-6a/6b (2026-07-21):** mapa
+  [siete plantas](MAPA-SIETE-PLANTAS.md) asentado.
+  **CAMPANAS (S-03) re-scope 2026-07-21 → 🔶** (sonido parte en operator-ui;
+  sin DE-I8 / sin E_SDK). Acta HOTFIX (i):
+  [ACTA-HOTFIX-ARG-1-2026-07-21](../../REPORTES/ACTA-HOTFIX-ARG-1-2026-07-21.md).
 
 ## Cola post-GC-2 (higiene de cierre de ola — 2026-07-21)
 
@@ -441,8 +442,9 @@ Z09/Z10; DC-GC-ceguera-marca).
 ## Federaciones / externos (parked — proyección OPEN · sin 🔶)
 
 > GO custodio DC-15 · 2026-07-21 (+ addenda race I75): encolar + proyectar
-> OPEN. **No abrir** epic ni CAMPANAS. I75 ✅ / #21 CLOSED · página viva;
-> **E03 ✅** (C02 · #24 CLOSED). Z_SDK #4/#5/#6 = overlap pack (citar, no
+> OPEN. **No abrir** epic embajador (E01–E02). **E03 ✅** (C02 · #24 CLOSED).
+> **CAMPANAS** re-scope → ver §abajo. I75 ✅ / #21 CLOSED · página viva;
+> Z_SDK #4/#5/#6 = overlap pack (citar, no
 > cerrar). Altas S_SDK **#22–#25**.
 
 - ⬜ **WP-E01 · Epic embajador (paraguas)** — **parked** sin GO · no abrir ·
@@ -460,18 +462,19 @@ Z09/Z10; DC-GC-ceguera-marca).
   `f0e5cc7`). Ficha: [WP-E03](WP-E03-tuberia-protegida.md). Reporte:
   [WP-E03](../../REPORTES/WP-E03-tuberia-protegida.md).
 
-## Candidatas post-ARG-1 (parked — sin 🔶)
+## Candidatas post-ARG-1
 
-> Mapa de decisión (no WP): [MAPA-SIETE-PLANTAS.md](MAPA-SIETE-PLANTAS.md) ·
+> Mapa de decisión: [MAPA-SIETE-PLANTAS.md](MAPA-SIETE-PLANTAS.md) ·
 > [DC-GC-siete-plantas](DECISIONES.md#dc-gc-siete-plantas--2026-07-21--cerrada-mapa-sin-wp).
 > Cinco spinoffs nombrados: S-02 · **S-03** · S-05 · S-06 · S-J.
 
-- ⬜ **WP-CAMPANAS · CAMPANAS (S-03)** — **parked** · primera costura jugable
-  01↔03 · dep técnica A01 ✅ · **(i) runner verde HOTFIX-ARG-1 ✅** (CI
-  `29865037586` · Release `29865037568` @ tip `fe75269` —
-  [ACTA-HOTFIX-ARG-1](../../REPORTES/ACTA-HOTFIX-ARG-1-2026-07-21.md)) ·
-  **(ii) tick DE-I8 pend** — **no abrir** hasta tick custodio inflar
-  satélite 03. Brief al abrir. DC:
+- 🔶 **WP-CAMPANAS · CAMPANAS-city (S-03 re-scope)** — el parte **SUENA** en
+  operator-ui: evento sonoro por clase de titular (**despertar · degradar ·
+  roto**) + toggle silencio; fuente parte-kit (zeus ~`fe75269` / `c7ec7d0`);
+  **sin** mundo nuevo · **sin** E_SDK / DE-I8 (juntura 01↔03 = horizonte).
+  Dep: A01 ✅ · Z17 ✅ · HOTFIX-ARG-1 ✅. Brief:
+  [BRIEF-WP-CAMPANAS](../../REPORTES/BRIEF-WP-CAMPANAS-city.md). DC addenda
+  re-scope en
   [DC-GC-campanas-s03](DECISIONES.md#dc-gc-campanas-s03--2026-07-21--cerrada-candidata-parked).
   Ficha: [WP-CAMPANAS](WP-CAMPANAS.md). Issue: S_SDK #25.
 
