@@ -2,7 +2,7 @@
 
 | dato | valor |
 |---|---|
-| estado | 🔶 brief emitido (ola **ARG-1** · 2026-07-21) |
+| estado | ✅ aceptado (ola **ARG-1** · 2026-07-21 · zeus `c7ec7d0`) |
 | track / prio | PACK / 1 · **ola ARG-1** |
 | depende de | Z01 ✅ · Z02 ✅ · Z07 ✅ · Z05-f1 ✅ (deltas) — **no** reabre ninguno |
 | fuente | [SEMILLA-ARG.md](SEMILLA-ARG.md) §A1 (literal) |

@@ -39,7 +39,7 @@ manejo real de información):
 
 | § | Pieza | Palanca | Estado ARG-1 |
 |---|---|---|---|
-| **A1** | Mensaje común de la plaza (`parte-kit`) | alta / coste bajo | 🔶 WP-A01 |
+| **A1** | Mensaje común de la plaza (`parte-kit`) | alta / coste bajo | ✅ WP-A01 |
 | **A2** | Presencia = contexto (señal → decay Z16) | alta / coste bajo | ✅ WP-A02 |
 | **A3** | Acta de barrio + estado `roto` | nuclear ARG | parked · cuando A1 viva |
 | **A4** | Edificios = submódulos, gentes = tools | extiende SEMILLA §2 | parked · post A1–A3 |
