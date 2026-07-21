@@ -150,8 +150,8 @@ Obra `cfd7c57` · tip rama `1c6eb6d` · merge `--no-ff` `main` @ `7dfff87` (sobr
 
 | id | ítem | nota |
 | -- | ---- | ---- |
-| D1 | Re-smoke f1–f3 dashboard `:3017` | A1 ops ✅ cerrado; *re-smoke post-A1 en curso/pendiente acta* |
-| D2 | H1 cache-browser `:3015` | idem post-A1; residual ops |
-| D3 | Authority vivo Mano/Ciudadano (+ fan-out F6) | fabric/authority tras re-smoke; no bloquea f6✅ |
+| D1 | Re-smoke f1–f3 dashboard `:3017` | **PASS** 2026-07-21 — [ACTA-A1b-PASS](ACTA-A1b-PASS-2026-07-21.md). Histórico: FAIL en [RESMOKE-post-A1](RESMOKE-post-A1-2026-07-21.md) (claim→acta) |
+| D2 | H1 cache-browser `:3015` | **PASS** 2026-07-21 — misma acta A1b |
+| D3 | Authority vivo Mano/Ciudadano (+ fan-out F6) | fabric UP vía A1b; e2e federación 8/8 cubre authority path; fan-out NR visual residual no bloquea |
 
 Hallazgos (ids censo no únicos / `:1880` ajena) no bloquean. Push S_SDK tip en este gobierno.
