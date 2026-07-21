@@ -19,10 +19,10 @@
 **Ola GC-2 (cerrada 2026-07-21):** Z03 ✅ · Z06 ✅ · Z08-f4..5 ✅ · Z12-f1 ✅ —
   lote completo; higiene de cierre = §Cola post-GC-2 (A1/re-smoke/push; A2→Z15).
 **Ola GC-3 (abierta 2026-07-21 — federación y población):** lote 🔶
-  **Z04 ✅** · **Z07 ✅** · **Z08 ✅** · **Z15 ✅** (A2) · **Z12-f2 ✅** (**Z12 completo**).
-  Parked ⬜: Z11 (tras Z04) · Z05 (por items). **Z13 despachable** (deps
-  Z12-f1·Z03·Z04 ✅). A1✅ (`npm ci`) no bloquea 🔶 código; **Tick A1b** (runtime
-  deps) bloquea vivos/re-smoke D1–D3 / Z04·Z08 — **no** bloqueó merge Z12-f2.
+  **Z04 ✅** · **Z07 ✅** · **Z08 ✅** · **Z15 ✅** (A2) · **Z12-f2 ✅** (**Z12 completo**) ·
+  **Z13 🔶**. Parked ⬜: Z11 (tras Z04) · Z05 (por items).
+  A1✅ (`npm ci`) no bloquea 🔶 código; **Tick A1b** (runtime deps) bloquea vivos/re-smoke
+  D1–D3 / Z04·Z08 — **no** bloqueó merge Z12-f2.
 
 ## Cola post-GC-2 (higiene de cierre de ola — 2026-07-21)
 
@@ -131,7 +131,7 @@ Z09/Z10; DC-GC-ceguera-marca).
 
 > Lote GC-2 (**cerrada 2026-07-21**): **Z03 ✅ · Z06 ✅ · Z08-f4..5 ✅ · Z12-f1 ✅**.
 > Lote GC-3 (**abierta**): **Z04 ✅ · Z07 ✅ · Z08 ✅ · Z15 ✅ · Z12-f2 ✅** (**Z12
-> completo**) · **Z13 despachable** · parked Z11·Z05. Issues: S_SDK #3 #6 #8 #12
+> completo**) · **Z13 🔶** · parked Z11·Z05. Issues: S_SDK #3 #6 #8 #12 #13
 > (sync-map).
 
 - ✅ **WP-Z01 · Pack mockdatas ciudad → firehose/cache-browser** — track PACK ·
@@ -244,10 +244,12 @@ Z09/Z10; DC-GC-ceguera-marca).
   [WP-Z12](WP-Z12-encendido-arbol-vida.md). Reporte:
   [WP-Z12-f2](../../REPORTES/WP-Z12-f2-arbol-cascada.md). Rama:
   `wp/gc-z12-f2-arbol-cascada`.
-- ⬜ **WP-Z13 · Los tres jugadores: fusión en la trama del SDK** — track PACK
-  (lore+flujos) · prio 3 · parked GC-3 · **despachable** (deps Z12-f1 ✅ + Z03 ✅ +
-  Z04 ✅) · gancho Z07/Z11 · ejes IV + ceguera. Brazo ejecutable de
-  [TRAMA-AGUA](TRAMA-AGUA.md). Ficha: [WP-Z13](WP-Z13-tres-jugadores.md).
+- 🔶 **WP-Z13 · Los tres jugadores: fusión en la trama del SDK** — track PACK
+  (lore+flujos) · prio 3 · ola GC-3 · dep Z12-f1 ✅ + Z03 ✅ + Z04 ✅ (Z12 completo
+  vía f2 ✅) · gancho Z07/Z11 · ejes IV + ceguera. Brazo ejecutable de
+  [TRAMA-AGUA](TRAMA-AGUA.md). Brief:
+  [BRIEF-WP-Z13](../../REPORTES/BRIEF-WP-Z13-tres-jugadores.md). Ficha:
+  [WP-Z13](WP-Z13-tres-jugadores.md). Rama: `wp/gc-z13-tres-jugadores`.
 - ✅ **WP-Z14 · Procedencia estados de barrio → cantera versionada** — track PACK ·
   prio 1 · dep Z02 ✅ · micro-WP D1 vigía · eje I (generador regenera seeds desde
   cantera). **No reabre Z02.** Ficha: [WP-Z14](WP-Z14-procedencia-estados.md).
