@@ -31,6 +31,14 @@
   Briefs: [BRIEF-Z16](../../REPORTES/BRIEF-WP-Z16-loop-juego.md) ·
   [BRIEF-Z17](../../REPORTES/BRIEF-WP-Z17-operator-ui-ciudad.md).
   Proyección issues = **LOCAL-ONLY** (sin apply).
+**Ola ARG-1 (abierta 2026-07-21 — GO custodio encolar A-16 / valor grande):**
+  lote inmediato 🔶 **WP-A01** (§A1 parte-kit) · 🔶 **WP-A02** (§A2 presencia).
+  **§A3 actas parked** («cuando A1 viva»). **§A4–§A6** sin masticar.
+  Fuente: [SEMILLA-ARG](SEMILLA-ARG.md) (hermana de SEMILLA; no enmienda).
+  Briefs: [BRIEF-A01](../../REPORTES/BRIEF-WP-A01-parte-kit.md) ·
+  [BRIEF-A02](../../REPORTES/BRIEF-WP-A02-presencia.md).
+  **Sigue parked sin GO:** SEMILLA §2–§4/§6 · Z05 items 3–6 · epic embajador.
+  DC: [DC-GC-arg-1](DECISIONES.md#dc-gc-arg-1--2026-07-21--cerrada).
 
 ## Cola post-GC-2 (higiene de cierre de ola — 2026-07-21)
 
@@ -333,6 +341,19 @@ Z09/Z10; DC-GC-ceguera-marca).
   ceguera 0. Brief: [BRIEF-WP-Z17](../../REPORTES/BRIEF-WP-Z17-operator-ui-ciudad.md).
   Ficha: [WP-Z17](WP-Z17-operator-ui-ciudad.md). Reporte:
   [WP-Z17](../../REPORTES/WP-Z17-operator-ui-ciudad.md).
+- 🔶 **WP-A01 · Parte de plaza (`parte-kit`) · SEMILLA-ARG §A1** — track PACK ·
+  prio 1 · ola **ARG-1** · dep Z01·Z02·Z07·Z05-f1 ✅ · ejes I/II · ceguera
+  (validarParte = patrón proyector). Brief:
+  [BRIEF-WP-A01](../../REPORTES/BRIEF-WP-A01-parte-kit.md). Ficha:
+  [WP-A01](WP-A01-parte-kit.md). Rama: `wp/gc-a01-parte-kit`.
+- 🔶 **WP-A02 · Señal de presencia · SEMILLA-ARG §A2** — track PACK · prio 1 ·
+  ola **ARG-1** · dep Z16 ✅ · ejes I/II · ceguera. Engancha decay Z16 a
+  presencia mock. Brief:
+  [BRIEF-WP-A02](../../REPORTES/BRIEF-WP-A02-presencia.md). Ficha:
+  [WP-A02](WP-A02-presencia.md). Rama: `wp/gc-a02-presencia`.
+- ⬜ **WP-A03 · Acta de barrio + estado `roto` · SEMILLA-ARG §A3** —
+  **parked** «cuando A1 viva» (dep §A1 + Z10). No brief. Contrato en
+  [SEMILLA-ARG](SEMILLA-ARG.md) §A3.
 
 ## Overview (lectura; sin estado — el estado vive arriba)
 
@@ -355,24 +376,33 @@ Z09/Z10; DC-GC-ceguera-marca).
 | [Z15](WP-Z15-intentional-stops-read.md) | Lectura intentionalStops (A2→launcher) | OPS | alta | Z06 ✅ | I/III |
 | [Z16](WP-Z16-loop-juego.md) | Loop de juego (SEMILLA §1) | PACK | 1 | Z03 ✅ | I (+IV dif.) |
 | [Z17](WP-Z17-operator-ui-ciudad.md) | operator-ui vista ciudad (SEMILLA §5) | VISOR | 1 | Z02·Z03 ✅ | IV/I |
+| [A01](WP-A01-parte-kit.md) | Parte de plaza / parte-kit (§A1) | PACK | 1 | Z01·Z02·Z07·Z05-f1 ✅ | I/II |
+| [A02](WP-A02-presencia.md) | Señal de presencia (§A2) | PACK | 1 | Z16 ✅ | I/II |
+| A03 | Acta de barrio (§A3) — parked | PACK | — | A01 viva + Z10 | — |
 
 ## Candidatos SEMILLA — profundizar la gamificación (ver [SEMILLA-GAMIFICACION.md](SEMILLA-GAMIFICACION.md))
 
 > **GC-4 cerrada 2026-07-21** (Z05-f1·f2·Z11 ✅).
 > **GC-5 cerrada 2026-07-21 (GO custodio §1+§5):** **Z16 ✅** loop · **Z17 ✅**
 > operator-ui. **§2–§4/§6 parked** — no abrir sin GO nuevo. No reopen Z05-f1.
+> **ARG-1 abierta** (hermana [SEMILLA-ARG](SEMILLA-ARG.md)): A01·A02 🔶;
+> A3 parked. No sustituye ni des-aparca SEMILLA §2/§6.
 
 - ✅ **§1 Loop de juego** → **WP-Z16** (objetivos/decay/economía de energía).
 - ⬜ **§2 Estado del juego = estado real del sistema** (**parked**) — barrio ↔
   paquete/servicio; salud CI alimenta vivo/latente. Necesita Z06 + guardarraíles.
+  (SEMILLA-ARG §A4 lo extiende cuando viva; **no** des-aparca §2 hoy.)
 - ⬜ **§3 Ciudadanos con misión** (**parked**) — viajes Z10 como quests.
 - ⬜ **§4 Cronista** (**parked**) — story-board vuelve al juego. Cadena
   Z03+Z07+Z11; no abrir antes.
 - ✅ **§5 Vista 3D** → **WP-Z17** — `operator-ui` como vista de la ciudad.
 - ⬜ **§6 Meta-juego del swarm** (**parked**) — WPs como misiones en la plaza;
   necesita §1–§4 vivos + decisión de gobernanza.
+  (SEMILLA-ARG lo roza; **no** des-aparca §6 hoy.)
 - ⬜ **Trama-agua como mundo del dramaturgo** (ronda 3, parked) — ejes REIC de
   [TRAMA-AGUA](TRAMA-AGUA.md) §5.5; dep Z07 + Z13.
+- ⬜ **Epic embajador** (**parked** sin GO) — no abrir; ops de pavimentación
+  van por canal GO-4 aparte. ACL Z05 item 3 se des-aparca cuando este epic abra.
 
 ## Cierre del sprint (parte final — no evaporar)
 
