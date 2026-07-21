@@ -5,7 +5,7 @@
 | agente | worker gc-z16 (swarm) |
 | fecha | 2026-07-21 |
 | rama | `wp/gc-z16-loop-juego` (games-library) · reporte en SCRIPT_SDK `wp/gc-z16-loop-juego` |
-| commits | games-library `21a6592d5c8105890e2d84e60d341416751818b8` |
+| commits | games-library `21a6592d5c8105890e2d84e60d341416751818b8` · reporte S_SDK `6598f0b62b34fb8547d600749c0576375ec113ed` |
 | eje(s) CA | I (tests/smoke decay·energía·objetivo) · IV diferido (contrato `objetivo` documentado; 2º cliente = Z08/Z17) · ceguera ampliada |
 | estado propuesto | listo para revisión |
 
