@@ -18,11 +18,10 @@
   **Tick A1 cerrado** → Z10 brief → **Z10 ✅** (cierra lote post-A1 Z14+Z09+Z10).
 **Ola GC-2 (cerrada 2026-07-21):** Z03 ✅ · Z06 ✅ · Z08-f4..5 ✅ · Z12-f1 ✅ —
   lote completo; higiene de cierre = §Cola post-GC-2 (A1/re-smoke/push; A2→Z15).
-**Ola GC-3 (abierta 2026-07-21 — federación y población):** lote 🔶
+**Ola GC-3 (cerrada 2026-07-21 — federación y población):** lote código ✅
   **Z04 ✅** · **Z07 ✅** · **Z08 ✅** · **Z15 ✅** (A2) · **Z12-f2 ✅** (**Z12 completo**) ·
-  **Z13 ✅**. Parked ⬜: Z11 (tras Z04) · Z05 (por items).
-  A1✅ (`npm ci`) no bloquea 🔶 código; **Tick A1b** (runtime deps) bloquea vivos/re-smoke
-  D1–D3 / Z04·Z08 — **no** bloqueó merge Z13.
+  **Z13 ✅**. Parked ⬜ (fuera de cierre de lote): **Z05** · **Z11**. Residual ops:
+  **Tick A1b** (runtime deps / vivos / re-smoke D1–D3).
 
 ## Cola post-GC-2 (higiene de cierre de ola — 2026-07-21)
 
@@ -130,9 +129,9 @@ Z09/Z10; DC-GC-ceguera-marca).
 ## WPs (estado canónico)
 
 > Lote GC-2 (**cerrada 2026-07-21**): **Z03 ✅ · Z06 ✅ · Z08-f4..5 ✅ · Z12-f1 ✅**.
-> Lote GC-3 (**abierta**): **Z04 ✅ · Z07 ✅ · Z08 ✅ · Z15 ✅ · Z12-f2 ✅** (**Z12
-> completo**) · **Z13 ✅** · parked Z11·Z05. Issues: S_SDK #3 #6 #8 #12 #13
-> (sync-map).
+> Lote GC-3 (**cerrada 2026-07-21**): **Z04 ✅ · Z07 ✅ · Z08 ✅ · Z15 ✅ · Z12-f2 ✅**
+> (**Z12 completo**) · **Z13 ✅**. Parked Z05·Z11; residual **A1b**. Issues: S_SDK
+> #3 #6 #8 #12 #13 (sync-map).
 
 - ✅ **WP-Z01 · Pack mockdatas ciudad → firehose/cache-browser** — track PACK ·
   prio 1 · dep — · eje I (consumidores reales: los 2 browsers arrancados).
