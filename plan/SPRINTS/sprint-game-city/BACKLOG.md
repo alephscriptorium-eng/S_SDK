@@ -88,6 +88,14 @@ aceptable-con-notas · Z08-f4..5 aceptable (re-smoke renegociada con intento).
   CI **29857964265** success · Release **29857967650** success (primer Release
   verde post-touch `packages/**` de Z17). **Z17 sigue ✅ — no se reabre.**
   Acta: [ACTA-HOTFIX-GATES-3-2026-07-21](../../REPORTES/ACTA-HOTFIX-GATES-3-2026-07-21.md).
+- **GO-5 · Webs + Release:** ✅ 3 webs regeneradas (site-web / `workflow_dispatch`
+  Docs) tip zeus `48e2062` + Release **29857967650**. Docs runs:
+  Z_SDK **29858825757** · games-library **29858827677** · S_SDK **29858829917**
+  (todas success + deploy). URLs: `z-sdk.escrivivir.co` ·
+  `games.z-sdk.escrivivir.co` · `s-sdk.escrivivir.co`. Nav C8 ampliado OK.
+  GC-1..5 citadas sin reopen. `<pendiente>`: fila `ciudad` en `/startpacks`
+  del catálogo GL. Acta:
+  [ACTA-GO5-webs-release-2026-07-21](../../REPORTES/ACTA-GO5-webs-release-2026-07-21.md).
 
 ## Replan post-vigía GC-1.5 (2026-07-21)
 
