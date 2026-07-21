@@ -23,9 +23,15 @@
   **Z13 ✅**. Residual ops: **Tick A1b ✅ PASS** (acta).
 **Ola GC-4 (cerrada 2026-07-21 — engine techo + autoría):** lote inmediato ✅
   **Z05-f1 ✅** (deltas) · **Z05-f2 ✅** (zonas) · **Z11 ✅** (linea-editor).
-  Items Z05 3–6 **parked** · SEMILLA-GAMIFICACION **parked** (sin GO custodio).
+  Items Z05 3–6 **parked** · SEMILLA §2–§4/§6 siguen parked (ver GC-5).
   Gate pre-apertura histórico: A1b PASS claim→acta
   [ACTA-A1b-PASS-2026-07-21](../../REPORTES/ACTA-A1b-PASS-2026-07-21.md).
+**Ola GC-5 (abierta 2026-07-21 — GO custodio = SEMILLA §1 + §5):** lote
+  **Z16 🔶** (loop: decay/energía/objetivo) · **Z17 🔶** (operator-ui vista 3D).
+  **§2–§4/§6 parked** (sin GO). **No reopen Z05-f1.** Z05 items 3–6 parked.
+  Briefs: [BRIEF-Z16](../../REPORTES/BRIEF-WP-Z16-loop-juego.md) ·
+  [BRIEF-Z17](../../REPORTES/BRIEF-WP-Z17-operator-ui-ciudad.md).
+  Proyección issues = **LOCAL-ONLY** (sin apply).
 
 ## Cola post-GC-2 (higiene de cierre de ola — 2026-07-21)
 
@@ -148,7 +154,8 @@ Z09/Z10; DC-GC-ceguera-marca).
 > Lote GC-2 (**cerrada 2026-07-21**): **Z03 ✅ · Z06 ✅ · Z08-f4..5 ✅ · Z12-f1 ✅**.
 > Lote GC-3 (**cerrada 2026-07-21**): **Z04 ✅ · Z07 ✅ · Z08 ✅ · Z15 ✅ · Z12-f2 ✅**
 > (**Z12 completo**) · **Z13 ✅**. Lote GC-4 (**cerrada 2026-07-21**): **Z05-f1 ✅ ·
-> Z05-f2 ✅ · Z11 ✅**. A1b ✅. Issues: S_SDK #3 #6 #8 #12 #13 (sync-map).
+> Z05-f2 ✅ · Z11 ✅**. Lote GC-5 (**abierta 2026-07-21 · §1+§5**): **Z16 🔶 · Z17 🔶**.
+> A1b ✅. Issues: S_SDK sync-map (LOCAL-ONLY esta ola; sin apply GC-5).
 
 - ✅ **WP-Z01 · Pack mockdatas ciudad → firehose/cache-browser** — track PACK ·
   prio 1 · dep — · eje I (consumidores reales: los 2 browsers arrancados).
@@ -311,6 +318,16 @@ Z09/Z10; DC-GC-ceguera-marca).
   [BRIEF-WP-Z15](../../REPORTES/BRIEF-WP-Z15-intentional-stops-read.md). Ficha:
   [WP-Z15](WP-Z15-intentional-stops-read.md). Reporte:
   [WP-Z15](../../REPORTES/WP-Z15-intentional-stops-read.md).
+- 🔶 **WP-Z16 · Loop de juego (SEMILLA §1): decay / energía / objetivo** — track
+  PACK · prio 1 · ola **GC-5** · dep Z03 ✅ · eje I (+ IV diferido) · ceguera.
+  Reducer puro en `@zeus/ciudad` — sin tocar engine. Brief:
+  [BRIEF-WP-Z16](../../REPORTES/BRIEF-WP-Z16-loop-juego.md). Ficha:
+  [WP-Z16](WP-Z16-loop-juego.md). Rama: `wp/gc-z16-loop-juego`.
+- 🔶 **WP-Z17 · Vista 3D operator-ui → ciudad (SEMILLA §5)** — track VISOR ·
+  prio 1 · ola **GC-5** · dep Z02 ✅ · Z03 ✅ (soft Z16) · ejes IV/I · ceguera.
+  Reusa `@zeus/operator-ui` (no visor nuevo). Brief:
+  [BRIEF-WP-Z17](../../REPORTES/BRIEF-WP-Z17-operator-ui-ciudad.md). Ficha:
+  [WP-Z17](WP-Z17-operator-ui-ciudad.md). Rama: `wp/gc-z17-operator-ui-ciudad`.
 
 ## Overview (lectura; sin estado — el estado vive arriba)
 
@@ -331,29 +348,26 @@ Z09/Z10; DC-GC-ceguera-marca).
 | [Z13](WP-Z13-tres-jugadores.md) | Los tres jugadores (trama del SDK) | PACK | 3 | Z12-f1·Z03·Z04 | IV |
 | [Z14](WP-Z14-procedencia-estados.md) | Procedencia estados → cantera | PACK | 1 | Z02 ✅ | I |
 | [Z15](WP-Z15-intentional-stops-read.md) | Lectura intentionalStops (A2→launcher) | OPS | alta | Z06 ✅ | I/III |
+| [Z16](WP-Z16-loop-juego.md) | Loop de juego (SEMILLA §1) | PACK | 1 | Z03 ✅ | I (+IV dif.) |
+| [Z17](WP-Z17-operator-ui-ciudad.md) | operator-ui vista ciudad (SEMILLA §5) | VISOR | 1 | Z02·Z03 ✅ | IV/I |
 
-## Candidatos GC-4 — profundizar la gamificación (sin abrir; ver [SEMILLA-GAMIFICACION.md](SEMILLA-GAMIFICACION.md))
+## Candidatos SEMILLA — profundizar la gamificación (ver [SEMILLA-GAMIFICACION.md](SEMILLA-GAMIFICACION.md))
 
-> **GC-4 cerrada 2026-07-21** (Z05-f1·f2·Z11 ✅). SEMILLA §1–§6 siguen **parked**.
-> No abrir loop/cronista/vista3D/meta-juego/salud-real sin evidencia nueva ni GO
-> custodio.
+> **GC-4 cerrada 2026-07-21** (Z05-f1·f2·Z11 ✅).
+> **GC-5 abierta 2026-07-21 (GO custodio = §1 + §5):** **Z16 🔶** loop · **Z17 🔶**
+> operator-ui. **§2–§4/§6 parked** — no abrir sin GO nuevo. No reopen Z05-f1.
 
-- **Loop de juego** (objetivos/decay/economía de energía) — hoy hay mecánica sin meta.
-- **Estado del juego = estado real del sistema** (barrio ↔ paquete/servicio; salud CI
-  alimenta vivo/latente) — la idea más potente del pack, apenas explotada por `wake`.
-- **Ciudadanos con misión** (viajes Z10 como quests; no random-walk decorativo).
-- **Cronista** (el story-board del dramaturgo vuelve al juego como lore visible).
-  Cadena: **Z03 (ledger) + Z07 (validador) + Z11 (export transmedia)** — con Z11
-  asentado pasa de manual a pipeline (ledger → cronista → export Z11 → validador
-  Z07). No abrir antes de esa cadena (micro-acción 2, ronda 2).
-- **Vista 3D** — conectar `operator-ui` (ThreeGamification) como vista de la ciudad
-  («varias vistas, un contrato»).
-- **Meta-juego del swarm** — proyectar WPs como misiones en la plaza (adaptador
-  `ciudad` del exportador de proyección del skill; mismo modelo que backlog→Issues).
-- **Trama-agua como mundo del dramaturgo** (ronda 3) — ejes REIC de la instancia
-  `ciudad` derivados de [TRAMA-AGUA](TRAMA-AGUA.md) §5.5 (R=agua/caudal,
-  E=compuertas/gates, I=ventanas/vasos, C=ciclo/retorno); actos etiquetados por tipo
-  de jugador desde el ledger (contrato de mapeo de Z13). Dep: Z07 + Z13.
+- 🔶 **§1 Loop de juego** → **WP-Z16** (objetivos/decay/economía de energía).
+- ⬜ **§2 Estado del juego = estado real del sistema** (**parked**) — barrio ↔
+  paquete/servicio; salud CI alimenta vivo/latente. Necesita Z06 + guardarraíles.
+- ⬜ **§3 Ciudadanos con misión** (**parked**) — viajes Z10 como quests.
+- ⬜ **§4 Cronista** (**parked**) — story-board vuelve al juego. Cadena
+  Z03+Z07+Z11; no abrir antes.
+- 🔶 **§5 Vista 3D** → **WP-Z17** — `operator-ui` como vista de la ciudad.
+- ⬜ **§6 Meta-juego del swarm** (**parked**) — WPs como misiones en la plaza;
+  necesita §1–§4 vivos + decisión de gobernanza.
+- ⬜ **Trama-agua como mundo del dramaturgo** (ronda 3, parked) — ejes REIC de
+  [TRAMA-AGUA](TRAMA-AGUA.md) §5.5; dep Z07 + Z13.
 
 ## Cierre del sprint (parte final — no evaporar)
 

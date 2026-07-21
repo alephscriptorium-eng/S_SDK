@@ -6,8 +6,10 @@
 > una idea con verdad (el juego toca infra de verdad, no metáfora). Pero tal
 > como está, Z03+Z08 entregan **mecánica y población, no un juego**: falta el
 > loop, falta el porqué, y la conexión juego↔realidad se queda en un solo
-> intent. Seis profundizaciones, ordenadas por palanca/coste. Ninguna abre WP
-> hoy: son candidatos GC-4 (BACKLOG) para cuando GC-1..3 den la base.
+> intent. Seis profundizaciones, ordenadas por palanca/coste.
+>
+> **Estado GO (2026-07-21):** GC-5 abre **solo §1 + §5** → WP-Z16 / WP-Z17
+> (BACKLOG). **§2–§4/§6 siguen parked.**
 
 ## 1. Loop de juego: objetivo, decay, energía (palanca alta, coste bajo)
 
@@ -84,11 +86,11 @@ gamificación gamificándose a sí misma. Mismo candado que Issues: local-only
 por defecto, opt-in explícito, gate de ceguera (regla de los dos mundos) antes
 de proyectar nada al lado zeus.
 
-## Orden sugerido (cuando el custodio abra GC-4)
+## Orden sugerido (histórico GC-4 → vigente GC-5 parcial)
 
-1. §1 loop (habilita todo lo demás; solo Z03)
-2. §5 operator-ui como vista (reusa lo que existe)
-3. §3 misiones (necesita Z10)
-4. §4 cronista (necesita Z07)
-5. §2 salud real (necesita Z06 y criterio de guardarraíles)
-6. §6 meta-juego (necesita §1-§4 vivos y decisión de gobernanza)
+1. §1 loop (habilita todo lo demás; solo Z03) — **GC-5 → WP-Z16 🔶**
+2. §5 operator-ui como vista (reusa lo que existe) — **GC-5 → WP-Z17 🔶**
+3. §3 misiones (necesita Z10) — **parked**
+4. §4 cronista (necesita Z07) — **parked**
+5. §2 salud real (necesita Z06 y criterio de guardarraíles) — **parked**
+6. §6 meta-juego (necesita §1-§4 vivos y decisión de gobernanza) — **parked**
