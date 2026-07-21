@@ -19,7 +19,7 @@
 **Ola GC-2 (cerrada 2026-07-21):** Z03 ✅ · Z06 ✅ · Z08-f4..5 ✅ · Z12-f1 ✅ —
   lote completo; higiene de cierre = §Cola post-GC-2 (A1/re-smoke/push; A2→Z15).
 **Ola GC-3 (abierta 2026-07-21 — federación y población):** lote 🔶
-  Z04 · **Z07 ✅** · Z08-f6(+f7) · **Z15 (A2, prio alta)**. Parked ⬜: Z11 (tras Z04) ·
+  **Z04 ✅** · **Z07 ✅** · Z08-f6(+f7) · **Z15 (A2, prio alta)**. Parked ⬜: Z11 (tras Z04) ·
   Z12-f2 (tras **Z15 ✅** + f1 ✅) · Z13 (tras Z12-f1·Z03·Z04) · Z05 (por items).
   Criterio custodio: no abrir Z12-f2/Z13 hasta Z15 ≥🔶/✅; A1 no bloquea 🔶 código.
 
@@ -118,7 +118,7 @@ Z09/Z10; DC-GC-ceguera-marca).
 ## WPs (estado canónico)
 
 > Lote GC-2 (**cerrada 2026-07-21**): **Z03 ✅ · Z06 ✅ · Z08-f4..5 ✅ · Z12-f1 ✅**.
-> Lote GC-3 (**abierta**): **Z04 🔶 · Z07 ✅ · Z08-f6(+f7) 🔶 · Z15 🔶** · parked
+> Lote GC-3 (**abierta**): **Z04 ✅ · Z07 ✅ · Z08-f6(+f7) 🔶 · Z15 🔶** · parked
 > Z11·Z12-f2(tras Z15)·Z13·Z05. Issues: S_SDK #3 #6 #8 #12 (sync-map).
 
 - ✅ **WP-Z01 · Pack mockdatas ciudad → firehose/cache-browser** — track PACK ·
@@ -141,11 +141,15 @@ Z09/Z10; DC-GC-ceguera-marca).
   Brief: [BRIEF-WP-Z03](../../REPORTES/BRIEF-WP-Z03-juego-ciudad.md). Ficha:
   [WP-Z03](WP-Z03-juego-ciudad.md). Reporte:
   [WP-Z03](../../REPORTES/WP-Z03-juego-ciudad.md).
-- 🔶 **WP-Z04 · Rabbits r/s/h como actores externos (e2e)** — track PACK · prio 2 ·
-  ola GC-3 · dep Z03 ✅ · Z06 ✅ · eje IV (el peer externo ES el segundo cliente
-  del contrato rooms/protocol). Brief:
+- ✅ **WP-Z04 · Rabbits r/s/h como actores externos (e2e)** — track PACK · prio 2 ·
+  ola GC-3 · dep Z03 ✅ · Z06 ✅ · eje IV (peer externo = 2º cliente rooms/protocol).
+  Federación fixtures + smoke/tests/C-03 · games-library `b020a81` (+ puntero
+  submodule). **Aceptado ✅** 2026-07-21 (orquestador) con caveat **A1** (npm-ci /
+  e2e socket vivo deferido). Sin conflictos path con Z07. Follow-up: regenerar
+  proyección Z07 (D1) — no este merge. Brief:
   [BRIEF-WP-Z04](../../REPORTES/BRIEF-WP-Z04-rabbits-rsh.md). Ficha:
-  [WP-Z04](WP-Z04-rabbits-rsh.md).
+  [WP-Z04](WP-Z04-rabbits-rsh.md). Reporte:
+  [WP-Z04](../../REPORTES/WP-Z04-rabbits-rsh.md).
 - ⬜ **WP-Z05 · Evoluciones de engine (deltas, zonas, ACL, loader, sharding)** —
   track ENGINE · prio 3 · parked GC-3 · disparo: Z08-f6 · eje IV por item; II si
   un item sustituye mecanismo vigente (destino canónico).

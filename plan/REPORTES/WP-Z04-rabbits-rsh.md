@@ -5,7 +5,7 @@
 | agente | worker gc-z04 (swarm fresco) |
 | fecha | 2026-07-21 |
 | rama | `wp/gc-z04-rabbits-rsh` (games-library) · reporte S_SDK `wp/gc-z04-rabbits-rsh` |
-| commits | games-library `5135559fa750432d375c2ed65d42d045f5997bc5` |
+| commits | games-library `b020a81dd00f4557ed2e797ebed9631e5450d1a5` |
 | eje(s) CA | **IV** (peer externo = 2º cliente rooms/protocol) |
 | estado propuesto | listo para revisión |
 | issue | ⏳ sin verificar sync-map → `alephscriptorium-eng/S_SDK#4` (no afirmado) |
@@ -38,7 +38,7 @@ submodule. **Sin BACKLOG.**
 
 ```
 git -C …/games-library/.worktrees/wp-gc-z04-rabbits-rsh rev-parse HEAD
-→ 5135559fa750432d375c2ed65d42d045f5997bc5
+→ b020a81dd00f4557ed2e797ebed9631e5450d1a5
 
 git -C …/zeus-sdk rev-parse HEAD
 → fa73062124a10839c3f821d5e61c250ea14f734b
@@ -123,4 +123,17 @@ vía bus de contrato; authority no se muta por import de `domain`.
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** — 2026-07-21 · orquestador (merge/gobierno). Caveat **A1**.
+
+Obra games-library `b020a81` (rebase limpio sobre tip post-Z07 `006aef1` · FF `main` + push `origin/main`) · tip reporte worker rebaseado sobre `main` post-Z07 · bump submodule SCRIPT_SDK → `b020a81`. Diff = federación e2e r/s/h (`packages/ciudad/fixtures/federation/*` + smoke/tests/CASOS C-03 + `e2e/ciudad-federation-demo.mjs`) + este reporte. Sin solape de paths con Z07 (kits/dramaturgo). Eje **IV** ✅ (federation-smoke + node:test 10/10). **Sin conflictos con Z07.**
+
+### Verificado (brazo REVISIÓN + merge)
+- SHAs: GL tip pre-rebase worker `5135559` → post-rebase merge `b020a81` sobre `006aef1` · SDK reporte base `f657838` rebaseado sobre tip post-aceptación Z07
+- Alcance dentro de BRIEF; peer externo ≠ player-MCP; sin tocar dramaturgo/lifecycle/flows/BACKLOG en obra
+- Gates reportados: federation-smoke OK · ciudad tests 10/10; e2e socket vivo deferido (A1 / mcp-core-sdk)
+- Merge FF + push `origin/main` GL; sin force-push
+- Follow-up (no este merge): regenerar proyección Z07 ledger→story-board (D1 de Z07) — trivial/otro agente
+
+### Caveat (no bloquea ✅)
+1. **A1** npm-ci / dist mcp-core-sdk incompleto → e2e socket+authority (`e2e:ciudad-federation`) y re-smoke vivo deferidos a cola A1 post-GC-2
+
