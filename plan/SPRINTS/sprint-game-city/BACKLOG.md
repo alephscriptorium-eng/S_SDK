@@ -22,7 +22,7 @@
   **Z04 ✅** · **Z07 ✅** · **Z08 ✅** · **Z15 ✅** (A2) · **Z12-f2 ✅** (**Z12 completo**) ·
   **Z13 ✅**. Residual ops: **Tick A1b ✅ PASS** (acta).
 **Ola GC-4 (abierta 2026-07-21 — engine techo + autoría):** lote inmediato
-  **Z05-f1 ✅** (deltas) · **Z05-f2 🔶** (zonas) · **Z11 🔶** (deps Z06·Z04·Z03 ✅).
+  **Z05-f1 ✅** (deltas) · **Z05-f2 ✅** (zonas) · **Z11 🔶** (deps Z06·Z04·Z03 ✅).
   **No** abrir items Z05 3–6 ni wishlist SEMILLA-GAMIFICACION sin evidencia nueva.
   Gate pre-apertura: A1b PASS claim→acta
   [ACTA-A1b-PASS-2026-07-21](../../REPORTES/ACTA-A1b-PASS-2026-07-21.md).
@@ -142,7 +142,7 @@ Z09/Z10; DC-GC-ceguera-marca).
 > Lote GC-2 (**cerrada 2026-07-21**): **Z03 ✅ · Z06 ✅ · Z08-f4..5 ✅ · Z12-f1 ✅**.
 > Lote GC-3 (**cerrada 2026-07-21**): **Z04 ✅ · Z07 ✅ · Z08 ✅ · Z15 ✅ · Z12-f2 ✅**
 > (**Z12 completo**) · **Z13 ✅**. Lote GC-4 (**abierta 2026-07-21**): **Z05-f1 ✅ ·
-> Z05-f2 🔶 · Z11 🔶**. A1b ✅. Issues: S_SDK #3 #6 #8 #12 #13 (sync-map).
+> Z05-f2 ✅ · Z11 🔶**. A1b ✅. Issues: S_SDK #3 #6 #8 #12 #13 (sync-map).
 
 - ✅ **WP-Z01 · Pack mockdatas ciudad → firehose/cache-browser** — track PACK ·
   prio 1 · dep — · eje I (consumidores reales: los 2 browsers arrancados).
@@ -182,11 +182,16 @@ Z09/Z10; DC-GC-ceguera-marca).
   Ficha: [WP-Z05](WP-Z05-engine-evoluciones.md). Reporte:
   [WP-Z05-f1](../../REPORTES/WP-Z05-f1-game-state-delta.md). Rama:
   `wp/gc-z05-f1-game-state-delta`.
-- 🔶 **WP-Z05-f2 · Suscripción por zona/distrito (gamechannel)** — track ENGINE ·
+- ✅ **WP-Z05-f2 · Suscripción por zona/distrito (gamechannel)** — track ENGINE ·
   prio 3 · ola GC-4 · umbrella [WP-Z05](WP-Z05-engine-evoluciones.md) item 2 ·
-  eje IV/II. Señal: firehose sin filtrado + mapa 24 barrios (Z03 ✅). Brief:
+  eje IV/II · zeus-sdk `11bde48` (+ puntero) · games-library `d7f5dfa` (+ puntero).
+  **Aceptado ✅** 2026-07-21 (orquestador): rebase post-f1 + merge FF + push
+  zeus+GL; filtro zona + `CLIENT_SUSCRIBE.zones` + smoke 24-barrio; ejes IV/II +
+  ceguera. Slice server-side authority deferred. Brief:
   [BRIEF-WP-Z05-f2](../../REPORTES/BRIEF-WP-Z05-f2-suscripcion-zonas.md).
-  Preferí merge **después de f1**. Items 3–6 del umbrella siguen parked.
+  Ficha: [WP-Z05](WP-Z05-engine-evoluciones.md). Reporte:
+  [WP-Z05-f2](../../REPORTES/WP-Z05-f2-suscripcion-zonas.md). Rama:
+  `wp/gc-z05-f2-suscripcion-zonas`.
 - ⬜ **WP-Z05 · Evoluciones de engine (paraguas items 3–6 parked)** — ACL /
   loader / sharding / spec launcher — **no abrir** en GC-4 inmediato. Ficha:
   [WP-Z05](WP-Z05-engine-evoluciones.md).
