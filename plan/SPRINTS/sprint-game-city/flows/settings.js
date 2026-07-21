@@ -1,6 +1,7 @@
 /**
- * Node-RED settings — instancia visor ciudad (WP-Z08 f1–f5).
- * Puerto :1880. userDir = este directorio (flows/).
+ * Node-RED settings — instancia constelación ciudad (WP-Z08 f1–f6).
+ * Puerto default :1880. Constelación: scripts/start-constelacion.sh
+ *   (:1884 distritos · :1885 locales) con Z08_AMBITO + POBLACION_MAX.
  *
  * Arranque:
  *   cd plan/SPRINTS/sprint-game-city/flows
@@ -8,9 +9,39 @@
  *   npx --yes node-red -u "$(pwd)" -s "$(pwd)/settings.js"
  */
 const path = require('path');
+const fs = require('fs');
 
 const operatorBridge = require('./helpers/operator-bridge-port.js');
 const ciudadIntentStubs = require('./helpers/ciudad-intent-stubs.js');
+const poblacionCenso = require('./helpers/poblacion-censo.js');
+
+const POBLACION_MAX = Number(process.env.POBLACION_MAX || poblacionCenso.POBLACION_MAX_DEFAULT);
+const Z08_AMBITO = process.env.Z08_AMBITO || 'plaza-ops';
+
+function loadLoteAmbito() {
+  const fixturePath = path.join(__dirname, 'fixtures', 'poblacion-lote-max24.json');
+  let lote;
+  if (fs.existsSync(fixturePath)) {
+    lote = JSON.parse(fs.readFileSync(fixturePath, 'utf8'));
+  } else {
+    const printPath = path.join(
+      __dirname,
+      '..',
+      'cantera',
+      'CIUDAD',
+      'GRAFO',
+      'print-agentes.txt'
+    );
+    lote = poblacionCenso.buildLoteFixture(printPath, { max: POBLACION_MAX });
+  }
+  const filtered = poblacionCenso.filterByAmbito(lote, Z08_AMBITO);
+  return {
+    poblacionMax: POBLACION_MAX,
+    ambito: Z08_AMBITO,
+    totalLote: lote.count || (lote.agents && lote.agents.length) || 0,
+    ...filtered
+  };
+}
 
 module.exports = {
   uiPort: process.env.PORT || 1880,
@@ -38,9 +69,14 @@ module.exports = {
     ZEUS_EDITOR_UI: process.env.ZEUS_EDITOR_UI || 'http://localhost:3012',
     ZEUS_FIREHOSE_BROWSER: process.env.ZEUS_FIREHOSE_BROWSER || 'http://localhost:3016',
     ZEUS_CACHE_BROWSER: process.env.ZEUS_CACHE_BROWSER || 'http://localhost:3015',
-    /** F4/F5 helpers (port operator-bridge + stubs intent ciudad). */
+    /** F6 constelación: ámbito de esta instancia + techo de lote. */
+    Z08_AMBITO,
+    POBLACION_MAX,
+    /** F4/F5/F6 helpers. */
     operatorBridge,
     ciudadIntentStubs,
+    poblacionCenso,
+    loadLoteAmbito,
     libRoot: path.join(__dirname, 'helpers')
   },
 
@@ -54,10 +90,10 @@ module.exports = {
 
   editorTheme: {
     page: {
-      title: 'Z08 · Visor ciudad (f1–f5)'
+      title: `Z08 · ${Z08_AMBITO} (f1–f6)`
     },
     header: {
-      title: 'Z08 · Constelación Node-RED (lote f1–f5 · Mano + Ciudadano)'
+      title: `Z08 · Constelación NR · ${Z08_AMBITO} · max=${POBLACION_MAX}`
     }
   },
 

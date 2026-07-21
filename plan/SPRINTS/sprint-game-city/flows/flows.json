@@ -1600,5 +1600,316 @@
     "wires": [
       []
     ]
+  },
+  {
+    "id": "z08-grp-poblacion",
+    "type": "ui-group",
+    "name": "F6 · Población / constelación",
+    "page": "z08-page-ops",
+    "width": 6,
+    "height": 1,
+    "order": 22,
+    "showTitle": true,
+    "className": "",
+    "visible": true,
+    "disabled": false,
+    "groupType": "default"
+  },
+  {
+    "id": "z08-f6-poblacion",
+    "type": "tab",
+    "label": "F6 Población",
+    "disabled": false,
+    "info": "WP-Z08 F6 — Población y constelación.\n\nLote ≤ POBLACION_MAX (default 24) desde fixtures/poblacion-lote-max24.json.\nÁmbito: env Z08_AMBITO (distritos|locales|plaza-ops).\n≥2 instancias: scripts/start-constelacion.sh (:1884 + :1885).\n169 plenos = Z05+f7. Wishlist: WISHLIST-f7.md."
+  },
+  {
+    "id": "f6-comment",
+    "type": "comment",
+    "z": "z08-f6-poblacion",
+    "name": "F6 · lote por ámbito · techo POBLACION_MAX · ≥2 NR",
+    "info": "loadLoteAmbito() en globalContext. Transparencia: authority solo ve clients/intents.",
+    "x": 280,
+    "y": 40,
+    "wires": []
+  },
+  {
+    "id": "f6-inject-lote",
+    "type": "inject",
+    "z": "z08-f6-poblacion",
+    "name": "Cargar lote ámbito",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.5,
+    "topic": "lote:load",
+    "payload": "",
+    "payloadType": "date",
+    "x": 180,
+    "y": 100,
+    "wires": [
+      [
+        "f6-load-lote"
+      ]
+    ]
+  },
+  {
+    "id": "f6-inject-announce-all",
+    "type": "inject",
+    "z": "z08-f6-poblacion",
+    "name": "Announce lote (fan-out)",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 1,
+    "topic": "lote:announce",
+    "payload": "",
+    "payloadType": "date",
+    "x": 200,
+    "y": 160,
+    "wires": [
+      [
+        "f6-load-lote"
+      ]
+    ]
+  },
+  {
+    "id": "f6-inject-walk-tick",
+    "type": "inject",
+    "z": "z08-f6-poblacion",
+    "name": "Walk tick lote (30s)",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "30",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 5,
+    "topic": "lote:walk",
+    "payload": "",
+    "payloadType": "date",
+    "x": 190,
+    "y": 220,
+    "wires": [
+      [
+        "f6-load-lote"
+      ]
+    ]
+  },
+  {
+    "id": "f6-load-lote",
+    "type": "function",
+    "z": "z08-f6-poblacion",
+    "name": "Load lote + fan-out intents",
+    "func": "const load = global.get('loadLoteAmbito');\nconst stubs = global.get('ciudadIntentStubs');\nconst ambito = global.get('Z08_AMBITO') || 'plaza-ops';\nconst max = global.get('POBLACION_MAX') || 24;\nif (!load || !stubs) {\n  node.error('loadLoteAmbito / ciudadIntentStubs missing');\n  return null;\n}\nconst lote = load();\nconst topic = String(msg.topic || 'lote:load');\nconst room = global.get('ZEUS_GAME_ROOM') || 'POZO_DEMO';\nconst summary = {\n  ambito: lote.ambito || ambito,\n  poblacionMax: lote.poblacionMax || max,\n  count: lote.count,\n  agents: (lote.agents || []).map((a) => ({\n    censusId: a.censusId,\n    homeZone: a.homeZone,\n    section: a.section\n  })),\n  at: new Date().toISOString(),\n  topic\n};\nnode.status({\n  fill: 'green',\n  shape: 'dot',\n  text: (lote.ambito || ambito) + ' · ' + lote.count + '/' + max\n});\ncontext.set('lote', lote);\n\nconst summaryMsg = { payload: summary, topic: 'poblacion:summary' };\nif (topic === 'lote:load') {\n  return [summaryMsg, null];\n}\n\nconst fanouts = [];\nfor (const a of lote.agents || []) {\n  let intent;\n  if (topic === 'lote:walk') {\n    const zone = context.get('zone:' + a.censusId) || a.homeZone || 'plaza';\n    const hop = stubs.nextRandomWalk(zone);\n    context.set('zone:' + a.censusId, hop.nextZone);\n    intent = stubs.makeWalkIntent(a.censusId, hop);\n  } else {\n    intent = stubs.makeAnnounceIntent(a.censusId, {\n      zone: a.homeZone || 'plaza',\n      text: (a.displayName || a.censusId) + ' · ' + (lote.ambito || ambito)\n    });\n  }\n  fanouts.push({\n    topic: 'intent',\n    payload: stubs.toRoomIntentCommand(intent, room),\n    ciudadano: a\n  });\n}\nsummaryMsg.payload = Object.assign({}, summary, { emitted: fanouts.length });\nsummaryMsg.topic = 'poblacion:fanout';\nnode.send([summaryMsg, null]);\nfor (const m of fanouts) node.send([null, m]);\nreturn null;\n",
+    "outputs": 2,
+    "timeout": "",
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 450,
+    "y": 160,
+    "wires": [
+      [
+        "f6-debug-summary",
+        "f6-ui"
+      ],
+      [
+        "f6-poblacion-client"
+      ]
+    ]
+  },
+  {
+    "id": "f6-poblacion-client",
+    "type": "alephscript-core-client",
+    "z": "z08-f6-poblacion",
+    "name": "Población → /runtime",
+    "config": "z08-zeus-core-config",
+    "clientName": "",
+    "session": "",
+    "clientType": "NodeRedPoblacion",
+    "defaultRoom": "POZO_DEMO",
+    "autoRegister": true,
+    "autoSubscribe": true,
+    "features": "node-red,poblacion,constelacion",
+    "x": 720,
+    "y": 220,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "f6-debug-summary",
+    "type": "debug",
+    "z": "z08-f6-poblacion",
+    "name": "Población summary",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "x": 720,
+    "y": 100,
+    "wires": []
+  },
+  {
+    "id": "f6-ui",
+    "type": "ui-template",
+    "z": "z08-f6-poblacion",
+    "group": "z08-grp-poblacion",
+    "name": "Lote ámbito",
+    "order": 1,
+    "width": 6,
+    "height": 6,
+    "head": "",
+    "format": "<template>\n  <div style=\"font:13px/1.4 system-ui,sans-serif\">\n    <div><b>F6 población</b> · techo <code>POBLACION_MAX</code></div>\n    <pre style=\"font:11px/1.3 ui-monospace,monospace;white-space:pre-wrap;max-height:280px;overflow:auto\">{{ JSON.stringify(msg?.payload, null, 2) }}</pre>\n  </div>\n</template>",
+    "storeOutMessages": true,
+    "fwdInMessages": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 700,
+    "y": 140,
+    "wires": []
+  },
+  {
+    "id": "f6-ciudadano-archivero",
+    "type": "subflow:sf-ciudadano",
+    "z": "z08-f6-poblacion",
+    "name": "Ciudadano · archivero (distritos)",
+    "env": [
+      {
+        "name": "CENSUS_ID",
+        "value": "archivero",
+        "type": "str"
+      },
+      {
+        "name": "HOME_ZONE",
+        "value": "lore-voz",
+        "type": "str"
+      },
+      {
+        "name": "GAME_ROOM",
+        "value": "POZO_DEMO",
+        "type": "str"
+      },
+      {
+        "name": "WALK_EVERY_S",
+        "value": "18",
+        "type": "num"
+      }
+    ],
+    "x": 250,
+    "y": 320,
+    "wires": [
+      [
+        "f6-debug-ciudadanos"
+      ]
+    ]
+  },
+  {
+    "id": "f6-ciudadano-wire",
+    "type": "subflow:sf-ciudadano",
+    "z": "z08-f6-poblacion",
+    "name": "Ciudadano · wire-editor (locales)",
+    "env": [
+      {
+        "name": "CENSUS_ID",
+        "value": "wire-editor",
+        "type": "str"
+      },
+      {
+        "name": "HOME_ZONE",
+        "value": "plaza",
+        "type": "str"
+      },
+      {
+        "name": "GAME_ROOM",
+        "value": "POZO_DEMO",
+        "type": "str"
+      },
+      {
+        "name": "WALK_EVERY_S",
+        "value": "18",
+        "type": "num"
+      }
+    ],
+    "x": 250,
+    "y": 380,
+    "wires": [
+      [
+        "f6-debug-ciudadanos"
+      ]
+    ]
+  },
+  {
+    "id": "f6-inject-demo-duo",
+    "type": "inject",
+    "z": "z08-f6-poblacion",
+    "name": "Announce demo duo",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.5,
+    "topic": "announce",
+    "payload": "",
+    "payloadType": "date",
+    "x": 180,
+    "y": 280,
+    "wires": [
+      [
+        "f6-ciudadano-archivero",
+        "f6-ciudadano-wire"
+      ]
+    ]
+  },
+  {
+    "id": "f6-debug-ciudadanos",
+    "type": "debug",
+    "z": "z08-f6-poblacion",
+    "name": "Demo ciudadanos F6",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "x": 520,
+    "y": 350,
+    "wires": []
   }
 ]

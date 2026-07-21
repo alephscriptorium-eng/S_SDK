@@ -1,0 +1,209 @@
+{
+  "schema": "z08-poblacion-lote/v1",
+  "generatedFor": "WP-Z08-f6",
+  "poblacionMax": 24,
+  "count": 24,
+  "totalCensoDeclared": 169,
+  "totalCensoParsed": 169,
+  "note": "169 plenos = meta Z05+f7, no CA de f6. Subir lotes solo mientras snapshot/latencia aguanten.",
+  "byAmbito": {
+    "distritos": 13,
+    "locales": 6,
+    "plaza-ops": 5
+  },
+  "agents": [
+    {
+      "censusId": "aleph",
+      "agentPath": ".github_V1/agents/aleph.agent.md",
+      "displayName": "aleph",
+      "section": ".github_V1",
+      "ambito": "plaza-ops",
+      "homeZone": "plaza"
+    },
+    {
+      "censusId": "archivero",
+      "agentPath": "DocumentMachineSDK/.github/agents/archivero.agent.md",
+      "displayName": "archivero",
+      "section": "DocumentMachineSDK",
+      "ambito": "distritos",
+      "homeZone": "lore-voz"
+    },
+    {
+      "censusId": "aceleracionista",
+      "agentPath": "onfalo-asesor-sdk/PLUGIN_SCRIPTORIUM/LABORATORIO/PROYECTO_FUNDACION/FUNDACION/.claude/agents/aceleracionista.agent.md",
+      "displayName": "aceleracionista",
+      "section": "onfalo-asesor-sdk",
+      "ambito": "distritos",
+      "homeZone": "lore-voz"
+    },
+    {
+      "censusId": "backend-agent",
+      "agentPath": "VsCodeExtension/src/theatrical/agents/backend-agent.agent.md",
+      "displayName": "backend-agent",
+      "section": "VsCodeExtension",
+      "ambito": "distritos",
+      "homeZone": "zigurat"
+    },
+    {
+      "censusId": "Plan",
+      "agentPath": "CopilotEngine/assets/agents/Plan.agent.md",
+      "displayName": "Plan",
+      "section": "CopilotEngine",
+      "ambito": "distritos",
+      "homeZone": "runtime-mcp"
+    },
+    {
+      "censusId": "backend-agent",
+      "agentPath": "MCPGallery/.github/agents/backend-agent.agent.md",
+      "displayName": "backend-agent",
+      "section": "MCPGallery",
+      "ambito": "distritos",
+      "homeZone": "runtime-mcp"
+    },
+    {
+      "censusId": "bot-biblioteca",
+      "agentPath": "AgentLoreSDK/.github/agents/bot-biblioteca.agent.md",
+      "displayName": "bot-biblioteca",
+      "section": "AgentLoreSDK",
+      "ambito": "distritos",
+      "homeZone": "lore-voz"
+    },
+    {
+      "censusId": "albacea",
+      "agentPath": "VectorMachineSDK/apps/notebook-app-sample/.github/agents/albacea.agent.md",
+      "displayName": "albacea",
+      "section": "VectorMachineSDK",
+      "ambito": "distritos",
+      "homeZone": "lore-voz"
+    },
+    {
+      "censusId": "albacea",
+      "agentPath": "NovelistEditor/.github/agents/albacea.agent.md",
+      "displayName": "albacea",
+      "section": "NovelistEditor",
+      "ambito": "distritos",
+      "homeZone": "runtime-mcp"
+    },
+    {
+      "censusId": "agente-interactivo-mcp",
+      "agentPath": "VibeCodingSuite/DEPRECATED/.github/chatmodes/agente-interactivo-mcp.chatmode.md",
+      "displayName": "agente-interactivo-mcp",
+      "section": "VibeCodingSuite",
+      "ambito": "distritos",
+      "homeZone": "infra-ui"
+    },
+    {
+      "censusId": "lucas",
+      "agentPath": "ARCHIVO/DISCO/TALLER/ELENCO/lucas/lucas.agent.md",
+      "displayName": "lucas",
+      "section": "ARCHIVO/DISCO",
+      "ambito": "locales",
+      "homeZone": "plaza"
+    },
+    {
+      "censusId": "lucas",
+      "agentPath": "ARCHIVO/PLUGINS/AGENT_CREATOR/agents/created/lucas.agent.md",
+      "displayName": "lucas",
+      "section": "ARCHIVO/PLUGINS",
+      "ambito": "locales",
+      "homeZone": "plaza"
+    },
+    {
+      "censusId": "bartleby",
+      "agentPath": "DocumentMachineSDK/.github/agents/bartleby.agent.md",
+      "displayName": "bartleby",
+      "section": "DocumentMachineSDK",
+      "ambito": "distritos",
+      "homeZone": "lore-voz"
+    },
+    {
+      "censusId": "aaia-editor",
+      "agentPath": ".github_V1/plugins/aaia-editor/agents/aaia-editor.agent.md",
+      "displayName": "aaia-editor",
+      "section": ".github_V1",
+      "ambito": "locales",
+      "homeZone": "plaza"
+    },
+    {
+      "censusId": "blackflag",
+      "agentPath": ".github_V1/agents/blackflag.agent.md",
+      "displayName": "blackflag",
+      "section": ".github_V1",
+      "ambito": "plaza-ops",
+      "homeZone": "plaza"
+    },
+    {
+      "censusId": "cristalizador",
+      "agentPath": "DocumentMachineSDK/.github/agents/cristalizador.agent.md",
+      "displayName": "cristalizador",
+      "section": "DocumentMachineSDK",
+      "ambito": "distritos",
+      "homeZone": "lore-voz"
+    },
+    {
+      "censusId": "agent-creator",
+      "agentPath": ".github_V1/plugins/agent-creator/agents/agent-creator.agent.md",
+      "displayName": "agent-creator",
+      "section": ".github_V1",
+      "ambito": "locales",
+      "homeZone": "plaza"
+    },
+    {
+      "censusId": "blueflag",
+      "agentPath": ".github_V1/agents/blueflag.agent.md",
+      "displayName": "blueflag",
+      "section": ".github_V1",
+      "ambito": "plaza-ops",
+      "homeZone": "plaza"
+    },
+    {
+      "censusId": "dramaturgo",
+      "agentPath": "DocumentMachineSDK/.github/agents/dramaturgo.agent.md",
+      "displayName": "dramaturgo",
+      "section": "DocumentMachineSDK",
+      "ambito": "distritos",
+      "homeZone": "lore-voz"
+    },
+    {
+      "censusId": "arg-board-app",
+      "agentPath": ".github_V1/plugins/arg-board-app/agents/arg-board-app.agent.md",
+      "displayName": "arg-board-app",
+      "section": ".github_V1",
+      "ambito": "locales",
+      "homeZone": "plaza"
+    },
+    {
+      "censusId": "cartas-puerta",
+      "agentPath": ".github_V1/agents/cartas-puerta.agent.md",
+      "displayName": "cartas-puerta",
+      "section": ".github_V1",
+      "ambito": "plaza-ops",
+      "homeZone": "plaza"
+    },
+    {
+      "censusId": "portal",
+      "agentPath": "DocumentMachineSDK/.github/agents/portal.agent.md",
+      "displayName": "portal",
+      "section": "DocumentMachineSDK",
+      "ambito": "distritos",
+      "homeZone": "lore-voz"
+    },
+    {
+      "censusId": "arrakis",
+      "agentPath": ".github_V1/plugins/arg-board/agents/arrakis.agent.md",
+      "displayName": "arrakis",
+      "section": ".github_V1",
+      "ambito": "locales",
+      "homeZone": "plaza"
+    },
+    {
+      "censusId": "indice",
+      "agentPath": ".github_V1/agents/indice.agent.md",
+      "displayName": "indice",
+      "section": ".github_V1",
+      "ambito": "plaza-ops",
+      "homeZone": "plaza"
+    }
+  ],
+  "source": "plan/SPRINTS/sprint-game-city/cantera/CIUDAD/GRAFO/print-agentes.txt"
+}
