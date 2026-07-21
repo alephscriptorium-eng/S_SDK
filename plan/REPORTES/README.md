@@ -21,3 +21,11 @@ no en `plan/briefs/` — un solo directorio de entrega del ciclo.
 
 Evidencia literal siempre; `⏳ sin verificar` existe; inventar observaciones,
 no.
+
+## Gates (checklist obligatorio — HOTFIX-GATES-2)
+
+Si el WP toca el submódulo **zeus-sdk** (`packages/` / `scripts/`):
+
+- [ ] `npm run gates` en zeus-sdk → `gates: OK` (salida literal en el reporte)
+- [ ] No desactivar reglas del gate; excepciones solo en `scripts/gates/exceptions.mjs` con razón (D-8 / PRACTICAS §5)
+- [ ] Tras push: CI/Release Actions verde (anotar `run_id` + SHA)

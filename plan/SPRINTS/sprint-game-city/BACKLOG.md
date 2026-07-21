@@ -62,6 +62,11 @@ aceptable-con-notas · Z08-f4..5 aceptable (re-smoke renegociada con intento).
   [WP-Z15](../../REPORTES/WP-Z15-intentional-stops-read.md).
 - **HOTFIX-GATES:** ✅ zeus `af0bad9` — 17 offenders mcp-launcher cleared;
   `npm run gates` OK. Scrub WP-Z* en launcher + ciudad-lifecycle.
+- **HOTFIX-GATES-2:** ✅ remedio local `0b566e6` — 48 offenders
+  `two-games`/`\bdelta\b` (colisión léxica `GAME_STATE_DELTA`, no juego).
+  Excepciones D-8 en `exceptions.mjs` (6 paths). `npm run gates` OK local.
+  **Z05-f1 sigue ✅** (no se reabre). Push/Actions ⏳ auth write (ver acta).
+  Acta: [ACTA-HOTFIX-GATES-2-2026-07-21](../../REPORTES/ACTA-HOTFIX-GATES-2-2026-07-21.md).
 
 ## Replan post-vigía GC-1.5 (2026-07-21)
 
