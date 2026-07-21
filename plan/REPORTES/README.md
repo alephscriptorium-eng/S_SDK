@@ -22,7 +22,7 @@ no en `plan/briefs/` — un solo directorio de entrega del ciclo.
 Evidencia literal siempre; `⏳ sin verificar` existe; inventar observaciones,
 no.
 
-## Gates (checklist obligatorio — HOTFIX-GATES-2)
+## Gates (checklist obligatorio — HOTFIX-GATES-3)
 
 Si el WP toca el submódulo **zeus-sdk** (`packages/` / `scripts/`):
 

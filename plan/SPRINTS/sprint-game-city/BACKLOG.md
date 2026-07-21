@@ -81,6 +81,13 @@ aceptable-con-notas · Z08-f4..5 aceptable (re-smoke renegociada con intento).
   Actions CI run **29839611853** success (job lint+gates verde). Release no corrió.
   **Z05-f1 sigue ✗** (no se reabre).
   Acta: [ACTA-HOTFIX-GATES-2-2026-07-21](../../REPORTES/ACTA-HOTFIX-GATES-2-2026-07-21.md).
+- **HOTFIX-GATES-3:** ✅ CA1 cerrado — zeus `48e2062` (= `origin/main`).
+  Remedio: 1 offender `[ports]` en
+  `packages/mesh/operator-ui/fixtures/ciudad-vista-smoke.mjs` (`:3017` hardcode).
+  URL vía `resolveRoomClientConfig` / presets-sdk env (gate no desactivado).
+  CI **29857964265** success · Release **29857967650** success (primer Release
+  verde post-touch `packages/**` de Z17). **Z17 sigue ✅ — no se reabre.**
+  Acta: [ACTA-HOTFIX-GATES-3-2026-07-21](../../REPORTES/ACTA-HOTFIX-GATES-3-2026-07-21.md).
 
 ## Replan post-vigía GC-1.5 (2026-07-21)
 
