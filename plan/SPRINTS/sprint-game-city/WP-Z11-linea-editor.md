@@ -2,9 +2,9 @@
 
 | dato | valor |
 |---|---|
-| estado | ⬜ (asentado 2026-07-20, oferta ronda 2 aceptada; estado canónico en BACKLOG) |
-| track / prio | ENGINE (mesh server) / 3 · **ola GC-3** |
-| depende de | Z06 (launcher lo levanta y cataloga) · Z04 (rabbit = cliente e2e) · Z03 (room donde ofertar) · hermano de Z10 (comparte `linea-kit`; Z10 asienta modelo de camino y salda `linea:*` antes o en paralelo acotado) |
+| estado | 🔶 brief GC-4 (deps Z06·Z04·Z03 ✅) |
+| track / prio | ENGINE (mesh server) / 3 · **ola GC-4** |
+| depende de | Z06 ✅ (launcher) · Z04 ✅ (rabbit = cliente e2e) · Z03 ✅ (room) · hermano de Z10 (comparte `linea-kit`; Z10 asienta modelo de camino y salda `linea:*`) |
 | referencia a portar | `NovelistEditor` (aleph, `aleph-mcp`): patrón de interfaz agéntica — CRUD por tools MCP + resources con `ResourceTemplate` y URIs propias + prompts con plantillas + "tool que persiste y delega export en script versionado". **Solo el concepto** (regla 2): es boceto experimental, árbol plano sin noción de línea, transmedia sin código, dep `file:` tgz de `mcp-core-sdk` (lista negra aleph) |
 | base zeus | `@zeus/linea-kit` `/tools` (`crearLinea`, `segmentar`, `conectarSatelite`, `crearCotas`, `segmentarForce`) + `/loader` `/validate` · `createStandardMcpServer` (presets-sdk) · `approval-gate` (`mcpApprovalGateLine`/`resolveMcpApprovalToken`, patrón `cache_wikitext` de linea-system) · horse: `PresetHorseProxy` + `resolvePresetOffer`/`broadcastPresetOffer` (presets-sdk `src\horse\`) + `horse-client` (view-kit) · contrato `TransmediaEvent`/`transmedia.json` (zeus `plan\DATOS.md` §2) · `CURATION_STATUSES` |
 | deuda que toca | refs `linea:*` no montadas (`mountedLineaIds`) — precondición de integridad referencial; la salda Z10 (entregable 5), Z11 la consume |
