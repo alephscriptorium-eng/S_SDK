@@ -17,7 +17,7 @@
 | **H2.3** | arqueología `wp/u*` | **48** borradas · **2** conservadas (`u116` · `u132`) · Z tip `1086392` · GL tip claim `406000f` | [ARQUEOLOGIA-U](./ARQUEOLOGIA-U-SPRINTS-2026-07-22.md) · [FICHA](./FICHA-camino-U-sprints-2026-07-22.md) | **PASS** |
 | **H2.4** | notario Release-startpack | GL fix `6004450` · tag `startpack-ciudad-v0.1.0` · run **29873546001** success | [ACTA-H2.4](../../HOLONES/01-mythos/games-library/plan/REPORTES/ACTA-H2.4-fix-notario-release-2026-07-22.md) (en GL) | **PASS** |
 
-> **H3.3 proyección:** issue panorámica [#27](https://github.com/alephscriptorium-eng/S_SDK/issues/27) «El camino de los U-sprints» (48/2 · `u116`·`u132`) · sin sync-map.
+> **H3.3 proyección:** [a #27](https://github.com/alephscriptorium-eng/S_SDK/issues/27) · [b comentario Z#2](https://github.com/alephscriptorium-eng/Z_SDK/issues/2#issuecomment-5039852399) · [c GL#1](https://github.com/alephscriptorium-eng/Z_SDK-games-library/issues/1) · [ACTA-H3.3](./ACTA-H3.3-proyeccion-camino-U-2026-07-22.md).
 
 ### Tips en disco (spot-check orq. pre-R3)
 
