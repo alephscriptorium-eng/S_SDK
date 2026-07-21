@@ -102,4 +102,14 @@ Ninguno bloqueante. ¿El orquestador actualiza el puntero submodule zeus-sdk a `
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** — 2026-07-21 · orquestador (merge/gobierno).
+
+zeus-sdk main @ 8afc0a0 (FF + push origin/main) · SCRIPT_SDK submodule → 8afc0a0.
+Reporte tip 1e64819 / obra 886da9 (cherry-pick a main; cabecera del reporte cita obra 886da9).
+
+Cableado game:'ciudad' + proyección barrios/estados en operator-bridge/ui; bridge 11/11 · build:all · ciudad-vista-smoke 24 barrios; ceguera 0. **Z17 ✅** · ola **GC-5 cerrada** (Z16 ✅ · Z17 ✅ = SEMILLA §1+§5).
+
+### Verificado (brazo merge/gobierno)
+- Rama zeus-sdk wp/gc-z17-operator-ui-ciudad @ 8afc0a0 · FF → main · push tip autorizado (lephscriptorium-eng)
+- Rama reporte S_SDK wp/gc-z17-operator-ui-ciudad @ 1e64819 · cherry-pick → main · bump submodule zeus-sdk
+- Sin force-push; sin tocar Z05-f1 / SEMILLA §2–§4/§6 / sync-map
