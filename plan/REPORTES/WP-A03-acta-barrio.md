@@ -126,4 +126,15 @@ $ git log -p 2b14d36..HEAD -- packages/ciudad
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** — 2026-07-21 · orquestador (merge/gobierno).
+
+zeus-sdk `main` @ `a6381a5` (FF + push `origin/main`) · games-library `main` @ `3288510` (FF + push `origin/main`) · SCRIPT_SDK submodules → ambos tips.
+Reporte tip `2e917c2` (obra reporte en rama `wp/gc-a03-acta-barrio`).
+
+ActaDeBarrio v1 + `@zeus/acta-kit` (emitir/validar/publicar ledger/adoptar) + wake `roto` + reparar vía viaje juguete Z10; tests acta-kit 7/7 · viaje 6/6 · ciudad 30/30; ceguera 0. **WP-A03 ✅** · slice ARG-1 masticado cerrado (A01·A02·A03 ✅) · §A4–§A6 parked sin GO.
+
+### Verificado (brazo merge/gobierno)
+- Rama zeus `wp/gc-a03-acta-barrio` @ `a6381a5` · FF → `main` · push tip autorizado (`alephscriptorium-eng`)
+- Rama GL `wp/gc-a03-acta-barrio` @ `3288510` · FF → `main` · push tip autorizado
+- Rama reporte S_SDK `wp/gc-a03-acta-barrio` @ `2e917c2` · FF → `main` · bump submodules zeus+GL
+- Sin force-push; sin §A4–§A6 · sin embajador · sin reopen A01/A02/Z10 · V2 atómico
