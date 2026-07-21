@@ -442,7 +442,8 @@ Z09/Z10; DC-GC-ceguera-marca).
 
 > GO custodio DC-15 · 2026-07-21 (+ addenda race I75): encolar + proyectar
 > OPEN. **No abrir** epic ni CAMPANAS. I75 ✅ / #21 CLOSED · página viva;
-> Z_SDK #4/#5/#6 = overlap pack (citar, no cerrar). Altas S_SDK **#22–#25**.
+> **E03 ✅** (C02 · #24 CLOSED). Z_SDK #4/#5/#6 = overlap pack (citar, no
+> cerrar). Altas S_SDK **#22–#25**.
 
 - ⬜ **WP-E01 · Epic embajador (paraguas)** — **parked** sin GO · no abrir ·
   sin brief. Fases = items del paraguas (patrón Z05): (1) kit · (2) peercard ·
@@ -452,11 +453,12 @@ Z09/Z10; DC-GC-ceguera-marca).
 - ⬜ **WP-E02 · Privacidad de federación** — **parked** · `ssbId` en handshake
   + firma de tarjeta viajera. Overlap pack: Z_SDK #4 (no cerrar). No abre E01.
   Ficha: [WP-E02](WP-E02-privacidad-federacion.md). Issue: S_SDK #23.
-- ⬜ **WP-E03 · Página pública «tubería protegida» (paraguas)** — **parked** ·
-  tracking residual (proyección seguridad). Obra = **WP-I75 ✅** (S_SDK #21
-  CLOSED · tip `f0e5cc7` ·
-  https://s-sdk.escrivivir.co/guide/tuberia-protegida) — related; E03 no
-  duplica. Ficha: [WP-E03](WP-E03-tuberia-protegida.md). Issue: S_SDK #24.
+- ✅ **WP-E03 · Página pública «tubería protegida» (paraguas)** —
+  **aceptado ✅** 2026-07-21 (gobierno V2 / C02): S_SDK #24 **CLOSED** ·
+  página viva https://s-sdk.escrivivir.co/guide/tuberia-protegida · merge
+  tip `e28439d` / obra `adfb70c` · related **WP-I75 ✅** (#21 CLOSED ·
+  `f0e5cc7`). Ficha: [WP-E03](WP-E03-tuberia-protegida.md). Reporte:
+  [WP-E03](../../REPORTES/WP-E03-tuberia-protegida.md).
 
 ## Candidatas post-ARG-1 (parked — sin 🔶)
 

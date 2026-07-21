@@ -5,6 +5,7 @@
 | estado | ✅ **aceptado** — C02 · S_SDK #24 CLOSED · página viva + enlaces #22/#23/#25 |
 | track / prio | WEB / — |
 | related cerrado | **WP-I75 ✅** · S_SDK #21 **CLOSED** · tip `f0e5cc7` |
+| merge / obra | tip merge `e28439d` · obra `adfb70c` |
 | página viva | https://s-sdk.escrivivir.co/guide/tuberia-protegida |
 
 ## Objetivo
