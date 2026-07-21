@@ -120,7 +120,26 @@ Obra games-library `006aef1` (FF `main` sobre padre `5b5bf4e` + push `origin/mai
 
 | id | ítem | nota |
 | -- | ---- | ---- |
-| D1 | Regenerar fixture/story-board desde ledger peer r/s/h | al cerrar Z04 ✅ (gap CA e2e) |
+| D1 | Regenerar fixture/story-board desde ledger peer r/s/h | ✅ cerrado 2026-07-21 — ver addenda D1 abajo |
 | D2 | Tipología maquinaria/operador/rabbit en mapeo | contrato Z13 (TRAMA-AGUA §5.2); fuera de alcance Z07 |
+
+---
+
+## Addenda D1 — regeneración post-Z04 ✅
+
+| dato | valor |
+| ---- | ----- |
+| agente | worker micro D1 Z07 |
+| fecha | 2026-07-21 |
+| rama GL | `wp/gc-z07-regen-post-z04` (FF → `main`) |
+| tip GL | `d9a3af98f064f4bc78acaf302a399c4c840a91aa` |
+| base GL | `b020a81` (Z04 ✅ en main) |
+
+**Qué:** `federation-smoke.mjs` OK + `CIUDAD_LEDGER_OUT` →
+`ledger/fixture-z04-federation.json` (peer `ext-rabbit`, `horseMode: horse`).
+Proyección regenerada; gap `pendiente Z04 e2e` cerrado (`projection.gap: null`).
+Acto wake = `act-3` desde Z04 (no stub Z03). `validate-story-board` ✅.
+
+**CA e2e barrio despertó:** ✅ (ledger peer r/s/h post-Z04).
 
 Hallazgos (ORIGIN.md sanitizado a ruta relativa) no bloquean. Push GL tip afirmado en este merge.
