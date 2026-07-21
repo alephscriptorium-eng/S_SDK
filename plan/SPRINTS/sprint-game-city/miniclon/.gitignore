@@ -7,3 +7,5 @@ secrets/rooms-secrets.json
 *.log
 **/dist/
 **/resources/
+
+**/tsconfig.tsbuildinfo

@@ -9,6 +9,8 @@ services:
     build:
       context: .
       dockerfile: nodered/Dockerfile
+      args:
+        NODERED_BASE_IMAGE: ${NODERED_BASE_IMAGE:-nodered/node-red:5.0.1}
     image: miniclon-rooms-nodered:local
     ports:
       - "1880:1880"

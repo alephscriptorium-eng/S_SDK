@@ -14,7 +14,7 @@ Tras A1 el orquestador puede mover este árbol a `zeus-sdk/delta/` si conviene.
 | Settings Node-RED | `nodered/settings.js` | editor `/red`, Dashboard 2 `/dashboard` |
 | Manifiesto contribs | `nodered/node-red-contribs.json` | registry 0.3.x + dashboard host |
 | Paquetes 0.3.0 (staging) | `packages/*` | bump a `@alephscript/mcp-core-sdk@^1.5.0` |
-| Compose/Dockerfile | `docker-compose.yml`, `nodered/Dockerfile` | **deferred** (recursos custodio) |
+| Compose/Dockerfile | `docker-compose.yml`, `nodered/Dockerfile` | base pin `nodered/node-red:5.0.1` (VPS) |
 
 Procedencia de flows/settings/scripts: copias de
 `ScriptoriumVps/PATTERN-DOCKER/nodered/` y `ScriptoriumVps/node-red-projects/`
@@ -28,15 +28,13 @@ Objetivo CA: `node-red-contrib-alephscript-core@0.3.0` y
 `@alephscript/mcp-core-sdk@^1.5.0`, instalables desde
 `https://npm.scriptorium.escrivivir.co`.
 
-Estado al corte del WP:
+Estado (GO-4 · 2026-07-21):
 
 - Staging local: versiones **0.3.0** + dep **^1.5.0** en `packages/*/package.json`.
-- Registry (lectura): aún **0.2.0** / `^1.4.0` — publish 0.3.x
-  **`<pendiente>`** en máquina local sin credenciales interactivas.
-- Auth de escritura: **DE-I12** — secrets GitHub `NPM_USERNAME` /
-  `NPM_PASSWORD` ya cableados en zeus-sdk y SCRIPT_SDK. **No** `_authToken`.
-  Auth local en esta estación: `<pendiente>` (no bloquea diseño; CI/ops usa
-  secrets).
+- Registry: **0.3.0** publicado (D2 PASS) — dep `@alephscript/mcp-core-sdk@^1.5.0`.
+- Auth de escritura: **DE-I12** — `NPM_USERNAME` / `NPM_PASSWORD` (o
+  `VERDACCIO_ADMIN_*` del VPS secrets file). **No** `_authToken`.
+- Base image: **`nodered/node-red:5.0.1`** (versión exacta del VPS al corte).
 
 ```bash
 # Instalar como consumidor (cuando 0.3.x esté en Verdaccio):
@@ -73,14 +71,16 @@ en el JSON.
 brazo local del switch es clon `:3010` ↔ VPS wss; zeus queda documentado
 como bonus post-A1.
 
-## Docker — deferred (recursos)
+## Docker
 
-`docker compose up` / rebuild de imagen con contribs horneados queda
-**`<pendiente> / deferred`** por decisión del orquestador (recursos del
-custodio), **no** por fallo de diseño. Los ficheros `docker-compose.yml` y
-`nodered/Dockerfile` quedan como plantilla lista para retomar.
+Base image pin: **`nodered/node-red:5.0.1`** (`NODE_RED_VERSION=v5.0.1` en
+la imagen `latest` del VPS al corte GO-4). Override:
+`NODERED_BASE_IMAGE` en `.env`.
 
-Cuando se reactive Docker:
+Smoke `/dashboard/rooms` (D1): requiere daemon Docker vivo. Si
+`com.docker.service` está Stopped → FAIL/defer (ver acta GO-4).
+
+Cuando el daemon esté up:
 
 1. `cp secrets/rooms-secrets.json.example secrets/rooms-secrets.json` y
    rellenar `ROOMS_LAB`.

@@ -9,6 +9,7 @@
   "notes": [
     "Clon Z09: instala nodos 0.3.x desde Verdaccio (npm.scriptorium.escrivivir.co), no desde WiringEditor montado.",
     "Dep SDK esperada en 0.3.x: @alephscript/mcp-core-sdk@^1.5.0.",
-    "Hasta que 0.3.x esté publicado, usar scripts/build-and-pack.mjs + npm install ./artifacts/*.tgz como fallback local."
+    "Base image Node-RED del VPS (pin): nodered/node-red:5.0.1 (NODE_RED_VERSION=v5.0.1).",
+    "0.3.0 publicado en Verdaccio (GO-4 D2 · 2026-07-21)."
   ]
 }
