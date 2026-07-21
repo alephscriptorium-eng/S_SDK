@@ -5,7 +5,7 @@
 | agente | worker gc-z07 (swarm fresco) |
 | fecha | 2026-07-21 |
 | rama | `wp/gc-z07-dramaturgo-ciudad` (games-library) · reporte en SCRIPT_SDK `wp/gc-z07-dramaturgo-ciudad` |
-| commits | games-library `006aef1354394c2e273af1b65b7b5e282fe90eb2` · SCRIPT_SDK tip `wp/gc-z07-dramaturgo-ciudad` |
+| commits | games-library `006aef1354394c2e273af1b65b7b5e282fe90eb2` · SCRIPT_SDK tip rama `wp/gc-z07-dramaturgo-ciudad` |
 | eje(s) CA | kit (instantiate + validate-story-board) · proyección ledger→actos |
 | estado propuesto | listo para revisión |
 
@@ -39,7 +39,7 @@ pasa (dialecto solve-inline). Sin gamemap en la instancia (capa lectura).
 > Env A1 (`git -C <path> rev-parse HEAD`):
 
 ```
-S_SDK   = tip `wp/gc-z07-dramaturgo-ciudad` (padre cd378493fb5cd9fca747a1f5d79186ff71ec4a08)
+S_SDK   = tip rama `wp/gc-z07-dramaturgo-ciudad` (padre cd378493fb5cd9fca747a1f5d79186ff71ec4a08)
 GL_WT   = 006aef1354394c2e273af1b65b7b5e282fe90eb2
 GL_MAIN = 5b5bf4e23e311f05d5e7e96320a74ac253b3faa7
 ZEUS    = fa73062124a10839c3f821d5e61c250ea14f734b
