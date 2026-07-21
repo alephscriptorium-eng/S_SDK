@@ -106,22 +106,29 @@ DE-I8 **aplazada** (no bloquea este slice). Brief:
 
 ---
 
-### DC-GC-cola-h22 · 2026-07-22 · **cerrada** (cola sin abrir)
+### DC-GC-cola-h22 · 2026-07-22 · **cerrada** (cola; enmienda GO-V1)
 
-**Tema:** asentar cola de GOs post-cierre (GO H2.2) sin abrir WPs.
+**Tema:** asentar cola de GOs post-cierre (GO H2.2) y ratificar orden v2
+(GO-V1) sin reabrir WPs de city.
 
 **Pregunta:** ¿qué parked pasan a cola ordenada y qué queda vetado?
 
-**Decisión:** cola visible en [BACKLOG §Cola de GOs](BACKLOG.md#cola-de-gos-post-cierre-h22--2026-07-22),
-orden 1→4: embajador #22/#23 → motor #5 → SEMILLA §2/§6 → trama-agua.
-**E_SDK/DE-I8 fuera de cola** (veto hasta GO). Cero ⬜→🔶 en este asiento.
-Espejo raíz: [DE-I19](../../DECISIONES.md).
+**Decisión (H2.2):** cola visible en [BACKLOG §Cola](BACKLOG.md#cola-de-gos-post-cierre-h22--enmienda-go-v1--2026-07-22)
+(solo puntero; city cerrado).
 
-**Consecuencia:** PO puede reordenar la tabla; orquestador no emite BRIEF ni
-marca 🔶 hasta GO de apertura de un ítem concreto.
+**Enmienda GO-V1 (orden v2):** VIDA-1 ∥ prep-entrada → EMBAJADOR-ENTRADA →
+CIUDAD-REAL (§2+ACL+§A4) → §6 meta-juego → trama-agua.
+**E_SDK/DE-I8 fuera de cola** · no reopen ✅ · claim→acta/SHA.
+Espejo raíz: [DE-I19](../../DECISIONES.md) v2.
+
+**Consecuencia:** obra de §3/§4 vive en
+[`../sprint-vida-1/`](../sprint-vida-1/); PREP embajador en
+[`../sprint-embajador-entrada/`](../sprint-embajador-entrada/). Este
+BACKLOG de city **no** recibe WPs nuevos ni 🔶 de obra.
 
 ## Abiertas (custodio)
 
 Ninguna decisión de calibración abierta tras DC-GC-siete-plantas /
-DC-GC-campanas-s03 (+ addenda re-scope) / DC-GC-cola-h22. Bloqueos
-operativos → BACKLOG. DE-I8 sigue **fuera de cola** (horizonte; veto H2.2).
+DC-GC-campanas-s03 (+ addenda re-scope) / DC-GC-cola-h22 (+ enmienda GO-V1).
+Bloqueos operativos → sprints hijos / BACKLOG city (histórico). DE-I8 sigue
+**fuera de cola** (horizonte; veto H2.2/GO-V1).

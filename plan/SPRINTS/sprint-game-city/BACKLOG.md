@@ -5,9 +5,12 @@
 > # ═══════════════════════════════════════════════════════════
 > Acta δ10: [ACTA-CIERRE-sprint-game-city-2026-07-21](../../REPORTES/ACTA-CIERRE-sprint-game-city-2026-07-21.md) ·
 > Reporte: [CIERRE-sprint-game-city-2026-07-21](../../REPORTES/CIERRE-sprint-game-city-2026-07-21.md).
-> **No abrir WPs nuevos en este sprint.** Cola de GOs post-cierre (H2.2 ·
-> encolada **sin** 🔶 — ver §Cola de GOs): embajador (#22+#23) → motor #5 →
-> SEMILLA §2/§6 → trama-agua. **E_SDK/DE-I8 fuera de cola** (veto hasta GO).
+> **No abrir WPs nuevos en este sprint.** City **cerrado** (C04). Cola de
+> GOs = **puntero** a DE-I19 v2 (GO-V1): **VIDA-1 ∥ prep-entrada →
+> EMBAJADOR-ENTRADA → CIUDAD-REAL (§2+ACL+§A4) → §6 meta-juego → trama-agua.**
+> Operación viva: [`../sprint-vida-1/`](../sprint-vida-1/) · PREP
+> [`../sprint-embajador-entrada/`](../sprint-embajador-entrada/).
+> **E_SDK/DE-I8 fuera de cola** · no reopen ✅ · claim→acta/SHA.
 
 > Solo el orquestador del sprint escribe aquí (regla de oro 2). Workers: un WP = un
 > chat = una rama `wp/gc-<id>-<slug>` (+ worktree si hay paralelo); reporte con la
@@ -506,25 +509,27 @@ Retroalimentación a aleph (evidencia, no WP nuevo):
   dep `file:` de lista negra). La decisión es del plan aleph (DAS-1); aquí solo
   queda la evidencia lista.
 
-## Cola de GOs post-cierre (H2.2 · 2026-07-22)
+## Cola de GOs post-cierre (H2.2 · enmienda GO-V1 · 2026-07-22)
 
-> **Encolada, no abierta.** Gobierno V2: asiento atómico sin ⬜→🔶.
-> Orden revisable por PO. Fuente de decisión: raíz
-> [DE-I19](../../DECISIONES.md) · sprint
+> **City cerrado — solo puntero.** No abrir WPs aquí. Orden canónico =
+> [DE-I19 v2](../../DECISIONES.md) · espejo
 > [DC-GC-cola-h22](DECISIONES.md#dc-gc-cola-h22--2026-07-22--cerrada-cola-sin-abrir).
-> Los bullets de federación / SEMILLA arriba siguen ⬜ parked; esta cola es
-> la vista operativa de «qué GO puede venir después».
+> Operación: [sprint-vida-1](../sprint-vida-1/) · PREP
+> [sprint-embajador-entrada](../sprint-embajador-entrada/).
+> Bullets SEMILLA/federación arriba siguen ⬜ parked **en este sprint**
+> (obra migra a sprints hijos; no reopen ✅).
 
 | # | Ítem | Refs | Estado cola |
 | - | ---- | ---- | ----------- |
-| 1 | embajador (paraguas E01·E02) | S_SDK **#22** · **#23** | ⬜ encolado — sin brief · sin 🔶 |
-| 2 | motor (Z05 items 3–6 / ACL) | Z_SDK **#5** | ⬜ encolado — sin brief · sin 🔶 |
-| 3 | SEMILLA §2 / §6 | [SEMILLA-GAMIFICACION](SEMILLA-GAMIFICACION.md) | ⬜ encolado — sin brief · sin 🔶 |
-| 4 | trama-agua | [TRAMA-AGUA](TRAMA-AGUA.md) | ⬜ encolado — sin brief · sin 🔶 |
+| 1 | **VIDA-1** ∥ prep-entrada | [sprint-vida-1](../sprint-vida-1/) · SEMILLA §3/§4 · PREP embajador | 🔶 M01/M02 (GO-V2) · PREP sin 🔶 |
+| 2 | **EMBAJADOR-ENTRADA** | E02 + E01 f1–2 + §A5 · [sprint-embajador-entrada](../sprint-embajador-entrada/) | ⬜ PREP BORRADOR — sin 🔶 |
+| 3 | **CIUDAD-REAL** (§2 + ACL + §A4) | SEMILLA §2 · Z_SDK #5 · SEMILLA-ARG §A4 | ⬜ encolado — sin brief · sin 🔶 |
+| 4 | SEMILLA §6 meta-juego | [SEMILLA-GAMIFICACION](SEMILLA-GAMIFICACION.md) §6 | ⬜ encolado — sin brief · sin 🔶 |
+| 5 | trama-agua | [TRAMA-AGUA](TRAMA-AGUA.md) | ⬜ encolado — sin brief · sin 🔶 |
 
 **Fuera de cola (veto explícito hasta GO custodio):** E_SDK / DE-I8 —
 horizonte de inflación `HOLONES/03-emmanuel/`; **no** encolar · **no** abrir ·
-**no** brief. (Antes figuraba mezclado en «parked sin GO»; H2.2 lo separa.)
+**no** brief. Invariantes: **no reopen ✅** · **claim→acta/SHA**.
 
 ## Reglas del sprint (además de las del skill)
 

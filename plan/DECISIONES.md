@@ -238,18 +238,34 @@ bloquea WP-D31 de aquel mundo, no bloquea este plan.)*
   refs locales estables del raíz (acta H2.1 CA5). Consecuencia: ops puede
   borrar `wp/*` merged; **jamás** `draft` sin GO explícito del custodio.
 
-- **DE-I19 · Cola de GOs post–sprint-game-city (encolada, no abierta)**
-  *(custodio · GO H2.2 · 2026-07-22 · gobierno V2).* Tras C04, los parked
-  pasan a **cola de GOs** visible en
-  [`plan/SPRINTS/sprint-game-city/BACKLOG.md`](SPRINTS/sprint-game-city/BACKLOG.md)
-  §«Cola de GOs post-cierre». Orden (revisable por PO; **cero** ⬜→🔶 en este
-  asiento):
+- **DE-I19 · Cola de GOs post–sprint-game-city (v2 · enmienda GO-V1)**
+  *(custodio · GO H2.2 · 2026-07-22 · enmienda GO-V1 · 2026-07-22 ·
+  gobierno V2).* Tras C04, los parked pasan a **cola de GOs**. Vista
+  histórica (H2.2) en
+  [`sprint-game-city/BACKLOG.md`](SPRINTS/sprint-game-city/BACKLOG.md)
+  §«Cola de GOs post-cierre» (city **cerrado** — solo puntero). Vista
+  operativa viva: [`sprint-vida-1/`](SPRINTS/sprint-vida-1/) +
+  [`sprint-embajador-entrada/`](SPRINTS/sprint-embajador-entrada/) (PREP).
 
-  1. embajador — S_SDK **#22** / **#23** (E01·E02)
-  2. motor — Z_SDK **#5** (Z05 items 3–6 / ACL)
-  3. SEMILLA **§2** / **§6**
-  4. trama-agua
+  **Orden v2 (GO-V1):**
 
-  **Veto:** **E_SDK / DE-I8 fuera de cola** hasta GO custodio propio (no
-  encolar; no abrir; no brief). Encolar ≠ abrir: siguen ⬜ parked hasta GO
-  que emita 🔶 + BRIEF.
+  1. **VIDA-1** ∥ **prep-entrada** — SEMILLA §3 misiones + §4 cronista
+     (sprint-vida-1; únicos 🔶 autorizados en GO-V2) en paralelo con
+     esqueleto PREP embajador (**sin** 🔶 hasta GO aparte)
+  2. **EMBAJADOR-ENTRADA** — corte E02 + E01 f1–2 + ARG §A5 (apertura =
+     GO propio cuando VIDA-1 marche)
+  3. **CIUDAD-REAL** — SEMILLA **§2** + ACL (Z05 items 3–6 / Z_SDK #5) +
+     SEMILLA-ARG **§A4**
+  4. SEMILLA **§6** meta-juego
+  5. trama-agua
+
+  **Mantener (invariantes):** veto **E_SDK / DE-I8** fuera de cola hasta
+  GO custodio propio · **no reopen ✅** · práctica **claim→acta/SHA**
+  (sin acta/SHA = no cerrado). Encolar ≠ abrir: parked siguen ⬜ hasta
+  GO que emita 🔶 + BRIEF (salvo M01/M02 autorizados en GO-V2).
+
+  **Horizonte (sin WP ni GO — carril declarado):**
+  **extensión-VSCode-zigurat** como interfaz mesh (wrapper zeus-sdk +
+  script-sdk). Base mock «lore-te-ipsum» conecta con
+  `startpack-ciudad-v0.1.0` ya liberado (H2.4). No encola WP; no emite
+  🔶; no reabre city.
