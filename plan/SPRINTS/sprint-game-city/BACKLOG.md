@@ -16,8 +16,8 @@
   matices en §Replan post-vigía. Z09 entra en lote inmediato.
 **Ola GC-1.5 (cerrada 2026-07-21):** Z14 · Z09 ✅ — paralelo; paths no se pisan.
   **Tick A1 cerrado** → Z10 brief → **Z10 ✅** (cierra lote post-A1 Z14+Z09+Z10).
-**Ola GC-2 (GO 2026-07-21, vigía §E):** Z03 ✅ · Z06 · Z08-f4..5 ✅ · Z12-f1 —
-  abrir en paralelo acotado; Z12-f1 soft-block hasta Z06 (ver §Replan GC-1.5).
+**Ola GC-2 (GO 2026-07-21, vigía §E):** Z03 ✅ · Z06 ✅ · Z08-f4..5 ✅ · Z12-f1 —
+  abrir en paralelo acotado; **Z06 ✅ — Z12-f1 despachable** (soft-block levantado).
 **Ola GC-3 (federación y población):** Z04 · Z07 · Z08-f6..7 · Z11 (tras Z04/Z06) ·
 Z12-f2 (cascada/zonas) · Z13 (tras Z12-f1 y Z03) · Z05 (por items, cuando duela)
 
@@ -91,8 +91,8 @@ Z09/Z10; DC-GC-ceguera-marca).
 
 ## WPs (estado canónico)
 
-> Lote GC-2 (GO 2026-07-21, §E REVISION-GC15): **Z03 ✅ · Z06 · Z08-f4..5 ✅ ·
-> Z12-f1 🔶** — briefs abajo. Z12-f1 soft-block hasta Z06 mergeado.
+> Lote GC-2 (GO 2026-07-21, §E REVISION-GC15): **Z03 ✅ · Z06 ✅ · Z08-f4..5 ✅ ·
+> Z12-f1 🔶** — briefs abajo. **Z06 ✅ — Z12-f1 despachable.**
 > Issues: S_SDK #3 #6 #8 #12 (sync-map). Lote post-A1 Z14·Z09·Z10 ✅ cerrado.
 
 - ✅ **WP-Z01 · Pack mockdatas ciudad → firehose/cache-browser** — track PACK ·
@@ -120,11 +120,14 @@ Z09/Z10; DC-GC-ceguera-marca).
   track ENGINE · prio 3 · disparo: Z08-f6 · eje IV por item; II si un item
   sustituye mecanismo vigente (destino canónico).
   Ficha: [WP-Z05](WP-Z05-engine-evoluciones.md).
-- 🔶 **WP-Z06 · `@zeus/mcp-launcher` — habilitador r/s/h + meta-ops** — track OPS ·
-  prio 2 · dep — · A1✅ · eje I (linea-system+satélite por tool call).
-  **Asignado 🔶 2026-07-21** · lote GC-2 · brief
-  `plan/REPORTES/BRIEF-WP-Z06-mcp-launcher.md` · rama
-  `wp/gc-z06-mcp-launcher` · issue S_SDK #6. Ficha: [WP-Z06](WP-Z06-mcp-launcher.md).
+- ✅ **WP-Z06 · `@zeus/mcp-launcher` — habilitador r/s/h + meta-ops** — track OPS ·
+  prio 2 · dep — · A1✅ · eje I ✅ (tool call tronco+satélite fixture). Pack
+  `@zeus/mcp-launcher` · zeus-sdk `03350a2` (+ puntero submodule). **Aceptado ✅**
+  2026-07-21 (orquestador): merge FF + push `origin/main`; frontera Z12 intacta;
+  live linea-espana skipped (volumen demo). **Z06 ✅ — Z12-f1 despachable.**
+  Brief: [BRIEF-WP-Z06](../../REPORTES/BRIEF-WP-Z06-mcp-launcher.md). Ficha:
+  [WP-Z06](WP-Z06-mcp-launcher.md). Reporte:
+  [WP-Z06](../../REPORTES/WP-Z06-mcp-launcher.md).
 - ⬜ **WP-Z07 · Instancia dramaturgo `ciudad` (capa lectura)** — track PACK ·
   prio 4 · dep Z03 (ledger) · CA propios del kit (validador story-board).
   Ficha: [WP-Z07](WP-Z07-dramaturgo-ciudad.md).
@@ -162,13 +165,12 @@ Z09/Z10; DC-GC-ceguera-marca).
   NovelistEditor). Precondición: glosario «viaje» (regla 5). Asentado de oferta
   ronda 2 (2026-07-20). Ficha: [WP-Z11](WP-Z11-linea-editor.md).
 - 🔶 **WP-Z12 · Encendido del árbol de vida (lifecycle XState, start/stop real)** —
-  track ENGINE+OPS · prio 2 · **f1 en GC-2** · dep Z06 (actuadores) + Z02 ✅ +
+  track ENGINE+OPS · prio 2 · **f1 en GC-2** · dep Z06 ✅ (actuadores) + Z02 ✅ +
   Z03 (round-trip `wake`) · ejes I/IV/III + ceguera. **Asignado 🔶 2026-07-21**
   · brief `plan/REPORTES/BRIEF-WP-Z12-f1-encendido-arbol-vida.md` · rama
-  `wp/gc-z12-f1-arbol-vida` · issue S_SDK #12. **Bloqueado soft hasta Z06
-  mergeado** (frontera actuador/comportamiento §E c); despacho worker tras
-  Z06 ✅ (Z03 en paralelo OK para contrato wake stub si hace falta). Fusión
-  r3 + r3-b. Ficha: [WP-Z12](WP-Z12-encendido-arbol-vida.md).
+  `wp/gc-z12-f1-arbol-vida` · issue S_SDK #12. Soft-block Z06 **levantado**:
+  **Z06 ✅ — Z12-f1 despachable** (frontera actuador/comportamiento §E c).
+  Fusión r3 + r3-b. Ficha: [WP-Z12](WP-Z12-encendido-arbol-vida.md).
 - ⬜ **WP-Z13 · Los tres jugadores: fusión en la trama del SDK** — track PACK
   (lore+flujos) · prio 3 · ola GC-3 · dep Z12-f1 (residentes = edificios en
   `running`) + Z03 + Z04; gancho Z07/Z11 · ejes IV (contrato de mapeo con 2
