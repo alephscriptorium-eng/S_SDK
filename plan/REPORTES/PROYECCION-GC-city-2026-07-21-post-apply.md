@@ -41,7 +41,7 @@ Bodies editados: **15/15 OK**, 0 fallos. Cerrados en apply: #3,#4,#6,#7,#11,#12,
 | issue WP-Z15 | https://github.com/alephscriptorium-eng/S_SDK/issues/15 (`number`=15 verificado) |
 | sync Z15→#15 | verdad remota: issue #15 existe; mapa `WP-Z15: 15` (sin diff post-script) |
 | panorámica Z_SDK #2 | https://github.com/alephscriptorium-eng/Z_SDK/issues/2 — body-file `BODY-Z_SDK-2-funcional.md` |
-| push gobierno | ver SHA tip tras `git push origin HEAD` (abajo / commit posterior) |
+| push gobierno | `62755e1..4cf7c69` (`origin/main` = `4cf7c6966e5d3368d14e980fdd680480afd32d6e`) |
 
 ## Invariantes (post-apply)
 
