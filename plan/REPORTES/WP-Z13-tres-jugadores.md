@@ -5,7 +5,7 @@
 | agente | worker gc-z13 (swarm fresco) |
 | fecha | 2026-07-21 |
 | rama | `wp/gc-z13-tres-jugadores` (games-library) · reporte S_SDK `wp/gc-z13-tres-jugadores` |
-| commits | games-library `2b8ed3176af1397aeaa3150d15db016d4a1dd008` |
+| commits | games-library `2b8ed3176af1397aeaa3150d15db016d4a1dd008` · **pushed** `origin/main` |
 | eje(s) CA | **IV** (≥2 tipos + tablero/cronista) · ceguera lore |
 | estado propuesto | listo para revisión |
 | issue | ⏳ sin verificar sync-map → `S_SDK#13` |
@@ -119,4 +119,11 @@ Ninguno bloqueante. Pedir push GL + bump submodule al orquestador cuando revise.
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** — 2026-07-21 · orquestador (merge/gobierno).
+
+games-library `main` @ `2b8ed31` (FF sobre `d9a3af9` · push `origin/main`) · submodule SCRIPT_SDK → `2b8ed31`. Tres jugadores (residente/visitante/corriente) + mapeo `features[]` + spawn/retiro en mismo tick wake/sleep; acto V ledger→story-board; eje IV tablero+cronista; ceguera lore OK. Vivos e2e / export Z11 = fuera (A1b · parked). **Z13 ✅**.
+
+### Verificado (brazo REVISIÓN + merge)
+- Rama `wp/gc-z13-tres-jugadores` tip `2b8ed31` · merge FF → `main`; push tip autorizado
+- Gates reportados: ciudad 14/14 · tablero CLI · validate-story-board; ceguera lore 0
+- Sin force-push; sin BACKLOG en diff GL
