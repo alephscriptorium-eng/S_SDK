@@ -6,7 +6,7 @@
 | fecha | 2026-07-21 |
 | rama | `wp/gc-z08-f6-f7-nodered` |
 | worktree | `.worktrees/wp-gc-z08-f6-f7-nodered` |
-| commits | _(rellenar tras commit)_ |
+| commits | `cfd7c57` (obra) · tip `cfd7c5756bdd7f5c0254939aa4bf93d618afdc01` |
 | eje(s) CA | IV (transparencia; ≥2 ámbitos NR; techo `POBLACION_MAX`) · f7 wishlist doc |
 | alcance lote | **solo f6(+f7 wishlist)** — f1–f5 ya ✅ |
 | estado propuesto | listo para revisión (vivos fabric ⏳: A1/re-smoke D1–D3 deferred con intento) |
