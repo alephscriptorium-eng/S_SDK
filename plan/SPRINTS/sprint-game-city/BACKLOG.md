@@ -32,11 +32,13 @@
   [BRIEF-Z17](../../REPORTES/BRIEF-WP-Z17-operator-ui-ciudad.md).
   Proyección issues = **LOCAL-ONLY** (sin apply).
 **Ola ARG-1 (abierta 2026-07-21 — GO custodio encolar A-16 / valor grande):**
-  lote inmediato ✅ **WP-A01** (§A1 parte-kit) · ✅ **WP-A02** (§A2 presencia).
-  **§A3 actas parked** («cuando A1 viva»). **§A4–§A6** sin masticar.
+  lote ✅ **WP-A01** (§A1 parte-kit) · ✅ **WP-A02** (§A2 presencia).
+  **§A3 🔶 WP-A03** (gate «cuando A1 viva» satisfecho — A01 ✅). **§A4–§A6**
+  sin masticar.
   Fuente: [SEMILLA-ARG](SEMILLA-ARG.md) (hermana de SEMILLA; no enmienda).
   Briefs: [BRIEF-A01](../../REPORTES/BRIEF-WP-A01-parte-kit.md) ·
-  [BRIEF-A02](../../REPORTES/BRIEF-WP-A02-presencia.md).
+  [BRIEF-A02](../../REPORTES/BRIEF-WP-A02-presencia.md) ·
+  [BRIEF-A03](../../REPORTES/BRIEF-WP-A03-acta-barrio.md).
   **Sigue parked sin GO:** SEMILLA §2–§4/§6 · Z05 items 3–6 · epic embajador.
   DC: [DC-GC-arg-1](DECISIONES.md#dc-gc-arg-1--2026-07-21--cerrada).
 
@@ -373,9 +375,13 @@ Z09/Z10; DC-GC-ceguera-marca).
   [BRIEF-WP-A02](../../REPORTES/BRIEF-WP-A02-presencia.md). Ficha:
   [WP-A02](WP-A02-presencia.md). Reporte:
   [WP-A02](../../REPORTES/WP-A02-presencia.md).
-- ⬜ **WP-A03 · Acta de barrio + estado `roto` · SEMILLA-ARG §A3** —
-  **parked** «cuando A1 viva» (dep §A1 + Z10). No brief. Contrato en
-  [SEMILLA-ARG](SEMILLA-ARG.md) §A3.
+- 🔶 **WP-A03 · Acta de barrio + estado `roto` · SEMILLA-ARG §A3** —
+  track PACK · prio 1 · ola **ARG-1** · dep A01 ✅ viva · Z10 ✅ · ejes I/II ·
+  ceguera. Gate «cuando A1 viva» **satisfecho** (A01 ✅ zeus `c7ec7d0`).
+  Nota: A01 viva — acta viaja por la plaza. **Listo para despacho**
+  (orquestador; este gobierno no spawnea worker). Brief:
+  [BRIEF-WP-A03](../../REPORTES/BRIEF-WP-A03-acta-barrio.md). Ficha:
+  [WP-A03](WP-A03-acta-barrio.md).
 
 ## Overview (lectura; sin estado — el estado vive arriba)
 
@@ -400,7 +406,7 @@ Z09/Z10; DC-GC-ceguera-marca).
 | [Z17](WP-Z17-operator-ui-ciudad.md) | operator-ui vista ciudad (SEMILLA §5) | VISOR | 1 | Z02·Z03 ✅ | IV/I |
 | [A01](WP-A01-parte-kit.md) | Parte de plaza / parte-kit (§A1) | PACK | 1 | Z01·Z02·Z07·Z05-f1 ✅ | I/II |
 | [A02](WP-A02-presencia.md) | Señal de presencia (§A2) | PACK | 1 | Z16 ✅ | I/II |
-| A03 | Acta de barrio (§A3) — parked | PACK | — | A01 viva + Z10 | — |
+| [A03](WP-A03-acta-barrio.md) | Acta de barrio + `roto` (§A3) | PACK | 1 | A01 viva + Z10 ✅ | I/II |
 
 ## Candidatos SEMILLA — profundizar la gamificación (ver [SEMILLA-GAMIFICACION.md](SEMILLA-GAMIFICACION.md))
 
@@ -408,7 +414,7 @@ Z09/Z10; DC-GC-ceguera-marca).
 > **GC-5 cerrada 2026-07-21 (GO custodio §1+§5):** **Z16 ✅** loop · **Z17 ✅**
 > operator-ui. **§2–§4/§6 parked** — no abrir sin GO nuevo. No reopen Z05-f1.
 > **ARG-1 abierta** (hermana [SEMILLA-ARG](SEMILLA-ARG.md)): A01 ✅ · A02 ✅;
-> A3 parked. No sustituye ni des-aparca SEMILLA §2/§6.
+> A03 🔶. No sustituye ni des-aparca SEMILLA §2/§6.
 
 - ✅ **§1 Loop de juego** → **WP-Z16** (objetivos/decay/economía de energía).
 - ⬜ **§2 Estado del juego = estado real del sistema** (**parked**) — barrio ↔

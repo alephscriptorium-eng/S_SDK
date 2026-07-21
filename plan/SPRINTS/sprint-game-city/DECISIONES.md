@@ -43,6 +43,12 @@ sin masticar. Contratos/firmas/CA/no-haceres = literales de
 workers = paso aparte del orquestador (briefs listos, sin GO inmediato
 autónomo).
 
+**Addenda (2026-07-21):** gate «§A3 cuando A1 viva» **satisfecho** (A01 ✅
+zeus `c7ec7d0`). Gobierno abre **WP-A03 🔶** +
+[BRIEF-WP-A03](../REPORTES/BRIEF-WP-A03-acta-barrio.md). Sin nueva DC;
+§A4–§A6 y parked SEMILLA/Z05/embajador sin cambio. Despacho worker =
+paso aparte.
+
 ---
 
 ## Abiertas (custodio)
