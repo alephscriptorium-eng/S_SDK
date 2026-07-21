@@ -27,6 +27,13 @@ muta `HOLONES/`.
 en worktree I31 @ `9c26edf`+ → gitlinks
 `0afe1e1…` (zeus-sdk) y `b463a1a…` (games-library). Fecha: 2026-07-19.
 
+## Confianza / tubería
+
+Pregunta recurrente al entrar al juego: ¿van protegidas la tubería y la
+mensajería? Respuesta honesta (hecho con evidencia · abierto con issue):
+
+→ [La tubería, protegida](/guide/tuberia-protegida)
+
 ## Superficies públicas verificadas
 
 Cada afirmación lleva sello. Lo no comprobado va como `<pendiente>`.

@@ -633,6 +633,35 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   (33/36) — resuelto con el reflow de cabeceras I24/I29/I42 (higiene BACKLOG).
   Reporte `plan/REPORTES/WP-I74-scrum-proyeccion-dryrun.md`.
 
+## Ola I8 — Página pública de confianza (tubería)
+
+> **GO custodio · 2026-07-21** (A-20 asienta investigación de privacidad en
+> la web de la casa). Dep técnica: ninguna (bloque «hoy» ya fusionado y
+> verde, incl. D-40/U93). Proyección de items abiertos de seguridad =
+> issues Z_SDK #4/#5/#6 (creados antes del build; mapa en acta).
+
+- ✅ **WP-I75 · Página «La tubería, protegida»** *(aceptado · orquestador ·
+  2026-07-21 · merge pendiente push)* — `docs/guide/tuberia-protegida.md`
+  (castellano, técnica, sin marketing): (1) lo que protege hoy con evidencia
+  citable · (2) modelo SSB (identidad = clave pública; private-box nativo) ·
+  (3) abierto con issues reales · (4) FAQ del amigo. Nav/sidebar + enlace
+  desde ficha holón 01. Brief:
+  `plan/REPORTES/BRIEF-WP-I75-tuberia-protegida.md`. Reporte:
+  `plan/REPORTES/WP-I75-tuberia-protegida.md`. Proyección:
+  `plan/REPORTES/PROYECCION-I75-seguridad-2026-07-21.md`.
+  **CA:** (1) página navegable desde el nav · (2) claims «hoy» trazables ·
+  (3) cada «abierto» enlaza issue existente (`gh issue view`) · (4) proyección
+  de abiertos ANTES del build · (5) ceguera (cero tokens de mediación) +
+  voz castellana sin «pronto»/«en breve».
+  **Aceptado ✅ 2026-07-21** (orquestador): CA1–CA5 PASS — `docs:build`
+  EXIT=0; dist `guide/tuberia-protegida.html`; Z_SDK#4/#5/#6 OPEN
+  verificados; S_SDK#21; ceguera grep = 0. Rama
+  `wp/i75-tuberia-protegida`. Issues abiertos:
+  [Z_SDK#4](https://github.com/alephscriptorium-eng/Z_SDK/issues/4) ·
+  [Z_SDK#5](https://github.com/alephscriptorium-eng/Z_SDK/issues/5) ·
+  [Z_SDK#6](https://github.com/alephscriptorium-eng/Z_SDK/issues/6).
+  Issue WP: [S_SDK#21](https://github.com/alephscriptorium-eng/S_SDK/issues/21).
+
 ## Orden y paralelismo
 
 I0 → I1 ∥ I2 → I3 → I4 · I5 tras I2 (la nota ofrece el paquete ya

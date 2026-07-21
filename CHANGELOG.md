@@ -7,7 +7,7 @@ marcado ✅ en [`plan/BACKLOG.md`](plan/BACKLOG.md) — se copia el hito cerrado
 (changesets/semver, máquina-generados) son otro eje y no viven aquí.
 
 Formato: [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/).
-Granularidad **gruesa por ola** (I0…I7). Estados del BACKLOG:
+Granularidad **gruesa por ola** (I0…I8). Estados del BACKLOG:
 ⬜ pendiente · 🔶 asignado · ✅ aceptado (solo el orquestador marca).
 Gate: `npm run changelog:check` (`verificar-changelog.mjs --role gobierno`).
 
@@ -16,6 +16,12 @@ Gate: `npm run changelog:check` (`verificar-changelog.mjs --role gobierno`).
 Abiertos en el BACKLOG, aún **no** ✅ (no derivan entrada cerrada todavía):
 
 - WP-I63 ⬜ · Scrub de vocabulario del marco en aleph (DE-I14) — gate externo.
+
+## [I8] - 2026-07-21 — Página pública de confianza (tubería)
+
+- **WP-I75** — Página «La tubería, protegida»: `docs/guide/tuberia-protegida.md`
+  + nav/sidebar + enlace ficha holón 01; claims hoy con evidencia; abiertos
+  enlazan Z_SDK#4/#5/#6 (proyección antes del build). Aceptado ✅ 2026-07-21.
 
 ## [I7] - 2026-07-20 — Upgrade de skills a 0.3.4 (patrón zeus + contrato nuevo)
 

@@ -48,14 +48,16 @@ export default defineConfig({
           { text: '02 — Scriptorium', link: '/autoridades/02-scriptorium' }
         ]
       },
-      { text: 'Publicar la web', link: '/guide/publicar-la-web' }
+      { text: 'Publicar la web', link: '/guide/publicar-la-web' },
+      { text: 'La tubería, protegida', link: '/guide/tuberia-protegida' }
     ],
     sidebar: [
       {
         text: 'SCRIPT_SDK',
         items: [
           { text: 'Portada', link: '/' },
-          { text: 'Publicar la web', link: '/guide/publicar-la-web' }
+          { text: 'Publicar la web', link: '/guide/publicar-la-web' },
+          { text: 'La tubería, protegida', link: '/guide/tuberia-protegida' }
         ]
       },
       {
