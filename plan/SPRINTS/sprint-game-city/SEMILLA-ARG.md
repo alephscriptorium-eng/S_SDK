@@ -150,6 +150,15 @@ Dep: §A1 (el acta viaja por la plaza) + Z10 (la reparación como viaje).
 - **§A6** — energía del loop = presupuesto de ventana; excavación cara,
   plaza barata, `announce` recarga.
 
+## Candidata hermana (no despiece ARG) — CAMPANAS S-03
+
+> **Parked** (GO-6b · 2026-07-21). No es §A4–§A6. Primera juntura jugable
+> 01↔03 del [mapa siete plantas](MAPA-SIETE-PLANTAS.md): las campanas dan
+> voz al parte de plaza (A01 ✅). **No abrir** hasta runner verde
+> HOTFIX-ARG-1 **y** tick custodio DE-I8 (inflar `HOLONES/03-emmanuel/`,
+> destino emmanuel-sdk). Brief masticado **al abrir**, no aquí.
+> DC: [DC-GC-campanas-s03](DECISIONES.md#dc-gc-campanas-s03--2026-07-21--cerrada-candidata-parked).
+
 ## Trazabilidad
 
 | WP | § | Ficha | Brief |

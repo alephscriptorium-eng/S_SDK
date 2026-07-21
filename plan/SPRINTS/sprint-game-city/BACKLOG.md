@@ -42,6 +42,9 @@
   **Sigue parked sin GO:** §A4–§A6 · SEMILLA §2–§4/§6 · Z05 items 3–6 ·
   epic embajador.
   DC: [DC-GC-arg-1](DECISIONES.md#dc-gc-arg-1--2026-07-21--cerrada).
+  **GO-6a/6b (2026-07-21, sin WP):** mapa
+  [siete plantas](MAPA-SIETE-PLANTAS.md) asentado · candidata **CAMPANAS
+  (S-03) parked** (conds: HOTFIX-ARG-1 verde + tick DE-I8).
 
 ## Cola post-GC-2 (higiene de cierre de ola — 2026-07-21)
 
@@ -436,6 +439,17 @@ Z09/Z10; DC-GC-ceguera-marca).
   [TRAMA-AGUA](TRAMA-AGUA.md) §5.5; dep Z07 + Z13.
 - ⬜ **Epic embajador** (**parked** sin GO) — no abrir; ops de pavimentación
   van por canal GO-4 aparte. ACL Z05 item 3 se des-aparca cuando este epic abra.
+
+## Candidatas post-ARG-1 (parked — sin 🔶)
+
+> Mapa de decisión (no WP): [MAPA-SIETE-PLANTAS.md](MAPA-SIETE-PLANTAS.md) ·
+> [DC-GC-siete-plantas](DECISIONES.md#dc-gc-siete-plantas--2026-07-21--cerrada-mapa-sin-wp).
+> Cinco spinoffs nombrados: S-02 · **S-03** · S-05 · S-06 · S-J.
+
+- ⬜ **CAMPANAS (S-03)** — **parked** · primera juntura jugable 01↔03 ·
+  dep técnica A01 ✅ · **no abrir** hasta (i) runner verde HOTFIX-ARG-1 y
+  (ii) tick custodio inflar `HOLONES/03-emmanuel/` (DE-I8). Brief al abrir.
+  DC: [DC-GC-campanas-s03](DECISIONES.md#dc-gc-campanas-s03--2026-07-21--cerrada-candidata-parked).
 
 ## Cierre del sprint (parte final — no evaporar)
 

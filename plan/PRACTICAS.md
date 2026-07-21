@@ -89,3 +89,16 @@ el texto: se referencia (la réplica es el defecto que este plan combate).
    Sin sello de futuro: «cumple de facto» no promete trabajo nuevo — se
    apoya en prácticas ya vigentes (delta 1 autocontención, delta 7 gobierno
    a git / orquestador único escritor del BACKLOG). Sin refactor retro.
+
+10. **Cierre de ola cita run-id verde** (clase reincidente ×2 · 2026-07-21:
+    GC-5 y ARG-1). Todo cierre de ola que el orquestador acepte **cita
+    run-id VERDE de CI y de Release** del tip de **cada repo tocado**
+    (zeus, games-library, raíz, etc.). Sin run-id verde citado = ola no
+    cerrada (claim sin acta de runner). Compatible con delta 3 (C8: el
+    pulso incluye el último run de CI de main).
+
+11. **El sync-map se commitea post-apply** (clase reincidente ×2 · 2026-07-21:
+    Z15; A01–A03). El fichero `.sync-map.json` (o mapa del sprint) **nunca**
+    se commitea con números de issue **antes** de que esos issues existan
+    en el tracker. Orden: apply (crear/actualizar issues) → mapa refleja
+    IDs reales → commit mapa + acta. Mapa especulativo = devolución.

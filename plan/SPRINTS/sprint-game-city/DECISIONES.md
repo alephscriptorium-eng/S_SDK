@@ -49,9 +49,57 @@ zeus `c7ec7d0`). Gobierno abre **WP-A03 🔶** +
 §A4–§A6 y parked SEMILLA/Z05/embajador sin cambio. Despacho worker =
 paso aparte.
 
+### DC-GC-siete-plantas · 2026-07-21 · **cerrada** (mapa; sin WP)
+
+**Tema:** mediar el lore-mapa «siete plantas» (GO-6a) como **mapa de
+decisión** — cosmología jugable = holarquía ya registrada (7 plantas, dos
+leyes). No encarna obra.
+
+**Pregunta:** ¿se asienta el mapa y se nombran los cinco spinoffs de los
+huecos sin abrir WP?
+
+**Decisión:** sí. Mapa canónico:
+[MAPA-SIETE-PLANTAS.md](MAPA-SIETE-PLANTAS.md). Las dos leyes (ceguera
+ascendente / acceso descendente) = reglas de juego; el `CEGUERA_PATTERN`
+del parte ES la «censura del oráculo» ya en producción. **Cinco spinoffs
+candidatos nombrados (parked, sin WP):**
+
+| Id | Nombre |
+| -- | ------ |
+| S-02 | `dialectica-kit` |
+| S-03 | `campanas` |
+| S-05 | `digestión de incidentes` |
+| S-06 | `casa de la federación` |
+| S-J | `junturas ejecutables` |
+
+**Consecuencia:** no 🔶 · no §A4–§A6 · no reopen Z05/embajador/SEMILLA
+§2–§4/§6. S-03 sigue en [DC-GC-campanas-s03](#dc-gc-campanas-s03--2026-07-21--cerrada-candidata-parked).
+
+### DC-GC-campanas-s03 · 2026-07-21 · **cerrada** (candidata parked)
+
+**Tema:** candidata **CAMPANAS (S-03)** — primera juntura jugable 01↔03
+(GO-6b). Las campanas dan voz al parte de plaza.
+
+**Pregunta:** ¿se registra como candidata parked (sin abrir, sin brief)?
+
+**Decisión:** sí, **parked**. Dep técnica **A01 ✅ cumplida** (parte-kit
+existe). Condiciones para abrir (**NO ahora**):
+
+1. **Runner verde HOTFIX-ARG-1** (paso 0 — CI+Release tip zeus citados).
+2. **Tick custodio** para inflar la ruta reservada `HOLONES/03-emmanuel/`
+   (DE-I8: destino `emmanuel-sdk`, remoto por decidir). La candidata **es**
+   esa inflación; sin tick no hay apertura.
+
+Brief masticado **al abrir**, contra el parte-kit real ya fusionado — no
+ahora.
+
+**Consecuencia:** nota en [BACKLOG](BACKLOG.md) §Candidatos y
+[SEMILLA-ARG](SEMILLA-ARG.md). Sin 🔶 · sin WP · sin inflar 03.
+
 ---
 
 ## Abiertas (custodio)
 
-Ninguna decisión de calibración abierta tras DC-GC-arg-1.
-Bloqueos operativos → ver BACKLOG §Olas / §Cola.
+Ninguna decisión de calibración abierta tras DC-GC-siete-plantas /
+DC-GC-campanas-s03. Bloqueos operativos → ver BACKLOG §Olas / §Cola.
+Condiciones de apertura S-03 = ticks externos (HOTFIX-ARG-1 · DE-I8).

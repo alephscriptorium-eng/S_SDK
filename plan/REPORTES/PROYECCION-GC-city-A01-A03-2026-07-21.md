@@ -1,5 +1,8 @@
 # PROYECCIÓN — acta A01–A03 · sprint-game-city · 2026-07-21
 
+> **Verificación gobierno 2026-07-21:** ya aplicado — `#18/#19/#20` CLOSED ·
+> sync-map `WP-A01→18` / `WP-A02→19` / `WP-A03→20` · tip `1e1297d` · **no re-crear**.
+
 | dato | valor |
 | ---- | ----- |
 | estado | **apply OK** — auth `alephscriptorium-eng` · GO custodio A01–A03 |
