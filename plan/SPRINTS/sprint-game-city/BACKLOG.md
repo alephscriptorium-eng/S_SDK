@@ -19,10 +19,11 @@
 **Ola GC-2 (cerrada 2026-07-21):** Z03 ✅ · Z06 ✅ · Z08-f4..5 ✅ · Z12-f1 ✅ —
   lote completo; higiene de cierre = §Cola post-GC-2 (A1/re-smoke/push; A2→Z15).
 **Ola GC-3 (abierta 2026-07-21 — federación y población):** lote 🔶
-  **Z04 ✅** · **Z07 ✅** · **Z08 ✅** · **Z15 (A2, prio alta)**. Parked ⬜: Z11 (tras Z04) ·
-  Z12-f2 (tras **Z15 ✅** + f1 ✅) · Z13 (tras Z12-f1·Z03·Z04) · Z05 (por items).
-  Criterio custodio: no abrir Z12-f2/Z13 hasta Z15 ≥🔶/✅; A1✅ (`npm ci`) no bloquea 🔶 código;
-  **Tick A1b** (runtime deps) bloquea vivos/re-smoke D1–D3 / Z04·Z08 — **no** merges Z08/Z15.
+  **Z04 ✅** · **Z07 ✅** · **Z08 ✅** · **Z15 ✅** (A2). Parked ⬜: Z11 (tras Z04) ·
+  **Z12-f2 despachable** (deps **Z15 ✅** + f1 ✅; abrir 🔶 en commit gobierno propio) ·
+  Z13 (tras Z12-f1·Z03·Z04) · Z05 (por items).
+  A1✅ (`npm ci`) no bloquea 🔶 código; **Tick A1b** (runtime deps) bloquea vivos/re-smoke
+  D1–D3 / Z04·Z08 — **no** bloqueó merge Z15.
 
 ## Cola post-GC-2 (higiene de cierre de ola — 2026-07-21)
 
@@ -48,9 +49,10 @@ aceptable-con-notas · Z08-f4..5 aceptable (re-smoke renegociada con intento).
   **A1b**. Acta [RESMOKE-post-A1](../../REPORTES/RESMOKE-post-A1-2026-07-21.md).
 - **Push S_SDK:** tip local ahead (~10+) → origin (gate de ola; custodio).
   No bloquea apertura 🔶; anotar en briefs.
-- **A2 → WP-Z15:** exponer lectura de `intentionalStops` en
-  `@zeus/mcp-launcher` (hoy write-only) + consumo/hook lifecycle. **Prio
-  alta** pre-Z12-f2. Ficha: [WP-Z15](WP-Z15-intentional-stops-read.md).
+- **A2 → WP-Z15:** ✅ **cerrado 2026-07-21** — lectura `intentionalStops` en
+  `@zeus/mcp-launcher` + hook lifecycle @ zeus `a4aaf8c`. **Z12-f2 despachable.**
+  Ficha: [WP-Z15](WP-Z15-intentional-stops-read.md). Reporte:
+  [WP-Z15](../../REPORTES/WP-Z15-intentional-stops-read.md).
 
 ## Replan post-vigía GC-1.5 (2026-07-21)
 
@@ -129,8 +131,8 @@ Z09/Z10; DC-GC-ceguera-marca).
 ## WPs (estado canónico)
 
 > Lote GC-2 (**cerrada 2026-07-21**): **Z03 ✅ · Z06 ✅ · Z08-f4..5 ✅ · Z12-f1 ✅**.
-> Lote GC-3 (**abierta**): **Z04 ✅ · Z07 ✅ · Z08 ✅ · Z15 🔶** · parked
-> Z11·Z12-f2(tras Z15)·Z13·Z05. Issues: S_SDK #3 #6 #8 #12 (sync-map).
+> Lote GC-3 (**abierta**): **Z04 ✅ · Z07 ✅ · Z08 ✅ · Z15 ✅** · parked
+> Z11·**Z12-f2 despachable**·Z13·Z05. Issues: S_SDK #3 #6 #8 #12 (sync-map).
 
 - ✅ **WP-Z01 · Pack mockdatas ciudad → firehose/cache-browser** — track PACK ·
   prio 1 · dep — · eje I (consumidores reales: los 2 browsers arrancados).
@@ -180,7 +182,7 @@ Z09/Z10; DC-GC-ceguera-marca).
   Instancia `kits/carpeta-dramaturgo/instances/ciudad/` · games-library
   `006aef1` (+ puntero submodule). **Aceptado ✅** 2026-07-21 (orquestador)
   con caveats: **D1** regenerar proyección ledger→story-board al cerrar Z04;
-  **D2** tipología jugadores → Z13. Brief:
+  **D2** tipología jugadores → Z13. **D1 Z07 regenerado post-Z04**. Brief:
   [BRIEF-WP-Z07](../../REPORTES/BRIEF-WP-Z07-dramaturgo-ciudad.md). Ficha:
   [WP-Z07](WP-Z07-dramaturgo-ciudad.md). Reporte:
   [WP-Z07](../../REPORTES/WP-Z07-dramaturgo-ciudad.md).
@@ -230,13 +232,13 @@ Z09/Z10; DC-GC-ceguera-marca).
   2026-07-21 (orquestador): merge FF + push `origin/main` zeus+GL; e2e barrio
   fixture; frontera actuador(Z06)/cerebro(Z12) intacta. **Caveat → f2 ⬜:** wake
   authority Z03 / ledger · cascada/zonas · rollup · tablero Z08; **señal
-  intentionalStops → Z15** (A2; no reopen f1).
+  intentionalStops → **Z15 ✅** (A2 cerrado; no reopen f1). **Z12-f2 despachable.**
   Brief: [BRIEF-WP-Z12-f1](../../REPORTES/BRIEF-WP-Z12-f1-encendido-arbol-vida.md).
   Ficha: [WP-Z12](WP-Z12-encendido-arbol-vida.md). Reporte:
   [WP-Z12-f1](../../REPORTES/WP-Z12-f1-encendido-arbol-vida.md).
 - ⬜ **WP-Z12-f2 · Cascada/zonas + wake Z03 + rollup** — track ENGINE+OPS · prio 2 ·
-  parked GC-3 · dep Z12-f1 ✅ + Z03 ✅ + **Z15 ✅** (intentionalStops read). Ficha:
-  [WP-Z12](WP-Z12-encendido-arbol-vida.md).
+  GC-3 · **despachable** (deps Z12-f1 ✅ + Z03 ✅ + **Z15 ✅** intentionalStops read).
+  Abrir 🔶 = commit gobierno propio (V2). Ficha: [WP-Z12](WP-Z12-encendido-arbol-vida.md).
 - ⬜ **WP-Z13 · Los tres jugadores: fusión en la trama del SDK** — track PACK
   (lore+flujos) · prio 3 · parked GC-3 · dep Z12-f1 ✅ + Z03 ✅ + Z04; gancho
   Z07/Z11 · ejes IV + ceguera. Brazo ejecutable de [TRAMA-AGUA](TRAMA-AGUA.md).
@@ -247,11 +249,13 @@ Z09/Z10; DC-GC-ceguera-marca).
   Merged games-library `8a39ece` (+ puntero submodule). Cantera
   `CENSO-ESTADOS.md` + regeneración determinista evidenciada. Aceptado ✅
   2026-07-21 (orquestador).
-- 🔶 **WP-Z15 · Lectura `intentionalStops` en `@zeus/mcp-launcher` (A2)** — track
-  OPS · prio **alta** · ola GC-3 · dep Z06 ✅ · desbloquea Z12-f2 · eje I/III.
-  Follow-up post-GC-2 (addenda A2; no reopen Z06/Z12-f1). Brief:
+- ✅ **WP-Z15 · Lectura `intentionalStops` en `@zeus/mcp-launcher` (A2)** — track
+  OPS · prio **alta** · ola GC-3 · dep Z06 ✅ · **aceptado ✅** 2026-07-21
+  (orquestador): merge FF + push `origin/main` zeus @ `a4aaf8c`; API read +
+  health + hook lifecycle; ejes I/III. **Z12-f2 despachable.** Brief:
   [BRIEF-WP-Z15](../../REPORTES/BRIEF-WP-Z15-intentional-stops-read.md). Ficha:
-  [WP-Z15](WP-Z15-intentional-stops-read.md).
+  [WP-Z15](WP-Z15-intentional-stops-read.md). Reporte:
+  [WP-Z15](../../REPORTES/WP-Z15-intentional-stops-read.md).
 
 ## Overview (lectura; sin estado — el estado vive arriba)
 
