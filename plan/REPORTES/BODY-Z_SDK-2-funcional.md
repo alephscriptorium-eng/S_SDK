@@ -4,7 +4,7 @@
 > Comentad aquí lo que toca este repo; este issue se regenera periódicamente,
 > no lo uséis como checklist editable.
 >
-> Corte: tip del repositorio `fe75269` · 2026-07-21.
+> Corte: tip del repositorio `1086392` · 2026-07-21 · **sprint ciudad CERRADO**.
 
 ## Aterrizado
 
@@ -23,11 +23,17 @@
   con pruebas extremo-a-extremo y de humo.
 - Mensajes de delta de estado (protocolo de eventos incremental) integrados
   en el motor y en el kit de autoridad.
+- Suscripción por zona/distrito sobre el canal de eventos en vivo —
+  **aterrizada**.
+- Loop de juego: decay de energía / objetivo colectivo en el paquete de
+  datos de la ciudad.
 - Gestor de caminos ("viaje"): rutas origen→destino derivadas de una fuente
   wiki, empaquetadas como librería reutilizable sobre el kit base, con
   pruebas de camino + wiki + verificación.
-- Gate de vocabulario del repositorio: excepción léxica para el mensaje de
-  delta de estado; integración continua en verde tras la corrección.
+- Autoría de rutas: servidor de edición/mutación de caminos (contrapeso de
+  escritura) — **aterrizado**.
+- Gate de vocabulario del repositorio: excepciones léxicas para el mensaje
+  de delta y para kits de lectura; integración continua y release en verde.
 
 **Actores externos / federación**
 - Tres tipos de agente externo ("conejos") federados contra el protocolo de
@@ -59,6 +65,9 @@
 - Constelación de paneles de flujo: vistas de solo lectura (oído, ojo,
   ciudad) y vistas de actuación (mano, ciudadano); población de datos por
   lotes; varios nodos coordinados.
+- Vista del operador orientada a la ciudad (HUD) — **aterrizada**.
+- El "parte" de plaza **suena** en el panel del operador (evento sonoro por
+  clase de titular + silencio local) — **aterrizado** en tip `1086392`.
 
 **Operación local**
 - Réplica local ligera del servidor remoto para el componente de salas, con
@@ -79,26 +88,19 @@
 
 ## Pendiente
 
-- **Suscripción por zona/distrito** sobre el canal de eventos en vivo (hoy
-  sin filtrar) — en curso.
-- **Autoría de rutas**: servidor de edición/mutación de caminos (contrapeso
-  de escritura al gestor de caminos de solo lectura) — especificado, sin
-  construir.
-- **Re-chequeo amplio del panel en vivo**: tras la reparación de
-  dependencias y la federación 8/8, falta confirmar vistas de solo lectura
-  y de actuación del panel contra la malla en vivo.
 - **Arranque por contenedor** (compose/up) + prueba de humo del cliente
   federado para la réplica local — diferido (daemon de contenedores caído
   en la estación de ops).
 - **Cola abierta (parked, sin arrancar)** en el tracker hermano: paraguas
-  de embajada · privacidad de federación · seguimiento residual de la
-  tubería · campañas de narrativa (issues #22–#25 OPEN). No se abre el
-  epic de embajada desde este corte.
+  de embajada · privacidad de federación (issues #22–#23 OPEN). No se abre
+  el epic de embajada desde este corte. Campañas de narrativa del slice
+  ciudad = **cerradas** (#25).
 - **Roadmap de motor aparcado** (sin abrir): control de acceso, cargadores
-  de contenido, particionado, variantes de lanzador por especificación.
+  de contenido, particionado, variantes de lanzador por especificación
+  (paraguas #5 en tracker hermano).
 
 ## Nota
 
 Vista ciega, funcional, sin nombres de proceso interno. El detalle vive en
 el tracker de este mismo repositorio; este issue es un resumen de
-aterrizaje, no un backlog editable.
+aterrizaje, no un backlog editable. Sprint ciudad del marco: **CERRADO**.

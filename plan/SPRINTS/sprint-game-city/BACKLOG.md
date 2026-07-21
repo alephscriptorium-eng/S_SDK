@@ -1,5 +1,14 @@
 # BACKLOG — sprint-game-city
 
+> # ═══════════════════════════════════════════════════════════
+> # ██  sprint-game-city · CERRADO · 2026-07-21 (C04)  ██
+> # ═══════════════════════════════════════════════════════════
+> Acta δ10: [ACTA-CIERRE-sprint-game-city-2026-07-21](../../REPORTES/ACTA-CIERRE-sprint-game-city-2026-07-21.md) ·
+> Reporte: [CIERRE-sprint-game-city-2026-07-21](../../REPORTES/CIERRE-sprint-game-city-2026-07-21.md).
+> **No abrir WPs nuevos en este sprint.** Parked sin GO post-cierre:
+> embajador (#22+#23) · horizonte E_SDK (DE-I8) · motor #5 (Z05 items) ·
+> SEMILLA §2/§6 · trama-agua.
+
 > Solo el orquestador del sprint escribe aquí (regla de oro 2). Workers: un WP = un
 > chat = una rama `wp/gc-<id>-<slug>` (+ worktree si hay paralelo); reporte con la
 > plantilla del skill; NO editar este fichero.
@@ -439,13 +448,12 @@ Z09/Z10; DC-GC-ceguera-marca).
   (SEMILLA-ARG lo roza; **no** des-aparca §6 hoy.)
 - ⬜ **Trama-agua como mundo del dramaturgo** (ronda 3, parked) — ejes REIC de
   [TRAMA-AGUA](TRAMA-AGUA.md) §5.5; dep Z07 + Z13.
-## Federaciones / externos (parked — proyección OPEN · sin 🔶)
+## Federaciones / externos (parked post-cierre — sin 🔶)
 
-> GO custodio DC-15 · 2026-07-21 (+ addenda race I75): encolar + proyectar
-> OPEN. **No abrir** epic embajador (E01–E02). **E03 ✅** (C02 · #24 CLOSED).
-> **CAMPANAS** re-scope → ver §abajo. I75 ✅ / #21 CLOSED · página viva;
-> Z_SDK #4/#5/#6 = overlap pack (citar, no
-> cerrar). Altas S_SDK **#22–#25**.
+> Sprint **CERRADO**. **No abrir** epic embajador (E01–E02). **E03 ✅**
+> (#24 CLOSED). **CAMPANAS ✅** (#25 CLOSED). I75 ✅ / #21 CLOSED · página
+> viva; Z_SDK #4/#5/#6 = overlap pack (citar, no cerrar). OPEN parked:
+> S_SDK **#22 · #23** (+ **#5** motor).
 
 - ⬜ **WP-E01 · Epic embajador (paraguas)** — **parked** sin GO · no abrir ·
   sin brief. Fases = items del paraguas (patrón Z05): (1) kit · (2) peercard ·
@@ -477,11 +485,13 @@ Z09/Z10; DC-GC-ceguera-marca).
   Reporte: [WP-CAMPANAS-city](../../REPORTES/WP-CAMPANAS-city.md).
   Ficha: [WP-CAMPANAS](WP-CAMPANAS.md). Issue: S_SDK #25 CLOSED.
 
-## Cierre del sprint (parte final — no evaporar)
+## Cierre del sprint — **HECHO** (C04 · 2026-07-21)
 
-Al cerrar GC-3, el reporte de cierre incluye la **retroalimentación a aleph**
-(aporte 3 del feedback; es evidencia, no un WP nuevo): mapear lo logrado contra
-block2 §6 —
+> **Estado: CERRADO.** No evaporar; no reabrir olas. Evidencia canónica:
+> [ACTA-CIERRE δ10](../../REPORTES/ACTA-CIERRE-sprint-game-city-2026-07-21.md) ·
+> [CIERRE](../../REPORTES/CIERRE-sprint-game-city-2026-07-21.md).
+
+Retroalimentación a aleph (evidencia, no WP nuevo):
 
 - **Z04 es WP-S20 de facto** (peer externo federando contra el contrato
   rooms/protocol).
@@ -495,6 +505,9 @@ block2 §6 —
   del recon 2026-07-20 (boceto experimental, árbol plano, transmedia sin código,
   dep `file:` de lista negra). La decisión es del plan aleph (DAS-1); aquí solo
   queda la evidencia lista.
+
+**Parked sin GO (fuera del sprint cerrado):** embajador #22+#23 · E_SDK/DE-I8 ·
+motor #5 · SEMILLA §2/§6 · trama-agua.
 
 ## Reglas del sprint (además de las del skill)
 

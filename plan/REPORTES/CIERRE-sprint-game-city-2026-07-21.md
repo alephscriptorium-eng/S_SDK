@@ -2,64 +2,92 @@
 
 | dato | valor |
 | ---- | ----- |
-| rol | brazo gobierno LOCAL-ONLY |
-| fuente | `plan/SPRINTS/sprint-game-city/BACKLOG.md` §«Cierre del sprint (parte final — no evaporar)» |
-| naturaleza | **evidencia / retroalimentación a aleph** — **no** WP nuevo |
-| higiene previa | [HIGIENE-I70-I74-2026-07-21.md](HIGIENE-I70-I74-2026-07-21.md) |
-| proyección seca | [PROYECCION-GC-city-2026-07-21-post-GC4.md](PROYECCION-GC-city-2026-07-21-post-GC4.md) |
-| push / `gh` write | **cero** hasta aviso auth write |
+| rol | gobierno orquestador |
+| estado | **sprint-game-city CERRADO** |
+| acta δ10 | [ACTA-CIERRE-sprint-game-city-2026-07-21.md](ACTA-CIERRE-sprint-game-city-2026-07-21.md) |
+| BACKLOG | banner CERRADO · parked sin GO listados |
+| tip Z_SDK | `1086392` |
+| tip GL | `3288510` |
+| tip S_SDK | tip del commit de este cierre (gobierno V2) |
 
-## 1. Z04 = WP-S20 de facto
+## Veredicto
 
-Peer externo federando contra el contrato **rooms/protocol** (eje IV del sprint).
+El sprint **game-city** cierra de verdad: olas **GC-1..5**, slice **ARG-1
+(A01–A03)**, **HOTFIX**es de gates, **CAMPANAS-city**, tubería **I75/E03**,
+quietud **C03**, y proyección de issues sincronizada. Parked sin GO queda
+fuera del sprint (embajador, E_SDK/DE-I8, motor #5, SEMILLA §2/§6,
+trama-agua).
 
-| evidencia | ruta / dato |
-| --------- | ----------- |
-| ficha WP | `plan/SPRINTS/sprint-game-city/WP-Z04-rabbits-rsh.md` — peer externo por canal sancionado |
-| brief | `plan/REPORTES/BRIEF-WP-Z04-rabbits-rsh.md` — eje IV = 2º cliente rooms/protocol |
-| reporte obra | `plan/REPORTES/WP-Z04-rabbits-rsh.md` — federación e2e r/s/h; peer solo `@zeus/rooms` + `makeIntent`; caso C-03; smoke + demo |
-| backlog | bullet Z04 ola GC-3 · dep Z03 ✅ · Z06 ✅ · eje IV |
+## Arco (foto)
 
-Lectura de cierre: lo que un WP-S20 pediría (segundo cliente del contrato, sin privilegiar un jugador) quedó **demostrado en obra** dentro del pack ciudad, no como prosa de plan.
+| tramo | resultado | ancla |
+| ----- | --------- | ----- |
+| **GC-1** | Z01 · Z02 · Z08-f1..3 ✅ | BACKLOG §Olas |
+| **GC-1.5** | Z14 · Z09 · Z10 ✅ | — |
+| **GC-2** | Z03 · Z06 · Z08-f4..5 · Z12-f1 ✅ | higiene A1 |
+| **GC-3** | Z04 · Z07 · Z08 · Z15 · Z12-f2 · Z13 ✅ | A1b PASS |
+| **GC-4** | Z05-f1 · Z05-f2 · Z11 ✅ | items 3–6 parked |
+| **GC-5** | Z16 · Z17 ✅ | SEMILLA §1+§5 |
+| **ARG-1** | A01 · A02 · A03 ✅ | #18/#19/#20 CLOSED |
+| **HOTFIX-GATES-2** | ✅ | CI `29839611853` @ `0b566e6` |
+| **HOTFIX-GATES-3** | ✅ | CI `29857964265` · Rel `29857967650` @ `48e2062` |
+| **HOTFIX-ARG-1** | ✅ | CI `29865037586` · Rel `29865037568` @ `fe75269` |
+| **GO-5 / GO-6 webs** | ✅ | actas GO5/GO6 · 3 dominios |
+| **CAMPANAS-city** | ✅ | zeus `1086392` · CI `29869646271` · Rel `29869646289` · #25 CLOSED |
+| **I75 + E03** | ✅ | #21/#24 CLOSED · merge `e28439d` · gov `6a5fdd0` |
+| **C03 quietud** | ✅ | `8f5436c` · D1 defer · Z_SDK #2 |
 
-## 2. Pack ciudad = primer consumidor cruzado (constelación holón 06)
+## Runners tip (regla 16) — resumen
 
-El pack ciudad consume la constelación zeus (rooms, authority, mesh/MCP, línea, visor) como **caso de uso vivo**, no como demo aislada de un solo paquete.
+| repo | tip | CI | Release / homólogo |
+| ---- | --- | -- | ------------------ |
+| Z_SDK | `1086392` | [29869646271](https://github.com/alephscriptorium-eng/Z_SDK/actions/runs/29869646271) | [29869646289](https://github.com/alephscriptorium-eng/Z_SDK/actions/runs/29869646289) |
+| GL | `3288510` | [29862352062](https://github.com/alephscriptorium-eng/Z_SDK-games-library/actions/runs/29862352062) | Docs [29865824398](https://github.com/alephscriptorium-eng/Z_SDK-games-library/actions/runs/29865824398) |
+| S_SDK | tip C04 | Docs (único pipeline; ver acta δ10 tras refresh) | = Docs |
 
-| evidencia | ruta / dato |
-| --------- | ----------- |
-| vista | `plan/SPRINTS/sprint-game-city/VISTA.md` — pack vale por sí mismo; retroalimentar a aleph es opcional aguas abajo |
-| cadena GC | Z01–Z04, Z06–Z15 cerrados de plan; Z05 paraguas 🔶 (items 3–6 parked) — ver proyección post-GC-4 |
-| consumidores | fixtures/federation (Z04), mcp-launcher (Z06), nodered/miniclon (Z08/Z09), linea-editor (Z11), etc. bajo `packages/ciudad` / mesh en zeus |
+Detalle hitos + tabla completa: **acta δ10**.
 
-Para la juntura 05–06: **no re-excavar** — citar este cierre y las rutas de reporte anteriores.
+## Retroalimentación a aleph (no WP nuevo)
 
-## 3. NovelistEditor → sugerir «absorber-concepto y archivar»
+Conservado del cierre parcial previo:
 
-Sugerencia al futuro **INVENTARIO** de aleph (reclasificar de «alinear» → **«absorber-concepto y archivar»**). La **decisión** es del plan aleph (**DAS-1**); aquí solo evidencia.
+1. **Z04 = WP-S20 de facto** — peer externo federando contra rooms/protocol.
+2. **Pack ciudad = primer consumidor cruzado** de la constelación holón 06.
+3. **NovelistEditor** → sugerir al INVENTARIO reclasificar a
+   **«absorber-concepto y archivar»** (concepto portado vía Z11; decisión
+   DAS-1 del plan aleph).
 
-| evidencia | ruta / dato |
-| --------- | ----------- |
-| mandato de cierre | BACKLOG §Cierre — micro-acción 3, ronda 2 |
-| concepto portado | vía **WP-Z11** (`plan/REPORTES/WP-Z11-linea-editor.md` / ficha `WP-Z11-linea-editor.md`) — interfaz agéntica de autoría (tools MCP + resources/URIs + prompts + tool que persiste y delega export) |
-| recon 2026-07-20 (citado en ficha Z11) | boceto experimental; árbol plano sin noción de línea; transmedia sin código; dep `file:` tgz de `mcp-core-sdk` (lista negra aleph) |
-| cantera (contexto, sin autoridad de runtime) | `plan/SPRINTS/sprint-game-city/cantera/CIUDAD/01-BARRIOS/08-NovelistEditor.md` |
-| DAS-1 | `VISTA.md` — bloqueo del plan aleph; ningún WP de este sprint espera por DAS |
+## Proyección issues
 
-## Estado del sprint (foto local)
+| mapa | `plan/SPRINTS/sprint-game-city/.sync-map.json` |
+| ---- | ---------------------------------------------- |
+| apply | Z01–Z17 · A01–A03 · E01–E03 · CAMPANAS → #1–#25 (salvo hueco #21=I75) |
+| CLOSED obra | casi todo el sprint · #21 I75 · #24 E03 · #25 CAMPANAS |
+| OPEN parked | **#5** Z05 · **#22** E01 · **#23** E02 (no cerrar en C04) |
+| Z_SDK overlap | #4/#5/#6 OPEN (citar; no cerrar) · panorámica #2 regenerada |
 
-- GC-4 cerrado en plan (Z11 + Z05-f1/f2 aceptados); HOTFIX-GATES-2 CA1 ✅ (`0b566e6`, Actions run `29839611853`) — ver `ACTA-HOTFIX-GATES-2-2026-07-21.md`.
-- Invariantes retenidos: **no** reopen Z05-f1 · **no** abrir GC-5 · **no** tocar `.sync-map.json` (Z15→#15 se vuelve verdadero al crear/aplicar #15 después).
-- Drift vs `origin/main`: esperado (commits gobierno locales sin push).
+## Webs (URLs)
 
-## Cola D — NO EJECUTAR ahora (pendiente auth write)
+| URL | rol |
+| --- | --- |
+| https://z-sdk.escrivivir.co/ | Z_SDK Docs |
+| https://games.z-sdk.escrivivir.co/ | games-library Docs |
+| https://s-sdk.escrivivir.co/ | S_SDK Docs |
+| https://s-sdk.escrivivir.co/guide/tuberia-protegida | I75/E03 |
 
-Tras aviso custodio con auth write:
+Refresh final Docs ×3 = C04 (run-ids en acta δ10 tras dispatch).
 
-1. Verificar / crear issue **#15 = WP-Z15** (número 15) en S_SDK si el mapa aún no refleja verdad remota.
-2. **Apply** proyección — comandos en `PROYECCION-GC-city-2026-07-21-post-GC4.md` (`PROYECCION_GITHUB=1` + `--habilitar-github`).
-3. Completar acta post-apply: `PROYECCION-GC-city-2026-07-21-post-apply.md` (esqueleto; rellenar URLs).
-4. Actualizar panorámica Z_SDK **#2** con `--body-file plan/REPORTES/PANORAMICA-Z_SDK-2-post-GC4.md`.
-5. **Push** gobierno acumulado (`git push origin HEAD`) — solo entonces.
+## Parked sin GO (post-cierre)
 
-Hasta ese aviso: **cero** `gh` de escritura, **cero** push.
+- sprint **EMBAJADOR** (#22 fases + #23)
+- horizonte **E_SDK** (campanas-juntura; tick DE-I8)
+- motor **#5** (Z05 items)
+- SEMILLA §2/§6 (y §3–§4)
+- trama-agua
+
+**No** abrir embajador. **No** DE-I8.
+
+## Cola D histórica — hecha
+
+Auth write / push / apply / panorámica #2 / webs: ejecutados a lo largo del
+arco (ya no «cero gh»). Residual: solo parked listados arriba.
