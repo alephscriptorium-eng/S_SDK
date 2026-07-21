@@ -21,10 +21,10 @@
 **Ola GC-3 (cerrada 2026-07-21 — federación y población):** lote código ✅
   **Z04 ✅** · **Z07 ✅** · **Z08 ✅** · **Z15 ✅** (A2) · **Z12-f2 ✅** (**Z12 completo**) ·
   **Z13 ✅**. Residual ops: **Tick A1b ✅ PASS** (acta).
-**Ola GC-4 (abierta 2026-07-21 — engine techo + autoría):** lote inmediato
-  **Z05-f1 ✅** (deltas) · **Z05-f2 ✅** (zonas) · **Z11 🔶** (deps Z06·Z04·Z03 ✅).
-  **No** abrir items Z05 3–6 ni wishlist SEMILLA-GAMIFICACION sin evidencia nueva.
-  Gate pre-apertura: A1b PASS claim→acta
+**Ola GC-4 (cerrada 2026-07-21 — engine techo + autoría):** lote inmediato ✅
+  **Z05-f1 ✅** (deltas) · **Z05-f2 ✅** (zonas) · **Z11 ✅** (linea-editor).
+  Items Z05 3–6 **parked** · SEMILLA-GAMIFICACION **parked** (sin GO custodio).
+  Gate pre-apertura histórico: A1b PASS claim→acta
   [ACTA-A1b-PASS-2026-07-21](../../REPORTES/ACTA-A1b-PASS-2026-07-21.md).
 
 ## Cola post-GC-2 (higiene de cierre de ola — 2026-07-21)
@@ -141,8 +141,8 @@ Z09/Z10; DC-GC-ceguera-marca).
 
 > Lote GC-2 (**cerrada 2026-07-21**): **Z03 ✅ · Z06 ✅ · Z08-f4..5 ✅ · Z12-f1 ✅**.
 > Lote GC-3 (**cerrada 2026-07-21**): **Z04 ✅ · Z07 ✅ · Z08 ✅ · Z15 ✅ · Z12-f2 ✅**
-> (**Z12 completo**) · **Z13 ✅**. Lote GC-4 (**abierta 2026-07-21**): **Z05-f1 ✅ ·
-> Z05-f2 ✅ · Z11 🔶**. A1b ✅. Issues: S_SDK #3 #6 #8 #12 #13 (sync-map).
+> (**Z12 completo**) · **Z13 ✅**. Lote GC-4 (**cerrada 2026-07-21**): **Z05-f1 ✅ ·
+> Z05-f2 ✅ · Z11 ✅**. A1b ✅. Issues: S_SDK #3 #6 #8 #12 #13 (sync-map).
 
 - ✅ **WP-Z01 · Pack mockdatas ciudad → firehose/cache-browser** — track PACK ·
   prio 1 · dep — · eje I (consumidores reales: los 2 browsers arrancados).
@@ -248,13 +248,17 @@ Z09/Z10; DC-GC-ceguera-marca).
   [BRIEF-WP-Z10](../../REPORTES/BRIEF-WP-Z10-viajes-wiki-linea.md). Ficha:
   [WP-Z10](WP-Z10-viajes-wiki-linea.md). Reporte:
   [WP-Z10](../../REPORTES/WP-Z10-viajes-wiki-linea.md).
-- 🔶 **WP-Z11 · linea-editor: autoría de líneas como server MCP por horse** —
-  track ENGINE · prio 3 · ola GC-4 · dep Z06 ✅ + Z04 ✅ + Z03 ✅ (arrancable);
-  hermano de Z10 (frontera dura: Z10 = caminos/lectura, Z11 = autoría/mutación
-  + export) · ejes I/IV/II/III/V + ceguera. Precondición: glosario «viaje»
-  (regla 5). Brief:
+- ✅ **WP-Z11 · linea-editor: autoría de líneas como server MCP por horse** —
+  track ENGINE · prio 3 · ola GC-4 · dep Z06 ✅ + Z04 ✅ + Z03 ✅ · hermano de Z10
+  (frontera dura: Z10 = caminos/lectura, Z11 = autoría/mutación + export) ·
+  ejes I/IV/II/III/V + ceguera · zeus-sdk `f93f163` (+ puntero) · games-library
+  `d5548b1` (+ puntero). **Aceptado ✅** 2026-07-21 (orquestador, re-revisión):
+  FF+push zeus; rebase GL onto `d7f5dfa` + FF+push; pack `@zeus/linea-editor` +
+  smokes; ceguera post-corrección #1. Brief:
   [BRIEF-WP-Z11](../../REPORTES/BRIEF-WP-Z11-linea-editor.md). Ficha:
-  [WP-Z11](WP-Z11-linea-editor.md).
+  [WP-Z11](WP-Z11-linea-editor.md). Reporte:
+  [WP-Z11](../../REPORTES/WP-Z11-linea-editor.md). Rama:
+  `wp/gc-z11-linea-editor`.
 - ✅ **WP-Z12-f1 · Encendido del árbol de vida (lifecycle XState, start/stop real)** —
   track ENGINE+OPS · prio 2 · **f1 ✅ en GC-2** · dep Z06 ✅ + Z02 ✅ · ejes I/III/IV
   + ceguera. Packs `@zeus/lifecycle-kit` + `@zeus/ciudad-lifecycle` · zeus-sdk
@@ -321,9 +325,9 @@ Z09/Z10; DC-GC-ceguera-marca).
 
 ## Candidatos GC-4 — profundizar la gamificación (sin abrir; ver [SEMILLA-GAMIFICACION.md](SEMILLA-GAMIFICACION.md))
 
-> **GO GC-4 2026-07-21:** SEMILLA §1–§6 siguen **parked**. Lote inmediato =
-> solo Z05-f1/f2 + Z11 (señal vigía / deps ✅). No abrir loop/cronista/vista3D/
-> meta-juego/salud-real sin evidencia nueva ni GO custodio.
+> **GC-4 cerrada 2026-07-21** (Z05-f1·f2·Z11 ✅). SEMILLA §1–§6 siguen **parked**.
+> No abrir loop/cronista/vista3D/meta-juego/salud-real sin evidencia nueva ni GO
+> custodio.
 
 - **Loop de juego** (objetivos/decay/economía de energía) — hoy hay mecánica sin meta.
 - **Estado del juego = estado real del sistema** (barrio ↔ paquete/servicio; salud CI
