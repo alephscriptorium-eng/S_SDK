@@ -44,7 +44,8 @@
   DC: [DC-GC-arg-1](DECISIONES.md#dc-gc-arg-1--2026-07-21--cerrada).
   **GO-6a/6b (2026-07-21, sin WP):** mapa
   [siete plantas](MAPA-SIETE-PLANTAS.md) asentado · candidata **CAMPANAS
-  (S-03) parked** (conds: HOTFIX-ARG-1 verde + tick DE-I8).
+  (S-03) parked** (conds: **(i) HOTFIX-ARG-1 verde ✅** · (ii) tick DE-I8 pend).
+  Acta (i): [ACTA-HOTFIX-ARG-1-2026-07-21](../../REPORTES/ACTA-HOTFIX-ARG-1-2026-07-21.md).
 
 ## Cola post-GC-2 (higiene de cierre de ola — 2026-07-21)
 
@@ -447,8 +448,11 @@ Z09/Z10; DC-GC-ceguera-marca).
 > Cinco spinoffs nombrados: S-02 · **S-03** · S-05 · S-06 · S-J.
 
 - ⬜ **CAMPANAS (S-03)** — **parked** · primera juntura jugable 01↔03 ·
-  dep técnica A01 ✅ · **no abrir** hasta (i) runner verde HOTFIX-ARG-1 y
-  (ii) tick custodio inflar `HOLONES/03-emmanuel/` (DE-I8). Brief al abrir.
+  dep técnica A01 ✅ · **(i) runner verde HOTFIX-ARG-1 ✅** (CI
+  `29865037586` · Release `29865037568` @ tip `fe75269` —
+  [ACTA-HOTFIX-ARG-1](../../REPORTES/ACTA-HOTFIX-ARG-1-2026-07-21.md)) ·
+  **(ii) tick DE-I8 pend** — **no abrir** hasta tick custodio inflar
+  `HOLONES/03-emmanuel/`. Brief al abrir.
   DC: [DC-GC-campanas-s03](DECISIONES.md#dc-gc-campanas-s03--2026-07-21--cerrada-candidata-parked).
 
 ## Cierre del sprint (parte final — no evaporar)
