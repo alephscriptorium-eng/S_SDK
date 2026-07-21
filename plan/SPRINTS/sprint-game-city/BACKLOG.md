@@ -33,24 +33,31 @@ aceptable-con-notas · Z08-f4..5 aceptable (re-smoke renegociada con intento).
 
 **Paquete mínimo de higiene (ops; GC-2 cerró sobre aplazamientos sin esto):**
 
+- **Práctica de canal (2026-07-21):** toda validación de cierre que el
+  orquestador acepte debe llegar en formato **claim → acta/SHA** (F-CANAL
+  ACTA-CONSOLIDADA-GC23: claims «re-smoke PASS» / «scrub A3» sin soporte en
+  repo). Sin acta/SHA = no cerrado.
 - **Tick A1 (infra):** ✅ **cerrado 2026-07-21** — `npm ci` OK medido en
   zeus-sdk @ `fa73062` + games-library @ `5b5bf4e` (tip GL puede ir más
   adelante). Evidencia: EXIT npm ci. **No reabrir A1.** Residual runtime → **Tick A1b**.
-- **Tick A1b (runtime deps):** ⬜ **abierto 2026-07-21** — tree post-`npm ci` **no
-  arranca fabric**. Causa medida: `@alephscript/mcp-core-sdk` incompleto (sin
-  `package.json` / export `server`) + `express` missing → `:3017`/`:3015` DOWN;
-  NR `:1880` UP. Dueño: **custodio/ops** (no hotfix WP). Bloquea re-smoke D1–D3
-  y vivos Z04/Z08; **no** bloquea merges Z08/Z15. Acta:
-  [RESMOKE-post-A1](../../REPORTES/RESMOKE-post-A1-2026-07-21.md).
-- **Re-smoke:** f1–f3 `:3017` + H1 `:3015` + Mano/Ciudadano authority (D1–D3
-  Z08). **A1✅** (`npm ci`); intento vivo 2026-07-21 **FAIL** — bloqueado por
-  **A1b**. Acta [RESMOKE-post-A1](../../REPORTES/RESMOKE-post-A1-2026-07-21.md).
+- **Tick A1b (runtime deps):** ✅ **PASS 2026-07-21** — claim → acta
+  [ACTA-A1b-PASS-2026-07-21](../../REPORTES/ACTA-A1b-PASS-2026-07-21.md).
+  Evidencia: mcp-core-sdk server export OK · express 5.2.1 · `:3017`/`:3015`
+  UP · re-smoke health/admin 200 · e2e federación **8/8** (wiring ZEUS_* +
+  wait authority). SHAs: zeus `af0bad9` · GL `439788f`. **No reabrir A1b.**
+  Acta FAIL previo [RESMOKE-post-A1](../../REPORTES/RESMOKE-post-A1-2026-07-21.md)
+  se conserva (claim→acta; no reescribir historia).
+- **Re-smoke:** f1–f3 `:3017` + H1 `:3015` — **PASS** bajo A1b (misma acta).
+  Framing histórico Z08 «pendiente acta» corregido → fue FAIL; ahora cerrado
+  con A1b PASS.
 - **Push S_SDK:** tip local ahead (~10+) → origin (gate de ola; custodio).
   No bloquea apertura 🔶; anotar en briefs.
 - **A2 → WP-Z15:** ✅ **cerrado 2026-07-21** — lectura `intentionalStops` en
   `@zeus/mcp-launcher` + hook lifecycle @ zeus `a4aaf8c`. **Z12-f2 despachable.**
   Ficha: [WP-Z15](WP-Z15-intentional-stops-read.md). Reporte:
   [WP-Z15](../../REPORTES/WP-Z15-intentional-stops-read.md).
+- **HOTFIX-GATES:** ✅ zeus `af0bad9` — 17 offenders mcp-launcher cleared;
+  `npm run gates` OK. Scrub WP-Z* en launcher + ciudad-lifecycle.
 
 ## Replan post-vigía GC-1.5 (2026-07-21)
 
@@ -163,9 +170,10 @@ Z09/Z10; DC-GC-ceguera-marca).
   [WP-Z04](WP-Z04-rabbits-rsh.md). Reporte:
   [WP-Z04](../../REPORTES/WP-Z04-rabbits-rsh.md).
 - ⬜ **WP-Z05 · Evoluciones de engine (deltas, zonas, ACL, loader, sharding)** —
-  track ENGINE · prio 3 · parked GC-3 · disparo: Z08-f6 · eje IV por item; II si
-  un item sustituye mecanismo vigente (destino canónico).
-  Ficha: [WP-Z05](WP-Z05-engine-evoluciones.md).
+  track ENGINE · prio 3 · **unpark GC-4 (items 1–2)** — señal vigía
+  `ACTA-CONSOLIDADA-GC23`: backpressure adaptativo ausente + comportamiento-al-techo
+  jamás observado → priorizar **deltas + zonas** en GC-4. Sigue ⬜ (no 🔶) hasta
+  GO explícito de ola. Resto de items parked. Ficha: [WP-Z05](WP-Z05-engine-evoluciones.md).
 - ✅ **WP-Z06 · `@zeus/mcp-launcher` — habilitador r/s/h + meta-ops** — track OPS ·
   prio 2 · dep — · eje I ✅ (tool call tronco+satélite fixture). Pack
   `@zeus/mcp-launcher` · zeus-sdk `03350a2` (+ puntero submodule). **Aceptado ✅**
@@ -329,10 +337,12 @@ block2 §6 —
 ## Reglas del sprint (además de las del skill)
 
 1. **Regla de los dos mundos (ceguera):** cero **tokens del método/marco**
-   (holones, práctica de gobierno, identificadores del skill/marco contenedor)
-   dentro de entregables que aterricen en zeus-sdk/games-library. **No incluye
-   marca de producto/datos:** `aleph` y `scriptorium` son **admisibles** como
-   nombre de ciudad, barrio, registry u otros datos de instancia
+   (holones, práctica de gobierno, identificadores del skill/marco contenedor,
+   **y** ids de tracking `WP-Z\d+`) dentro de entregables que aterricen en
+   zeus-sdk/games-library. Scope mínimo de grep: `packages/` **+** `e2e/` **+**
+   `kits/instances/`. **No incluye marca de producto/datos:** `aleph` y
+   `scriptorium` son **admisibles** como nombre de ciudad, barrio, registry u
+   otros datos de instancia
    ([DC-GC-ceguera-marca](DECISIONES.md#dc-gc-ceguera-marca--2026-07-20--cerrada)).
    Este plan puede nombrar lo que quiera; los paquetes no nombran el método.
 2. **Portar el concepto, no el código** (heredada de WP-U81 zeus): wiki-racer,
