@@ -112,4 +112,15 @@ Push tip / CI: **no afirmado** (brief: gate ola custodio; worker no push).
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** — 2026-07-21 · orquestador (merge/gobierno). Caveats deferred.
+
+Obra games-library `006aef1` (FF `main` sobre padre `5b5bf4e` + push `origin/main`) · tip reporte `dc64fcb` · bump submodule SCRIPT_SDK → `006aef1` · merge `main` @ tip post-aceptación. Diff = `kits/carpeta-dramaturgo/instances/ciudad/**` (instancia + proyección ledger→story-board + validate) + este reporte. Kit scripts intactos. CA instantiate/validate/ceguera/gamemap ✅. **CA «acto barrio despertó vía Z04 e2e»** ⏳ gap documentado — regenerar proyección al cerrar Z04. Z04/Z15/Z08-f6 en vuelo intactos.
+
+### Deferred explícitos (no bloquean ✅)
+
+| id | ítem | nota |
+| -- | ---- | ---- |
+| D1 | Regenerar fixture/story-board desde ledger peer r/s/h | al cerrar Z04 ✅ (gap CA e2e) |
+| D2 | Tipología maquinaria/operador/rabbit en mapeo | contrato Z13 (TRAMA-AGUA §5.2); fuera de alcance Z07 |
+
+Hallazgos (ORIGIN.md sanitizado a ruta relativa) no bloquean. Push GL tip afirmado en este merge.

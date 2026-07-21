@@ -18,8 +18,8 @@
   **Tick A1 cerrado** → Z10 brief → **Z10 ✅** (cierra lote post-A1 Z14+Z09+Z10).
 **Ola GC-2 (cerrada 2026-07-21):** Z03 ✅ · Z06 ✅ · Z08-f4..5 ✅ · Z12-f1 ✅ —
   lote completo; higiene de cierre = §Cola post-GC-2 (A1/re-smoke/push; A2→Z15).
-**Ola GC-3 (abierta 2026-07-21 — federación y población):** lote inicial 🔶
-  Z04 · Z07 · Z08-f6(+f7) · **Z15 (A2, prio alta)**. Parked ⬜: Z11 (tras Z04) ·
+**Ola GC-3 (abierta 2026-07-21 — federación y población):** lote 🔶
+  Z04 · **Z07 ✅** · Z08-f6(+f7) · **Z15 (A2, prio alta)**. Parked ⬜: Z11 (tras Z04) ·
   Z12-f2 (tras **Z15 ✅** + f1 ✅) · Z13 (tras Z12-f1·Z03·Z04) · Z05 (por items).
   Criterio custodio: no abrir Z12-f2/Z13 hasta Z15 ≥🔶/✅; A1 no bloquea 🔶 código.
 
@@ -118,7 +118,7 @@ Z09/Z10; DC-GC-ceguera-marca).
 ## WPs (estado canónico)
 
 > Lote GC-2 (**cerrada 2026-07-21**): **Z03 ✅ · Z06 ✅ · Z08-f4..5 ✅ · Z12-f1 ✅**.
-> Lote GC-3 (**abierta**): **Z04 🔶 · Z07 🔶 · Z08-f6(+f7) 🔶 · Z15 🔶** · parked
+> Lote GC-3 (**abierta**): **Z04 🔶 · Z07 ✅ · Z08-f6(+f7) 🔶 · Z15 🔶** · parked
 > Z11·Z12-f2(tras Z15)·Z13·Z05. Issues: S_SDK #3 #6 #8 #12 (sync-map).
 
 - ✅ **WP-Z01 · Pack mockdatas ciudad → firehose/cache-browser** — track PACK ·
@@ -160,10 +160,15 @@ Z09/Z10; DC-GC-ceguera-marca).
   Brief: [BRIEF-WP-Z06](../../REPORTES/BRIEF-WP-Z06-mcp-launcher.md). Ficha:
   [WP-Z06](WP-Z06-mcp-launcher.md). Reporte:
   [WP-Z06](../../REPORTES/WP-Z06-mcp-launcher.md).
-- 🔶 **WP-Z07 · Instancia dramaturgo `ciudad` (capa lectura)** — track PACK ·
-  prio 4 · ola GC-3 · dep Z03 ✅ · CA propios del kit (validador story-board).
-  Brief: [BRIEF-WP-Z07](../../REPORTES/BRIEF-WP-Z07-dramaturgo-ciudad.md).
-  Ficha: [WP-Z07](WP-Z07-dramaturgo-ciudad.md).
+- ✅ **WP-Z07 · Instancia dramaturgo `ciudad` (capa lectura)** — track PACK ·
+  prio 4 · ola GC-3 · dep Z03 ✅ · CA kit (instantiate + validate-story-board ✅).
+  Instancia `kits/carpeta-dramaturgo/instances/ciudad/` · games-library
+  `006aef1` (+ puntero submodule). **Aceptado ✅** 2026-07-21 (orquestador)
+  con caveats: **D1** regenerar proyección ledger→story-board al cerrar Z04;
+  **D2** tipología jugadores → Z13. Brief:
+  [BRIEF-WP-Z07](../../REPORTES/BRIEF-WP-Z07-dramaturgo-ciudad.md). Ficha:
+  [WP-Z07](WP-Z07-dramaturgo-ciudad.md). Reporte:
+  [WP-Z07](../../REPORTES/WP-Z07-dramaturgo-ciudad.md).
 - ✅ **WP-Z08 · Constelación Node-RED: visor + coordinación + población (169)** —
   track VISOR · prio 2 · eje IV. **Lote GC-1 f1–f3 ✅** (Oreja/Ojo/Ciudad lectura;
   pack `plan/SPRINTS/sprint-game-city/flows/` @ e3daee8). **f4–f5 ✅** (Mano +
