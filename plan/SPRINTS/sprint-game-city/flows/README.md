@@ -1,21 +1,24 @@
-# Flows Node-RED — WP-Z08 f1–f5 (visor + Mano + Ciudadano)
+# Flows Node-RED — WP-Z08 f1–f6 (visor + Mano + Ciudadano + Población)
 
-Instancia **:1880** contra el fabric zeus **:3017** `/runtime`.  
-Alcance de este lote: **F1 Oreja · F2 Ojo · F3 Ciudad completa · F4 Mano · F5 Ciudadano**.  
-F6+ (población 169 / wishlist) → fuera de alcance.
+Instancia base **:1880** (o `PORT`) contra fabric zeus **:3017** `/runtime`.  
+Constelación f6: **≥2 ámbitos** vía `scripts/start-constelacion.sh`  
+(`:1884` distritos · `:1885` locales) con `Z08_AMBITO` + `POBLACION_MAX`.
+
+Alcance de este lote: **F6 Población (+ F7 wishlist doc)**. F1–f5 ya ✅.
 
 ## Piezas
 
-| paquete | versión | rol |
-|---|---|---|
-| `node-red-contrib-alephscript-core` | ^0.2.0 | boca Socket.IO hacia zeus |
-| `node-red-dashboard-2-alephscript-rooms` | ^0.2.0 | widget clients/rooms |
-| `@flowfuse/node-red-dashboard` | ^1.30.2 | Dashboard 2 host |
-| `helpers/operator-bridge-port.js` | local | port puro de `@zeus/operator-bridge` |
-| `helpers/ciudad-intent-stubs.js` | local | envelopes walk/wake/announce (stubs Z03) |
+| paquete / archivo | versión / rol |
+|---|---|
+| `node-red-contrib-alephscript-core` | ^0.2.0 — boca Socket.IO hacia zeus |
+| `node-red-dashboard-2-alephscript-rooms` | ^0.2.0 — widget clients/rooms |
+| `@flowfuse/node-red-dashboard` | ^1.30.2 — Dashboard 2 host |
+| `helpers/poblacion-censo.js` | parse censo · lotes ≤ `POBLACION_MAX` · ámbitos |
+| `fixtures/poblacion-lote-max24.json` | lote congelado f6 (techo 24) |
+| `WISHLIST-f7.md` | wishlist zeus←node-red (no forks) |
 
-Instalar desde Verdaccio (`npm.scriptorium.escrivivir.co`) o el registry ya configurado en `~/.npmrc`.  
-**Cero forks.** Fuentes de referencia (solo lectura): `WiringEditor/packages/`, `WiringEditor/examples/flows/`, `ScriptoriumVps/node-red-projects/`, `zeus-sdk/packages/mesh/operator-bridge`.
+Instalar desde Verdaccio (`npm.scriptorium.escrivivir.co`) o registry en `~/.npmrc`.  
+**Cero forks.**
 
 ## Auth fabric
 
@@ -24,55 +27,56 @@ Instalar desde Verdaccio (`npm.scriptorium.escrivivir.co`) o el registry ya conf
 // ns: /runtime · url: ws://localhost:3017
 ```
 
-Room de juego por defecto: `POZO_DEMO` (override `ZEUS_GAME_ROOM` / `ZEUS_POZO_ROOM`).  
-`ZEUS_GAME_ID` default `ciudad` (stubs Z03). Pozo **no** acepta `walk`/`wake` en su catálogo — la forma del envelope es la del contrato `@zeus/protocol` + args Z03; la authority ciudad los aceptará cuando Z03 mergee.
+Room de juego: `POZO_DEMO` (override `ZEUS_GAME_ROOM`).  
+`ZEUS_GAME_ID` default `ciudad`.
 
-## Arranque
+## Techo de población (f6)
 
-Precondiciones: socket-server zeus en `:3017`. Opcional para F3: console-monitor `:3014`, editor-ui `:3012`, firehose-browser `:3016`, cache-browser `:3015`.
+| variable | default | significado |
+|---|---|---|
+| `POBLACION_MAX` | **24** | techo vigente del lote (uno por zona/sección) |
+| `Z08_AMBITO` | `plaza-ops` | filtro de esta instancia: `distritos` \| `locales` \| `plaza-ops` |
+
+169 plenos = meta **Z05+f7**, no CA duro de f6. Subir el techo por lotes **solo
+mientras** snapshot/latencia aguanten; el dolor al techo es señal esperada (Z05 1–2).
+
+## Arranque (una instancia)
 
 ```bash
 cd plan/SPRINTS/sprint-game-city/flows
-npm install   # Verdaccio / registry con core@0.2.0 + rooms@0.2.0 + @flowfuse/node-red-dashboard
+npm install
+# opcional: export NODE_PATH="$HOME/.node-red/node_modules"
 npx --yes node-red -u "$(pwd)" -s "$(pwd)/settings.js"
 ```
 
-Si ya tenés los contribs en `~/.node-red/node_modules` (dev local), alternativa sin reinstall:
+## Arranque constelación (≥2 ámbitos)
 
 ```bash
 export NODE_PATH="$HOME/.node-red/node_modules"
-# opcional: PORT=1881 si :1880 está ocupado
-npx --yes node-red -u "$(pwd)" -s "$(pwd)/settings.js"
+export POBLACION_MAX=24
+bash scripts/start-constelacion.sh
+# editors: :1884 (distritos) · :1885 (locales)
 ```
-
-- Editor: <http://127.0.0.1:1880> (o `PORT`)
-- Dashboard: <http://127.0.0.1:1880/dashboard/ciudad>
 
 ## Tabs
 
 | tab | fase | qué hace |
 |---|---|---|
-| **F1 Oreja** | f1 | 2× `alephscript-core-client` (PUBLIC_ROOM + POZO_DEMO); filtra `state\|track\|ledger\|SET_STATE`; taxonomía `sys/app/ui/agent/game` |
-| **F2 Ojo** | f2 | `alephscript-rooms-*` en modo `external` → `http://localhost:3017`; widget rooms/clients |
-| **F3 Ciudad completa** | f3 | `http request` a `/snapshot`, `/api/mcp/servers`, `/api/stats`, `/api/lineas`; join + grupos por distrito; fallback fixture |
-| **F4 Mano** | f4 | inject walk/wake → compose envelope → `ROOM_MESSAGE` event=`intent`; demo operator-bridge onState |
-| **F5 Ciudadano** | f5 | subflow `Ciudadano (censo)` · id `aleph` · announce + walk periódico (random-walk calles startpack) |
+| **F1–F5** | f1–f5 | ver historial; Oreja/Ojo/Ciudad/Mano/Ciudadano |
+| **F6 Población** | f6 | lote por ámbito · fan-out announce/walk · demo duo distritos+locales |
 
-## Helpers locales
+## Helpers / tests
 
 ```bash
-node --test test/intent-shape.test.js   # CA offline: forma envelope + bridge port
+node --test test/*.test.js
+# intent-shape (f4–f5) + poblacion-censo (f6 techo + ≥2 ámbitos)
 ```
 
-## Dependencia blanda Z01 / Z03 / Z10
+## Wishlist f7
 
-- Z01 browsers: F3 marca `volumeSource: "fixture"` si `:3015`/`:3016` no responden.
-- Z03 juego ciudad: envelopes listos; aceptación authority ⏳ hasta merge + zeus arriba.
-- Z10 caminos: F5 usa `nextRandomWalk` sobre calles del startpack; sustituir cuando exista viaje.
+Ver [WISHLIST-f7.md](WISHLIST-f7.md) — alimenta Z05/Z09; **no implementar forks**.
 
 ## Transparencia (regla 3 sprint)
-
-La authority / zeus-sdk **no** lleva código Node-RED-aware. Este pack vive solo bajo `plan/SPRINTS/sprint-game-city/flows/`. Verificar:
 
 ```bash
 rg -i 'node-red|nodered' HOLONES/01-mythos/zeus-sdk/packages --glob '!**/node_modules/**' -l
@@ -81,6 +85,5 @@ rg -i 'node-red|nodered' HOLONES/01-mythos/zeus-sdk/packages --glob '!**/node_mo
 
 ## Fuera de este lote
 
-- f6 Población 169 · f7 wishlist
-- Pack en `games-library` · mini-clon VPS (Z09) · switch `serverUrl` productivo
-- Edits a Z03 / Z06
+- 169 plenos vivos (Z05) · publish nodos 0.3.x / SDK ^1.5 (Z09)
+- Edits a engine/authority · mcp-launcher · lifecycle · BACKLOG · miniclon/

@@ -1,10 +1,11 @@
 {
   "name": "sprint-game-city-nodered-visor",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
-  "description": "Node-RED userDir for WP-Z08 f1–f5 (Oreja · Ojo · Ciudad · Mano · Ciudadano). Instancia :1880 contra zeus :3017.",
+  "description": "Node-RED userDir WP-Z08 f1–f6 (Oreja·Ojo·Ciudad·Mano·Ciudadano·Población). Constelación :1884/:1885 vía scripts/start-constelacion.sh.",
   "scripts": {
-    "test": "node --test test/*.test.js"
+    "test": "node --test test/*.test.js",
+    "start:constelacion": "bash scripts/start-constelacion.sh"
   },
   "dependencies": {
     "@flowfuse/node-red-dashboard": "^1.30.2",
