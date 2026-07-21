@@ -152,12 +152,11 @@ Dep: §A1 (el acta viaja por la plaza) + Z10 (la reparación como viaje).
 
 ## Candidata hermana (no despiece ARG) — CAMPANAS S-03
 
-> **Re-scope 🔶** (2026-07-21): slice Zeus-side — el parte suena en
-> operator-ui (despertar/degradar/roto + mute); fuente A01 parte-kit.
-> Juntura 01↔03 / DE-I8 = horizonte, **no** obra de este WP. No es §A4–§A6.
-> Brief: [BRIEF-WP-CAMPANAS](../../REPORTES/BRIEF-WP-CAMPANAS-city.md).
-> DC: [DC-GC-campanas-s03](DECISIONES.md#dc-gc-campanas-s03--2026-07-21--cerrada-candidata-parked)
-> (+ addenda re-scope).
+> **✅** (2026-07-21): slice Zeus-side — el parte suena en operator-ui
+> (despertar/degradar/roto + mute); tip `1086392`. Juntura 01↔03 / DE-I8 =
+> horizonte residual. Brief/reporte:
+> [BRIEF-WP-CAMPANAS](../../REPORTES/BRIEF-WP-CAMPANAS-city.md) ·
+> [WP-CAMPANAS-city](../../REPORTES/WP-CAMPANAS-city.md).
 
 ## Trazabilidad
 

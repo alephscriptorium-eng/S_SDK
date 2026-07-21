@@ -44,8 +44,8 @@
   DC: [DC-GC-arg-1](DECISIONES.md#dc-gc-arg-1--2026-07-21--cerrada).
   **GO-6a/6b (2026-07-21):** mapa
   [siete plantas](MAPA-SIETE-PLANTAS.md) asentado.
-  **CAMPANAS (S-03) re-scope 2026-07-21 → 🔶** (sonido parte en operator-ui;
-  sin DE-I8 / sin E_SDK). Acta HOTFIX (i):
+  **CAMPANAS (S-03) ✅** re-scope 2026-07-21 (sonido parte en operator-ui;
+  sin DE-I8 / sin E_SDK · tip zeus `1086392`). Acta HOTFIX (i):
   [ACTA-HOTFIX-ARG-1-2026-07-21](../../REPORTES/ACTA-HOTFIX-ARG-1-2026-07-21.md).
 
 ## Cola post-GC-2 (higiene de cierre de ola — 2026-07-21)
@@ -468,15 +468,14 @@ Z09/Z10; DC-GC-ceguera-marca).
 > [DC-GC-siete-plantas](DECISIONES.md#dc-gc-siete-plantas--2026-07-21--cerrada-mapa-sin-wp).
 > Cinco spinoffs nombrados: S-02 · **S-03** · S-05 · S-06 · S-J.
 
-- 🔶 **WP-CAMPANAS · CAMPANAS-city (S-03 re-scope)** — el parte **SUENA** en
+- ✅ **WP-CAMPANAS · CAMPANAS-city (S-03 re-scope)** — el parte **SUENA** en
   operator-ui: evento sonoro por clase de titular (**despertar · degradar ·
-  roto**) + toggle silencio; fuente parte-kit (zeus ~`fe75269` / `c7ec7d0`);
-  **sin** mundo nuevo · **sin** E_SDK / DE-I8 (juntura 01↔03 = horizonte).
-  Dep: A01 ✅ · Z17 ✅ · HOTFIX-ARG-1 ✅. Brief:
-  [BRIEF-WP-CAMPANAS](../../REPORTES/BRIEF-WP-CAMPANAS-city.md). DC addenda
-  re-scope en
-  [DC-GC-campanas-s03](DECISIONES.md#dc-gc-campanas-s03--2026-07-21--cerrada-candidata-parked).
-  Ficha: [WP-CAMPANAS](WP-CAMPANAS.md). Issue: S_SDK #25.
+  roto**) + toggle silencio; fuente parte-kit; **sin** E_SDK / DE-I8.
+  **aceptado ✅** 2026-07-21 (gobierno): zeus-sdk `1086392` (+ puntero
+  submodule); bridge 13/13 · campanas-smoke OK · build:dev-app OK; ceguera 0.
+  Brief: [BRIEF-WP-CAMPANAS](../../REPORTES/BRIEF-WP-CAMPANAS-city.md).
+  Reporte: [WP-CAMPANAS-city](../../REPORTES/WP-CAMPANAS-city.md).
+  Ficha: [WP-CAMPANAS](WP-CAMPANAS.md). Issue: S_SDK #25 CLOSED.
 
 ## Cierre del sprint (parte final — no evaporar)
 
