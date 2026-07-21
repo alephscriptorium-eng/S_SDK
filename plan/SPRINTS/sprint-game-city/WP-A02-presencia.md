@@ -2,7 +2,7 @@
 
 | dato | valor |
 |---|---|
-| estado | 🔶 brief emitido (ola **ARG-1** · 2026-07-21) |
+| estado | ✅ aceptado (ola **ARG-1** · 2026-07-21 · GL `2b14d36`) |
 | track / prio | PACK / 1 · **ola ARG-1** |
 | depende de | Z16 ✅ (loop) · soft Z06/Z15/Z05-f2 (enchufe futuro, no obra) |
 | fuente | [SEMILLA-ARG.md](SEMILLA-ARG.md) §A2 (literal) |

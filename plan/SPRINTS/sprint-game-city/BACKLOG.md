@@ -32,7 +32,7 @@
   [BRIEF-Z17](../../REPORTES/BRIEF-WP-Z17-operator-ui-ciudad.md).
   Proyección issues = **LOCAL-ONLY** (sin apply).
 **Ola ARG-1 (abierta 2026-07-21 — GO custodio encolar A-16 / valor grande):**
-  lote inmediato 🔶 **WP-A01** (§A1 parte-kit) · 🔶 **WP-A02** (§A2 presencia).
+  lote inmediato 🔶 **WP-A01** (§A1 parte-kit) · ✅ **WP-A02** (§A2 presencia).
   **§A3 actas parked** («cuando A1 viva»). **§A4–§A6** sin masticar.
   Fuente: [SEMILLA-ARG](SEMILLA-ARG.md) (hermana de SEMILLA; no enmienda).
   Briefs: [BRIEF-A01](../../REPORTES/BRIEF-WP-A01-parte-kit.md) ·
@@ -361,11 +361,14 @@ Z09/Z10; DC-GC-ceguera-marca).
   (validarParte = patrón proyector). Brief:
   [BRIEF-WP-A01](../../REPORTES/BRIEF-WP-A01-parte-kit.md). Ficha:
   [WP-A01](WP-A01-parte-kit.md). Rama: `wp/gc-a01-parte-kit`.
-- 🔶 **WP-A02 · Señal de presencia · SEMILLA-ARG §A2** — track PACK · prio 1 ·
-  ola **ARG-1** · dep Z16 ✅ · ejes I/II · ceguera. Engancha decay Z16 a
-  presencia mock. Brief:
+- ✅ **WP-A02 · Señal de presencia · SEMILLA-ARG §A2** — track PACK · prio 1 ·
+  ola **ARG-1** · dep Z16 ✅ · ejes I/II · ceguera.
+  **aceptado ✅** 2026-07-21 (orquestador): games-library `2b14d36` (+ puntero
+  submodule); SeñalDePresencia v1 + mock + enganche loop Z16; tests 24/24 +
+  mvp/loop/presencia-smoke; ceguera 0. Brief:
   [BRIEF-WP-A02](../../REPORTES/BRIEF-WP-A02-presencia.md). Ficha:
-  [WP-A02](WP-A02-presencia.md). Rama: `wp/gc-a02-presencia`.
+  [WP-A02](WP-A02-presencia.md). Reporte:
+  [WP-A02](../../REPORTES/WP-A02-presencia.md).
 - ⬜ **WP-A03 · Acta de barrio + estado `roto` · SEMILLA-ARG §A3** —
   **parked** «cuando A1 viva» (dep §A1 + Z10). No brief. Contrato en
   [SEMILLA-ARG](SEMILLA-ARG.md) §A3.
@@ -400,7 +403,7 @@ Z09/Z10; DC-GC-ceguera-marca).
 > **GC-4 cerrada 2026-07-21** (Z05-f1·f2·Z11 ✅).
 > **GC-5 cerrada 2026-07-21 (GO custodio §1+§5):** **Z16 ✅** loop · **Z17 ✅**
 > operator-ui. **§2–§4/§6 parked** — no abrir sin GO nuevo. No reopen Z05-f1.
-> **ARG-1 abierta** (hermana [SEMILLA-ARG](SEMILLA-ARG.md)): A01·A02 🔶;
+> **ARG-1 abierta** (hermana [SEMILLA-ARG](SEMILLA-ARG.md)): A01 🔶 · A02 ✅;
 > A3 parked. No sustituye ni des-aparca SEMILLA §2/§6.
 
 - ✅ **§1 Loop de juego** → **WP-Z16** (objetivos/decay/economía de energía).
