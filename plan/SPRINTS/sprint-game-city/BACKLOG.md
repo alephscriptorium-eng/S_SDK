@@ -19,7 +19,7 @@
 **Ola GC-2 (cerrada 2026-07-21):** Z03 ✅ · Z06 ✅ · Z08-f4..5 ✅ · Z12-f1 ✅ —
   lote completo; higiene de cierre = §Cola post-GC-2 (A1/re-smoke/push; A2→Z15).
 **Ola GC-3 (abierta 2026-07-21 — federación y población):** lote 🔶
-  **Z04 ✅** · **Z07 ✅** · Z08-f6(+f7) · **Z15 (A2, prio alta)**. Parked ⬜: Z11 (tras Z04) ·
+  **Z04 ✅** · **Z07 ✅** · **Z08 ✅** · **Z15 (A2, prio alta)**. Parked ⬜: Z11 (tras Z04) ·
   Z12-f2 (tras **Z15 ✅** + f1 ✅) · Z13 (tras Z12-f1·Z03·Z04) · Z05 (por items).
   Criterio custodio: no abrir Z12-f2/Z13 hasta Z15 ≥🔶/✅; A1 no bloquea 🔶 código.
 
@@ -33,12 +33,14 @@ aceptable-con-notas · Z08-f4..5 aceptable (re-smoke renegociada con intento).
 
 **Paquete mínimo de higiene (ops; GC-2 cerró sobre aplazamientos sin esto):**
 
-- **Tick A1 (infra):** `npm ci` reproducible en zeus-sdk + games-library
-  (causa raíz de verificaciones vivas aplazadas). Custodio/ops — no bloquea
-  🔶 de WPs de código; cada BRIEF GC-3 exige env robusto + «A1 pendiente →
-  vivos deferibles con intento».
+- **Tick A1 (infra):** ✅ **cerrado 2026-07-21** — `npm ci` OK medido en
+  zeus-sdk @ `fa73062` + games-library @ `5b5bf4e` (tip GL puede ir más
+  adelante). Evidencia: EXIT npm ci. Residual runtime/tree → acta
+  `plan/REPORTES/RESMOKE-post-A1-2026-07-21.md` (re-smoke aparte).
 - **Re-smoke:** f1–f3 `:3017` + H1 `:3015` + Mano/Ciudadano authority
-  (D1–D3 Z08) **tras A1**.
+  (D1–D3 Z08). **A1✅ cerrado ops** — *re-smoke post-A1 en curso/pendiente acta*. Intento 2026-07-21: **FAIL** — acta
+  [RESMOKE-post-A1](../../REPORTES/RESMOKE-post-A1-2026-07-21.md)
+  (mcp-core-sdk incompleto + express missing; `:3017`/`:3015` DOWN).
 - **Push S_SDK:** tip local ahead (~10+) → origin (gate de ola; custodio).
   No bloquea apertura 🔶; anotar en briefs.
 - **A2 → WP-Z15:** exponer lectura de `intentionalStops` en
@@ -108,17 +110,18 @@ Z09/Z10; DC-GC-ceguera-marca).
 - **H1 (abierto):** reiniciar cache-browser `:3015` contra checkout actual
   (`ZEUS_VOLUMES_ROOT`) — **precondición de apertura Z08-f4** (§E b).
 - **Publish GL / push tip (✅ tip remoto 2026-07-21 post GC-2):** push tip 2026-07-21 (post GC-2) · S_SDK `990d763` · GL `5b5bf4e` · zeus `fa73062`. CI: GL success @ tip; zeus Docs success, CI/Release fail (known); S_SDK Docs sin run (paths `docs/**`). **Gate tip remoto satisfecho**; residual runner limpio / D2 publish 0.3.x Z09.
-- **Re-smoke Z08 (abierto, prosa → CA de Z08-f4):** dashboard vivo zeus
-  `:3017` tras A1✅ — **apertura obligatoria del BRIEF Z08-f4** (§E b).
+- **Re-smoke Z08 (abierto, FAIL 2026-07-21):** intento post-A1 documentado
+  (`RESMOKE-post-A1-2026-07-21.md`); `:3017`/`:3015` DOWN (deps runtime).
+  Sigue residual ops — no reabre ✅ Z08.
 - **Higiene doc post-TEMP (§E cola):** VISTA §5 → `CENSO-ESTADOS.md`; README
   linaje; regla 4 BACKLOG — micro-WP / tick custodio, no bloquea GC-2.
-- **Cola post-GC-2:** ver §Cola post-GC-2 (A1 npm-ci · re-smoke · push S_SDK ·
-  A2→Z15). Supersede ticks sueltos de re-smoke/H1 cuando A1 avance.
+- **Cola post-GC-2:** ver §Cola post-GC-2 (**A1✅** npm-ci · re-smoke · push
+  S_SDK · A2→Z15). A1 cerrado 2026-07-21; re-smoke/H1 = ops residual.
 
 ## WPs (estado canónico)
 
 > Lote GC-2 (**cerrada 2026-07-21**): **Z03 ✅ · Z06 ✅ · Z08-f4..5 ✅ · Z12-f1 ✅**.
-> Lote GC-3 (**abierta**): **Z04 ✅ · Z07 ✅ · Z08-f6(+f7) 🔶 · Z15 🔶** · parked
+> Lote GC-3 (**abierta**): **Z04 ✅ · Z07 ✅ · Z08 ✅ · Z15 🔶** · parked
 > Z11·Z12-f2(tras Z15)·Z13·Z05. Issues: S_SDK #3 #6 #8 #12 (sync-map).
 
 - ✅ **WP-Z01 · Pack mockdatas ciudad → firehose/cache-browser** — track PACK ·
@@ -181,10 +184,16 @@ Z09/Z10; DC-GC-ceguera-marca).
   `:3015`; **D3** authority vivo Mano/Ciudadano (fabric). Nota vigía
   (`ADDENDAS-GC2`): aceptable — re-smoke renegociada con intento documentado.
   Caveats f1–f3: grep transparencia acotado a `packages/`.
-  **🔶 f6(+f7)** GC-3 — Brief:
+  **f6(+f7) ✅** GC-3 — obra `cfd7c57` · tip rama `1c6eb6d` · merge `7dfff87`.
+  **Z08 completo ✅** 2026-07-21 (orquestador). Población por lotes
+  (`POBLACION_MAX=24`) + constelación ≥2 NR + wishlist f7. Caveats
+  deferred (siguen): **D1** re-smoke f1–f3 `:3017`; **D2** H1 `:3015`;
+  **D3** authority vivo Mano/Ciudadano — A1 ops cerrado; *re-smoke post-A1
+  en curso/pendiente acta*. Brief:
   [BRIEF-WP-Z08-f6-f7](../../REPORTES/BRIEF-WP-Z08-f6-f7-nodered-poblacion.md).
-  Ficha: [WP-Z08](WP-Z08-nodered-visor-ciudad.md). Reporte f4–f5:
-  [WP-Z08-f4-f5](../../REPORTES/WP-Z08-f4-f5-nodered-mano-ciudadano.md).
+  Ficha: [WP-Z08](WP-Z08-nodered-visor-ciudad.md). Reportes:
+  [f4–f5](../../REPORTES/WP-Z08-f4-f5-nodered-mano-ciudadano.md) ·
+  [f6–f7](../../REPORTES/WP-Z08-f6-f7-nodered-poblacion.md).
 - ✅ **WP-Z09 · Mini-clon local VPS Node-RED + pago deuda rooms** — track OPS ·
   prio 2 · dep — · eje I parcial (pins 0.3.0 + scripts; sin Docker vivo ni
   publish 0.3.x). Aterrizaje `miniclon/` (zeus-sdk A1). **Aceptado ✅**
