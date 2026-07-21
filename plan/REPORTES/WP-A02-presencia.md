@@ -110,4 +110,14 @@ Consumidor real del pack: `createCiudadDomainState` / `tick` / `applyDecay`
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** — 2026-07-21 · orquestador (merge/gobierno).
+
+games-library `main` @ `2b14d36` (FF + push `origin/main`) · SCRIPT_SDK submodule → `2b14d36`.
+Reporte tip `610502b` (obra reporte `5e99b81` + anotación SHA `610502b`; cabecera del reporte cita obra `5e99b81`).
+
+SeñalDePresencia v1 + mock + enganche loop Z16 (`ticksPresencia` / clase `flujo` sin recarga); tests 24/24 + mvp/loop/presencia-smoke; ceguera 0. **WP-A02 ✅** · ARG-1 sigue abierta (A01 🔶 · A03 parked).
+
+### Verificado (brazo merge/gobierno)
+- Rama GL `wp/gc-a02-presencia` @ `2b14d36` · FF → `main` · push tip autorizado (`alephscriptorium-eng`)
+- Rama reporte S_SDK `wp/gc-a02-presencia` @ `610502b` · FF → `main` · bump submodule GL
+- Sin force-push; sin reopen Z16 · sin §A3 · sin embajador · sin tocar A01 (`wp/gc-a01-parte-kit`)
