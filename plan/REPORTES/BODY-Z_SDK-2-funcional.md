@@ -3,6 +3,8 @@
 > lo aterrizado hoy en este repositorio y en su paquete de datos asociado.
 > Comentad aquí lo que toca este repo; este issue se regenera periódicamente,
 > no lo uséis como checklist editable.
+>
+> Corte: tip del repositorio `fe75269` · 2026-07-21.
 
 ## Aterrizado
 
@@ -61,6 +63,19 @@
 **Operación local**
 - Réplica local ligera del servidor remoto para el componente de salas, con
   versiones fijadas y scripts de arranque.
+- Paquetes del componente de salas **publicados en el registro** (versión
+  0.3.0) con dependencia del kit de protocolo en rango acordado.
+
+**Kits de presencia / parte / acta de barrio**
+- Slice de kits reutilizables aterrizado: emisión y validación de "parte",
+  presencia en barrio, y acta de barrio sobre el ledger — con batería de
+  pruebas en verde. Integración continua y release del tip en verde tras
+  la corrección de gates asociada.
+
+**Página pública de seguridad de la tubería**
+- Guía pública «La tubería, protegida» publicada en el sitio del marco
+  (obra cerrada; el seguimiento residual de paraguas queda en cola abierta
+  del tracker hermano, sin reabrir la página).
 
 ## Pendiente
 
@@ -72,10 +87,13 @@
 - **Re-chequeo amplio del panel en vivo**: tras la reparación de
   dependencias y la federación 8/8, falta confirmar vistas de solo lectura
   y de actuación del panel contra la malla en vivo.
-- **Publicación de paquete** (registro) para el componente de salas de la
-  réplica local — no hecha.
 - **Arranque por contenedor** (compose/up) + prueba de humo del cliente
-  federado para la réplica local — no hecha.
+  federado para la réplica local — diferido (daemon de contenedores caído
+  en la estación de ops).
+- **Cola abierta (parked, sin arrancar)** en el tracker hermano: paraguas
+  de embajada · privacidad de federación · seguimiento residual de la
+  tubería · campañas de narrativa (issues #22–#25 OPEN). No se abre el
+  epic de embajada desde este corte.
 - **Roadmap de motor aparcado** (sin abrir): control de acceso, cargadores
   de contenido, particionado, variantes de lanzador por especificación.
 
