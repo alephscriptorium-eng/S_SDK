@@ -10,7 +10,7 @@ Fuente de GO: `ACTA-CONSOLIDADA-GC23-2026-07-21.md` §GO (gate antes de GC-4).
 | Repo | SHA | Nota |
 |---|---|---|
 | zeus-sdk | `af0bad9` | tip post HOTFIX-GATES + scrub ceguera |
-| games-library | `525452b`+tip e2e | wiring ZEUS_* + wait authority |
+| games-library | `439788f` | wiring ZEUS_* antes de imports + wait authority |
 | SCRIPT_SDK | tip gobierno este commit | bump submodules + BACKLOG |
 
 ## Evidencia de facto (runtime)
