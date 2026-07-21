@@ -265,6 +265,9 @@ Z09/Z10; DC-GC-ceguera-marca).
   [WP-Z11](WP-Z11-linea-editor.md). Reporte:
   [WP-Z11](../../REPORTES/WP-Z11-linea-editor.md). Rama:
   `wp/gc-z11-linea-editor`.
+- ✅ **WP-Z12 · Encendido del árbol de vida (XState) — completo vía f1+f2** —
+  track ENGINE+OPS · **Z12 completo ✅** (f1 GC-2 · f2 GC-3). Canónico para
+  proyección/parser; detalle en bullets f1/f2 debajo. No reabrir.
 - ✅ **WP-Z12-f1 · Encendido del árbol de vida (lifecycle XState, start/stop real)** —
   track ENGINE+OPS · prio 2 · **f1 ✅ en GC-2** · dep Z06 ✅ + Z02 ✅ · ejes I/III/IV
   + ceguera. Packs `@zeus/lifecycle-kit` + `@zeus/ciudad-lifecycle` · zeus-sdk
