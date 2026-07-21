@@ -1,11 +1,12 @@
-# sprint-embajador-entrada — PREP (esqueleto · sin 🔶)
+# sprint-embajador-entrada — **ABIERTO** (GO-E1 · 🔶 emitidos)
 
-> **Estado: BORRADOR / PREP.** GO-V3 monta esqueleto + briefs borrador.
-> **NO emitir 🔶.** Apertura de obra = GO aparte cuando VIDA-1 marche
-> (DE-I19 v2 · ítem 2 de cola).
+> **Estado: ABIERTO · corte de entrada 🔶.** GO-E1 (2026-07-22).
+> Workers **aún NO despachados** — gate siguiente = **vigía R7** pre-despacho.
 >
-> Dolor real citado en cada brief: **peers esperando entrada** (federación
-> Z04 viva; falta peercard + handshake + puerta).
+> Norte CA: **un amigo entra con su peercard y arranca con
+> `startpack-ciudad-v0.1.0` como base default.**
+>
+> Dolor: peers federados (Z04 viva) esperan peercard + handshake + puerta.
 
 ## Parámetros
 
@@ -13,36 +14,43 @@
 |---|---|
 | `MUNDO_RAIZ` | `C:\Users\aleph\SCRIPT_SDK` |
 | `PLAN_DIR` | `plan\SPRINTS\sprint-embajador-entrada\` |
-| `ALCANCE_DIFF` | (al abrir) zeus-sdk mesh/fed + plan de este sprint — **TBD en GO de apertura** |
+| `ALCANCE_DIFF` | zeus-sdk mesh/fed/protocol/signaling/kits (acotado por brief) + reportes de este sprint |
+| `WORKTREE_BASE` | `HOLONES\01-mythos\zeus-sdk\.worktrees\` (obra tipica) |
 | `RAMA_WP` | `wp/ee-<id>-<slug>` (ee = embajador-entrada) |
 
-## Corte autorizado (cuando abra)
+## Corte autorizado (🔶)
 
-| Pieza | Qué | Nota |
-|---|---|---|
-| **E02** | `ssbId` handshake + firma tarjeta = cripto peercard | Z_SDK #4 (citar, no cerrar) |
-| **E01 f1** | Kit embajador | base |
-| **E01 f2** | Peercard | TTL / ciclo de vida |
-| **ARG §A5** | Puerta externos | Z04 + webs + tracker + Z17; sin superficie nueva |
-| E01 f3/f4 | Niveles · Visual | **paraguas** — no en corte de entrada |
+| Pieza | Qué | Overlap | Brief |
+|---|---|---|---|
+| **E02** | `ssbId` handshake + firma tarjeta = cripto peercard | Z_SDK **#4** (citar, no cerrar) | [BRIEF-E02](../../REPORTES/BRIEF-WP-E02-privacidad-federacion.md) |
+| **E01 f1** | Kit embajador | base | [BRIEF-E01-f1](../../REPORTES/BRIEF-WP-E01-f1-kit.md) |
+| **E01 f2** | Peercard (TTL / ciclo) | firma → E02 / #4 | [BRIEF-E01-f2](../../REPORTES/BRIEF-WP-E01-f2-peercard.md) |
+| **ARG §A5** | Puerta externos | Z04+webs+tracker+Z17; sin superficie nueva | [BRIEF-A5](../../REPORTES/BRIEF-WP-A5-puerta.md) |
 
-## CA experiencia (norte)
+## Paraguas (NO 🔶)
 
-> Un amigo entra con su peercard y arranca con
-> `startpack-ciudad-v0.1.0` como base default.
+| Pieza | Nota |
+|---|---|
+| E01 f3 niveles | Z_SDK #6 = guardarraíl; parked |
+| E01 f4 visual | parked · no confundir con Z17 |
+
+## Secuencia (documentada · sin despacho)
+
+```text
+E02 ──► E01-f2 ──► A5
+ ╲
+  E01-f1 (∥ E02 si paths no se pisan)
+```
 
 ## Fuentes (lectura; city cerrado)
 
-- [`../sprint-game-city/WP-E01-embajador.md`](../sprint-game-city/WP-E01-embajador.md)
+- [`../sprint-game-city/WP-E01-embajador.md`](../sprint-game-city/WP-E01-embajador.md) (fuente parked)
 - [`../sprint-game-city/WP-E02-privacidad-federacion.md`](../sprint-game-city/WP-E02-privacidad-federacion.md)
 - [`../sprint-game-city/SEMILLA-ARG.md`](../sprint-game-city/SEMILLA-ARG.md) §A5
+- [DECISIONES.md](DECISIONES.md) · [BACKLOG.md](BACKLOG.md)
 - Acta pavimentación: `plan/REPORTES/ACTA-OPS-GO4-embajador-pavement-2026-07-21.md`
+- Umbrellas: S_SDK [#22](https://github.com/alephscriptorium-eng/S_SDK/issues/22) · [#23](https://github.com/alephscriptorium-eng/S_SDK/issues/23)
 
-## Briefs BORRADOR (sin 🔶)
+## Checklist R7 pre-despacho (para vigía)
 
-| Brief | Path |
-|---|---|
-| E02 | [BRIEF-BORRADOR-E02](../../REPORTES/BRIEF-BORRADOR-WP-E02-privacidad-federacion.md) |
-| E01-f1 | [BRIEF-BORRADOR-E01-f1](../../REPORTES/BRIEF-BORRADOR-WP-E01-f1-kit.md) |
-| E01-f2 | [BRIEF-BORRADOR-E01-f2](../../REPORTES/BRIEF-BORRADOR-WP-E01-f2-peercard.md) |
-| A5 puerta | [BRIEF-BORRADOR-A5](../../REPORTES/BRIEF-BORRADOR-WP-A5-puerta.md) |
+Ver tabla en [BACKLOG.md](BACKLOG.md) §R7.

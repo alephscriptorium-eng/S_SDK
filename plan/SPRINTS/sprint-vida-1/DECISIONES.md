@@ -12,7 +12,7 @@ Proyección = LOCAL-ONLY. NO-GO: E_SDK · reopen ✅ · parked→🔶 sin GO
 (salvo M01/M02).
 
 **Consecuencia:** workers despachables con briefs en `plan/REPORTES/`.
-EMBAJADOR-ENTRADA sigue PREP sin 🔶 (GO-V3 / GO futuro).
+EMBAJADOR-ENTRADA: PREP GO-V3 → apertura **GO-E1** (🔶; R7 pre-despacho).
 
 ### DC-V1-story-board-contrato · 2026-07-22 · **cerrada**
 

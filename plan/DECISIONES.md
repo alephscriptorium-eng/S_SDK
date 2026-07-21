@@ -250,10 +250,12 @@ bloquea WP-D31 de aquel mundo, no bloquea este plan.)*
   **Orden v2 (GO-V1):**
 
   1. **VIDA-1** ∥ **prep-entrada** — SEMILLA §3 misiones + §4 cronista
-     (sprint-vida-1; únicos 🔶 autorizados en GO-V2) en paralelo con
-     esqueleto PREP embajador (**sin** 🔶 hasta GO aparte)
-  2. **EMBAJADOR-ENTRADA** — corte E02 + E01 f1–2 + ARG §A5 (apertura =
-     GO propio cuando VIDA-1 marche)
+     (sprint-vida-1; M01+M02 ✅ V1-1) en paralelo con esqueleto PREP
+     embajador (GO-V3) → apertura **GO-E1**
+  2. **EMBAJADOR-ENTRADA** — corte E02 + E01 f1–2 + ARG §A5 ·
+     **GO-E1 🔶 emitidos** (2026-07-22); workers **no** despachados hasta
+     vigía R7 · umbrellas S_SDK #22/#23 · LOCAL-ONLY WP filas nuevas ·
+     Z_SDK #4 (obra; no cerrar) · #5/#6 citar no cerrar
   3. **CIUDAD-REAL** — SEMILLA **§2** + ACL (Z05 items 3–6 / Z_SDK #5) +
      SEMILLA-ARG **§A4**
   4. SEMILLA **§6** meta-juego
@@ -262,7 +264,7 @@ bloquea WP-D31 de aquel mundo, no bloquea este plan.)*
   **Mantener (invariantes):** veto **E_SDK / DE-I8** fuera de cola hasta
   GO custodio propio · **no reopen ✅** · práctica **claim→acta/SHA**
   (sin acta/SHA = no cerrado). Encolar ≠ abrir: parked siguen ⬜ hasta
-  GO que emita 🔶 + BRIEF (salvo M01/M02 autorizados en GO-V2).
+  GO que emita 🔶 + BRIEF (M01/M02 = GO-V2 ✅; corte embajador = GO-E1 🔶).
 
   **Horizonte (sin WP ni GO — carril declarado):**
   **extensión-VSCode-zigurat** como interfaz mesh (wrapper zeus-sdk +
