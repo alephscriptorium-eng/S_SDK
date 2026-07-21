@@ -438,8 +438,25 @@ Z09/Z10; DC-GC-ceguera-marca).
   (SEMILLA-ARG lo roza; **no** des-aparca §6 hoy.)
 - ⬜ **Trama-agua como mundo del dramaturgo** (ronda 3, parked) — ejes REIC de
   [TRAMA-AGUA](TRAMA-AGUA.md) §5.5; dep Z07 + Z13.
-- ⬜ **Epic embajador** (**parked** sin GO) — no abrir; ops de pavimentación
-  van por canal GO-4 aparte. ACL Z05 item 3 se des-aparca cuando este epic abra.
+## Federaciones / externos (parked — proyección OPEN · sin 🔶)
+
+> GO custodio DC-15 · 2026-07-21 (+ addenda race I75): encolar + proyectar
+> OPEN. **No abrir** epic ni CAMPANAS. I75 ✅ / #21 CLOSED · página viva;
+> Z_SDK #4/#5/#6 = overlap pack (citar, no cerrar). Altas S_SDK **#22–#25**.
+
+- ⬜ **WP-E01 · Epic embajador (paraguas)** — **parked** sin GO · no abrir ·
+  sin brief. Fases = items del paraguas (patrón Z05): (1) kit · (2) peercard ·
+  (3) niveles · (4) visual. Ops pavimentación = GO-4 (acta aparte). ACL Z05
+  item 3 se des-aparca cuando este epic abra. Overlap pack: Z_SDK #5/#6 (no
+  cerrar). Ficha: [WP-E01](WP-E01-embajador.md). Issue: S_SDK #22.
+- ⬜ **WP-E02 · Privacidad de federación** — **parked** · `ssbId` en handshake
+  + firma de tarjeta viajera. Overlap pack: Z_SDK #4 (no cerrar). No abre E01.
+  Ficha: [WP-E02](WP-E02-privacidad-federacion.md). Issue: S_SDK #23.
+- ⬜ **WP-E03 · Página pública «tubería protegida» (paraguas)** — **parked** ·
+  tracking residual (proyección seguridad). Obra = **WP-I75 ✅** (S_SDK #21
+  CLOSED · tip `f0e5cc7` ·
+  https://s-sdk.escrivivir.co/guide/tuberia-protegida) — related; E03 no
+  duplica. Ficha: [WP-E03](WP-E03-tuberia-protegida.md). Issue: S_SDK #24.
 
 ## Candidatas post-ARG-1 (parked — sin 🔶)
 
@@ -447,13 +464,14 @@ Z09/Z10; DC-GC-ceguera-marca).
 > [DC-GC-siete-plantas](DECISIONES.md#dc-gc-siete-plantas--2026-07-21--cerrada-mapa-sin-wp).
 > Cinco spinoffs nombrados: S-02 · **S-03** · S-05 · S-06 · S-J.
 
-- ⬜ **CAMPANAS (S-03)** — **parked** · primera juntura jugable 01↔03 ·
-  dep técnica A01 ✅ · **(i) runner verde HOTFIX-ARG-1 ✅** (CI
+- ⬜ **WP-CAMPANAS · CAMPANAS (S-03)** — **parked** · primera costura jugable
+  01↔03 · dep técnica A01 ✅ · **(i) runner verde HOTFIX-ARG-1 ✅** (CI
   `29865037586` · Release `29865037568` @ tip `fe75269` —
   [ACTA-HOTFIX-ARG-1](../../REPORTES/ACTA-HOTFIX-ARG-1-2026-07-21.md)) ·
   **(ii) tick DE-I8 pend** — **no abrir** hasta tick custodio inflar
-  `HOLONES/03-emmanuel/`. Brief al abrir.
-  DC: [DC-GC-campanas-s03](DECISIONES.md#dc-gc-campanas-s03--2026-07-21--cerrada-candidata-parked).
+  satélite 03. Brief al abrir. DC:
+  [DC-GC-campanas-s03](DECISIONES.md#dc-gc-campanas-s03--2026-07-21--cerrada-candidata-parked).
+  Ficha: [WP-CAMPANAS](WP-CAMPANAS.md). Issue: S_SDK #25.
 
 ## Cierre del sprint (parte final — no evaporar)
 
