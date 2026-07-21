@@ -5,7 +5,7 @@
 | rol | gobierno orquestador (C04 · cierre real) |
 | regla | método v0.5 · **regla 16** (run-id VERDE CI + Release/homólogo por repo tocado) |
 | sprint | **sprint-game-city CERRADO** |
-| tip S_SDK (cierre) | `2340536` (`2340536ca2082db73b2559bff326bd91a40e2042`) |
+| tip S_SDK (cierre) | `3c0cbf4` (`3c0cbf47ffce1f56e964027c18f6fcb9d79c05c4`) · Docs homologado @ `2340536` |
 | tip Z_SDK | `1086392` (`1086392d67d6398b43ccf5379062713b3c0dd486`) |
 | tip GL | `3288510` (`32885103bd66b0855d971872a5997fa6aba59c70`) |
 | reporte | [CIERRE-sprint-game-city-2026-07-21.md](CIERRE-sprint-game-city-2026-07-21.md) |

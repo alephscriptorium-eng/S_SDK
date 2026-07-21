@@ -8,7 +8,7 @@
 | BACKLOG | banner CERRADO · parked sin GO listados |
 | tip Z_SDK | `1086392` |
 | tip GL | `3288510` |
-| tip S_SDK | `2340536` |
+| tip S_SDK | `3c0cbf4` (Docs @ `2340536`) |
 
 ## Veredicto
 
