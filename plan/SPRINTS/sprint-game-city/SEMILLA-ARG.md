@@ -4,10 +4,10 @@
 > enmienda. Hermana de la SEMILLA. Fuente de contratos: GO custodio **ARG-1**
 > (2026-07-21) — despiece §A1–§A3 masticado a nivel calculadora.
 >
-> **Estado GO (2026-07-21):** ola **ARG-1** — **§A1 ✅** WP-A01 · **§A2 ✅**
-> WP-A02 · **§A3 🔶** WP-A03 (gate «cuando A1 viva» satisfecho). **§A4–§A6**
-> sin masticar aún (no encarnar). SEMILLA §2–§4/§6, Z05 items 3–6 y epic
-> embajador siguen parked sin GO propio.
+> **Estado GO (2026-07-21):** ola **ARG-1 cerrada** (slice masticado) —
+> **§A1 ✅** WP-A01 · **§A2 ✅** WP-A02 · **§A3 ✅** WP-A03.
+> **§A4–§A6 parked** sin GO (no encarnar). SEMILLA §2–§4/§6, Z05 items 3–6 y
+> epic embajador siguen parked sin GO propio.
 
 ## Tesis
 
@@ -41,10 +41,10 @@ manejo real de información):
 |---|---|---|---|
 | **A1** | Mensaje común de la plaza (`parte-kit`) | alta / coste bajo | ✅ WP-A01 |
 | **A2** | Presencia = contexto (señal → decay Z16) | alta / coste bajo | ✅ WP-A02 |
-| **A3** | Acta de barrio + estado `roto` | nuclear ARG | 🔶 WP-A03 (A1 viva) |
-| **A4** | Edificios = submódulos, gentes = tools | extiende SEMILLA §2 | parked · post A1–A3 |
-| **A5** | Puerta de externos (Z04 + webs + tracker + Z17) | superficie existente | parked · post A1–A3 |
-| **A6** | Economía de contexto (presupuesto ventana ↔ Z16) | cierra círculo | parked · post A1–A3 |
+| **A3** | Acta de barrio + estado `roto` | nuclear ARG | ✅ WP-A03 |
+| **A4** | Edificios = submódulos, gentes = tools | extiende SEMILLA §2 | parked · sin GO |
+| **A5** | Puerta de externos (Z04 + webs + tracker + Z17) | superficie existente | parked · sin GO |
+| **A6** | Economía de contexto (presupuesto ventana ↔ Z16) | cierra círculo | parked · sin GO |
 
 Orden: §A1 → §A2 → §A3 → §A4 → §A5 → §A6 (A1 hace visible todo lo demás;
 A6 es ajuste de números sobre Z16).

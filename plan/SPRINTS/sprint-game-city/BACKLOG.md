@@ -31,15 +31,16 @@
   Briefs: [BRIEF-Z16](../../REPORTES/BRIEF-WP-Z16-loop-juego.md) ·
   [BRIEF-Z17](../../REPORTES/BRIEF-WP-Z17-operator-ui-ciudad.md).
   Proyección issues = **LOCAL-ONLY** (sin apply).
-**Ola ARG-1 (abierta 2026-07-21 — GO custodio encolar A-16 / valor grande):**
-  lote ✅ **WP-A01** (§A1 parte-kit) · ✅ **WP-A02** (§A2 presencia).
-  **§A3 🔶 WP-A03** (gate «cuando A1 viva» satisfecho — A01 ✅). **§A4–§A6**
-  sin masticar.
-  Fuente: [SEMILLA-ARG](SEMILLA-ARG.md) (hermana de SEMILLA; no enmienda).
+**Ola ARG-1 (cerrada 2026-07-21 — slice masticado GO cerrado):**
+  lote ✅ **WP-A01** (§A1 parte-kit) · ✅ **WP-A02** (§A2 presencia) ·
+  ✅ **WP-A03** (§A3 acta-barrio). Banner: **A01✅ · A02✅ · A03✅**.
+  **§A4–§A6 parked** sin GO — no abrir. Fuente: [SEMILLA-ARG](SEMILLA-ARG.md)
+  (hermana de SEMILLA; no enmienda).
   Briefs: [BRIEF-A01](../../REPORTES/BRIEF-WP-A01-parte-kit.md) ·
   [BRIEF-A02](../../REPORTES/BRIEF-WP-A02-presencia.md) ·
   [BRIEF-A03](../../REPORTES/BRIEF-WP-A03-acta-barrio.md).
-  **Sigue parked sin GO:** SEMILLA §2–§4/§6 · Z05 items 3–6 · epic embajador.
+  **Sigue parked sin GO:** §A4–§A6 · SEMILLA §2–§4/§6 · Z05 items 3–6 ·
+  epic embajador.
   DC: [DC-GC-arg-1](DECISIONES.md#dc-gc-arg-1--2026-07-21--cerrada).
 
 ## Cola post-GC-2 (higiene de cierre de ola — 2026-07-21)
@@ -375,13 +376,17 @@ Z09/Z10; DC-GC-ceguera-marca).
   [BRIEF-WP-A02](../../REPORTES/BRIEF-WP-A02-presencia.md). Ficha:
   [WP-A02](WP-A02-presencia.md). Reporte:
   [WP-A02](../../REPORTES/WP-A02-presencia.md).
-- 🔶 **WP-A03 · Acta de barrio + estado `roto` · SEMILLA-ARG §A3** —
+- ✅ **WP-A03 · Acta de barrio + estado `roto` · SEMILLA-ARG §A3** —
   track PACK · prio 1 · ola **ARG-1** · dep A01 ✅ viva · Z10 ✅ · ejes I/II ·
-  ceguera. Gate «cuando A1 viva» **satisfecho** (A01 ✅ zeus `c7ec7d0`).
-  Nota: A01 viva — acta viaja por la plaza. **Listo para despacho**
-  (orquestador; este gobierno no spawnea worker). Brief:
+  ceguera.
+  **aceptado ✅** 2026-07-21 (orquestador): zeus-sdk `a6381a5` + games-library
+  `3288510` (+ punteros submodule); ActaDeBarrio v1 + `@zeus/acta-kit` +
+  wake `roto` + reparar vía viaje juguete; tests acta-kit 7/7 · viaje 6/6 ·
+  ciudad 30/30; ceguera 0. Cierra slice ARG-1 masticado (A01·A02·A03 ✅);
+  §A4–§A6 parked. Brief:
   [BRIEF-WP-A03](../../REPORTES/BRIEF-WP-A03-acta-barrio.md). Ficha:
-  [WP-A03](WP-A03-acta-barrio.md).
+  [WP-A03](WP-A03-acta-barrio.md). Reporte:
+  [WP-A03](../../REPORTES/WP-A03-acta-barrio.md).
 
 ## Overview (lectura; sin estado — el estado vive arriba)
 
@@ -413,8 +418,8 @@ Z09/Z10; DC-GC-ceguera-marca).
 > **GC-4 cerrada 2026-07-21** (Z05-f1·f2·Z11 ✅).
 > **GC-5 cerrada 2026-07-21 (GO custodio §1+§5):** **Z16 ✅** loop · **Z17 ✅**
 > operator-ui. **§2–§4/§6 parked** — no abrir sin GO nuevo. No reopen Z05-f1.
-> **ARG-1 abierta** (hermana [SEMILLA-ARG](SEMILLA-ARG.md)): A01 ✅ · A02 ✅;
-> A03 🔶. No sustituye ni des-aparca SEMILLA §2/§6.
+> **ARG-1 cerrada** (slice masticado GO · hermana [SEMILLA-ARG](SEMILLA-ARG.md)):
+> **A01✅ · A02✅ · A03✅**. **§A4–§A6 parked** sin GO. No des-aparca SEMILLA §2/§6.
 
 - ✅ **§1 Loop de juego** → **WP-Z16** (objetivos/decay/economía de energía).
 - ⬜ **§2 Estado del juego = estado real del sistema** (**parked**) — barrio ↔

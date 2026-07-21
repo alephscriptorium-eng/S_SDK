@@ -2,7 +2,7 @@
 
 | dato | valor |
 |---|---|
-| estado | 🔶 brief emitido (ola **ARG-1** · 2026-07-21 · gate «A1 viva» → A01 ✅) |
+| estado | ✅ aceptado (ola **ARG-1** · 2026-07-21 · zeus `a6381a5` · GL `3288510`) |
 | track / prio | PACK / 1 · **ola ARG-1** |
 | depende de | A01 ✅ (plaza / parte-kit) · Z10 ✅ (reparación como viaje) — **no** reabre ninguno |
 | fuente | [SEMILLA-ARG.md](SEMILLA-ARG.md) §A3 (literal) |
