@@ -100,6 +100,12 @@ ausente en root de zeus → socket-server y cache-browser no arrancan.
 | R4 | Z08 f1–f3 / D1–D3 | Siguen deferred a fabric+H1 vivos |
 | R5 | Z04 federation e2e | Fuera de alcance hasta Z04+`:3017` |
 
+## Tick A1b (gobierno)
+
+Separado de **A1✅** (`npm ci` EXIT 0). Tree post-ci no arranca fabric:
+`mcp-core-sdk` incompleto + `express` missing. Dueño: custodio/ops — tick
+ops, **no** hotfix WP; **no** bloquea merges Z08/Z15.
+
 ## URLs / puertos (estación)
 
 | Servicio | URL / puerto | Resultado |
