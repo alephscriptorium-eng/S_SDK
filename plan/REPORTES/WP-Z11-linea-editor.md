@@ -125,4 +125,12 @@ git log -p 11bde48..HEAD -- "$PACK" | rg -n 'marco-agn' → 0
 
 **Devuelto #1** (ceguera `marco-agn` en test) → **corregido** en `f93f163` (squash + rebase `11bde48`).
 
-_(orquestador: aceptado ✅ / nueva lista)_
+**Aceptado ✅** — 2026-07-21 · orquestador (merge/gobierno · re-revisión).
+
+zeus-sdk `main` @ `f93f163` (FF + push `origin/main`) · games-library `main` @ `d5548b1` (rebase onto `d7f5dfa` · FF + push; conserva `linea-editor-slice-smoke` + `zone-subscription-smoke`) · submodules SCRIPT_SDK → zeus `f93f163` + GL `d5548b1`. Pack `@zeus/linea-editor` + catálogo mcp-launcher + smokes. Ejes I/IV/II/III/V + ceguera ampliada OK post-corrección #1. **Z11 ✅** · cierra lote GC-4 (Z05-f1·f2·Z11).
+
+### Verificado (brazo REVISIÓN + merge)
+- Ramas `wp/gc-z11-linea-editor` · zeus tip `f93f163` · GL tip post-rebase `d5548b1` · merge FF → mains; push tip autorizado
+- Alcance: `packages/mesh/linea-editor` + launcher catalog + GL ciudad slice smoke; zone smoke de f2 retenido
+- Gates reportados: zeus slice-e2e + gates-ceguera; GL `linea-editor-slice-smoke`; ceguera árbol+log-p 0 post-squash
+- Sin force-push a main; sin BACKLOG en diffs zeus/GL
