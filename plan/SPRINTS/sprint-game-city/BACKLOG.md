@@ -19,10 +19,10 @@
 **Ola GC-2 (cerrada 2026-07-21):** Z03 ✅ · Z06 ✅ · Z08-f4..5 ✅ · Z12-f1 ✅ —
   lote completo; higiene de cierre = §Cola post-GC-2 (A1/re-smoke/push; A2→Z15).
 **Ola GC-3 (abierta 2026-07-21 — federación y población):** lote 🔶
-  **Z04 ✅** · **Z07 ✅** · **Z08 ✅** · **Z15 ✅** (A2) · **Z12-f2 🔶**. Parked ⬜:
-  Z11 (tras Z04) · Z13 (tras Z12-f1·Z03·Z04) · Z05 (por items).
-  A1✅ (`npm ci`) no bloquea 🔶 código; **Tick A1b** (runtime deps) bloquea vivos/re-smoke
-  D1–D3 / Z04·Z08 — **no** bloqueó merge Z15.
+  **Z04 ✅** · **Z07 ✅** · **Z08 ✅** · **Z15 ✅** (A2) · **Z12-f2 ✅** (**Z12 completo**).
+  Parked ⬜: Z11 (tras Z04) · Z05 (por items). **Z13 despachable** (deps
+  Z12-f1·Z03·Z04 ✅). A1✅ (`npm ci`) no bloquea 🔶 código; **Tick A1b** (runtime
+  deps) bloquea vivos/re-smoke D1–D3 / Z04·Z08 — **no** bloqueó merge Z12-f2.
 
 ## Cola post-GC-2 (higiene de cierre de ola — 2026-07-21)
 
@@ -130,8 +130,9 @@ Z09/Z10; DC-GC-ceguera-marca).
 ## WPs (estado canónico)
 
 > Lote GC-2 (**cerrada 2026-07-21**): **Z03 ✅ · Z06 ✅ · Z08-f4..5 ✅ · Z12-f1 ✅**.
-> Lote GC-3 (**abierta**): **Z04 ✅ · Z07 ✅ · Z08 ✅ · Z15 ✅ · Z12-f2 🔶** · parked
-> Z11·Z13·Z05. Issues: S_SDK #3 #6 #8 #12 (sync-map).
+> Lote GC-3 (**abierta**): **Z04 ✅ · Z07 ✅ · Z08 ✅ · Z15 ✅ · Z12-f2 ✅** (**Z12
+> completo**) · **Z13 despachable** · parked Z11·Z05. Issues: S_SDK #3 #6 #8 #12
+> (sync-map).
 
 - ✅ **WP-Z01 · Pack mockdatas ciudad → firehose/cache-browser** — track PACK ·
   prio 1 · dep — · eje I (consumidores reales: los 2 browsers arrancados).
@@ -229,20 +230,24 @@ Z09/Z10; DC-GC-ceguera-marca).
   + ceguera. Packs `@zeus/lifecycle-kit` + `@zeus/ciudad-lifecycle` · zeus-sdk
   `fa73062` · games-library `5b5bf4e` (+ punteros submodule). **Aceptado ✅**
   2026-07-21 (orquestador): merge FF + push `origin/main` zeus+GL; e2e barrio
-  fixture; frontera actuador(Z06)/cerebro(Z12) intacta. **Caveat → f2 ⬜:** wake
-  authority Z03 / ledger · cascada/zonas · rollup · tablero Z08; **señal
-  intentionalStops → **Z15 ✅** (A2 cerrado; no reopen f1). **Z12-f2 despachable.**
+  fixture; frontera actuador(Z06)/cerebro(Z12) intacta. Caveats f2 (wake/cascada/
+  rollup) + Z15 intentionalStops → **cerrados en f2/Z15** (no reopen f1).
   Brief: [BRIEF-WP-Z12-f1](../../REPORTES/BRIEF-WP-Z12-f1-encendido-arbol-vida.md).
   Ficha: [WP-Z12](WP-Z12-encendido-arbol-vida.md). Reporte:
   [WP-Z12-f1](../../REPORTES/WP-Z12-f1-encendido-arbol-vida.md).
-- 🔶 **WP-Z12-f2 · Cascada/zonas + wake Z03 + rollup** — track ENGINE+OPS · prio 2 ·
-  ola GC-3 · dep Z12-f1 ✅ + Z03 ✅ + **Z15 ✅** (intentionalStops read @ `a4aaf8c`).
-  Brief: [BRIEF-WP-Z12-f2](../../REPORTES/BRIEF-WP-Z12-f2-arbol-cascada.md).
-  Ficha: [WP-Z12](WP-Z12-encendido-arbol-vida.md). Rama: `wp/gc-z12-f2-arbol-cascada`.
+- ✅ **WP-Z12-f2 · Cascada/zonas + wake Z03 + rollup** — track ENGINE+OPS · prio 2 ·
+  ola GC-3 · dep Z12-f1 ✅ + Z03 ✅ + **Z15 ✅** · zeus-sdk `e7d9766` (+ puntero
+  submodule). **Aceptado ✅** 2026-07-21 (orquestador): merge FF + push
+  `origin/main`; cascada/zonas + rollup + wake bridge + canRetry actuador; ejes
+  I/III/IV + ceguera. **Z12 completo ✅ · Z13 despachable.** Brief:
+  [BRIEF-WP-Z12-f2](../../REPORTES/BRIEF-WP-Z12-f2-arbol-cascada.md). Ficha:
+  [WP-Z12](WP-Z12-encendido-arbol-vida.md). Reporte:
+  [WP-Z12-f2](../../REPORTES/WP-Z12-f2-arbol-cascada.md). Rama:
+  `wp/gc-z12-f2-arbol-cascada`.
 - ⬜ **WP-Z13 · Los tres jugadores: fusión en la trama del SDK** — track PACK
-  (lore+flujos) · prio 3 · parked GC-3 · dep Z12-f1 ✅ + Z03 ✅ + Z04; gancho
-  Z07/Z11 · ejes IV + ceguera. Brazo ejecutable de [TRAMA-AGUA](TRAMA-AGUA.md).
-  Ficha: [WP-Z13](WP-Z13-tres-jugadores.md).
+  (lore+flujos) · prio 3 · parked GC-3 · **despachable** (deps Z12-f1 ✅ + Z03 ✅ +
+  Z04 ✅) · gancho Z07/Z11 · ejes IV + ceguera. Brazo ejecutable de
+  [TRAMA-AGUA](TRAMA-AGUA.md). Ficha: [WP-Z13](WP-Z13-tres-jugadores.md).
 - ✅ **WP-Z14 · Procedencia estados de barrio → cantera versionada** — track PACK ·
   prio 1 · dep Z02 ✅ · micro-WP D1 vigía · eje I (generador regenera seeds desde
   cantera). **No reabre Z02.** Ficha: [WP-Z14](WP-Z14-procedencia-estados.md).
