@@ -9,7 +9,7 @@
 > intent. Seis profundizaciones, ordenadas por palanca/coste.
 >
 > **Estado GO (2026-07-21):** GC-5 abre **solo §1 + §5** → WP-Z16 / WP-Z17
-> (BACKLOG). **§1 ✅** (Z16 aceptado 2026-07-21). **§2–§4/§6 siguen parked.** **§5 → Z17 🔶**.
+> (BACKLOG). **§1 ✅** (Z16) · **§5 ✅** (Z17 aceptado 2026-07-21). **§2–§4/§6 siguen parked.** **GC-5 cerrada.**
 
 ## 1. Loop de juego: objetivo, decay, energía (palanca alta, coste bajo)
 
@@ -89,7 +89,7 @@ de proyectar nada al lado zeus.
 ## Orden sugerido (histórico GC-4 → vigente GC-5 parcial)
 
 1. §1 loop (habilita todo lo demás; solo Z03) — **GC-5 → WP-Z16 ✅**
-2. §5 operator-ui como vista (reusa lo que existe) — **GC-5 → WP-Z17 🔶**
+2. §5 operator-ui como vista (reusa lo que existe) — **GC-5 → WP-Z17 ✅**
 3. §3 misiones (necesita Z10) — **parked**
 4. §4 cronista (necesita Z07) — **parked**
 5. §2 salud real (necesita Z06 y criterio de guardarraíles) — **parked**

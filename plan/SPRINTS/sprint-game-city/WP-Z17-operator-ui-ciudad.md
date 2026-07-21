@@ -2,7 +2,7 @@
 
 | dato | valor |
 |---|---|
-| estado | 🔶 brief emitido (ola GC-5 · GO custodio §1+§5) |
+| estado | ✅ aceptado (ola GC-5 · 2026-07-21 · zeus-sdk `8afc0a0`) |
 | track / prio | VISOR / 1 · **ola GC-5** |
 | depende de | Z02 ✅ (escena/seeds) · Z03 ✅ (snapshot `ciudad`) — **no** exige Z16 para el slice mínimo |
 | fuente | [SEMILLA-GAMIFICACION.md](SEMILLA-GAMIFICACION.md) §5 |

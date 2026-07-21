@@ -26,8 +26,7 @@
   Items Z05 3–6 **parked** · SEMILLA §2–§4/§6 siguen parked (ver GC-5).
   Gate pre-apertura histórico: A1b PASS claim→acta
   [ACTA-A1b-PASS-2026-07-21](../../REPORTES/ACTA-A1b-PASS-2026-07-21.md).
-**Ola GC-5 (abierta 2026-07-21 — GO custodio = SEMILLA §1 + §5):** lote
-  **Z16 ✅** (loop: decay/energía/objetivo) · **Z17 🔶** (operator-ui vista 3D).
+**Ola GC-5 (cerrada 2026-07-21 — GO custodio §1+§5):** lote **Z16 ✅** · **Z17 ✅**.
   **§2–§4/§6 parked** (sin GO). **No reopen Z05-f1.** Z05 items 3–6 parked.
   Briefs: [BRIEF-Z16](../../REPORTES/BRIEF-WP-Z16-loop-juego.md) ·
   [BRIEF-Z17](../../REPORTES/BRIEF-WP-Z17-operator-ui-ciudad.md).
@@ -154,7 +153,7 @@ Z09/Z10; DC-GC-ceguera-marca).
 > Lote GC-2 (**cerrada 2026-07-21**): **Z03 ✅ · Z06 ✅ · Z08-f4..5 ✅ · Z12-f1 ✅**.
 > Lote GC-3 (**cerrada 2026-07-21**): **Z04 ✅ · Z07 ✅ · Z08 ✅ · Z15 ✅ · Z12-f2 ✅**
 > (**Z12 completo**) · **Z13 ✅**. Lote GC-4 (**cerrada 2026-07-21**): **Z05-f1 ✅ ·
-> Z05-f2 ✅ · Z11 ✅**. Lote GC-5 (**abierta 2026-07-21 · §1+§5**): **Z16 ✅ · Z17 🔶**.
+> Z05-f2 ✅ · Z11 ✅**. Lote GC-5 (**cerrada 2026-07-21 · §1+§5**): **Z16 ✅ · Z17 ✅**.
 > A1b ✅. Issues: S_SDK sync-map (LOCAL-ONLY esta ola; sin apply GC-5).
 
 - ✅ **WP-Z01 · Pack mockdatas ciudad → firehose/cache-browser** — track PACK ·
@@ -326,11 +325,14 @@ Z09/Z10; DC-GC-ceguera-marca).
   Brief: [BRIEF-WP-Z16](../../REPORTES/BRIEF-WP-Z16-loop-juego.md). Ficha:
   [WP-Z16](WP-Z16-loop-juego.md). Reporte:
   [WP-Z16](../../REPORTES/WP-Z16-loop-juego.md).
-- 🔶 **WP-Z17 · Vista 3D operator-ui → ciudad (SEMILLA §5)** — track VISOR ·
+- ✅ **WP-Z17 · Vista 3D operator-ui → ciudad (SEMILLA §5)** — track VISOR ·
   prio 1 · ola **GC-5** · dep Z02 ✅ · Z03 ✅ (soft Z16) · ejes IV/I · ceguera.
-  Reusa `@zeus/operator-ui` (no visor nuevo). Brief:
-  [BRIEF-WP-Z17](../../REPORTES/BRIEF-WP-Z17-operator-ui-ciudad.md). Ficha:
-  [WP-Z17](WP-Z17-operator-ui-ciudad.md). Rama: `wp/gc-z17-operator-ui-ciudad`.
+  **aceptado ✅** 2026-07-21 (orquestador): zeus-sdk `8afc0a0` (+ puntero
+  submodule); cableado `game:'ciudad'` + proyección barrios/estados en
+  operator-bridge/ui; bridge 11/11 · build:all · ciudad-vista-smoke 24 barrios;
+  ceguera 0. Brief: [BRIEF-WP-Z17](../../REPORTES/BRIEF-WP-Z17-operator-ui-ciudad.md).
+  Ficha: [WP-Z17](WP-Z17-operator-ui-ciudad.md). Reporte:
+  [WP-Z17](../../REPORTES/WP-Z17-operator-ui-ciudad.md).
 
 ## Overview (lectura; sin estado — el estado vive arriba)
 
@@ -357,7 +359,7 @@ Z09/Z10; DC-GC-ceguera-marca).
 ## Candidatos SEMILLA — profundizar la gamificación (ver [SEMILLA-GAMIFICACION.md](SEMILLA-GAMIFICACION.md))
 
 > **GC-4 cerrada 2026-07-21** (Z05-f1·f2·Z11 ✅).
-> **GC-5 abierta 2026-07-21 (GO custodio = §1 + §5):** **Z16 ✅** loop · **Z17 🔶**
+> **GC-5 cerrada 2026-07-21 (GO custodio §1+§5):** **Z16 ✅** loop · **Z17 ✅**
 > operator-ui. **§2–§4/§6 parked** — no abrir sin GO nuevo. No reopen Z05-f1.
 
 - ✅ **§1 Loop de juego** → **WP-Z16** (objetivos/decay/economía de energía).
@@ -366,7 +368,7 @@ Z09/Z10; DC-GC-ceguera-marca).
 - ⬜ **§3 Ciudadanos con misión** (**parked**) — viajes Z10 como quests.
 - ⬜ **§4 Cronista** (**parked**) — story-board vuelve al juego. Cadena
   Z03+Z07+Z11; no abrir antes.
-- 🔶 **§5 Vista 3D** → **WP-Z17** — `operator-ui` como vista de la ciudad.
+- ✅ **§5 Vista 3D** → **WP-Z17** — `operator-ui` como vista de la ciudad.
 - ⬜ **§6 Meta-juego del swarm** (**parked**) — WPs como misiones en la plaza;
   necesita §1–§4 vivos + decisión de gobernanza.
 - ⬜ **Trama-agua como mundo del dramaturgo** (ronda 3, parked) — ejes REIC de
