@@ -22,7 +22,7 @@
   **Z04 ✅** · **Z07 ✅** · **Z08 ✅** · **Z15 ✅** (A2) · **Z12-f2 ✅** (**Z12 completo**) ·
   **Z13 ✅**. Residual ops: **Tick A1b ✅ PASS** (acta).
 **Ola GC-4 (abierta 2026-07-21 — engine techo + autoría):** lote inmediato
-  **Z05-f1 🔶** (deltas) · **Z05-f2 🔶** (zonas) · **Z11 🔶** (deps Z06·Z04·Z03 ✅).
+  **Z05-f1 ✅** (deltas) · **Z05-f2 🔶** (zonas) · **Z11 🔶** (deps Z06·Z04·Z03 ✅).
   **No** abrir items Z05 3–6 ni wishlist SEMILLA-GAMIFICACION sin evidencia nueva.
   Gate pre-apertura: A1b PASS claim→acta
   [ACTA-A1b-PASS-2026-07-21](../../REPORTES/ACTA-A1b-PASS-2026-07-21.md).
@@ -141,7 +141,7 @@ Z09/Z10; DC-GC-ceguera-marca).
 
 > Lote GC-2 (**cerrada 2026-07-21**): **Z03 ✅ · Z06 ✅ · Z08-f4..5 ✅ · Z12-f1 ✅**.
 > Lote GC-3 (**cerrada 2026-07-21**): **Z04 ✅ · Z07 ✅ · Z08 ✅ · Z15 ✅ · Z12-f2 ✅**
-> (**Z12 completo**) · **Z13 ✅**. Lote GC-4 (**abierta 2026-07-21**): **Z05-f1 🔶 ·
+> (**Z12 completo**) · **Z13 ✅**. Lote GC-4 (**abierta 2026-07-21**): **Z05-f1 ✅ ·
 > Z05-f2 🔶 · Z11 🔶**. A1b ✅. Issues: S_SDK #3 #6 #8 #12 #13 (sync-map).
 
 - ✅ **WP-Z01 · Pack mockdatas ciudad → firehose/cache-browser** — track PACK ·
@@ -173,12 +173,15 @@ Z09/Z10; DC-GC-ceguera-marca).
   [BRIEF-WP-Z04](../../REPORTES/BRIEF-WP-Z04-rabbits-rsh.md). Ficha:
   [WP-Z04](WP-Z04-rabbits-rsh.md). Reporte:
   [WP-Z04](../../REPORTES/WP-Z04-rabbits-rsh.md).
-- 🔶 **WP-Z05-f1 · `GAME_STATE_DELTA` (protocolo v0.2)** — track ENGINE · prio 3 ·
-  ola GC-4 · umbrella [WP-Z05](WP-Z05-engine-evoluciones.md) item 1 · eje IV/II.
-  Señal vigía `ACTA-CONSOLIDADA-GC23` (backpressure / techo snapshots). Dep dolor:
-  Z04 ✅ multi-peer. Brief:
-  [BRIEF-WP-Z05-f1](../../REPORTES/BRIEF-WP-Z05-f1-game-state-delta.md).
-  Merge order lote: **antes de f2** si colisionan paths protocol/game-engine.
+- ✅ **WP-Z05-f1 · `GAME_STATE_DELTA` (protocolo v0.2)** — track ENGINE · prio 3 ·
+  ola GC-4 · umbrella [WP-Z05](WP-Z05-engine-evoluciones.md) item 1 · eje IV/II ·
+  zeus-sdk `1d087ee` (+ puntero submodule). **Aceptado ✅** 2026-07-21
+  (orquestador): merge FF + push `origin/main`; protocol delta helpers +
+  authority-kit `stateDelta` + `MapEngine.getDelta`; ejes IV/II + ceguera.
+  Brief: [BRIEF-WP-Z05-f1](../../REPORTES/BRIEF-WP-Z05-f1-game-state-delta.md).
+  Ficha: [WP-Z05](WP-Z05-engine-evoluciones.md). Reporte:
+  [WP-Z05-f1](../../REPORTES/WP-Z05-f1-game-state-delta.md). Rama:
+  `wp/gc-z05-f1-game-state-delta`.
 - 🔶 **WP-Z05-f2 · Suscripción por zona/distrito (gamechannel)** — track ENGINE ·
   prio 3 · ola GC-4 · umbrella [WP-Z05](WP-Z05-engine-evoluciones.md) item 2 ·
   eje IV/II. Señal: firehose sin filtrado + mapa 24 barrios (Z03 ✅). Brief:
