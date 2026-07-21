@@ -662,6 +662,27 @@ spec-gen en `docs:build` de zeus · #7 gap del filtro `paths: docs/**`.
   [Z_SDK#6](https://github.com/alephscriptorium-eng/Z_SDK/issues/6).
   Issue WP: [S_SDK#21](https://github.com/alephscriptorium-eng/S_SDK/issues/21).
 
+## Ola I9 — Skills 0.4.0 (reglas 16–17 al paquete)
+
+> **GO usuario · 2026-07-21 (ola I-skills).** δ10–δ11 ya en
+> `plan/PRACTICAS.md`; la ola las sube al paquete (valen para todos los
+> mundos) y regenera `skills.s-sdk` (hueco GO-5). Micro-lote
+> gobierno+obra; WPs canónicos en skills-library = WP-16/WP-17.
+
+- ✅ **WP-I76 · Consumir 0.4.0 + espejo + cita δ10–δ11→reglas 16–17**
+  *(aceptado · orquestador · 2026-07-21)* — lock resuelve
+  `@alephscript/skills-scriptorium@0.4.0` (rango `0.x` intacto); `npm run
+  skills:sync` materializa reglas 16–17 en `.claude/skills/`; PRACTICAS
+  δ9 cita 0.4.0 / v0.5 y enlaza δ10–δ11 ↔ método; portal
+  `skills.s-sdk.escrivivir.co` regenerado (Docs run
+  [29865486164](https://github.com/alephscriptorium-eng/S_SDK-skills-library/actions/runs/29865486164)).
+  Library: `main` @ `cf058df` (WP-16 `e1308cc` · release `d3295eb` ·
+  reporte WP-17). Publish
+  [29865483731](https://github.com/alephscriptorium-eng/S_SDK-skills-library/actions/runs/29865483731).
+  **CA:** `npm view …@0.4.0` → 0.4.0; espejo con `reglas-metodo-v05.md`;
+  badge portal v0.5.0; ceguera skill = 0. Reporte:
+  `plan/REPORTES/WP-I76-skills-040-reglas-16-17.md`.
+
 ## Orden y paralelismo
 
 I0 → I1 ∥ I2 → I3 → I4 · I5 tras I2 (la nota ofrece el paquete ya

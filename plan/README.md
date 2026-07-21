@@ -11,7 +11,7 @@ replicar el protocolo.
 
 **Definición canónica:** skill `swarm-orquestacion` en
 `S_SDK-skills-library` @ `019a90b` /
-`@alephscript/skills-scriptorium` rango `0.x` (efectiva 0.3.4; DE-I17)
+`@alephscript/skills-scriptorium` rango `0.x` (efectiva 0.4.0; DE-I17)
 (`skills/swarm-orquestacion/` — SKILL.md, `reference/roles/`, ejes, ciclo,
 plantilla de reporte).
 

@@ -17,6 +17,13 @@ Abiertos en el BACKLOG, aún **no** ✅ (no derivan entrada cerrada todavía):
 
 - WP-I63 ⬜ · Scrub de vocabulario del marco en aleph (DE-I14) — gate externo.
 
+## [I9] - 2026-07-21 — Skills 0.4.0 (reglas 16–17 al paquete)
+
+- **WP-I76** — Consumir `@alephscript/skills-scriptorium@0.4.0` (rango `0.x`):
+  lock + `skills:sync` (espejo con reglas 16–17 / método v0.5); PRACTICAS
+  enlaza δ10–δ11 ↔ método; portal `skills.s-sdk.escrivivir.co` regenerado
+  (Docs 29865486164; Publish 29865483731). Aceptado ✅ 2026-07-21.
+
 ## [I8] - 2026-07-21 — Página pública de confianza (tubería)
 
 - **WP-I75** — Página «La tubería, protegida»: `docs/guide/tuberia-protegida.md`

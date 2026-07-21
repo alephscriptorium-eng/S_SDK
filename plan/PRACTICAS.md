@@ -60,10 +60,10 @@ el texto: se referencia (la réplica es el defecto que este plan combate).
    procedencia citable es «nota externa recibida (temp-review, fecha)»,
    jamás una ruta de disco.
 
-9. **Contrato 0.3.4 adoptado — regla 15 + semver DC-22** (base DE-I17; el
-   método vive en el skill versionado, el mundo lo cita, no lo copia). Se
-   adoptan dos piezas nuevas del skill `swarm-orquestacion` (paquete
-   `@alephscript/skills-scriptorium@0.3.4`, badge de método v0.4):
+9. **Contrato 0.4.0 adoptado — reglas 15–17 + semver DC-22** (base DE-I17;
+   el método vive en el skill versionado, el mundo lo cita, no lo copia).
+   Holón 07 consume `@alephscript/skills-scriptorium` rango `0.x`
+   (efectiva **0.4.0**, badge de método **v0.5**):
    - **Regla 15 — fuente de verdad única + efimeralidad**
      (`reference/reglas-metodo-v04.md`, publicada en el paquete **0.3.1**,
      `CHANGELOG §[0.3.1] · WP-05`): el plan trazado en git es la **única**
@@ -74,31 +74,33 @@ el texto: se referencia (la réplica es el defecto que este plan combate).
      DECISIONES, REPORTES —, y por delta 7 **solo el orquestador escribe el
      BACKLOG** (gobierno a git antes que obra). No se refactoriza nada
      retro; se **cita**.
+   - **Reglas 16–17** (`reference/reglas-metodo-v05.md`, paquete **0.4.0**,
+     Ola 7 library WP-16/17 · holón **WP-I76**): ver deltas **10** y **11**
+     abajo — nacieron aquí como práctica de casa y la ola I-skills las
+     subió al paquete (valen para todos los mundos).
    - **Doctrina semver DC-22 — por versión** (`CHANGELOG.md §[0.3.4]` del
-     skill, estrenada en ese corte · `WP-13`): cambio de **regla de método**
-     → al menos **minor**; **patch** = **sin cambio de contrato**. La
-     «versión de método» (badge) y el «semver de paquete» son ejes
-     distintos, con la correspondencia declarada en el `README.md` raíz del
-     skill. Evidencia por versión en el propio `CHANGELOG` del skill: `0.2.0`
-     y `0.3.0` = **minor** (contrato ampliado: reglas 1–12, luego 13–14);
-     `0.3.1`–`0.3.4` = **patch** publicable por override del custodio
-     (reconciliación de la expansión regla 15 + gates 0.3.x; retarget del
-     0.4.0 previsto). Holón 07 no versiona el skill (lo **consume** con rango
-     `0.x`, DE-I17); solo **cita** la doctrina como contrato del mundo.
+     skill, estrenada en ese corte · `WP-13`; aplicada en **0.4.0** =
+     minor por reglas 16–17): cambio de **regla de método** → al menos
+     **minor**; **patch** = **sin cambio de contrato**. La «versión de
+     método» (badge) y el «semver de paquete» son ejes distintos. Holón 07
+     no versiona el skill (lo **consume** con rango `0.x`, DE-I17); solo
+     **cita** la doctrina como contrato del mundo.
 
    Sin sello de futuro: «cumple de facto» no promete trabajo nuevo — se
    apoya en prácticas ya vigentes (delta 1 autocontención, delta 7 gobierno
    a git / orquestador único escritor del BACKLOG). Sin refactor retro.
 
 10. **Cierre de ola cita run-id verde** (clase reincidente ×2 · 2026-07-21:
-    GC-5 y ARG-1). Todo cierre de ola que el orquestador acepte **cita
-    run-id VERDE de CI y de Release** del tip de **cada repo tocado**
-    (zeus, games-library, raíz, etc.). Sin run-id verde citado = ola no
-    cerrada (claim sin acta de runner). Compatible con delta 3 (C8: el
-    pulso incluye el último run de CI de main).
+    GC-5 y ARG-1; **método regla 16** desde `@0.4.0`). Todo cierre de ola
+    que el orquestador acepte **cita run-id VERDE de CI y de Release** del
+    tip de **cada repo tocado** (zeus, games-library, raíz, etc.). Sin
+    run-id verde citado = ola no cerrada (claim sin acta de runner).
+    Compatible con delta 3 (C8: el pulso incluye el último run de CI de
+    main).
 
 11. **El sync-map se commitea post-apply** (clase reincidente ×2 · 2026-07-21:
-    Z15; A01–A03). El fichero `.sync-map.json` (o mapa del sprint) **nunca**
-    se commitea con números de issue **antes** de que esos issues existan
-    en el tracker. Orden: apply (crear/actualizar issues) → mapa refleja
-    IDs reales → commit mapa + acta. Mapa especulativo = devolución.
+    Z15; A01–A03; **método regla 17** desde `@0.4.0`). El fichero
+    `.sync-map.json` (o mapa del sprint) **nunca** se commitea con números
+    de issue **antes** de que esos issues existan en el tracker. Orden:
+    apply (crear/actualizar issues) → mapa refleja IDs reales → commit
+    mapa + acta. Mapa especulativo = devolución.
