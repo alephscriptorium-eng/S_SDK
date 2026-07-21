@@ -8,7 +8,7 @@
 | BACKLOG | banner CERRADO · parked sin GO listados |
 | tip Z_SDK | `1086392` |
 | tip GL | `3288510` |
-| tip S_SDK | tip del commit de este cierre (gobierno V2) |
+| tip S_SDK | `2340536` |
 
 ## Veredicto
 
@@ -43,7 +43,7 @@ trama-agua).
 | ---- | --- | -- | ------------------ |
 | Z_SDK | `1086392` | [29869646271](https://github.com/alephscriptorium-eng/Z_SDK/actions/runs/29869646271) | [29869646289](https://github.com/alephscriptorium-eng/Z_SDK/actions/runs/29869646289) |
 | GL | `3288510` | [29862352062](https://github.com/alephscriptorium-eng/Z_SDK-games-library/actions/runs/29862352062) | Docs [29865824398](https://github.com/alephscriptorium-eng/Z_SDK-games-library/actions/runs/29865824398) |
-| S_SDK | tip C04 | Docs (único pipeline; ver acta δ10 tras refresh) | = Docs |
+| S_SDK | `2340536` | Docs [29870287762](https://github.com/alephscriptorium-eng/S_SDK/actions/runs/29870287762) | = Docs |
 
 Detalle hitos + tabla completa: **acta δ10**.
 

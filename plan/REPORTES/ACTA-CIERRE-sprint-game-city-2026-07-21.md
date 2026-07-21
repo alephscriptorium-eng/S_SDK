@@ -5,7 +5,7 @@
 | rol | gobierno orquestador (C04 · cierre real) |
 | regla | método v0.5 · **regla 16** (run-id VERDE CI + Release/homólogo por repo tocado) |
 | sprint | **sprint-game-city CERRADO** |
-| tip S_SDK (cierre) | ver §Tips tras commit de esta acta |
+| tip S_SDK (cierre) | `2340536` (`2340536ca2082db73b2559bff326bd91a40e2042`) |
 | tip Z_SDK | `1086392` (`1086392d67d6398b43ccf5379062713b3c0dd486`) |
 | tip GL | `3288510` (`32885103bd66b0855d971872a5997fa6aba59c70`) |
 | reporte | [CIERRE-sprint-game-city-2026-07-21.md](CIERRE-sprint-game-city-2026-07-21.md) |
@@ -34,7 +34,7 @@
 | ---- | ------- | --------------- | -------------------- | ---- |
 | **Z_SDK** | `1086392` | [29869646271](https://github.com/alephscriptorium-eng/Z_SDK/actions/runs/29869646271) **success** | [29869646289](https://github.com/alephscriptorium-eng/Z_SDK/actions/runs/29869646289) **success** | CAMPANAS |
 | **GL** | `3288510` | [29862352062](https://github.com/alephscriptorium-eng/Z_SDK-games-library/actions/runs/29862352062) **success** | Docs [29865824398](https://github.com/alephscriptorium-eng/Z_SDK-games-library/actions/runs/29865824398) **success** | *Release startpack* sin run verde en tip (histórico failure; no disparado en ARG tip) — homólogo Docs |
-| **S_SDK** | tip post-cierre C04 | Docs (dispatch C04) | Docs (mismo workflow — único pipeline activo) | sin workflow CI/Release; homólogo = Docs |
+| **S_SDK** | `2340536` | Docs [29870287762](https://github.com/alephscriptorium-eng/S_SDK/actions/runs/29870287762) **success** | Docs (mismo — único pipeline activo) | sin workflow CI/Release; homólogo = Docs |
 
 ### Hitos runner del arco (actas citadas)
 
@@ -49,13 +49,16 @@
 | ARG-1 GL A02 | GL `2b14d36` | [29860506751](https://github.com/alephscriptorium-eng/Z_SDK-games-library/actions/runs/29860506751) | — |
 | ARG-1 GL A01/loop | GL `21a6592` | [29852765006](https://github.com/alephscriptorium-eng/Z_SDK-games-library/actions/runs/29852765006) | Docs GO-5 |
 
-### Docs refresh final (C04) — rellenar tras dispatch
+### Docs refresh final (C04) — VERDE
 
 | repo | Docs run-id | headSha | conclusion |
 | ---- | ----------- | ------- | ---------- |
-| Z_SDK | `<pendiente dispatch>` | `1086392` | — |
-| Z_SDK-games-library | `<pendiente dispatch>` | `3288510` | — |
-| S_SDK | `<pendiente dispatch>` | tip C04 | — |
+| Z_SDK | [29870284474](https://github.com/alephscriptorium-eng/Z_SDK/actions/runs/29870284474) | `1086392` | **success** |
+| Z_SDK-games-library | [29870285977](https://github.com/alephscriptorium-eng/Z_SDK-games-library/actions/runs/29870285977) | `3288510` | **success** |
+| S_SDK | [29870287762](https://github.com/alephscriptorium-eng/S_SDK/actions/runs/29870287762) | `2340536` | **success** |
+
+Nav C8 ampliado (post-deploy): raíces + guía publicar + tuberia-protegida +
+games startpacks/releases → HTTP 200; CSS piel `/assets/style.*.css` → 200.
 
 ## 3. Proyección issues (foto)
 
@@ -80,7 +83,7 @@
 [x] parked embajador #22/#23 → OPEN (honrado)
 [x] run-id verde Z_SDK tip 1086392 → CI+Release citados
 [x] run-id verde GL tip 3288510 → CI + Docs (homólogo Release)
-[ ] Docs ×3 C04 → tras dispatch (tabla §2)
+[x] Docs ×3 C04 → 29870284474 · 29870285977 · 29870287762 success
 [x] sync-map post-apply → sin IDs especulativos
 [x] sin abrir embajador / sin DE-I8
 ```
