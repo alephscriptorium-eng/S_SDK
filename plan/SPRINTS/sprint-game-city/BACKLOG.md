@@ -16,8 +16,8 @@
   matices en §Replan post-vigía. Z09 entra en lote inmediato.
 **Ola GC-1.5 (cerrada 2026-07-21):** Z14 · Z09 ✅ — paralelo; paths no se pisan.
   **Tick A1 cerrado** → Z10 brief → **Z10 ✅** (cierra lote post-A1 Z14+Z09+Z10).
-**Ola GC-2 (GO 2026-07-21, vigía §E):** Z03 ✅ · Z06 ✅ · Z08-f4..5 ✅ · Z12-f1 —
-  abrir en paralelo acotado; **Z06 ✅ — Z12-f1 despachable** (soft-block levantado).
+**Ola GC-2 (cerrada 2026-07-21):** Z03 ✅ · Z06 ✅ · Z08-f4..5 ✅ · Z12-f1 ✅ —
+  lote completo (wake Z03 authority / cascada = Z12-f2 ⬜ en GC-3).
 **Ola GC-3 (federación y población):** Z04 · Z07 · Z08-f6..7 · Z11 (tras Z04/Z06) ·
 Z12-f2 (cascada/zonas) · Z13 (tras Z12-f1 y Z03) · Z05 (por items, cuando duela)
 
@@ -91,9 +91,9 @@ Z09/Z10; DC-GC-ceguera-marca).
 
 ## WPs (estado canónico)
 
-> Lote GC-2 (GO 2026-07-21, §E REVISION-GC15): **Z03 ✅ · Z06 ✅ · Z08-f4..5 ✅ ·
-> Z12-f1 🔶** — briefs abajo. **Z06 ✅ — Z12-f1 despachable.**
-> Issues: S_SDK #3 #6 #8 #12 (sync-map). Lote post-A1 Z14·Z09·Z10 ✅ cerrado.
+> Lote GC-2 (**cerrada 2026-07-21**): **Z03 ✅ · Z06 ✅ · Z08-f4..5 ✅ · Z12-f1 ✅**.
+> Caveat Z12: wake Z03 authority + cascada/zonas = **f2 ⬜** (GC-3). Issues:
+> S_SDK #3 #6 #8 #12 (sync-map). Lote post-A1 Z14·Z09·Z10 ✅ cerrado.
 
 - ✅ **WP-Z01 · Pack mockdatas ciudad → firehose/cache-browser** — track PACK ·
   prio 1 · dep — · eje I (consumidores reales: los 2 browsers arrancados).
@@ -164,13 +164,19 @@ Z09/Z10; DC-GC-ceguera-marca).
   V (gates de mutación visibles) + ceguera (el paquete no nombra marco/ciudad/
   NovelistEditor). Precondición: glosario «viaje» (regla 5). Asentado de oferta
   ronda 2 (2026-07-20). Ficha: [WP-Z11](WP-Z11-linea-editor.md).
-- 🔶 **WP-Z12 · Encendido del árbol de vida (lifecycle XState, start/stop real)** —
-  track ENGINE+OPS · prio 2 · **f1 en GC-2** · dep Z06 ✅ (actuadores) + Z02 ✅ +
-  Z03 (round-trip `wake`) · ejes I/IV/III + ceguera. **Asignado 🔶 2026-07-21**
-  · brief `plan/REPORTES/BRIEF-WP-Z12-f1-encendido-arbol-vida.md` · rama
-  `wp/gc-z12-f1-arbol-vida` · issue S_SDK #12. Soft-block Z06 **levantado**:
-  **Z06 ✅ — Z12-f1 despachable** (frontera actuador/comportamiento §E c).
-  Fusión r3 + r3-b. Ficha: [WP-Z12](WP-Z12-encendido-arbol-vida.md).
+- ✅ **WP-Z12-f1 · Encendido del árbol de vida (lifecycle XState, start/stop real)** —
+  track ENGINE+OPS · prio 2 · **f1 ✅ en GC-2** · dep Z06 ✅ + Z02 ✅ · ejes I/III/IV
+  + ceguera. Packs `@zeus/lifecycle-kit` + `@zeus/ciudad-lifecycle` · zeus-sdk
+  `fa73062` · games-library `5b5bf4e` (+ punteros submodule). **Aceptado ✅**
+  2026-07-21 (orquestador): merge FF + push `origin/main` zeus+GL; e2e barrio
+  fixture; frontera actuador(Z06)/cerebro(Z12) intacta. **Caveat → f2 ⬜:** wake
+  authority Z03 / ledger de juego · cascada/zonas · rollup ciudad · tablero Z08.
+  Brief: [BRIEF-WP-Z12-f1](../../REPORTES/BRIEF-WP-Z12-f1-encendido-arbol-vida.md).
+  Ficha: [WP-Z12](WP-Z12-encendido-arbol-vida.md). Reporte:
+  [WP-Z12-f1](../../REPORTES/WP-Z12-f1-encendido-arbol-vida.md).
+- ⬜ **WP-Z12-f2 · Cascada/zonas + wake Z03 + rollup** — track ENGINE+OPS · prio 2 ·
+  ola GC-3 · dep Z12-f1 ✅ + Z03 ✅ · pendiente (caveats f1). Ficha:
+  [WP-Z12](WP-Z12-encendido-arbol-vida.md).
 - ⬜ **WP-Z13 · Los tres jugadores: fusión en la trama del SDK** — track PACK
   (lore+flujos) · prio 3 · ola GC-3 · dep Z12-f1 (residentes = edificios en
   `running`) + Z03 + Z04; gancho Z07/Z11 · ejes IV (contrato de mapeo con 2
