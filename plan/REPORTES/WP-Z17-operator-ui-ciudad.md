@@ -5,7 +5,7 @@
 | agente | worker · WP-Z17 |
 | fecha | 2026-07-21 |
 | rama | `wp/gc-z17-operator-ui-ciudad` (zeus-sdk) · `wp/gc-z17-operator-ui-ciudad` (S_SDK reporte) |
-| commits | zeus-sdk `8afc0a0` (base `0b566e6`) · S_SDK $full (rama wp/gc-z17-operator-ui-ciudad) |
+| commits | zeus-sdk `8afc0a0` (base `0b566e6`) · S_SDK `53dd25a` (obra reporte `f886da9`) |
 | eje(s) CA | IV (2ª vista contrato state/ledger) · I (snapshot/startpack ciudad) · ceguera ampliada |
 | estado propuesto | listo para revisión |
 
