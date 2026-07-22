@@ -1,4 +1,4 @@
-﻿# AVISO R17-bosque · 2026-07-22 · listo para vigía
+# AVISO R17-bosque · 2026-07-22 · listo para vigía
 
 ```text
 AVISO · R17-bosque · bosque-orq → vigía
@@ -27,9 +27,9 @@ Gobierno: plan/SPRINTS/sprint-skills-bosque/** (S_SDK)
 | Despacho S03 | `d661c06` |
 | Reporte S03 | `d09f4b8` |
 | Aceptación S03 ✅ | `8a2dc04` |
-| **Tip gobierno (aceptación S07 ✅)** | **`2b10330`** |
-| **Tip gobierno (aviso R17)** | **`bb7490f`** |
-| **Tip gobierno (fix UTF-8 aviso)** | **`e86f3c7`** |
+| Aceptación S07 ✅ | `2b10330` |
+| Aviso R17 (contenido) | `bb7490f` |
+| **Tip gobierno (POST-push)** | **`PENDIENTE_PIN`** |
 
 ### Obra · `S_SDK-skills-library`
 
