@@ -152,4 +152,24 @@ Sin push.
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** · bosque-orq · 2026-07-22
+
+### CA
+- [x] Boot 7 fases: `reproduce-boot.sh` → `BOOT_OK` (re-ejecutado en revisión)
+- [x] Bitácora = fuente única (`estado.json` + sha desde línea)
+- [x] Watcher sesión + whitelist `.claude/skills/` (I71)
+- [x] Params WORLD_ROOT · GAME_MCP · OUT_DIR
+- [x] Ceguera delta 5 = 0 (árbol + `git log -p` hits=0 re-verificado)
+
+### Ejes
+- [x] **I** — scripts/fixture consumen el contrato (no solo prose)
+- [x] **IV** — agente fresco: SKILL + `reproduce-boot.sh` (+ fixture vía b)
+- [x] C8 live kit registry = `<pendiente>` declarado (no inventado); vía registry documentada sin sibling
+
+### PRACTICAS / alcance
+- Diff = `skills/estacion-viva/**` + CHANGELOG Unreleased · `package.json` 0.4.0 intacto · sin docs/S06 · sin BACKLOG
+
+### Merge
+- Rama `wp/sb-s03-estacion-viva` tip `be68f07` → `main` hermano
+- ∩ con S06/skills previos = ∅ (solo estacion-viva + CHANGELOG)
+- Orden: merge FF/merge commit → higiene worktree → gobierno ✅ → S07

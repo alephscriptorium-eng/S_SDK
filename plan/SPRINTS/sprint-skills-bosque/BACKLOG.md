@@ -5,8 +5,8 @@
 > editar este fichero. Estados: ⬜ · 🔶 · ✅.
 > Contrato: DE-I22 · convivencia multi-orq v1.1.
 > Decisiones: [DECISIONES.md](DECISIONES.md).
-> B-1 ✅ · B-2 S03 🔶 despachado (gate PASS `a37d4c2`) · B-3 S06 ✅ · S07 🔶
-> condicionado · S04 traspasado city.
+> B-1 ✅ · B-2 S03 ✅ · B-3 S06 ✅ · S07 🔶 en curso (broche 0.5.0) ·
+> S04 traspasado city.
 
 ## Ola B-1 · método (✅ cerrado)
 
@@ -25,18 +25,18 @@ Reportes:
 - [WP-S01](REPORTES/WP-S01-swarm-vnext.md) · [WP-S02](REPORTES/WP-S02-vigilancia-vnext.md) · [WP-S05](REPORTES/WP-S05-site-web.md) · [WP-S05b](REPORTES/WP-S05b-encoding.md)
 - [AVISO-R14-bosque](REPORTES/AVISO-R14-bosque.md)
 
-## Ola B-2 · estacion-viva (🔶 despachado · gate PASS)
+## Ola B-2 · estacion-viva (✅)
 
 | Id | Título | Deps | Ejes | Estado | Issue |
 |---|---|---|---|---|---|
-| S03 | estación viva / watcher calibrado al hermano | C05 ✅ ciudad-real → [S_SDK#31](https://github.com/alephscriptorium-eng/S_SDK/issues/31) · gate PASS `a37d4c2` | I·IV + ceguera | 🔶 **despachado** · rama `wp/sb-s03-estacion-viva` · [BRIEF-WP-S03](BRIEFS/BRIEF-WP-S03-estacion-viva.md) | [#13](https://github.com/alephscriptorium-eng/S_SDK-skills-library/issues/13) B-2 |
+| S03 | estación viva / watcher calibrado al hermano | C05 ✅ · gate PASS `a37d4c2` | I·IV + ceguera | ✅ tip `be68f07` · merge `9b89495` · [reporte](REPORTES/WP-S03-estacion-viva.md) | [#13](https://github.com/alephscriptorium-eng/S_SDK-skills-library/issues/13) B-2 |
 
 ## Ola B-3 · mapa+broche (S06 GO · S07 condicionado · S04 fuera)
 
 | Id | Título | Deps | Ejes | Estado | Issue |
 |---|---|---|---|---|---|
 | S06 | mapa de proyección / sync-map ritual (docs) | B-1 ✅ · ∥ S03 OK (dirs disjuntos) | III + ceguera | ✅ merge `2743176` · tip `834f706` · [reporte](REPORTES/WP-S06-mapa.md) · brief [BRIEF-WP-S06](BRIEFS/BRIEF-WP-S06-mapa.md) | [#14](https://github.com/alephscriptorium-eng/S_SDK-skills-library/issues/14) B-3 |
-| S07 | broche release `0.5.0` (bump + Release + portal + catálogo) | **S03 ✅ + S06 ✅ + S05b ✅** | IV + ceguera | 🔶 condicionado · falta **solo S03** · [NOTA-S07](BRIEFS/NOTA-WP-S07-condicionado.md) · **NO despachar** | [#14](https://github.com/alephscriptorium-eng/S_SDK-skills-library/issues/14) B-3 |
+| S07 | broche release `0.5.0` (bump + Release + portal + catálogo) | **S03 ✅ + S06 ✅ + S05b ✅** | IV + ceguera | 🔶 **en curso** · precondiciones ✅ · [NOTA-S07](BRIEFS/NOTA-WP-S07-condicionado.md) | [#14](https://github.com/alephscriptorium-eng/S_SDK-skills-library/issues/14) B-3 |
 
 ### Traspaso S04 → city (fuera del backlog bosque)
 
@@ -49,8 +49,8 @@ Reportes:
 | Ola | Contenido | Estado gate |
 |---|---|---|
 | B-1 | S01 · S02 · S05 · S05b | ✅ cerrado (+ encoding mergeado) |
-| B-2 | S03 | 🔶 despachado (gate PASS `a37d4c2`) |
-| B-3 | S06 · S07 (S04→city) | S06 ✅ · S07 🔶 condicionado (falta S03) |
+| B-2 | S03 | ✅ merge `9b89495` |
+| B-3 | S06 · S07 | S06 ✅ · S07 🔶 en curso (broche) |
 
 ## Parked / fuera
 
