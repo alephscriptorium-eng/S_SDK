@@ -1,7 +1,8 @@
 # sprint-skills-bosque — B-3 parcial (S06 GO · S07 condicionado)
 
 > **Estado:** B-1 ✅ · S05b ✅ (`71824d0`) · **S06 ✅** (`2743176` /
-> tip `834f706`) · S07 🔶 condicionado (falta S03) · **S04 → city**.
+> tip `834f706`) · **S03 🔶** brief listo / pendiente gate · S07 🔶
+> condicionado (falta S03 obra) · **S04 → city**.
 > Orquestador: bosque-orq · Contrato convivencia multi-orq v1.1 (DE-I22).
 > Obra: paquete `@alephscript/skills-scriptorium` (checkout hermano).
 
@@ -20,7 +21,7 @@
 | Ola | WPs | Nota |
 |---|---|---|
 | **B-1** método | S01 · S02 · S05 · S05b | ✅ cerrado (+ encoding) |
-| **B-2** estacion-viva | S03 | dep C05 ✅ · sin BRIEF/obra aún |
+| **B-2** estacion-viva | S03 | 🔶 brief listo / pendiente gate · sin obra |
 | **B-3** mapa+broche | S06 · S07 | S06 ✅ · S07 condicionado · **S04 → city** |
 
 ## Guardarraíles (contrato v1.1)
@@ -38,7 +39,7 @@
 |---|---|
 | [BACKLOG.md](BACKLOG.md) | WPs, olas, estados. Solo orquestador. |
 | [DECISIONES.md](DECISIONES.md) | DC-SB-* del sprint. |
-| [BRIEFS/](BRIEFS/) | Briefs (S06 GO · S07 nota condicionada). |
+| [BRIEFS/](BRIEFS/) | Briefs (S03 🔶 gate · S06 ✅ · S07 nota condicionada). |
 | [REPORTES/](REPORTES/) | Montaje, proyección, actas. |
 | [.sync-map.json](.sync-map.json) | Proyección issues (post-apply). |
 

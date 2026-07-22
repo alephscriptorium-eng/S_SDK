@@ -10,7 +10,7 @@
 |---|---|---|
 | **S05b** | merge a `main` hermano + Pages/C8 limpio (encoding catálogo) | ✅ merge `71824d0` · Docs CI [29922221260](https://github.com/alephscriptorium-eng/S_SDK-skills-library/actions/runs/29922221260) · C8 vivo = verificar URL |
 | **S06** | mapa docs mergeado · ceguera 0 · reporte | ✅ merge `2743176` · tip `834f706` |
-| **S03** | skill `estacion-viva` en el paquete · merge `main` · ceguera 0 | ⬜ sin BRIEF/obra |
+| **S03** | skill `estacion-viva` en el paquete · merge `main` · ceguera 0 | 🔶 BRIEF listo / pendiente gate · sin obra · [BRIEF-WP-S03](BRIEF-WP-S03-estacion-viva.md) |
 
 ## Acto (cuando las tres ✅)
 
