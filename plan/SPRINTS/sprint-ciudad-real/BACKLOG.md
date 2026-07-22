@@ -5,9 +5,8 @@
 > Estados: ⬜ · 🔶 · ✅.
 > Padre: [DE-I19](../../DECISIONES.md) · [DECISIONES sprint](DECISIONES.md).
 > Embajador **CERRADO**. Proyección: **LOCAL-ONLY** · Z_SDK **#5** citar
-> OPEN. Prep R10.6: asiento C05 borrador + cola v3 candidata (**sin**
-> despacho C05 · **sin 🔶** C05). Ola 1 + C04 en vuelo — no tocar sus
-> worktrees desde prep.
+> OPEN. **OLA 1 ✅** (C01·C02) · **listo-R11** · C03 **no** despachado.
+> C04 en vuelo — no tocar su worktree. C05 parked · sin 🔶.
 
 ## Gate tick-cero (GO-C1)
 
@@ -21,16 +20,17 @@
 > Ningún CA de C01/C02/C03 depende. Candidato a englobar en
 > **PRUEBA-DE-DOS** (cola v3 · a ratificar PO).
 
-## Ola CR-1 (en vuelo / gate)
+## Ola CR-1 (✅ merge · listo-R11)
 
-> Exclusion-paths: [DC-CR-exclusion-paths](DECISIONES.md). Prep **no**
-> toca worktrees C01∥C02 ni C04.
+> Exclusion-paths: [DC-CR-exclusion-paths](DECISIONES.md). Acta:
+> [ACTA-OLA1](../../REPORTES/ACTA-OLA1-CIUDAD-REAL-cierre-2026-07-22.md).
+> C03 **solo** tras R11 PASS.
 
 | Id | Título | Deps | Ejes | Estado | Issue |
 |---|---|---|---|---|---|
-| [C01](WP-C01-semilla-salud.md) | Salud real ↔ mapa (§2) | EE-1 ✅ · tick-cero | I·IV + ceguera | en vuelo (no tocar wt) | LOCAL |
-| [C02](WP-C02-acl-direccional.md) | ACL direccional (Z05#3) | C01 shape · Z_SDK #5 | I·II + ceguera | en vuelo (no tocar wt) | LOCAL · Z_SDK #5 |
-| [C03](WP-C03-arg-edificios.md) | Edificios ↔ paquetes (§A4) | C01 · catálogo Z06 | I·II + ceguera | ⬜ brief listo · gate R11 | LOCAL |
+| [C01](WP-C01-semilla-salud.md) | Salud real ↔ mapa (§2) | EE-1 ✅ · tick-cero | I·IV + ceguera | ✅ GL `19317c1` | LOCAL |
+| [C02](WP-C02-acl-direccional.md) | ACL direccional (Z05#3) | C01 shape · Z_SDK #5 | I·II + ceguera | ✅ zeus `1df2fd2` | LOCAL · Z_SDK #5 OPEN |
+| [C03](WP-C03-arg-edificios.md) | Edificios ↔ paquetes (§A4) | C01 · catálogo Z06 | I·II + ceguera | ⬜ brief listo · **gate R11** · sin 🔶 | LOCAL |
 
 Briefs CR-1:
 
@@ -77,9 +77,10 @@ Otros parked:
 **CR-1 → C04 → C05 → PRUEBA-DE-DOS** (hito observación + acta fricción;
 protagonistas custodio+vigía) → **§6** meta-juego → **trama-agua**.
 
-## R11 (sin cambio de alcance)
+## R11 (sin cambio de alcance) · **listo**
 
-Re-verif ola 1 + gate C03 + `npm view` kits C04. No abre C05.
+Re-verif ola 1 (tips arriba) + gate C03 + `npm view` kits C04. No abre C05.
+**C03 no despachado** en cierre OLA 1 — arranca solo tras R11 PASS.
 
 ## Checklist R10 pre-despacho (histórico · vigía)
 

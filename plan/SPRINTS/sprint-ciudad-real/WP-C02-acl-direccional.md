@@ -2,7 +2,7 @@
 
 | dato | valor |
 |---|---|
-| estado | ⬜ brief listo · **sin 🔶** hasta R10 |
+| estado | ✅ merge zeus `1df2fd2` · OLA 1 · Z_SDK #5 OPEN |
 | track | ENGINE (zeus) |
 | depende de | shape C01 · dolor real ownership |
 | fuente | [WP-Z05 item 3](../sprint-game-city/WP-Z05-engine-evoluciones.md) |

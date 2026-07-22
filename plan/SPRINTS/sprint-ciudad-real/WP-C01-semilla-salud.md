@@ -2,7 +2,7 @@
 
 | dato | valor |
 |---|---|
-| estado | ⬜ brief listo · **sin 🔶** hasta R10 |
+| estado | ✅ merge GL `19317c1` · OLA 1 |
 | track | PACK (GL) + consumo tip zeus publicado |
 | depende de | EE-1 ✅ · tick-cero canal real |
 | fuente | [SEMILLA-GAMIFICACION §2](../sprint-game-city/SEMILLA-GAMIFICACION.md) |
