@@ -4,9 +4,11 @@
 > `wp/cr-<id>-<slug>` (+ worktree si paralelo); NO editar este fichero.
 > Estados: ⬜ · 🔶 · ✅.
 > Padre: [DE-I19](../../DECISIONES.md) · [DECISIONES sprint](DECISIONES.md).
-> Embajador **CERRADO**. Proyección: **LOCAL-ONLY** · Z_SDK **#5/#6** citar
-> OPEN. **CR-1 ✅** (C01·C02·C03) · **listo-R12** · C05 **🔶** brief ·
-> **sin despacho**. C04 tip en pin zeus `73cb0c2` (paralelo citado).
+> Embajador **CERRADO**. Proyección: **apply** (DE-I23 · DC-CR-proyeccion-arco)
+> · umbrella [#30](https://github.com/alephscriptorium-eng/S_SDK/issues/30)
+> CLOSED · C05 [#31](https://github.com/alephscriptorium-eng/S_SDK/issues/31)
+> OPEN · Z_SDK **#5/#6** citar OPEN. **CR-1 ✅** · **listo-R12** · C05 **🔶**.
+> C04 tip en pin zeus `73cb0c2`.
 
 ## Gate tick-cero (GO-C1)
 
@@ -28,9 +30,9 @@
 
 | Id | Título | Deps | Ejes | Estado | Issue |
 |---|---|---|---|---|---|
-| [C01](WP-C01-semilla-salud.md) | Salud real ↔ mapa (§2) | EE-1 ✅ · tick-cero | I·IV + ceguera | ✅ GL `19317c1` | LOCAL |
-| [C02](WP-C02-acl-direccional.md) | ACL direccional (Z05#3) | C01 shape · Z_SDK #5 | I·II + ceguera | ✅ zeus `1df2fd2` | LOCAL · Z_SDK #5 OPEN |
-| [C03](WP-C03-arg-edificios.md) | Edificios ↔ paquetes (§A4) | C01 · catálogo Z06 | I·II + ceguera | ✅ GL `f388451` | LOCAL |
+| [C01](WP-C01-semilla-salud.md) | Salud real ↔ mapa (§2) | EE-1 ✅ · tick-cero | I·IV + ceguera | ✅ GL `19317c1` | → [#30](https://github.com/alephscriptorium-eng/S_SDK/issues/30) |
+| [C02](WP-C02-acl-direccional.md) | ACL direccional (Z05#3) | C01 shape · Z_SDK #5 | I·II + ceguera | ✅ zeus `1df2fd2` | → [#30](https://github.com/alephscriptorium-eng/S_SDK/issues/30) · Z_SDK #5 OPEN |
+| [C03](WP-C03-arg-edificios.md) | Edificios ↔ paquetes (§A4) | C01 · catálogo Z06 | I·II + ceguera | ✅ GL `f388451` | → [#30](https://github.com/alephscriptorium-eng/S_SDK/issues/30) |
 
 Briefs CR-1:
 
@@ -42,7 +44,7 @@ Briefs CR-1:
 
 | Id | Título | Deps | Ejes | Estado | Issue |
 |---|---|---|---|---|---|
-| C04 | Kits juego/contratos → public (DE-I21) | DC-CR-kits-foss | I + ceguera | tip zeus `73cb0c2` (PR#8+#9) · reporte ciclo cerrado | LOCAL |
+| C04 | Kits juego/contratos → public (DE-I21) | DC-CR-kits-foss | I + ceguera | tip zeus `73cb0c2` (PR#8+#9) · reporte ciclo cerrado | → [#30](https://github.com/alephscriptorium-eng/S_SDK/issues/30) |
 
 Checklist prep R10.6 (v1/v2/v3) queda como handoff hacia C05.
 
@@ -61,7 +63,7 @@ Re-correr sobre tip post-merge si hace falta.
 
 | Id | Título | Deps | Ejes | Estado | Issue |
 |---|---|---|---|---|---|
-| [C05](WP-C05-ciudadano-agente.md) | ciudadano-agente | C04 · tras CR-1 (C01/C03 ✅) | I·IV + regla 6 + ceguera | 🔶 brief · **sin despacho** (R12) | LOCAL |
+| [C05](WP-C05-ciudadano-agente.md) | ciudadano-agente | C04 · tras CR-1 (C01/C03 ✅) | I·IV + regla 6 + ceguera | 🔶 brief · **sin despacho** (R12) | [#31](https://github.com/alephscriptorium-eng/S_SDK/issues/31) OPEN |
 
 Brief: [BRIEF-WP-C05](../../REPORTES/BRIEF-WP-C05-ciudadano-agente.md).
 Al cerrar: responder **v2/v3** (wiring ciudad→MCP · peercard room-bridge)
@@ -95,6 +97,6 @@ Re-verif C03 (tips arriba) + cierre CR-1 + gate C05.
 | tick-cero canal real | `TICK_CERO_OK` + `@zeus/protocol@0.3.0` |
 | ∩ paths C01∩C02∩C03 | documentado en DC-CR-exclusion-paths |
 | Z_SDK #5 | OPEN (citar; no cerrar) |
-| LOCAL-ONLY | sin `gh issue create` de filas nuevas |
+| proyección arco | #30 CLOSED · #31 OPEN · sync-map post-apply |
 | ceguera DE-I20 | gate δ12 recordado en briefs |
 | workers | gate R10; C05 🔶 sin despacho hasta R12 |

@@ -1,9 +1,18 @@
 {
-  "C01": "LOCAL",
-  "C02": "LOCAL",
+  "CR1_C04_umbrella": 30,
+  "C01": 30,
+  "C02": 30,
   "C02_overlap": "Z_SDK#5",
-  "C03": "LOCAL",
-  "C04": "LOCAL",
-  "C05": "LOCAL",
-  "note": "DC-CR-proyeccion-local · sin gh issue create · Z_SDK #5/#6 OPEN no cerrar · post-apply CR-1 cierre 2026-07-22 (C01+C02+C03)"
+  "C03": 30,
+  "C04": 30,
+  "C05": 31,
+  "cite": {
+    "VIDA-1": [28, 29],
+    "EE-1": [22, 23]
+  },
+  "panoramicas": {
+    "Z_SDK#2": "post-city arco",
+    "GL#1": "post-city arco"
+  },
+  "note": "DC-CR-proyeccion-arco · GO PROYECCIÓN-ARCO · post-apply 2026-07-22 · umbrella #30 CLOSED · C05 #31 OPEN · Z#5/#6 OPEN no cerrar"
 }

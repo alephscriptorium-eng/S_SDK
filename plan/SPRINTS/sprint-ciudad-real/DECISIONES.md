@@ -49,13 +49,41 @@ en acta futura cuando ocurra. No condiciona R10 ni merge de C01–C03.
 Paralelismo: C01 ∥ C03 posible si paths no se pisan; C02 serie tras shape
 C01 o con stubs documentados. ∩ = devolución R10.
 
-### DC-CR-proyeccion-local · 2026-07-22 · **cerrada**
+### DC-CR-proyeccion-local · 2026-07-22 · **superseded** (antecedente)
 
-**Tema:** proyección issues.
+**Asiento histórico:** LOCAL-ONLY hasta cierre de lote · **no borrar**.
+**SUPERSEDE** → [DC-CR-proyeccion-arco](#dc-cr-proyeccion-arco--2026-07-22--cerrada-go-proyección-arco)
+(GO PROYECCIÓN-ARCO · opt-in PO · 2026-07-22).
 
-**Decisión:** no crear issues nuevas ahora. Filas C01/C02/C03 = LOCAL.
-Overlap pack C02 = trabajar **Z_SDK #5** (citar; no cerrar). Sync-map
-post-apply (regla 17) al cierre de lote.
+**Tema (histórico):** proyección issues.
+
+**Decisión (histórico):** no crear issues nuevas entonces. Filas
+C01/C02/C03 = LOCAL. Overlap pack C02 = trabajar **Z_SDK #5** (citar;
+no cerrar). Sync-map post-apply (regla 17) al cierre de lote.
+
+### DC-CR-proyeccion-arco · 2026-07-22 · **cerrada** (GO PROYECCIÓN-ARCO)
+
+**Tema:** proyección issues del arco CIUDAD-REAL (opt-in PO).
+
+**Fuente:** GO PROYECCIÓN-ARCO (opt-in PO · 2026-07-22). **SUPERSEDE**
+[DC-CR-proyeccion-local](#dc-cr-proyeccion-local--2026-07-22--superseded-antecedente)
+(conservar texto histórico).
+
+**Decisión:**
+
+1. Umbrella S_SDK **«CIUDAD-REAL · CR-1 + C04»** — arco C01 salud → C02
+   ACL → C03 edificios → C04 kits FOSS; **crear y cerrar** con evidencia
+   (✅→closed).
+2. **C05** ciudadano-agente = issue **OPEN** individual (se cierra a su ✅).
+3. VIDA-1 (#28/#29) y EE-1 (#22/#23): **citar, no duplicar**.
+4. Panorámicas ciegas: comentario en **Z_SDK #2** y **GL #1** (idioma del
+   repo · patrón camino-U) · ceguera grep = 0 antes de publicar.
+5. Sync-map post-apply (regla 17) tras create/close · acta con URLs.
+
+**Vetos intactos:** no merge C05 · no E_SDK · no force · Z_SDK #5/#6 OPEN
+(citar; no cerrar) · no tocar paths/worktrees C05.
+
+House: [DE-I23](../../DECISIONES.md).
 
 ### DC-CR-embajador-private · 2026-07-22 · **superseded** (antecedente)
 

@@ -320,3 +320,13 @@ bloquea WP-D31 de aquel mundo, no bloquea este plan.)*
   [`ENTREGA-VIGIA-2026-07-22-contrato-convivencia.md`](REPORTES/ENTREGA-VIGIA-2026-07-22-contrato-convivencia.md).
   Consecuencia: partición obra/gobierno city∥bosque; bosque monta
   esqueleto §2bis tras este asiento; gate bosque desbloqueado.
+
+- **DE-I23 · Proyección arco CIUDAD-REAL (CR-1 + C04 · C05 OPEN)**
+  *(gobierno · GO PROYECCIÓN-ARCO · opt-in PO · 2026-07-22).* **SUPERSEDE**
+  la política LOCAL-ONLY del asiento
+  DC-CR-proyeccion-local (conservar histórico). Apply: umbrella S_SDK
+  «CIUDAD-REAL · CR-1 + C04» create+close con evidencia · C05 issue OPEN
+  individual · citar VIDA-1 (#28/#29) y EE-1 (#22/#23) sin duplicar ·
+  panorámicas ciegas Z_SDK #2 / GL #1 · sync-map post-apply (regla 17).
+  Espejo sprint: `sprint-ciudad-real/DECISIONES.md`
+  **DC-CR-proyeccion-arco**. Vetos: no merge C05 · no E_SDK · no force.

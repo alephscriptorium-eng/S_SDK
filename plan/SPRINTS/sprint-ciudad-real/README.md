@@ -32,8 +32,9 @@
    [#6](https://github.com/alephscriptorium-eng/Z_SDK/issues/6)).
 2. Ceguera obra: `WP-[A-Z]{1,2}\d` → 0 hits en `packages/`+`e2e/`+`kits`
    (DE-I20 / PRACTICAS δ12).
-3. Proyección = **LOCAL-ONLY** hasta cierre de lote + sync-map post-apply
-   (regla 17). No `gh issue create` de filas bajo umbrella ahora.
+3. Proyección = **apply** (GO PROYECCIÓN-ARCO · DE-I23 /
+   DC-CR-proyeccion-arco). Umbrella CR-1+C04 closed · C05 OPEN ·
+   sync-map post-apply (regla 17). Antecedente LOCAL-ONLY superseded.
 4. Vetos: E_SDK / DE-I8 · reopen ✅ city · force-push · claim→acta/SHA.
 
 ## Parked / post CR-1

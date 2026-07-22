@@ -6,7 +6,7 @@
 | track | PACK (GL) + KIT (zeus player-mcp) |
 | depende de | C04 ✅ · CR-1 (C01/C03 ✅) |
 | fuente | regla 6 city · E02 / peer-card-seat · checklist C04 v2/v3 |
-| issue | LOCAL-ONLY |
+| issue | [#31](https://github.com/alephscriptorium-eng/S_SDK/issues/31) OPEN |
 | brief | [BRIEF-WP-C05](../../REPORTES/BRIEF-WP-C05-ciudadano-agente.md) |
 
 ## Objetivo
