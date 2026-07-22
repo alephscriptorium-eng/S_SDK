@@ -2,39 +2,32 @@
 
 | dato | valor |
 |---|---|
-| estado | 🔶 · **sin despacho** hasta gate **R17-city** PASS |
+| estado | ✅ · [ACTA-F5-cierre-2026-07-22](REPORTES/ACTA-F5-cierre-2026-07-22.md) · [AVISO-R19](REPORTES/AVISO-R19.md) |
 | track | OPS / publish · e2e federación · check oasis |
 | depende de | T1 ✅ · S04 ✅ · gate [AVISO-R17-city](REPORTES/AVISO-R17-city.md) |
 | fuente | GO PO · WP-F5 · 2026-07-22 |
 | issue | LOCAL-ONLY |
-| sub-WPs | [F5a](WP-F5a.md) · [F5b](WP-F5b.md) · [F5c](WP-F5c.md) |
-| cierre | checklist [C1–C8 T1](REPORTES/CHECKLIST-F5-C1-C8-T1.md) (muertas o documentadas) |
+| sub-WPs | [F5a](WP-F5a.md) ✅ · [F5b](WP-F5b.md) ✅ · [F5c](WP-F5c.md) ✅ |
+| cierre | checklist [C1–C8 T1](REPORTES/CHECKLIST-F5-C1-C8-T1.md) **cerrada** |
 
-## Objetivo (paraguas)
+## Objetivo (paraguas) — cumplido
 
-Hacer la **ciudad instanciable desde registry** y demostrar **federación
-e2e de dos ciudades** en canal C8 puro. Sub-WPs:
+Ciudad instanciable desde registry + federación e2e dos ciudades C8 puro.
 
-| id | foco | bloquea a/b? |
+| id | foco | estado |
 |---|---|---|
-| **F5a** | PUBLICAR lote mesh (+ embajador-kit `skill/` si cabe) | — |
-| **F5b** | CA ESTRELLA e2e DOS CIUDADES registry puro | espera F5a publicado |
-| **F5c** | CHECK sidecar→pub oasis (custodio) | **no** |
+| **F5a** | PUBLICAR lote mesh | ✅ |
+| **F5b** | CA ESTRELLA e2e DOS CIUDADES | ✅ |
+| **F5c** | CHECK sidecar→pub oasis | ✅ |
 
-Guía clase: [DC-CR-kits-foss](../sprint-ciudad-real/DECISIONES.md#dc-cr-kits-foss--2026-07-22--cerrada-go-c1b)
-— **ciudad = clase pública semilla** (kit/contrato de juego, no app
-privada por defecto). Operator-ui: worker propone publish `dist/` vs
-build-doc; **PO sella**.
+Operator-ui: sello PO **B** (build-doc).
 
 ## Post-F5 (parked · sin reopen S04)
 
-Candidato **S04-v2** parked: mapa «federar tu ciudad» citando
-`o-sdk.escrivivir.co/PUB` — ver [NOTA-S04-v2-parked](REPORTES/NOTA-S04-v2-parked.md).
-**No** reabrir S04 ✅.
+**S04-v2** parked: mapa «federar tu ciudad» + `o-sdk.escrivivir.co/PUB`.
 
-## Vetos (heredados)
+## Vetos (intactos)
 
 - Z_SDK #4/#5/#6 — **citar, no cerrar**
 - E_SDK — veto
-- Ceguera regla 1 en obra producto
-- **NO despachar** workers desde montaje / este stub
+- Ceguera regla 1

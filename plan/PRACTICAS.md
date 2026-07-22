@@ -111,3 +111,10 @@ el texto: se referencia (la réplica es el defecto que este plan combate).
     `packages/` + `e2e/` + `kits/instances/` → **0 hits**. Citas en
     `plan/` ancladas C9 = toleradas (excepción conocida del vigía; no
     re-elevar). ENTREGA no mete ids nuevos en prosa.
+
+13. **Credenciales registry (dato de mundo · R-2b · 2026-07-22).**
+    Auth write Verdaccio C8 = D-24 (a): `NPM_USERNAME` + `NPM_PASSWORD`
+    (`_password` base64). Fuente ops del mundo (NO en skill):
+    **ScriptoriumVps** rama `integration/beta/scriptorium` ·
+    `sh scripts/ci-registry-secret.sh password`. Sembrar en Actions del
+    repo que publica; nunca versionar secretos ni pegarlos en `plan/`.

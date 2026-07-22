@@ -1,6 +1,9 @@
 {
-  "note": "DC-PCO-proyeccion · LOCAL-ONLY durante sprint · rellenar post-apply (regla 17)",
-  "umbrella_pending": true,
+  "note": "DC-PCO-proyeccion · LOCAL-ONLY · sync-map post-apply (regla 17) · cierre F5",
+  "umbrella_pending": false,
+  "closed_at": "2026-07-22",
+  "acta_f5": "REPORTES/ACTA-F5-cierre-2026-07-22.md",
+  "aviso_r19": "REPORTES/AVISO-R19.md",
   "WPs": {
     "T1": null,
     "S04": null,
@@ -9,6 +12,10 @@
     "F5a": null,
     "F5b": null,
     "F5c": null
+  },
+  "pins": {
+    "zeus": "d0d9de1d3af0e75a9f5d7d7b4c2b4d3762beb90c",
+    "games_library": "d1783646f4364fce49ae9b421c863bc51bfad4aa"
   },
   "cite_do_not_duplicate": {
     "skills_B3": 14,

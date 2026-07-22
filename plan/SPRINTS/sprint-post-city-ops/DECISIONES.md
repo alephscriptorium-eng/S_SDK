@@ -118,7 +118,7 @@ preferible). **No** reabrir S04 ✅. Citar `o-sdk.escrivivir.co/PUB` en el
 mapa futuro. Nota:
 [NOTA-S04-v2-parked](REPORTES/NOTA-S04-v2-parked.md).
 
-### DC-PCO-F5a-operator-ui · 2026-07-22 · **abierta** (espera sello PO)
+### DC-PCO-F5a-operator-ui · 2026-07-22 · **cerrada** (sello PO = **B**)
 
 **Tema:** `@zeus/operator-ui` — ¿publish tarball o build documentado?
 
@@ -129,9 +129,11 @@ mapa futuro. Nota:
 | **A · publish con `dist/`** | `private:false` + `dist/` en Release; usable `npm i` C8 |
 | **B · build-doc (recomendada)** | permanece `private:true`; documentar `npm run build:operator-ui` |
 
-**Estado:** **sello PO pendiente**. Sin sello = **no** publicar operator-ui.
-City-orq **no** inventa publish. Hasta sello, C6 permanece abierta en
-[CHECKLIST](REPORTES/CHECKLIST-F5-C1-C8-T1.md).
+**Sello PO:** **B** (build documentado). `operator-ui` permanece
+`private:true`; no publish C8. Receta canónica: `npm run build:operator-ui`
+→ `npm run start:operator-ui` (mapa embajador
+`skill/reference/donde-esta-cada-cosa.md` · tip zeus `d0d9de1` ·
+embajador-kit@0.1.3). C6 = **documentada**.
 
 ### DC-PCO-F5a-parcial · 2026-07-22 · **cerrada** (city-orq · revisión)
 
@@ -148,3 +150,24 @@ City-orq **no** inventa publish. Hasta sello, C6 permanece abierta en
    (Docker + config custodio fuera); **no bloquea** a/b.
 4. **F5b** permanece **parked** · **NO despachar** hasta F5a ✅ total
    (ciudad/startpack en C8).
+
+### DC-PCO-F5a-total · 2026-07-22 · **cerrada** (city-orq · R18.5)
+
+**Tema:** F5a ✅ total tras secrets GL + publish + sello B.
+
+**Decisión:**
+
+1. Secrets GL `NPM_USERNAME`/`NPM_PASSWORD` sembrados (custodio).
+2. Workflow `Publish mesh ciudad` · tip GL `d178364` · run
+   **29934850683** success · `npm view` ×3:
+   `startpack-kit@0.1.0` · `startpack-ciudad@0.1.0` · `ciudad@0.1.0`.
+3. Sello operator-ui = **B** (DC arriba).
+4. **F5a ✅ total** → despacho F5b autorizado.
+
+### DC-PCO-F5-cierre · 2026-07-22 · **cerrada** (city-orq · camino R19)
+
+**Tema:** cierre paraguas F5 + aviso R19.
+
+**Decisión:** F5a ✅ · F5b ✅ · F5c ✅ →
+[ACTA-F5-cierre-2026-07-22](REPORTES/ACTA-F5-cierre-2026-07-22.md) ·
+[AVISO-R19](REPORTES/AVISO-R19.md). No cerrar Z#4/#5/#6 · E_SDK veto.

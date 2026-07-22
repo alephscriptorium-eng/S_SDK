@@ -183,3 +183,16 @@ gh issue view 4|5|6 --repo alephscriptorium-eng/Z_SDK → state OPEN
 5. Operator-ui: propuesta **B** · [sello PO pendiente](../DECISIONES.md#dc-pco-f5a-operator-ui--2026-07-22--abierta-espera-sello-po).
 6. Ejes I·V + ceguera: OK en obra zeus; gap GL = ops secrets (no fail de worker).
 7. Z#4/#5/#6 OPEN · E_SDK veto.
+
+---
+
+## Addendum R18.5 · F5a ✅ total · 2026-07-22 · city-orq+worker
+
+1. Secrets GL `NPM_USERNAME`/`NPM_PASSWORD` sembrados.
+2. Tip GL `d178364` — workflow `Publish mesh ciudad` (D-24) · PR #3.
+3. Release/run **29934850683** success.
+4. `npm view` C8: `startpack-kit@0.1.0` · `startpack-ciudad@0.1.0` ·
+   `ciudad@0.1.0`.
+5. Sello PO operator-ui = **B** · mapa embajador tip zeus `d0d9de1` ·
+   embajador-kit@0.1.3 (Release **29935568597**).
+6. **F5a ✅ total** → F5b despachado.
