@@ -2,7 +2,7 @@
 
 | dato | valor |
 |---|---|
-| estado | 🔶 · **sin despacho** hasta **R17-city** PASS · **parked** hasta F5a ✅ (C8) |
+| estado | 🔶 · **parked** · **NO despachar** hasta F5a ✅ total (ciudad/startpack C8) |
 | track | E2E / federación · scratch A+B |
 | depende de | R17-city PASS · **F5a ✅** (lote mesh en C8) · Z04/rooms citables |
 | paraguas | [WP-F5](WP-F5.md) |

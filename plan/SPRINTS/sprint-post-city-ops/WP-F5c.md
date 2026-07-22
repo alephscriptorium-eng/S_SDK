@@ -2,7 +2,7 @@
 
 | dato | valor |
 |---|---|
-| estado | 🔶 · **sin despacho** hasta **R17-city** PASS · **no bloquea** F5a∥F5b |
+| estado | ✅ · protocolos PUB 200 · sidecar `<pendiente>` · **no bloquea** a/b |
 | track | OPS / oasis · read-only check |
 | depende de | R17-city PASS · protocolos o-sdk PUB alcanzables |
 | paraguas | [WP-F5](WP-F5.md) |

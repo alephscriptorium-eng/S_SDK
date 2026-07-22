@@ -2,7 +2,7 @@
 
 | dato | valor |
 |---|---|
-| estado | 🔶 · **sin despacho** hasta **R17-city** PASS |
+| estado | ⚠️ **parcial** · zeus C8 ✅ · GL publish blocked · **no** ✅ total |
 | track | PUBLISH / changesets + bot Release + `npm view` C8 |
 | depende de | R17-city PASS · T1 ✅ (fricciones C1/C2/C6) · DC-CR-kits-foss |
 | paraguas | [WP-F5](WP-F5.md) |

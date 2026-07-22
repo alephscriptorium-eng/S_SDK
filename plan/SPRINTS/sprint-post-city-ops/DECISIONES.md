@@ -117,3 +117,34 @@ evidencia de intento. **F5c no bloquea** aceptación ni despacho de F5a/F5b.
 preferible). **No** reabrir S04 ✅. Citar `o-sdk.escrivivir.co/PUB` en el
 mapa futuro. Nota:
 [NOTA-S04-v2-parked](REPORTES/NOTA-S04-v2-parked.md).
+
+### DC-PCO-F5a-operator-ui · 2026-07-22 · **abierta** (espera sello PO)
+
+**Tema:** `@zeus/operator-ui` — ¿publish tarball o build documentado?
+
+**Propuesta worker F5a** ([reporte](REPORTES/WP-F5a-publish-mesh.md) §C6):
+
+| opción | resumen |
+|---|---|
+| **A · publish con `dist/`** | `private:false` + `dist/` en Release; usable `npm i` C8 |
+| **B · build-doc (recomendada)** | permanece `private:true`; documentar `npm run build:operator-ui` |
+
+**Estado:** **sello PO pendiente**. Sin sello = **no** publicar operator-ui.
+City-orq **no** inventa publish. Hasta sello, C6 permanece abierta en
+[CHECKLIST](REPORTES/CHECKLIST-F5-C1-C8-T1.md).
+
+### DC-PCO-F5a-parcial · 2026-07-22 · **cerrada** (city-orq · revisión)
+
+**Tema:** aceptación parcial F5a + F5c; F5b parked.
+
+**Decisión:**
+
+1. **F5a ⚠️ parcial** — zeus C8 ✅ (`socket-server`/`mcp-launcher`/`embajador-kit`
+   tip `c13546b` · Release 29931698137). GL tip `29edb7e` = prep
+   `ciudad` public **sin** publish (secrets Actions vacíos). **No** ✅ total.
+2. Custodio/PO: sembrar `NPM_*` (o token) en
+   `Z_SDK-games-library` — [AVISO](REPORTES/AVISO-F5a-GL-NPM-secrets.md).
+3. **F5c ✅** — protocolos PUB 200; sidecar→pub `<pendiente>` honesto
+   (Docker + config custodio fuera); **no bloquea** a/b.
+4. **F5b** permanece **parked** · **NO despachar** hasta F5a ✅ total
+   (ciudad/startpack en C8).

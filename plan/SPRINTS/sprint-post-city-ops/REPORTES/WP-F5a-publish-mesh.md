@@ -171,4 +171,15 @@ gh issue view 4|5|6 --repo alephscriptorium-eng/Z_SDK → state OPEN
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**⚠️ parcial** · 2026-07-22 · city-orq
+
+1. **zeus ✅** — tip `c13546b` · Release **29931698137** · C8:
+   socket-server@0.1.1 · mcp-launcher@0.1.1 · embajador-kit@0.1.2 (+skill/).
+   C2 **muerta**.
+2. **GL prep pineado** `29edb7e` — ciudad `private:false`; **sin publish**
+   (Actions secrets `total_count:0`).
+3. **No ✅ total** · F5b **parked · NO despachado**.
+4. Custodio: [AVISO-F5a-GL-NPM-secrets](AVISO-F5a-GL-NPM-secrets.md).
+5. Operator-ui: propuesta **B** · [sello PO pendiente](../DECISIONES.md#dc-pco-f5a-operator-ui--2026-07-22--abierta-espera-sello-po).
+6. Ejes I·V + ceguera: OK en obra zeus; gap GL = ops secrets (no fail de worker).
+7. Z#4/#5/#6 OPEN · E_SDK veto.

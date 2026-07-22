@@ -1,10 +1,10 @@
-# sprint-post-city-ops — PCO-1 ✅ · **PCO-2 F5 montado** (sin despacho)
+# sprint-post-city-ops — PCO-1 ✅ · PCO-2 F5 **en curso**
 
-> **Estado:** PCO-1 (T1·S04) **cerrada**. PCO-2 **WP-F5** montado · 🔶
-> emitidos · [AVISO-R17-city](REPORTES/AVISO-R17-city.md). Tick PO
-> 2026-07-22. **NO despachar** F5a/F5b/F5c hasta gate vigía **R17-city**
-> PASS. F5b además **parked** hasta F5a ✅. F5c **no bloquea** a/b.
-> Orquestador: city-orq · Contrato convivencia multi-orq v1.1 (DE-I22).
+> **Estado:** PCO-1 (T1·S04) **cerrada**. PCO-2: **F5a ⚠️ parcial**
+> (zeus C8 ✅ `c13546b` · GL prep `29edb7e` · publish blocked NPM_*) ·
+> **F5c ✅** (sidecar `<pendiente>`) · **F5b parked · NO despachado**.
+> Custodio: [AVISO-F5a-GL-NPM-secrets](REPORTES/AVISO-F5a-GL-NPM-secrets.md).
+> Operator-ui **B** · sello PO pendiente. Orquestador: city-orq · v1.1.
 
 ## Partición V2
 
@@ -31,7 +31,7 @@ un commit V2 por tick gobierno F5.
 | ola | WPs | estado |
 |---|---|---|
 | PCO-1 | T1 · S04 | ✅ |
-| PCO-2 | **F5** (a∥c · b parked) | 🔶 · sin despacho |
+| PCO-2 | **F5** (a parcial · c ✅ · b parked) | 🔶 en curso · **NO F5b** |
 
 ## Guardarraíles
 
@@ -51,7 +51,10 @@ un commit V2 por tick gobierno F5.
 | [DECISIONES.md](DECISIONES.md) | DC-PCO-* (incl. F5-apertura · F5-oasis · S04-v2). |
 | [WP-F5](WP-F5.md) · [F5a](WP-F5a.md) · [F5b](WP-F5b.md) · [F5c](WP-F5c.md) | Paraguas + stubs. |
 | [BRIEFS/](BRIEFS/) | Briefs definitivos F5 (sin despacho). |
-| [REPORTES/AVISO-R17-city.md](REPORTES/AVISO-R17-city.md) | Pedido gate vigía F5. |
-| [REPORTES/CHECKLIST-F5-C1-C8-T1.md](REPORTES/CHECKLIST-F5-C1-C8-T1.md) | Absorción fricción T1. |
+| [REPORTES/AVISO-R17-city.md](REPORTES/AVISO-R17-city.md) | Gate vigía F5 (consumido). |
+| [REPORTES/AVISO-F5a-GL-NPM-secrets.md](REPORTES/AVISO-F5a-GL-NPM-secrets.md) | Pedido custodio: NPM_* en GL. |
+| [REPORTES/WP-F5a-publish-mesh.md](REPORTES/WP-F5a-publish-mesh.md) | Reporte F5a (parcial). |
+| [REPORTES/WP-F5c-sidecar-pub-oasis.md](REPORTES/WP-F5c-sidecar-pub-oasis.md) | Reporte F5c. |
+| [REPORTES/CHECKLIST-F5-C1-C8-T1.md](REPORTES/CHECKLIST-F5-C1-C8-T1.md) | C1–C8 (C2 muerta). |
 | [REPORTES/NOTA-S04-v2-parked.md](REPORTES/NOTA-S04-v2-parked.md) | Post-F5 parked. |
 | [.sync-map.json](.sync-map.json) | LOCAL-ONLY hasta post-apply. |
