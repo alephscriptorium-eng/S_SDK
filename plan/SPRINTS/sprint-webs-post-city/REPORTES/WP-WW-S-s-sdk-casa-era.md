@@ -5,7 +5,7 @@
 | agente | WW-S (worker) |
 | fecha | 2026-07-22 |
 | rama | `wp/ww-s-casa-era` |
-| commits | _(rellenar post-commit)_ |
+| commits | `8e497ea` (`8e497ea197a195462779e9a403eb567f4d0755f9`) |
 | eje(s) CA | III · IV · ceguera · regla 15 |
 | estado propuesto | listo para revisión |
 | issue | LOCAL-ONLY |
