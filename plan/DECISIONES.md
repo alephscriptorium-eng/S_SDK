@@ -238,33 +238,36 @@ bloquea WP-D31 de aquel mundo, no bloquea este plan.)*
   refs locales estables del raíz (acta H2.1 CA5). Consecuencia: ops puede
   borrar `wp/*` merged; **jamás** `draft` sin GO explícito del custodio.
 
-- **DE-I19 · Cola de GOs post–sprint-game-city (v2 · enmienda GO-V1)**
+- **DE-I19 · Cola de GOs post–sprint-game-city (v2 · enmienda GO-V1 ·
+  GO-C1)**
   *(custodio · GO H2.2 · 2026-07-22 · enmienda GO-V1 · 2026-07-22 ·
-  gobierno V2).* Tras C04, los parked pasan a **cola de GOs**. Vista
-  histórica (H2.2) en
+  gobierno V2 · **GO-C1 2026-07-22**).* Tras C04, los parked pasan a
+  **cola de GOs**. Vista histórica (H2.2) en
   [`sprint-game-city/BACKLOG.md`](SPRINTS/sprint-game-city/BACKLOG.md)
   §«Cola de GOs post-cierre» (city **cerrado** — solo puntero). Vista
-  operativa viva: [`sprint-vida-1/`](SPRINTS/sprint-vida-1/) +
-  [`sprint-embajador-entrada/`](SPRINTS/sprint-embajador-entrada/) (PREP).
+  operativa viva: [`sprint-vida-1/`](SPRINTS/sprint-vida-1/) (✅) ·
+  [`sprint-embajador-entrada/`](SPRINTS/sprint-embajador-entrada/)
+  (**CERRADO** R9.5) · [`sprint-ciudad-real/`](SPRINTS/sprint-ciudad-real/)
+  (**activo** GO-C1).
 
-  **Orden v2 (GO-V1):**
+  **Orden v2 (GO-V1 → GO-C1):**
 
-  1. **VIDA-1** ∥ **prep-entrada** — SEMILLA §3 misiones + §4 cronista
-     (sprint-vida-1; M01+M02 ✅ V1-1) en paralelo con esqueleto PREP
-     embajador (GO-V3) → apertura **GO-E1**
-  2. **EMBAJADOR-ENTRADA** — corte E02 + E01 f1–2 + ARG §A5 ·
-     **GO-E1 🔶 emitidos** (2026-07-22); workers **no** despachados hasta
-     vigía R7 · umbrellas S_SDK #22/#23 · LOCAL-ONLY WP filas nuevas ·
-     Z_SDK #4 (obra; no cerrar) · #5/#6 citar no cerrar
-  3. **CIUDAD-REAL** — SEMILLA **§2** + ACL (Z05 items 3–6 / Z_SDK #5) +
-     SEMILLA-ARG **§A4**
+  1. **VIDA-1** ✅ — SEMILLA §3+§4 (M01+M02)
+  2. **EMBAJADOR-ENTRADA** ✅ **CERRADO** (E02+f1+HOTFIX+f2∥A5 · #23
+     CLOSED · #22 OPEN parked · Z_SDK #4/#5/#6 OPEN)
+  3. **CIUDAD-REAL** — **activo** (GO-C1) · SEMILLA **§2** + motor Z05
+     item **3** ACL direccional (**Z_SDK #5** citar; no cerrar) +
+     SEMILLA-ARG **§A4** · sprint
+     [`sprint-ciudad-real/`](SPRINTS/sprint-ciudad-real/) · briefs listos
+     gate vigía **R10** (sin despachar workers)
   4. SEMILLA **§6** meta-juego
   5. trama-agua
 
   **Mantener (invariantes):** veto **E_SDK / DE-I8** fuera de cola hasta
   GO custodio propio · **no reopen ✅** · práctica **claim→acta/SHA**
   (sin acta/SHA = no cerrado). Encolar ≠ abrir: parked siguen ⬜ hasta
-  GO que emita 🔶 + BRIEF (M01/M02 = GO-V2 ✅; corte embajador = GO-E1 🔶).
+  GO que emita 🔶 + BRIEF (M01/M02 = GO-V2 ✅; embajador = CERRADO R9.5;
+  CIUDAD-REAL = GO-C1 activo · R10 pre-despacho).
 
   **Horizonte (sin WP ni GO — carril declarado):**
   **extensión-VSCode-zigurat** como interfaz mesh (wrapper zeus-sdk +

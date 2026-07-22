@@ -1,9 +1,11 @@
-# sprint-embajador-entrada — **CERRADO** (corte entrada ✅ · listo R9)
+# sprint-embajador-entrada — **CERRADO** (R9.5 formal)
 
-> **Estado: CERRADO · corte de entrada ✅.** GO-E1 + ola 2 (f2∥A5) mergeados
-> 2026-07-22. Tips: zeus `30bfc08` · GL `b54a2d2`.
-> Acta: [ACTA-EE1-OLA2-cierre-corte](../../REPORTES/ACTA-EE1-OLA2-cierre-corte-2026-07-22.md).
-> Paraguas f3/f4 siguen parked (#22). **Listo vigía R9.**
+> **Estado: CERRADO.** GO-E1 + ola 2 (f2∥A5) mergeados · release #7
+> publicado · #23 CLOSED. Tips corte: zeus `30bfc08` · GL `b54a2d2` · S
+> `95a04b7`. Acta formal:
+> [ACTA-EE1-cierre-formal](../../REPORTES/ACTA-EE1-cierre-formal-2026-07-22.md).
+> Paraguas f3/f4 parked (#22 OPEN). Z_SDK #4 OPEN. Siguiente:
+> [sprint-ciudad-real](../sprint-ciudad-real/) (GO-C1 · R10).
 >
 > Norte CA: **un amigo entra con su peercard y arranca con
 > `startpack-ciudad-v0.1.0` como base default** — cumplido en tip.

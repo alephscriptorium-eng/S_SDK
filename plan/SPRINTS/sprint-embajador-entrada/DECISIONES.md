@@ -87,3 +87,16 @@ anclan C9 a artefacto público existente; en obra
 ENTREGA no introduce ids nuevos en prosa. Caso fundante: `WP-I60` citado
 por zeus U145/U146 (tolerado). Vigía: excepción conocida, no re-elevar.
 Gate orquestador: PRACTICAS δ12 (`WP-[A-Z]{1,2}\d` pre-merge).
+
+**Addenda V2 (R9.5):** DE-I20 ya cubre texto R8.5 — confirmado SHA
+`c4da631` · acta
+[ACTA-GO-DC-frontera-citas](../../REPORTES/ACTA-GO-DC-frontera-citas-2026-07-22.md).
+
+### DC-EE-cierre-formal · 2026-07-22 · **cerrada** (R9.5)
+
+**Tema:** cierre formal sprint + ops GL npm.
+
+**Decisión:** sprint **CERRADO**. #23 CLOSED · #22 OPEN · Z_SDK #4 OPEN.
+Acta: [ACTA-EE1-cierre-formal](../../REPORTES/ACTA-EE1-cierre-formal-2026-07-22.md).
+**Ops (sin remedio):** GL sin secrets `NPM_*` — sembrar solo cuando se
+quiera `publish_npm` startpacks (decisión futura).

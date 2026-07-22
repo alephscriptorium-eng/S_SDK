@@ -1,0 +1,12 @@
+{
+  "name": "tick-cero-entrada-completa",
+  "private": true,
+  "type": "module",
+  "description": "GO-C1 gate: peercard firmada (proceso peer SIMULADO) → puerta → startpack-ciudad-v0.1.0. Deps solo canal real npm.scriptorium (no file:).",
+  "scripts": {
+    "tick": "node run.mjs"
+  },
+  "dependencies": {
+    "@zeus/protocol": "0.3.0"
+  }
+}

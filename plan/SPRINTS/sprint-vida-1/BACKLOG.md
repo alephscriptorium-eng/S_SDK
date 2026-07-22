@@ -44,8 +44,9 @@ Proyección: apply + sync-map post-lote (regla 17) en el mismo cierre.
 
 ## Parked / fuera de este sprint
 
-- SEMILLA §2 / §6 · CIUDAD-REAL · trama-agua → cola DE-I19 (otros GOs).
-- EMBAJADOR-ENTRADA → [sprint-embajador-entrada](../sprint-embajador-entrada/) **E02+f1 ✅** · f2∥A5 🔶 (aviso vigía **R8**; no despachar ola 2).
+- SEMILLA §2 / §6 · trama-agua → cola DE-I19.
+- **CIUDAD-REAL** → [sprint-ciudad-real](../sprint-ciudad-real/) **ACTIVO** (GO-C1 · R10).
+- EMBAJADOR-ENTRADA → [sprint-embajador-entrada](../sprint-embajador-entrada/) **CERRADO** (R9.5).
 - E_SDK / DE-I8 → veto. No reopen ✅ city.
 
 ## Reglas (además del skill)
