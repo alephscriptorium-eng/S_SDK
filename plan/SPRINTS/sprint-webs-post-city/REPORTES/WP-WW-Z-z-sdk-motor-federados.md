@@ -6,7 +6,7 @@
 | fecha | 2026-07-22 |
 | rama | `wp/ww-z-motor-federados` (zeus-sdk) |
 | worktree | `HOLONES/01-mythos/zeus-sdk/.worktrees/wp-ww-z-motor-federados` |
-| commits | `2985c76806faf9cb562b70a087c149b77d302008` |
+| commits | zeus `2985c76806faf9cb562b70a087c149b77d302008` · S reporte `342e89b4035bff9607af98679ed77096cea743c6` |
 | base | `2aec4cb7d049861a5ea29bdc207c46fad1c22856` |
 | eje(s) CA | III · IV · ceguera regla 1 |
 | estado propuesto | listo para revisión (sin merge · sin push) |
