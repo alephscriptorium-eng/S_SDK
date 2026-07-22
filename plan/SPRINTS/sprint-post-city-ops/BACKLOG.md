@@ -14,7 +14,7 @@
 | Id | Título | Repo / superficie | Deps | Ejes | Estado | Issue |
 |---|---|---|---|---|---|---|
 | [T1](WP-T1-equipo-testing.md) | equipo de testing · acta de fricción | runtime zeus/GL + acta gobierno | R15-T1-S04 PASS | I·IV + ceguera | ✅ · merge `ff1cb66` · S `dbadefa` · [acta](REPORTES/ACTA-T1-FRICCION-2026-07-22.md) | LOCAL-ONLY |
-| [S04](WP-S04-skill-embajador.md) | skill embajador (lado usuario zeus) | skill zeus + peercard/URLs | R15-T1-S04 PASS · **T1 ✅** | I·V + ceguera | 🔶 **en obra** · `wp/pco-s04-skill-embajador` | LOCAL-ONLY · cite skills #14 |
+| [S04](WP-S04-skill-embajador.md) | skill embajador (lado usuario zeus) | skill zeus + peercard/URLs | R15-T1-S04 PASS · **T1 ✅** | I·V + ceguera | 🔶 **listo revisión** · zeus `3c9387b` · [reporte](REPORTES/WP-S04-skill-embajador.md) | LOCAL-ONLY · cite skills #14 |
 
 ### Briefs
 
