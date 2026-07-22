@@ -33,7 +33,7 @@
 | Publish CI | [29934817950](https://github.com/alephscriptorium-eng/S_SDK-skills-library/actions/runs/29934817950) **VERDE** | `b51da57` |
 | Docs CI | [29934811106](https://github.com/alephscriptorium-eng/S_SDK-skills-library/actions/runs/29934811106) **VERDE** | `b51da57` |
 | npm view (C8) | `npm view …@0.5.1 … version` → **`0.5.1`** · dist-tag `latest` | registry canónico |
-| gobierno | tip sprint post-push (este commit) | solo `plan/SPRINTS/sprint-skills-bosque/**` |
+| gobierno | tip `34c068d3ee4e7244157c97b5cc3606606eafb2b0` POST-push | solo `plan/SPRINTS/sprint-skills-bosque/**` |
 
 ```
 $ npm view @alephscript/skills-scriptorium@0.5.1 \
