@@ -29,7 +29,7 @@ Gobierno: plan/SPRINTS/sprint-skills-bosque/** (S_SDK)
 | Aceptación S03 ✅ | `8a2dc04` |
 | **Tip gobierno (aceptación S07 ✅)** | **`2b10330`** |
 | **Tip gobierno (aviso R17)** | **`bb7490f`** |
-| **Tip gobierno (fix UTF-8 aviso)** | **`<FINAL>`** |
+| **Tip gobierno (fix UTF-8 aviso)** | **`e86f3c7`** |
 
 ### Obra · `S_SDK-skills-library`
 
