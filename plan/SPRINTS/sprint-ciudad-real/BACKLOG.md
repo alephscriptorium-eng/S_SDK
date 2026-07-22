@@ -7,8 +7,9 @@
 > Embajador **CERRADO**. Proyección: **apply** (DE-I23 · DC-CR-proyeccion-arco)
 > · umbrella [#30](https://github.com/alephscriptorium-eng/S_SDK/issues/30)
 > CLOSED · C05 [#31](https://github.com/alephscriptorium-eng/S_SDK/issues/31)
-> OPEN · Z_SDK **#5/#6** citar OPEN. **CR-1 ✅** · **listo-R12** · C05 **🔶**.
-> C04 tip en pin zeus `73cb0c2`.
+> CLOSED · Z_SDK **#5/#6** citar OPEN. **CR-1 ✅** · **C05 ✅** · **listo-R14**.
+> Pins: zeus `2aec4cb` · GL `20c095c`. Acta:
+> [ACTA-C05](../../REPORTES/ACTA-C05-CIUDAD-REAL-cierre-2026-07-22.md).
 
 ## Gate tick-cero (GO-C1)
 
@@ -59,15 +60,16 @@ Re-correr sobre tip post-merge si hace falta.
 | **v2** | ¿cableado ciudad → player-mcp-kit (instancia/config)? | **EXISTE** — `HOLONES/01-mythos/games-library/packages/ciudad/package.json` dep `@zeus/player-mcp-kit@^0.1.2` · instancia `packages/ciudad/src/player-mcp/` (`server`/`room-bridge`/`logic`; resources vía `GAME_ID='ciudad'` → `ciudad://player/state`·`scene`·`casos`). | Anotar path en reporte C04 / handoff C05. |
 | **v3** | ¿room-bridge del kit presenta peercard en bootstrap? | **NO-EXISTE** — `player-mcp-kit/src/room-bridge.mjs` `connect()` → `connectAndJoin({ type, features, room })` sin peercard; `rooms` `CLIENT_REGISTER` solo type/features. Ciudad wrapper idem (`CiudadPlayerMcp`). | Gap → **C05** (no bloquear merge C04). |
 
-## C05 · ciudadano-agente (🔶 · sin despacho · R12)
+## C05 · ciudadano-agente (✅ · R13-city)
 
 | Id | Título | Deps | Ejes | Estado | Issue |
 |---|---|---|---|---|---|
-| [C05](WP-C05-ciudadano-agente.md) | ciudadano-agente | C04 · tras CR-1 (C01/C03 ✅) | I·IV + regla 6 + ceguera | 🔶 brief · **sin despacho** (R12) | [#31](https://github.com/alephscriptorium-eng/S_SDK/issues/31) OPEN |
+| [C05](WP-C05-ciudadano-agente.md) | ciudadano-agente | C04 · CR-1 ✅ | I·IV + regla 6 + ceguera | ✅ zeus `05d70fd`→`2aec4cb` · GL `e03f11a`→`20c095c` | [#31](https://github.com/alephscriptorium-eng/S_SDK/issues/31) CLOSED |
 
 Brief: [BRIEF-WP-C05](../../REPORTES/BRIEF-WP-C05-ciudadano-agente.md).
-Al cerrar: responder **v2/v3** (wiring ciudad→MCP · peercard room-bridge)
-en el reporte. **No** abrir worktree ni chat worker en este tick.
+Reporte: [WP-C05](../../REPORTES/WP-C05-ciudadano-agente.md).
+Acta: [ACTA-C05](../../REPORTES/ACTA-C05-CIUDAD-REAL-cierre-2026-07-22.md).
+HOTFIX-C05-CI: test kit vía paquete instalado (`20c095c`). **No reopen.**
 
 ## Parked / fuera
 
@@ -76,7 +78,7 @@ Otros parked:
 - Z05 items **4–6** · SEMILLA **§6** · trama-agua · E01 f3/f4 (#22)
 - E_SDK / DE-I8 · reopen ✅ city · force-push
 - **PRUEBA-DE-DOS** (hito observación + acta fricción; custodio+vigía) —
-  cola v3 ratificada (post C05)
+  cola v3 · **listo-R14** (post C05 ✅ · campana live)
 
 ## Cola v3 (ratificada · DE-I19 · DC-CR-cola-v3)
 
@@ -85,10 +87,10 @@ Otros parked:
 **CR-1 → C04 → C05 → PRUEBA-DE-DOS** (hito observación + acta fricción;
 protagonistas custodio+vigía) → **§6** meta-juego → **trama-agua**.
 
-## R12 (sin cambio de alcance) · **listo**
+## R12 · **PASS** (histórico) · R13-city · **listo-R14**
 
-Re-verif C03 (tips arriba) + cierre CR-1 + gate C05.
-**C05 no despachado** — arranca solo tras **R12** PASS.
+R12 PASS → C05 obra + CADENA VERDE (version zeus + HOTFIX-C05-CI).
+**listo-R14** = PRUEBA-DE-DOS (campana live); **no** abrir en este tick.
 
 ## Checklist R10 pre-despacho (histórico · vigía)
 

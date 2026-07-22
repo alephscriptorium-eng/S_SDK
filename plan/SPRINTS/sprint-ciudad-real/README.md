@@ -1,10 +1,10 @@
 # sprint-ciudad-real — **ACTIVO** (GO-C1 · cola v3 ratificada)
 
 > **Estado: ACTIVO.** Apertura GO-C1 tras cierre formal EMBAJADOR-ENTRADA
-> (R9.5). **CR-1 ✅** (C01·C02·C03) · **listo-R12**. C05 **🔶** brief ·
-> **sin despacho**. Cola v3 **ratificada** (DE-I19 · DC-CR-cola-v3).
-> Padre: [DE-I19](../../DECISIONES.md) · embajador cerrado:
-> [sprint-embajador-entrada](../sprint-embajador-entrada/).
+> (R9.5). **CR-1 ✅** · **C05 ✅** · **listo-R14** (PRUEBA-DE-DOS).
+> Pins: zeus `2aec4cb` · GL `20c095c`. Cola v3 **ratificada**
+> (DE-I19 · DC-CR-cola-v3). Padre: [DE-I19](../../DECISIONES.md) ·
+> embajador cerrado: [sprint-embajador-entrada](../sprint-embajador-entrada/).
 
 ## Parámetros
 
@@ -33,7 +33,7 @@
 2. Ceguera obra: `WP-[A-Z]{1,2}\d` → 0 hits en `packages/`+`e2e/`+`kits`
    (DE-I20 / PRACTICAS δ12).
 3. Proyección = **apply** (GO PROYECCIÓN-ARCO · DE-I23 /
-   DC-CR-proyeccion-arco). Umbrella CR-1+C04 closed · C05 OPEN ·
+   DC-CR-proyeccion-arco). Umbrella CR-1+C04 closed · C05 CLOSED ·
    sync-map post-apply (regla 17). Antecedente LOCAL-ONLY superseded.
 4. Vetos: E_SDK / DE-I8 · reopen ✅ city · force-push · claim→acta/SHA.
 
@@ -41,8 +41,8 @@
 
 | pieza | nota |
 |---|---|
-| **C05** ciudadano-agente | [BRIEF-WP-C05](../../REPORTES/BRIEF-WP-C05-ciudadano-agente.md) · **🔶** · sin despacho hasta R12 |
-| PRUEBA-DE-DOS | cola v3 ratificada (custodio+vigía) |
+| **C05** ciudadano-agente | ✅ · [ACTA-C05](../../REPORTES/ACTA-C05-CIUDAD-REAL-cierre-2026-07-22.md) · #31 CLOSED |
+| PRUEBA-DE-DOS | **listo-R14** (custodio+vigía · campana live) |
 | Z05 items **4–6** | parked (sin GO) |
 | SEMILLA **§6** | meta-juego · cola v3 post PRUEBA-DE-DOS |
 | trama-agua | cola v3 final |

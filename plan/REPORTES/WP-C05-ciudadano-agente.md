@@ -150,4 +150,15 @@ Ninguno para revisión. Higiene worktrees/ramas = orquestador al aceptar
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** · R13-city CADENA VERDE · 2026-07-22
+
+| check | evidencia |
+| ----- | --------- |
+| obra | zeus `05d70fd` · GL `e03f11a` · v2/v3 OK |
+| version | PR#10 `822a13e` → tip `2aec4cb` · Release **29890841579** · npm `player-mcp-kit@0.1.3` · `rooms@0.1.1` |
+| HOTFIX-C05-CI | GL `20c095c` · CI main **29891318380** ✅ · solo path/import test |
+| CA I·IV·regla 6·ceguera | ✅ (reporte + CI) |
+| issue | [#31](https://github.com/alephscriptorium-eng/S_SDK/issues/31) CLOSED |
+| siguiente | **listo-R14** · campana live → **PRUEBA-DE-DOS** (no abrir aquí) |
+
+Acta: [ACTA-C05-CIUDAD-REAL-cierre-2026-07-22](ACTA-C05-CIUDAD-REAL-cierre-2026-07-22.md).
