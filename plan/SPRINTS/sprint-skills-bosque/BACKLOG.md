@@ -5,7 +5,7 @@
 > editar este fichero. Estados: ⬜ · 🔶 · ✅.
 > Contrato: DE-I22 · convivencia multi-orq v1.1.
 > Decisiones: [DECISIONES.md](DECISIONES.md).
-> B-1 ✅ · B-2 S03 ✅ · B-3 S06 ✅ · S07 🔶 en curso (broche 0.5.0) ·
+> B-1 ✅ · B-2 S03 ✅ · B-3 S06 ✅ · S07 ✅ broche `0.5.0` ·
 > S04 traspasado city.
 
 ## Ola B-1 · método (✅ cerrado)
@@ -23,7 +23,7 @@
 Reportes:
 
 - [WP-S01](REPORTES/WP-S01-swarm-vnext.md) · [WP-S02](REPORTES/WP-S02-vigilancia-vnext.md) · [WP-S05](REPORTES/WP-S05-site-web.md) · [WP-S05b](REPORTES/WP-S05b-encoding.md)
-- [AVISO-R14-bosque](REPORTES/AVISO-R14-bosque.md)
+- [AVISO-R14-bosque](REPORTES/AVISO-R14-bosque.md) · [AVISO-R17-bosque](REPORTES/AVISO-R17-bosque.md) · [WP-S03](REPORTES/WP-S03-estacion-viva.md) · [WP-S07](REPORTES/WP-S07-broche-0.5.0.md)
 
 ## Ola B-2 · estacion-viva (✅)
 
@@ -31,12 +31,12 @@ Reportes:
 |---|---|---|---|---|---|
 | S03 | estación viva / watcher calibrado al hermano | C05 ✅ · gate PASS `a37d4c2` | I·IV + ceguera | ✅ tip `be68f07` · merge `9b89495` · [reporte](REPORTES/WP-S03-estacion-viva.md) | [#13](https://github.com/alephscriptorium-eng/S_SDK-skills-library/issues/13) B-2 |
 
-## Ola B-3 · mapa+broche (S06 GO · S07 condicionado · S04 fuera)
+## Ola B-3 · mapa+broche (✅ cerrado · S04 fuera)
 
 | Id | Título | Deps | Ejes | Estado | Issue |
 |---|---|---|---|---|---|
 | S06 | mapa de proyección / sync-map ritual (docs) | B-1 ✅ · ∥ S03 OK (dirs disjuntos) | III + ceguera | ✅ merge `2743176` · tip `834f706` · [reporte](REPORTES/WP-S06-mapa.md) · brief [BRIEF-WP-S06](BRIEFS/BRIEF-WP-S06-mapa.md) | [#14](https://github.com/alephscriptorium-eng/S_SDK-skills-library/issues/14) B-3 |
-| S07 | broche release `0.5.0` (bump + Release + portal + catálogo) | **S03 ✅ + S06 ✅ + S05b ✅** | IV + ceguera | 🔶 **en curso** · precondiciones ✅ · [NOTA-S07](BRIEFS/NOTA-WP-S07-condicionado.md) | [#14](https://github.com/alephscriptorium-eng/S_SDK-skills-library/issues/14) B-3 |
+| S07 | broche release `0.5.0` (bump + Release + portal + catálogo) | **S03 ✅ + S06 ✅ + S05b ✅** | IV + ceguera | ✅ tip `4c2e322` · tag `v0.5.0` · npm `0.5.0` · [reporte](REPORTES/WP-S07-broche-0.5.0.md) · Publish [29927743629](https://github.com/alephscriptorium-eng/S_SDK-skills-library/actions/runs/29927743629) · Docs [29927725261](https://github.com/alephscriptorium-eng/S_SDK-skills-library/actions/runs/29927725261) | [#14](https://github.com/alephscriptorium-eng/S_SDK-skills-library/issues/14) B-3 |
 
 ### Traspaso S04 → city (fuera del backlog bosque)
 
@@ -50,15 +50,15 @@ Reportes:
 |---|---|---|
 | B-1 | S01 · S02 · S05 · S05b | ✅ cerrado (+ encoding mergeado) |
 | B-2 | S03 | ✅ merge `9b89495` |
-| B-3 | S06 · S07 | S06 ✅ · S07 🔶 en curso (broche) |
+| B-3 | S06 · S07 | ✅ cerrado (broche `4c2e322` / `v0.5.0`) |
 
 ## Parked / fuera
 
 - zeus / games-library / pins / `DECISIONES` raíz → city-orq
 - **S04** → city-orq / zeus (este replan R15) — no reabrir aquí
-- peercard / GAME_MCP e2e → post C05 ✅ (vía c contrato); entra con S03
-- **NO** despachar S07 hasta S03 ✅ + S06 ✅ + S05b ✅
+- peercard / GAME_MCP e2e live (C8 kit registry) — residual post-broche si vigía lo pide
 - Issue hermano [#11](https://github.com/alephscriptorium-eng/S_SDK-skills-library/issues/11): dep C05 → [S_SDK#31](https://github.com/alephscriptorium-eng/S_SDK/issues/31) (hecho)
+- Aviso gate: [AVISO-R17-bosque](REPORTES/AVISO-R17-bosque.md)
 
 ## Reglas (además del skill)
 
