@@ -1,12 +1,10 @@
 {
-  "note": "DC-WW-proyeccion · LOCAL-ONLY durante sprint · rellenar post-apply (regla 17) tras umbrella cierre",
-  "umbrella_pending": true,
-  "WPs": {
-    "WW-Z": null,
-    "WW-G": null,
-    "WW-S": null,
-    "W2_absorbed_into": "WW-G"
-  },
+  "note": "DC-WW-proyeccion · post-apply regla 17 · umbrella #32 CLOSED 2026-07-22",
+  "umbrella": 32,
+  "WW-Z": 32,
+  "WW-G": 32,
+  "WW-S": 32,
+  "W2_absorbed_into": "WW-G",
   "cite_do_not_duplicate": {
     "ARQUEOLOGIA-U": 27,
     "CR-umbrella": 30,

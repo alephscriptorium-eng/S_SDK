@@ -147,4 +147,9 @@ debe alinear acta PASS si aplica.
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** · 2026-07-22 · tip zeus `2917634` (obra `2985c76` + Jugar→ciudad).
+
+- Ejes III·IV + ceguera: PASS (re-verif orq).
+- Merge FF zeus · push · Docs tip [29924574684](https://github.com/alephscriptorium-eng/Z_SDK/actions/runs/29924574684) ✅.
+- Follow-up lote: Jugar retarget tras C8 `/games/ciudad` 200.
+- Hallazgo T1 en tip accidental de rama S `wp/ww-z-*`: **no mergeado** (ops ∥).

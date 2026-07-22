@@ -106,4 +106,7 @@ Ninguno bloqueante para revisión. Sin merge (worker).
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** · 2026-07-22 · obra `8e497ea` · merge S `f0ee71d`.
+
+- Ejes III·IV + ceguera/r15: PASS (re-verif orq).
+- Merge no-ff con reporte WW-G · C8 `/guide/el-vigia-juega` **200**.

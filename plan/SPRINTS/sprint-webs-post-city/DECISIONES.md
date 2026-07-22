@@ -51,10 +51,13 @@ web de games). **No** despachar W2 suelto. Evidencia:
 
 **Mapa especulativo pre-apply = devolución.**
 
-### DC-WW-cierre-futuro · 2026-07-22 · **abierta** (plantilla)
+### DC-WW-cierre-futuro · 2026-07-22 · **cerrada** (aceptación WW-1)
 
-**Tema:** cierre de ola (cuando R15-city PASS + obra ✅).
+**Tema:** cierre de ola (R15-city PASS + obra ✅).
 
-**Decisión (plantilla):** patrón GO-5/GO-6 — Docs×3 regenerados + nav C8
-ampliado + tabla regla 16 (run-id CI/Docs/Release por repo tocado) + acta
-claim→SHA. No ejecuta en este tick de montaje.
+**Decisión:** patrón GO-5/GO-6 ejecutado — Docs×3 + C8 nav
+(`/games/ciudad` 200 · z-sdk puertas · s-sdk vigía) + tabla regla 16 en
+[ACTA-WW](../../REPORTES/ACTA-WW-webs-post-city-cierre-2026-07-22.md) +
+umbrella [#32](https://github.com/alephscriptorium-eng/S_SDK/issues/32)
+CLOSED + sync-map post-apply. Tips: zeus `2917634` · GL `2802f6a`.
+**listo-R16-webs = sí.** Vetos: no T1/S04 · Z#4/#5/#6 OPEN.

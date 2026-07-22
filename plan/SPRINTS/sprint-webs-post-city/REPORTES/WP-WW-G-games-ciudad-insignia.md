@@ -113,4 +113,7 @@ Ninguno para revisión. C8 live queda explícitamente ⏳ hasta deploy.
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** · 2026-07-22 · tip GL `2802f6a` (obra `4a74b98` + hotfix Docs).
+
+- Ejes III·IV + ceguera: PASS (re-verif orq) · W2 cubierto.
+- Merge FF GL · push · Docs inicial ❌ `npm ci` · hotfix `npm install` · Docs [29924167429](https://github.com/alephscriptorium-eng/Z_SDK-games-library/actions/runs/29924167429) ✅ · C8 `/games/ciudad` **200**.
