@@ -108,6 +108,10 @@ aceptable-con-notas · Z08-f4..5 aceptable (re-smoke renegociada con intento).
   CI **29857964265** success · Release **29857967650** success (primer Release
   verde post-touch `packages/**` de Z17). **Z17 sigue ✅ — no se reabre.**
   Acta: [ACTA-HOTFIX-GATES-3-2026-07-21](../../REPORTES/ACTA-HOTFIX-GATES-3-2026-07-21.md).
+- **HOTFIX-CEGUERA-EE1:** ✅ — zeus `bd02d70` (= `origin/main`). Scrub WP-E0
+  en peercard/signaling + gate `WP-[A-Z]{1,2}\d`. LOCAL-ONLY. **No reabre**
+  city WPs. Acta:
+  [ACTA-HOTFIX-CEGUERA-EE1-2026-07-22](../../REPORTES/ACTA-HOTFIX-CEGUERA-EE1-2026-07-22.md).
 - **GO-5 · Webs + Release:** ✅ 3 webs regeneradas (site-web / `workflow_dispatch`
   Docs) tip zeus `48e2062` + Release **29857967650**. Docs runs:
   Z_SDK **29858825757** · games-library **29858827677** · S_SDK **29858829917**

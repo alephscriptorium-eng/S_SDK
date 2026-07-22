@@ -1,4 +1,4 @@
-# BACKLOG — sprint-embajador-entrada (GO-E1 · E02+f1 ✅ · f2∥A5 🔶)
+# BACKLOG — sprint-embajador-entrada (GO-E1 · E02+f1 ✅ · HOTFIX-CEGUERA-EE1 ✅ · f2∥A5 🔶)
 
 > Solo el orquestador escribe aquí. Workers: un WP = un chat = rama
 > `wp/ee-<id>-<slug>` (+ worktree si paralelo); NO editar este fichero.
@@ -9,9 +9,20 @@
 
 ## Ola EE-1 (GO-E1 · 2026-07-22 — corte entrada)
 
-> E02+f1 **✅** merged tip zeus `aab6a68`. **Aviso vigía R8** — tip listo.
-> **NO despachar** ola 2 (f2∥A5) hasta R8 PASS.
+> E02+f1 **✅** · **HOTFIX-CEGUERA-EE1 ✅** tip zeus `bd02d70`
+> (`aab6a68..bd02d70` FF). Scrub WP-E0 + gate `WP-[A-Z]{1,2}\d`.
+> Acta: [ACTA-HOTFIX-CEGUERA-EE1](../../REPORTES/ACTA-HOTFIX-CEGUERA-EE1-2026-07-22.md).
+> **NO despachar** ola 2 (f2∥A5) desde este movimiento (padre / R8).
 > Norte: peercard + `startpack-ciudad-v0.1.0` default.
+
+### Hotfix
+
+- ✅ **HOTFIX-CEGUERA-EE1** — tip zeus `bd02d70` (= `origin/main`).
+  Remedio: scrub tracking ids externos en peercard/signaling; changeset
+  renombrado; gate `tracking-id` → `WP-[A-Z]{1,2}\d` (packages/e2e/kits/.changeset).
+  CA: `WP-E0`=0 · `npm run gates` OK. Z_SDK #4/#5/#6 **no cerrados**.
+  Acta: [ACTA-HOTFIX-CEGUERA-EE1](../../REPORTES/ACTA-HOTFIX-CEGUERA-EE1-2026-07-22.md).
+  Reporte: [HOTFIX-CEGUERA-EE1](../../REPORTES/HOTFIX-CEGUERA-EE1-2026-07-22.md).
 
 ### Secuencia
 

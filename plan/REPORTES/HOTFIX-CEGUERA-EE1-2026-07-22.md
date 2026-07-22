@@ -7,7 +7,7 @@
 | rama | `wp/ee-hotfix-ceguera` |
 | worktree | `zeus-sdk/.worktrees/wp-ee-hotfix-ceguera` |
 | commit | `bd02d70` (`bd02d700dc795f81d645684dcad0c7851c395c51`) |
-| merge | **pendiente orquestador** (FF `aab6a68..bd02d70`) — worker no mergea |
+| merge | ✅ FF `aab6a68..bd02d70` → `origin/main` (orquestador · 2026-07-22) |
 
 ## Remedio
 
@@ -48,19 +48,14 @@ $ node scripts/gates/run.mjs              # → gates: OK (0 offenders)
 
 ## NO hechos
 
-- No merge a `main` (listo para FF orquestador)
+- ~~No merge a `main`~~ → **hecho** (FF + push `bd02d70`)
 - No operator-ui · embajador-kit · A5 · f2 · E_SDK
 - No force-push · no cerrar issues Z (#4/#5/#6)
 
-## Para el orquestador
+## Post-merge (orquestador)
 
 ```
-cd HOLONES/01-mythos/zeus-sdk
-git checkout main
-git merge --ff-only wp/ee-hotfix-ceguera   # tip → bd02d70
-git push origin main
-# higiene: git worktree remove .worktrees/wp-ee-hotfix-ceguera
-#          git branch -d wp/ee-hotfix-ceguera
+# tip zeus origin/main = bd02d70
+# higiene: worktree remove · branch -d · remote --delete ✓
+# S: acta + BACKLOG ✅ + pin submodule
 ```
-
-Tras FF: re-verificar `npm run gates` + `rg -c WP-E0` en tip `main`.
