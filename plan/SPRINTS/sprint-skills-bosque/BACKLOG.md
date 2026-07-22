@@ -15,9 +15,9 @@
 
 | Id | Título | Deps | Ejes | Estado | Issue |
 |---|---|---|---|---|---|
-| S01 | swarm-orquestacion vNext (§convivencia multi-orq) | contrato v1.1 · higiene ✅ | I·III + ceguera | 🔶 brief · sin despacho | → ola B-1 |
-| S02 | vigilancia vNext (pulso multi-carril / Rn-city·Rn-bosque) | S01 shape | I·III + ceguera | 🔶 brief · sin despacho | → ola B-1 |
-| S05 | site-web (portal skills · docs/consumo) | — | III·IV + ceguera | 🔶 brief · sin despacho | → ola B-1 |
+| S01 | swarm-orquestacion vNext (§convivencia multi-orq) | contrato v1.1 · higiene ✅ | I·III + ceguera | 🔶 brief · sin despacho | [#12](https://github.com/alephscriptorium-eng/S_SDK-skills-library/issues/12) B-1 |
+| S02 | vigilancia vNext (pulso multi-carril / Rn-city·Rn-bosque) | S01 shape | I·III + ceguera | 🔶 brief · sin despacho | [#12](https://github.com/alephscriptorium-eng/S_SDK-skills-library/issues/12) B-1 |
+| S05 | site-web (portal skills · docs/consumo) | — | III·IV + ceguera | 🔶 brief · sin despacho | [#12](https://github.com/alephscriptorium-eng/S_SDK-skills-library/issues/12) B-1 |
 
 Briefs:
 
@@ -29,15 +29,15 @@ Briefs:
 
 | Id | Título | Deps | Ejes | Estado | Issue |
 |---|---|---|---|---|---|
-| S03 | estación viva / watcher calibrado al hermano | C05 ✅ ciudad-real | I·IV + ceguera | ⬜ parked | → ola B-2 |
+| S03 | estación viva / watcher calibrado al hermano | C05 ✅ ciudad-real | I·IV + ceguera | ⬜ parked | [#13](https://github.com/alephscriptorium-eng/S_SDK-skills-library/issues/13) B-2 |
 
 ## Ola B-3 · embajador+mapa+broche (⬜ parked)
 
 | Id | Título | Deps | Ejes | Estado | Issue |
 |---|---|---|---|---|---|
-| S04 | skill embajador (lado método; obra zeus = city-orq) | cierre carril CR / re-asigna | I·V + ceguera | ⬜ parked / re-asignable | → ola B-3 |
-| S06 | mapa de proyección / sync-map ritual | B-1 issues | III + ceguera | ⬜ parked | → ola B-3 |
-| S07 | broche release paquete | B-1 ✅ · ceguera 0 | IV + ceguera | ⬜ parked | → ola B-3 |
+| S04 | skill embajador (lado método; obra zeus = city-orq) | cierre carril CR / re-asigna | I·V + ceguera | ⬜ parked / re-asignable | [#14](https://github.com/alephscriptorium-eng/S_SDK-skills-library/issues/14) B-3 |
+| S06 | mapa de proyección / sync-map ritual | B-1 issues | III + ceguera | ⬜ parked | [#14](https://github.com/alephscriptorium-eng/S_SDK-skills-library/issues/14) B-3 |
+| S07 | broche release paquete | B-1 ✅ · ceguera 0 | IV + ceguera | ⬜ parked | [#14](https://github.com/alephscriptorium-eng/S_SDK-skills-library/issues/14) B-3 |
 
 ## Overview
 
