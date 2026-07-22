@@ -2,7 +2,7 @@
 
 | dato | valor |
 |---|---|
-| estado | ✅ · [ACTA-F5-cierre-2026-07-22](REPORTES/ACTA-F5-cierre-2026-07-22.md) · [AVISO-R19](REPORTES/AVISO-R19.md) |
+| estado | ✅ · [ACTA-F5](REPORTES/ACTA-F5-cierre-2026-07-22.md) · [ACTA-R19](REPORTES/ACTA-R19-cierre-arco-2026-07-22.md) · R19 PASS · IDLE |
 | track | OPS / publish · e2e federación · check oasis |
 | depende de | T1 ✅ · S04 ✅ · gate [AVISO-R17-city](REPORTES/AVISO-R17-city.md) |
 | fuente | GO PO · WP-F5 · 2026-07-22 |

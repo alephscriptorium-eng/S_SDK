@@ -171,3 +171,14 @@ embajador-kit@0.1.3). C6 = **documentada**.
 **Decisión:** F5a ✅ · F5b ✅ · F5c ✅ →
 [ACTA-F5-cierre-2026-07-22](REPORTES/ACTA-F5-cierre-2026-07-22.md) ·
 [AVISO-R19](REPORTES/AVISO-R19.md). No cerrar Z#4/#5/#6 · E_SDK veto.
+
+### DC-PCO-R19-cierre · 2026-07-22 · **cerrada** (city-orq · VIGÍA R19 PASS)
+
+**Tema:** cierre formal arco city · carril IDLE.
+
+**Decisión:** VIGÍA R19 = **PASS** →
+[ACTA-R19-cierre-arco-2026-07-22](REPORTES/ACTA-R19-cierre-arco-2026-07-22.md)
+· sync-map **final** regla 17 · BACKLOG/README **CERRADO / IDLE** ·
+S04-v2 parked · Z#4/#5/#6 OPEN · **cero despachos**. Constancia:
+«día de método impecable» (frase vigía). Nota cruzada: o-bosque 0.5.1
+= acta final su carril (city no escribe backlog bosque).

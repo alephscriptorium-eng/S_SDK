@@ -1,13 +1,15 @@
 # BACKLOG — sprint-post-city-ops
 
+> # ██  sprint-post-city-ops · **CERRADO / IDLE** · 2026-07-22 (R19 PASS)  ██
+>
 > Solo el orquestador city escribe aquí (regla de oro 2). Workers: un WP =
 > un chat = rama `wp/pco-<id>-<slug>` (+ worktree si paralelo); NO editar
-> este fichero. Estados: ⬜ · 🔶 · ✅.
+> este fichero. Estados: ⬜ · 🔶 · ✅. **Sin 🔶 vivos.**
 > Padre: GO PO · WP-F5 · 2026-07-22 · [DECISIONES](DECISIONES.md).
-> Gates: [AVISO-R15-T1-S04](REPORTES/AVISO-R15-T1-S04.md) PASS consumido
-> (T1 ✅ · S04 ✅). [AVISO-R17-city](REPORTES/AVISO-R17-city.md) consumido
-> (F5a∥F5c∥F5b). F5 **✅ cerrado** · camino [AVISO-R19](REPORTES/AVISO-R19.md).
-> Acta: [ACTA-F5-cierre-2026-07-22](REPORTES/ACTA-F5-cierre-2026-07-22.md).
+> Gates: R15-T1-S04 PASS · R17-city PASS · **R19 PASS** (arco cerrado).
+> Acta formal: [ACTA-R19-cierre-arco-2026-07-22](REPORTES/ACTA-R19-cierre-arco-2026-07-22.md).
+> Acta F5: [ACTA-F5-cierre-2026-07-22](REPORTES/ACTA-F5-cierre-2026-07-22.md).
+> **Carril IDLE · NO despachar.**
 
 ## Ola PCO-1 (cerrada · T1 ✅ · S04 ✅)
 
@@ -29,7 +31,7 @@
 
 | Id | Título | Repo / superficie | Deps | Ejes | Estado | Issue |
 |---|---|---|---|---|---|---|
-| [F5](WP-F5.md) | **paraguas** ciudad instanciable + federación | gobierno · sub-WPs a/b/c | R17-city PASS | — | ✅ · [acta](REPORTES/ACTA-F5-cierre-2026-07-22.md) · [AVISO-R19](REPORTES/AVISO-R19.md) | LOCAL-ONLY |
+| [F5](WP-F5.md) | **paraguas** ciudad instanciable + federación | gobierno · sub-WPs a/b/c | R17-city PASS | — | ✅ · [acta F5](REPORTES/ACTA-F5-cierre-2026-07-22.md) · [ACTA-R19](REPORTES/ACTA-R19-cierre-arco-2026-07-22.md) | LOCAL-ONLY |
 | [F5a](WP-F5a.md) | PUBLICAR lote mesh (+ skill/ embajador) | zeus + GL C8 | R17-city PASS | I·V + ceguera | ✅ · zeus `d0d9de1` · GL `d178364` · Publish **29934850683** · sello PO **B** · [reporte](REPORTES/WP-F5a-publish-mesh.md) | LOCAL-ONLY |
 | [F5b](WP-F5b.md) | CA ESTRELLA e2e DOS CIUDADES registry puro | scratch A+B · acta | R17-city PASS · **F5a ✅** | I·IV + ceguera | ✅ · [acta](REPORTES/ACTA-F5b-dos-ciudades-2026-07-22.md) · G0–G6 🟢 | LOCAL-ONLY |
 | [F5c](WP-F5c.md) | CHECK sidecar→pub oasis | reporte · protocolos PUB | R17-city PASS | V + ceguera | ✅ · protocolos 200 · sidecar `<pendiente>` · [reporte](REPORTES/WP-F5c-sidecar-pub-oasis.md) | LOCAL-ONLY |
@@ -45,12 +47,12 @@
 - [AVISO-R15-T1-S04](REPORTES/AVISO-R15-T1-S04.md) · PASS consumido (PCO-1)
 - [AVISO-R17-city](REPORTES/AVISO-R17-city.md) · consumido (PCO-2)
 - [AVISO-F5a-GL-NPM-secrets](REPORTES/AVISO-F5a-GL-NPM-secrets.md) · **resuelto** (secrets + publish)
-- [AVISO-R19](REPORTES/AVISO-R19.md) · **emitido** · cierre arco city
+- [AVISO-R19](REPORTES/AVISO-R19.md) · **PASS consumido** · [ACTA-R19](REPORTES/ACTA-R19-cierre-arco-2026-07-22.md)
 
 ### Notas
 
 - [NOTA-S04-REASIGNADO](REPORTES/NOTA-S04-REASIGNADO-bosque.md) — bosque (PCO-1)
-- [NOTA-S04-v2-parked](REPORTES/NOTA-S04-v2-parked.md) — post-F5 · **sin reopen S04**
+- [NOTA-S04-v2-parked](REPORTES/NOTA-S04-v2-parked.md) — post-F5 · **sin reopen S04** · **parked**
 - [CHECKLIST-F5-C1-C8-T1](REPORTES/CHECKLIST-F5-C1-C8-T1.md) — **cerrada** (todas muertas/documentadas)
 - Pins S: zeus `d0d9de1` · GL `d178364`
 
@@ -66,16 +68,16 @@
 
 | fase | política |
 |---|---|
-| ahora | **LOCAL-ONLY** (DC-PCO-proyeccion) |
-| cierre | cite issues vivos (#14 hermano skills · Z_SDK #4/#5/#6) **sin** duplicar ni cerrar OPEN ajenos; sync-map post-apply |
+| ahora | **LOCAL-ONLY** (DC-PCO-proyeccion) · sync-map **final** regla 17 |
+| cierre | cite issues vivos (#14 hermano skills · Z_SDK #4/#5/#6) **sin** duplicar ni cerrar OPEN ajenos |
 
 ## Parked / fuera
 
-- `sprint-webs-post-city` WW-* — ∩ = ∅
-- `sprint-skills-bosque` S03/S06/S07 — **no pisar**
+- `sprint-webs-post-city` WW-* — ∩ = ∅ · **CERRADO / IDLE** (hermano)
+- `sprint-skills-bosque` — **CERRADO** 0.5.1 · city no escribe backlog bosque
 - E_SDK / DE-I8 · reopen ✅ city/CR · cerrar Z_SDK #4/#5/#6
-- **S04-v2** — post-F5 · ver nota
-- Micro-sprint `sprint-f5-federacion` — **no abierto** (territorio F5 vive aquí · V2)
+- **S04-v2** — parked · ver nota
+- Micro-sprint `sprint-f5-federacion` — **no abierto**
 
 ## Reglas (además del skill)
 
@@ -84,3 +86,4 @@
 3. F5c: protocolos PUB · config custodio **fuera** · no bloquea a/b.
 4. Claim→acta/SHA · ∩ diffs = ∅ · higiene al aceptar · ceguera r.1.
 5. No editar BACKLOG (workers) · Z#4/#5/#6 OPEN · E_SDK veto.
+6. Post-R19: **IDLE** · cero despachos sin GO nuevo del PO vía vigía.

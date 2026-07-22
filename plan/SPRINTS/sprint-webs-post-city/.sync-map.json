@@ -1,5 +1,8 @@
 {
-  "note": "DC-WW-proyeccion · post-apply regla 17 · umbrella #32 CLOSED 2026-07-22",
+  "note": "DC-WW-proyeccion · post-apply regla 17 FINAL · umbrella #32 CLOSED · carril IDLE (R19 arco city)",
+  "status": "CERRADO",
+  "carril": "IDLE",
+  "closed_at": "2026-07-22",
   "umbrella": 32,
   "WW-Z": 32,
   "WW-G": 32,
@@ -11,5 +14,6 @@
     "EE-1": [22, 23],
     "C05": 31
   },
-  "open_cite_no_close": ["Z_SDK#4", "Z_SDK#5", "Z_SDK#6"]
+  "open_cite_no_close": ["Z_SDK#4", "Z_SDK#5", "Z_SDK#6"],
+  "sibling_ops": "sprint-post-city-ops · R19 PASS · ACTA-R19-cierre-arco"
 }

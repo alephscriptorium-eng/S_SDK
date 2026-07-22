@@ -1,10 +1,13 @@
 # BACKLOG — sprint-webs-post-city
 
+> # ██  sprint-webs-post-city · **CERRADO / IDLE** · 2026-07-22  ██
+>
 > Solo el orquestador city escribe aquí (regla de oro 2). Workers: un WP =
 > un chat = rama `wp/ww-<id>-<slug>` (+ worktree si paralelo); NO editar
-> este fichero. Estados: ⬜ · 🔶 · ✅.
+> este fichero. Estados: ⬜ · 🔶 · ✅. **Sin 🔶 vivos.**
 > Padre: GO PO R15-plan · 2026-07-22 · [DECISIONES](DECISIONES.md).
 > Gate: [AVISO-R15-city](REPORTES/AVISO-R15-city.md) — despacho hecho · **ola ✅**.
+> Hermano ops R19 PASS · city **IDLE** · **NO despachar**.
 
 ## Ola WW-1 (GO PO · montaje 2026-07-22 — ✅ cerrada 2026-07-22)
 

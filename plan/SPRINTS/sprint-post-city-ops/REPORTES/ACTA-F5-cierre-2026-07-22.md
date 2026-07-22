@@ -13,8 +13,9 @@
 
 Arco **PCO-2 / F5** cerrado: lote mesh en C8 (zeus + GL), sello PO
 operator-ui **B**, e2e dos ciudades registry puro, check oasis F5c
-(protocolos 200 · sidecar `<pendiente>` honesto). Camino a **R19**
-(cierre arco city): [AVISO-R19](AVISO-R19.md).
+(protocolos 200 · sidecar `<pendiente>` honesto). Cierre formal arco
+city: [AVISO-R19](AVISO-R19.md) **PASS** ·
+[ACTA-R19-cierre-arco-2026-07-22](ACTA-R19-cierre-arco-2026-07-22.md).
 
 ## Pins tip
 

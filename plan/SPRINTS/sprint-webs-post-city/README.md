@@ -1,15 +1,12 @@
-# sprint-webs-post-city — **PREP R15-city** (sin despacho)
+# sprint-webs-post-city — **CERRADO / IDLE**
 
-> **Estado: montado · 🔶 emitidos · AVISO-R15-city.** Tick PO 2026-07-22
-> (vía vigía R15-plan). **NO despachar** WW-Z ∥ WW-G ∥ WW-S hasta gate
-> vigía **R15-city** PASS (protocolo R7/R10).
-> Orquestador: city-orq · Contrato convivencia multi-orq v1.1 (DE-I22).
-> Territorio: zeus docs · games-library docs · S_SDK docs (webs).
-> **Veto:** no tocar [`sprint-skills-bosque`](../sprint-skills-bosque/)
-> (bosque S03/S05b en paralelo).
-> **Hermano ops (∥ paths):** [`sprint-post-city-ops`](../sprint-post-city-ops/)
-> = T1+S04 · gate **R15-T1-S04** (distinto de R15-city) · runtime/acta/skill
-> ≠ `docs/**`.
+> # ██  sprint-webs-post-city · CERRADO · IDLE · 2026-07-22  ██
+>
+> Ola WW-1 ✅ (WW-Z · WW-G · WW-S). Umbrella [#32](https://github.com/alephscriptorium-eng/S_SDK/issues/32) CLOSED.
+> Acta: [`ACTA-WW-webs-post-city-cierre-2026-07-22`](../../REPORTES/ACTA-WW-webs-post-city-cierre-2026-07-22.md).
+> Sync-map post-apply: [`.sync-map.json`](.sync-map.json).
+> Hermano ops: [`sprint-post-city-ops`](../sprint-post-city-ops/) · **R19 PASS · IDLE**.
+> **NO despachar.** Orquestador: city-orq · v1.1.
 
 ## Parámetros del mundo
 
@@ -17,37 +14,29 @@
 |---|---|
 | `MUNDO_RAIZ` | `C:\Users\aleph\SCRIPT_SDK` |
 | `PLAN_DIR` | `plan\SPRINTS\sprint-webs-post-city\` |
-| `ALCANCE_DIFF` | zeus `docs/**` · GL `docs/**` · S_SDK `docs/**` + este sprint — **veto** `sprint-skills-bosque/**` · hermano skills-library · E_SDK · reopen ✅ city/CR · cerrar Z_SDK #4/#5/#6 |
+| `ALCANCE_DIFF` | (histórico) zeus/GL/S `docs/**` + este sprint — **veto** bosque · E_SDK · cerrar Z#4/#5/#6 |
 | `WORKTREE_BASE` | `.worktrees\` del repo dominante de cada WP |
-| `RAMA_WP` | `wp/ww-<id>-<slug>` (ww = webs-post-city) |
+| `RAMA_WP` | `wp/ww-<id>-<slug>` |
 
-## Ola WW-1 (documentada · sin despacho)
+## Ola WW-1
 
-| WP | Repo dominante | Tema |
+| WP | Repo dominante | estado |
 |---|---|---|
-| **WW-Z** | zeus-sdk | z-sdk «motor de mundos federados» |
-| **WW-G** | games-library | games «ciudad, juego insignia» ⊃ **W2** |
-| **WW-S** | S_SDK | s-sdk «la casa cuenta la era» |
+| **WW-Z** | zeus-sdk | ✅ |
+| **WW-G** | games-library | ✅ ⊃ W2 |
+| **WW-S** | S_SDK | ✅ |
 
-Paralelo pleno (repos distintos · ∩ = ∅). Cierre futuro = patrón GO-5/GO-6:
-Docs×3 + nav C8 + regla 16 + acta.
+## Guardarraíles (post-cierre)
 
-## Guardarraíles
-
-1. Partición V2: solo territorio city (este sprint + webs de zeus/GL/S).
-2. Worker **destila** CANTERA + copy publicado vía skill `site-web` — **no inventa**.
-3. Proyección = **LOCAL-ONLY** durante sprint; al cierre 1 umbrella (patrón DE-I23) + sync-map post-apply (regla 17).
-4. Vetos: E_SDK/DE-I8 · Z_SDK #4/#5/#6 citar-no-cerrar · claim→acta/SHA · higiene · ∩=∅.
-5. REPORTES/BRIEFS viven **bajo este sprint**.
+1. Carril **IDLE** · sin 🔶 vivos · sin despachos.
+2. Vetos: E_SDK · Z#4/#5/#6 citar-no-cerrar · ceguera r.1.
+3. Próximo arco solo con GO nuevo del PO vía gate del vigía.
 
 ## Dónde está cada cosa
 
 | fichero | rol |
 |---|---|
-| [BACKLOG.md](BACKLOG.md) | WPs, olas, 🔶. Solo orquestador. |
-| [DECISIONES.md](DECISIONES.md) | DC-WW-* (proyección, absorción W2). |
-| [WP-WW-Z](WP-WW-Z-z-sdk-motor-federados.md) · [WP-WW-G](WP-WW-G-games-ciudad-insignia.md) · [WP-WW-S](WP-WW-S-s-sdk-casa-era.md) | Fichas stub. |
-| [BRIEFS/](BRIEFS/) | Briefs definitivos (sin despacho). |
-| [REPORTES/AVISO-R15-city.md](REPORTES/AVISO-R15-city.md) | Pedido gate vigía. |
-| [REPORTES/ABSORCION-W2.md](REPORTES/ABSORCION-W2.md) | W2 → WW-G. |
-| [.sync-map.json](.sync-map.json) | Vacío hasta post-apply. |
+| [BACKLOG.md](BACKLOG.md) | WPs · **CERRADO**. |
+| [DECISIONES.md](DECISIONES.md) | DC-WW-*. |
+| [.sync-map.json](.sync-map.json) | Sync-map post-apply regla 17 · #32. |
+| [REPORTES/AVISO-R15-city.md](REPORTES/AVISO-R15-city.md) | Gate · consumido. |

@@ -1,4 +1,8 @@
-# AVISO R19 · cierre arco city · 2026-07-22 · listo para vigía
+# AVISO R19 · cierre arco city · 2026-07-22 · **PASS consumido**
+
+> **Veredicto vigía: R19 = PASS.** Acta formal:
+> [ACTA-R19-cierre-arco-2026-07-22](ACTA-R19-cierre-arco-2026-07-22.md).
+> Carril city **IDLE** · cero despachos.
 
 ```text
 AVISO · R19 · city-orq → vigía
@@ -6,6 +10,7 @@ Asunto: sprint-post-city-ops · arco city F5 CERRADO · camino R19
 Carril: city-ops · PCO-1 (T1·S04) + PCO-2 (F5a·F5b·F5c) ✅
 Gobierno: plan/SPRINTS/sprint-post-city-ops/REPORTES/ACTA-F5-cierre-2026-07-22.md
 Protocolo: R7/R10 (cierre arco) · regla 16 run-ids · regla 17 sync-map
+Estado: PASS consumido · IDLE
 ```
 
 ## Claim
