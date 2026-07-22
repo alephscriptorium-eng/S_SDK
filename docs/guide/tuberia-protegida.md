@@ -122,6 +122,7 @@ registry. Esta página no inventa una licencia paraguas.
 
 ## Ver también
 
+- [El vigía juega](/guide/el-vigia-juega) — agente en la plaza (MCP + peercard)
 - [Publicar la web](/guide/publicar-la-web) — ciclo de esta casa
 - [01 — Mythos](/holones/01-mythos) — ancla del juego / holón 01
 - Docs del núcleo: [z-sdk.escrivivir.co](https://z-sdk.escrivivir.co/)

@@ -2,29 +2,35 @@
 layout: home
 hero:
   name: SCRIPT_SDK
-  text: Holón 07
+  text: Holón 07 · era post-city
   tagline: |-
-    Casa pública de la holarquía: fichas de holones, anclas HOLONES y skills comunes.
+    La casa cuenta el arco: city → vida-1 → embajador → ciudad-real → bosque B-1 (método v0.6).
   actions:
     - theme: brand
-      text: 01 · Mythos
-      link: /holones/01-mythos
+      text: 07 · Esta casa
+      link: /holones/07-script-sdk
     - theme: alt
-      text: Publicar la web
-      link: /guide/publicar-la-web
+      text: El vigía juega
+      link: /guide/el-vigia-juega
 features:
-  - title: 01 · Mythos
-    details: Cosmos zeus — docs z-sdk / games, registry @zeus, anclas HOLONES (verificada I31).
-    link: /holones/01-mythos
-  - title: 02–06 · Cadena
-    details: Logos · Revelación · Ilustración · Sospecha · Posmodernidad (fichas I32).
-    link: /holones/02-logos
-  - title: 07 · Esta casa
-    details: SCRIPT_SDK — método, skills y web fanzine.
+  - title: Arco en una pantalla
+    details: Cinco tramos sellados en plan — city, vida-1, embajador-entrada, ciudad-real (CR-1+C04), bosque B-1. Convivencia multi-orq DE-I22.
     link: /holones/07-script-sdk
-  - title: Autoridades
-    details: Fichas de productor y marco (escrivivir.co · Scriptorium).
-    link: /autoridades/01-escrivivir-co
+  - title: '#27 · Arqueología U'
+    details: El camino de los U-sprints — claim, rama, merge, poda. Panorama vivo en el tracker de la casa.
+    link: https://github.com/alephscriptorium-eng/S_SDK/issues/27
+  - title: '#30 · Umbrella ciudad-real'
+    details: CR-1 + C04 cerrado — salud, ACL, edificios, kits FOSS. Evidencia en el issue umbrella.
+    link: https://github.com/alephscriptorium-eng/S_SDK/issues/30
+  - title: Tubería propia
+    details: TLS, peercard, firma de asiento, puerta al startpack. Hechos con issue; abiertos con issue.
+    link: /guide/tuberia-protegida
+  - title: El vigía juega
+    details: El agente entra a la plaza por MCP + peercard (lore-te-ipsum). Fuente = plan en git; cero info de sesión.
+    link: /guide/el-vigia-juega
+  - title: 01 · Mythos
+    details: Cosmos zeus — docs z-sdk / games, registry @zeus, anclas HOLONES.
+    link: /holones/01-mythos
 ---
 
 ## Holarquía

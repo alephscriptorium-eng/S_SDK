@@ -49,7 +49,8 @@ export default defineConfig({
         ]
       },
       { text: 'Publicar la web', link: '/guide/publicar-la-web' },
-      { text: 'La tubería, protegida', link: '/guide/tuberia-protegida' }
+      { text: 'La tubería, protegida', link: '/guide/tuberia-protegida' },
+      { text: 'El vigía juega', link: '/guide/el-vigia-juega' }
     ],
     sidebar: [
       {
@@ -57,7 +58,8 @@ export default defineConfig({
         items: [
           { text: 'Portada', link: '/' },
           { text: 'Publicar la web', link: '/guide/publicar-la-web' },
-          { text: 'La tubería, protegida', link: '/guide/tuberia-protegida' }
+          { text: 'La tubería, protegida', link: '/guide/tuberia-protegida' },
+          { text: 'El vigía juega', link: '/guide/el-vigia-juega' }
         ]
       },
       {
