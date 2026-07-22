@@ -6,6 +6,7 @@
 > Contrato: DE-I22 · convivencia multi-orq v1.1.
 > Decisiones: [DECISIONES.md](DECISIONES.md).
 > B-1 ✅ · B-2 S03 ✅ · B-3 S06 ✅ · S07 ✅ broche `0.5.0` ·
+> **R-1** residual ✅ obra (`a50787d`) · publish 0.5.1 = decisión PO ·
 > S04 traspasado city.
 
 ## Ola B-1 · método (✅ cerrado)
@@ -38,6 +39,12 @@ Reportes:
 | S06 | mapa de proyección / sync-map ritual (docs) | B-1 ✅ · ∥ S03 OK (dirs disjuntos) | III + ceguera | ✅ merge `2743176` · tip `834f706` · [reporte](REPORTES/WP-S06-mapa.md) · brief [BRIEF-WP-S06](BRIEFS/BRIEF-WP-S06-mapa.md) | [#14](https://github.com/alephscriptorium-eng/S_SDK-skills-library/issues/14) B-3 |
 | S07 | broche release `0.5.0` (bump + Release + portal + catálogo) | **S03 ✅ + S06 ✅ + S05b ✅** | IV + ceguera | ✅ tip `4c2e322` · tag `v0.5.0` · npm `0.5.0` · [reporte](REPORTES/WP-S07-broche-0.5.0.md) · Publish [29927743629](https://github.com/alephscriptorium-eng/S_SDK-skills-library/actions/runs/29927743629) · Docs [29927725261](https://github.com/alephscriptorium-eng/S_SDK-skills-library/actions/runs/29927725261) | [#14](https://github.com/alephscriptorium-eng/S_SDK-skills-library/issues/14) B-3 |
 
+## Residual micro · R-1 (✅ obra · publish opcional)
+
+| Id | Título | Deps | Ejes | Estado | Issue |
+|---|---|---|---|---|---|
+| R-1 | lección «merge solo post-aceptación» (C05) en método | R17-bosque PASS · S03/S07 no reopen | III (docs) | ✅ tip hermano `a50787d` · rama `wp/sb-r1-merge-post-aceptacion` · [reporte](REPORTES/WP-R1-merge-post-aceptacion.md) · **carril CERRADO** condicionado a decisión PO `0.5.1` vs ola | residual post-broche |
+
 ### Traspaso S04 → city (fuera del backlog bosque)
 
 | Id | Título | Destino | Estado |
@@ -51,6 +58,7 @@ Reportes:
 | B-1 | S01 · S02 · S05 · S05b | ✅ cerrado (+ encoding mergeado) |
 | B-2 | S03 | ✅ merge `9b89495` |
 | B-3 | S06 · S07 | ✅ cerrado (broche `4c2e322` / `v0.5.0`) |
+| R-1 | merge solo post-aceptación (C05) | ✅ obra `a50787d` · publish `0.5.1` = PO |
 
 ## Parked / fuera
 
