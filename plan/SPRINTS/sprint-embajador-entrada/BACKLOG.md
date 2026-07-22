@@ -17,7 +17,8 @@
 1. **E02** primero (identidad cripto = dep dura peercard).
 2. **E01-f1** ∥ E02 si paths no se pisan (`embajador-kit/**` vs signaling/crypto).
 3. **E01-f2** **tras** E02 (modelo/TTL sobre firma).
-4. **A5** tras deps del corte (stubs documentados OK).
+4. **A5** tras E02+f1 en tip (**firma+kit reales; no stubs**); f2
+   preferible merged (A5 solo consume).
 
 ### WPs 🔶
 
@@ -37,8 +38,10 @@
   Brief: [BRIEF-E01-f2](../../REPORTES/BRIEF-WP-E01-f2-peercard.md).
   Rama: `wp/ee-e01-f2-peercard`.
 
-- 🔶 **WP-A5 · Puerta externos (SEMILLA-ARG §A5)** — Z04+webs+tracker+Z17;
-  startpack-ciudad-v0.1.0 default; **sin superficie nueva**. LOCAL → #22.
+- 🔶 **WP-A5 · Puerta externos (SEMILLA-ARG §A5)** — árbol dominante
+  **Z17-zeus** (+ satélites Z04-GL · webs/S_SDK); paths pineados en brief;
+  startpack-ciudad-v0.1.0 default; **sin superficie nueva**; deps
+  E02+f1 reales. LOCAL → #22.
   Ficha: [WP-A5](WP-A5-puerta.md).
   Brief: [BRIEF-A5](../../REPORTES/BRIEF-WP-A5-puerta.md).
   Rama: `wp/ee-a5-puerta`.
@@ -55,7 +58,7 @@
 | [E02](WP-E02-privacidad-federacion.md) | Privacidad federación | Z04 ✅ · D-40 · pav GO-4 | I·IV + ceguera | 🔶 | #23 · Z_SDK #4 |
 | [E01-f1](WP-E01-f1-kit.md) | Kit embajador | pav GO-4 · ∥ E02 | I·II + ceguera | 🔶 | LOCAL→#22 |
 | [E01-f2](WP-E01-f2-peercard.md) | Peercard | **E02** · f1 | I·II + ceguera | 🔶 | LOCAL→#22 |
-| [A5](WP-A5-puerta.md) | Puerta externos | E02·f1·f2 (o stubs) | I·IV + ceguera | 🔶 | LOCAL→#22 |
+| [A5](WP-A5-puerta.md) | Puerta externos | E02·f1 reales · f2 preferible | I·IV + ceguera | 🔶 | LOCAL→#22 |
 
 ## Prep proyección LOCAL (regla 17 · sin apply)
 
@@ -70,7 +73,7 @@
 | # | chequeo | esperado |
 | - | ------- | -------- |
 | 1 | Alcances 🔶 = E02 + E01-f1 + E01-f2 + A5; f3/f4 **sin** 🔶 | PASS literal BACKLOG |
-| 2 | Deps: E02 antes f2; f1 ∥ E02 OK; A5 tras deps/stubs | DC-EE-apertura |
+| 2 | Deps: E02 antes f2; f1 ∥ E02 OK; A5 tras E02+f1 reales (no stubs) | DC-EE-apertura · DC-EE-A5-paths |
 | 3 | Exclusión mutua paths (tabla DC-EE-exclusion-paths) | sin ∩ en briefs |
 | 4 | Env checks en cada brief (`rev-parse` zeus · GL · S_SDK; NUNCA `test -d .git`) | presentes |
 | 5 | Vetos: E_SDK/DE-I8 · city cerrado · CIUDAD-REAL/§6/trama-agua · claim→acta/SHA | intactos |

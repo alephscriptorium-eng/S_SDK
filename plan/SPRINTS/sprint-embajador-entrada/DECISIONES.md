@@ -40,9 +40,23 @@ Workers **no** despachados hasta R7 PASS.
 | **E02** | `packages/engine/protocol/src/peer-card.mjs` (hooks firma / ssbId en card) · `webrtc-signaling/src/{peer-card-gate,ssb-private-signaling,signaling-service,socket-room-signaling}.mjs` (handshake ssbId + verify) · tests/e2e peer-card/ssb · `docs/guide/external-handshake.md` | `embajador-kit/**` · `issue-peer-card.mjs` (TTL/campos f2) · f3/f4 · GL engine |
 | **E01-f1** | paquete nuevo `packages/engine/embajador-kit/**` (+ lock workspace) | crypto/handshake E02 · `issue-peer-card` f2 · Z17 reopen · GL |
 | **E01-f2** | `packages/engine/authority-kit/src/issue-peer-card.mjs` · campos/TTL/ciclo en protocol **no-crypto** (coordinar merge tras E02) · wiring mínimo consumidor kit | firma/ssbId (E02) · niveles (f3/#6) · visual (f4) |
-| **A5** | cableado superficies **existentes**: rabbits/Z04 · webs guía · tracker cita · operator-ui Z17 entrada · ref `startpack-ciudad-v0.1.0` — **ninguna superficie nueva**; paths exactos en reporte | crypto E02 · kit greenfield f1 salvo import · f3/f4 · E_SDK |
+| **A5** | **Árbol dominante Z17-zeus** `zeus-sdk/.worktrees/wp-ee-a5-puerta`. Paths: `packages/mesh/operator-ui/{serve.mjs,projects/dev-app/src/app/{zeus-operator-bridge.service.ts,app.ts,operator-hud.component.ts},fixtures/**,package.json,README.md}` · **satélite Z04-GL** `packages/ciudad/fixtures/federation/{peer-external,demo-peer}.mjs` · `federation-smoke.mjs` · `test/federation.test.mjs` · `packages/ciudad/README.md` · `docs/startpacks.md` · **satélite webs/S_SDK** `docs/guide/tuberia-protegida.md` · `plan/REPORTES/WP-A5-puerta.md`. Ref `startpack-ciudad-v0.1.0`. **Ninguna superficie nueva.** Deps: E02+f1 **reales** (no stubs). | **f2:** `authority-kit/**` · `protocol/src/peer-card.mjs` · **E02:** `webrtc-signaling/**` · `docs/guide/external-handshake.md` · **f1:** `embajador-kit/**` salvo import · `startpack-ciudad/**` · `ciudad/src/**` · f3/f4 · E_SDK |
 
-**Paralelismo autorizado:** E01-f1 ∥ E02. **Serie:** E02 → E01-f2 → (A5 con stubs OK si f2 aún no merged). ∩ ficheros = devolución R7.
+**Paralelismo autorizado:** E01-f1 ∥ E02. **Serie:** E02 → E01-f2 → A5.
+A5 exige E02+f1 en tip (**firma+kit reales; no stubs**). f2 preferible
+merged; A5 solo consume peercard — no implementa f2. ∩ ficheros = devolución R7.
+
+### DC-EE-A5-paths · 2026-07-22 · **cerrada** (gobierno micro ola 1 margen)
+
+**Tema:** pinear árbol dominante + paths exactos WP-A5 (inequívoco).
+
+**Decisión:** 3 repos máx — (1) **Z17-zeus dominante**
+`HOLONES/01-mythos/zeus-sdk` · (2) **Z04-GL**
+`HOLONES/01-mythos/games-library` · (3) **webs/S_SDK** `MUNDO_RAIZ`
+(`docs/guide` + reporte). Brief canónico:
+[`BRIEF-WP-A5-puerta.md`](../../REPORTES/BRIEF-WP-A5-puerta.md). Frontera:
+A5 = operator-ui / docs / GL federation fixtures; f2 = authority-kit +
+protocol peercard; E02 = signaling + `external-handshake.md`.
 
 ### DC-EE-proyeccion-local · 2026-07-22 · **cerrada**
 
