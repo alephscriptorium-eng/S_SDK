@@ -5,7 +5,7 @@
 | agente | worker WP-E01-f1 (ola EE-1) |
 | fecha | 2026-07-22 |
 | rama | `wp/ee-e01-f1-kit` (zeus-sdk) · reporte en SCRIPT_SDK `wp/ee-e01-f1-kit` |
-| commits | zeus `de559780c207d98b78ffe17e9b22814fc6e8d128` · reporte S_SDK _(este commit)_ |
+| commits | zeus `de559780c207d98b78ffe17e9b22814fc6e8d128` · reporte S_SDK `a39d8f6542111390c16975b90bf736d51e2b9597` |
 | eje(s) CA | **I** (smoke emitir→consumir) · **II** (CredencialEmbajador v1 canónico) · ceguera regla 14 |
 | estado propuesto | listo para revisión |
 | issue | LOCAL bajo umbrella S_SDK **#22** (sin alta) |
@@ -38,7 +38,7 @@ package.json del tip; faltaba en lock).
 | ---- | --------------- | --- |
 | zeus-sdk | `.worktrees/wp-ee-e01-f1-kit` · `wp/ee-e01-f1-kit` | obra `de55978` (base `1086392`) |
 | games-library | **no tocado** | `84f9d79` |
-| SCRIPT_SDK | rama `wp/ee-e01-f1-kit` (reporte) | _(commit de este archivo)_ |
+| SCRIPT_SDK | rama `wp/ee-e01-f1-kit` (reporte) | `a39d8f6` |
 
 Env-check al arranque (rev-parse, nunca `test -d .git`):
 
