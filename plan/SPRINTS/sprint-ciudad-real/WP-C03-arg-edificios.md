@@ -2,7 +2,7 @@
 
 | dato | valor |
 |---|---|
-| estado | ⬜ brief listo · **sin 🔶** hasta R10 |
+| estado | ✅ merge GL `f388451` · CR-1 cierre · listo-R12 |
 | track | PACK (GL) |
 | depende de | C01 shape · catálogo Z06 ✅ |
 | fuente | [SEMILLA-ARG §A4](../sprint-game-city/SEMILLA-ARG.md) |
@@ -15,9 +15,9 @@ Invariante: **solo ids de catálogo** (no inventar superficie).
 
 ## CA (ejes I·II + ceguera)
 
-- [ ] Mapping edificio→id catálogo verificable en test.
-- [ ] Rechazo de id fuera de catálogo.
-- [ ] Ceguera obra OK · no toca ACL C02 ni probes C01.
+- [x] Mapping edificio→id catálogo verificable en test.
+- [x] Rechazo de id fuera de catálogo.
+- [x] Ceguera obra OK · no toca ACL C02 ni probes C01.
 
 ## Fuera
 

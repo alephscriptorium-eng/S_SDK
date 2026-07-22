@@ -2,7 +2,7 @@
 
 | dato | valor |
 |---|---|
-| estado | 🔶 brief · **sin despacho** hasta C03 ✅ + gate **R12** |
+| estado | 🔶 brief · **sin despacho** hasta R12 PASS (CR-1 ✅) |
 | track | PACK (GL) + KIT (zeus player-mcp) |
 | depende de | C04 ✅ · CR-1 (C01/C03 ✅) |
 | fuente | regla 6 city · E02 / peer-card-seat · checklist C04 v2/v3 |

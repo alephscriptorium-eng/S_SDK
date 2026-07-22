@@ -1,13 +1,12 @@
-# BACKLOG — sprint-ciudad-real (GO-C1 · tick PO R10.6+R11)
+# BACKLOG — sprint-ciudad-real (GO-C1 · tick PO cierre CR-1)
 
 > Solo el orquestador escribe aquí. Workers: un WP = un chat = rama
 > `wp/cr-<id>-<slug>` (+ worktree si paralelo); NO editar este fichero.
 > Estados: ⬜ · 🔶 · ✅.
 > Padre: [DE-I19](../../DECISIONES.md) · [DECISIONES sprint](DECISIONES.md).
-> Embajador **CERRADO**. Proyección: **LOCAL-ONLY** · Z_SDK **#5** citar
-> OPEN. **OLA 1 ✅** (C01·C02) · **listo-R11** · C03 **no** despachado.
-> C04 en vuelo — no tocar su worktree. C05 **🔶** brief · **sin despacho**
-> (R12 post C03 ✅).
+> Embajador **CERRADO**. Proyección: **LOCAL-ONLY** · Z_SDK **#5/#6** citar
+> OPEN. **CR-1 ✅** (C01·C02·C03) · **listo-R12** · C05 **🔶** brief ·
+> **sin despacho**. C04 tip en pin zeus `73cb0c2` (paralelo citado).
 
 ## Gate tick-cero (GO-C1)
 
@@ -21,17 +20,17 @@
 > Ningún CA de C01/C02/C03 depende. Englobado en **PRUEBA-DE-DOS**
 > (cola v3 ratificada).
 
-## Ola CR-1 (✅ merge · listo-R11)
+## Ola CR-1 (✅ cierre · listo-R12)
 
-> Exclusion-paths: [DC-CR-exclusion-paths](DECISIONES.md). Acta:
-> [ACTA-OLA1](../../REPORTES/ACTA-OLA1-CIUDAD-REAL-cierre-2026-07-22.md).
-> C03 **solo** tras R11 PASS.
+> Exclusion-paths: [DC-CR-exclusion-paths](DECISIONES.md). Actas:
+> [ACTA-OLA1](../../REPORTES/ACTA-OLA1-CIUDAD-REAL-cierre-2026-07-22.md) ·
+> [ACTA-CR1](../../REPORTES/ACTA-CR1-CIUDAD-REAL-cierre-2026-07-22.md).
 
 | Id | Título | Deps | Ejes | Estado | Issue |
 |---|---|---|---|---|---|
 | [C01](WP-C01-semilla-salud.md) | Salud real ↔ mapa (§2) | EE-1 ✅ · tick-cero | I·IV + ceguera | ✅ GL `19317c1` | LOCAL |
 | [C02](WP-C02-acl-direccional.md) | ACL direccional (Z05#3) | C01 shape · Z_SDK #5 | I·II + ceguera | ✅ zeus `1df2fd2` | LOCAL · Z_SDK #5 OPEN |
-| [C03](WP-C03-arg-edificios.md) | Edificios ↔ paquetes (§A4) | C01 · catálogo Z06 | I·II + ceguera | ⬜ brief listo · **gate R11** · sin 🔶 | LOCAL |
+| [C03](WP-C03-arg-edificios.md) | Edificios ↔ paquetes (§A4) | C01 · catálogo Z06 | I·II + ceguera | ✅ GL `f388451` | LOCAL |
 
 Briefs CR-1:
 
@@ -39,18 +38,18 @@ Briefs CR-1:
 - [BRIEF-WP-C02](../../REPORTES/BRIEF-WP-C02-acl-direccional.md)
 - [BRIEF-WP-C03](../../REPORTES/BRIEF-WP-C03-arg-edificios.md)
 
-## C04 · kits FOSS / públicos (en vuelo · DC-CR-kits-foss)
+## C04 · kits FOSS / públicos (paralelo · tip en pin)
 
 | Id | Título | Deps | Ejes | Estado | Issue |
 |---|---|---|---|---|---|
-| C04 | Kits juego/contratos → public (DE-I21) | DC-CR-kits-foss | I + ceguera | en vuelo zeus `wp/cr-c04-kits-publicos` | LOCAL |
+| C04 | Kits juego/contratos → public (DE-I21) | DC-CR-kits-foss | I + ceguera | tip zeus `73cb0c2` (PR#8+#9) · reporte ciclo cerrado | LOCAL |
 
-Prep **no** toca ese worktree. Quien cierre C04 corre el checklist abajo.
+Checklist prep R10.6 (v1/v2/v3) queda como handoff hacia C05.
 
 ### Checklist cierre C04 (barato · PREP R10.6)
 
 Hallazgos tip main read-only (zeus `30bfc08` · GL `b54a2d2` · 2026-07-22).
-Si el wt C04 está lockeado al cierre, re-correr sobre tip post-merge.
+Re-correr sobre tip post-merge si hace falta.
 
 | id | check | hallazgo prep | acción cierre C04 |
 | -- | ----- | ------------- | ----------------- |
@@ -79,16 +78,15 @@ Otros parked:
 
 ## Cola v3 (ratificada · DE-I19 · DC-CR-cola-v3)
 
-> Tick PO R10.6+R11. Espejo: [DC-CR-cola-v3](DECISIONES.md).
+> Tick PO cierre CR-1. Espejo: [DC-CR-cola-v3](DECISIONES.md).
 
 **CR-1 → C04 → C05 → PRUEBA-DE-DOS** (hito observación + acta fricción;
 protagonistas custodio+vigía) → **§6** meta-juego → **trama-agua**.
 
-## R11 (sin cambio de alcance) · **listo**
+## R12 (sin cambio de alcance) · **listo**
 
-Re-verif ola 1 (tips arriba) + gate C03 + `npm view` kits C04.
-**C03 no despachado** en cierre OLA 1 — arranca solo tras R11 PASS.
-**C05 no despachado** — arranca solo tras C03 ✅ + **R12**.
+Re-verif C03 (tips arriba) + cierre CR-1 + gate C05.
+**C05 no despachado** — arranca solo tras **R12** PASS.
 
 ## Checklist R10 pre-despacho (histórico · vigía)
 

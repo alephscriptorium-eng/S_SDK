@@ -1,8 +1,8 @@
 # sprint-ciudad-real — **ACTIVO** (GO-C1 · cola v3 ratificada)
 
 > **Estado: ACTIVO.** Apertura GO-C1 tras cierre formal EMBAJADOR-ENTRADA
-> (R9.5). Ola CR-1 + C04 en vuelo; C05 **🔶** brief · **sin despacho**
-> (R12 post C03 ✅). Cola v3 **ratificada** (DE-I19 · DC-CR-cola-v3).
+> (R9.5). **CR-1 ✅** (C01·C02·C03) · **listo-R12**. C05 **🔶** brief ·
+> **sin despacho**. Cola v3 **ratificada** (DE-I19 · DC-CR-cola-v3).
 > Padre: [DE-I19](../../DECISIONES.md) · embajador cerrado:
 > [sprint-embajador-entrada](../sprint-embajador-entrada/).
 

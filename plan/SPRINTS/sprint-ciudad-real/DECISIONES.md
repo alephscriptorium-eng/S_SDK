@@ -114,8 +114,9 @@ House: [DE-I21](../../DECISIONES.md). Sin tocar ola 1 (C01∥C02).
 5. SEMILLA **§6** meta-juego
 6. trama-agua
 
-**Nota R11/R12:** R11 = re-verif ola 1 + gate C03 + `npm view` kits C04.
-**R12** gatea despacho worker C05 (no este tick).
+**Nota R11/R12:** R11 = re-verif ola 1 + gate C03 + `npm view` kits C04
+(histórico · PASS). **R12** = re-verif C03 + cierre CR-1 + gate C05 —
+**listo**; despacho worker C05 **no** en este tick.
 
 **Vetos intactos:** E_SDK / DE-I8 · reopen ✅ · force-push · claim→acta/SHA.
 
