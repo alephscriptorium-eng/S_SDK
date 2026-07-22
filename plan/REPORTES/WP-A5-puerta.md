@@ -5,7 +5,7 @@
 | agente | worker WP-A5 (ola 2 EMBAJADOR-ENTRADA) |
 | fecha | 2026-07-22 |
 | rama | `wp/ee-a5-puerta` (zeus · GL · S_SDK) |
-| commits | zeus `8194c78` · GL `2945290` · S `<este commit>` |
+| commits | zeus `8194c78` · GL `2945290` · S `bd6ce18` (+ tip tuberia) |
 | eje(s) CA | **I** · **IV** · ceguera (regla 14) |
 | estado propuesto | listo para revisión |
 
