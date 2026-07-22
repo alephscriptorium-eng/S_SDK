@@ -95,23 +95,28 @@ Consecuencia: `@zeus/embajador-kit` y pares de contrato/juego entran al
 canal publish cuando el WP de obra (C04) aplique manifest + changeset.
 House: [DE-I21](../../DECISIONES.md). Sin tocar ola 1 (C01∥C02).
 
-### DC-CR-cola-v3-candidata · 2026-07-22 · **abierta** (propuesta · PREP R10.6)
+### DC-CR-cola-v3 · 2026-07-22 · **cerrada** (tick PO R10.6+R11)
+
+> Antecedente: `DC-CR-cola-v3-candidata` (PREP R10.6 · propuesta). Ancla
+> legacy `#dc-cr-cola-v3-candidata` → este asiento.
 
 **Tema:** orden de cola post–ola CR-1 / C04 hacia meta-juego.
 
-**Propuesta (no DE-I19 hard hasta tick PO):**
+**Decisión (ratificada · house DE-I19):**
 
 1. **CR-1** (C01∥C02 + gate C03)
-2. **C04** kits FOSS / públicos (DE-I21 · en vuelo)
-3. **C05** ciudadano-agente (peercard en bootstrap MCP · regla 6)
+2. **C04** kits FOSS / públicos (DE-I21)
+3. **C05** ciudadano-agente (peercard en bootstrap MCP · regla 6) —
+   **🔶 brief** emitido; **sin despacho** hasta cierre CR-1 (C03 ✅) +
+   gate **R12**
 4. **PRUEBA-DE-DOS** — hito observación + acta fricción; protagonistas
    custodio + vigía (engloba «primer amigo» / campana)
 5. SEMILLA **§6** meta-juego
 6. trama-agua
 
-**Nota R11:** re-verif ola 1 + gate C03 + `npm view` kits C04 (sin cambio
-de alcance; no abre C05).
+**Nota R11/R12:** R11 = re-verif ola 1 + gate C03 + `npm view` kits C04.
+**R12** gatea despacho worker C05 (no este tick).
 
 **Vetos intactos:** E_SDK / DE-I8 · reopen ✅ · force-push · claim→acta/SHA.
 
-House DE-I19: enmienda solo tras tick PO que ratifique esta cola v3.
+House: [DE-I19](../../DECISIONES.md) cola v3 ratificada.

@@ -1,4 +1,4 @@
-# BACKLOG — sprint-ciudad-real (GO-C1 · PREP R10.6)
+# BACKLOG — sprint-ciudad-real (GO-C1 · tick PO R10.6+R11)
 
 > Solo el orquestador escribe aquí. Workers: un WP = un chat = rama
 > `wp/cr-<id>-<slug>` (+ worktree si paralelo); NO editar este fichero.
@@ -6,7 +6,8 @@
 > Padre: [DE-I19](../../DECISIONES.md) · [DECISIONES sprint](DECISIONES.md).
 > Embajador **CERRADO**. Proyección: **LOCAL-ONLY** · Z_SDK **#5** citar
 > OPEN. **OLA 1 ✅** (C01·C02) · **listo-R11** · C03 **no** despachado.
-> C04 en vuelo — no tocar su worktree. C05 parked · sin 🔶.
+> C04 en vuelo — no tocar su worktree. C05 **🔶** brief · **sin despacho**
+> (R12 post C03 ✅).
 
 ## Gate tick-cero (GO-C1)
 
@@ -17,8 +18,8 @@
 ## Hito observación (no bloqueante · sin WP · sin CA)
 
 > «**Primer amigo entra de verdad**» → documentar fricción en acta futura.
-> Ningún CA de C01/C02/C03 depende. Candidato a englobar en
-> **PRUEBA-DE-DOS** (cola v3 · a ratificar PO).
+> Ningún CA de C01/C02/C03 depende. Englobado en **PRUEBA-DE-DOS**
+> (cola v3 ratificada).
 
 ## Ola CR-1 (✅ merge · listo-R11)
 
@@ -57,30 +58,37 @@ Si el wt C04 está lockeado al cierre, re-correr sobre tip post-merge.
 | **v2** | ¿cableado ciudad → player-mcp-kit (instancia/config)? | **EXISTE** — `HOLONES/01-mythos/games-library/packages/ciudad/package.json` dep `@zeus/player-mcp-kit@^0.1.2` · instancia `packages/ciudad/src/player-mcp/` (`server`/`room-bridge`/`logic`; resources vía `GAME_ID='ciudad'` → `ciudad://player/state`·`scene`·`casos`). | Anotar path en reporte C04 / handoff C05. |
 | **v3** | ¿room-bridge del kit presenta peercard en bootstrap? | **NO-EXISTE** — `player-mcp-kit/src/room-bridge.mjs` `connect()` → `connectAndJoin({ type, features, room })` sin peercard; `rooms` `CLIENT_REGISTER` solo type/features. Ciudad wrapper idem (`CiudadPlayerMcp`). | Gap → **C05** (no bloquear merge C04). |
 
-## Parked / fuera
+## C05 · ciudadano-agente (🔶 · sin despacho · R12)
 
-| Id | Título | Deps | Estado | Nota |
-|---|---|---|---|---|
-| **C05** | ciudadano-agente | C04 · tras CR-1 (C01/C03) | ⬜ parked · **sin 🔶** | [BRIEF-BORRADOR](../../REPORTES/BRIEF-BORRADOR-WP-C05-ciudadano-agente.md) |
+| Id | Título | Deps | Ejes | Estado | Issue |
+|---|---|---|---|---|---|
+| [C05](WP-C05-ciudadano-agente.md) | ciudadano-agente | C04 · tras CR-1 (C01/C03 ✅) | I·IV + regla 6 + ceguera | 🔶 brief · **sin despacho** (R12) | LOCAL |
+
+Brief: [BRIEF-WP-C05](../../REPORTES/BRIEF-WP-C05-ciudadano-agente.md).
+Al cerrar: responder **v2/v3** (wiring ciudad→MCP · peercard room-bridge)
+en el reporte. **No** abrir worktree ni chat worker en este tick.
+
+## Parked / fuera
 
 Otros parked:
 
 - Z05 items **4–6** · SEMILLA **§6** · trama-agua · E01 f3/f4 (#22)
 - E_SDK / DE-I8 · reopen ✅ city · force-push
-- **PRUEBA-DE-DOS** (hito observación + acta fricción; custodio+vigía) — cola v3
+- **PRUEBA-DE-DOS** (hito observación + acta fricción; custodio+vigía) —
+  cola v3 ratificada (post C05)
 
-## Cola v3 (candidata · a ratificar PO)
+## Cola v3 (ratificada · DE-I19 · DC-CR-cola-v3)
 
-> Propuesta prep R10.6 — **no** enmienda dura DE-I19 hasta tick PO.
-> Espejo: [DC-CR-cola-v3-candidata](DECISIONES.md).
+> Tick PO R10.6+R11. Espejo: [DC-CR-cola-v3](DECISIONES.md).
 
 **CR-1 → C04 → C05 → PRUEBA-DE-DOS** (hito observación + acta fricción;
 protagonistas custodio+vigía) → **§6** meta-juego → **trama-agua**.
 
 ## R11 (sin cambio de alcance) · **listo**
 
-Re-verif ola 1 (tips arriba) + gate C03 + `npm view` kits C04. No abre C05.
+Re-verif ola 1 (tips arriba) + gate C03 + `npm view` kits C04.
 **C03 no despachado** en cierre OLA 1 — arranca solo tras R11 PASS.
+**C05 no despachado** — arranca solo tras C03 ✅ + **R12**.
 
 ## Checklist R10 pre-despacho (histórico · vigía)
 
@@ -91,4 +99,4 @@ Re-verif ola 1 (tips arriba) + gate C03 + `npm view` kits C04. No abre C05.
 | Z_SDK #5 | OPEN (citar; no cerrar) |
 | LOCAL-ONLY | sin `gh issue create` de filas nuevas |
 | ceguera DE-I20 | gate δ12 recordado en briefs |
-| workers | gate R10; prep R10.6 no despacha C05 |
+| workers | gate R10; C05 🔶 sin despacho hasta R12 |

@@ -239,10 +239,10 @@ bloquea WP-D31 de aquel mundo, no bloquea este plan.)*
   borrar `wp/*` merged; **jamás** `draft` sin GO explícito del custodio.
 
 - **DE-I19 · Cola de GOs post–sprint-game-city (v2 · enmienda GO-V1 ·
-  GO-C1)**
+  GO-C1 · **cola v3 ratificada tick PO R10.6+R11**)**
   *(custodio · GO H2.2 · 2026-07-22 · enmienda GO-V1 · 2026-07-22 ·
-  gobierno V2 · **GO-C1 2026-07-22**).* Tras C04, los parked pasan a
-  **cola de GOs**. Vista histórica (H2.2) en
+  gobierno V2 · **GO-C1 2026-07-22** · **tick PO 2026-07-22**).* Tras
+  C04, los parked pasan a **cola de GOs**. Vista histórica (H2.2) en
   [`sprint-game-city/BACKLOG.md`](SPRINTS/sprint-game-city/BACKLOG.md)
   §«Cola de GOs post-cierre» (city **cerrado** — solo puntero). Vista
   operativa viva: [`sprint-vida-1/`](SPRINTS/sprint-vida-1/) (✅) ·
@@ -250,7 +250,7 @@ bloquea WP-D31 de aquel mundo, no bloquea este plan.)*
   (**CERRADO** R9.5) · [`sprint-ciudad-real/`](SPRINTS/sprint-ciudad-real/)
   (**activo** GO-C1).
 
-  **Orden v2 (GO-V1 → GO-C1):**
+  **Orden v2 (GO-V1 → GO-C1) — marco de sprints cerrados/activo:**
 
   1. **VIDA-1** ✅ — SEMILLA §3+§4 (M01+M02)
   2. **EMBAJADOR-ENTRADA** ✅ **CERRADO** (E02+f1+HOTFIX+f2∥A5 · #23
@@ -258,23 +258,24 @@ bloquea WP-D31 de aquel mundo, no bloquea este plan.)*
   3. **CIUDAD-REAL** — **activo** (GO-C1) · SEMILLA **§2** + motor Z05
      item **3** ACL direccional (**Z_SDK #5** citar; no cerrar) +
      SEMILLA-ARG **§A4** · sprint
-     [`sprint-ciudad-real/`](SPRINTS/sprint-ciudad-real/) · briefs listos
-     gate vigía **R10** (sin despachar workers)
-  4. SEMILLA **§6** meta-juego
-  5. trama-agua
+     [`sprint-ciudad-real/`](SPRINTS/sprint-ciudad-real/)
+  4. SEMILLA **§6** meta-juego *(reordenado bajo cola v3 — ver abajo)*
+  5. trama-agua *(idem)*
 
-  **Cola v3 (candidata · PREP R10.6 · no hard hasta tick PO):**
-  CR-1 → C04 → C05 → PRUEBA-DE-DOS → §6 → trama-agua. Detalle:
+  **Cola v3 (ratificada · tick PO R10.6+R11 · 2026-07-22):**
+  **CR-1 → C04 → C05 → PRUEBA-DE-DOS** (hito observación + acta fricción;
+  protagonistas custodio+vigía) → **§6** meta-juego → **trama-agua**.
+  Detalle / asiento:
   [`sprint-ciudad-real/DECISIONES.md`](SPRINTS/sprint-ciudad-real/DECISIONES.md)
-  **DC-CR-cola-v3-candidata**. No sustituye el orden v2 arriba hasta
-  ratificación PO.
+  **DC-CR-cola-v3**. Sustituye el orden interno post–ítem 3 hacia §6 /
+  trama-agua. Orden v2 de sprints (1–3) intacto.
 
   **Mantener (invariantes):** veto **E_SDK / DE-I8** fuera de cola hasta
   GO custodio propio · **no reopen ✅** · práctica **claim→acta/SHA**
   (sin acta/SHA = no cerrado). Encolar ≠ abrir: parked siguen ⬜ hasta
   GO que emita 🔶 + BRIEF (M01/M02 = GO-V2 ✅; embajador = CERRADO R9.5;
-  CIUDAD-REAL = GO-C1 activo · R10 pre-despacho · C05 **sin 🔶**
-  hasta GO post-C04/CR-1).
+  CIUDAD-REAL = GO-C1 activo · C05 **🔶 brief** emitido tick PO ·
+  **sin despacho** hasta cierre CR-1 (C03 ✅) + gate **R12**).
 
   **Horizonte (sin WP ni GO — carril declarado):**
   **extensión-VSCode-zigurat** como interfaz mesh (wrapper zeus-sdk +

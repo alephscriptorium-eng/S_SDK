@@ -1,9 +1,10 @@
-# sprint-ciudad-real — **ACTIVO** (GO-C1 · PREP R10.6)
+# sprint-ciudad-real — **ACTIVO** (GO-C1 · cola v3 ratificada)
 
 > **Estado: ACTIVO.** Apertura GO-C1 tras cierre formal EMBAJADOR-ENTRADA
-> (R9.5). Ola CR-1 + C04 en vuelo; C05 parked (**sin 🔶**). Cola v3
-> candidata a ratificar PO. Padre: [DE-I19](../../DECISIONES.md) ·
-> embajador cerrado: [sprint-embajador-entrada](../sprint-embajador-entrada/).
+> (R9.5). Ola CR-1 + C04 en vuelo; C05 **🔶** brief · **sin despacho**
+> (R12 post C03 ✅). Cola v3 **ratificada** (DE-I19 · DC-CR-cola-v3).
+> Padre: [DE-I19](../../DECISIONES.md) · embajador cerrado:
+> [sprint-embajador-entrada](../sprint-embajador-entrada/).
 
 ## Parámetros
 
@@ -35,21 +36,22 @@
    (regla 17). No `gh issue create` de filas bajo umbrella ahora.
 4. Vetos: E_SDK / DE-I8 · reopen ✅ city · force-push · claim→acta/SHA.
 
-## Parked (fuera / post CR-1)
+## Parked / post CR-1
 
 | pieza | nota |
 |---|---|
-| **C05** ciudadano-agente | [BRIEF-BORRADOR](../../REPORTES/BRIEF-BORRADOR-WP-C05-ciudadano-agente.md) · **sin 🔶** · tras C04+CR-1 |
-| PRUEBA-DE-DOS | cola v3 candidata (custodio+vigía) |
+| **C05** ciudadano-agente | [BRIEF-WP-C05](../../REPORTES/BRIEF-WP-C05-ciudadano-agente.md) · **🔶** · sin despacho hasta R12 |
+| PRUEBA-DE-DOS | cola v3 ratificada (custodio+vigía) |
 | Z05 items **4–6** | parked (sin GO) |
-| SEMILLA **§6** | meta-juego · cola DE-I19 ítem 4 |
-| trama-agua | cola DE-I19 ítem 5 |
+| SEMILLA **§6** | meta-juego · cola v3 post PRUEBA-DE-DOS |
+| trama-agua | cola v3 final |
 | E01 f3/f4 | S_SDK **#22** OPEN parked |
 
 ## Hito observación (no bloqueante · sin WP)
 
 «**Primer amigo entra de verdad**» — documentar fricción en acta futura.
-Ningún CA del sprint depende de este hito. Ver [BACKLOG](BACKLOG.md).
+Ningún CA del sprint depende de este hito. Ver [BACKLOG](BACKLOG.md)
+(PRUEBA-DE-DOS).
 
 ## Tick cero (gate GO-C1)
 
@@ -62,8 +64,9 @@ Fixture: [`fixtures/tick-cero/`](fixtures/tick-cero/).
 
 | fichero | rol |
 |---|---|
-| [BACKLOG.md](BACKLOG.md) | WPs, estados, R10. Solo orquestador. |
-| [DECISIONES.md](DECISIONES.md) | DC-CR-*. |
+| [BACKLOG.md](BACKLOG.md) | WPs, estados, R11/R12. Solo orquestador. |
+| [DECISIONES.md](DECISIONES.md) | DC-CR-* · cola v3. |
 | [WP-C01-semilla-salud.md](WP-C01-semilla-salud.md) | §2 |
 | [WP-C02-acl-direccional.md](WP-C02-acl-direccional.md) | Z05#3 / Z_SDK #5 |
 | [WP-C03-arg-edificios.md](WP-C03-arg-edificios.md) | §A4 |
+| [WP-C05-ciudadano-agente.md](WP-C05-ciudadano-agente.md) | peercard MCP |
