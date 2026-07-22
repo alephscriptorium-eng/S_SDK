@@ -16,7 +16,7 @@ Gobierno: plan/SPRINTS/sprint-skills-bosque/** (S_SDK)
 | Docs CI S05b | [29922221260](https://github.com/alephscriptorium-eng/S_SDK-skills-library/actions/runs/29922221260) success |
 | S06 tip | `834f706` |
 | S06 merge → main | **`2743176`** |
-| Gobierno S_SDK (este commit) | *(tip tras push gobierno)* |
+| Gobierno S_SDK (este commit) | **`9a27ceb`** |
 
 ## Estado WPs
 
