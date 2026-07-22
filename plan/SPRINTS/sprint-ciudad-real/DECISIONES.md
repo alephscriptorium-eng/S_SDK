@@ -56,3 +56,16 @@ C01 o con stubs documentados. ∩ = devolución R10.
 **Decisión:** no crear issues nuevas ahora. Filas C01/C02/C03 = LOCAL.
 Overlap pack C02 = trabajar **Z_SDK #5** (citar; no cerrar). Sync-map
 post-apply (regla 17) al cierre de lote.
+
+### DC-CR-embajador-private · 2026-07-22 · **cerrada** (nota diseño)
+
+**Tema:** `@zeus/embajador-kit` `"private": true` — frontera anfitrión/peer.
+
+**Decisión:** permanece `"private": true` = frontera anfitrión/peer
+**DELIBERADA** (no olvido ni deuda técnica). Evidencia: fixture tick-cero
+`fixtures/tick-cero/peer.mjs` solo importa `@zeus/protocol` (`peer-card`,
+`peer-card-seat`); `puerta.mjs` idem (sin `embajador-kit`). Seat + peercard
+viajan en `@zeus/protocol@0.3.0`; el kit queda del lado **anfitrión**
+(operator-ui / puerta). **Revisar publicación** solo si **E01-f3** habilita
+emisión de sub-credenciales por peers. Evita que un barrido futuro lo
+re-eleve como olvido.
