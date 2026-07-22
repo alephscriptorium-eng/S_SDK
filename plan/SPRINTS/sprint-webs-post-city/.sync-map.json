@@ -1,0 +1,17 @@
+{
+  "note": "DC-WW-proyeccion · LOCAL-ONLY durante sprint · rellenar post-apply (regla 17) tras umbrella cierre",
+  "umbrella_pending": true,
+  "WPs": {
+    "WW-Z": null,
+    "WW-G": null,
+    "WW-S": null,
+    "W2_absorbed_into": "WW-G"
+  },
+  "cite_do_not_duplicate": {
+    "ARQUEOLOGIA-U": 27,
+    "CR-umbrella": 30,
+    "EE-1": [22, 23],
+    "C05": 31
+  },
+  "open_cite_no_close": ["Z_SDK#4", "Z_SDK#5", "Z_SDK#6"]
+}

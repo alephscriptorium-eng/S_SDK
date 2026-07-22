@@ -330,3 +330,15 @@ bloquea WP-D31 de aquel mundo, no bloquea este plan.)*
   panorámicas ciegas Z_SDK #2 / GL #1 · sync-map post-apply (regla 17).
   Espejo sprint: `sprint-ciudad-real/DECISIONES.md`
   **DC-CR-proyeccion-arco**. Vetos: no merge C05 · no E_SDK · no force.
+
+- **DE-I24 · Sprint webs-post-city (R15-plan · LOCAL-ONLY)**
+  *(gobierno · GO PO · tick vigía R15-plan · 2026-07-22).* Abrir
+  [`sprint-webs-post-city/`](SPRINTS/sprint-webs-post-city/) con 🔶
+  WW-Z ∥ WW-G ∥ WW-S (briefs definitivos). **Sin despacho** hasta gate
+  **R15-city** ([AVISO-R15-city](SPRINTS/sprint-webs-post-city/REPORTES/AVISO-R15-city.md)).
+  Micro-WP **W2** (residual W1 · `/games/ciudad`) **absorbido en WW-G** —
+  no despachar suelto. Proyección: **LOCAL-ONLY** durante sprint; al
+  cierre 1 umbrella (patrón DE-I23) + sync-map post-apply (regla 17).
+  Partición V2: no tocar `sprint-skills-bosque/` (bosque S03/S05b ∥).
+  Espejo: `sprint-webs-post-city/DECISIONES.md` DC-WW-*. Vetos: E_SDK/
+  DE-I8 · Z_SDK #4/#5/#6 citar-no-cerrar · claim→acta/SHA.
