@@ -312,3 +312,11 @@ bloquea WP-D31 de aquel mundo, no bloquea este plan.)*
   conservar como antecedente) — corrección vigía **R10.5**.
   Espejo sprint: `sprint-ciudad-real/DECISIONES.md` **DC-CR-kits-foss**.
   Obra = WP-C04 (rama zeus); no interrumpe C01∥C02.
+
+- **DE-I22 · Contrato convivencia multi-orq v1.1 vigente**
+  *(gobierno · R12-city · 2026-07-22).* Contrato de convivencia
+  multi-orquestador **v1.1** vigente desde su commit a `main`. Enmiendas
+  por eval R12-bosque (6 §aceptadas · reconciliación vigía). Fuente:
+  [`ENTREGA-VIGIA-2026-07-22-contrato-convivencia.md`](REPORTES/ENTREGA-VIGIA-2026-07-22-contrato-convivencia.md).
+  Consecuencia: partición obra/gobierno city∥bosque; bosque monta
+  esqueleto §2bis tras este asiento; gate bosque desbloqueado.
