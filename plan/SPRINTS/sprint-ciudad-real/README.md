@@ -1,9 +1,9 @@
-# sprint-ciudad-real — **ACTIVO** (GO-C1 · listo R10)
+# sprint-ciudad-real — **ACTIVO** (GO-C1 · PREP R10.6)
 
 > **Estado: ACTIVO.** Apertura GO-C1 tras cierre formal EMBAJADOR-ENTRADA
-> (R9.5). Workers **no** despachados hasta vigía **R10** PASS.
-> Padre: [DE-I19](../../DECISIONES.md) · embajador cerrado:
-> [sprint-embajador-entrada](../sprint-embajador-entrada/).
+> (R9.5). Ola CR-1 + C04 en vuelo; C05 parked (**sin 🔶**). Cola v3
+> candidata a ratificar PO. Padre: [DE-I19](../../DECISIONES.md) ·
+> embajador cerrado: [sprint-embajador-entrada](../sprint-embajador-entrada/).
 
 ## Parámetros
 
@@ -35,10 +35,12 @@
    (regla 17). No `gh issue create` de filas bajo umbrella ahora.
 4. Vetos: E_SDK / DE-I8 · reopen ✅ city · force-push · claim→acta/SHA.
 
-## Parked (fuera de este sprint)
+## Parked (fuera / post CR-1)
 
 | pieza | nota |
 |---|---|
+| **C05** ciudadano-agente | [BRIEF-BORRADOR](../../REPORTES/BRIEF-BORRADOR-WP-C05-ciudadano-agente.md) · **sin 🔶** · tras C04+CR-1 |
+| PRUEBA-DE-DOS | cola v3 candidata (custodio+vigía) |
 | Z05 items **4–6** | parked (sin GO) |
 | SEMILLA **§6** | meta-juego · cola DE-I19 ítem 4 |
 | trama-agua | cola DE-I19 ítem 5 |

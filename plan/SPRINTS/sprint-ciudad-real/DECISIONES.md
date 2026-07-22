@@ -94,3 +94,24 @@ peers. Evita que un barrido futuro lo re-eleve como olvido.
 Consecuencia: `@zeus/embajador-kit` y pares de contrato/juego entran al
 canal publish cuando el WP de obra (C04) aplique manifest + changeset.
 House: [DE-I21](../../DECISIONES.md). Sin tocar ola 1 (C01∥C02).
+
+### DC-CR-cola-v3-candidata · 2026-07-22 · **abierta** (propuesta · PREP R10.6)
+
+**Tema:** orden de cola post–ola CR-1 / C04 hacia meta-juego.
+
+**Propuesta (no DE-I19 hard hasta tick PO):**
+
+1. **CR-1** (C01∥C02 + gate C03)
+2. **C04** kits FOSS / públicos (DE-I21 · en vuelo)
+3. **C05** ciudadano-agente (peercard en bootstrap MCP · regla 6)
+4. **PRUEBA-DE-DOS** — hito observación + acta fricción; protagonistas
+   custodio + vigía (engloba «primer amigo» / campana)
+5. SEMILLA **§6** meta-juego
+6. trama-agua
+
+**Nota R11:** re-verif ola 1 + gate C03 + `npm view` kits C04 (sin cambio
+de alcance; no abre C05).
+
+**Vetos intactos:** E_SDK / DE-I8 · reopen ✅ · force-push · claim→acta/SHA.
+
+House DE-I19: enmienda solo tras tick PO que ratifique esta cola v3.

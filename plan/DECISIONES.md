@@ -263,11 +263,18 @@ bloquea WP-D31 de aquel mundo, no bloquea este plan.)*
   4. SEMILLA **§6** meta-juego
   5. trama-agua
 
+  **Cola v3 (candidata · PREP R10.6 · no hard hasta tick PO):**
+  CR-1 → C04 → C05 → PRUEBA-DE-DOS → §6 → trama-agua. Detalle:
+  [`sprint-ciudad-real/DECISIONES.md`](SPRINTS/sprint-ciudad-real/DECISIONES.md)
+  **DC-CR-cola-v3-candidata**. No sustituye el orden v2 arriba hasta
+  ratificación PO.
+
   **Mantener (invariantes):** veto **E_SDK / DE-I8** fuera de cola hasta
   GO custodio propio · **no reopen ✅** · práctica **claim→acta/SHA**
   (sin acta/SHA = no cerrado). Encolar ≠ abrir: parked siguen ⬜ hasta
   GO que emita 🔶 + BRIEF (M01/M02 = GO-V2 ✅; embajador = CERRADO R9.5;
-  CIUDAD-REAL = GO-C1 activo · R10 pre-despacho).
+  CIUDAD-REAL = GO-C1 activo · R10 pre-despacho · C05 **sin 🔶**
+  hasta GO post-C04/CR-1).
 
   **Horizonte (sin WP ni GO — carril declarado):**
   **extensión-VSCode-zigurat** como interfaz mesh (wrapper zeus-sdk +

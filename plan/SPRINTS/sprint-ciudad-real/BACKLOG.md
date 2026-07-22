@@ -1,11 +1,13 @@
-# BACKLOG — sprint-ciudad-real (GO-C1 · listo R10)
+# BACKLOG — sprint-ciudad-real (GO-C1 · PREP R10.6)
 
 > Solo el orquestador escribe aquí. Workers: un WP = un chat = rama
 > `wp/cr-<id>-<slug>` (+ worktree si paralelo); NO editar este fichero.
 > Estados: ⬜ · 🔶 · ✅.
 > Padre: [DE-I19](../../DECISIONES.md) · [DECISIONES sprint](DECISIONES.md).
 > Embajador **CERRADO**. Proyección: **LOCAL-ONLY** · Z_SDK **#5** citar
-> OPEN. **No despachar** hasta vigía **R10**.
+> OPEN. Prep R10.6: asiento C05 borrador + cola v3 candidata (**sin**
+> despacho C05 · **sin 🔶** C05). Ola 1 + C04 en vuelo — no tocar sus
+> worktrees desde prep.
 
 ## Gate tick-cero (GO-C1)
 
@@ -16,30 +18,70 @@
 ## Hito observación (no bloqueante · sin WP · sin CA)
 
 > «**Primer amigo entra de verdad**» → documentar fricción en acta futura.
-> Ningún CA de C01/C02/C03 depende.
+> Ningún CA de C01/C02/C03 depende. Candidato a englobar en
+> **PRUEBA-DE-DOS** (cola v3 · a ratificar PO).
 
-## Ola CR-1 (candidata · briefs listos · **sin 🔶 hasta R10**)
+## Ola CR-1 (en vuelo / gate)
 
-> Patrón olas como R7: exclusion-paths + gate vigía **antes** de despacho.
+> Exclusion-paths: [DC-CR-exclusion-paths](DECISIONES.md). Prep **no**
+> toca worktrees C01∥C02 ni C04.
 
 | Id | Título | Deps | Ejes | Estado | Issue |
 |---|---|---|---|---|---|
-| [C01](WP-C01-semilla-salud.md) | Salud real ↔ mapa (§2) | EE-1 ✅ · tick-cero | I·IV + ceguera | ⬜ brief listo | LOCAL |
-| [C02](WP-C02-acl-direccional.md) | ACL direccional (Z05#3) | C01 shape · Z_SDK #5 | I·II + ceguera | ⬜ brief listo | LOCAL · Z_SDK #5 |
-| [C03](WP-C03-arg-edificios.md) | Edificios ↔ paquetes (§A4) | C01 · catálogo Z06 | I·II + ceguera | ⬜ brief listo | LOCAL |
+| [C01](WP-C01-semilla-salud.md) | Salud real ↔ mapa (§2) | EE-1 ✅ · tick-cero | I·IV + ceguera | en vuelo (no tocar wt) | LOCAL |
+| [C02](WP-C02-acl-direccional.md) | ACL direccional (Z05#3) | C01 shape · Z_SDK #5 | I·II + ceguera | en vuelo (no tocar wt) | LOCAL · Z_SDK #5 |
+| [C03](WP-C03-arg-edificios.md) | Edificios ↔ paquetes (§A4) | C01 · catálogo Z06 | I·II + ceguera | ⬜ brief listo · gate R11 | LOCAL |
 
-Briefs (listos R10 · **sin despachar**):
+Briefs CR-1:
 
 - [BRIEF-WP-C01](../../REPORTES/BRIEF-WP-C01-semilla-salud.md)
 - [BRIEF-WP-C02](../../REPORTES/BRIEF-WP-C02-acl-direccional.md)
 - [BRIEF-WP-C03](../../REPORTES/BRIEF-WP-C03-arg-edificios.md)
 
+## C04 · kits FOSS / públicos (en vuelo · DC-CR-kits-foss)
+
+| Id | Título | Deps | Ejes | Estado | Issue |
+|---|---|---|---|---|---|
+| C04 | Kits juego/contratos → public (DE-I21) | DC-CR-kits-foss | I + ceguera | en vuelo zeus `wp/cr-c04-kits-publicos` | LOCAL |
+
+Prep **no** toca ese worktree. Quien cierre C04 corre el checklist abajo.
+
+### Checklist cierre C04 (barato · PREP R10.6)
+
+Hallazgos tip main read-only (zeus `30bfc08` · GL `b54a2d2` · 2026-07-22).
+Si el wt C04 está lockeado al cierre, re-correr sobre tip post-merge.
+
+| id | check | hallazgo prep | acción cierre C04 |
+| -- | ----- | ------------- | ----------------- |
+| **v1** | ¿`@zeus/player-mcp-kit` `"private": true`? | **NO** — campo ausente; `publishConfig` + `0.1.2` en `packages/engine/player-mcp-kit/package.json`. Contraste: `embajador-kit` sí `private:true` (obra C04). | **No** entra clase kit C04. Confirmar tip post-merge sigue sin `private:true`. |
+| **v2** | ¿cableado ciudad → player-mcp-kit (instancia/config)? | **EXISTE** — `HOLONES/01-mythos/games-library/packages/ciudad/package.json` dep `@zeus/player-mcp-kit@^0.1.2` · instancia `packages/ciudad/src/player-mcp/` (`server`/`room-bridge`/`logic`; resources vía `GAME_ID='ciudad'` → `ciudad://player/state`·`scene`·`casos`). | Anotar path en reporte C04 / handoff C05. |
+| **v3** | ¿room-bridge del kit presenta peercard en bootstrap? | **NO-EXISTE** — `player-mcp-kit/src/room-bridge.mjs` `connect()` → `connectAndJoin({ type, features, room })` sin peercard; `rooms` `CLIENT_REGISTER` solo type/features. Ciudad wrapper idem (`CiudadPlayerMcp`). | Gap → **C05** (no bloquear merge C04). |
+
 ## Parked / fuera
+
+| Id | Título | Deps | Estado | Nota |
+|---|---|---|---|---|
+| **C05** | ciudadano-agente | C04 · tras CR-1 (C01/C03) | ⬜ parked · **sin 🔶** | [BRIEF-BORRADOR](../../REPORTES/BRIEF-BORRADOR-WP-C05-ciudadano-agente.md) |
+
+Otros parked:
 
 - Z05 items **4–6** · SEMILLA **§6** · trama-agua · E01 f3/f4 (#22)
 - E_SDK / DE-I8 · reopen ✅ city · force-push
+- **PRUEBA-DE-DOS** (hito observación + acta fricción; custodio+vigía) — cola v3
 
-## Checklist R10 pre-despacho (para vigía)
+## Cola v3 (candidata · a ratificar PO)
+
+> Propuesta prep R10.6 — **no** enmienda dura DE-I19 hasta tick PO.
+> Espejo: [DC-CR-cola-v3-candidata](DECISIONES.md).
+
+**CR-1 → C04 → C05 → PRUEBA-DE-DOS** (hito observación + acta fricción;
+protagonistas custodio+vigía) → **§6** meta-juego → **trama-agua**.
+
+## R11 (sin cambio de alcance)
+
+Re-verif ola 1 + gate C03 + `npm view` kits C04. No abre C05.
+
+## Checklist R10 pre-despacho (histórico · vigía)
 
 | check | esperado |
 | ----- | -------- |
@@ -48,4 +90,4 @@ Briefs (listos R10 · **sin despachar**):
 | Z_SDK #5 | OPEN (citar; no cerrar) |
 | LOCAL-ONLY | sin `gh issue create` de filas nuevas |
 | ceguera DE-I20 | gate δ12 recordado en briefs |
-| workers | **no** despachados hasta R10 PASS |
+| workers | gate R10; prep R10.6 no despacha C05 |
