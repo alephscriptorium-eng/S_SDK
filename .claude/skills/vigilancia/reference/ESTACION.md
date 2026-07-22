@@ -1,7 +1,19 @@
 # ESTACIÓN DEL VIGÍA — protocolo (marco-agnóstico)
 
-Protocolo de vigilancia v1. Parametriza **el mundo** (`WORLD_ROOT`). No
-incluye histórico de sesión: eso es dato de instancia.
+Protocolo de vigilancia v1. Parametriza **el mundo** (`WORLD_ROOT`,
+`OUT_DIR`, `INTERVAL`). No incluye histórico de sesión: eso es dato de
+instancia.
+
+## Parámetros canónicos
+
+| param | rol |
+| ----- | --- |
+| `WORLD_ROOT` | Raíz del repo git vigilado (un root por proceso watcher) |
+| `OUT_DIR` | Logs/estado del vigía (`watch.log`, `anomalias.log`) |
+| `INTERVAL` | Segundos entre muestras (default 45) |
+
+Territorio hermano (p. ej. gobierno vs obra) = **otra** calibración
+`WORLD_ROOT`/`OUT_DIR`, no hardcode en el skill. Ver «Pulso multi-carril».
 
 ## Rol (inviolable)
 
@@ -55,6 +67,13 @@ orquestador antes de entregar (no duplicar).
 - **Pulso CI:** el pulso incluye SIEMPRE el último run de CI de la rama
   principal del mundo (`gh run list -L2` u equivalente). Los smokes locales
   de workers no sustituyen al runner limpio.
+- **Pulso secrets de publish:** en todo **repo nuevo** que vaya a publicar
+  paquete (tag `v*` → workflow), el pulso incluye
+  `gh secret list -R <org>/<repo>` y verifica que existan los nombres que
+  el workflow exige (`NPM_USERNAME` + `NPM_PASSWORD`, o `NPM_TOKEN` si
+  aplica). Ausencia = anomalía **antes** del primer tag — no tras el
+  fallo de CI. Caso fundante: **GL 2026-07-22** (publish roto por secrets
+  no sembrados; el check de pulso lo habría pillado en PRE).
 - **Residuo de info en carpetas de IDE (regla 15 del swarm):**
   markdowns/notas de sesión bajo `.claude/`, `.cursor/` u otras carpetas
   de herramienta son una **fuente de verdad paralela y efímera** — se
@@ -85,9 +104,92 @@ orquestador antes de entregar (no duplicar).
    declarar gates externos pendientes.
 4. **Invariante:** un WP ✅ jamás se reabre — trabajo nuevo = WP nuevo.
 
+## Layout BACKSTAGE_GIT · `cantera/`
+
+El backstage (pulsos/addendas + depósitos custodiados) tiene layout
+recomendado propio: ver `reference/BACKSTAGE-GIT.md`. Convención:
+**`cantera/`** = depósitos custodiados; no confundir con `_fuentes/`
+(FS atlas = checkouts de lectura). Un worktree por rol. Migración
+legacy: `fuentes/` → `cantera/`.
+
 ## Herramienta
 
 `scripts/watcher.sh` (intervalo configurable) → `watch.log` +
 `anomalias.log` bajo `OUT_DIR`. Vigila worktrees registrados vs carpetas,
 mtime, locks. **No usa `git status`.** Mejora pendiente si se reusa:
 clasificar huérfano por vacío/no-vacío y exigir ≥2 ciclos antes de logar.
+
+Un proceso = un `WORLD_ROOT`. Multi-root / territorio hermano: ver
+sección siguiente (instancias paralelas o `SIBLING_ROOT` solo lectura).
+
+## Supuestos de convivencia (dep blanda · shape S01)
+
+Supuestos explícitos sobre convivencia multi-orquestador. Fuente canónica
+del contrato: skill `swarm-orquestacion` →
+`reference/convivencia-multi-orquestador.md`. Aquí solo se documenta lo
+que el **vigía** asume al pulsar. Si la integración ajusta la shape, el
+orquestador alinea — este skill **no** edita el de orquestación.
+
+1. **Vigía único.** Un solo vigía etiqueta rondas `Rn-<carril>` (patrón
+   abstracto; el consumidor sustituye `<carril>`). No hay un vigía por
+   orquestador.
+2. **Partición.** Dos o más orquestadores pueden compartir gobierno con
+   **partición de prefijos** (obra vs gobierno, o prefijos de plan/WP).
+   El vigía lee ambos territorios; no escribe en ninguno.
+3. **Higiene pre-despacho (§8).** Antes de autorizar despacho en un
+   carril: sin huérfanos conocidos en el territorio de ese carril
+   (worktrees fantasma, locks colgados, ramas merged sin poda). Equivale
+   al checklist de higiene / regla 8 del método de orquestación + §8 del
+   contrato de convivencia del consumidor.
+4. **Freeze por `index.lock`.** Lock sostenido ≥2–3 ciclos del watcher →
+   **freeze** de pushes de gobierno en **ambos** carriles y elevar al
+   custodio. Un ciclo = ruido normal de git.
+5. **Addendas por carril.** Cada addenda dos caras declara el carril
+   (`Rn-<carril>`); **no** mezcla hallazgos de carriles distintos en la
+   misma §WP. La cara §WP pasa prueba de ceguera antes de mediar.
+
+## Pulso multi-carril
+
+Cuando el mundo opera con **más de un carril** (orquestadores en
+paralelo, obra + gobierno, o partición de prefijos):
+
+### Etiquetas de ronda
+
+- Formato: `Rn-<carril>` (ej. sintético: `Rn-obra`, `Rn-gobierno`).
+- El vigía anota la etiqueta en bitácora/`OUT_DIR` y en el id de addenda
+  (`ADDENDA-<id>·Rn-<carril>`).
+- Un pulso de estación puede **observar** varios carriles; cada
+  elevación lleva **una** etiqueta.
+
+### Qué muestrear por carril
+
+| señal | dónde | umbral |
+| ----- | ----- | ------ |
+| worktrees / huérfanos | `.worktrees/` del `WORLD_ROOT` del territorio | ≥2 ciclos si no vacío |
+| `index.lock` / `HEAD.lock` | `.git/` del root vigilado | 1 ciclo = ok; ≥2–3 = freeze + elevar |
+| worktree `locked` | `.git/worktrees/*/locked` | igual que locks |
+| CI principal | canal del mundo (`gh` u otro) | último run de la rama principal |
+| secrets publish | `gh secret list -R <org>/<repo>` | nombres exigidos presentes (repo nuevo / primer publish) |
+| higiene §8 | territorio del carril a despachar | 0 huérfanos conocidos |
+
+### Territorio hermano + gobierno
+
+- **Obra** y **gobierno** (o dos roots hermanos) se calibran como dos
+  pares `(WORLD_ROOT, OUT_DIR)`.
+- Arranque típico: dos procesos `watcher.sh` (uno por root) o un proceso
+  con `WORLD_ROOT` principal + `SIBLING_ROOT` opcional (solo muestra
+  locks/worktrees del hermano; escribe en el mismo `OUT_DIR` con prefijo
+  `sibling:`).
+- El vigía **no** mezcla en una sola addenda señales de roots distintos
+  sin etiquetar carril.
+
+### Ritual de pulso (multi-carril)
+
+1. Higiene §8 del carril candidato a despacho (PASS/FAIL).
+2. Locks en obra y en gobierno (si hay hermano).
+3. Huérfanos / stale / residuo IDE en el root correspondiente.
+4. CI de la rama principal del mundo de obra (si aplica).
+5. Si el mundo de obra es **repo nuevo a publicar**: `gh secret list -R`
+   → nombres de publish presentes (caso fundante GL 2026-07-22).
+6. Si lock ≥2–3 ciclos → freeze pushes gobierno ambos carriles + addenda.
+7. Si eleva: addenda dos caras con `Rn-<carril>` y ceguera = 0 en §WP.

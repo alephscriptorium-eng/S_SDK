@@ -20,6 +20,8 @@ ficheros y piensas; el hacer es del swarm.
 2. **Asignación**: lote paralelo respetando dependencias y bloqueos; 2–3
    workers al principio. Al asignar: 🔶 en la rama principal + brief por WP.
 3. **Revisión**: con `REVISION.md`. ✅ = autorización de merge.
+   **Merge solo post-aceptación** — no mergear `wp/*` mientras el WP
+   esté 🔶 o entregado sin ✅.
 4. **Hallazgos** → WPs nuevos o notas; no los arreglas tú.
 5. **Higiene**: `git worktree remove` tras merge; vigilar ramas `wp/*` sin
    reportar. Al **cierre de ola**: checklist de
@@ -40,6 +42,13 @@ ficheros y piensas; el hacer es del swarm.
     homólogo) citado por cada repo tocado, la ola no se declara cerrada.
 11. **Sync-map (regla 17)**: si hubo proyección, el mapa entra a git
     **después** del apply real; nunca con IDs especulativos.
+12. **Convivencia multi-orquestador** (método v0.6): si el ecosistema
+    tiene más de un carril, aplicá el contrato en
+    `reference/convivencia-multi-orquestador.md` (fuente única). En
+    particular, **antes de despachar** (🔶 / BRIEF / worker):
+    - higiene pre-despacho (§8 del contrato);
+    - gate `Rn-<carril>` en **PASS** (§3) — sin PASS no hay lote.
+    No re-declarés el cuerpo del contrato aquí.
 
 ## Qué no haces
 
@@ -60,14 +69,18 @@ ficheros y piensas; el hacer es del swarm.
    `abiertos` (solo trabajo accionable).
 2. Escanear BACKLOG, DECISIONES §abiertas y reportes pendientes.
 3. `git status`, ramas `wp/*`, `git worktree list`, `git stash list`.
-4. Resumir: ola actual, paralelizable ahora, bloqueos, revisiones en cola.
-5. Si el custodio pide arrancar: 🔶 + briefs (commit atómico propio).
+4. Si hay multi-carril: comprobar higiene pre-despacho + `Rn-<carril>`
+   PASS (`reference/convivencia-multi-orquestador.md` §3 y §8).
+5. Resumir: ola actual, paralelizable ahora, bloqueos, revisiones en cola.
+6. Si el custodio pide arrancar **y** el gate de convivencia/higiene
+   pasa: 🔶 + briefs (commit atómico propio).
 
 ## Señales de anti-patrón
 
 | Síntoma | Acción |
 | ------- | ------ |
 | Worker editó BACKLOG | Revertir esa parte; es tuyo |
+| Merge de `wp/*` antes de ✅ | Abortar; merge solo post-aceptación |
 | Rama `wp/*` sin reporte | Reclamar el WP |
 | Diff fuera de `ALCANCE_DIFF` | Devolver |
 | Árbol copiado de otro mundo sin cita | Devolver |
@@ -80,6 +93,8 @@ ficheros y piensas; el hacer es del swarm.
 | Proyección a issues sin petición del usuario (DC-15) | Parar; local-only es el default, GitHub = opt-in |
 | Ceguera solo de árbol; fuga en historial (regla 14) | Devolver |
 | Mediación opaca / imponer capa (eje V) | Devolver |
+| Despacho sin `Rn-<carril>` PASS / higiene §8 | Parar; ver convivencia multi-orquestador |
+| Escritura en territorio o `plan/` de otro carril | Devolver; partición §1–§2 |
 
 ## Comando del usuario
 

@@ -63,17 +63,25 @@ workflow, o un push que toque `docs/**`.
 No hardcodear el dominio de otro mundo en plantillas del skill: usá
 `{{DOMINIO}}`.
 
-## Piel zine
+## Piel fanzine (variables ≠ piel)
 
+- **Piel real** = asset `plantillas/fanzine.css` + `Layout.vue.tpl` +
+  `theme-index.js.tpl`. La home publicada lleva clases `stamp` /
+  `washi` / `callout` y **no** el shell DefaultTheme
+  (`Layout` / `VPNav*`). Ver regla 13 en `SKILL.md`.
+- `custom.css.tpl` = **solo tokens opcionales**. Aplicarlo solo sobre
+  `DefaultTheme` **no** cumple la piel (defecto recurrente issue #15).
 - Tipografía local del sistema (p. ej. Courier); monocromo; sin CDN ni
   `@import` de fuentes web.
-- Si se incluye CSS de referencia: **copia-release** con cabecera:
+- Copia-release con cabecera:
 
 ```css
 /* Procedencia: copia-release desde {{RUTA_FUENTE_RELATIVA_O_CITA}}
    Fecha: {{FECHA}} · mundo={{MUNDO_ID}} */
 ```
 
+- CA estructural tras build:
+  `node …/verificar-piel-fanzine.mjs --dist {{DOCS}}/.vitepress/dist`
 - No meter rutas absolutas de árboles ajenos en la cara pública del skill;
   la cita vive en el CSS del **mundo** consumidor.
 
@@ -129,6 +137,9 @@ donde reaparecen enlaces rotos tras el deploy. Mitigación de serie:
 
 ```bash
 npm run docs:build
+# Preferible si el package.json del mundo define el script:
+npm run docs:verificar
+# Equivalente directo:
 node <skill>/scripts/verificar-sitio.mjs --dist docs/.vitepress/dist --base /
 ```
 
@@ -140,14 +151,51 @@ node <skill>/scripts/verificar-sitio.mjs --dist docs/.vitepress/dist --base /
   noDebeAparecer?}`), valida que el HTML generado dice lo que debe (p. ej.
   que la versión mostrada casa con `package.json`). Refuerza C8.
 
-Engancharlo en CI tras `docs:build` (mismo job, antes del deploy) y
-tenerlo disponible en local pre-deploy.
+Engancharlo en CI tras `docs:build` (mismo job, antes del upload del
+artifact / deploy) — plantilla `docs.yml.tpl` incluye el paso
+`npm run docs:verificar` — y tenerlo disponible en local pre-deploy.
+
+## Credenciales de publish por repo
+
+Antes del primer `publish` (tag `v*` → workflow de paquete), el repo
+debe tener sembrados los secrets que el workflow declara. Nombres
+**EXACTOS** (case-sensitive):
+
+| secret | rol |
+| ------ | --- |
+| `NPM_USERNAME` | usuario del registry (basic-auth) |
+| `NPM_PASSWORD` | `_password` ya en base64 (sin comillas); **no** JWT/`_authToken` |
+| `NPM_TOKEN` | **alternativa** solo si el workflow del repo lo espera en lugar del par username/password |
+
+El script generador de la credencial lo declara la calibración del mundo
+(placeholder: no vive hardcodeado en este skill).
+
+### Siembra (mini-guía)
+
+**Web:** Settings → Secrets and variables → Actions → New repository
+secret → crear `NPM_USERNAME` y `NPM_PASSWORD` (o `NPM_TOKEN` si aplica).
+
+**CLI:**
+
+```bash
+gh secret set NPM_USERNAME -R <org>/<repo>
+gh secret set NPM_PASSWORD -R <org>/<repo>
+# si el workflow espera token:
+# gh secret set NPM_TOKEN -R <org>/<repo>
+```
+
+Verificación previa al primer tag: `gh secret list -R <org>/<repo>` debe
+listar los nombres exigidos (sin revelar valores).
 
 ## Checklist de publicación
 
+- [ ] Secrets de publish sembrados (`NPM_USERNAME` + `NPM_PASSWORD`, o
+  `NPM_TOKEN` si el workflow lo espera) — ver sección anterior
 - [ ] `npm ci` + `docs:build` verdes en local
 - [ ] `verificar-sitio.mjs` verde: enlaces internos + anclas resuelven
   (externos = warning); verdad de contenido consistente
+- [ ] `verificar-piel-fanzine.mjs` verde: home con stamp/washi/callout
+  y sin shell DefaultTheme
 - [ ] CNAME presente y equal a dominio vivo
 - [ ] Workflow parsea; deploy solo en `main`
 - [ ] Ceguera del mundo = 0 en copy pública

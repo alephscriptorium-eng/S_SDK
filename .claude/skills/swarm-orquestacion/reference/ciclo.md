@@ -6,9 +6,14 @@ construcción. No lo sustituyas. Lo que sigue son las costuras.
 ## 1. Preparación (orquestador)
 
 1. Ritual de inicio (`ORQUESTADOR.md`).
-2. Elegir lote paralelizable (dependencias, dirs que no se pisen).
-3. En la rama principal: BACKLOG ⬜→🔶 por cada WP del lote.
-4. Rellenar un BRIEF por WP (eje(s) aplicables, `ALCANCE_DIFF`, worktree).
+2. Si el ecosistema es multi-carril: gate de convivencia
+   (`reference/convivencia-multi-orquestador.md` — fuente única): higiene
+   pre-despacho §8 + `Rn-<carril>` PASS §3. Sin PASS, no hay lote.
+3. Elegir lote paralelizable (dependencias, dirs que no se pisen; un
+   territorio por orquestador).
+4. En la rama principal del **carril**: BACKLOG ⬜→🔶 por cada WP del lote.
+5. Rellenar un BRIEF por WP (eje(s) aplicables, `ALCANCE_DIFF`, worktree).
+   REPORTES/BRIEFS bajo el sprint del carril (convivencia §5).
 
 ## 2. Ejecución (worker)
 
@@ -24,6 +29,9 @@ construcción. No lo sustituyas. Lo que sigue son las costuras.
 1. `REVISION.md` + reporte + diff.
 2. Verificar CA y eje(s).
 3. ✅ → BACKLOG ✅ + merge + limpiar worktree.
+   **Merge solo post-aceptación:** la rama `wp/*` entra a la principal
+   **únicamente tras** el ✅. Prohibido merge prematuro (pre-STOP /
+   pre-aceptación) aunque el tip «parezca listo» o haya CI parcial.
    **Commit de aceptación solo:** no abrir brief/🔶 de otro WP en el
    mismo commit (V2 — `reference/reglas-metodo-v03.md`).
 4. Devuelto → comentarios numerados; mismo worker con `CORRECCION.md`.
@@ -59,6 +67,7 @@ Antes de merge/publish: `comprobar-ceguera.sh` sobre el árbol **y**
 | Patrón | Mitigación |
 | ------ | ---------- |
 | Relanzar worker «muerto» por falta de commits | Señal = mtime del worktree, no cadencia de commits |
+| Merge de `wp/*` a principal antes del ✅ | **Merge solo post-aceptación** (caso fundante C05) |
 | Dos workers en el mismo dir de entrega | Dirs/ramas distintos; brief declara conflicto |
 | Aceptar extracción sin consumidor | Eje I en el BRIEF |
 | Demoler y dejar lógica huérfana | Eje II: destino por símbolo |
@@ -73,6 +82,9 @@ Antes de merge/publish: `comprobar-ceguera.sh` sobre el árbol **y**
 | Info de sesión en carpeta de IDE / memoria como verdad | Regla 15: solo config funcional; el plan trazado es la única verdad |
 | Cerrar ola sin run-id verde de CI/Release | Regla 16: citar run-id por cada repo tocado |
 | Commitear sync-map con IDs de issue inventados | Regla 17: apply → mapa real → commit |
+| Despacho multi-carril sin `Rn-<carril>` PASS | Convivencia §3 + §8 |
+| E2E vía checkout raíz de territorio ajeno | Convivencia §7 (registry / scratch / post-gate) |
+| Push de gobierno con `index.lock` sostenido | Convivencia §9: freeze de **ambos** carriles |
 
 ## Señal de worker vivo
 
