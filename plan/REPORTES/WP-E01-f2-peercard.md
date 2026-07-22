@@ -54,7 +54,7 @@ hooks firma/ssbId reescritos · f3/f4 no · Z_SDK #4/#5/#6 no cerrados.
 | ---- | --------------- | --- |
 | zeus-sdk | `.worktrees/wp-ee-e01-f2-peercard` · `wp/ee-e01-f2-peercard` | `3ebfce3` (base `bd02d70`) |
 | games-library | **no tocado** | `84f9d79` |
-| SCRIPT_SDK | rama `wp/ee-e01-f2-peercard` (reporte) | _(commit reporte)_ |
+| SCRIPT_SDK | rama `wp/ee-e01-f2-peercard` (reporte) | `f86824c` |
 
 Env-check al arranque (rev-parse, nunca `test -d .git`):
 
