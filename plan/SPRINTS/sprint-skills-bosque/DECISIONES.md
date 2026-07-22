@@ -34,3 +34,21 @@ y ref fantasma `remotes/origin-local/main`. main = origin/main = `cf058df`.
 **Decisión:** umbrella «bosque de skills» + 1 issue por ola (B-1/B-2/B-3),
 todas OPEN. Sync-map bajo este sprint post-apply (regla 17). Gate ceguera
 con `CEGUERA_PATTERN` por env antes de publicar cuerpos.
+
+### DC-SB-B3-replan-R15 · 2026-07-22 · **abierta** (GO PO)
+
+**Tema:** replan R15 — B-3 desbloqueado sin esperar PRUEBA-DE-DOS previa.
+
+**Decisión:**
+
+1. **S06** mapa/sync-map ritual: **GO** (doc en `docs/` o raíz hermano;
+   veto `skills/` para no pisar S03). Puede ir ∥ S03.
+2. **S07** publish `0.5.0`: **GO condicionado** a S03 ✅ + S06 ✅ + S05b ✅.
+   Último acto del carril (regla 16). El `0.5.0` debe incluir
+   `estacion-viva`. **No despachar** hasta las tres ✅.
+3. **S04** SALE del backlog bosque → **city-orq / zeus** (contrato §1).
+   Puntero: [S_SDK#22](https://github.com/alephscriptorium-eng/S_SDK/issues/22)
+   (epic embajador) · insumo WP-T1 en carril city (R15). Bosque no toca
+   obra zeus.
+4. **S05b** merge a `main` hermano = prerequisito C8 vivo del catálogo
+   (encoding). Tip merge post-push: ver BACKLOG / aviso.
