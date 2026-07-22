@@ -14,12 +14,12 @@
 | Id | Título | Repo / superficie | Deps | Ejes | Estado | Issue |
 |---|---|---|---|---|---|---|
 | [T1](WP-T1-equipo-testing.md) | equipo de testing · acta de fricción | runtime zeus/GL + acta gobierno | R15-T1-S04 PASS | I·IV + ceguera | ✅ · merge `ff1cb66` · S `dbadefa` · [acta](REPORTES/ACTA-T1-FRICCION-2026-07-22.md) | LOCAL-ONLY |
-| [S04](WP-S04-skill-embajador.md) | skill embajador (lado usuario zeus) | skill zeus + peercard/URLs | R15-T1-S04 PASS · **T1 ✅** | I·V + ceguera | 🔶 brief · **listo despacho** (T1 ✅) | LOCAL-ONLY · cite skills #14 |
+| [S04](WP-S04-skill-embajador.md) | skill embajador (lado usuario zeus) | skill zeus + peercard/URLs | R15-T1-S04 PASS · **T1 ✅** | I·V + ceguera | 🔶 **en obra** · `wp/pco-s04-skill-embajador` | LOCAL-ONLY · cite skills #14 |
 
 ### Briefs
 
 - [BRIEF-T1](BRIEFS/BRIEF-WP-T1.md) · ✅
-- [BRIEF-S04](BRIEFS/BRIEF-WP-S04.md) · listo despacho · insumo = [acta T1](REPORTES/ACTA-T1-FRICCION-2026-07-22.md)
+- [BRIEF-S04](BRIEFS/BRIEF-WP-S04.md) · despachado · insumo = [acta T1](REPORTES/ACTA-T1-FRICCION-2026-07-22.md)
 
 ### Aviso gate
 

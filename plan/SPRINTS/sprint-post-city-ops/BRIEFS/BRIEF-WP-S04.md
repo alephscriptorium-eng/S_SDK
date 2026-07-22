@@ -1,13 +1,12 @@
-# BRIEF · WP-S04 · skill embajador · 🔶 parked (sin despacho)
+# BRIEF · WP-S04 · skill embajador · 🔶 despachado (en obra)
 
-> Brief definitivo PCO-1. **NO despachar** hasta gate **R15-T1-S04** PASS
-> **y** T1 ✅ (acta de fricción = insumo). Re-asignado del bosque (v1.1).
+> Brief definitivo PCO-1. **Despachado** 2026-07-22 tras T1 ✅ + re-check
+> higiene (sin gate nuevo). Re-asignado del bosque (v1.1).
 
 ```text
 (rol) .claude/skills/swarm-orquestacion/reference/roles/WORKER.md
-  (pegar también este brief en chat worker fresco — un WP = un chat)
-  — NO DESPACHAR hasta R15-T1-S04 PASS + T1 ✅
-  — Parked: esperá acta T1 en PLAN_DIR/REPORTES/ACTA-T1-FRICCION-*.md
+  (worker = city-orq en esta tarea — un WP = una rama)
+  — T1 ✅ + acta ACTA-T1-FRICCION-2026-07-22.md = insumo
 
 WP: WP-S04 · skill embajador (lado usuario zeus)
 Rama: wp/pco-s04-skill-embajador

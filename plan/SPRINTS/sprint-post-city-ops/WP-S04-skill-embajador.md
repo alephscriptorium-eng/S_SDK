@@ -2,7 +2,7 @@
 
 | dato | valor |
 |---|---|
-| estado | 🔶 brief emitido · **parked** hasta T1 ✅ · **sin despacho** (R15-T1-S04) |
+| estado | 🔶 **en obra** · T1 ✅ · rama `wp/pco-s04-skill-embajador` |
 | track | SKILL (usuario · zeus) |
 | depende de | R15-T1-S04 PASS · **T1 ✅** (acta de fricción) · EE-1/C05 peercard |
 | fuente | re-asignado bosque B-3 → city (contrato v1.1) |
