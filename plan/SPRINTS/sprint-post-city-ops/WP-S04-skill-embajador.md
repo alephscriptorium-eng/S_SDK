@@ -2,7 +2,7 @@
 
 | dato | valor |
 |---|---|
-| estado | 🔶 **listo revisión** · zeus `3c9387b` · [reporte](REPORTES/WP-S04-skill-embajador.md) |
+| estado | ✅ · tip zeus `cbde42e` (obra `3c9387b` rebase+FF) · [reporte](REPORTES/WP-S04-skill-embajador.md) · [acta](REPORTES/ACTA-S04-aceptacion-2026-07-22.md) |
 | track | SKILL (usuario · zeus) |
 | depende de | R15-T1-S04 PASS · **T1 ✅** (acta de fricción) · EE-1/C05 peercard |
 | fuente | re-asignado bosque B-3 → city (contrato v1.1) |

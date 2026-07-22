@@ -5,21 +5,21 @@
 > este fichero. Estados: ⬜ · 🔶 · ✅.
 > Padre: GO PO R15 · +2 WPs · 2026-07-22 · [DECISIONES](DECISIONES.md).
 > Gate: [AVISO-R15-T1-S04](REPORTES/AVISO-R15-T1-S04.md) — PASS consumido
-> (re-check higiene al despachar S04; **sin gate nuevo**). T1 ✅ · S04 en obra.
+> (re-check higiene al despachar S04; **sin gate nuevo**). T1 ✅ · S04 ✅.
 
-## Ola PCO-1 (GO PO · 2026-07-22 — T1 ✅ · S04 despachable)
+## Ola PCO-1 (GO PO · 2026-07-22 — T1 ✅ · S04 ✅)
 
 > T1 ∥ webs (paths disjuntos). S04 tras acta T1. Cierre futuro = GO-5/GO-6.
 
 | Id | Título | Repo / superficie | Deps | Ejes | Estado | Issue |
 |---|---|---|---|---|---|---|
 | [T1](WP-T1-equipo-testing.md) | equipo de testing · acta de fricción | runtime zeus/GL + acta gobierno | R15-T1-S04 PASS | I·IV + ceguera | ✅ · merge `ff1cb66` · S `dbadefa` · [acta](REPORTES/ACTA-T1-FRICCION-2026-07-22.md) | LOCAL-ONLY |
-| [S04](WP-S04-skill-embajador.md) | skill embajador (lado usuario zeus) | skill zeus + peercard/URLs | R15-T1-S04 PASS · **T1 ✅** | I·V + ceguera | 🔶 **listo revisión** · zeus `3c9387b` · [reporte](REPORTES/WP-S04-skill-embajador.md) | LOCAL-ONLY · cite skills #14 |
+| [S04](WP-S04-skill-embajador.md) | skill embajador (lado usuario zeus) | skill zeus + peercard/URLs | R15-T1-S04 PASS · **T1 ✅** | I·V + ceguera | ✅ · tip zeus `cbde42e` (obra `3c9387b` rebase+FF) · [reporte](REPORTES/WP-S04-skill-embajador.md) · [acta](REPORTES/ACTA-S04-aceptacion-2026-07-22.md) | LOCAL-ONLY · cite skills #14 |
 
 ### Briefs
 
 - [BRIEF-T1](BRIEFS/BRIEF-WP-T1.md) · ✅
-- [BRIEF-S04](BRIEFS/BRIEF-WP-S04.md) · despachado · insumo = [acta T1](REPORTES/ACTA-T1-FRICCION-2026-07-22.md)
+- [BRIEF-S04](BRIEFS/BRIEF-WP-S04.md) · ✅ · insumo = [acta T1](REPORTES/ACTA-T1-FRICCION-2026-07-22.md)
 
 ### Aviso gate
 
@@ -34,7 +34,7 @@
 
 | id | origen | destino | estado |
 |---|---|---|---|
-| **S04** | bosque B-3 · parked/re-asignable | **city** este sprint | **re-asignado** · nota encolada · sin despacho |
+| **S04** | bosque B-3 · parked/re-asignable | **city** este sprint | **✅ aceptado** · tip zeus `cbde42e` |
 
 ## Proyección
 

@@ -110,4 +110,12 @@ Ninguno para **listo revisión**. Merge zeus a criterio del orq.
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** 2026-07-22.
+
+- Re-verif ceguera regla 1: skill tree + `git log -p` = 0 hits.
+- CA brief I·V OK (peercard + mapa URLs · mediación C8/private).
+- Zeus: rebase obra sobre `2917634` (docs UTF-8 ya en main ≡ `ccb4113`) →
+  tip `cbde42e` · **FF** → `origin/main` · rama podada · WW wt no tocada.
+- Pin submodule + acta: [ACTA-S04-aceptacion](ACTA-S04-aceptacion-2026-07-22.md).
+- Follow-up: publish tarball skill vía Release/changeset (obra sin `.changeset`).
+- Z#4/#5/#6 OPEN · E_SDK veto · WW no tocado.

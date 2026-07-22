@@ -1,7 +1,8 @@
-# BRIEF · WP-S04 · skill embajador · 🔶 despachado (en obra)
+# BRIEF · WP-S04 · skill embajador · ✅ aceptado
 
 > Brief definitivo PCO-1. **Despachado** 2026-07-22 tras T1 ✅ + re-check
 > higiene (sin gate nuevo). Re-asignado del bosque (v1.1).
+> **Aceptado** tip zeus `cbde42e` · [acta](../REPORTES/ACTA-S04-aceptacion-2026-07-22.md).
 
 ```text
 (rol) .claude/skills/swarm-orquestacion/reference/roles/WORKER.md
