@@ -52,3 +52,13 @@ con `CEGUERA_PATTERN` por env antes de publicar cuerpos.
    obra zeus.
 4. **S05b** merge a `main` hermano = prerequisito C8 vivo del catálogo
    (encoding). Tip merge post-push: ver BACKLOG / aviso.
+
+### DC-SB-cierre-0.5.1 · 2026-07-22 · **cerrada** (GO PO+VIGÍA)
+
+**Tema:** patch único `0.5.1` (R-1 + R-2a) y cierre de carril.
+
+**Decisión:** (A) publish ahora. Mover Note Unreleased → `[0.5.1]`;
+docs R-2a (credenciales `NPM_USERNAME`/`NPM_PASSWORD` + pulso
+`gh secret list -R`, caso GL 2026-07-22); un solo Release/publish;
+ceguera 0; **CARRIL BOSQUE CERRADO**. Sin reopen S03/S07. S04 sigue en
+city. Acta: [ACTA-FINAL-0.5.1](REPORTES/ACTA-FINAL-0.5.1.md).

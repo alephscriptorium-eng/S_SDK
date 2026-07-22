@@ -1,12 +1,11 @@
 # BACKLOG — sprint-skills-bosque
 
-> Solo el orquestador bosque-orq escribe aquí (regla de oro 2). Workers: un
-> WP = un chat = rama `wp/sb-<id>-<slug>` (+ worktree si paralelo); NO
-> editar este fichero. Estados: ⬜ · 🔶 · ✅.
+> **CARRIL BOSQUE CERRADO** · 2026-07-22 · patch `0.5.1` publicado.
+> Solo el orquestador bosque-orq escribe aquí (regla de oro 2).
+> Estados: ⬜ · 🔶 · ✅.
 > Contrato: DE-I22 · convivencia multi-orq v1.1.
 > Decisiones: [DECISIONES.md](DECISIONES.md).
-> B-1 ✅ · B-2 S03 ✅ · B-3 S06 ✅ · S07 ✅ broche `0.5.0` ·
-> **R-1** residual ✅ obra (`a50787d`) · publish 0.5.1 = decisión PO ·
+> Acta: [ACTA-FINAL-0.5.1](REPORTES/ACTA-FINAL-0.5.1.md).
 > S04 traspasado city.
 
 ## Ola B-1 · método (✅ cerrado)
@@ -39,11 +38,13 @@ Reportes:
 | S06 | mapa de proyección / sync-map ritual (docs) | B-1 ✅ · ∥ S03 OK (dirs disjuntos) | III + ceguera | ✅ merge `2743176` · tip `834f706` · [reporte](REPORTES/WP-S06-mapa.md) · brief [BRIEF-WP-S06](BRIEFS/BRIEF-WP-S06-mapa.md) | [#14](https://github.com/alephscriptorium-eng/S_SDK-skills-library/issues/14) B-3 |
 | S07 | broche release `0.5.0` (bump + Release + portal + catálogo) | **S03 ✅ + S06 ✅ + S05b ✅** | IV + ceguera | ✅ tip `4c2e322` · tag `v0.5.0` · npm `0.5.0` · [reporte](REPORTES/WP-S07-broche-0.5.0.md) · Publish [29927743629](https://github.com/alephscriptorium-eng/S_SDK-skills-library/actions/runs/29927743629) · Docs [29927725261](https://github.com/alephscriptorium-eng/S_SDK-skills-library/actions/runs/29927725261) | [#14](https://github.com/alephscriptorium-eng/S_SDK-skills-library/issues/14) B-3 |
 
-## Residual micro · R-1 (✅ obra · publish opcional)
+## Residual · R-1 + R-2a + publish 0.5.1 (✅ cerrado)
 
 | Id | Título | Deps | Ejes | Estado | Issue |
 |---|---|---|---|---|---|
-| R-1 | lección «merge solo post-aceptación» (C05) en método | R17-bosque PASS · S03/S07 no reopen | III (docs) | ✅ tip hermano `a50787d` · rama `wp/sb-r1-merge-post-aceptacion` · [reporte](REPORTES/WP-R1-merge-post-aceptacion.md) · **carril CERRADO** condicionado a decisión PO `0.5.1` vs ola | residual post-broche |
+| R-1 | lección «merge solo post-aceptación» (C05) en método | R17-bosque PASS · S03/S07 no reopen | III (docs) | ✅ tip hermano `a50787d` · cosido en `[0.5.1]` · [reporte](REPORTES/WP-R1-merge-post-aceptacion.md) | residual post-broche |
+| R-2a | credenciales publish (site-web) + pulso `gh secret list` (vigilancia) | GO PO+VIGÍA | III (docs) | ✅ tip hermano `b51da57` · paths site-web + vigilancia · ceguera 0 | patch 0.5.1 |
+| P051 | publish patch `0.5.1` (Release + npm + portal) | R-1 · R-2a | IV + ceguera · regla 16 | ✅ tip `b51da57` · tag `v0.5.1` · npm `0.5.1` · [acta](REPORTES/ACTA-FINAL-0.5.1.md) · Publish [29934817950](https://github.com/alephscriptorium-eng/S_SDK-skills-library/actions/runs/29934817950) · Docs [29934811106](https://github.com/alephscriptorium-eng/S_SDK-skills-library/actions/runs/29934811106) | GO PO+VIGÍA |
 
 ### Traspaso S04 → city (fuera del backlog bosque)
 
@@ -55,18 +56,19 @@ Reportes:
 
 | Ola | Contenido | Estado gate |
 |---|---|---|
-| B-1 | S01 · S02 · S05 · S05b | ✅ cerrado (+ encoding mergeado) |
+| B-1 | S01 · S02 · S05 · S05b | ✅ cerrado |
 | B-2 | S03 | ✅ merge `9b89495` |
 | B-3 | S06 · S07 | ✅ cerrado (broche `4c2e322` / `v0.5.0`) |
-| R-1 | merge solo post-aceptación (C05) | ✅ obra `a50787d` · publish `0.5.1` = PO |
+| residual | R-1 · R-2a · P051 | ✅ **CARRIL CERRADO** (`b51da57` / `v0.5.1`) |
 
 ## Parked / fuera
 
 - zeus / games-library / pins / `DECISIONES` raíz → city-orq
-- **S04** → city-orq / zeus (este replan R15) — no reabrir aquí
-- peercard / GAME_MCP e2e live (C8 kit registry) — residual post-broche si vigía lo pide
+- **S04** → city-orq / zeus — no reabrir aquí
+- peercard / GAME_MCP e2e live (C8 kit registry) — residual post-carril si vigía lo pide
 - Issue hermano [#11](https://github.com/alephscriptorium-eng/S_SDK-skills-library/issues/11): dep C05 → [S_SDK#31](https://github.com/alephscriptorium-eng/S_SDK/issues/31) (hecho)
 - Aviso gate: [AVISO-R17-bosque](REPORTES/AVISO-R17-bosque.md)
+- Acta final: [ACTA-FINAL-0.5.1](REPORTES/ACTA-FINAL-0.5.1.md)
 
 ## Reglas (además del skill)
 
