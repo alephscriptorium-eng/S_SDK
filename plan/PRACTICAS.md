@@ -104,3 +104,10 @@ el texto: se referencia (la réplica es el defecto que este plan combate).
     de issue **antes** de que esos issues existan en el tracker. Orden:
     apply (crear/actualizar issues) → mapa refleja IDs reales → commit
     mapa + acta. Mapa especulativo = devolución.
+
+12. **Grep pre-merge: ids de tracking en obra** *(DE-I20 · 2026-07-22).*
+    Antes de merge a main de entregables que aterricen en un mundo vecino,
+    el orquestador grepea `WP-[A-Z]{1,2}\d` (no solo `WP-Z\d+`) sobre
+    `packages/` + `e2e/` + `kits/instances/` → **0 hits**. Citas en
+    `plan/` ancladas C9 = toleradas (excepción conocida del vigía; no
+    re-elevar). ENTREGA no mete ids nuevos en prosa.

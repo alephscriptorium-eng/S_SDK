@@ -271,3 +271,20 @@ bloquea WP-D31 de aquel mundo, no bloquea este plan.)*
   script-sdk). Base mock «lore-te-ipsum» conecta con
   `startpack-ciudad-v0.1.0` ya liberado (H2.4). No encola WP; no emite
   🔶; no reabre city.
+
+- **DE-I20 · Ids de tracking en frontera de mundos (DC-frontera-citas)**
+  *(custodio · GO · 2026-07-22).* Ids de tracking (`WP-…`, `U…`, etc.) en
+  `plan/` de mundos vecinos:
+  - **TOLERADOS** cuando anclan a artefacto público **existente** de otro
+    repo (**C9** — no inventar).
+  - **PROHIBIDOS** en obra (`packages/` + `e2e/` + `kits/instances/`),
+    **sin excepción**.
+  - El canal **ENTREGA** no introduce ids nuevos en prosa.
+  - **Caso fundante:** `WP-I60` citado por zeus **U145/U146** (tolerado en
+    `plan/` zeus; ancla a reporte/brief público de holón 07/emmanuel).
+  - El vigía registra esta clase como **excepción conocida** y **no la
+    re-eleva**.
+  Consecuencia operativa (método): el grep pre-merge del orquestador
+  amplía el patrón a `WP-[A-Z]{1,2}\d` sobre obra — ver PRACTICAS δ12.
+  Espejo sprint: `sprint-embajador-entrada/DECISIONES.md`
+  DC-EE-frontera-citas.

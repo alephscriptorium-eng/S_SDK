@@ -75,3 +75,15 @@ Prep (sin apply):
 | WP-E01-f2 | LOCAL → #22 | no alta |
 | WP-A5 | LOCAL → #22 | no alta |
 | E01-f3/f4 | #22 parked | sin 🔶 |
+
+### DC-EE-frontera-citas · 2026-07-22 · **cerrada** (GO custodio)
+
+**Tema:** ids de tracking en frontera (plan vs obra) — espejo operativo
+de [DE-I20](../../DECISIONES.md).
+
+**Decisión:** en `plan/` de mundos vecinos, ids ajenos **tolerados** si
+anclan C9 a artefacto público existente; en obra
+(`packages/`+`e2e/`+`kits/instances/`) **prohibidos** sin excepción.
+ENTREGA no introduce ids nuevos en prosa. Caso fundante: `WP-I60` citado
+por zeus U145/U146 (tolerado). Vigía: excepción conocida, no re-elevar.
+Gate orquestador: PRACTICAS δ12 (`WP-[A-Z]{1,2}\d` pre-merge).
