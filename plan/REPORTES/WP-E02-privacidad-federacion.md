@@ -180,4 +180,6 @@ Ninguno. Worktree remove: orquestador (Windows).
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅ 2026-07-22** · tip zeus `25a57a1` (FF) → rebase f1 → tip `aab6a68`.
+CA: protocol 27/27 · signaling 22/22 · ceguera r.14 = 0 · ∩ f1 = ∅.
+Z_SDK #4/#5/#6 **no cerrados**. Acta: ACTA-EE1-aceptacion-E02-f1-2026-07-22.md.

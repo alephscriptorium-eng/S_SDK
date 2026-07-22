@@ -5,7 +5,7 @@
 | agente | worker WP-E01-f1 (ola EE-1) |
 | fecha | 2026-07-22 |
 | rama | `wp/ee-e01-f1-kit` (zeus-sdk) · reporte en SCRIPT_SDK `wp/ee-e01-f1-kit` |
-| commits | zeus `de559780c207d98b78ffe17e9b22814fc6e8d128` · reporte S_SDK `a39d8f6542111390c16975b90bf736d51e2b9597` |
+| commits | zeus tip post-merge `aab6a68c7a1368d95491855564208aacaea056c2` (obra pre-rebase `de55978`) · reporte S_SDK `a39d8f6542111390c16975b90bf736d51e2b9597` |
 | eje(s) CA | **I** (smoke emitir→consumir) · **II** (CredencialEmbajador v1 canónico) · ceguera regla 14 |
 | estado propuesto | listo para revisión |
 | issue | LOCAL bajo umbrella S_SDK **#22** (sin alta) |
@@ -36,7 +36,7 @@ package.json del tip; faltaba en lock).
 
 | repo | worktree / rama | SHA |
 | ---- | --------------- | --- |
-| zeus-sdk | `.worktrees/wp-ee-e01-f1-kit` · `wp/ee-e01-f1-kit` | obra `de55978` (base `1086392`) |
+| zeus-sdk | `.worktrees/wp-ee-e01-f1-kit` · `wp/ee-e01-f1-kit` | tip `aab6a68` (obra `de55978` · base `1086392` · rebase sobre `25a57a1`) |
 | games-library | **no tocado** | `84f9d79` |
 | SCRIPT_SDK | rama `wp/ee-e01-f1-kit` (reporte) | `a39d8f6` |
 
@@ -149,4 +149,6 @@ const out = consumirCredencial(c);
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅ 2026-07-22** · obra rebaseada `aab6a68` (base post-E02 `25a57a1`).
+CA: embajador-kit 11/11 · ceguera r.14 = 0 · lock aditivo `@zeus/embajador-kit`.
+LOCAL bajo #22 · sin apply. Acta: ACTA-EE1-aceptacion-E02-f1-2026-07-22.md.

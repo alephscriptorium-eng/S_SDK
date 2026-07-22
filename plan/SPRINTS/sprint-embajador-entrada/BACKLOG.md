@@ -1,4 +1,4 @@
-# BACKLOG — sprint-embajador-entrada (GO-E1 · 🔶)
+# BACKLOG — sprint-embajador-entrada (GO-E1 · E02+f1 ✅ · f2∥A5 🔶)
 
 > Solo el orquestador escribe aquí. Workers: un WP = un chat = rama
 > `wp/ee-<id>-<slug>` (+ worktree si paralelo); NO editar este fichero.
@@ -9,34 +9,34 @@
 
 ## Ola EE-1 (GO-E1 · 2026-07-22 — corte entrada)
 
-> 🔶 emitidos. **NO despachar** hasta vigía **R7** PASS.
+> E02+f1 **✅** merged tip zeus `aab6a68`. **Aviso vigía R8** — tip listo.
+> **NO despachar** ola 2 (f2∥A5) hasta R8 PASS.
 > Norte: peercard + `startpack-ciudad-v0.1.0` default.
 
 ### Secuencia
 
-1. **E02** primero (identidad cripto = dep dura peercard).
-2. **E01-f1** ∥ E02 si paths no se pisan (`embajador-kit/**` vs signaling/crypto).
-3. **E01-f2** **tras** E02 (modelo/TTL sobre firma).
+1. **E02** primero (identidad cripto = dep dura peercard). ✅
+2. **E01-f1** ∥ E02 si paths no se pisan (`embajador-kit/**` vs signaling/crypto). ✅
+3. **E01-f2** **tras** E02 (modelo/TTL sobre firma). 🔶 post-R8
 4. **A5** tras E02+f1 en tip (**firma+kit reales; no stubs**); f2
-   preferible merged (A5 solo consume).
+   preferible merged (A5 solo consume). 🔶 post-R8
 
-### WPs 🔶
+### WPs
 
-- 🔶 **WP-E02 · Privacidad federación** — ssbId handshake + firma peercard ·
-  obra tipica = **Z_SDK #4** (citar; **no cerrar**). Umbrella casa **#23**.
-  Ficha: [WP-E02](WP-E02-privacidad-federacion.md).
-  Brief: [BRIEF-E02](../../REPORTES/BRIEF-WP-E02-privacidad-federacion.md).
-  Rama: `wp/ee-e02-privacidad-federacion`.
+- ✅ **WP-E02 · Privacidad federación** — ssbId handshake + firma peercard ·
+  tip zeus `25a57a1` → main; **Z_SDK #4** citado OPEN (**no cerrado**).
+  Umbrella **#23**. Acta:
+  [ACTA-EE1](../../REPORTES/ACTA-EE1-aceptacion-E02-f1-2026-07-22.md).
+  Reporte: [WP-E02](../../REPORTES/WP-E02-privacidad-federacion.md).
 
-- 🔶 **WP-E01-f1 · Kit embajador** — API/contrato mínimo emitir+consumir.
-  LOCAL bajo umbrella **#22**. Ficha: [WP-E01-f1](WP-E01-f1-kit.md).
-  Brief: [BRIEF-E01-f1](../../REPORTES/BRIEF-WP-E01-f1-kit.md).
-  Rama: `wp/ee-e01-f1-kit`.
+- ✅ **WP-E01-f1 · Kit embajador** — tip zeus `aab6a68` (rebase post-E02).
+  LOCAL bajo **#22**. Reporte:
+  [WP-E01-f1](../../REPORTES/WP-E01-f1-kit.md).
 
 - 🔶 **WP-E01-f2 · Peercard** — tarjeta viajera + TTL/ciclo · **post-E02**.
   LOCAL bajo **#22**. Ficha: [WP-E01-f2](WP-E01-f2-peercard.md).
   Brief: [BRIEF-E01-f2](../../REPORTES/BRIEF-WP-E01-f2-peercard.md).
-  Rama: `wp/ee-e01-f2-peercard`.
+  Rama: `wp/ee-e01-f2-peercard`. **NO despachar** hasta R8.
 
 - 🔶 **WP-A5 · Puerta externos (SEMILLA-ARG §A5)** — árbol dominante
   **Z17-zeus** (+ satélites Z04-GL · webs/S_SDK); paths pineados en brief;
@@ -44,7 +44,7 @@
   E02+f1 reales. LOCAL → #22.
   Ficha: [WP-A5](WP-A5-puerta.md).
   Brief: [BRIEF-A5](../../REPORTES/BRIEF-WP-A5-puerta.md).
-  Rama: `wp/ee-a5-puerta`.
+  Rama: `wp/ee-a5-puerta`. **NO despachar** hasta R8 (∥ f2).
 
 ## Paraguas (no en corte · sin 🔶)
 
@@ -55,8 +55,8 @@
 
 | Id | Título | Deps | Ejes | Estado | Issue |
 |---|---|---|---|---|---|
-| [E02](WP-E02-privacidad-federacion.md) | Privacidad federación | Z04 ✅ · D-40 · pav GO-4 | I·IV + ceguera | 🔶 | #23 · Z_SDK #4 |
-| [E01-f1](WP-E01-f1-kit.md) | Kit embajador | pav GO-4 · ∥ E02 | I·II + ceguera | 🔶 | LOCAL→#22 |
+| [E02](WP-E02-privacidad-federacion.md) | Privacidad federación | Z04 ✅ · D-40 · pav GO-4 | I·IV + ceguera | ✅ | #23 · Z_SDK #4 |
+| [E01-f1](WP-E01-f1-kit.md) | Kit embajador | pav GO-4 · ∥ E02 | I·II + ceguera | ✅ | LOCAL→#22 |
 | [E01-f2](WP-E01-f2-peercard.md) | Peercard | **E02** · f1 | I·II + ceguera | 🔶 | LOCAL→#22 |
 | [A5](WP-A5-puerta.md) | Puerta externos | E02·f1 reales · f2 preferible | I·IV + ceguera | 🔶 | LOCAL→#22 |
 

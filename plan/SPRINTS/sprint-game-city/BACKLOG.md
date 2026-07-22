@@ -522,7 +522,7 @@ Retroalimentación a aleph (evidencia, no WP nuevo):
 | # | Ítem | Refs | Estado cola |
 | - | ---- | ---- | ----------- |
 | 1 | **VIDA-1** ∥ prep-entrada | [sprint-vida-1](../sprint-vida-1/) · SEMILLA §3/§4 · PREP→GO-E1 embajador | ✅ M01/M02 (V1-1) |
-| 2 | **EMBAJADOR-ENTRADA** | E02 + E01 f1–2 + §A5 · [sprint-embajador-entrada](../sprint-embajador-entrada/) | 🔶 GO-E1 · R7 pre-despacho |
+| 2 | **EMBAJADOR-ENTRADA** | E02 + E01 f1–2 + §A5 · [sprint-embajador-entrada](../sprint-embajador-entrada/) | E02+f1 ✅ · f2∥A5 🔶 · aviso R8 |
 | 3 | **CIUDAD-REAL** (§2 + ACL + §A4) | SEMILLA §2 · Z_SDK #5 · SEMILLA-ARG §A4 | ⬜ encolado — sin brief · sin 🔶 |
 | 4 | SEMILLA §6 meta-juego | [SEMILLA-GAMIFICACION](SEMILLA-GAMIFICACION.md) §6 | ⬜ encolado — sin brief · sin 🔶 |
 | 5 | trama-agua | [TRAMA-AGUA](TRAMA-AGUA.md) | ⬜ encolado — sin brief · sin 🔶 |
