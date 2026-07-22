@@ -188,4 +188,14 @@ de esta acta ✅. No despachar S04 desde este chat.
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** · city-orq · 2026-07-22
+
+| chequeo | resultado |
+| ------- | --------- |
+| Diff solo acta `plan/.../ACTA-T1-FRICCION-2026-07-22.md` | ✅ (rama S `wp/pco-t1-testing` @ `dbadefa`) |
+| Cero commits obra zeus/GL | ✅ |
+| F1–F8 + catálogo public/private + mesh gaps | ✅ legibles para S04 |
+| Z_SDK #4/#5/#6 OPEN · E_SDK veto | ✅ citados / no tocados |
+| Merge main | ✅ tip merge `ff1cb66` (padre S `dbadefa`) |
+
+S04 queda **liberado** del parked (despacho en commit gobierno aparte · V2).

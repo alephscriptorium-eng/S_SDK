@@ -4,22 +4,22 @@
 > un chat = rama `wp/pco-<id>-<slug>` (+ worktree si paralelo); NO editar
 > este fichero. Estados: ⬜ · 🔶 · ✅.
 > Padre: GO PO R15 · +2 WPs · 2026-07-22 · [DECISIONES](DECISIONES.md).
-> Gate: [AVISO-R15-T1-S04](REPORTES/AVISO-R15-T1-S04.md) — **sin despacho**
-> hasta PASS. S04 parked hasta T1 ✅.
+> Gate: [AVISO-R15-T1-S04](REPORTES/AVISO-R15-T1-S04.md) — PASS consumido
+> (re-check higiene al despachar S04; **sin gate nuevo**). T1 ✅ · S04 en obra.
 
-## Ola PCO-1 (GO PO · montaje 2026-07-22 — 🔶 sin despacho)
+## Ola PCO-1 (GO PO · 2026-07-22 — T1 ✅ · S04 despachable)
 
 > T1 ∥ webs (paths disjuntos). S04 tras acta T1. Cierre futuro = GO-5/GO-6.
 
 | Id | Título | Repo / superficie | Deps | Ejes | Estado | Issue |
 |---|---|---|---|---|---|---|
-| [T1](WP-T1-equipo-testing.md) | equipo de testing · acta de fricción | runtime zeus/GL + acta gobierno | R15-T1-S04 PASS | I·IV + ceguera | 🔶 brief · **sin despacho** | LOCAL-ONLY |
-| [S04](WP-S04-skill-embajador.md) | skill embajador (lado usuario zeus) | skill zeus + peercard/URLs | R15-T1-S04 PASS · **T1 ✅** | I·V + ceguera | 🔶 brief · **parked** hasta T1 ✅ | LOCAL-ONLY · cite skills #14 |
+| [T1](WP-T1-equipo-testing.md) | equipo de testing · acta de fricción | runtime zeus/GL + acta gobierno | R15-T1-S04 PASS | I·IV + ceguera | ✅ · merge `ff1cb66` · S `dbadefa` · [acta](REPORTES/ACTA-T1-FRICCION-2026-07-22.md) | LOCAL-ONLY |
+| [S04](WP-S04-skill-embajador.md) | skill embajador (lado usuario zeus) | skill zeus + peercard/URLs | R15-T1-S04 PASS · **T1 ✅** | I·V + ceguera | 🔶 brief · **listo despacho** (T1 ✅) | LOCAL-ONLY · cite skills #14 |
 
 ### Briefs
 
-- [BRIEF-T1](BRIEFS/BRIEF-WP-T1.md)
-- [BRIEF-S04](BRIEFS/BRIEF-WP-S04.md) · parked · insumo = acta T1
+- [BRIEF-T1](BRIEFS/BRIEF-WP-T1.md) · ✅
+- [BRIEF-S04](BRIEFS/BRIEF-WP-S04.md) · listo despacho · insumo = [acta T1](REPORTES/ACTA-T1-FRICCION-2026-07-22.md)
 
 ### Aviso gate
 
