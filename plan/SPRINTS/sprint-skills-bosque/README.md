@@ -1,7 +1,7 @@
-# sprint-skills-bosque — **MONTAJE** (gate R13-bosque · sin despacho)
+# sprint-skills-bosque — **B-1 CERRADO** (aviso R14-bosque)
 
-> **Estado: MONTAJE.** Esqueleto + briefs B-1 + higiene hermano.
-> **SIN workers** hasta gate vigía **R13-bosque** PASS.
+> **Estado: B-1 ✅** en hermano tip `af1fd5a`. Aviso
+> [AVISO-R14-bosque](REPORTES/AVISO-R14-bosque.md). **NO** despachar B-2/B-3.
 > Orquestador: bosque-orq · Contrato convivencia multi-orq v1.1 (DE-I22).
 > Obra: paquete `@alephscript/skills-scriptorium` (checkout hermano).
 
@@ -19,7 +19,7 @@
 
 | Ola | WPs | Nota |
 |---|---|---|
-| **B-1** método | S01 swarm vNext · S02 vigilancia vNext · S05 site-web | briefs 🔶 · **sin despacho** hasta R13 |
+| **B-1** método | S01 swarm vNext · S02 vigilancia vNext · S05 site-web | ✅ cerrado · R14 pendiente |
 | **B-2** estacion-viva | S03 | dep C05 ciudad-real · parked |
 | **B-3** embajador+mapa+broche | S04 · S06 · S07 | S04 lado embajador re-asignable · parked |
 
