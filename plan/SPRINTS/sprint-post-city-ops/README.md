@@ -1,23 +1,20 @@
-# sprint-post-city-ops — **PREP R15-T1/S04** (sin despacho)
+# sprint-post-city-ops — PCO-1 ✅ · **PCO-2 F5 montado** (sin despacho)
 
-> **Estado: montado · 🔶 emitidos · AVISO-R15-T1-S04.** Tick PO 2026-07-22
-> (replan R15 · +2 WPs). **NO despachar** T1 ni S04 hasta gate vigía
-> propio **R15-T1-S04** PASS (protocolo R7/R10). S04 además **parked**
-> hasta T1 ✅ (acta de fricción = insumo).
+> **Estado:** PCO-1 (T1·S04) **cerrada**. PCO-2 **WP-F5** montado · 🔶
+> emitidos · [AVISO-R17-city](REPORTES/AVISO-R17-city.md). Tick PO
+> 2026-07-22. **NO despachar** F5a/F5b/F5c hasta gate vigía **R17-city**
+> PASS. F5b además **parked** hasta F5a ✅. F5c **no bloquea** a/b.
 > Orquestador: city-orq · Contrato convivencia multi-orq v1.1 (DE-I22).
 
-## Partición V2 (elegida · documentada)
+## Partición V2
 
 | carril city | sprint | territorio obra | gate |
 |---|---|---|---|
-| **webs** | [`sprint-webs-post-city/`](../sprint-webs-post-city/) | zeus/GL/S **docs** (sites) | **R15-city** (ya AVISO) |
-| **ops** (este) | `sprint-post-city-ops/` | runtime zeus/GL + acta gobierno + skill usuario zeus | **R15-T1-S04** |
+| **webs** | [`sprint-webs-post-city/`](../sprint-webs-post-city/) | zeus/GL/S **docs** (sites) | R15-city (consumido) |
+| **ops** (este) | `sprint-post-city-ops/` | runtime/acta/skill + **F5** publish/e2e/oasis-check | **R17-city** (F5) |
 
-**Por qué no vivir bajo webs-post-city:** T1 no es «web» (runtime/acta,
-paths disjuntos de `docs/**`). **Por qué no PREP en ciudad-real:** CR-1/C05
-ya ✅ / listo-R14; abrir micro-sprint evita reabrir ola cerrada y mantiene
-V2 (un sprint = un foco). Paralelo pleno con WW-* tras gates respectivos
-(∩ paths tentativos = ∅).
+Territorio F5 vive **aquí** (no micro-sprint `sprint-f5-federacion`) —
+un commit V2 por tick gobierno F5.
 
 ## Parámetros del mundo
 
@@ -25,35 +22,36 @@ V2 (un sprint = un foco). Paralelo pleno con WW-* tras gates respectivos
 |---|---|
 | `MUNDO_RAIZ` | `C:\Users\aleph\SCRIPT_SDK` |
 | `PLAN_DIR` | `plan\SPRINTS\sprint-post-city-ops\` |
-| `ALCANCE_DIFF` | T1: runtime/acta bajo este sprint (+ scratch efímero; **sin commits de obra** salvo acta) · S04: skill usuario zeus (peercard + mapa URLs) + reporte — **veto** `docs/**` webs · `sprint-skills-bosque/**` · hermano skills-library · E_SDK · cerrar Z_SDK #4/#5/#6 |
-| `WORKTREE_BASE` | `.worktrees\` del repo dominante (S04); T1 preferí scratch sin rama de obra |
-| `RAMA_WP` | `wp/pco-<id>-<slug>` (pco = post-city-ops) |
+| `ALCANCE_DIFF` | F5a: zeus publish lote mesh (+ embajador skill/ opcional) · F5b: scratch + acta · F5c: solo reporte — **veto** `docs/**` webs · bosque · E_SDK · cerrar Z#4/#5/#6 · config custodio |
+| `WORKTREE_BASE` | `.worktrees\` del repo dominante (F5a); F5b/F5c preferí scratch |
+| `RAMA_WP` | `wp/pco-<id>-<slug>` |
 
-## Ola PCO-1 (documentada · sin despacho)
+## Olas
 
-| WP | Tema | Deps gate |
+| ola | WPs | estado |
 |---|---|---|
-| **T1** | equipo de testing · acta de fricción | R15-T1-S04 PASS |
-| **S04** | skill embajador (re-asignado del bosque) | R15-T1-S04 PASS · **T1 ✅** (acta) |
+| PCO-1 | T1 · S04 | ✅ |
+| PCO-2 | **F5** (a∥c · b parked) | 🔶 · sin despacho |
 
 ## Guardarraíles
 
-1. Partición V2: ops ≠ webs; no tocar `sprint-webs-post-city/BRIEFS` ni obra docs.
-2. T1 = C8 puro (kits **DEL REGISTRY** · `npm.scriptorium.escrivivir.co`) — no árbol `file:`.
-3. T1 **sin commits de obra** salvo el acta de fricción en gobierno.
-4. Bosque BACKLOG: **no editar** (regla oro 2) — nota encolada en
-   [NOTA-S04-REASIGNADO](REPORTES/NOTA-S04-REASIGNADO-bosque.md).
-5. Vetos: E_SDK/DE-I8 · Z_SDK #4/#5/#6 citar-no-cerrar · claim→acta/SHA.
-6. REPORTES/BRIEFS viven **bajo este sprint**.
+1. Partición V2: ops ≠ webs; no tocar obra docs WW-*.
+2. F5a = C8 publish real (changesets + `npm view`) — ciudad = clase pública semilla (DC-CR-kits-foss).
+3. F5b = C8 puro e2e dos ciudades — parked hasta F5a ✅.
+4. F5c = protocolos PUB · config custodio **fuera** · no bloquea a/b.
+5. Vetos: E_SDK · Z#4/#5/#6 citar-no-cerrar · ceguera r.1 · claim→acta/SHA.
+6. S04 ✅ intacto · S04-v2 parked post-F5.
+7. REPORTES/BRIEFS viven **bajo este sprint**.
 
 ## Dónde está cada cosa
 
 | fichero | rol |
 |---|---|
 | [BACKLOG.md](BACKLOG.md) | WPs, olas, 🔶. Solo orquestador. |
-| [DECISIONES.md](DECISIONES.md) | DC-PCO-* (partición, S04 reasignado, proyección). |
-| [WP-T1](WP-T1-equipo-testing.md) · [WP-S04](WP-S04-skill-embajador.md) | Fichas stub. |
-| [BRIEFS/](BRIEFS/) | Briefs definitivos (sin despacho). |
-| [REPORTES/AVISO-R15-T1-S04.md](REPORTES/AVISO-R15-T1-S04.md) | Pedido gate vigía propio. |
-| [REPORTES/NOTA-S04-REASIGNADO-bosque.md](REPORTES/NOTA-S04-REASIGNADO-bosque.md) | Mensaje a bosque-orq. |
-| [.sync-map.json](.sync-map.json) | Vacío hasta post-apply. |
+| [DECISIONES.md](DECISIONES.md) | DC-PCO-* (incl. F5-apertura · F5-oasis · S04-v2). |
+| [WP-F5](WP-F5.md) · [F5a](WP-F5a.md) · [F5b](WP-F5b.md) · [F5c](WP-F5c.md) | Paraguas + stubs. |
+| [BRIEFS/](BRIEFS/) | Briefs definitivos F5 (sin despacho). |
+| [REPORTES/AVISO-R17-city.md](REPORTES/AVISO-R17-city.md) | Pedido gate vigía F5. |
+| [REPORTES/CHECKLIST-F5-C1-C8-T1.md](REPORTES/CHECKLIST-F5-C1-C8-T1.md) | Absorción fricción T1. |
+| [REPORTES/NOTA-S04-v2-parked.md](REPORTES/NOTA-S04-v2-parked.md) | Post-F5 parked. |
+| [.sync-map.json](.sync-map.json) | LOCAL-ONLY hasta post-apply. |

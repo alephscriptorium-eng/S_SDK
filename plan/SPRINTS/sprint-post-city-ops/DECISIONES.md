@@ -64,3 +64,56 @@ para que bosque-orq marque S04 parked/re-asignado city.
 3. Sync-map post-apply (regla 17) en [`.sync-map.json`](.sync-map.json).
 
 **Mapa especulativo pre-apply = devolución.**
+
+### DC-PCO-F5-apertura · 2026-07-22 · **cerrada** (GO PO · WP-F5)
+
+**Tema:** montar ola PCO-2 «ciudad instanciable + federación».
+
+**Decisión:** ampliar **`sprint-post-city-ops/`** (no abrir micro-sprint
+`sprint-f5-federacion`). Un commit gobierno V2 = **solo territorio F5**
+(stubs · briefs · aviso · checklist · nota S04-v2). Paraguas **WP-F5** +
+filas/sub-WPs:
+
+| id | foco | despacho |
+|---|---|---|
+| **F5a** | PUBLICAR lote mesh (changesets + Release + `npm view` C8) | tras R17-city PASS |
+| **F5b** | CA estrella e2e DOS CIUDADES registry puro | tras PASS + **F5a ✅** |
+| **F5c** | CHECK sidecar→pub oasis | tras PASS · **no bloquea** a/b |
+
+**Sin despacho** hasta gate vigía **R17-city** PASS
+([AVISO](REPORTES/AVISO-R17-city.md)).
+
+**Lote F5a (mínimo):** `@zeus/ciudad` · `startpack-ciudad` · `socket-server`
+· `mcp-launcher` (des-404 C2). Operator-ui: worker propone publish `dist/`
+vs build-doc; **PO sella**. Guía: [DC-CR-kits-foss](../sprint-ciudad-real/DECISIONES.md#dc-cr-kits-foss--2026-07-22--cerrada-go-c1b)
+— **ciudad = clase pública semilla**. Tren opcional: `embajador-kit`
+`skill/` en tarball (follow-up S04 · sin reopen S04).
+
+**Absorción T1:** fricciones C1–C8 →
+[CHECKLIST-F5-C1-C8-T1](REPORTES/CHECKLIST-F5-C1-C8-T1.md) (muertas o
+documentadas al cierre F5).
+
+**Vetos:** despachar sin R17-city · E_SDK · cerrar Z#4/#5/#6 · reopen S04 ✅
+· mezclar aceptación ✅ ajena en el mismo commit F5 (V2).
+
+### DC-PCO-F5-oasis · 2026-07-22 · **cerrada** (GO PO · WP-F5)
+
+**Tema:** alcance F5c sidecar→pub oasis.
+
+**Decisión:** F5c es check **read-only** / reporte. Protocolos canónicos:
+
+- https://o-sdk.escrivivir.co/PUB/RECOVERY-PROTOCOL
+- https://o-sdk.escrivivir.co/PUB/UPGRADE-PROTOCOL
+
+**Config del custodio NO entra al árbol** (ni secretos, ni `.env` pub).
+Si pub/sidecar inaccesible desde la estación → `<pendiente>` honesto con
+evidencia de intento. **F5c no bloquea** aceptación ni despacho de F5a/F5b.
+
+### DC-PCO-S04-v2-parked · 2026-07-22 · **cerrada** (GO PO · WP-F5)
+
+**Tema:** follow-up mapa «federar tu ciudad».
+
+**Decisión:** candidato **S04-v2** queda **parked** post-F5 (tras F5b ✅
+preferible). **No** reabrir S04 ✅. Citar `o-sdk.escrivivir.co/PUB` en el
+mapa futuro. Nota:
+[NOTA-S04-v2-parked](REPORTES/NOTA-S04-v2-parked.md).

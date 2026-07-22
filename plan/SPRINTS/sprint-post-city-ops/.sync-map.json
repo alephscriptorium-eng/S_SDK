@@ -4,12 +4,19 @@
   "WPs": {
     "T1": null,
     "S04": null,
-    "S04_reassigned_from": "sprint-skills-bosque/B-3"
+    "S04_reassigned_from": "sprint-skills-bosque/B-3",
+    "F5": null,
+    "F5a": null,
+    "F5b": null,
+    "F5c": null
   },
   "cite_do_not_duplicate": {
     "skills_B3": 14,
     "C05": 31,
     "EE-1": [22, 23]
   },
-  "open_cite_no_close": ["Z_SDK#4", "Z_SDK#5", "Z_SDK#6", "skills#14"]
+  "open_cite_no_close": ["Z_SDK#4", "Z_SDK#5", "Z_SDK#6", "skills#14"],
+  "parked": {
+    "S04-v2": "post-F5 · federar tu ciudad · o-sdk/PUB · no reopen S04"
+  }
 }
