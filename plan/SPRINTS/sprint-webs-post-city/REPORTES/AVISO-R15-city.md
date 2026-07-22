@@ -49,6 +49,9 @@ despachar WW-Z ∥ WW-G ∥ WW-S. Tras **FAIL**: lista numerada; sin despacho.
 - `gh issue create` → LOCAL-ONLY
 - Cerrar Z_SDK #4/#5/#6 → veto
 - Obra en hermano skills-library → carril bosque
+- **Ops T1/S04** → gate distinto
+  [AVISO-R15-T1-S04](../../sprint-post-city-ops/REPORTES/AVISO-R15-T1-S04.md)
+  (`sprint-post-city-ops` · runtime/acta/skill ≠ docs)
 
 ## Confirmación
 

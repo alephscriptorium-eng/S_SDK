@@ -47,6 +47,9 @@ Fuente: [`WP-W1-catalogo-ciudad.md`](../../REPORTES/WP-W1-catalogo-ciudad.md) §
 - `sprint-skills-bosque` · hermano skills-library (S03/S05b) — **no pisar**
 - E_SDK / DE-I8 · reopen ✅ city/CR · cerrar Z_SDK #4/#5/#6
 - §6 meta-juego · trama-agua · E01-f3/f4 (#22 parked)
+- **Ops ∥ (no es este sprint):** [`sprint-post-city-ops`](../sprint-post-city-ops/)
+  T1+S04 · [AVISO-R15-T1-S04](../sprint-post-city-ops/REPORTES/AVISO-R15-T1-S04.md)
+  — paths disjuntos de WW-* (`docs/**`)
 
 ## Reglas (además del skill)
 

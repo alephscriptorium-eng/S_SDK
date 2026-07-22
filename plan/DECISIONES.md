@@ -342,3 +342,15 @@ bloquea WP-D31 de aquel mundo, no bloquea este plan.)*
   Partición V2: no tocar `sprint-skills-bosque/` (bosque S03/S05b ∥).
   Espejo: `sprint-webs-post-city/DECISIONES.md` DC-WW-*. Vetos: E_SDK/
   DE-I8 · Z_SDK #4/#5/#6 citar-no-cerrar · claim→acta/SHA.
+
+- **DE-I25 · Sprint post-city-ops · T1+S04 (R15 · LOCAL-ONLY)**
+  *(gobierno · GO PO · replan R15 +2 WPs · 2026-07-22).* Abrir
+  [`sprint-post-city-ops/`](SPRINTS/sprint-post-city-ops/) con 🔶
+  **T1** (equipo testing · acta fricción · C8 registry · sin commits obra
+  salvo acta) ∥ **S04** (skill embajador · re-asignado bosque · parked
+  hasta T1 ✅). **Sin despacho** hasta gate propio **R15-T1-S04**
+  ([AVISO](SPRINTS/sprint-post-city-ops/REPORTES/AVISO-R15-T1-S04.md)).
+  Partición V2: ops ≠ webs (`docs/**`); nota S04→bosque encolada **sin**
+  editar BACKLOG bosque (regla oro 2). Espejo:
+  `sprint-post-city-ops/DECISIONES.md` DC-PCO-*. Vetos: E_SDK/DE-I8 ·
+  Z_SDK #4/#5/#6 citar-no-cerrar · claim→acta/SHA.

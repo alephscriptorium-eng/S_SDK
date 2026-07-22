@@ -1,0 +1,15 @@
+{
+  "note": "DC-PCO-proyeccion · LOCAL-ONLY durante sprint · rellenar post-apply (regla 17)",
+  "umbrella_pending": true,
+  "WPs": {
+    "T1": null,
+    "S04": null,
+    "S04_reassigned_from": "sprint-skills-bosque/B-3"
+  },
+  "cite_do_not_duplicate": {
+    "skills_B3": 14,
+    "C05": 31,
+    "EE-1": [22, 23]
+  },
+  "open_cite_no_close": ["Z_SDK#4", "Z_SDK#5", "Z_SDK#6", "skills#14"]
+}

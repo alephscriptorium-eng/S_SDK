@@ -7,6 +7,9 @@
 > Territorio: zeus docs · games-library docs · S_SDK docs (webs).
 > **Veto:** no tocar [`sprint-skills-bosque`](../sprint-skills-bosque/)
 > (bosque S03/S05b en paralelo).
+> **Hermano ops (∥ paths):** [`sprint-post-city-ops`](../sprint-post-city-ops/)
+> = T1+S04 · gate **R15-T1-S04** (distinto de R15-city) · runtime/acta/skill
+> ≠ `docs/**`.
 
 ## Parámetros del mundo
 

@@ -17,6 +17,9 @@ Partición V2: no tocar `sprint-skills-bosque/` (bosque S03/S05b ∥).
 **Vetos:** E_SDK/DE-I8 · reopen ✅ · cerrar Z_SDK #4/#5/#6 · force-push ·
 despachar sin R15-city.
 
+**Hermano ops (∥):** [`sprint-post-city-ops`](../sprint-post-city-ops/)
+T1+S04 · gate R15-T1-S04 (DE-I25) — no mezclar con WW-*.
+
 ### DC-WW-absorcion-W2 · 2026-07-22 · **cerrada**
 
 **Tema:** micro-WP W2 encolado en R14.5.

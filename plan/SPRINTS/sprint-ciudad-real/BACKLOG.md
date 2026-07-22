@@ -78,7 +78,10 @@ Otros parked:
 - Z05 items **4–6** · SEMILLA **§6** · trama-agua · E01 f3/f4 (#22)
 - E_SDK / DE-I8 · reopen ✅ city · force-push
 - **PRUEBA-DE-DOS** (hito observación + acta fricción; custodio+vigía) —
-  cola v3 · **listo-R14** (post C05 ✅ · campana live)
+  cola v3 · **listo-R14** (post C05 ✅ · campana live) · vehículo R15 =
+  [`sprint-post-city-ops` WP-T1](../sprint-post-city-ops/WP-T1-equipo-testing.md)
+  (gate [R15-T1-S04](../sprint-post-city-ops/REPORTES/AVISO-R15-T1-S04.md);
+  **sin despacho** aquí)
 
 ## Cola v3 (ratificada · DE-I19 · DC-CR-cola-v3)
 
