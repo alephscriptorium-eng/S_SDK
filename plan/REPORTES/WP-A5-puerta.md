@@ -5,7 +5,7 @@
 | agente | worker WP-A5 (ola 2 EMBAJADOR-ENTRADA) |
 | fecha | 2026-07-22 |
 | rama | `wp/ee-a5-puerta` (zeus · GL · S_SDK) |
-| commits | zeus `8194c78` · GL `2945290` · S `bd6ce18` (+ tip tuberia) |
+| commits | zeus `8194c78` · GL `2945290` · S `d28831e` |
 | eje(s) CA | **I** · **IV** · ceguera (regla 14) |
 | estado propuesto | listo para revisión |
 
@@ -74,7 +74,7 @@ git log -p aab6a68..8194c78 -- packages/mesh/operator-ui → 0 tokens marco
 | ---- | ---- | --- |
 | zeus-sdk | `wp/ee-a5-puerta` | `8194c780ca989f958ed14e69a95ea52b2566ebe7` (base `aab6a68`) |
 | games-library | `wp/ee-a5-puerta` | `2945290cf2c6c4518e6c5a776297af2566a7e008` (base `84f9d79`) |
-| S_SDK | `wp/ee-a5-puerta` | tip de este commit (tuberia + reporte) |
+| S_SDK | `wp/ee-a5-puerta` | `d28831e990d66ccd567ced31b02261d920533ab8` |
 ## Auto-revisión (PRACTICAS del mundo — con honestidad)
 
 - [x] Diff solo dentro de `ALCANCE_DIFF`: operator-ui paths · GL federation/docs · tuberia + reporte
