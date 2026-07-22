@@ -16,6 +16,8 @@ que falta lleva issue. Sin marketing.
 | Auth de sala | Al conectar al namespace `/runtime`, el cliente manda `{ token, room, user }` | [Handshake externo](https://z-sdk.escrivivir.co/guide/external-handshake) · `@zeus/rooms` |
 | Peer-card | La autoridad de sala emite card con **rol** y **caducidad** (TTL por defecto 1 h) | `@zeus/authority-kit` · `DEFAULT_PEER_CARD_TTL_MS = 60 * 60 * 1000` · `issuePeerCard` |
 | Firma del conector | El conector a terceros **exige** peer-card emitida por autoridad («visor pide card»); no se auto-fabrica como credencial de sala | Decisión **D-40** · commit [`b67b9ca`](https://github.com/alephscriptorium-eng/Z_SDK/commit/b67b9ca) en Z_SDK |
+| Firma de asiento (ssbId) | Tarjeta viajera firmada ed25519 (`ssbId` + `seatSignature`) en el handshake de federación | `@zeus/protocol/peer-card-seat` · obra Z_SDK **#4** (citar; no cerrar aquí) · S_SDK **#23** |
+| Puerta peercard → startpack | Entrante con peercard llega a **`startpack-ciudad-v0.1.0`** como base default (operator-ui + federación ciudad) | `@zeus/embajador-kit` · LOCAL bajo S_SDK **#22** · Z_SDK **#4** (citar) |
 | Gate de catálogo (lanzador) | `@zeus/mcp-launcher` solo opera ids **declarados** en el catálogo; rechaza ids desconocidos — jamás comandos libres desde la tool | test `catalog gate rejects unknown id` · `packages/mesh/mcp-launcher` |
 
 Sello de cierre del residual U93 / D-40: commit `b67b9ca` está en el
@@ -34,10 +36,17 @@ declarados. En el SDK eso aparece en el transporte de signaling
 (`publishPrivate` + `recps` en `@zeus/webrtc-signaling`; ver también
 U90).
 
-El handshake de federación llevará la identidad SSB de forma explícita
-cuando cierre el issue abierto correspondiente (bloque siguiente). Hasta
-entonces, la sala autentica con `{ token, room, user }` y la autoridad
-emite la peer-card de rol/TTL.
+El handshake de federación lleva la identidad SSB de forma explícita en la
+firma de asiento (`ssbId` + `seatSignature`; ver fila «Firma de asiento» arriba
+y [Z_SDK#4](https://github.com/alephscriptorium-eng/Z_SDK/issues/4) — citar, no
+cerrar). La **puerta** une peercard firmada + kit embajador para arrancar con
+[`startpack-ciudad-v0.1.0`](https://github.com/alephscriptorium-eng/Z_SDK-games-library/releases/tag/startpack-ciudad-v0.1.0)
+como base default (seguimiento LOCAL bajo
+[S_SDK#22](https://github.com/alephscriptorium-eng/S_SDK/issues/22); privacidad
+[S_SDK#23](https://github.com/alephscriptorium-eng/S_SDK/issues/23)).
+
+La sala autentica con `{ token, room, user }` y la autoridad emite la
+peer-card de rol/TTL; el residual de niveles/ACL sigue en la tabla abierta.
 
 ---
 
