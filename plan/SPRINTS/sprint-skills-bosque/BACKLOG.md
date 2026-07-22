@@ -5,7 +5,7 @@
 > editar este fichero. Estados: ⬜ · 🔶 · ✅.
 > Contrato: DE-I22 · convivencia multi-orq v1.1.
 > Decisiones: [DECISIONES.md](DECISIONES.md).
-> B-1 ✅ · B-2 S03 🔶 brief listo / pendiente gate · B-3 S06 ✅ · S07 🔶
+> B-1 ✅ · B-2 S03 🔶 despachado (gate PASS `a37d4c2`) · B-3 S06 ✅ · S07 🔶
 > condicionado · S04 traspasado city.
 
 ## Ola B-1 · método (✅ cerrado)
@@ -25,11 +25,11 @@ Reportes:
 - [WP-S01](REPORTES/WP-S01-swarm-vnext.md) · [WP-S02](REPORTES/WP-S02-vigilancia-vnext.md) · [WP-S05](REPORTES/WP-S05-site-web.md) · [WP-S05b](REPORTES/WP-S05b-encoding.md)
 - [AVISO-R14-bosque](REPORTES/AVISO-R14-bosque.md)
 
-## Ola B-2 · estacion-viva (🔶 brief listo / pendiente gate · sin obra)
+## Ola B-2 · estacion-viva (🔶 despachado · gate PASS)
 
 | Id | Título | Deps | Ejes | Estado | Issue |
 |---|---|---|---|---|---|
-| S03 | estación viva / watcher calibrado al hermano | C05 ✅ ciudad-real → [S_SDK#31](https://github.com/alephscriptorium-eng/S_SDK/issues/31) | I·IV + ceguera | 🔶 brief listo · pendiente gate exprés · **NO despachar** · skill `estacion-viva` ausente · [BRIEF-WP-S03](BRIEFS/BRIEF-WP-S03-estacion-viva.md) | [#13](https://github.com/alephscriptorium-eng/S_SDK-skills-library/issues/13) B-2 |
+| S03 | estación viva / watcher calibrado al hermano | C05 ✅ ciudad-real → [S_SDK#31](https://github.com/alephscriptorium-eng/S_SDK/issues/31) · gate PASS `a37d4c2` | I·IV + ceguera | 🔶 **despachado** · rama `wp/sb-s03-estacion-viva` · [BRIEF-WP-S03](BRIEFS/BRIEF-WP-S03-estacion-viva.md) | [#13](https://github.com/alephscriptorium-eng/S_SDK-skills-library/issues/13) B-2 |
 
 ## Ola B-3 · mapa+broche (S06 GO · S07 condicionado · S04 fuera)
 
@@ -49,7 +49,7 @@ Reportes:
 | Ola | Contenido | Estado gate |
 |---|---|---|
 | B-1 | S01 · S02 · S05 · S05b | ✅ cerrado (+ encoding mergeado) |
-| B-2 | S03 | 🔶 brief listo / pendiente gate · sin obra |
+| B-2 | S03 | 🔶 despachado (gate PASS `a37d4c2`) |
 | B-3 | S06 · S07 (S04→city) | S06 ✅ · S07 🔶 condicionado (falta S03) |
 
 ## Parked / fuera

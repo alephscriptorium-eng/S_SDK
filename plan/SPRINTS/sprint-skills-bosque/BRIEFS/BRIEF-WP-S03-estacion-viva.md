@@ -1,13 +1,12 @@
-# BRIEF · WP-S03 · estación viva · 🔶 (sin despacho)
+# BRIEF · WP-S03 · estación viva · 🔶 DESPACHADO
 
-> Brief B-2 / DEVOLUCIÓN-1 (R15-B3-parcial). **NO despachar worker**
-> hasta gate **exprés S03** PASS (PO/vigía). Skill ausente hoy — obra =
-> post-gate. S07 sigue 🔶 condicionado; **no** abrir broche.
+> Gate exprés S03 **PASS** @ `a37d4c2` (PO). Worker autorizado.
+> S07 sigue 🔶 hasta S03 ✅ — no abrir broche desde este WP.
 
 ```text
 (rol) skills/swarm-orquestacion/reference/roles/WORKER.md
   (pegar también este brief en chat worker fresco — un WP = un chat)
-  — NO DESPACHAR hasta gate exprés S03 PASS
+  — Gate PASS · DESPACHADO
 
 WP: WP-S03 · estación viva / watcher calibrado al hermano
 Rama: wp/sb-s03-estacion-viva
