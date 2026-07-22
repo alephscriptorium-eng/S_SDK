@@ -183,4 +183,6 @@ console.log(peerCardPhase(card, now + 1000));    // expired
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** · 2026-07-22 · FF `bd02d70..3ebfce3` → `origin/main`.
+∩ A5 = ∅ · gates OK · ceguera `WP-E0`=0 · nativos WP-U* OK.
+Z_SDK #6 citado OPEN (no cerrado). Merge orden: f2 antes que A5.

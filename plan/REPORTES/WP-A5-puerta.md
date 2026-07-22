@@ -129,4 +129,12 @@ node --test packages/ciudad/test/federation.test.mjs
 
 ## Revisión del orquestador
 
-_(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+**Aceptado ✅** · 2026-07-22 · tras remediación ceguera.
+
+1. Gate PRE-MERGE: `WP-A5` en obra (operator-ui + GL ciudad) = offender
+   `tracking-id` post-hotfix → **scrub + squash** (regla 14) antes del FF.
+2. Rebase obligatorio sobre tip post-f2 (`3ebfce3`) — base antigua `aab6a68`.
+3. Tip merge: zeus `30bfc08` · GL `b54a2d2` (A5 + fix CI).
+4. CA: puerta-smoke OK · federation 4/4 · gates OK · ∩ f2 = ∅.
+5. Fallback: `resolveZeusSdkRoot` (`.deps`/sibling) — sin literal que
+   dispare ceguera `S_SDK` en `ZEUS_SDK*`.

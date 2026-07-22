@@ -1,12 +1,12 @@
-# sprint-embajador-entrada — **ABIERTO** (GO-E1 · 🔶 emitidos)
+# sprint-embajador-entrada — **CERRADO** (corte entrada ✅ · listo R9)
 
-> **Estado: ABIERTO · corte de entrada 🔶.** GO-E1 (2026-07-22).
-> Workers **aún NO despachados** — gate siguiente = **vigía R7** pre-despacho.
+> **Estado: CERRADO · corte de entrada ✅.** GO-E1 + ola 2 (f2∥A5) mergeados
+> 2026-07-22. Tips: zeus `30bfc08` · GL `b54a2d2`.
+> Acta: [ACTA-EE1-OLA2-cierre-corte](../../REPORTES/ACTA-EE1-OLA2-cierre-corte-2026-07-22.md).
+> Paraguas f3/f4 siguen parked (#22). **Listo vigía R9.**
 >
 > Norte CA: **un amigo entra con su peercard y arranca con
-> `startpack-ciudad-v0.1.0` como base default.**
->
-> Dolor: peers federados (Z04 viva) esperan peercard + handshake + puerta.
+> `startpack-ciudad-v0.1.0` como base default** — cumplido en tip.
 
 ## Parámetros
 
@@ -18,14 +18,14 @@
 | `WORKTREE_BASE` | `HOLONES\01-mythos\zeus-sdk\.worktrees\` (obra tipica) |
 | `RAMA_WP` | `wp/ee-<id>-<slug>` (ee = embajador-entrada) |
 
-## Corte autorizado (🔶)
+## Corte (✅ cerrado)
 
-| Pieza | Qué | Overlap | Brief |
+| Pieza | Qué | Overlap | Estado |
 |---|---|---|---|
-| **E02** | `ssbId` handshake + firma tarjeta = cripto peercard | Z_SDK **#4** (citar, no cerrar) | [BRIEF-E02](../../REPORTES/BRIEF-WP-E02-privacidad-federacion.md) |
-| **E01 f1** | Kit embajador | base | [BRIEF-E01-f1](../../REPORTES/BRIEF-WP-E01-f1-kit.md) |
-| **E01 f2** | Peercard (TTL / ciclo) | firma → E02 / #4 | [BRIEF-E01-f2](../../REPORTES/BRIEF-WP-E01-f2-peercard.md) |
-| **ARG §A5** | Puerta externos | **Z17-zeus** dominante (+ Z04-GL · webs/S_SDK); sin superficie nueva; E02+f1 reales | [BRIEF-A5](../../REPORTES/BRIEF-WP-A5-puerta.md) |
+| **E02** | `ssbId` handshake + firma tarjeta | Z_SDK **#4** OPEN | ✅ |
+| **E01 f1** | Kit embajador | #22 | ✅ |
+| **E01 f2** | Peercard (TTL / ciclo) | firma → E02 / #4 | ✅ |
+| **ARG §A5** | Puerta externos | Z17 + Z04-GL + webs | ✅ |
 
 ## Paraguas (NO 🔶)
 
