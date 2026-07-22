@@ -65,14 +65,19 @@ Cada afirmación lleva sello. Lo no comprobado va como `<pendiente>`.
 
 | paquete | versión |
 | ------- | ------- |
+| `@zeus/acta-kit` | `0.1.1` |
 | `@zeus/app-shell` | `0.2.1` |
 | `@zeus/authority-kit` | `0.2.0` |
+| `@zeus/ciudad-lifecycle` | `0.1.1` |
+| `@zeus/embajador-kit` | `0.1.1` |
 | `@zeus/feed-kit` | `0.3.0` |
 | `@zeus/firehose-core` | `0.1.2` |
 | `@zeus/game-engine` | `0.1.1` |
 | `@zeus/http-contract` | `0.1.2` |
+| `@zeus/lifecycle-kit` | `0.1.1` |
 | `@zeus/linea-kit` | `0.2.0` |
 | `@zeus/operator-bridge` | `0.1.0` |
+| `@zeus/parte-kit` | `0.1.1` |
 | `@zeus/playbook-kit` | `0.1.2` |
 | `@zeus/player-mcp-kit` | `0.1.2` |
 | `@zeus/presets-sdk` | `0.1.2` |
@@ -87,15 +92,13 @@ Cada afirmación lleva sello. Lo no comprobado va como `<pendiente>`.
 | `@zeus/volumes-ops` | `0.2.1` |
 | `@zeus/webrtc-signaling` | `0.2.1` |
 
-Conteo sellado: **21** paquetes con versión. (El brief decía ~19; el
-canal real devolvió 21 el día de la medición.)
-
-**En árbol, no en registry (tip zeus `fe75269`):**
-`@zeus/parte-kit` y `@zeus/acta-kit` viven en
-`packages/engine/*` con `"private": true`. Canal real 2026-07-21 —
-`npm view` de ambos → **404** en
-`https://npm.scriptorium.escrivivir.co` (coherente con Release sin
-publish de esos kits). No inventar fila en la tabla de publicados.
+Conteo sellado (histórico I41): **21**. **Addenda 2026-07-22 (C04 /
+kits FOSS):** `npm view` ×5 en
+`https://npm.scriptorium.escrivivir.co` → `@zeus/embajador-kit@0.1.1` ·
+`parte-kit@0.1.1` · `acta-kit@0.1.1` · `lifecycle-kit@0.1.1` ·
+`ciudad-lifecycle@0.1.1` (Release
+[29887037565](https://github.com/alephscriptorium-eng/Z_SDK/actions/runs/29887037565)
+verde · tip zeus `73cb0c2`). Catálogo vivo arriba = 21 + 5 kits.
 
 ### GitHub — repos
 

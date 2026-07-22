@@ -7,7 +7,7 @@
 | rama | `wp/cr-c04-kits-publicos` (zeus-sdk) |
 | base | `6a6afab` (origin/main tip post-version #7) |
 | eje(s) CA | I·II + ceguera δ12 · C8 npm view |
-| estado propuesto | listo para revisión / merge HOTFIX-style |
+| estado propuesto | ✅ ciclo cerrado (publish + npm view) |
 
 ## Qué se hizo
 
@@ -93,15 +93,16 @@ Packages to be bumped at patch:
 
 Los 5 → 404 en `https://npm.scriptorium.escrivivir.co` (nunca publicados).
 
-### Post-merge CA (rellenar al cerrar ciclo)
+### Post-merge CA (cerrado)
 
 | CA | evidencia |
 | -- | --------- |
-| obra SHA | `<pendiente>` |
-| bot version PR | `<pendiente>` |
-| Release run verde | `<pendiente>` |
-| npm view ×5 | `<pendiente>` |
-| tip zeus / S | `<pendiente>` |
+| obra SHA | `62b25cc` · merge PR [#8](https://github.com/alephscriptorium-eng/Z_SDK/pull/8) → `bc53ccc` |
+| bot version PR | [#9](https://github.com/alephscriptorium-eng/Z_SDK/pull/9) mergeada → `73cb0c2` (kits → **0.1.1**) |
+| Release run verde | [29887037565](https://github.com/alephscriptorium-eng/Z_SDK/actions/runs/29887037565) success · tip `73cb0c2` |
+| npm view ×5 | los 5 @ `0.1.1` en `https://npm.scriptorium.escrivivir.co` (2026-07-22T02:58Z) |
+| tip zeus / S | zeus `73cb0c2` · S `d39f3f7` (+ docs tick post-cierre) |
+| gates / ceguera | gates OK · WP-ids 0 en obra tocada · ∩ C02 = ∅ |
 
 ## Auto-revisión
 

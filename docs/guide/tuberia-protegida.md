@@ -17,7 +17,7 @@ que falta lleva issue. Sin marketing.
 | Peer-card | La autoridad de sala emite card con **rol** y **caducidad** (TTL por defecto 1 h) | `@zeus/authority-kit` · `DEFAULT_PEER_CARD_TTL_MS = 60 * 60 * 1000` · `issuePeerCard` |
 | Firma del conector | El conector a terceros **exige** peer-card emitida por autoridad («visor pide card»); no se auto-fabrica como credencial de sala | Decisión **D-40** · commit [`b67b9ca`](https://github.com/alephscriptorium-eng/Z_SDK/commit/b67b9ca) en Z_SDK |
 | Firma de asiento (ssbId) | Tarjeta viajera firmada ed25519 (`ssbId` + `seatSignature`) en el handshake de federación | `@zeus/protocol/peer-card-seat` · obra Z_SDK **#4** (citar; no cerrar aquí) · S_SDK **#23** |
-| Puerta peercard → startpack | Entrante con peercard llega a **`startpack-ciudad-v0.1.0`** como base default (operator-ui + federación ciudad) | `@zeus/embajador-kit` · LOCAL bajo S_SDK **#22** · Z_SDK **#4** (citar) |
+| Puerta peercard → startpack | Entrante con peercard llega a **`startpack-ciudad-v0.1.0`** como base default (operator-ui + federación ciudad) | `@zeus/embajador-kit@0.1.1` (registry) · LOCAL bajo S_SDK **#22** · Z_SDK **#4** (citar) |
 | Gate de catálogo (lanzador) | `@zeus/mcp-launcher` solo opera ids **declarados** en el catálogo; rechaza ids desconocidos — jamás comandos libres desde la tool | test `catalog gate rejects unknown id` · `packages/mesh/mcp-launcher` |
 
 Sello de cierre del residual U93 / D-40: commit `b67b9ca` está en el
