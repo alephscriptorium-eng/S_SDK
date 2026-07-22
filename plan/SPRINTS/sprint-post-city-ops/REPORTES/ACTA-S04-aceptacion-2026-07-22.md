@@ -5,7 +5,7 @@
 | WP | **WP-S04 ✅** |
 | tip zeus | `cbde42e11154a0cc3a787047b034eed6f8e91704` (`origin/main`) |
 | obra citada | `3c9387b` → rebase onto `2917634` (UTF-8 docs ya en main = `ccb4113` equiv.) → FF |
-| tip S (prev reporte) | `df2fa51` |
+| tip S | `dfe0ff5` (acta) · padre `207bf29` (WW cierre ya pin zeus `cbde42e`) · reporte `df2fa51` |
 | ejes | **I·V** + ceguera regla 1 |
 | tests | embajador-kit **13/13** |
 | ceguera | árbol skill + `git log -p` main..tip = **0** hits |
