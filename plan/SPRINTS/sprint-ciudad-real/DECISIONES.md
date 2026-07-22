@@ -57,15 +57,40 @@ C01 o con stubs documentados. ∩ = devolución R10.
 Overlap pack C02 = trabajar **Z_SDK #5** (citar; no cerrar). Sync-map
 post-apply (regla 17) al cierre de lote.
 
-### DC-CR-embajador-private · 2026-07-22 · **cerrada** (nota diseño)
+### DC-CR-embajador-private · 2026-07-22 · **superseded** (antecedente)
 
-**Tema:** `@zeus/embajador-kit` `"private": true` — frontera anfitrión/peer.
+**Asiento histórico:** [`bbb29ba`](https://github.com/alephscriptorium-eng/S_SDK/commit/bbb29ba751d953dff19963e30abdad5c3eb51265)
+· **no borrar**. **SUPERSEDE** → [DC-CR-kits-foss](#dc-cr-kits-foss--2026-07-22--cerrada-go-c1b)
+(corrección vigía **R10.5**).
 
-**Decisión:** permanece `"private": true` = frontera anfitrión/peer
-**DELIBERADA** (no olvido ni deuda técnica). Evidencia: fixture tick-cero
-`fixtures/tick-cero/peer.mjs` solo importa `@zeus/protocol` (`peer-card`,
-`peer-card-seat`); `puerta.mjs` idem (sin `embajador-kit`). Seat + peercard
-viajan en `@zeus/protocol@0.3.0`; el kit queda del lado **anfitrión**
-(operator-ui / puerta). **Revisar publicación** solo si **E01-f3** habilita
-emisión de sub-credenciales por peers. Evita que un barrido futuro lo
-re-eleve como olvido.
+**Tema (histórico):** `@zeus/embajador-kit` `"private": true` — frontera
+anfitrión/peer.
+
+**Decisión (histórico):** permanecía `"private": true` = frontera
+anfitrión/peer **DELIBERADA** (no olvido ni deuda técnica). Evidencia:
+fixture tick-cero `fixtures/tick-cero/peer.mjs` solo importa
+`@zeus/protocol` (`peer-card`, `peer-card-seat`); `puerta.mjs` idem (sin
+`embajador-kit`). Seat + peercard viajan en `@zeus/protocol@0.3.0`; el kit
+quedaba del lado **anfitrión** (operator-ui / puerta). **Revisar
+publicación** solo si **E01-f3** habilita emisión de sub-credenciales por
+peers. Evita que un barrido futuro lo re-eleve como olvido.
+
+### DC-CR-kits-foss · 2026-07-22 · **cerrada** (GO-C1b)
+
+**Tema:** política FOSS por clase — kits de juego/contratos vs apps.
+
+**Antecedente:** [DC-CR-embajador-private](#dc-cr-embajador-private--2026-07-22--superseded-antecedente)
+@ [`bbb29ba`](https://github.com/alephscriptorium-eng/S_SDK/commit/bbb29ba751d953dff19963e30abdad5c3eb51265)
+(**SUPERSEDE**; no borrar). **Corrección vigía R10.5.**
+
+**Decisión:** publicación por **clase**, no por kit aislado:
+
+| Clase | `"private"` | Notas |
+| ----- | ----------- | ----- |
+| **Kits de juego / contratos** | `false` (**public**) | Superficie SDK de la gamificación p2p; regla 6 city «ningún jugador privilegiado» ([BACKLOG city](../sprint-game-city/BACKLOG.md) §reglas) |
+| **Apps / monitores / harnesses** | `true` por defecto | Operator-ui, fixtures, e2e, harnesses de demo |
+| **WIP `0.0.0`** | sin cambio | No publish hasta versionado real |
+
+Consecuencia: `@zeus/embajador-kit` y pares de contrato/juego entran al
+canal publish cuando el WP de obra (C04) aplique manifest + changeset.
+House: [DE-I21](../../DECISIONES.md). Sin tocar ola 1 (C01∥C02).

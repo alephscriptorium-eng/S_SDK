@@ -291,3 +291,16 @@ bloquea WP-D31 de aquel mundo, no bloquea este plan.)*
   amplía el patrón a `WP-[A-Z]{1,2}\d` sobre obra — ver PRACTICAS δ12.
   Espejo sprint: `sprint-embajador-entrada/DECISIONES.md`
   DC-EE-frontera-citas.
+
+- **DE-I21 · Kits de juego/contratos = FOSS; apps = private**
+  *(gobierno · GO-C1b · 2026-07-22).* Política de publicación por clase
+  en el workspace zeus (superficie SDK gamificación p2p):
+  - **Kits de juego / contratos → public** (`"private": false`) — regla 6
+    city «ningún jugador privilegiado».
+  - **Apps / monitores / harnesses → private** por defecto.
+  - **WIP `0.0.0` → sin cambio** (no publish hasta versionado).
+  **SUPERSEDE** el asiento puntual
+  DC-CR-embajador-private ([`bbb29ba`](https://github.com/alephscriptorium-eng/S_SDK/commit/bbb29ba751d953dff19963e30abdad5c3eb51265);
+  conservar como antecedente) — corrección vigía **R10.5**.
+  Espejo sprint: `sprint-ciudad-real/DECISIONES.md` **DC-CR-kits-foss**.
+  Obra = WP-C04 (rama zeus); no interrumpe C01∥C02.
