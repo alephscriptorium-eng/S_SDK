@@ -1,8 +1,8 @@
-# ESTACIÓN · calibración del mundo s-sdk (script-sdk)
+﻿# ESTACIÃ“N Â· calibraciÃ³n del mundo s-sdk (script-sdk)
 
-**La estación se activa desde aquí.** Instancia del consumidor. El método
+**La estaciÃ³n se activa desde aquÃ­.** Instancia del consumidor. El mÃ©todo
 vive en el paquete `@alephscript/skills-scriptorium` (skills `vigilancia` +
-`estacion-viva`). **Esta calibración NO va en el skill** — solo aquí en
+`estacion-viva`). **Esta calibraciÃ³n NO va en el skill** â€” solo aquÃ­ en
 `plan/`.
 
 ## Params
@@ -16,21 +16,21 @@ vive en el paquete `@alephscript/skills-scriptorium` (skills `vigilancia` +
 
 ## OUT_DIR
 
-- Ruta canónica: **`C:\S_LAB\vigilancia\s`**
-- Contiene: `watch.log`, `anomalias.log`, `watcher.pid` (sesión)
-- Fuera del repo público. Crear con `mkdir` al primer arranque del watcher.
+- Ruta canÃ³nica: **`C:\S_LAB\vigilancia\s`**
+- Contiene: `watch.log`, `anomalias.log`, `watcher.pid` (sesiÃ³n)
+- Fuera del repo pÃºblico. Crear con `mkdir` al primer arranque del watcher.
 
 ## Espejo de skills
 
 | dato | valor |
 | ---- | ----- |
-| paquete | `@alephscript/skills-scriptorium@0.7.0` |
+| paquete | `@alephscript/skills-scriptorium@0.8.0` |
 | registry | `https://npm.scriptorium.escrivivir.co` |
-| comando | `npm run skills:sync` → `alephscript-skills-sync --runtime claude` |
-| destino | `.claude/skills/` (trackeado — espejo auditable commiteado) |
+| comando | `npm run skills:sync` â†’ `alephscript-skills-sync --runtime claude` |
+| destino | `.claude/skills/` (trackeado â€” espejo auditable commiteado) |
 
 Tras `npm install`, regenerar el espejo con `npm run skills:sync`. El
-README bajo `.claude/skills/` documenta procedencia `@0.7.0` y
+README bajo `.claude/skills/` documenta procedencia `@0.8.0` y
 generador `alephscript-skills-sync`.
 
 ## Watcher
@@ -40,12 +40,12 @@ generador `alephscript-skills-sync`.
 WORLD_ROOT=<worktree-o-mundo> OUT_DIR=C:/S_LAB/vigilancia/s ONCE=1 \
   bash .claude/skills/estacion-viva/scripts/watcher-sesion.sh
 
-# Sesión (muere con el padre; PID en OUT_DIR/watcher.pid)
+# SesiÃ³n (muere con el padre; PID en OUT_DIR/watcher.pid)
 WORLD_ROOT=<worktree-o-mundo> OUT_DIR=C:/S_LAB/vigilancia/s INTERVAL=45 \
   bash .claude/skills/estacion-viva/scripts/watcher-sesion.sh
 ```
 
-## Relación con VISION / PRACTICAS
+## RelaciÃ³n con VISION / PRACTICAS
 
-Estación = layout operativo del carril s (calibración auditable en plan).
-No reescribe `plan/PRACTICAS.md` ni `plan/VISION.md` — PORT local únicamente.
+EstaciÃ³n = layout operativo del carril s (calibraciÃ³n auditable en plan).
+No reescribe `plan/PRACTICAS.md` ni `plan/VISION.md` â€” PORT local Ãºnicamente.

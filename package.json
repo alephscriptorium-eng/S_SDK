@@ -16,7 +16,7 @@
     "scrum:preview:city": "node node_modules/@alephscript/skills-scriptorium/skills/swarm-orquestacion/scripts/proyectar-backlog.mjs export --dry-run --backlog plan/SPRINTS/sprint-game-city/BACKLOG.md --map plan/SPRINTS/sprint-game-city/.sync-map.json --alcance todos"
   },
   "devDependencies": {
-    "@alephscript/skills-scriptorium": "0.7.0",
+    "@alephscript/skills-scriptorium": "0.8.0",
     "vitepress": "^1.6.4"
   },
   "license": "UNLICENSED"
