@@ -1,5 +1,9 @@
 # BACKLOG — inicialización del holón 07
 
+> **F2 vivo (2026-07-26):** proyección mundo acabado →
+> [`BACKLOG-F2.md`](BACKLOG-F2.md). Este fichero = histórico olas I0–I9
+> (no reabrir ✅ salvo GO custodio).
+
 Estados: ⬜ pendiente · 🔶 asignado · ✅ aceptado (solo orquestador marca).
 Fuentes de evidencia citadas por ruta absoluta cuando salen de este repo.
 
