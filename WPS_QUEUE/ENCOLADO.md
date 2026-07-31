@@ -2,7 +2,7 @@
 
 | dato | valor |
 | ---- | ----- |
-| Estado | **ENCOLADO · DIFERIDO AL FINAL** — no despachable, no promovido |
+| Estado | **cola A: ENCOLADA · DIFERIDA AL FINAL** (no despachable, no promovida) · **cola B: PROMOVIDA** el 2026-07-31 a ids canónicos de Z `U245–U249`, con ventana de despacho **tras el gate GD** (carril D cerrado en U206) |
 | Decisión | del custodio (2026-07-31, al descongelar el swarm): «encolar y limpiar; fijar la carpeta y la tarea de investigar después» |
 | Quién fija | **Anfitrión** (orquestador del swarm Z·V·G·L·O·HUB) |
 | Quién produjo el material | otra ventana (**S / «Sol»**), en modo investigación READ-ONLY |
@@ -100,8 +100,13 @@ propietario.
 ## §5 · Dónde queda registrado (para que no se pierda)
 
 - **Aquí** — esta ficha, dentro de la propia carpeta, ya trackeada en `s-sdk`.
-- **`z-sdk/plan/BACKLOG.md`** — `U244`, `P2 DEFERRED`: puntero a la cola B, sin
-  promover sus WPs ni ocupar ids.
+- **`z-sdk/plan/BACKLOG.md`** — `U244`, `P2 DEFERRED`: triaje de la **cola A**
+  (T-S01). Y **cola B promovida** el 2026-07-31 con autorización del custodio:
+  `U245–U249` (ZT01→U245 · ZT02→U246 · ZT03→U247 · ZT04→U248 · ZT05→U249),
+  bajo el epígrafe «Cola promovida — frontera TypeScript». **No se despacha
+  hasta `GD`**: `@zeus/linea-kit` es territorio vivo del carril D y la campaña
+  promete cero cambios en runtime — adelantarla sería programar la colisión.
+  `acta-kit` (U246) no comparte territorio y puede adelantarse si hace falta.
 - **`C:\S\scriptorium\plan\PLAN-SCRIPTORIUM-V1.md`** — encolado en la secuencia
   del programa, al final.
 - **`C:\S\scriptorium\sincronia\INDICE.md`** — visible en el estado de la sala.
