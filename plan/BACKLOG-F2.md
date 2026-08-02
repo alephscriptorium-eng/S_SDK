@@ -251,7 +251,7 @@ capacidad **Logos (02)**, activada por **E-SDK (03)** para operar Document
 Machine, y demostrada bilateralmente en el playground. Cruza 01–04 y queda
 gobernada y notariada por **07**. `HOLONES.md` sigue con **siete filas**.
 
-### WP-SDK-L01 · dossier-holonico-lore-hm 🔶
+### WP-SDK-L01 · dossier-holonico-lore-hm ✅
 - **BRIEF:** dossier `lore-hm-integracion-holonica` con `README`, `FUENTES`,
   `MAPA-HOLONICO`, `LENGUA`, `SOLID`, `MATRIZ-CONSUMIDORES`, `DECISIONES` y
   `PLAN`. El mapa fija las escalas **sin confundirlas**: holón 03 = E-SDK ·
@@ -268,7 +268,7 @@ gobernada y notariada por **07**. `HOLONES.md` sigue con **siete filas**.
   citados con ruta: dossier de las tres liturgias, junturas 01↔02, 02↔03 y
   03↔04, I60/I61 y DS-5.
 - **Pri:** P0
-- **Estado:** 🔶 ola 1 LORE-HM · rama `wp/sdk-l01-dossier-holonico-lore-hm` · wt `C:/S_LAB/wt/s-sdk-wp-sdk-l01` · verde **local** hasta espejo CI (addenda 113)
+- **Estado:** ✅ ola 1 · tip `2cd85c4` · rama `wp/sdk-l01-dossier-holonico-lore-hm` · contrarrevisión PASS · verde **local** · **sin merge main**
 
 ### WP-SDK-L02 · inception-lengua-lore-hm
 - **BRIEF:** definir LORE-HM con el contrato de inception heredado del 04,
@@ -379,6 +379,8 @@ orden del product owner.
 
 ✎ **2026-08-02**: ola 1 GO — `WP-SDK-L01` 🔶 despachado (wt
 `C:/S_LAB/wt/s-sdk-wp-sdk-l01`).
+
+✎ **2026-08-02**: ola 1 — `WP-SDK-L01` ✅ (PASS; verde local; sin merge main).
 
 ## Dependencias maestras
 
