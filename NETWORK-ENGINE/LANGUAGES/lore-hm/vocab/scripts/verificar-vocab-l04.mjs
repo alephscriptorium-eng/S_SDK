@@ -127,10 +127,48 @@ if (!Array.isArray(doc.schemaOrgSupplement)) {
   ok('schemaOrgSupplement vacío (schema.org no backbone)');
 }
 
+// ---------------------------------------------------------------------------
+// Correcciones WP-ZV-S ④ (todas con caso rojo medido):
+//   · El detector de duplicados era **igualdad exacta de CURIE**: acuñar
+//     `hm:Announce` junto a `as:Announce`, o `lore:Join` junto a `as:Join`,
+//     pasaba en verde. Ahora se indexa por **tipo semántico** (`semanticType`)
+//     sobre las 40 entradas notariadas, y además se detecta colisión léxica
+//     del local name de una acuñación contra cualquier término W3C.
+//   · `reason` era `.length > 10`: **once puntos** eran una razón válida.
+//     Ahora la razón debe ser prosa y toda acuñación debe declarar
+//     `w3cChecked[]` — los candidatos W3C concretos evaluados y descartados.
+// ---------------------------------------------------------------------------
 const seenTerms = new Set();
+/** semanticType → term (sólo activos: un retiro libera el hueco). */
+const seenSemantic = new Map();
+/** local name normalizado → term, para familias W3C. */
+const w3cLocalNames = new Map();
 let coined = 0;
 let retired = 0;
 let reuse = 0;
+
+const localName = (curie) => String(curie).split(':').slice(1).join(':');
+const normalizaLocal = (curie) => localName(curie).toLowerCase().replace(/[^a-z0-9]/g, '');
+
+// Primera pasada: local names de las familias W3C (la referencia contra la que
+// se juzga cualquier acuñación).
+for (const e of doc.entries) {
+  if (W3C_FAMILIES.has(e?.family) && typeof e.term === 'string') {
+    w3cLocalNames.set(normalizaLocal(e.term), e.term);
+  }
+}
+
+/** ¿La razón es prosa argumentada o relleno? */
+function razonSustantiva(texto) {
+  const s = String(texto ?? '').trim();
+  if (s.length < 40) return `demasiado corta (${s.length} < 40 chars)`;
+  const palabras = s.match(/[\p{L}]{3,}/gu) ?? [];
+  if (palabras.length < 6) return `sólo ${palabras.length} palabras de ≥3 letras`;
+  if (new Set(palabras.map((p) => p.toLowerCase())).size < 5) {
+    return 'vocabulario repetido (relleno)';
+  }
+  return null;
+}
 
 for (const [i, e] of doc.entries.entries()) {
   const loc = `entries[${i}]`;
@@ -138,7 +176,7 @@ for (const [i, e] of doc.entries.entries()) {
     fail(`${loc}: no es objeto`);
     continue;
   }
-  for (const k of ['term', 'family', 'reason', 'date', 'signer']) {
+  for (const k of ['term', 'family', 'semanticType', 'reason', 'date', 'signer']) {
     if (typeof e[k] !== 'string' || !e[k].trim()) {
       fail(`${loc}: falta ${k}`);
     }
@@ -155,15 +193,56 @@ for (const [i, e] of doc.entries.entries()) {
     seenTerms.add(e.term);
   }
 
+  // --- duplicado por TIPO SEMÁNTICO, no por nombre ---
+  if (typeof e.semanticType === 'string' && e.semanticType.trim()) {
+    if (!/^[a-z][a-z0-9]*(\.[a-z0-9][a-z0-9-]*)+$/.test(e.semanticType)) {
+      fail(`${loc}: semanticType "${e.semanticType}" no es un tipo punteado en minúsculas`);
+    }
+    if (e.retiredDate == null) {
+      const previo = seenSemantic.get(e.semanticType);
+      if (previo) {
+        fail(
+          `${loc}: TIPO SEMÁNTICO duplicado «${e.semanticType}» — ${e.term} repite lo que ` +
+            `ya cubre ${previo}. Un término nuevo para un tipo ya notariado es acuñación ` +
+            'paralela: reusa el existente o retira el viejo con fecha.',
+        );
+      } else {
+        seenSemantic.set(e.semanticType, e.term);
+      }
+    }
+  }
+
   const isCoin = COIN_FAMILIES.has(e.family);
   if (isCoin) {
     coined++;
-    // CA1: cero acuñaciones sin razón
-    if (!e.reason || e.reason.trim().length < 10) {
-      fail(`${loc}: acuñación ${e.term} sin razón (≥10 chars)`);
+    // CA1: cero acuñaciones sin razón — y «razón» ≠ «≥10 caracteres».
+    const problema = razonSustantiva(e.reason);
+    if (problema) {
+      fail(`${loc}: acuñación ${e.term} sin razón sustantiva — ${problema}`);
+    }
+    // CA1b: hay que declarar CONTRA QUÉ se comprobó antes de acuñar.
+    if (!Array.isArray(e.w3cChecked) || e.w3cChecked.length === 0) {
+      fail(
+        `${loc}: acuñación ${e.term} sin w3cChecked[] — debe nombrar los candidatos ` +
+          'W3C concretos evaluados y descartados (as:/prov:/dcterms:)',
+      );
+    } else {
+      for (const cand of e.w3cChecked) {
+        if (!/^(as|prov|dcterms):[A-Za-z]/.test(String(cand))) {
+          fail(`${loc}: w3cChecked contiene "${cand}", que no es un CURIE de familia W3C`);
+        }
+      }
     }
     if (!e.term.startsWith(e.family === 'hm:' ? 'hm:' : 'lore:')) {
       fail(`${loc}: term ${e.term} no coincide con family ${e.family}`);
+    }
+    // CA1c: colisión léxica con un término W3C ya notariado.
+    const choque = w3cLocalNames.get(normalizaLocal(e.term));
+    if (choque) {
+      fail(
+        `${loc}: acuñación ${e.term} duplica el local name de ${choque} (familia W3C) — ` +
+          'cambiar el prefijo no crea un término nuevo',
+      );
     }
   } else if (W3C_FAMILIES.has(e.family)) {
     reuse++;
@@ -180,6 +259,7 @@ for (const [i, e] of doc.entries.entries()) {
     }
   }
 }
+ok(`tipos semánticos activos únicos: ${seenSemantic.size} (indexado por tipo, no por nombre)`);
 
 ok(
   `acuñados activos/retirados contabilizados: coined=${coined} reuse=${reuse} retired=${retired}`,
@@ -189,7 +269,60 @@ if (coined < 1) {
   fail('se esperaba al menos una acuñación hm:/lore: con razón');
 }
 
-// w3cEquivalents: superficie gate hub-101
+// ---------------------------------------------------------------------------
+// Superficie de consumo COMPLETA: los 40 notariados, no la proyección de 9.
+// El gate del hub indexa hoy por nombre de verbo contra `w3cEquivalents`
+// (9 claves) y por eso exime a 20 de 29 verbos. Este registro publica además
+// `notariadosPorTipoSemantico`, que cubre las 39 entradas activas, y
+// `retirados`, que cubre la retirada. Enrutado del arreglo del hub:
+//   playground/prueba-de-H-M/ci/test-101-ontologia.mjs · gateVocabCoining()
+//   — `if (!equiv) continue;` (indexado por nombre de verbo) y el umbral
+//   `coinReason.length > 10`. NO es de este WP: repo distinto, worker distinto.
+// ---------------------------------------------------------------------------
+{
+  const idx = doc.notariadosPorTipoSemantico;
+  if (!idx || typeof idx !== 'object') {
+    fail('falta notariadosPorTipoSemantico (superficie completa de consumo)');
+  } else {
+    const claves = Object.keys(idx).filter((k) => !k.startsWith('_'));
+    const activos = doc.entries.filter((e) => e.retiredDate == null);
+    const faltan = activos.filter((e) => !claves.includes(e.semanticType));
+    if (faltan.length > 0) {
+      fail(
+        `notariadosPorTipoSemantico no cubre ${faltan.length} entrada(s) activa(s): ` +
+          faltan.map((e) => `${e.semanticType}→${e.term}`).slice(0, 6).join(', '),
+      );
+    }
+    const sobran = claves.filter((k) => !activos.some((e) => e.semanticType === k));
+    if (sobran.length > 0) {
+      fail(`notariadosPorTipoSemantico con tipos sin entrada activa: ${sobran.join(', ')}`);
+    }
+    for (const e of activos) {
+      const hit = idx[e.semanticType];
+      if (hit && (hit.term !== e.term || hit.family !== e.family)) {
+        fail(
+          `notariadosPorTipoSemantico[${e.semanticType}] = ${hit.term}/${hit.family} ` +
+            `≠ entry ${e.term}/${e.family}`,
+        );
+      }
+    }
+    if (faltan.length === 0 && sobran.length === 0) {
+      ok(`superficie completa: ${claves.length} tipos semánticos = ${activos.length} entradas activas`);
+    }
+  }
+  const ret = doc.retirados;
+  const retiradosReales = doc.entries.filter((e) => e.retiredDate != null);
+  if (!Array.isArray(ret) || ret.length !== retiradosReales.length) {
+    fail(
+      `retirados[] = ${Array.isArray(ret) ? ret.length : 'ausente'} ≠ ` +
+        `${retiradosReales.length} entradas con retiredDate (el retiro se publica, no se borra)`,
+    );
+  } else {
+    ok(`retirados[] = ${ret.length} (retiro publicado, no borrado)`);
+  }
+}
+
+// w3cEquivalents: proyección legacy que consume hoy el gate hub-101
 const eq = doc.w3cEquivalents;
 if (!eq || typeof eq !== 'object') {
   fail('falta w3cEquivalents (superficie gate WP-HUB-101)');
@@ -224,20 +357,81 @@ const consumo = join(
   repoRoot,
   'NETWORK-ENGINE/LANGUAGES/lore-hm/docs/CONSUMO-HUB-101.md',
 );
+// El check anterior era un **substring**: sustituir las 98 líneas del
+// documento por una línea de basura con tres palabras clave («…registro.json
+// stub migración») daba PASS. Ahora el contrato lleva un bloque legible por
+// máquina que se coteja contra el registro vivo, más sus secciones.
 if (!existsSync(consumo)) {
   fail('falta docs/CONSUMO-HUB-101.md (contrato de consumo hub)');
 } else {
   const md = readFileSync(consumo, 'utf8');
+  let malo = 0;
+
+  for (const [re, etiqueta] of [
+    [/^##\s+Path can[oó]nico/m, '## Path canónico'],
+    [/^##\s+Superficie/m, '## Superficie'],
+    [/^##\s+Protocolo de resoluci[oó]n/m, '## Protocolo de resolución'],
+    [/^##\s+Migraci[oó]n desde el stub/m, '## Migración desde el stub'],
+  ]) {
+    if (!re.test(md)) {
+      fail(`CONSUMO-HUB-101.md sin sección «${etiqueta}»`);
+      malo++;
+    }
+  }
   if (!md.includes(CANONICAL_REL)) {
     fail('CONSUMO-HUB-101.md no cita el path canónico');
-  } else {
-    ok('CONSUMO-HUB-101.md cita path canónico');
+    malo++;
   }
-  if (!/stub/i.test(md) || !/migraci[oó]n/i.test(md)) {
-    fail('CONSUMO-HUB-101.md debe documentar migración desde stub');
-  } else {
-    ok('migración stub → registro documentada');
+  // El protocolo de resolución tiene tres pasos ordenados y fail-closed.
+  for (const needle of ['LORE_HM_VOCAB_REGISTRY', 'fail-closed', 'Prohibido']) {
+    if (!md.includes(needle)) {
+      fail(`CONSUMO-HUB-101.md sin «${needle}» en el protocolo de resolución`);
+      malo++;
+    }
   }
+
+  // Bloque contractual legible por máquina, cotejado contra el registro vivo.
+  const bloque = /```json\s+contrato\s*\n([\s\S]*?)```/m.exec(md)
+    ?? /<!--\s*contrato\s*-->\s*```json\s*\n([\s\S]*?)```/m.exec(md);
+  if (!bloque) {
+    fail(
+      'CONSUMO-HUB-101.md sin bloque ```json contrato — el contrato debe ser ' +
+        'cotejable contra el registro, no prosa que contenga palabras clave',
+    );
+    malo++;
+  } else {
+    let c;
+    try {
+      c = JSON.parse(bloque[1]);
+    } catch (e) {
+      fail(`bloque contrato de CONSUMO-HUB-101.md no es JSON válido: ${e.message}`);
+      c = null;
+    }
+    if (c) {
+      const activos = doc.entries.filter((e) => e.retiredDate == null).length;
+      const retirados = doc.entries.length - activos;
+      const esperado = {
+        canonicalPath: CANONICAL_REL,
+        $id: doc.$id,
+        entriesNotariadas: doc.entries.length,
+        activas: activos,
+        retiradas: retirados,
+        superficieDeConsumo: 'notariadosPorTipoSemantico',
+        indexadoPor: 'semanticType',
+        proyeccionLegacy: 'w3cEquivalents',
+      };
+      for (const [k, v] of Object.entries(esperado)) {
+        if (JSON.stringify(c[k]) !== JSON.stringify(v)) {
+          fail(
+            `contrato CONSUMO-HUB-101.md: ${k}=${JSON.stringify(c[k])} ≠ ` +
+              `${JSON.stringify(v)} (registro vivo) — contrato rancio`,
+          );
+          malo++;
+        }
+      }
+    }
+  }
+  if (malo === 0) ok('CONSUMO-HUB-101.md: secciones, protocolo y contrato cotejado con el registro');
 }
 
 // README vocab

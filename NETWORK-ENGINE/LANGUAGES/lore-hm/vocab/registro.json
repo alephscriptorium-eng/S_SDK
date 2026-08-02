@@ -21,6 +21,7 @@
     {
       "term": "as:Join",
       "family": "AS2",
+      "semanticType": "presence.peer.join",
       "reason": "Reuso AS2 Rec Join para peer.join (presencia bilateral en room simulada).",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -30,6 +31,7 @@
     {
       "term": "as:Announce",
       "family": "AS2",
+      "semanticType": "presence.peer.announce",
       "reason": "Reuso AS2 Rec Announce para peer.announce.",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -39,15 +41,20 @@
     {
       "term": "as:View",
       "family": "AS2",
+      "semanticType": "observation.state.inspect",
       "reason": "Reuso AS2 Rec View para state.inspect y machine.status (inspección observable).",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
       "verb": "state.inspect",
-      "retiredDate": null
+      "retiredDate": null,
+      "verbAliases": [
+        "machine.status"
+      ]
     },
     {
       "term": "as:Leave",
       "family": "AS2",
+      "semanticType": "presence.session.exit",
       "reason": "Reuso AS2 Rec Leave para session.exit.",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -57,6 +64,7 @@
     {
       "term": "as:Activity",
       "family": "AS2",
+      "semanticType": "core.activity",
       "reason": "Wire/vista SOLID: Activity LORE-HM → as:Activity (+ prov:Activity cuando hay derivación).",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -65,6 +73,7 @@
     {
       "term": "as:Actor",
       "family": "AS2",
+      "semanticType": "core.actor",
       "reason": "Peer (actor) → as:Actor / as:Person; H/M son roles, no tipos.",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -73,6 +82,7 @@
     {
       "term": "as:Object",
       "family": "AS2",
+      "semanticType": "core.object",
       "reason": "Artifact → as:Object (+ prov:Entity).",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -81,6 +91,7 @@
     {
       "term": "prov:Usage",
       "family": "PROV-O",
+      "semanticType": "provenance.usage",
       "reason": "Reuso PROV-O Usage para source.ingest (ingesta Onfalo sellada).",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -90,6 +101,7 @@
     {
       "term": "prov:Activity",
       "family": "PROV-O",
+      "semanticType": "provenance.activity",
       "reason": "Reuso PROV-O Activity para provenance.trace y derivación en vista.",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -99,6 +111,7 @@
     {
       "term": "prov:wasAssociatedWith",
       "family": "PROV-O",
+      "semanticType": "provenance.association",
       "reason": "Lease/association en wire: PROV-O association + metadatos dcterms; evita acuñar hm:Lease activo.",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -107,6 +120,7 @@
     {
       "term": "prov:wasGeneratedBy",
       "family": "PROV-O",
+      "semanticType": "provenance.generation",
       "reason": "Derivación/generación de artefactos en vista SOLID.",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -115,6 +129,7 @@
     {
       "term": "prov:wasDerivedFrom",
       "family": "PROV-O",
+      "semanticType": "provenance.derivation",
       "reason": "Cadena de derivación en vista SOLID.",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -123,6 +138,7 @@
     {
       "term": "dcterms:Dataset",
       "family": "DCTERMS",
+      "semanticType": "artifact.dataset",
       "reason": "Reuso DCTERMS Dataset para artifact.data.",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -132,6 +148,7 @@
     {
       "term": "dcterms:BibliographicResource",
       "family": "DCTERMS",
+      "semanticType": "artifact.specification",
       "reason": "Reuso DCTERMS BibliographicResource para artifact.spec.",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -141,6 +158,7 @@
     {
       "term": "dcterms:identifier",
       "family": "DCTERMS",
+      "semanticType": "metadata.identifier",
       "reason": "Digest / identifier en wire = dcterms:identifier (valor digest etiquetado).",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -149,6 +167,7 @@
     {
       "term": "dcterms:created",
       "family": "DCTERMS",
+      "semanticType": "metadata.created",
       "reason": "Metadato temporal de creación en vista.",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -157,6 +176,7 @@
     {
       "term": "dcterms:modified",
       "family": "DCTERMS",
+      "semanticType": "metadata.modified",
       "reason": "Metadato temporal de modificación en vista.",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -165,6 +185,7 @@
     {
       "term": "dcterms:title",
       "family": "DCTERMS",
+      "semanticType": "metadata.title",
       "reason": "Título descriptivo en vista; no backbone de tipestate.",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -173,6 +194,13 @@
     {
       "term": "hm:PodLease",
       "family": "hm:",
+      "semanticType": "lease.pod.grant",
+      "w3cChecked": [
+        "as:Offer",
+        "as:Accept",
+        "prov:wasAssociatedWith",
+        "dcterms:rightsHolder"
+      ],
       "reason": "No AS2/PROV-O term for bilateral pod lease in the playground simulacro.",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -182,6 +210,13 @@
     {
       "term": "hm:PodRevoke",
       "family": "hm:",
+      "semanticType": "lease.pod.revoke",
+      "w3cChecked": [
+        "as:Undo",
+        "as:Reject",
+        "as:Delete",
+        "prov:wasInvalidatedBy"
+      ],
       "reason": "No W3C term for lease revocation scoped to file-backed playground pods.",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -191,6 +226,12 @@
     {
       "term": "hm:UnitInflate",
       "family": "hm:",
+      "semanticType": "unit.lifecycle.inflate",
+      "w3cChecked": [
+        "as:Create",
+        "as:Add",
+        "prov:wasGeneratedBy"
+      ],
       "reason": "Bilateral inflation ceremony (M requests, H validates) is playground-specific.",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -200,6 +241,12 @@
     {
       "term": "hm:UnitStart",
       "family": "hm:",
+      "semanticType": "unit.lifecycle.start",
+      "w3cChecked": [
+        "as:Arrive",
+        "as:Create",
+        "prov:startedAtTime"
+      ],
       "reason": "AS2 Rec has no Start activity; unit lifecycle start is playground tipestate.",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -209,6 +256,12 @@
     {
       "term": "hm:UnitPause",
       "family": "hm:",
+      "semanticType": "unit.lifecycle.pause",
+      "w3cChecked": [
+        "as:Ignore",
+        "as:Block",
+        "prov:Activity"
+      ],
       "reason": "AS2 Rec has no Pause activity for unit tipestate.",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -218,6 +271,12 @@
     {
       "term": "hm:UnitResume",
       "family": "hm:",
+      "semanticType": "unit.lifecycle.resume",
+      "w3cChecked": [
+        "as:Accept",
+        "as:Arrive",
+        "prov:Activity"
+      ],
       "reason": "AS2 Rec has no Resume activity for unit tipestate.",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -227,6 +286,13 @@
     {
       "term": "hm:UnitStop",
       "family": "hm:",
+      "semanticType": "unit.lifecycle.stop",
+      "w3cChecked": [
+        "as:Leave",
+        "as:Delete",
+        "as:Remove",
+        "prov:wasEndedBy"
+      ],
       "reason": "AS2 Rec has no Stop activity for unit tipestate; Leave/Delete are not equivalent.",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -236,6 +302,12 @@
     {
       "term": "hm:UnitDebug",
       "family": "hm:",
+      "semanticType": "unit.diagnostics.debug",
+      "w3cChecked": [
+        "as:View",
+        "as:Read",
+        "prov:Activity"
+      ],
       "reason": "AS2 has no debug activity for unit diagnostics in the simulacro.",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -245,6 +317,12 @@
     {
       "term": "hm:MachineDeploy",
       "family": "hm:",
+      "semanticType": "machine.deploy",
+      "w3cChecked": [
+        "as:Create",
+        "as:Add",
+        "dcterms:Software"
+      ],
       "reason": "Deployment of a machine manifest in the playground; not a live FM deploy.",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -254,6 +332,11 @@
     {
       "term": "hm:UnitInspect",
       "family": "hm:",
+      "semanticType": "unit.diagnostics.inspect",
+      "w3cChecked": [
+        "as:View",
+        "as:Read"
+      ],
       "reason": "Deep unit inspection beyond as:View scope for playground pods.",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -263,6 +346,12 @@
     {
       "term": "hm:PipelineGapAnalysis",
       "family": "hm:",
+      "semanticType": "pipeline.gap-analysis",
+      "w3cChecked": [
+        "as:Question",
+        "prov:Activity",
+        "dcterms:Report"
+      ],
       "reason": "Pipeline readiness gap analysis; playground ceremony-specific.",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -272,6 +361,12 @@
     {
       "term": "hm:ArtifactValidation",
       "family": "hm:",
+      "semanticType": "artifact.validation",
+      "w3cChecked": [
+        "as:Accept",
+        "as:Reject",
+        "prov:wasDerivedFrom"
+      ],
       "reason": "Schema/contract validation of artifact chains in evidence.",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -281,6 +376,11 @@
     {
       "term": "hm:CoverageMeasure",
       "family": "hm:",
+      "semanticType": "ceremony.coverage.measure",
+      "w3cChecked": [
+        "prov:Activity",
+        "dcterms:Dataset"
+      ],
       "reason": "Ceremony coverage measurement over verb matrix; no DCMI term.",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -290,6 +390,13 @@
     {
       "term": "hm:CortoDeEjecucion",
       "family": "hm:",
+      "semanticType": "log.corto.chunk",
+      "w3cChecked": [
+        "prov:Entity",
+        "as:Object",
+        "dcterms:Dataset",
+        "dcterms:BibliographicResource"
+      ],
       "reason": "Chunk inmutable consultable del log de corrida; no existe término W3C/DCMI para este artefacto de ceremonia (plan cola A §24).",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -298,6 +405,12 @@
     {
       "term": "lore:DocumentAnalyze",
       "family": "lore:",
+      "semanticType": "document.analysis.bartleby",
+      "w3cChecked": [
+        "as:Read",
+        "as:View",
+        "prov:Activity"
+      ],
       "reason": "AS2 Rec has no Analyze; as:Read is weaker than Bartleby five-section analysis.",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -307,6 +420,12 @@
     {
       "term": "lore:VectorMockIndex",
       "family": "lore:",
+      "semanticType": "vector.index.mock",
+      "w3cChecked": [
+        "as:Add",
+        "prov:Entity",
+        "dcterms:Dataset"
+      ],
       "reason": "Mock vector index with mock=true; no W3C term for deterministic mock embeddings.",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -316,6 +435,11 @@
     {
       "term": "lore:LineMaterialize",
       "family": "lore:",
+      "semanticType": "line.materialize",
+      "w3cChecked": [
+        "as:Create",
+        "prov:wasGeneratedBy"
+      ],
       "reason": "Materialization via @zeus/linea-kit; domain-specific to LORE barrio.",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -325,6 +449,12 @@
     {
       "term": "lore:GraphBifurcate",
       "family": "lore:",
+      "semanticType": "graph.bifurcate",
+      "w3cChecked": [
+        "as:Create",
+        "prov:wasDerivedFrom",
+        "prov:alternateOf"
+      ],
       "reason": "Graph bifurcation into parallel universes; no W3C equivalent.",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -334,6 +464,11 @@
     {
       "term": "lore:UniverseInstantiate",
       "family": "lore:",
+      "semanticType": "universe.instantiate",
+      "w3cChecked": [
+        "as:Create",
+        "prov:wasGeneratedBy"
+      ],
       "reason": "Instantiation of a LORE universe runner in the simulacro.",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -343,6 +478,12 @@
     {
       "term": "lore:CortoEmit",
       "family": "lore:",
+      "semanticType": "log.corto.emit",
+      "w3cChecked": [
+        "as:Create",
+        "as:Announce",
+        "prov:wasGeneratedBy"
+      ],
       "reason": "hm:CortoDeEjecucion chunk emission; not literary corto nor AS2.",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -352,6 +493,12 @@
     {
       "term": "lore:CortoQuery",
       "family": "lore:",
+      "semanticType": "log.corto.query",
+      "w3cChecked": [
+        "as:Question",
+        "as:View",
+        "prov:used"
+      ],
       "reason": "Query over hm:CortoDeEjecucion chunks; LORE-specific.",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
@@ -361,9 +508,252 @@
     {
       "term": "hm:Lease",
       "family": "hm:",
+      "semanticType": "provenance.association",
+      "w3cChecked": [
+        "prov:wasAssociatedWith",
+        "prov:Association",
+        "dcterms:rightsHolder"
+      ],
       "reason": "Candidata L03 para tipar Lease como clase; evaluada frente a prov:wasAssociatedWith.",
       "date": "2026-08-02",
       "signer": "Worker LORE-HM · WP-SDK-L04",
+      "retiredDate": "2026-08-02",
+      "retireReason": "Reuso PROV-O association + dcterms cubre el hueco en wire/vista; no activar acuñación paralela."
+    }
+  ],
+  "notariadosPorTipoSemantico": {
+    "_comment": "Superficie COMPLETA de consumo: los 40 términos notariados indexados por TIPO SEMÁNTICO, no por nombre de verbo. El gate WP-HUB-101 indexa hoy por nombre de verbo contra w3cEquivalents (9 claves) y exime a los 20 verbos que no aparecen ahí: debe consumir ESTE índice. Ver docs/CONSUMO-HUB-101.md §Superficie.",
+    "presence.peer.join": {
+      "term": "as:Join",
+      "family": "AS2",
+      "namespace": "https://www.w3.org/ns/activitystreams#",
+      "verb": "peer.join"
+    },
+    "presence.peer.announce": {
+      "term": "as:Announce",
+      "family": "AS2",
+      "namespace": "https://www.w3.org/ns/activitystreams#",
+      "verb": "peer.announce"
+    },
+    "observation.state.inspect": {
+      "term": "as:View",
+      "family": "AS2",
+      "namespace": "https://www.w3.org/ns/activitystreams#",
+      "verb": "state.inspect",
+      "verbAliases": [
+        "machine.status"
+      ]
+    },
+    "presence.session.exit": {
+      "term": "as:Leave",
+      "family": "AS2",
+      "namespace": "https://www.w3.org/ns/activitystreams#",
+      "verb": "session.exit"
+    },
+    "core.activity": {
+      "term": "as:Activity",
+      "family": "AS2",
+      "namespace": "https://www.w3.org/ns/activitystreams#"
+    },
+    "core.actor": {
+      "term": "as:Actor",
+      "family": "AS2",
+      "namespace": "https://www.w3.org/ns/activitystreams#"
+    },
+    "core.object": {
+      "term": "as:Object",
+      "family": "AS2",
+      "namespace": "https://www.w3.org/ns/activitystreams#"
+    },
+    "provenance.usage": {
+      "term": "prov:Usage",
+      "family": "PROV-O",
+      "namespace": "http://www.w3.org/ns/prov#",
+      "verb": "source.ingest"
+    },
+    "provenance.activity": {
+      "term": "prov:Activity",
+      "family": "PROV-O",
+      "namespace": "http://www.w3.org/ns/prov#",
+      "verb": "provenance.trace"
+    },
+    "provenance.association": {
+      "term": "prov:wasAssociatedWith",
+      "family": "PROV-O",
+      "namespace": "http://www.w3.org/ns/prov#"
+    },
+    "provenance.generation": {
+      "term": "prov:wasGeneratedBy",
+      "family": "PROV-O",
+      "namespace": "http://www.w3.org/ns/prov#"
+    },
+    "provenance.derivation": {
+      "term": "prov:wasDerivedFrom",
+      "family": "PROV-O",
+      "namespace": "http://www.w3.org/ns/prov#"
+    },
+    "artifact.dataset": {
+      "term": "dcterms:Dataset",
+      "family": "DCTERMS",
+      "namespace": "http://purl.org/dc/terms/",
+      "verb": "artifact.data"
+    },
+    "artifact.specification": {
+      "term": "dcterms:BibliographicResource",
+      "family": "DCTERMS",
+      "namespace": "http://purl.org/dc/terms/",
+      "verb": "artifact.spec"
+    },
+    "metadata.identifier": {
+      "term": "dcterms:identifier",
+      "family": "DCTERMS",
+      "namespace": "http://purl.org/dc/terms/"
+    },
+    "metadata.created": {
+      "term": "dcterms:created",
+      "family": "DCTERMS",
+      "namespace": "http://purl.org/dc/terms/"
+    },
+    "metadata.modified": {
+      "term": "dcterms:modified",
+      "family": "DCTERMS",
+      "namespace": "http://purl.org/dc/terms/"
+    },
+    "metadata.title": {
+      "term": "dcterms:title",
+      "family": "DCTERMS",
+      "namespace": "http://purl.org/dc/terms/"
+    },
+    "lease.pod.grant": {
+      "term": "hm:PodLease",
+      "family": "hm:",
+      "namespace": "https://logos.local/ns/hm#",
+      "verb": "pod.lease"
+    },
+    "lease.pod.revoke": {
+      "term": "hm:PodRevoke",
+      "family": "hm:",
+      "namespace": "https://logos.local/ns/hm#",
+      "verb": "pod.revoke"
+    },
+    "unit.lifecycle.inflate": {
+      "term": "hm:UnitInflate",
+      "family": "hm:",
+      "namespace": "https://logos.local/ns/hm#",
+      "verb": "unit.inflate"
+    },
+    "unit.lifecycle.start": {
+      "term": "hm:UnitStart",
+      "family": "hm:",
+      "namespace": "https://logos.local/ns/hm#",
+      "verb": "unit.start"
+    },
+    "unit.lifecycle.pause": {
+      "term": "hm:UnitPause",
+      "family": "hm:",
+      "namespace": "https://logos.local/ns/hm#",
+      "verb": "unit.pause"
+    },
+    "unit.lifecycle.resume": {
+      "term": "hm:UnitResume",
+      "family": "hm:",
+      "namespace": "https://logos.local/ns/hm#",
+      "verb": "unit.resume"
+    },
+    "unit.lifecycle.stop": {
+      "term": "hm:UnitStop",
+      "family": "hm:",
+      "namespace": "https://logos.local/ns/hm#",
+      "verb": "unit.stop"
+    },
+    "unit.diagnostics.debug": {
+      "term": "hm:UnitDebug",
+      "family": "hm:",
+      "namespace": "https://logos.local/ns/hm#",
+      "verb": "unit.debug"
+    },
+    "machine.deploy": {
+      "term": "hm:MachineDeploy",
+      "family": "hm:",
+      "namespace": "https://logos.local/ns/hm#",
+      "verb": "machine.deploy"
+    },
+    "unit.diagnostics.inspect": {
+      "term": "hm:UnitInspect",
+      "family": "hm:",
+      "namespace": "https://logos.local/ns/hm#",
+      "verb": "unit.inspect"
+    },
+    "pipeline.gap-analysis": {
+      "term": "hm:PipelineGapAnalysis",
+      "family": "hm:",
+      "namespace": "https://logos.local/ns/hm#",
+      "verb": "pipeline.gaps"
+    },
+    "artifact.validation": {
+      "term": "hm:ArtifactValidation",
+      "family": "hm:",
+      "namespace": "https://logos.local/ns/hm#",
+      "verb": "artifact.validate"
+    },
+    "ceremony.coverage.measure": {
+      "term": "hm:CoverageMeasure",
+      "family": "hm:",
+      "namespace": "https://logos.local/ns/hm#",
+      "verb": "coverage.measure"
+    },
+    "log.corto.chunk": {
+      "term": "hm:CortoDeEjecucion",
+      "family": "hm:",
+      "namespace": "https://logos.local/ns/hm#"
+    },
+    "document.analysis.bartleby": {
+      "term": "lore:DocumentAnalyze",
+      "family": "lore:",
+      "namespace": "https://logos.local/ns/lore#",
+      "verb": "document.analyze"
+    },
+    "vector.index.mock": {
+      "term": "lore:VectorMockIndex",
+      "family": "lore:",
+      "namespace": "https://logos.local/ns/lore#",
+      "verb": "vector.mock-index"
+    },
+    "line.materialize": {
+      "term": "lore:LineMaterialize",
+      "family": "lore:",
+      "namespace": "https://logos.local/ns/lore#",
+      "verb": "line.materialize"
+    },
+    "graph.bifurcate": {
+      "term": "lore:GraphBifurcate",
+      "family": "lore:",
+      "namespace": "https://logos.local/ns/lore#",
+      "verb": "graph.bifurcate"
+    },
+    "universe.instantiate": {
+      "term": "lore:UniverseInstantiate",
+      "family": "lore:",
+      "namespace": "https://logos.local/ns/lore#",
+      "verb": "universe.instantiate"
+    },
+    "log.corto.emit": {
+      "term": "lore:CortoEmit",
+      "family": "lore:",
+      "namespace": "https://logos.local/ns/lore#",
+      "verb": "corto.emit"
+    },
+    "log.corto.query": {
+      "term": "lore:CortoQuery",
+      "family": "lore:",
+      "namespace": "https://logos.local/ns/lore#",
+      "verb": "corto.query"
+    }
+  },
+  "retirados": [
+    {
+      "term": "hm:Lease",
+      "semanticType": "provenance.association",
       "retiredDate": "2026-08-02",
       "retireReason": "Reuso PROV-O association + dcterms cubre el hueco en wire/vista; no activar acuñación paralela."
     }

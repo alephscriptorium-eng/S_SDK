@@ -14,33 +14,78 @@
 
 Cualquier otra ruta (incluido el stub del hub) es **no canónica**.
 
-## Superficie que lee el gate
+## Contrato cotejable
 
-El checker hub (`playground/prueba-de-H-M/ci/test-101-ontologia.mjs`) usa
-hoy `gateVocabCoining(verbs, registry)` y espera:
+Este bloque lo **parsea y coteja** `vocab/scripts/verificar-vocab-l04.mjs`
+contra el registro vivo. Si el registro cambia y este bloque no, el gate se
+pone rojo. No es prosa decorativa.
 
-```js
-registry.w3cEquivalents[verb] === {
-  term: "as:Join" | "prov:…" | "dcterms:…",
-  namespace: "<IRI>",
-  family: "AS2" | "PROV-O" | "DCTERMS"
+```json contrato
+{
+  "canonicalPath": "NETWORK-ENGINE/LANGUAGES/lore-hm/vocab/registro.json",
+  "$id": "urn:lore-hm:vocab-registry:v1",
+  "entriesNotariadas": 40,
+  "activas": 39,
+  "retiradas": 1,
+  "superficieDeConsumo": "notariadosPorTipoSemantico",
+  "indexadoPor": "semanticType",
+  "proyeccionLegacy": "w3cEquivalents"
 }
 ```
 
-Esa clave **ya está** en `registro.json` → `w3cEquivalents`. El hub debe
-cargar **este archivo** (o un enlace/resolución hacia él), no reescribir el
-mapa a mano.
+## Superficie que lee el gate
 
-Además, `entries[]` es el registro notarial completo:
+### Lo que el gate hub hace hoy (y por qué no basta)
+
+El checker hub (`playground/prueba-de-H-M/ci/test-101-ontologia.mjs`,
+`gateVocabCoining()`) indexa **por nombre de verbo**:
+
+```js
+const equiv = registry.w3cEquivalents[verb];
+if (!equiv) continue;   // ← cualquier verbo fuera del mapa queda EXENTO
+```
+
+`w3cEquivalents` tiene **9** claves y el playground declara **29** verbos:
+la regla anti-acuñación exime a 20 de 29. Y el umbral de justificación es
+`coinReason.length > 10`, así que once caracteres cualesquiera valen.
+
+### Lo que este registro publica para arreglarlo
+
+`registro.json` → **`notariadosPorTipoSemantico`**: los **39 términos activos**
+(de 40 notariados; 1 retirado va en `retirados[]`) indexados por **tipo
+semántico**, no por nombre de verbo:
+
+```json
+"unit.lifecycle.stop": {
+  "term": "hm:UnitStop",
+  "family": "hm:",
+  "namespace": "https://logos.local/ns/hm#",
+  "verb": "unit.stop"
+}
+```
+
+El gate del hub debe **indexar por `semanticType`** y recorrer el índice
+completo: un verbo cuyo tipo semántico ya está notariado no puede acuñar otro
+término, y un verbo sin tipo semántico declarado no queda exento — queda
+**rojo**.
+
+`w3cEquivalents` se conserva como **proyección legacy** (compatibilidad con el
+gate actual del hub) y el verificador L04 comprueba que sea consistente con
+`entries[]`. No es la superficie: es un subconjunto.
+
+### Registro notarial (`entries[]`)
 
 | campo | obligatorio | notas |
 | ----- | ----------- | ----- |
 | `term` | sí | CURIE (`as:`/`prov:`/`dcterms:`/`hm:`/`lore:`) |
 | `family` | sí | `AS2` · `PROV-O` · `DCTERMS` · `hm:` · `lore:` |
-| `reason` | sí | ≥ 10 chars; acuñaciones sin razón = FAIL |
+| `semanticType` | sí | tipo punteado en minúsculas; **único entre entradas activas** — es la clave anti-acuñación |
+| `reason` | sí | prosa argumentada (≥40 chars, ≥6 palabras, vocabulario no repetido); «once puntos» = FAIL |
+| `w3cChecked` | sí, si `hm:`/`lore:` | CURIEs W3C concretos evaluados y descartados antes de acuñar |
 | `date` | sí | `YYYY-MM-DD` de la decisión |
 | `signer` | sí | quién firma la fila |
 | `verb` | no | vínculo al verbo playground si aplica |
+| `verbAliases` | no | otros verbos que comparten el mismo término |
 | `retiredDate` | sí (nullable) | `null` = activo; fecha = retirado (no borrar) |
 | `retireReason` | si retirado | por qué se retiró |
 
