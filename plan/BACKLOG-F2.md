@@ -334,7 +334,7 @@ gobernada y notariada por **07**. `HOLONES.md` sigue con **siete filas**.
 - **Pri:** P1 · dep: L03
 - **Estado:** ✅ ola 4 · tip `231bd3a` · rama `wp/sdk-l04-registro-de-vocabulario` · PASS_CON_ADDENDA (hub-101 stub→consumo documentado; cableado hub pendiente) · verde **local** · **sin merge main**
 
-### WP-SDK-L05 · sellado-de-network-engine 🔶
+### WP-SDK-L05 · sellado-de-network-engine ✅
 - **BRIEF:** sellar la generación anterior como **fuente histórica** del
   lenguaje: definición, commit y decisiones anclados desde S. Ningún consumidor
   conserva dependencia de runtime ni path hacia ella.
@@ -344,6 +344,7 @@ gobernada y notariada por **07**. `HOLONES.md` sigue con **siete filas**.
   inflar** hasta tick explícito del custodio · LORE-HM aparece en `HOLONES.md`
   como **costura ejecutable, no como fila nueva**.
 - **Pri:** P2 · dep: L02
+- **Estado:** ✅ ola 6 · tip `0eca110` · rama `wp/sdk-l05-sellado-de-network-engine` · PASS_CON_ADDENDA (junturas ⏳ madurez) · verde **local** · **sin merge main**
 
 ---
 
@@ -395,6 +396,8 @@ verde local; sin merge main).
 `C:/S_LAB/wt/s-sdk-wp-sdk-l03`, base tip `7a6ac45`).
 
 ✎ **2026-08-02**: ola 6 GO — `WP-SDK-L05` 🔶 despachado.
+
+✎ **2026-08-02**: ola 6 — `WP-SDK-L05` ✅ (tip `0eca110`; PASS_CON_ADDENDA; verde local; lane LENGUA cerrada).
 
 ✎ **2026-08-02**: ola 4 — `WP-SDK-L04` ✅ (tip `231bd3a`; PASS_CON_ADDENDA; verde local).
 
