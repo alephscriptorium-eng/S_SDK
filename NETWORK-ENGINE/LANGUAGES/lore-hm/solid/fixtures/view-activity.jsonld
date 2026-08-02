@@ -1,0 +1,12 @@
+{
+  "@context": "../schemas/context.jsonld",
+  "@id": "urn:lore-hm:activity:l03-demo-1",
+  "@type": "Activity",
+  "actor": "urn:lore-hm:peer:h-demo",
+  "object": "urn:lore-hm:artifact:demo-1",
+  "published": "2026-08-02T05:00:00.000Z",
+  "identifier": "sha256:SEE_WIRE_HUELLA",
+  "wasAssociatedWith": "urn:lore-hm:peer:h-demo",
+  "wasGeneratedBy": "urn:lore-hm:activity:l03-demo-1",
+  "authoritative": false
+}

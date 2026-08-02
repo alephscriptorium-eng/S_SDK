@@ -1,0 +1,18 @@
+{
+  "kind": "WireActivity",
+  "iri": "urn:lore-hm:activity:l03-demo-1",
+  "type": "Create",
+  "actor": "urn:lore-hm:peer:h-demo",
+  "object": "urn:lore-hm:artifact:demo-1",
+  "published": "2026-08-02T05:00:00.000Z",
+  "plane": "room-l2",
+  "identity": {
+    "peerCard": "urn:lore-hm:peercard:demo",
+    "missing": ["webId", "ssbId"]
+  },
+  "sealedBytesEncoding": "utf8",
+  "provenance": {
+    "wasAssociatedWith": "urn:lore-hm:peer:h-demo",
+    "wasGeneratedBy": "urn:lore-hm:activity:l03-demo-1"
+  }
+}
