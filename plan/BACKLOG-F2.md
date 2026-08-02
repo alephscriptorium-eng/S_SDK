@@ -295,7 +295,7 @@ gobernada y notariada por **07**. `HOLONES.md` sigue con **siete filas**.
 - **Pri:** P0 · dep: L01
 - **Estado:** ✅ ola 2 · tip `7a6ac45` · rama `wp/sdk-l02-inception-lengua-lore-hm` · PASS_CON_ADDENDA · verde **local** · **sin merge main**
 
-### WP-SDK-L03 · capa-solid-de-primera-clase
+### WP-SDK-L03 · capa-solid-de-primera-clase 🔶
 - **BRIEF:** diseñar **desde v1** la capa completa, con adapters escalonados.
   Dos representaciones coordinadas: **wire JSON ejecutable**, validado por
   JSON Schema y sellado por bytes, y **vista JSON-LD/RDF**, validada por
@@ -321,6 +321,7 @@ gobernada y notariada por **07**. `HOLONES.md` sigue con **siete filas**.
   insumo por curar — prohibido copiarlo o afirmar que está implementado ·
   reuso AS2 / PROV-O / DCTERMS antes de acuñar.
 - **Pri:** P1 · dep: L02
+- **Estado:** 🔶 ola 3 · rama `wp/sdk-l03-capa-solid-de-primera-clase` · wt `C:/S_LAB/wt/s-sdk-wp-sdk-l03` · base `7a6ac45`
 
 ### WP-SDK-L04 · registro-de-vocabulario
 - **BRIEF:** registro durable de decisiones de vocabulario: término, familia
@@ -388,6 +389,9 @@ orden del product owner.
 
 ✎ **2026-08-02**: ola 2 — `WP-SDK-L02` ✅ (PASS_CON_ADDENDA; tip `7a6ac45`;
 verde local; sin merge main).
+
+✎ **2026-08-02**: ola 3 GO — `WP-SDK-L03` 🔶 despachado (wt
+`C:/S_LAB/wt/s-sdk-wp-sdk-l03`, base tip `7a6ac45`).
 
 ## Dependencias maestras
 
