@@ -1,0 +1,26 @@
+{
+  "@context": {
+    "as": "https://www.w3.org/ns/activitystreams#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "hm": "https://logos.local/ns/hm#",
+    "lore": "https://logos.local/ns/lore#",
+    "id": "@id",
+    "type": "@type",
+    "Actor": "as:Actor",
+    "Activity": "as:Activity",
+    "Object": "as:Object",
+    "actor": "as:actor",
+    "object": "as:object",
+    "published": "as:published",
+    "generator": "as:generator",
+    "wasGeneratedBy": "prov:wasGeneratedBy",
+    "wasDerivedFrom": "prov:wasDerivedFrom",
+    "wasAssociatedWith": "prov:wasAssociatedWith",
+    "identifier": "dcterms:identifier",
+    "created": "dcterms:created",
+    "modified": "dcterms:modified",
+    "title": "dcterms:title"
+  },
+  "@comment": "Vista no autoritativa. Prefijos hm:/lore: son reservas; acuñación en L04. No mapear tool MCP→predicado aquí."
+}

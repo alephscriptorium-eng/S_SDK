@@ -1,0 +1,21 @@
+{
+  "$comment": "Typecheck de la lengua LORE-HM (incubación). noEmit: no se publica package. Lo ejecuta el paso `typecheck-lore-hm` de .github/workflows/ci-lore-hm.yml. Antes de WP-ZV-S la lengua NO compilaba (TS2352 ×2 en src/brands.ts) y ningún gate lo comprobaba: `grep -c tsc` sobre el workflow daba 0.",
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "types": []
+  },
+  "include": ["src/**/*.ts", "solid/src/**/*.ts", "demos/**/*.ts"]
+}

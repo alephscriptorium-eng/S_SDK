@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://logos.local/schemas/lore-hm/solid/wire-activity.schema.json",
+  "title": "LORE-HM SOLID wire Activity (authoritative)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "kind",
+    "iri",
+    "type",
+    "actor",
+    "sealedBytesEncoding",
+    "huellaLedger"
+  ],
+  "properties": {
+    "kind": { "const": "WireActivity" },
+    "iri": { "type": "string", "minLength": 1 },
+    "type": {
+      "type": "string",
+      "description": "AS2 activity type short name or IRI; not an MCP tool name auto-mapped"
+    },
+    "actor": { "type": "string", "minLength": 1 },
+    "object": { "type": "string" },
+    "causedBy": { "type": "string" },
+    "published": { "type": "string", "format": "date-time" },
+    "plane": {
+      "type": "string",
+      "enum": ["room-l2", "solid-l1"],
+      "description": "Event plane discriminator; never conflate"
+    },
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Optional related credentials; never a fused single id",
+      "properties": {
+        "webId": { "type": "string" },
+        "peerCard": { "type": "string" },
+        "ssbId": { "type": "string" },
+        "missing": {
+          "type": "array",
+          "items": { "enum": ["webId", "peerCard", "ssbId"] }
+        }
+      }
+    },
+    "sealedBytesEncoding": {
+      "const": "utf8",
+      "description": "Wire seal is over UTF-8 bytes of the sealed payload"
+    },
+    "huellaLedger": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["alg", "digest"],
+      "properties": {
+        "alg": {
+          "type": "string",
+          "enum": ["sha256"],
+          "description": "DIC-4 default; rdfc-1.0 only on measured families (not wire default)"
+        },
+        "digest": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "wasAssociatedWith": { "type": "string" },
+        "wasDerivedFrom": { "type": "string" },
+        "wasGeneratedBy": { "type": "string" }
+      }
+    }
+  }
+}

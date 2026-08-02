@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://logos.local/schemas/lore-hm/demo/C-corrida.schema.json",
+  "title": "Forma C — corrida completa: phase + history (JSON Schema 2020-12)",
+  "description": "La regla sobre la corrida entera: si la Unit está en ready (o más allá) el documento debe traer un history que contenga las transiciones a leased y a inflated, y cada par del history debe ser un sucesor legal. Config plana, sin motor de estados.",
+  "type": "object",
+  "required": ["unit"],
+  "properties": {
+    "unit": {
+      "type": "object",
+      "required": ["iri", "phase"],
+      "properties": {
+        "iri": { "type": "string", "minLength": 1 },
+        "phase": { "$ref": "#/$defs/phase" }
+      }
+    },
+    "history": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/transicionLegal" }
+    },
+    "lease": {},
+    "activities": { "type": "array" },
+    "illegalJump": { "$ref": "#/$defs/transicionLegal" }
+  },
+  "$defs": {
+    "phase": {
+      "type": "string",
+      "enum": ["declared", "leased", "inflated", "ready", "running", "halted"]
+    },
+    "transicionLegal": {
+      "type": "object",
+      "required": ["from", "to"],
+      "properties": {
+        "from": { "$ref": "#/$defs/phase" },
+        "to": { "$ref": "#/$defs/phase" }
+      },
+      "anyOf": [
+        { "properties": { "from": { "const": "declared" }, "to": { "const": "leased" } } },
+        { "properties": { "from": { "const": "leased" }, "to": { "const": "inflated" } } },
+        { "properties": { "from": { "const": "inflated" }, "to": { "const": "ready" } } },
+        { "properties": { "from": { "const": "ready" }, "to": { "const": "running" } } },
+        { "properties": { "from": { "const": "running" }, "to": { "const": "halted" } } }
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "required": ["unit"],
+        "properties": {
+          "unit": {
+            "required": ["phase"],
+            "properties": { "phase": { "enum": ["ready", "running", "halted"] } }
+          }
+        }
+      },
+      "then": {
+        "required": ["history"],
+        "properties": {
+          "history": {
+            "allOf": [
+              { "contains": { "type": "object", "required": ["to"], "properties": { "to": { "const": "leased" } } } },
+              { "contains": { "type": "object", "required": ["to"], "properties": { "to": { "const": "inflated" } } } },
+              { "contains": { "type": "object", "required": ["to"], "properties": { "to": { "const": "ready" } } } }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

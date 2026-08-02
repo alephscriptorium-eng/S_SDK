@@ -1,0 +1,42 @@
+# LORE-HM SOLID · SHACL shapes (vista JSON-LD/RDF)
+# Vista NO autoritativa salvo canonicalización semántica explícita (familia medida).
+# Prefijos W3C primero; hm: solo huecos futuros (L04).
+
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix as: <https://www.w3.org/ns/activitystreams#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+as:ActivityShape
+  a sh:NodeShape ;
+  sh:targetClass as:Activity ;
+  sh:property [
+    sh:path as:actor ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+  ] ;
+  sh:property [
+    sh:path as:published ;
+    sh:datatype xsd:dateTime ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path dcterms:identifier ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:description "Digest etiquetado del wire; la vista no redefine huellaLedger" ;
+  ] .
+
+prov:DerivationShape
+  a sh:NodeShape ;
+  sh:targetClass prov:Entity ;
+  sh:property [
+    sh:path prov:wasGeneratedBy ;
+    sh:nodeKind sh:IRI ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path prov:wasDerivedFrom ;
+    sh:nodeKind sh:IRI ;
+  ] .

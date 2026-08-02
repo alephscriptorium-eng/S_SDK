@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://logos.local/schemas/lore-hm/demo/B-pares-legales.schema.json",
+  "title": "Forma B — tabla plana de pares legales (anyOf de const)",
+  "description": "La misma regla escrita como enumeración explícita de los pares (from,to) permitidos. Es literalmente «una tabla de configuración» y aun así rechaza declared→ready.",
+  "type": "object",
+  "required": ["from", "to"],
+  "anyOf": [
+    { "properties": { "from": { "const": "declared" }, "to": { "const": "leased" } }, "required": ["from", "to"] },
+    { "properties": { "from": { "const": "leased" }, "to": { "const": "inflated" } }, "required": ["from", "to"] },
+    { "properties": { "from": { "const": "inflated" }, "to": { "const": "ready" } }, "required": ["from", "to"] },
+    { "properties": { "from": { "const": "ready" }, "to": { "const": "running" } }, "required": ["from", "to"] },
+    { "properties": { "from": { "const": "running" }, "to": { "const": "halted" } }, "required": ["from", "to"] }
+  ]
+}

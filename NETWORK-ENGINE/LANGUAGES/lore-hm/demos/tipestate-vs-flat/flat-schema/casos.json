@@ -1,0 +1,48 @@
+{
+  "$comment": "Tabla de casos del demo. `esperado` es el veredicto que DEBE dar cada esquema; el script compara y falla si difiere. Ninguna instancia se autodeclara aceptable: el veredicto lo pone el esquema al ejecutarse.",
+  "transiciones": [
+    { "id": "T1", "caso": { "from": "declared", "to": "ready" }, "esperado": false, "nota": "el salto ilegal del fixture — objeto literal de flat-config.attempt.json" },
+    { "id": "T2", "caso": { "from": "declared", "to": "leased" }, "esperado": true, "nota": "sucesor legal de control" },
+    { "id": "T3", "caso": { "from": "leased", "to": "inflated" }, "esperado": true, "nota": "cadena canónica" },
+    { "id": "T4", "caso": { "from": "inflated", "to": "ready" }, "esperado": true, "nota": "cadena canónica — legal LOCALMENTE aunque el history no exista (punto ciego de las formas A/B)" },
+    { "id": "T5", "caso": { "from": "leased", "to": "ready" }, "esperado": false, "nota": "salta inflated" },
+    { "id": "T6", "caso": { "from": "running", "to": "halted" }, "esperado": true, "nota": "cadena canónica de tipestate.ts — ILEGAL bajo la tabla vieja del script, que no contenía running ni halted" },
+    { "id": "T7", "caso": { "from": "halted", "to": "declared" }, "esperado": false, "nota": "halted es terminal (TransitionMap.halted = never)" }
+  ],
+  "corridas": [
+    {
+      "id": "C1",
+      "nota": "ready sin history → la forma C exige la traza",
+      "caso": { "unit": { "iri": "urn:lore-hm:unit:fm-mock-1", "phase": "ready" } },
+      "esperado": false
+    },
+    {
+      "id": "C2",
+      "nota": "ready con history completo declared→leased→inflated→ready",
+      "caso": {
+        "unit": { "iri": "urn:lore-hm:unit:fm-mock-1", "phase": "ready" },
+        "history": [
+          { "from": "declared", "to": "leased" },
+          { "from": "leased", "to": "inflated" },
+          { "from": "inflated", "to": "ready" }
+        ]
+      },
+      "esperado": true
+    },
+    {
+      "id": "C3",
+      "nota": "ready con history que salta leased/inflated → rechazado por partida doble (par ilegal + contains)",
+      "caso": {
+        "unit": { "iri": "urn:lore-hm:unit:fm-mock-1", "phase": "ready" },
+        "history": [{ "from": "declared", "to": "ready" }]
+      },
+      "esperado": false
+    },
+    {
+      "id": "C4",
+      "nota": "declared sin history → legal (nada que exigir todavía)",
+      "caso": { "unit": { "iri": "urn:lore-hm:unit:fm-mock-1", "phase": "declared" } },
+      "esperado": true
+    }
+  ]
+}

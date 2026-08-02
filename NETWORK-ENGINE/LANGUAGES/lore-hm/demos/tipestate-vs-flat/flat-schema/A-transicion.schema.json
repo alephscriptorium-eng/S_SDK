@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://logos.local/schemas/lore-hm/demo/A-transicion.schema.json",
+  "title": "Forma A — transición Unit {from,to} (JSON Schema 2020-12, config plana)",
+  "description": "Expresa «Unit no alcanza ready sin pasar por leased→inflated» sobre el objeto de transición literal del fixture. NO necesita motor de estados: if/then sobre `from` fija el único sucesor legal.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["from", "to"],
+  "properties": {
+    "from": { "$ref": "#/$defs/phase" },
+    "to": { "$ref": "#/$defs/phase" },
+    "reason": { "type": "string" },
+    "veredicto": { "type": "string" }
+  },
+  "$defs": {
+    "phase": {
+      "type": "string",
+      "enum": ["declared", "leased", "inflated", "ready", "running", "halted"]
+    }
+  },
+  "allOf": [
+    {
+      "if": { "required": ["from"], "properties": { "from": { "const": "declared" } } },
+      "then": { "properties": { "to": { "const": "leased" } } }
+    },
+    {
+      "if": { "required": ["from"], "properties": { "from": { "const": "leased" } } },
+      "then": { "properties": { "to": { "const": "inflated" } } }
+    },
+    {
+      "if": { "required": ["from"], "properties": { "from": { "const": "inflated" } } },
+      "then": { "properties": { "to": { "const": "ready" } } }
+    },
+    {
+      "if": { "required": ["from"], "properties": { "from": { "const": "ready" } } },
+      "then": { "properties": { "to": { "const": "running" } } }
+    },
+    {
+      "if": { "required": ["from"], "properties": { "from": { "const": "running" } } },
+      "then": { "properties": { "to": { "const": "halted" } } }
+    },
+    {
+      "if": { "required": ["from"], "properties": { "from": { "const": "halted" } } },
+      "then": false
+    }
+  ]
+}

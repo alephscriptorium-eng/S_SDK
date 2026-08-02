@@ -30,3 +30,15 @@ holones se descubrió siendo él mismo un holón — esta codebase, que relee y
 ancla a todos los anteriores sin contenerlos. Cada holón vive en `holones/`;
 el material excedente de las grietas, en `holones/junturas/`. Plantilla:
 `holones/TEMPLATE.md`.
+
+## Costuras ejecutables (no filas)
+
+No son holones nuevos: atraviesan la cadena y se verifican por check, no por
+añadir fila a la tabla de arriba.
+
+| costura | une | ancla verificable | estado |
+| ------- | --- | ----------------- | ------ |
+| **LORE-HM** | 01–04 (lengua común H/M); notariada por 07 | incubación/histórico `NETWORK-ENGINE/LANGUAGES/lore-hm/` (sellado WP-SDK-L05; **no** runtime consumer) · dossier `holones/junturas/lore-hm-integracion-holonica/` | sellado histórico en S · junturas 01↔02·02↔03·03↔04 con cuerpo LORE-HM **⏳ pendiente** madurez E01+E11 · package `@logos/lore-hm` **decisión pendiente** |
+
+Gate local del sellado:
+`NETWORK-ENGINE/LANGUAGES/lore-hm/scripts/verificar-sellado-l05.mjs`.

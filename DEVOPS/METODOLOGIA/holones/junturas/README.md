@@ -22,4 +22,19 @@ Junturas activas (una por par consecutivo de holones vivos):
 - [`05-06-sospecha-constelacion.md`](05-06-sospecha-constelacion.md) — lo que la sospecha desentierra, la constelación lo federa (pieza: el INVENTARIO del plan spinoff).
 - [`06-07-posmodernidad-metodo.md`](06-07-posmodernidad-metodo.md) — de la fragmentación al método: el registro se descubre holón.
 
+Dossier transversal LORE-HM (costura 01–04, notariado por 07):
+
+- [`lore-hm-integracion-holonica/`](lore-hm-integracion-holonica/) — integración
+  holónica LORE-HM: mapa de escalas, lengua, SOLID, consumidores y plan de
+  fases. Aceptado en rama `wp/sdk-l01-dossier-holonico-lore-hm` (WP-SDK-L01);
+  síntesis durable en junturas ⏳ pendiente custodio.
+
+Sellado histórico (WP-SDK-L05 · cierra lane LENGUA):
+
+- Incubación `NETWORK-ENGINE/LANGUAGES/lore-hm/` = **fuente histórica**, no
+  runtime consumer (`NETWORK-ENGINE/LANGUAGES/lore-hm/docs/SELLADO.md`).
+- Junturas `01-02` · `02-03` · `03-04`: cuerpo LORE-HM **⏳ pendiente** (madurez
+  E01+E11 en 🔴); no se inventa material excedente.
+- `HOLONES.md`: LORE-HM como **costura ejecutable**, no fila nueva.
+
 Cabo suelto: `04-05` se abrirá al generar narrativamente el holón 05.
