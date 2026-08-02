@@ -5,7 +5,7 @@
   "actor": "urn:lore-hm:peer:h-demo",
   "object": "urn:lore-hm:artifact:demo-1",
   "published": "2026-08-02T05:00:00.000Z",
-  "identifier": "sha256:SEE_WIRE_HUELLA",
+  "identifier": "sha256:cc6a07318ce61f3aaf2fde77d21cea0b4126fa5ed7fdb4b9040d7e5d9341e91b",
   "wasAssociatedWith": "urn:lore-hm:peer:h-demo",
   "wasGeneratedBy": "urn:lore-hm:activity:l03-demo-1",
   "authoritative": false

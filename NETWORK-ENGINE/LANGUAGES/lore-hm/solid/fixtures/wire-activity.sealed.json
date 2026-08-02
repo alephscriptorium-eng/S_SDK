@@ -8,11 +8,18 @@
   "plane": "room-l2",
   "identity": {
     "peerCard": "urn:lore-hm:peercard:demo",
-    "missing": ["webId", "ssbId"]
+    "missing": [
+      "webId",
+      "ssbId"
+    ]
   },
   "sealedBytesEncoding": "utf8",
   "provenance": {
     "wasAssociatedWith": "urn:lore-hm:peer:h-demo",
     "wasGeneratedBy": "urn:lore-hm:activity:l03-demo-1"
+  },
+  "huellaLedger": {
+    "alg": "sha256",
+    "digest": "cc6a07318ce61f3aaf2fde77d21cea0b4126fa5ed7fdb4b9040d7e5d9341e91b"
   }
 }

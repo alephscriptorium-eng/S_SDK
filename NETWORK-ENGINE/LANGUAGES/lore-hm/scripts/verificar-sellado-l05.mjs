@@ -1,7 +1,24 @@
 #!/usr/bin/env node
 /**
- * WP-SDK-L05 · grep-gate: cero imports/paths Network-Engine en consumidores.
- * Allowlist: NETWORK-ENGINE/** (incubación / sellado histórico declarado).
+ * WP-SDK-L05 · sellado de NETWORK-ENGINE/LANGUAGES/lore-hm.
+ *
+ * Las CA miden ahora la **propiedad**, no la cardinalidad, los bytes ni un
+ * substring. Corrección WP-ZV-S ②: la versión anterior dejaba pasar 13 de 13
+ * mutaciones medidas, entre ellas
+ *   · `L_SDK/` + `package.json {"name":"@logos/lore-hm"}` + `HOLONES/08-logos/`
+ *     todo a la vez → VERDE (la CA anti-holón-08 **no tenía guard, ni malo**:
+ *     el único hit de «L_SDK» en código ejecutable era un comentario mal
+ *     etiquetado en `verificar-inception-l02.mjs` cuyo código grepeaba la
+ *     palabra «cinco»);
+ *   · fila 08 en negrita / HTML / ítem de lista / con padding, o añadir 08 y
+ *     borrar 06 → el conteo seguía en 7;
+ *   · juntura reducida a dos palabras, o diciendo «Nada pendiente» → el patrón
+ *     `/⏳ pendiente|pendiente/` se subsumía a sí mismo;
+ *   · README del asiento a 790 chars diciendo «INFLADO» → el check era
+ *     `length > 800`.
+ * Y el grep-gate escaneaba **1 fichero de 782**: `SKIP_PREFIXES` excluía
+ * `DEVOPS/ plan/ docs/ WPS_QUEUE/ .claude/` y sólo quedaba `package.json`.
+ *
  * Sin deps externas. No sustituye CI.
  */
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
@@ -18,26 +35,50 @@ const CODE_EXT = new Set([
   '.mjs',
   '.cjs',
   '.json',
+  '.yml',
+  '.yaml',
 ]);
 
-/** Prefijos relativos (posix) que NO son consumidores runtime. */
-const SKIP_PREFIXES = [
-  'NETWORK-ENGINE/', // incubación / sellado histórico declarado
-  'DEVOPS/',
-  'plan/',
-  'docs/',
-  'WPS_QUEUE/',
-  '.claude/',
-  'node_modules/',
-  '.git/',
+/**
+ * Skips **justificados**. Cada uno lleva su razón y se imprime en cada corrida:
+ * la superficie del gate no puede volver a encogerse en silencio.
+ */
+const SKIPS = [
+  ['NETWORK-ENGINE/', 'allowlist por diseño: es la propia incubación sellada'],
+  ['.claude/skills/', 'espejo byte-a-byte de un paquete npm, escrito por `npm run skills:sync`'],
+  ['node_modules/', 'dependencias'],
+  ['.git/', 'metadatos de git'],
 ];
 
-const SKIP_NAMES = new Set([
-  'package-lock.json',
-  'CHANGELOG.md',
-  'AUTORIDADES.md',
-  'LLM.md',
+const SKIP_NAMES = new Set(['package-lock.json']);
+
+/**
+ * Ficheros que SÍ pueden citar la ruta, uno a uno y con motivo.
+ * Un hit fuera de esta lista es rojo. No hay directorios enteros exentos.
+ */
+const ALLOWLIST_HITS = new Map([
+  [
+    '.github/workflows/ci-lore-hm.yml',
+    'arnés de CI: invoca los verificadores por ruta; no es consumidor runtime',
+  ],
+  [
+    'DEVOPS/METODOLOGIA/holones/junturas/lore-hm-integracion-holonica/scripts/suite-lengua.mjs',
+    'suite de gates del dossier: invoca los verificadores por ruta; no es consumidor runtime',
+  ],
 ]);
+
+/**
+ * Anclas de superficie: si alguna de estas rutas deja de escanearse, el gate
+ * dejó de mirar donde importa. Es la guarda contra reintroducir skips de
+ * conveniencia (la causa medida de que la superficie fuera 1 fichero de 782).
+ */
+const ANCLAS_SUPERFICIE = [
+  'package.json',
+  '.github/workflows/ci-lore-hm.yml',
+  'DEVOPS/METODOLOGIA/holones/junturas/lore-hm-integracion-holonica/scripts/suite-lengua.mjs',
+];
+/** Suelo. Medido 2026-08-02: 75 ficheros de código escaneados. */
+const MIN_ESCANEADOS = 40;
 
 /** Hits que cuentan como dependencia runtime/path en consumidores. */
 const HIT_RE =
@@ -81,15 +122,13 @@ function toPosix(p) {
 
 function shouldSkip(relPosix) {
   if (SKIP_NAMES.has(relPosix.split('/').pop())) return true;
-  for (const pref of SKIP_PREFIXES) {
-    if (relPosix === pref.slice(0, -1) || relPosix.startsWith(pref)) {
-      return true;
-    }
+  for (const [pref] of SKIPS) {
+    if (relPosix === pref.slice(0, -1) || relPosix.startsWith(pref)) return true;
   }
   return false;
 }
 
-function walk(dir, root, out) {
+function walk(dir, root, out, dirsOut) {
   let entries;
   try {
     entries = readdirSync(dir, { withFileTypes: true });
@@ -99,16 +138,19 @@ function walk(dir, root, out) {
   for (const ent of entries) {
     const abs = join(dir, ent.name);
     const rel = toPosix(relative(root, abs));
-    if (shouldSkip(rel)) continue;
     if (ent.isDirectory()) {
       if (ent.name === 'node_modules' || ent.name === '.git') continue;
-      walk(abs, root, out);
-    } else if (ent.isFile()) {
-      const ext = ent.name.includes('.')
-        ? `.${ent.name.split('.').pop()}`
-        : '';
-      if (CODE_EXT.has(ext) || ent.name === 'package.json') out.push(abs);
+      // Los directorios se registran SIEMPRE (el guard anti-extracción mira
+      // nombres de directorio, y saltarlos era parte del agujero).
+      dirsOut.push(rel);
+      if (shouldSkip(`${rel}/`)) continue;
+      walk(abs, root, out, dirsOut);
+      continue;
     }
+    if (!ent.isFile()) continue;
+    if (shouldSkip(rel)) continue;
+    const ext = ent.name.includes('.') ? `.${ent.name.split('.').pop()}` : '';
+    if (CODE_EXT.has(ext)) out.push(abs);
   }
 }
 
@@ -121,12 +163,35 @@ function scanFile(abs, root) {
     return;
   }
   if (!HIT_RE.test(text)) return;
+  if (ALLOWLIST_HITS.has(rel)) return;
   const lines = text.split(/\r?\n/);
   for (let i = 0; i < lines.length; i++) {
     if (HIT_RE.test(lines[i])) {
       hits.push(`${rel}:${i + 1}:${lines[i].trim().slice(0, 120)}`);
     }
   }
+}
+
+// ---------------------------------------------------------------------------
+// CA · el sellado histórico está donde dice estar
+// ---------------------------------------------------------------------------
+function checkIncubationPresent(root) {
+  const required = [
+    'NETWORK-ENGINE/README.md',
+    'NETWORK-ENGINE/LANGUAGES/lore-hm/docs/SELLADO.md',
+    'NETWORK-ENGINE/LANGUAGES/lore-hm/README.md',
+    'NETWORK-ENGINE/LANGUAGES/lore-hm/scripts/verificar-inception-l02.mjs',
+    'NETWORK-ENGINE/LANGUAGES/lore-hm/solid/scripts/verificar-solid-l03.mjs',
+    'NETWORK-ENGINE/LANGUAGES/lore-hm/vocab/scripts/verificar-vocab-l04.mjs',
+  ];
+  let faltan = 0;
+  for (const rel of required) {
+    if (!existsSync(join(root, ...rel.split('/')))) {
+      fail(`falta sellado/histórico: ${rel}`);
+      faltan++;
+    }
+  }
+  if (faltan === 0) ok(`sellado histórico completo (${required.length} anclas)`);
 }
 
 function checkPackageJson(root) {
@@ -153,22 +218,67 @@ function checkPackageJson(root) {
   ok('package.json sin deps path/runtime a NETWORK-ENGINE');
 }
 
-function checkIncubationPresent(root) {
-  const required = [
-    'NETWORK-ENGINE/README.md',
-    'NETWORK-ENGINE/LANGUAGES/lore-hm/docs/SELLADO.md',
-    'NETWORK-ENGINE/LANGUAGES/lore-hm/README.md',
-    'NETWORK-ENGINE/LANGUAGES/lore-hm/scripts/verificar-inception-l02.mjs',
-    'NETWORK-ENGINE/LANGUAGES/lore-hm/solid/scripts/verificar-solid-l03.mjs',
-    'NETWORK-ENGINE/LANGUAGES/lore-hm/vocab/scripts/verificar-vocab-l04.mjs',
-  ];
-  for (const rel of required) {
-    if (!existsSync(join(root, ...rel.split('/')))) {
-      fail(`falta sellado/histórico: ${rel}`);
-    } else {
-      ok(`existe ${rel}`);
+// ---------------------------------------------------------------------------
+// CA · la lengua NO se ha extraído a package ni promovido a holón 08.
+//      Este es el guard que faltaba: antes no existía, ni malo.
+// ---------------------------------------------------------------------------
+function checkNoExtraccionLengua(root, dirs, files) {
+  let malos = 0;
+  const normaliza = (n) => n.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+  for (const rel of dirs) {
+    const base = rel.split('/').pop();
+    const n = normaliza(base);
+    if (/^lsdk/.test(n) || /^lenguasdk/.test(n) || /^loresdk/.test(n)) {
+      fail(`extracción de la lengua: directorio «${rel}» (patrón L_SDK/LSDK/LENGUA_SDK)`);
+      malos++;
+    }
+    if (/^HOLONES\/(0[89]|[1-9]\d)/i.test(rel)) {
+      fail(`holón nuevo no autorizado: «${rel}» (LORE-HM es costura, no fila)`);
+      malos++;
     }
   }
+
+  // Cualquier package.json que publique la lengua, a cualquier profundidad.
+  for (const abs of files) {
+    const rel = toPosix(relative(root, abs));
+    if (rel.split('/').pop() !== 'package.json') continue;
+    let pkg;
+    try {
+      pkg = JSON.parse(readFileSync(abs, 'utf8'));
+    } catch {
+      continue;
+    }
+    const name = String(pkg.name ?? '');
+    if (/@logos\/lore-?hm/i.test(name) || /(^|\/)lore-?hm$/i.test(name)) {
+      fail(
+        `extracción de la lengua: ${rel} declara name="${name}" — la puerta de ` +
+          'promoción (NETWORK-ENGINE/LANGUAGES/lore-hm/docs/PUERTA-PROMOCION.md) no está abierta',
+      );
+      malos++;
+    }
+  }
+
+  if (malos === 0) {
+    ok(
+      'sin extracción: 0 dirs L_SDK/LENGUA_SDK · 0 holones ≥08 · 0 package.json ' +
+        `«lore-hm» (${dirs.length} dirs, ${files.length} ficheros de código inspeccionados)`,
+    );
+  }
+}
+
+// ---------------------------------------------------------------------------
+// CA · HOLONES.md: identidad del conjunto de filas, no su cardinalidad
+// ---------------------------------------------------------------------------
+const HOLONES_ESPERADOS = ['01', '02', '03', '04', '05', '06', '07'];
+
+/** Quita negrita/cursiva/HTML/backticks/viñetas: «| **08** |» ≡ «| 08 |». */
+function desnuda(celda) {
+  return celda
+    .replace(/<[^>]*>/g, '')
+    .replace(/[*_`~]/g, '')
+    .replace(/^[\s>\-+*]+/, '')
+    .trim();
 }
 
 function checkHolonesCostura(root) {
@@ -178,29 +288,137 @@ function checkHolonesCostura(root) {
     return;
   }
   const text = readFileSync(holones, 'utf8');
-  const rows = [...text.matchAll(/^\| (\d{2}) \|/gm)].map((m) => m[1]);
-  if (rows.length !== 7) {
-    fail(`HOLONES.md filas de holón = ${rows.length} (esperado 7; LORE-HM no es fila)`);
-  } else {
-    ok('HOLONES.md = 7 filas (sin holón 08)');
+
+  // Recoge TODA celda inicial de tabla que sea un número de holón, sea cual sea
+  // su maquillaje. Antes el regex era /^\| (\d{2}) \|/gm y `| **08** |` no
+  // casaba: la fila 08 entraba en negrita sin que el conteo se moviera.
+  const numeros = [];
+  for (const linea of text.split(/\r?\n/)) {
+    const l = linea.replace(/^[\s>\-+*]+/, '');
+    if (!l.startsWith('|')) continue;
+    const celda = desnuda(l.split('|')[1] ?? '');
+    if (/^\d{1,2}$/.test(celda)) numeros.push(celda.padStart(2, '0'));
   }
+  const vistos = [...numeros].sort();
+  const esperados = [...HOLONES_ESPERADOS].sort();
+  const sobran = vistos.filter((n) => !esperados.includes(n));
+  const faltan = esperados.filter((n) => !vistos.includes(n));
+  const dup = vistos.filter((n, i) => vistos.indexOf(n) !== i);
+  if (sobran.length || faltan.length || dup.length) {
+    fail(
+      `HOLONES.md filas de holón = {${vistos.join(', ')}} ≠ {${esperados.join(', ')}}` +
+        `${sobran.length ? ` · sobran: ${sobran.join(', ')}` : ''}` +
+        `${faltan.length ? ` · faltan: ${faltan.join(', ')}` : ''}` +
+        `${dup.length ? ` · duplicadas: ${dup.join(', ')}` : ''}` +
+        ' — LORE-HM es costura, no fila; y ninguna fila se sustituye por otra',
+    );
+  } else {
+    ok(`HOLONES.md filas = exactamente {${esperados.join(', ')}} (identidad, no conteo)`);
+  }
+
+  // Ni siquiera fuera de tabla: nada que declare un holón 08.
+  const menciones = [
+    [/holones\/0*8[-\w]*\.md/i, 'enlace a holones/08*.md'],
+    [/hol[oó]n\s*(n[.º°]?\s*)?0*8\b/i, 'texto «holón 08»'],
+  ];
+  for (const [re, etiqueta] of menciones) {
+    const m = re.exec(text);
+    if (
+      m &&
+      !/no\s+(es|hay|existe)|nunca|prohibid/i.test(
+        text.slice(Math.max(0, m.index - 120), m.index + 120),
+      )
+    ) {
+      fail(`HOLONES.md declara un holón 08 (${etiqueta}): «${m[0]}»`);
+    }
+  }
+
   if (!/LORE-HM/i.test(text) || !/costuras?\s+ejecutables?/i.test(text)) {
     fail('HOLONES.md debe declarar LORE-HM como costura ejecutable (no fila nueva)');
   } else {
     ok('HOLONES.md declara LORE-HM como costura ejecutable');
   }
-  const seat = join(root, 'HOLONES', '03-emmanuel', 'README.md');
+
+  checkAsientoReservado(root);
+}
+
+// ---------------------------------------------------------------------------
+// CA · asiento 03-emmanuel reservado: propiedad, no bytes
+// ---------------------------------------------------------------------------
+function checkAsientoReservado(root) {
+  const dir = join(root, 'HOLONES', '03-emmanuel');
+  const seat = join(dir, 'README.md');
   if (!existsSync(seat)) {
     fail('falta HOLONES/03-emmanuel/README.md (asiento reservado)');
-  } else {
-    const seatText = readFileSync(seat, 'utf8');
-    if (seatText.length > 800) {
-      fail('HOLONES/03-emmanuel parece inflado (README > 800 chars)');
-    } else {
-      ok('HOLONES/03-emmanuel sin inflar');
+    return;
+  }
+
+  let malo = 0;
+
+  // (a) no es submódulo
+  const gm = join(root, '.gitmodules');
+  if (existsSync(gm) && /HOLONES\/03-emmanuel/i.test(readFileSync(gm, 'utf8'))) {
+    fail('.gitmodules registra HOLONES/03-emmanuel: el asiento fue inflado');
+    malo++;
+  }
+  if (existsSync(join(dir, '.git'))) {
+    fail('HOLONES/03-emmanuel contiene .git: el asiento fue inflado');
+    malo++;
+  }
+
+  // (b) el asiento sólo contiene su README (nada materializado dentro)
+  const extra = readdirSync(dir).filter((n) => n !== '.gitkeep' && n !== 'README.md');
+  if (extra.length > 0) {
+    fail(`HOLONES/03-emmanuel contiene ${extra.join(', ')} — sólo debe haber README.md`);
+    malo++;
+  }
+
+  // (c) el README no puede AFIRMAR que se infló. Antes el check era
+  //     `length > 800`: un README de 790 chars diciendo «INFLADO, submódulo
+  //     añadido» pasaba en verde.
+  const seatText = readFileSync(seat, 'utf8');
+  const claims = [
+    [/\bINFLADO\b/i, 'declara INFLADO'],
+    [/\bya\s+(est[aá]\s+)?inflad/i, 'declara «ya inflado»'],
+    [
+      /git\s+submodule\s+add[^\n]{0,40}(ejecutad|hech|realizad|añadid)/i,
+      'declara submodule add ejecutado',
+    ],
+    [/subm[oó]dulo\s+(añadid|agregad|cread|inflad)/i, 'declara submódulo añadido'],
+  ];
+  for (const [re, etiqueta] of claims) {
+    if (re.test(seatText)) {
+      fail(`HOLONES/03-emmanuel/README.md ${etiqueta} — contradice el asiento reservado`);
+      malo++;
     }
   }
+
+  // (d) y sí debe declarar la reserva. Texto desnudo: negrita y backticks no
+  //     pueden esconder ni falsear la declaración.
+  const seatPlano = seatText.replace(/[*_`~]/g, '').replace(/\s+/g, ' ');
+  if (!/reservad/i.test(seatPlano) || !/\bsin\b[^.]{0,20}git submodule add/i.test(seatPlano)) {
+    fail(
+      'HOLONES/03-emmanuel/README.md debe declarar el asiento reservado «sin git submodule add»',
+    );
+    malo++;
+  }
+
+  if (malo === 0) {
+    ok('HOLONES/03-emmanuel reservado: sin submódulo, sólo README, sin afirmación de inflado');
+  }
 }
+
+// ---------------------------------------------------------------------------
+// CA · junturas: pendencia real, no la palabra «pendiente»
+// ---------------------------------------------------------------------------
+const NEGACIONES_PENDENCIA = [
+  [/\bnada\b[^.\n]{0,30}pendiente/i, '«nada pendiente»'],
+  [/pendiente[^.\n]{0,30}\bnada\b/i, '«pendiente… nada»'],
+  [/costura[^.\n]{0,40}(cerrada|fusionada|completa|resuelta)/i, 'costura declarada cerrada'],
+  [/(cerrada|fusionada)[^.\n]{0,20}costura/i, 'costura declarada cerrada'],
+  [/madurez[^.\n]{0,30}🟢/i, 'madurez declarada 🟢'],
+  [/ya\s+no\s+(est[aá]|es)\s+pendiente/i, '«ya no está pendiente»'],
+];
 
 function checkJunturasPending(root) {
   const files = [
@@ -215,34 +433,108 @@ function checkJunturasPending(root) {
       continue;
     }
     const t = readFileSync(p, 'utf8');
-    if (!/LORE-HM/i.test(t) || !/⏳ pendiente|pendiente/.test(t)) {
-      fail(
-        `${rel}: debe documentar costura LORE-HM como ⏳ pendiente (madurez 🔴), sin inventar cuerpo`,
-      );
-    } else {
-      ok(`${rel}: pendiente LORE-HM documentado`);
+    let malo = 0;
+
+    // (a) el documento sigue siendo la juntura, no un post-it. Antes bastaba
+    //     con las palabras «LORE-HM» y «pendiente»: sustituir el fichero entero
+    //     por dos palabras pasaba en verde.
+    if (!/^#\s+Juntura\s+\d{2}\s*[↔→<>-]+\s*\d{2}/m.test(t)) {
+      fail(`${rel}: perdió su encabezado «# Juntura NN↔MM»`);
+      malo++;
     }
+    if (!/^##\s+La grieta/m.test(t)) {
+      fail(`${rel}: perdió la sección «## La grieta»`);
+      malo++;
+    }
+    if (!/^##\s+.*LORE-HM/m.test(t)) {
+      fail(`${rel}: sin sección «## Costura LORE-HM»`);
+      malo++;
+    }
+
+    // (b) la pendencia, con su marcador exacto…
+    if (!/⏳\s*pendiente/.test(t)) {
+      fail(`${rel}: sin marcador «⏳ pendiente» de la costura LORE-HM`);
+      malo++;
+    }
+    // (c) …y sin negarla. `/⏳ pendiente|pendiente/` se subsumía a sí mismo:
+    //     «Nada pendiente» pasaba en verde.
+    for (const [re, etiqueta] of NEGACIONES_PENDENCIA) {
+      if (re.test(t)) {
+        fail(`${rel}: contradice la pendencia (${etiqueta})`);
+        malo++;
+      }
+    }
+
+    // (d) y cita el criterio de madurez y el sellado, que es lo que hace
+    //     verificable la pendencia.
+    if (!/E01/.test(t) || !/E11/.test(t)) {
+      fail(`${rel}: no cita el criterio notarial de madurez (E01+E11)`);
+      malo++;
+    }
+    if (!t.includes('NETWORK-ENGINE/LANGUAGES/lore-hm')) {
+      fail(`${rel}: no cita el sellado histórico NETWORK-ENGINE/LANGUAGES/lore-hm`);
+      malo++;
+    }
+
+    if (malo === 0) ok(`${rel}: pendencia LORE-HM documentada y no contradicha`);
   }
 }
 
+// ---------------------------------------------------------------------------
 const ROOT = findRepoRoot(__dirname);
 console.log(`verificar-sellado-l05 · root=${ROOT}`);
+console.log('  skips declarados:');
+for (const [pref, razon] of SKIPS) console.log(`    ${pref.padEnd(18)} ${razon}`);
+
+const files = [];
+const dirs = [];
+walk(ROOT, ROOT, files, dirs);
+const relFiles = files.map((f) => toPosix(relative(ROOT, f)));
 
 checkIncubationPresent(ROOT);
 checkPackageJson(ROOT);
+checkNoExtraccionLengua(ROOT, dirs, files);
 checkHolonesCostura(ROOT);
 checkJunturasPending(ROOT);
 
-const files = [];
-walk(ROOT, ROOT, files);
+// --- superficie del grep-gate: anclas + suelo, para que no vuelva a ser 1 ---
+{
+  const faltanAnclas = ANCLAS_SUPERFICIE.filter((a) => !relFiles.includes(a));
+  if (faltanAnclas.length > 0) {
+    fail(
+      `superficie del grep-gate: no se escanean las anclas ${faltanAnclas.join(', ')} ` +
+        '— ¿se reintrodujo un skip de conveniencia?',
+    );
+  } else {
+    ok(
+      `superficie: ${relFiles.length} ficheros de código · ` +
+        `${ANCLAS_SUPERFICIE.length}/${ANCLAS_SUPERFICIE.length} anclas presentes`,
+    );
+  }
+  if (relFiles.length < MIN_ESCANEADOS) {
+    fail(
+      `superficie del grep-gate = ${relFiles.length} ficheros < suelo ${MIN_ESCANEADOS}: ` +
+        'el mecanismo es real pero no mira nada',
+    );
+  }
+  // Autocomprobación del mecanismo: el patrón debe morder una línea sintética.
+  const sonda = "import { x } from '../../NETWORK-ENGINE/LANGUAGES/lore-hm/src/index.js';";
+  if (!HIT_RE.test(sonda)) {
+    fail('HIT_RE no detecta un import sintético de NETWORK-ENGINE (patrón roto)');
+  } else {
+    ok('autocomprobación: HIT_RE muerde un import sintético de NETWORK-ENGINE');
+  }
+}
+
 for (const f of files) scanFile(f, ROOT);
 
 if (hits.length > 0) {
-  fail(`grep consumidores: ${hits.length} hit(s) Network-Engine fuera de incubación`);
+  fail(`grep consumidores: ${hits.length} hit(s) Network-Engine fuera de incubación/allowlist`);
   for (const h of hits.slice(0, 40)) console.error(`  ${h}`);
   if (hits.length > 40) console.error(`  … +${hits.length - 40} más`);
 } else {
-  ok('grep consumidores: 0 imports/paths Network-Engine');
+  ok(`grep consumidores: 0 hits fuera de allowlist (${ALLOWLIST_HITS.size} ficheros exentos, uno a uno)`);
+  for (const [f, razon] of ALLOWLIST_HITS) console.log(`       exento: ${f} — ${razon}`);
 }
 
 if (errors > 0) {
@@ -252,6 +544,6 @@ if (errors > 0) {
 
 console.log('verificar-sellado-l05: PASS');
 console.log('  sellado: NETWORK-ENGINE/LANGUAGES/lore-hm = incubación/histórico');
-console.log('  consumidores runtime/path: 0');
-console.log('  HOLONES.md: costura LORE-HM · 7 filas · 03-emmanuel sin inflar');
-console.log('  junturas 01↔02·02↔03·03↔04: pendiente madurez documentada');
+console.log(`  consumidores runtime/path: 0 (superficie ${relFiles.length} ficheros)`);
+console.log('  HOLONES.md: costura LORE-HM · filas {01..07} por identidad · 03-emmanuel reservado');
+console.log('  junturas 01↔02·02↔03·03↔04: pendencia documentada y no contradicha');

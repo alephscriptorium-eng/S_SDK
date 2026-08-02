@@ -58,5 +58,39 @@ export function assertViewDoesNotDefineLedger(view: unknown): void {
 
 /** Helper de tipado: construir huella sha256 a partir de hex ya calculado. */
 export function huellaSha256(hexDigest: string): HuellaLedger {
+  if (!/^[a-f0-9]{64}$/.test(hexDigest)) {
+    throw new Error(`DIC-4: digest sha256 malformado: ${hexDigest}`);
+  }
   return { alg: 'sha256', digest: asDigest(hexDigest) };
+}
+
+/**
+ * Clave que **nunca** entra en el payload sellado: la huella no se hashea a sí
+ * misma. La canonicalización de referencia vive en
+ * `solid/scripts/sello-dic4.mjs` (`sealedBytes`) y está documentada en
+ * `docs/DIC-4-HASH.md`.
+ */
+export const LEDGER_KEY = 'huellaLedger' as const;
+
+/**
+ * Un wire sellado DEBE traer su huella. Antes de WP-ZV-S el fixture llamado
+ * «sealed» no la traía y ningún gate lo notaba.
+ */
+export function assertSealedPayloadShape(
+  wire: unknown,
+): asserts wire is Record<string, unknown> & { huellaLedger: HuellaLedger } {
+  if (!wire || typeof wire !== 'object') {
+    throw new Error('DIC-4: wire sellado debe ser un objeto');
+  }
+  const h = (wire as Record<string, unknown>)[LEDGER_KEY];
+  if (!h || typeof h !== 'object') {
+    throw new Error('DIC-4: wire sellado sin huellaLedger');
+  }
+  const { alg, digest } = h as { alg?: unknown; digest?: unknown };
+  if (alg !== 'sha256' && alg !== 'rdfc-1.0') {
+    throw new Error(`DIC-4: huellaLedger.alg inválido: ${String(alg)}`);
+  }
+  if (typeof digest !== 'string' || !/^[a-f0-9]{64}$/.test(digest)) {
+    throw new Error('DIC-4: huellaLedger.digest no es sha256 de 64 hex');
+  }
 }

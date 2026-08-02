@@ -1,5 +1,5 @@
 {
-  "$comment": "INTENTO FALLIDO — config plana. Un validador JSON Schema de strings aceptaría esta corrida aunque viola tipestate LORE-HM (declared → ready sin leased/inflated).",
+  "$comment": "Corrida plana con un salto ilegal declared→ready. NINGÚN campo de este fichero declara si el salto es aceptable: el veredicto lo emiten los esquemas de `flat-schema/` al ejecutarse (`reject-flat-illegal.mjs`). Reintroducir `acceptedByFlatSchema`/`acceptedByTipestate` pone el gate en rojo.",
   "unit": {
     "iri": "urn:lore-hm:unit:fm-mock-1",
     "phase": "declared"
@@ -7,8 +7,6 @@
   "illegalJump": {
     "from": "declared",
     "to": "ready",
-    "acceptedByFlatSchema": true,
-    "acceptedByTipestate": false,
     "reason": "salta leased e inflated; lease ausente; H no concedió autoridad"
   },
   "lease": null,

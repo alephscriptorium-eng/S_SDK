@@ -40,6 +40,13 @@ const required = [
   'demos/tipestate-vs-flat/flat-config.verdict.md',
   'demos/tipestate-vs-flat/tipestate-legal.ts',
   'demos/tipestate-vs-flat/tipestate-illegal.ts',
+  // Los esquemas planos DE VERDAD (antes la demo no tenía ninguno escrito).
+  'demos/tipestate-vs-flat/flat-schema/A-transicion.schema.json',
+  'demos/tipestate-vs-flat/flat-schema/B-pares-legales.schema.json',
+  'demos/tipestate-vs-flat/flat-schema/C-corrida.schema.json',
+  'demos/tipestate-vs-flat/flat-schema/casos.json',
+  'ci/json-schema-mini.mjs',
+  'tsconfig.json',
 ];
 
 for (const rel of required) {
@@ -106,10 +113,47 @@ if (!/@ts-expect-error/.test(illegal) || !/transition\(declared,\s*'ready'\)/.te
   ok('tipestate-illegal.ts: tipestate rechaza el mismo salto');
 }
 
-if (!/imposible|no puede/i.test(verdict)) {
-  fail('flat-config.verdict.md sin veredicto de imposibilidad');
-} else {
-  ok('veredicto lado-a-lado presente');
+// --- veredicto: debe declarar la conclusión MEDIDA, no la vieja ---
+// Antes este check exigía `/imposible|no puede/i`, es decir: exigía la tesis
+// vieja («regla imposible en config plana»), que la medición refutó — de ahí
+// que corregir el fixture pusiera rojo un paso bloqueante. Ahora exige que el
+// veredicto cite los esquemas que se ejecutan y que el número de pares del
+// cross-check coincida con la máquina viva de src/tipestate.ts.
+{
+  const readmeDemo = readFileSync(
+    join(ROOT, 'demos/tipestate-vs-flat/README.md'),
+    'utf8',
+  );
+  for (const cita of [
+    'flat-schema/A-transicion.schema.json',
+    'flat-schema/B-pares-legales.schema.json',
+    'flat-schema/C-corrida.schema.json',
+  ]) {
+    if (!verdict.includes(cita) && !readmeDemo.includes(cita)) {
+      fail(`veredicto/README de la demo no cita ${cita}`);
+    }
+  }
+  if (!/exhaustividad/i.test(verdict)) {
+    fail('flat-config.verdict.md debe declarar el discriminante medido (exhaustividad)');
+  } else {
+    ok('veredicto declara el discriminante medido (exhaustividad en compilación)');
+  }
+  // Round-trip: el número de pares del cross-check se recalcula de la lengua,
+  // así que una cita rancia tras cambiar la máquina se pone roja.
+  const tipSrc = readFileSync(join(ROOT, 'src/tipestate.ts'), 'utf8');
+  const union = /export type UnitPhase\s*=([\s\S]*?);/.exec(tipSrc);
+  const nFases = union ? [...union[1].matchAll(/'([a-zA-Z]+)'/g)].length : 0;
+  const pares = nFases * nFases * 2; // 2 formas de esquema (A y B)
+  if (nFases === 0) {
+    fail('no se pudo contar UnitPhase en src/tipestate.ts');
+  } else if (!verdict.includes(`${pares} pares`) && !readmeDemo.includes(`${pares} pares`)) {
+    fail(
+      `veredicto/README citan un número de pares distinto de ${pares} ` +
+        `(${nFases} fases × ${nFases} × 2 formas) — cita rancia tras cambiar la máquina`,
+    );
+  } else {
+    ok(`veredicto cita ${pares} pares = ${nFases}² × 2 formas (recalculado de tipestate.ts)`);
+  }
 }
 
 // Mecanismo: rechazo runtime (no solo markdown / @ts-expect-error)
@@ -162,10 +206,26 @@ if (existsSync(pkgPath)) {
   }
 }
 
-// --- anti holón 08 / L_SDK claim en README ---
+// --- README ancla la ontología de 5 primitivas ---
+// NOTA DE CORRECCIÓN (WP-ZV-S ②): este bloque llevaba el comentario
+// «anti holón 08 / L_SDK» y su código grepeaba la palabra «cinco». Era un
+// comentario mal etiquetado colocado exactamente donde un revisor buscaría el
+// guard —el único hit de «L_SDK» en código ejecutable de todo el árbol—, y la
+// CA que prohíbe el holón 08 y `L_SDK` no tenía guard alguno. El guard real
+// vive ahora en `scripts/verificar-sellado-l05.mjs` →
+// `checkNoExtraccionLengua()`, con caso rojo medido. Aquí sólo se ancla la
+// ontología, que es lo que este código hace de verdad.
 const readme = readFileSync(join(ROOT, 'README.md'), 'utf8');
-if (!/cinco|5/.test(readme)) fail('README sin ancla de cinco primitivas');
-else ok('README ancla ontología');
+{
+  const faltan = EXPECTED.filter((p) => !new RegExp(`\\b${p}\\b`).test(readme));
+  if (faltan.length > 0) {
+    fail(`README no nombra las primitivas: ${faltan.join(', ')}`);
+  } else if (!/\bcinco\b|\b5 primitivas\b/i.test(readme)) {
+    fail('README sin ancla explícita de «cinco» primitivas');
+  } else {
+    ok(`README ancla ontología: cinco + ${EXPECTED.join(', ')}`);
+  }
+}
 
 if (errors > 0) {
   console.error(`\nverificar-inception-l02: FAIL (${errors} errores)`);

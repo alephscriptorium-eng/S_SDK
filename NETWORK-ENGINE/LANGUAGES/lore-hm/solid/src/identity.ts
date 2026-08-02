@@ -58,10 +58,13 @@ export function degradeHonestly(partial: {
   if (!partial.webId) missing.push('webId');
   if (!partial.peerCard) missing.push('peerCard');
   if (!partial.ssbId) missing.push('ssbId');
+  // Degradación honesta = la clave AUSENTE, no la clave presente con
+  // `undefined`. Con `exactOptionalPropertyTypes` son cosas distintas y sólo
+  // la primera concuerda con `missing`.
   return {
-    webId: partial.webId,
-    peerCard: partial.peerCard,
-    ssbId: partial.ssbId,
+    ...(partial.webId !== undefined ? { webId: partial.webId } : {}),
+    ...(partial.peerCard !== undefined ? { peerCard: partial.peerCard } : {}),
+    ...(partial.ssbId !== undefined ? { ssbId: partial.ssbId } : {}),
     missing,
   };
 }

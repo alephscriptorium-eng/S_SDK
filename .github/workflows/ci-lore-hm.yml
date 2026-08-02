@@ -1,6 +1,16 @@
 # CI LORE-HM · LENGUA (s-sdk) — gates que BLOQUEAN.
-# Cablea verificar-*.mjs L01–L05 (antes solo corridas manuales en informes).
+# Cablea verificar-*.mjs L01–L05 (antes solo corridas manuales en informes)
+# + typecheck de la lengua (antes: cero `tsc` en todo el flujo).
 # Cero continue-on-error funcionales.
+#
+# ORDEN DE FUSIÓN (decisión WP-ZV-S ⑤ — ver REPORTE-ZV-S.md §⑤):
+#   Este workflow existe SÓLO en `wp/sdk-l05-sellado-de-network-engine`.
+#   Si L01–L04 se fusionaran antes que L05, entrarían a `main` **sin ningún
+#   gate**. Decisión declarada: **L05 se fusiona primero** (trae el arnés) y
+#   L01–L04 se rebasan sobre él, para entrar ya con los gates encima.
+#   La alternativa —adelantar sólo este fichero a `main` en un PR aparte— se
+#   descarta: separaría el arnés de los verificadores que invoca y dejaría el
+#   job rojo hasta que llegue el resto.
 name: CI LORE-HM
 
 on:
@@ -14,6 +24,12 @@ on:
 concurrency:
   group: ci-lore-hm-sdk-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
+
+env:
+  # Toolchain de typecheck fijada. No se añade a package.json: la lengua está
+  # en incubación y el sellado L05 prohíbe que el workspace raíz declare
+  # dependencias de NETWORK-ENGINE.
+  TS_VERSION: '5.9.3'
 
 jobs:
   lengua:
@@ -29,6 +45,13 @@ jobs:
 
       - name: Install (npm ci)
         run: npm ci
+
+      # ③ La lengua NO compilaba (TS2352 ×2 en src/brands.ts) y ningún gate lo
+      # comprobaba: `grep -c tsc` sobre este fichero daba 0. Este paso bloquea.
+      - name: typecheck-lore-hm (tsc --noEmit, strict)
+        run: >-
+          npx --yes --package=typescript@${{ env.TS_VERSION }} --
+          tsc -p NETWORK-ENGINE/LANGUAGES/lore-hm/tsconfig.json
 
       - name: verificar-dossier-l01
         run: node DEVOPS/METODOLOGIA/holones/junturas/lore-hm-integracion-holonica/scripts/verificar-dossier-l01.mjs

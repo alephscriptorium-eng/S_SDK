@@ -31,10 +31,13 @@ export function correlate(
     return null; // misma plano: no es correlación cruzada
   }
   if (a.activityId !== b.activityId) return null;
+  const traceId = a.traceId ?? b.traceId;
+  const provenanceRef = a.provenanceRef ?? b.provenanceRef;
+  // Clave ausente ≠ clave con `undefined` bajo `exactOptionalPropertyTypes`.
   return {
     activityId: a.activityId,
-    traceId: a.traceId ?? b.traceId,
-    provenanceRef: a.provenanceRef ?? b.provenanceRef,
+    ...(traceId !== undefined ? { traceId } : {}),
+    ...(provenanceRef !== undefined ? { provenanceRef } : {}),
   };
 }
 
