@@ -268,7 +268,7 @@ gobernada y notariada por **07**. `HOLONES.md` sigue con **siete filas**.
   citados con ruta: dossier de las tres liturgias, junturas 01↔02, 02↔03 y
   03↔04, I60/I61 y DS-5.
 - **Pri:** P0
-- **Estado:** ✅ ola 1 · tip `2cd85c4` · rama `wp/sdk-l01-dossier-holonico-lore-hm` · contrarrevisión PASS · verde **local** · **sin merge main**
+- **Estado:** ✅ ola 1 · tip `3d73075` · rama `wp/sdk-l01-dossier-holonico-lore-hm` · contrarrevisión PASS · verde **local** · **sin merge main**
 
 ### WP-SDK-L02 · inception-lengua-lore-hm
 - **BRIEF:** definir LORE-HM con el contrato de inception heredado del 04,
