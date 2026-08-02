@@ -9,7 +9,7 @@
 | worktree | `C:/S_LAB/wt/s-sdk-wp-sdk-l04` |
 | HEAD base | `397a4c5` (tip L03) |
 | preflight | worktree orquestado; detector identidad con `READ_ONLY_ROOTS=[]` literal → LOCK calibración (sin efectos previos; obra en wt ya montado) |
-| tip entrega | `<pendiente commit>` |
+| tip entrega | `9829864d7313056c4ea251e0f8fde9585e7452be` |
 | riesgo de revisión | `independiente` |
 | revisor distinto del worker | `sí` · `VEREDICTO_REVISOR: ⏳ pendiente` |
 | estado propuesto | listo para revisión adversarial |
@@ -66,7 +66,7 @@ $ node NETWORK-ENGINE/LANGUAGES/lore-hm/solid/scripts/verificar-solid-l03.mjs
 verificar-solid-l03: PASS
 ```
 
-Tip feat: `<pendiente>` · rama `wp/sdk-l04-registro-de-vocabulario`.
+Tip feat: `9829864d7313056c4ea251e0f8fde9585e7452be` · rama `wp/sdk-l04-registro-de-vocabulario`.
 
 ## Evidencia de riesgo y contrarrevisión
 
