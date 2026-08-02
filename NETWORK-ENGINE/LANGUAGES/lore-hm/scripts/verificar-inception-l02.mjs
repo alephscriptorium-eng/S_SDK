@@ -5,6 +5,7 @@
  * No sustituye CI. Sin deps runtime OASIS.
  */
 import { existsSync, readFileSync } from 'node:fs';
+import { spawnSync } from 'node:child_process';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -109,6 +110,23 @@ if (!/imposible|no puede/i.test(verdict)) {
   fail('flat-config.verdict.md sin veredicto de imposibilidad');
 } else {
   ok('veredicto lado-a-lado presente');
+}
+
+// Mecanismo: rechazo runtime (no solo markdown / @ts-expect-error)
+{
+  const rejectScript = join(ROOT, 'demos/tipestate-vs-flat/reject-flat-illegal.mjs');
+  if (!existsSync(rejectScript)) {
+    fail('falta demos/tipestate-vs-flat/reject-flat-illegal.mjs');
+  } else {
+    const r = spawnSync(process.execPath, [rejectScript], {
+      encoding: 'utf8',
+    });
+    if (r.status !== 0) {
+      fail(`reject-flat-illegal: ${r.stderr || r.stdout}`);
+    } else {
+      ok('reject-flat-illegal: tipestate runtime rechaza salto flat');
+    }
+  }
 }
 
 // --- P1–P5 respondidas ---
