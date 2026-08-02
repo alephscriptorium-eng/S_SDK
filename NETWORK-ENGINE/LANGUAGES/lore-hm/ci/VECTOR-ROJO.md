@@ -16,9 +16,9 @@
 
 | evento | run-id | conclusion | sha |
 | ------ | ------ | ---------- | --- |
-| arnés verde | _pendiente_ | | |
-| rojo plantado | _pendiente_ | | |
-| restaura verde | _pendiente_ | | |
+| arnés verde | [30742441514](https://github.com/alephscriptorium-eng/S_SDK/actions/runs/30742441514) | success | `547cd22` |
+| rojo plantado | [30742459266](https://github.com/alephscriptorium-eng/S_SDK/actions/runs/30742459266) | **failure** | `8d65633` |
+| restaura verde | _este commit_ | | |
 
 ## Verificadores cableados
 
