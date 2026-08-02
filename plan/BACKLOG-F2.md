@@ -270,7 +270,7 @@ gobernada y notariada por **07**. `HOLONES.md` sigue con **siete filas**.
 - **Pri:** P0
 - **Estado:** ✅ ola 1 · tip `3d73075` · rama `wp/sdk-l01-dossier-holonico-lore-hm` · contrarrevisión PASS · verde **local** · **sin merge main**
 
-### WP-SDK-L02 · inception-lengua-lore-hm 🔶
+### WP-SDK-L02 · inception-lengua-lore-hm ✅
 - **BRIEF:** definir LORE-HM con el contrato de inception heredado del 04,
   **sin crear package todavía**. Ontología nuclear limitada a **cinco
   primitivas y ni una más**: `Peer` (sujeto que actúa — H y M son roles y
@@ -293,7 +293,7 @@ gobernada y notariada por **07**. `HOLONES.md` sigue con **siete filas**.
   consumidores compilando; sólo entonces se extrae `@logos/lore-hm`, y el
   origen definitivo **lo decide el custodio con esa evidencia, no antes**.
 - **Pri:** P0 · dep: L01
-- **Estado:** 🔶 ola 2 · rama `wp/sdk-l02-inception-lengua-lore-hm` · wt `C:/S_LAB/wt/s-sdk-wp-sdk-l02` · base `3d73075`
+- **Estado:** ✅ ola 2 · tip `7a6ac45` · rama `wp/sdk-l02-inception-lengua-lore-hm` · PASS_CON_ADDENDA · verde **local** · **sin merge main**
 
 ### WP-SDK-L03 · capa-solid-de-primera-clase
 - **BRIEF:** diseñar **desde v1** la capa completa, con adapters escalonados.
@@ -385,6 +385,9 @@ orden del product owner.
 
 ✎ **2026-08-02**: ola 2 GO — `WP-SDK-L02` 🔶 despachado (wt
 `C:/S_LAB/wt/s-sdk-wp-sdk-l02`, base tip `3d73075`).
+
+✎ **2026-08-02**: ola 2 — `WP-SDK-L02` ✅ (PASS_CON_ADDENDA; tip `7a6ac45`;
+verde local; sin merge main).
 
 ## Dependencias maestras
 
