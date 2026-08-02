@@ -263,10 +263,25 @@ exactamente donde un revisor lo buscaría. **Se ha hecho lo uno y lo otro:** el
 comentario se retira y se sustituye por lo que el código hace de verdad (anclar
 la ontología, ahora exigiendo los 5 nombres además de la palabra «cinco»), y el
 guard real se implementa en `verificar-sellado-l05.mjs` →
-`checkNoExtraccionLengua()`: recorre **todos** los directorios del árbol
-buscando nombres normalizados `L_SDK`/`LSDK`/`LENGUA_SDK`/`LORE_SDK`, cualquier
-`HOLONES/08…` o superior, y **cualquier** `package.json` a cualquier
-profundidad cuyo `name` publique la lengua.
+`checkNoExtraccionLengua()`.
+
+> **Corrección de tres frases falsas de la primera versión de este informe.**
+> Decían «recorre **todos** los directorios», «**cualquier** `package.json` a
+> cualquier profundidad» y «cualquier `HOLONES/08…` **o superior**». Las tres
+> eran más anchas que el código: el guard reutilizaba el walk del grep-gate y
+> heredaba sus skips (`NETWORK-ENGINE/L_SDK/` pasaba), iteraba la lista de
+> `package.json` **post-skip**, y el patrón de holón exigía **dos** dígitos
+> (`HOLONES/8-logos/` pasaba). Además evadían `LORE_HM_SDK/`, `name:"lore_hm"`
+> (el regex no cubría el guion bajo), la fila 08 declarada en **otro** fichero
+> de la metodología, y un submódulo declarado en `.gitmodules`.
+>
+> Ya es cierto, y con censo propio: `censoIntegro()` recorre el árbol entero
+> saltando sólo `.git` y `node_modules` (**157 directorios, 6 `package.json`**,
+> frente a los 91/post-skip de antes); el patrón de directorio es `l…SDK` con
+> relleno arbitrario; el de holón acepta uno o dos dígitos; el de `name` cubre
+> `-`, `_` y sin separador; se revisan los `.md` de `DEVOPS/METODOLOGIA/`
+> completos con exención **por línea**; y se leen los `path` de `.gitmodules`.
+> Los seis vectores de evasión están en la batería (E1–E6, todos rojos).
 
 **CA HOLONES.md — cardinalidad → identidad del conjunto.** El regex viejo no
 casaba `| **08** |`, así que la fila entraba en negrita sin mover el conteo; y
@@ -511,7 +526,13 @@ evaluador en el árbol: `ci/json-schema-mini.mjs`, subconjunto 2020-12
 
 Cotejado contra `ajv@8.20.0` (modo 2020-12) sobre los tres esquemas: 36 pares
 × 2 formas + 7 transiciones × 2 + 4 corridas + el fixture literal + el control
-+ el esquema ampliado con `paused`:
++ el esquema ampliado con una fase nueva.
+
+> **Acotación (corrige la primera versión de este informe).** «93 comparaciones,
+> 0 desviaciones» es equivalencia **sobre lo que estos tres esquemas
+> ejercitan**, no sobre todo el subconjunto implementado: hay keywords en el
+> evaluador que la demo no usa y que el cotejo no toca. La cifra sin esta
+> acotación exagera lo medido.
 
 ```
 ajv 8.20.0 · comparaciones=93 · desviaciones=0
@@ -572,3 +593,198 @@ $ npm run test:lore-hm-lengua                              → 0
    `$recursiveRef`, `unevaluatedProperties`/`unevaluatedItems`,
    `contentEncoding` ni aserción de `format`. Todas ellas **lanzan** si
    aparecen; no se ignoran.
+
+---
+
+# Ronda 2 · devolución de la contrarrevisión adversarial
+
+Cuatro bloqueantes y seis menores, todos re-medidos antes de tocar nada y con su
+vector re-ejecutado después. Commits `3e409c2` (bloqueantes) y el de esta ronda.
+
+## B1 · el sello no ligaba el fichero: clave duplicada en verde
+
+**Medido antes.** `sealedBytes()` serializaba el objeto **ya parseado**.
+`JSON.parse` aplica *último gana* en claves repetidas:
+
+```
+fixture con DOS "actor": el primero ATACANTE, el segundo el legítimo
+  claves actor en fichero: 2
+  actor tras JSON.parse = urn:lore-hm:peer:h-demo
+  digest recalculado == almacenado ? true      ← VERDE
+```
+
+Y el docstring prometía «sha256 de los **bytes** del payload sellado» mientras
+entregaba un sello del objeto parseado.
+
+**Arreglo.** `parseWire()` es ahora la única entrada de lectura, y
+`assertSinClavesDuplicadas()` recorre el TEXTO y rehúsa el fichero. Además
+`canonicalizar()` usa `Object.create(null)`: con `{}`, asignar la clave
+`__proto__` mutaba el prototipo y la clave **desaparecía** del payload sin mover
+la huella. La batería afirmativa pasa de 12 a **15** vectores (tres de ellos
+`__proto__`/`constructor` inyectados **en el texto**, que es como llegarían).
+
+```
+  OK: afirmativa: 15 mutaciones del wire, 15 mueven la huella (0 ciegas)
+  OK: claves duplicadas en el fichero: rechazadas al leer (el sello liga lo que se leyó)
+```
+
+**Vector re-ejecutado:**
+
+```
+$ # inyectar un segundo "actor" ATACANTE antes del legítimo
+$ node solid/scripts/verificar-solid-l03.mjs
+FAIL: fixtures JSON inválido o con claves duplicadas: clave duplicada «actor»
+      en línea 6: JSON.parse la colapsaría (último gana) y el sello dejaría de
+      ligar el fichero
+```
+
+**Declarado en el docstring lo que el sello NO liga** (era la otra mitad de la
+objeción): no liga bytes arbitrarios del fichero; **no normaliza Unicode** (NFC
+y NFD dan huellas distintas: una normalización de editor obliga a resellar); y
+**no es una firma** — un adversario con escritura puede suplantar el `actor`,
+correr `--sellar`, actualizar `vista.identifier` y quedar verde. Detecta
+**deriva**, no adversario.
+
+## B2 · el gate rechazaba una ampliación correcta
+
+**Medido antes.** El bloque del discriminante cableaba el literal `paused` y
+**exigía que la sonda fuese permisiva**. Consecuencia: añadir la fase `paused`
+correctamente (tipo + tabla + `describePhase` + esquemas A/B/C + la cita del
+round-trip) ponía el gate **ROJO**, mientras que `suspended` —misma operación—
+pasaba. Y `paused` es justo el estado del `PodState` que este árbol promete
+reconciliar: la reconciliación nacía rota.
+
+**Arreglo.** La sonda **deriva** un nombre ausente de `PHASES`, en vez de
+cablear ninguno.
+
+**Vector re-ejecutado** (ampliación correcta, dos nombres):
+
+```
+fase «paused»    añadida correctamente → demo exit=0 · l02 exit=0  VERDE ✔
+fase «suspended» añadida correctamente → demo exit=0 · l02 exit=0  VERDE ✔
+```
+
+Misma operación, mismo veredicto, se llame como se llame.
+
+## B3 · la tesis refutada seguía certificada
+
+**Medido antes.** Tres sitios de la propia lengua firmaban la tesis que este WP
+refutó, y **ningún gate miraba ninguno**:
+
+| sitio | qué decía |
+| ----- | --------- |
+| `docs/P1-P5.md:56` | «**verificada** — al menos una regla **imposible** de expresar/validar con config plana… demostrada en `demos/tipestate-vs-flat/`» — apuntando a la demo que mide lo contrario |
+| `README.md:37` | «regla imposible en config plana» |
+| `src/tipestate.ts:4` | «Imposible de garantizar con JSON plano + schema de strings» |
+
+**Arreglo.** Las tres reescritas —P4 pasa a **REFUTADA por medición**, con lo que
+sí queda verificado— y guard nuevo en `verificar-inception-l02.mjs` que recorre
+los **52 ficheros** de la lengua buscando la tesis refutada, con exención sólo
+si el contexto la marca como corregida o histórica.
+
+**Un fallo propio, encontrado al construirlo:** la primera versión del guard
+daba verde sobre el texto original, porque `regla **imposible**` no casaba con
+el patrón — la **negrita** escondía la frase. Es exactamente la clase que ya
+había cerrado para la fila 08 de `HOLONES.md` y que no había aplicado aquí.
+Ahora el texto se desnuda de énfasis **sin mover offsets** (sustitución carácter
+a carácter, para que la línea reportada siga siendo la real).
+
+**Vector re-ejecutado** (reintroducir la frase, con negrita):
+
+```
+FAIL: docs/P1-P5.md:107 certifica la tesis REFUTADA «regla imposible»: «regla   imposible»
+FAIL: docs/P1-P5.md:107 certifica la tesis REFUTADA «imposible de expresar/validar/garantizar»
+```
+
+## B4 · el discriminante era artefacto del estilo de esquema
+
+**Medido antes**, con ajv sobre las tres formas:
+
+```
+A (+fase en enum, sin su rama if)   fase→ready = true    ← permisiva
+B (tabla plana, sin tocar)          fase→ready = false   ← fail-closed
+C (+fase en enum)                   fase→ready = false   ← fail-closed
+```
+
+La «permisividad silenciosa» se daba **sólo en la forma A**. La forma **B —la
+«tabla plana» del propio demo—** es fail-closed ante el mismo olvido, igual que
+`tsc`. El bloque medía sólo A e imprimía la conclusión como general: la tesis
+nueva era tan estrecha como la vieja, y el contraejemplo estaba dentro de la
+demo, sin medir.
+
+**Arreglo.** El bloque mide **las tres** y asserta la *relación* entre ellas —si
+deja de darse, la conclusión cambió y hay que reescribirla, no ajustar la sonda:
+
+```
+  ·  olvido medido («zzz-fase-sonda» en el alfabeto, sin su regla de transición
+       forma A: zzz-fase-sonda→ready = VÁLIDO (permisiva)
+       forma B: zzz-fase-sonda→ready = INVÁLIDO (fail-closed)
+       forma C: zzz-fase-sonda→ready = INVÁLIDO (fail-closed)
+  OK: discriminante medido en LAS TRES formas, con sonda derivada (no un nombre cableado)
+```
+
+**Conclusión reescrita, a la anchura que la medición sostiene** (en
+`demos/tipestate-vs-flat/README.md`, `flat-config.verdict.md` y `docs/P1-P5.md`):
+
+- No hay «regla imposible en config plana» (⓪), **y tampoco un déficit de
+  exhaustividad de la config plana** (B4). Las dos tesis anteriores eran falsas.
+- Lo que hay: **dos estilos de esquema plano —restringir por excepción vs
+  enumerar lo permitido—, sólo uno seguro ante la extensión, y ningún aviso de
+  cuál se escribió.**
+- Lo que aporta el tipestate: **no deja escribir el estilo malo.** En TypeScript
+  la forma cerrada es la única disponible (unión cerrada + `never` en
+  `describePhase`, medido: `TS2322`). En JSON Schema las dos son igual de
+  idiomáticas.
+
+## Los seis menores
+
+| # | objeción | estado |
+| - | -------- | ------ |
+| 1 | guard anti-extracción más estrecho que la prosa; tres frases falsas del informe | **cerrado** — censo propio (157 dirs / 6 `package.json`), patrones ampliados, `.gitmodules`, `.md` de la metodología. **Las tres frases corregidas** en §② |
+| 2 | residual del vocabulario más ancho de lo declarado | **cerrado** — `w3c-conocidos.json` (272 términos AS2/PROV-O/DCTERMS declarados) + colisión entre acuñaciones + pertenencia de `w3cChecked` + razón copiada |
+| 3 | «el retiro se publica» era autocoherencia | **cerrado** — `notarialFloor` ancla el conjunto fuera del recuento, y un tipo liberado por retiro no se reacuña |
+| 4 | `validate()` no era fail-closed; `multipleOf` fail-open; cifra de ajv sin acotar | **cerrado** — 4/4 ramas no alcanzadas lanzan también en `validate()`; `multipleOf` sin tolerancia, 4/4 igual que ajv; cifra acotada aquí y en el módulo |
+| 5 | `__proto__` no movía la huella; faltaba declarar NFC/NFD y la ausencia de firma | **cerrado** — `Object.create(null)` + 3 sondas en la batería; las dos limitaciones declaradas en el docstring |
+| 6 | enrutado sin línea; índice sin `reason`/`w3cChecked` | **cerrado** — la afirmación se corrige a «fichero · función · símbolo» (las líneas del hub no son verificables desde aquí y no se inventan); el índice ya lleva `reason` y `w3cChecked` |
+
+**Hallazgo del menor 2, sobre datos propios:** la comprobación de pertenencia de
+`w3cChecked` cazó **dos CURIEs que yo mismo había inventado** en la ronda
+anterior — `dcterms:Software` y `dcterms:Report`, que no existen en DCMI.
+Corregidos a `prov:Plan` y `dcterms:ProvenanceStatement`. Es el mejor argumento
+de que el chequeo de forma no bastaba.
+
+## Baterías tras la ronda
+
+| batería | antes de ZV-S | ronda 1 | ronda 2 |
+| ------- | ------------- | ------- | ------- |
+| sellado `verificar-sellado-l05` | 13/13 verdes | 0/13 | **0/19** (con E1–E6 de evasión) |
+| vocabulario `verificar-vocab-l04` | 5/6 verdes | 0/12 | **0/18** (con R1–R6) |
+| sello DIC-4, mutaciones que deben mover la huella | 0 | 12 | **15** + rechazo de claves duplicadas |
+| evaluador, ramas no alcanzadas que lanzan | — | 0/4 en `validate()` | **4/4** |
+
+## Verde final de la ronda 2
+
+```
+$ tsc -p NETWORK-ENGINE/LANGUAGES/lore-hm/tsconfig.json   → 0
+$ npm run test:lore-hm-lengua                             → 0  (5 verificadores PASS)
+$ node zv-ajv-cotejo.mjs                                  → ajv 8.20.0 · 93 comparaciones · 0 desviaciones
+$ node menores-eval.mjs                                   → 4/4 ramas lanzan · multipleOf 4/4 = ajv
+```
+
+## Lo que sigue sin cubrirse tras la ronda 2
+
+Todo lo de la lista original, más:
+
+10. **El sello no es una firma.** Declarado, no arreglado: hacerlo exigiría
+    claves y un modelo de confianza que este WP no tiene. Un adversario con
+    escritura en el repo queda verde tras `--sellar`.
+11. **NFC/NFD.** Declarado, no normalizado: sellar bytes y normalizar Unicode
+    son decisiones opuestas y la segunda no está tomada.
+12. **`w3c-conocidos.json` es un subconjunto declarado**, no el vocabulario
+    completo. Un término legítimo ausente produce un falso rojo en
+    `w3cChecked`; se añade y se cita la fuente. Está dicho en el propio fichero.
+13. **El residual del vocabulario sigue existiendo, más estrecho:** un autor que
+    invente un `semanticType` falso *y* cite `w3cChecked` reales pero
+    irrelevantes *y* escriba una razón original sigue pudiendo acuñar. Eso es
+    juicio notarial, no mecánico; el registro deja firma y fecha para que tenga
+    dueño.

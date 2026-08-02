@@ -150,13 +150,44 @@ let reuse = 0;
 const localName = (curie) => String(curie).split(':').slice(1).join(':');
 const normalizaLocal = (curie) => localName(curie).toLowerCase().replace(/[^a-z0-9]/g, '');
 
-// Primera pasada: local names de las familias W3C (la referencia contra la que
-// se juzga cualquier acuñación).
+// ---------------------------------------------------------------------------
+// Vocabulario W3C conocido — la referencia contra la que se juzga una acuñación.
+// Antes esta lista se construía SÓLO con los términos ya notariados aquí, así
+// que `hm:Follow` pasaba en verde aunque `as:Follow` existe en AS2 desde 2017:
+// bastaba acuñar algo que aún no se hubiera reusado. Ahora se lee el
+// vocabulario declarado en `w3c-conocidos.json`.
+// ---------------------------------------------------------------------------
+const W3C_DOC_PATH = join(VOCAB_DIR, 'w3c-conocidos.json');
+let W3C_DOC;
+if (!existsSync(W3C_DOC_PATH)) {
+  fail('falta vocab/w3c-conocidos.json (referencia de vocabulario W3C)');
+  W3C_DOC = { terminos: {}, prefijos: {} };
+} else {
+  W3C_DOC = JSON.parse(readFileSync(W3C_DOC_PATH, 'utf8'));
+  const total = Object.values(W3C_DOC.terminos).reduce((n, l) => n + l.length, 0);
+  ok(`vocabulario W3C de referencia: ${total} términos declarados en w3c-conocidos.json`);
+}
+
+/** Conjunto de CURIEs válidos: `prefijo:LocalName` que existen de verdad. */
+const W3C_CURIES = new Set();
+for (const [pref, locales] of Object.entries(W3C_DOC.terminos ?? {})) {
+  for (const l of locales) {
+    W3C_CURIES.add(`${pref}:${l}`);
+    w3cLocalNames.set(normalizaLocal(`${pref}:${l}`), `${pref}:${l}`);
+  }
+}
+
+// Los términos ya notariados aquí también cuentan (por si alguno no estuviera
+// en el subconjunto declarado).
 for (const e of doc.entries) {
   if (W3C_FAMILIES.has(e?.family) && typeof e.term === 'string') {
+    W3C_CURIES.add(e.term);
     w3cLocalNames.set(normalizaLocal(e.term), e.term);
   }
 }
+
+/** Local names de acuñaciones, para detectar colisión ENTRE acuñaciones. */
+const coinLocalNames = new Map();
 
 /** ¿La razón es prosa argumentada o relleno? */
 function razonSustantiva(texto) {
@@ -220,7 +251,9 @@ for (const [i, e] of doc.entries.entries()) {
     if (problema) {
       fail(`${loc}: acuñación ${e.term} sin razón sustantiva — ${problema}`);
     }
-    // CA1b: hay que declarar CONTRA QUÉ se comprobó antes de acuñar.
+    // CA1b: hay que declarar CONTRA QUÉ se comprobó antes de acuñar, y los
+    // candidatos deben EXISTIR. Antes era un chequeo de forma, así que
+    // `w3cChecked: ["as:Nonexistent"]` satisfacía la evidencia con ficción.
     if (!Array.isArray(e.w3cChecked) || e.w3cChecked.length === 0) {
       fail(
         `${loc}: acuñación ${e.term} sin w3cChecked[] — debe nombrar los candidatos ` +
@@ -228,21 +261,37 @@ for (const [i, e] of doc.entries.entries()) {
       );
     } else {
       for (const cand of e.w3cChecked) {
-        if (!/^(as|prov|dcterms):[A-Za-z]/.test(String(cand))) {
-          fail(`${loc}: w3cChecked contiene "${cand}", que no es un CURIE de familia W3C`);
+        const s = String(cand);
+        if (!/^(as|prov|dcterms):[A-Za-z]/.test(s)) {
+          fail(`${loc}: w3cChecked contiene "${s}", que no es un CURIE de familia W3C`);
+        } else if (!W3C_CURIES.has(s)) {
+          fail(
+            `${loc}: w3cChecked de ${e.term} cita "${s}", que NO existe en el vocabulario ` +
+              'declarado (vocab/w3c-conocidos.json) — la evidencia de haber buscado no puede ser ficción',
+          );
         }
       }
     }
     if (!e.term.startsWith(e.family === 'hm:' ? 'hm:' : 'lore:')) {
       fail(`${loc}: term ${e.term} no coincide con family ${e.family}`);
     }
-    // CA1c: colisión léxica con un término W3C ya notariado.
+    // CA1c: colisión léxica con un término W3C existente.
     const choque = w3cLocalNames.get(normalizaLocal(e.term));
     if (choque) {
       fail(
-        `${loc}: acuñación ${e.term} duplica el local name de ${choque} (familia W3C) — ` +
+        `${loc}: acuñación ${e.term} duplica el local name de ${choque} (vocabulario W3C) — ` +
           'cambiar el prefijo no crea un término nuevo',
       );
+    }
+    // CA1d: colisión ENTRE acuñaciones (`lore:PodLease` junto a `hm:PodLease`).
+    const previoCoin = coinLocalNames.get(normalizaLocal(e.term));
+    if (previoCoin) {
+      fail(
+        `${loc}: acuñación ${e.term} duplica el local name de ${previoCoin} (otra acuñación) — ` +
+          'dos prefijos para el mismo nombre son un término, no dos',
+      );
+    } else {
+      coinLocalNames.set(normalizaLocal(e.term), e.term);
     }
   } else if (W3C_FAMILIES.has(e.family)) {
     reuse++;
@@ -261,6 +310,87 @@ for (const [i, e] of doc.entries.entries()) {
 }
 ok(`tipos semánticos activos únicos: ${seenSemantic.size} (indexado por tipo, no por nombre)`);
 
+// --- razón copiada literal de otra entrada ---
+// Una razón argumentada que es copia textual de otra no justifica nada: pasa el
+// filtro de prosa sin haber pensado la acuñación.
+{
+  const porRazon = new Map();
+  let copias = 0;
+  for (const e of doc.entries) {
+    const clave = String(e.reason ?? '').trim().toLowerCase().replace(/\s+/g, ' ');
+    if (!clave) continue;
+    const previo = porRazon.get(clave);
+    if (previo) {
+      fail(`razón copiada literal: ${e.term} repite palabra por palabra la de ${previo}`);
+      copias++;
+    } else {
+      porRazon.set(clave, e.term);
+    }
+  }
+  if (copias === 0) ok(`razones: ${porRazon.size} distintas, 0 copiadas literalmente`);
+}
+
+// --- suelo notarial: el retiro se publica, no se borra ---
+// «retirados[] coincide con las filas retiradas» es autocoherencia: borrar la
+// fila Y vaciar el array quedaba verde, y el tipo semántico liberado se podía
+// reacuñar acto seguido. El suelo ancla el conjunto notariado fuera del propio
+// recuento: bajarlo exige editarlo, que es un acto visible y revisable.
+{
+  const suelo = doc.notarialFloor;
+  if (!suelo || typeof suelo !== 'object') {
+    fail('falta notarialFloor (ancla del conjunto notariado; sin él, el retiro es autocoherencia)');
+  } else {
+    if (doc.entries.length < suelo.entriesMin) {
+      fail(
+        `entries=${doc.entries.length} < notarialFloor.entriesMin=${suelo.entriesMin}: ` +
+          'se borraron filas del registro notarial (el retiro lleva fecha, no borrado)',
+      );
+    }
+    for (const t of suelo.retiredTerms ?? []) {
+      const e = doc.entries.find((x) => x.term === t);
+      if (!e) {
+        fail(`notarialFloor exige la fila retirada ${t} y no está: retiro por borrado`);
+      } else if (e.retiredDate == null) {
+        fail(`${t} figura en notarialFloor.retiredTerms pero volvió a estar activo sin acta`);
+      }
+    }
+    ok(
+      `suelo notarial: entries=${doc.entries.length} ≥ ${suelo.entriesMin} · ` +
+        `${(suelo.retiredTerms ?? []).length} retirada(s) ancladas`,
+    );
+  }
+}
+
+// --- un tipo semántico liberado por retiro NO se reacuña ---
+// `hm:Lease` se retiró porque PROV-O ya cubría `provenance.association`. Si esa
+// decisión vale, ninguna acuñación nueva puede reclamar ese tipo.
+{
+  const retiradosCoin = doc.entries.filter(
+    (e) => e.retiredDate != null && COIN_FAMILIES.has(e.family),
+  );
+  let reacunados = 0;
+  for (const r of retiradosCoin) {
+    const nuevo = doc.entries.find(
+      (e) =>
+        e !== r &&
+        e.retiredDate == null &&
+        COIN_FAMILIES.has(e.family) &&
+        e.semanticType === r.semanticType,
+    );
+    if (nuevo) {
+      fail(
+        `reacuñación: ${nuevo.term} reclama «${r.semanticType}», tipo que ${r.term} ` +
+          `liberó al retirarse (${r.retireReason ?? 'sin motivo'}) — reabrir esa decisión ` +
+          'exige acta, no una fila nueva',
+      );
+      reacunados++;
+    }
+  }
+  if (reacunados === 0) {
+    ok(`tipos liberados por retiro: ${retiradosCoin.length} · 0 reacuñados`);
+  }
+}
+
 ok(
   `acuñados activos/retirados contabilizados: coined=${coined} reuse=${reuse} retired=${retired}`,
 );
@@ -273,11 +403,15 @@ if (coined < 1) {
 // Superficie de consumo COMPLETA: los 40 notariados, no la proyección de 9.
 // El gate del hub indexa hoy por nombre de verbo contra `w3cEquivalents`
 // (9 claves) y por eso exime a 20 de 29 verbos. Este registro publica además
-// `notariadosPorTipoSemantico`, que cubre las 39 entradas activas, y
-// `retirados`, que cubre la retirada. Enrutado del arreglo del hub:
+// `notariadosPorTipoSemantico`, que cubre las 39 entradas activas —con su
+// `reason` y su `w3cChecked`, para que un gate pueda comprobar también si la
+// acuñación estaba justificada— y `retirados`, que cubre la retirada.
+//
+// Enrutado del arreglo del hub (fichero · función · símbolo; los números de
+// línea del repo hub NO son verificables desde este árbol y no se inventan):
 //   playground/prueba-de-H-M/ci/test-101-ontologia.mjs · gateVocabCoining()
-//   — `if (!equiv) continue;` (indexado por nombre de verbo) y el umbral
-//   `coinReason.length > 10`. NO es de este WP: repo distinto, worker distinto.
+//   — el `continue` sobre `equiv` (indexado por nombre de verbo) y el umbral
+//   `coinReason.length`. NO es de este WP: repo distinto, worker distinto.
 // ---------------------------------------------------------------------------
 {
   const idx = doc.notariadosPorTipoSemantico;

@@ -49,25 +49,44 @@ if (!equiv) continue;   // ← cualquier verbo fuera del mapa queda EXENTO
 la regla anti-acuñación exime a 20 de 29. Y el umbral de justificación es
 `coinReason.length > 10`, así que once caracteres cualesquiera valen.
 
+> **Precisión del enrutado.** Las citas de arriba son **fichero, función y
+> símbolo**, no línea: los números de línea del repo hub no son verificables
+> desde este árbol y no se inventan. Quien aplique el arreglo localiza
+> `gateVocabCoining` y dentro de ella el `continue` sobre `equiv` y el umbral
+> `coinReason.length`.
+
 ### Lo que este registro publica para arreglarlo
 
 `registro.json` → **`notariadosPorTipoSemantico`**: los **39 términos activos**
 (de 40 notariados; 1 retirado va en `retirados[]`) indexados por **tipo
-semántico**, no por nombre de verbo:
+semántico**, no por nombre de verbo — y con la **justificación incluida**, que
+es la otra mitad de la CA:
 
 ```json
 "unit.lifecycle.stop": {
   "term": "hm:UnitStop",
   "family": "hm:",
   "namespace": "https://logos.local/ns/hm#",
-  "verb": "unit.stop"
+  "verb": "unit.stop",
+  "reason": "AS2 Rec has no Stop activity for unit tipestate; Leave/Delete are not equivalent.",
+  "w3cChecked": ["as:Leave", "as:Delete", "as:Remove", "prov:wasEndedBy"]
 }
 ```
+
+Con `reason` y `w3cChecked` en el índice, un gate construido sobre esta
+superficie puede comprobar las dos cosas: **«¿está notariado?»** y **«¿estaba
+justificada la acuñación?»**. Sin ellos sólo podía comprobar la primera.
 
 El gate del hub debe **indexar por `semanticType`** y recorrer el índice
 completo: un verbo cuyo tipo semántico ya está notariado no puede acuñar otro
 término, y un verbo sin tipo semántico declarado no queda exento — queda
 **rojo**.
+
+Referencia de validación de acuñaciones:
+[`../vocab/w3c-conocidos.json`](../vocab/w3c-conocidos.json) — subconjunto
+**declarado** de AS2/PROV-O/DCTERMS (272 términos) contra el que se comprueba
+que una acuñación no duplique un término existente y que los `w3cChecked[]`
+citen candidatos **reales**, no ficción.
 
 `w3cEquivalents` se conserva como **proyección legacy** (compatibilidad con el
 gate actual del hub) y el verificador L04 comprueba que sea consistente con

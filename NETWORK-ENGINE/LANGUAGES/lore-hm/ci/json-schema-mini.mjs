@@ -7,13 +7,24 @@
  * de verdad —y no leer autodeclaraciones de un fixture— hace falta un
  * evaluador en el árbol.
  *
- * Propiedad de seguridad: **cualquier keyword no implementada lanza**.
- * Un esquema que use algo que este evaluador no entiende NO se evalúa como
- * «válido por omisión»: rompe el gate. Es lo contrario de un validador que
- * ignora en silencio lo que no conoce.
+ * Propiedad de seguridad: **cualquier keyword no implementada lanza**, y la
+ * comprobación es sobre el esquema ENTERO —incluidas las ramas que ninguna
+ * instancia llegue a visitar—, no sólo sobre lo que se recorre. Un esquema que
+ * use algo que este evaluador no entiende NO se evalúa como «válido por
+ * omisión»: rompe el gate.
  *
- * Equivalencia con ajv 8.20.0 (2020-12): 93 comparaciones, 0 desviaciones.
- * Procedimiento y salida literal en `../REPORTE-ZV-S.md` §⓪.
+ * (Corrección WP-ZV-S: la propiedad la daba sólo `compile()`. El `validate()`
+ * exportado devolvía `valid:true` cuando la keyword desconocida estaba en una
+ * rama no alcanzada, y este bloque se la atribuía al módulo entero. Ahora
+ * `validate()` hace la comprobación completa en la llamada de entrada.)
+ *
+ * ## Alcance de la equivalencia con ajv — leer antes de citarla
+ *
+ * El cotejo publicado (`../REPORTE-ZV-S.md` §⓪) es de **93 comparaciones, 0
+ * desviaciones, sobre lo que los tres esquemas de la demo ejercitan**. NO es
+ * equivalencia demostrada sobre todo el subconjunto implementado: hay keywords
+ * aquí que esos esquemas no usan y que el cotejo no toca. Citar la cifra sin
+ * esta acotación es exagerar lo medido.
  */
 
 /** Keywords puramente anotativas: se aceptan y no afectan al veredicto. */
@@ -139,6 +150,11 @@ function resolveRef(ref, root) {
  * @returns {{valid: boolean, errors: string[]}}
  */
 export function validate(schema, instance, opts = {}) {
+  const esEntrada = opts.root === undefined;
+  // Fail-closed de verdad: en la llamada de entrada se revisa el esquema
+  // COMPLETO. Antes sólo se revisaba lo que el recorrido alcanzaba, así que una
+  // keyword desconocida en una rama no visitada daba `valid:true`.
+  if (esEntrada) assertKeywordsKnown(schema, '#');
   const root = opts.root ?? schema;
   const path = opts.path ?? '#';
   const errors = [];
@@ -215,10 +231,12 @@ export function validate(schema, instance, opts = {}) {
       push(`exclusiveMaximum ${schema.exclusiveMaximum}`);
     }
     if ('multipleOf' in schema) {
+      // Sin tolerancia, igual que ajv (`Number.isInteger(value / multipleOf)`).
+      // La versión con `1e-9` era **fail-open**: aceptaba 0.3 bajo
+      // `multipleOf: 0.1` porque 0.3/0.1 = 2.9999999999999996. Ante la duda,
+      // este evaluador rechaza; nunca afloja.
       const q = instance / schema.multipleOf;
-      if (!Number.isFinite(q) || Math.abs(q - Math.round(q)) > 1e-9) {
-        push(`multipleOf ${schema.multipleOf}`);
-      }
+      if (!Number.isInteger(q)) push(`multipleOf ${schema.multipleOf}`);
     }
   }
 

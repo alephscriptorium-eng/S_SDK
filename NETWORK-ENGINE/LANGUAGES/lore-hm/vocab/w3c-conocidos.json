@@ -1,0 +1,80 @@
+{
+  "$id": "urn:lore-hm:w3c-conocidos:v1",
+  "$comment": "Subconjunto DECLARADO de los vocabularios W3C/DCMI contra el que se juzga toda acuñación hm:/lore:. Sirve para dos cosas en verificar-vocab-l04.mjs: (1) una acuñación no puede duplicar el local name de un término que ya existe aquí —el detector antiguo sólo comparaba contra lo ya notariado en este registro, así que `hm:Follow` pasaba aunque `as:Follow` existe en AS2—; (2) los CURIEs de `w3cChecked[]` deben PERTENECER a esta lista, no sólo tener forma de CURIE: si no, la evidencia de haber buscado se satisface con ficción (`as:Nonexistent`).",
+  "alcance": "Subconjunto, NO el vocabulario completo. Ampliarlo es una edición normal y revisable. Un término legítimo ausente de aquí produce un falso rojo en w3cChecked: se añade y se cita la fuente.",
+  "fuentes": {
+    "AS2": "https://www.w3.org/TR/activitystreams-vocabulary/ (W3C Rec 2017-05-23)",
+    "PROV-O": "https://www.w3.org/TR/prov-o/ (W3C Rec 2013-04-30)",
+    "DCTERMS": "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/ (DCMI 2020-01-20)"
+  },
+  "prefijos": {
+    "as": "AS2",
+    "prov": "PROV-O",
+    "dcterms": "DCTERMS"
+  },
+  "terminos": {
+    "as": [
+      "Object", "Link", "Activity", "IntransitiveActivity", "Collection",
+      "OrderedCollection", "CollectionPage", "OrderedCollectionPage",
+      "Accept", "TentativeAccept", "Add", "Arrive", "Create", "Delete",
+      "Follow", "Ignore", "Join", "Leave", "Like", "Offer", "Invite",
+      "Reject", "TentativeReject", "Remove", "Undo", "Update", "View",
+      "Listen", "Read", "Move", "Travel", "Announce", "Block", "Flag",
+      "Dislike", "Question",
+      "Application", "Group", "Organization", "Person", "Service",
+      "Relationship", "Article", "Document", "Audio", "Image", "Video",
+      "Note", "Page", "Event", "Place", "Mention", "Profile", "Tombstone",
+      "actor", "attributedTo", "audience", "bcc", "bto", "cc", "context",
+      "current", "first", "generator", "icon", "image", "inReplyTo",
+      "instrument", "last", "location", "items", "oneOf", "anyOf", "closed",
+      "origin", "next", "object", "prev", "preview", "result", "replies",
+      "tag", "target", "to", "url", "accuracy", "altitude", "content",
+      "name", "duration", "height", "href", "hreflang", "partOf", "latitude",
+      "longitude", "mediaType", "endTime", "published", "startTime",
+      "radius", "rel", "startIndex", "summary", "totalItems", "units",
+      "updated", "width", "subject", "relationship", "describes",
+      "formerType", "deleted"
+    ],
+    "prov": [
+      "Entity", "Activity", "Agent", "Collection", "EmptyCollection",
+      "Bundle", "Person", "SoftwareAgent", "Organization", "Location",
+      "Influence", "EntityInfluence", "Usage", "Start", "End", "Derivation",
+      "PrimarySource", "Quotation", "Revision", "ActivityInfluence",
+      "Generation", "Communication", "Invalidation", "AgentInfluence",
+      "Attribution", "Association", "Plan", "Delegation", "InstantaneousEvent",
+      "Role",
+      "wasGeneratedBy", "wasDerivedFrom", "wasAttributedTo", "startedAtTime",
+      "used", "wasInformedBy", "endedAtTime", "wasAssociatedWith",
+      "actedOnBehalfOf", "alternateOf", "specializationOf", "generated",
+      "hadPrimarySource", "value", "wasQuotedFrom", "wasRevisionOf",
+      "invalidatedAtTime", "wasInvalidatedBy", "hadMember", "wasStartedBy",
+      "wasEndedBy", "invalidated", "influenced", "atLocation", "generatedAtTime",
+      "qualifiedInfluence", "qualifiedGeneration", "qualifiedDerivation",
+      "qualifiedPrimarySource", "qualifiedQuotation", "qualifiedRevision",
+      "qualifiedAttribution", "qualifiedInvalidation", "qualifiedStart",
+      "qualifiedUsage", "qualifiedCommunication", "qualifiedAssociation",
+      "qualifiedEnd", "qualifiedDelegation", "influencer", "entity",
+      "hadUsage", "hadGeneration", "activity", "agent", "hadPlan",
+      "hadActivity", "atTime", "hadRole"
+    ],
+    "dcterms": [
+      "Agent", "AgentClass", "BibliographicResource", "Collection", "Dataset",
+      "Event", "FileFormat", "Frequency", "Jurisdiction", "LicenseDocument",
+      "LinguisticSystem", "Location", "LocationPeriodOrJurisdiction",
+      "MediaType", "MediaTypeOrExtent", "MethodOfAccrual", "MethodOfInstruction",
+      "PeriodOfTime", "PhysicalMedium", "PhysicalResource", "Policy",
+      "ProvenanceStatement", "RightsStatement", "SizeOrDuration", "Standard",
+      "abstract", "accessRights", "accrualMethod", "accrualPeriodicity",
+      "accrualPolicy", "alternative", "audience", "available",
+      "bibliographicCitation", "conformsTo", "contributor", "coverage",
+      "created", "creator", "date", "dateAccepted", "dateCopyrighted",
+      "dateSubmitted", "description", "educationLevel", "extent", "format",
+      "hasFormat", "hasPart", "hasVersion", "identifier", "instructionalMethod",
+      "isFormatOf", "isPartOf", "isReferencedBy", "isReplacedBy", "isRequiredBy",
+      "issued", "isVersionOf", "language", "license", "mediator", "medium",
+      "modified", "provenance", "publisher", "references", "relation",
+      "replaces", "requires", "rights", "rightsHolder", "source", "spatial",
+      "subject", "tableOfContents", "temporal", "title", "type", "valid"
+    ]
+  }
+}

@@ -222,35 +222,74 @@ function checkPackageJson(root) {
 // CA · la lengua NO se ha extraído a package ni promovido a holón 08.
 //      Este es el guard que faltaba: antes no existía, ni malo.
 // ---------------------------------------------------------------------------
-function checkNoExtraccionLengua(root, dirs, files) {
+/**
+ * Recorrido PROPIO del guard, independiente de la superficie del grep-gate.
+ * Antes reutilizaba el walk del grep y heredaba sus skips: `NETWORK-ENGINE/L_SDK/`
+ * pasaba porque el walk no descendía ahí, y la lista de `package.json` era la
+ * **post-skip**. Aquí sólo se saltan `.git` y `node_modules`, que no son árbol
+ * del proyecto.
+ */
+function censoIntegro(root) {
+  const dirs = [];
+  const pkgs = [];
+  (function walk(dir) {
+    let entries;
+    try {
+      entries = readdirSync(dir, { withFileTypes: true });
+    } catch {
+      return;
+    }
+    for (const ent of entries) {
+      const abs = join(dir, ent.name);
+      const rel = toPosix(relative(root, abs));
+      if (ent.isDirectory()) {
+        if (ent.name === '.git' || ent.name === 'node_modules') continue;
+        dirs.push(rel);
+        walk(abs);
+      } else if (ent.isFile() && ent.name === 'package.json') {
+        pkgs.push(rel);
+      }
+    }
+  })(root);
+  return { dirs, pkgs };
+}
+
+function checkNoExtraccionLengua(root) {
   let malos = 0;
+  const { dirs, pkgs } = censoIntegro(root);
   const normaliza = (n) => n.toLowerCase().replace(/[^a-z0-9]/g, '');
 
   for (const rel of dirs) {
     const base = rel.split('/').pop();
     const n = normaliza(base);
-    if (/^lsdk/.test(n) || /^lenguasdk/.test(n) || /^loresdk/.test(n)) {
-      fail(`extracción de la lengua: directorio «${rel}» (patrón L_SDK/LSDK/LENGUA_SDK)`);
+    // `l…sdk` con cualquier relleno: L_SDK, LSDK, L_SDK_v2, LENGUA_SDK,
+    // LORE_SDK, LORE_HM_SDK. Antes eran tres prefijos fijos y `LORE_HM_SDK/`
+    // se colaba.
+    if (/^l[a-z]{0,14}sdk[a-z0-9]{0,6}$/.test(n)) {
+      fail(`extracción de la lengua: directorio «${rel}» (patrón l…SDK)`);
       malos++;
     }
-    if (/^HOLONES\/(0[89]|[1-9]\d)/i.test(rel)) {
+    // Holón ≥08 con UNO o dos dígitos: antes exigía dos y `HOLONES/8-logos/`
+    // pasaba.
+    const m = /^HOLONES\/(\d{1,2})(?:[-_ ]|$)/i.exec(rel);
+    if (m && Number(m[1]) >= 8) {
       fail(`holón nuevo no autorizado: «${rel}» (LORE-HM es costura, no fila)`);
       malos++;
     }
   }
 
-  // Cualquier package.json que publique la lengua, a cualquier profundidad.
-  for (const abs of files) {
-    const rel = toPosix(relative(root, abs));
-    if (rel.split('/').pop() !== 'package.json') continue;
+  // Cualquier package.json del árbol, a cualquier profundidad, saltado o no.
+  for (const rel of pkgs) {
     let pkg;
     try {
-      pkg = JSON.parse(readFileSync(abs, 'utf8'));
+      pkg = JSON.parse(readFileSync(join(root, ...rel.split('/')), 'utf8'));
     } catch {
       continue;
     }
     const name = String(pkg.name ?? '');
-    if (/@logos\/lore-?hm/i.test(name) || /(^|\/)lore-?hm$/i.test(name)) {
+    // `lore-hm`, `lore_hm`, `lorehm`, con o sin scope. Antes el regex no cubría
+    // el guion bajo y `name:"lore_hm"` pasaba.
+    if (/(^|[@/])(?:[a-z0-9-]*\/)?lore[-_ ]?hm$/i.test(name) || /lore[-_ ]?hm/i.test(String(pkg.name ?? '')) && /^@?logos/i.test(name)) {
       fail(
         `extracción de la lengua: ${rel} declara name="${name}" — la puerta de ` +
           'promoción (NETWORK-ENGINE/LANGUAGES/lore-hm/docs/PUERTA-PROMOCION.md) no está abierta',
@@ -259,10 +298,25 @@ function checkNoExtraccionLengua(root, dirs, files) {
     }
   }
 
+  // Un submódulo declarado es una extracción aunque el directorio esté vacío.
+  const gm = join(root, '.gitmodules');
+  if (existsSync(gm)) {
+    const texto = readFileSync(gm, 'utf8');
+    for (const m of texto.matchAll(/^\s*path\s*=\s*(.+)$/gim)) {
+      const p = m[1].trim();
+      const base = p.split('/').pop() ?? '';
+      const h = /^HOLONES\/(\d{1,2})(?:[-_ ]|$)/i.exec(p);
+      if (/^l[a-z]{0,14}sdk[a-z0-9]{0,6}$/.test(normaliza(base)) || (h && Number(h[1]) >= 8)) {
+        fail(`.gitmodules declara un submódulo de extracción: path=${p}`);
+        malos++;
+      }
+    }
+  }
+
   if (malos === 0) {
     ok(
-      'sin extracción: 0 dirs L_SDK/LENGUA_SDK · 0 holones ≥08 · 0 package.json ' +
-        `«lore-hm» (${dirs.length} dirs, ${files.length} ficheros de código inspeccionados)`,
+      'sin extracción: 0 dirs l…SDK · 0 holones ≥08 · 0 package.json «lore-hm» · ' +
+        `0 submódulos de extracción (${dirs.length} dirs, ${pkgs.length} package.json, censo íntegro)`,
     );
   }
 }
@@ -337,6 +391,52 @@ function checkHolonesCostura(root) {
     fail('HOLONES.md debe declarar LORE-HM como costura ejecutable (no fila nueva)');
   } else {
     ok('HOLONES.md declara LORE-HM como costura ejecutable');
+  }
+
+  // El holón 08 tampoco puede nacer en OTRO fichero de la metodología: antes
+  // sólo se miraba HOLONES.md y declararlo al lado pasaba en verde.
+  {
+    const metodologia = join(root, 'DEVOPS', 'METODOLOGIA');
+    const docs = [];
+    (function walk(dir) {
+      let entries;
+      try {
+        entries = readdirSync(dir, { withFileTypes: true });
+      } catch {
+        return;
+      }
+      for (const ent of entries) {
+        const abs = join(dir, ent.name);
+        if (ent.isDirectory()) walk(abs);
+        else if (ent.isFile() && ent.name.endsWith('.md')) docs.push(abs);
+      }
+    })(metodologia);
+
+    // La exención se juzga en LA MISMA LÍNEA, no en una ventana ancha: una
+    // negación lejana no puede amnistiar una declaración («el holón 08 ya está
+    // activo» tres párrafos debajo de un «no crear holón 08» sigue siendo rojo).
+    const NIEGA = /\bno\b|nunca|prohibid|rompe|descartad|sin\s+hol[oó]n|costura|jam[aá]s/i;
+    let fuera = 0;
+    for (const abs of docs) {
+      const rel = toPosix(relative(root, abs));
+      if (rel.endsWith('DEVOPS/METODOLOGIA/HOLONES.md')) continue; // ya cubierto arriba
+      const lineas = readFileSync(abs, 'utf8').replace(/[*_`~]/g, ' ').split(/\r?\n/);
+      for (const [i, linea] of lineas.entries()) {
+        for (const [re, etiqueta] of [
+          [/holones\/0*8[-\w]*\.md/i, 'enlace a holones/08*.md'],
+          [/hol[oó]n\s*(n[.º°]?\s*)?0*8\b/i, 'texto «holón 08»'],
+        ]) {
+          const m = re.exec(linea);
+          if (!m) continue;
+          if (NIEGA.test(linea)) continue;
+          fail(`${rel}:${i + 1} declara un holón 08 (${etiqueta}): «${linea.trim().slice(0, 90)}»`);
+          fuera++;
+        }
+      }
+    }
+    if (fuera === 0) {
+      ok(`holón 08: 0 declaraciones en los ${docs.length} .md de DEVOPS/METODOLOGIA`);
+    }
   }
 
   checkAsientoReservado(root);
@@ -493,7 +593,7 @@ const relFiles = files.map((f) => toPosix(relative(ROOT, f)));
 
 checkIncubationPresent(ROOT);
 checkPackageJson(ROOT);
-checkNoExtraccionLengua(ROOT, dirs, files);
+checkNoExtraccionLengua(ROOT);
 checkHolonesCostura(ROOT);
 checkJunturasPending(ROOT);
 

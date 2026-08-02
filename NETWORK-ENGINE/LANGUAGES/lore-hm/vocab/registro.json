@@ -17,6 +17,13 @@
   "schemaOrgPolicy": "Schema.org sólo como suplemento declarado en schemaOrgSupplement[]; nunca backbone.",
   "schemaOrgSupplement": [],
   "retirementPolicy": "Un término que deja de usarse recibe retiredDate (YYYY-MM-DD) y retireReason; jamás se borra la fila.",
+  "notarialFloor": {
+    "_comment": "Ancla del conjunto notariado, FUERA del propio recuento. Sin esto, «el retiro se publica, no se borra» era autocoherencia: borrar la fila y vaciar retirados[] quedaba verde. Bajar estos valores exige editarlos — un acto visible y revisable.",
+    "entriesMin": 40,
+    "retiredTerms": [
+      "hm:Lease"
+    ]
+  },
   "entries": [
     {
       "term": "as:Join",
@@ -321,7 +328,7 @@
       "w3cChecked": [
         "as:Create",
         "as:Add",
-        "dcterms:Software"
+        "prov:Plan"
       ],
       "reason": "Deployment of a machine manifest in the playground; not a live FM deploy.",
       "date": "2026-08-02",
@@ -350,7 +357,7 @@
       "w3cChecked": [
         "as:Question",
         "prov:Activity",
-        "dcterms:Report"
+        "dcterms:ProvenanceStatement"
       ],
       "reason": "Pipeline readiness gap analysis; playground ceremony-specific.",
       "date": "2026-08-02",
@@ -527,13 +534,15 @@
       "term": "as:Join",
       "family": "AS2",
       "namespace": "https://www.w3.org/ns/activitystreams#",
-      "verb": "peer.join"
+      "verb": "peer.join",
+      "reason": "Reuso AS2 Rec Join para peer.join (presencia bilateral en room simulada)."
     },
     "presence.peer.announce": {
       "term": "as:Announce",
       "family": "AS2",
       "namespace": "https://www.w3.org/ns/activitystreams#",
-      "verb": "peer.announce"
+      "verb": "peer.announce",
+      "reason": "Reuso AS2 Rec Announce para peer.announce."
     },
     "observation.state.inspect": {
       "term": "as:View",
@@ -542,212 +551,354 @@
       "verb": "state.inspect",
       "verbAliases": [
         "machine.status"
-      ]
+      ],
+      "reason": "Reuso AS2 Rec View para state.inspect y machine.status (inspección observable)."
     },
     "presence.session.exit": {
       "term": "as:Leave",
       "family": "AS2",
       "namespace": "https://www.w3.org/ns/activitystreams#",
-      "verb": "session.exit"
+      "verb": "session.exit",
+      "reason": "Reuso AS2 Rec Leave para session.exit."
     },
     "core.activity": {
       "term": "as:Activity",
       "family": "AS2",
-      "namespace": "https://www.w3.org/ns/activitystreams#"
+      "namespace": "https://www.w3.org/ns/activitystreams#",
+      "reason": "Wire/vista SOLID: Activity LORE-HM → as:Activity (+ prov:Activity cuando hay derivación)."
     },
     "core.actor": {
       "term": "as:Actor",
       "family": "AS2",
-      "namespace": "https://www.w3.org/ns/activitystreams#"
+      "namespace": "https://www.w3.org/ns/activitystreams#",
+      "reason": "Peer (actor) → as:Actor / as:Person; H/M son roles, no tipos."
     },
     "core.object": {
       "term": "as:Object",
       "family": "AS2",
-      "namespace": "https://www.w3.org/ns/activitystreams#"
+      "namespace": "https://www.w3.org/ns/activitystreams#",
+      "reason": "Artifact → as:Object (+ prov:Entity)."
     },
     "provenance.usage": {
       "term": "prov:Usage",
       "family": "PROV-O",
       "namespace": "http://www.w3.org/ns/prov#",
-      "verb": "source.ingest"
+      "verb": "source.ingest",
+      "reason": "Reuso PROV-O Usage para source.ingest (ingesta Onfalo sellada)."
     },
     "provenance.activity": {
       "term": "prov:Activity",
       "family": "PROV-O",
       "namespace": "http://www.w3.org/ns/prov#",
-      "verb": "provenance.trace"
+      "verb": "provenance.trace",
+      "reason": "Reuso PROV-O Activity para provenance.trace y derivación en vista."
     },
     "provenance.association": {
       "term": "prov:wasAssociatedWith",
       "family": "PROV-O",
-      "namespace": "http://www.w3.org/ns/prov#"
+      "namespace": "http://www.w3.org/ns/prov#",
+      "reason": "Lease/association en wire: PROV-O association + metadatos dcterms; evita acuñar hm:Lease activo."
     },
     "provenance.generation": {
       "term": "prov:wasGeneratedBy",
       "family": "PROV-O",
-      "namespace": "http://www.w3.org/ns/prov#"
+      "namespace": "http://www.w3.org/ns/prov#",
+      "reason": "Derivación/generación de artefactos en vista SOLID."
     },
     "provenance.derivation": {
       "term": "prov:wasDerivedFrom",
       "family": "PROV-O",
-      "namespace": "http://www.w3.org/ns/prov#"
+      "namespace": "http://www.w3.org/ns/prov#",
+      "reason": "Cadena de derivación en vista SOLID."
     },
     "artifact.dataset": {
       "term": "dcterms:Dataset",
       "family": "DCTERMS",
       "namespace": "http://purl.org/dc/terms/",
-      "verb": "artifact.data"
+      "verb": "artifact.data",
+      "reason": "Reuso DCTERMS Dataset para artifact.data."
     },
     "artifact.specification": {
       "term": "dcterms:BibliographicResource",
       "family": "DCTERMS",
       "namespace": "http://purl.org/dc/terms/",
-      "verb": "artifact.spec"
+      "verb": "artifact.spec",
+      "reason": "Reuso DCTERMS BibliographicResource para artifact.spec."
     },
     "metadata.identifier": {
       "term": "dcterms:identifier",
       "family": "DCTERMS",
-      "namespace": "http://purl.org/dc/terms/"
+      "namespace": "http://purl.org/dc/terms/",
+      "reason": "Digest / identifier en wire = dcterms:identifier (valor digest etiquetado)."
     },
     "metadata.created": {
       "term": "dcterms:created",
       "family": "DCTERMS",
-      "namespace": "http://purl.org/dc/terms/"
+      "namespace": "http://purl.org/dc/terms/",
+      "reason": "Metadato temporal de creación en vista."
     },
     "metadata.modified": {
       "term": "dcterms:modified",
       "family": "DCTERMS",
-      "namespace": "http://purl.org/dc/terms/"
+      "namespace": "http://purl.org/dc/terms/",
+      "reason": "Metadato temporal de modificación en vista."
     },
     "metadata.title": {
       "term": "dcterms:title",
       "family": "DCTERMS",
-      "namespace": "http://purl.org/dc/terms/"
+      "namespace": "http://purl.org/dc/terms/",
+      "reason": "Título descriptivo en vista; no backbone de tipestate."
     },
     "lease.pod.grant": {
       "term": "hm:PodLease",
       "family": "hm:",
       "namespace": "https://logos.local/ns/hm#",
-      "verb": "pod.lease"
+      "verb": "pod.lease",
+      "reason": "No AS2/PROV-O term for bilateral pod lease in the playground simulacro.",
+      "w3cChecked": [
+        "as:Offer",
+        "as:Accept",
+        "prov:wasAssociatedWith",
+        "dcterms:rightsHolder"
+      ]
     },
     "lease.pod.revoke": {
       "term": "hm:PodRevoke",
       "family": "hm:",
       "namespace": "https://logos.local/ns/hm#",
-      "verb": "pod.revoke"
+      "verb": "pod.revoke",
+      "reason": "No W3C term for lease revocation scoped to file-backed playground pods.",
+      "w3cChecked": [
+        "as:Undo",
+        "as:Reject",
+        "as:Delete",
+        "prov:wasInvalidatedBy"
+      ]
     },
     "unit.lifecycle.inflate": {
       "term": "hm:UnitInflate",
       "family": "hm:",
       "namespace": "https://logos.local/ns/hm#",
-      "verb": "unit.inflate"
+      "verb": "unit.inflate",
+      "reason": "Bilateral inflation ceremony (M requests, H validates) is playground-specific.",
+      "w3cChecked": [
+        "as:Create",
+        "as:Add",
+        "prov:wasGeneratedBy"
+      ]
     },
     "unit.lifecycle.start": {
       "term": "hm:UnitStart",
       "family": "hm:",
       "namespace": "https://logos.local/ns/hm#",
-      "verb": "unit.start"
+      "verb": "unit.start",
+      "reason": "AS2 Rec has no Start activity; unit lifecycle start is playground tipestate.",
+      "w3cChecked": [
+        "as:Arrive",
+        "as:Create",
+        "prov:startedAtTime"
+      ]
     },
     "unit.lifecycle.pause": {
       "term": "hm:UnitPause",
       "family": "hm:",
       "namespace": "https://logos.local/ns/hm#",
-      "verb": "unit.pause"
+      "verb": "unit.pause",
+      "reason": "AS2 Rec has no Pause activity for unit tipestate.",
+      "w3cChecked": [
+        "as:Ignore",
+        "as:Block",
+        "prov:Activity"
+      ]
     },
     "unit.lifecycle.resume": {
       "term": "hm:UnitResume",
       "family": "hm:",
       "namespace": "https://logos.local/ns/hm#",
-      "verb": "unit.resume"
+      "verb": "unit.resume",
+      "reason": "AS2 Rec has no Resume activity for unit tipestate.",
+      "w3cChecked": [
+        "as:Accept",
+        "as:Arrive",
+        "prov:Activity"
+      ]
     },
     "unit.lifecycle.stop": {
       "term": "hm:UnitStop",
       "family": "hm:",
       "namespace": "https://logos.local/ns/hm#",
-      "verb": "unit.stop"
+      "verb": "unit.stop",
+      "reason": "AS2 Rec has no Stop activity for unit tipestate; Leave/Delete are not equivalent.",
+      "w3cChecked": [
+        "as:Leave",
+        "as:Delete",
+        "as:Remove",
+        "prov:wasEndedBy"
+      ]
     },
     "unit.diagnostics.debug": {
       "term": "hm:UnitDebug",
       "family": "hm:",
       "namespace": "https://logos.local/ns/hm#",
-      "verb": "unit.debug"
+      "verb": "unit.debug",
+      "reason": "AS2 has no debug activity for unit diagnostics in the simulacro.",
+      "w3cChecked": [
+        "as:View",
+        "as:Read",
+        "prov:Activity"
+      ]
     },
     "machine.deploy": {
       "term": "hm:MachineDeploy",
       "family": "hm:",
       "namespace": "https://logos.local/ns/hm#",
-      "verb": "machine.deploy"
+      "verb": "machine.deploy",
+      "reason": "Deployment of a machine manifest in the playground; not a live FM deploy.",
+      "w3cChecked": [
+        "as:Create",
+        "as:Add",
+        "dcterms:Software"
+      ]
     },
     "unit.diagnostics.inspect": {
       "term": "hm:UnitInspect",
       "family": "hm:",
       "namespace": "https://logos.local/ns/hm#",
-      "verb": "unit.inspect"
+      "verb": "unit.inspect",
+      "reason": "Deep unit inspection beyond as:View scope for playground pods.",
+      "w3cChecked": [
+        "as:View",
+        "as:Read"
+      ]
     },
     "pipeline.gap-analysis": {
       "term": "hm:PipelineGapAnalysis",
       "family": "hm:",
       "namespace": "https://logos.local/ns/hm#",
-      "verb": "pipeline.gaps"
+      "verb": "pipeline.gaps",
+      "reason": "Pipeline readiness gap analysis; playground ceremony-specific.",
+      "w3cChecked": [
+        "as:Question",
+        "prov:Activity",
+        "dcterms:Report"
+      ]
     },
     "artifact.validation": {
       "term": "hm:ArtifactValidation",
       "family": "hm:",
       "namespace": "https://logos.local/ns/hm#",
-      "verb": "artifact.validate"
+      "verb": "artifact.validate",
+      "reason": "Schema/contract validation of artifact chains in evidence.",
+      "w3cChecked": [
+        "as:Accept",
+        "as:Reject",
+        "prov:wasDerivedFrom"
+      ]
     },
     "ceremony.coverage.measure": {
       "term": "hm:CoverageMeasure",
       "family": "hm:",
       "namespace": "https://logos.local/ns/hm#",
-      "verb": "coverage.measure"
+      "verb": "coverage.measure",
+      "reason": "Ceremony coverage measurement over verb matrix; no DCMI term.",
+      "w3cChecked": [
+        "prov:Activity",
+        "dcterms:Dataset"
+      ]
     },
     "log.corto.chunk": {
       "term": "hm:CortoDeEjecucion",
       "family": "hm:",
-      "namespace": "https://logos.local/ns/hm#"
+      "namespace": "https://logos.local/ns/hm#",
+      "reason": "Chunk inmutable consultable del log de corrida; no existe término W3C/DCMI para este artefacto de ceremonia (plan cola A §24).",
+      "w3cChecked": [
+        "prov:Entity",
+        "as:Object",
+        "dcterms:Dataset",
+        "dcterms:BibliographicResource"
+      ]
     },
     "document.analysis.bartleby": {
       "term": "lore:DocumentAnalyze",
       "family": "lore:",
       "namespace": "https://logos.local/ns/lore#",
-      "verb": "document.analyze"
+      "verb": "document.analyze",
+      "reason": "AS2 Rec has no Analyze; as:Read is weaker than Bartleby five-section analysis.",
+      "w3cChecked": [
+        "as:Read",
+        "as:View",
+        "prov:Activity"
+      ]
     },
     "vector.index.mock": {
       "term": "lore:VectorMockIndex",
       "family": "lore:",
       "namespace": "https://logos.local/ns/lore#",
-      "verb": "vector.mock-index"
+      "verb": "vector.mock-index",
+      "reason": "Mock vector index with mock=true; no W3C term for deterministic mock embeddings.",
+      "w3cChecked": [
+        "as:Add",
+        "prov:Entity",
+        "dcterms:Dataset"
+      ]
     },
     "line.materialize": {
       "term": "lore:LineMaterialize",
       "family": "lore:",
       "namespace": "https://logos.local/ns/lore#",
-      "verb": "line.materialize"
+      "verb": "line.materialize",
+      "reason": "Materialization via @zeus/linea-kit; domain-specific to LORE barrio.",
+      "w3cChecked": [
+        "as:Create",
+        "prov:wasGeneratedBy"
+      ]
     },
     "graph.bifurcate": {
       "term": "lore:GraphBifurcate",
       "family": "lore:",
       "namespace": "https://logos.local/ns/lore#",
-      "verb": "graph.bifurcate"
+      "verb": "graph.bifurcate",
+      "reason": "Graph bifurcation into parallel universes; no W3C equivalent.",
+      "w3cChecked": [
+        "as:Create",
+        "prov:wasDerivedFrom",
+        "prov:alternateOf"
+      ]
     },
     "universe.instantiate": {
       "term": "lore:UniverseInstantiate",
       "family": "lore:",
       "namespace": "https://logos.local/ns/lore#",
-      "verb": "universe.instantiate"
+      "verb": "universe.instantiate",
+      "reason": "Instantiation of a LORE universe runner in the simulacro.",
+      "w3cChecked": [
+        "as:Create",
+        "prov:wasGeneratedBy"
+      ]
     },
     "log.corto.emit": {
       "term": "lore:CortoEmit",
       "family": "lore:",
       "namespace": "https://logos.local/ns/lore#",
-      "verb": "corto.emit"
+      "verb": "corto.emit",
+      "reason": "hm:CortoDeEjecucion chunk emission; not literary corto nor AS2.",
+      "w3cChecked": [
+        "as:Create",
+        "as:Announce",
+        "prov:wasGeneratedBy"
+      ]
     },
     "log.corto.query": {
       "term": "lore:CortoQuery",
       "family": "lore:",
       "namespace": "https://logos.local/ns/lore#",
-      "verb": "corto.query"
+      "verb": "corto.query",
+      "reason": "Query over hm:CortoDeEjecucion chunks; LORE-specific.",
+      "w3cChecked": [
+        "as:Question",
+        "as:View",
+        "prov:used"
+      ]
     }
   },
   "retirados": [
