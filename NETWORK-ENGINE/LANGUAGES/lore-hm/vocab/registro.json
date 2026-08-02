@@ -1,0 +1,419 @@
+{
+  "$id": "urn:lore-hm:vocab-registry:v1",
+  "schemaVersion": 1,
+  "wp": "WP-SDK-L04",
+  "canonicalPath": "NETWORK-ENGINE/LANGUAGES/lore-hm/vocab/registro.json",
+  "updated": "2026-08-02",
+  "signerDefault": "Worker LORE-HM · WP-SDK-L04",
+  "namespaces": {
+    "as": "https://www.w3.org/ns/activitystreams#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "hm": "https://logos.local/ns/hm#",
+    "lore": "https://logos.local/ns/lore#",
+    "schema": "https://schema.org/"
+  },
+  "namespaceNote": "Prefijos hm:/lore: de incubación s-sdk. El playground hub (WP-HUB-101) usa alias locales urn:scriptorium:hm:v1: / urn:scriptorium:lore:v1: — mismos local names; no son namespace paralelo.",
+  "schemaOrgPolicy": "Schema.org sólo como suplemento declarado en schemaOrgSupplement[]; nunca backbone.",
+  "schemaOrgSupplement": [],
+  "retirementPolicy": "Un término que deja de usarse recibe retiredDate (YYYY-MM-DD) y retireReason; jamás se borra la fila.",
+  "entries": [
+    {
+      "term": "as:Join",
+      "family": "AS2",
+      "reason": "Reuso AS2 Rec Join para peer.join (presencia bilateral en room simulada).",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "verb": "peer.join",
+      "retiredDate": null
+    },
+    {
+      "term": "as:Announce",
+      "family": "AS2",
+      "reason": "Reuso AS2 Rec Announce para peer.announce.",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "verb": "peer.announce",
+      "retiredDate": null
+    },
+    {
+      "term": "as:View",
+      "family": "AS2",
+      "reason": "Reuso AS2 Rec View para state.inspect y machine.status (inspección observable).",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "verb": "state.inspect",
+      "retiredDate": null
+    },
+    {
+      "term": "as:Leave",
+      "family": "AS2",
+      "reason": "Reuso AS2 Rec Leave para session.exit.",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "verb": "session.exit",
+      "retiredDate": null
+    },
+    {
+      "term": "as:Activity",
+      "family": "AS2",
+      "reason": "Wire/vista SOLID: Activity LORE-HM → as:Activity (+ prov:Activity cuando hay derivación).",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "retiredDate": null
+    },
+    {
+      "term": "as:Actor",
+      "family": "AS2",
+      "reason": "Peer (actor) → as:Actor / as:Person; H/M son roles, no tipos.",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "retiredDate": null
+    },
+    {
+      "term": "as:Object",
+      "family": "AS2",
+      "reason": "Artifact → as:Object (+ prov:Entity).",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "retiredDate": null
+    },
+    {
+      "term": "prov:Usage",
+      "family": "PROV-O",
+      "reason": "Reuso PROV-O Usage para source.ingest (ingesta Onfalo sellada).",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "verb": "source.ingest",
+      "retiredDate": null
+    },
+    {
+      "term": "prov:Activity",
+      "family": "PROV-O",
+      "reason": "Reuso PROV-O Activity para provenance.trace y derivación en vista.",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "verb": "provenance.trace",
+      "retiredDate": null
+    },
+    {
+      "term": "prov:wasAssociatedWith",
+      "family": "PROV-O",
+      "reason": "Lease/association en wire: PROV-O association + metadatos dcterms; evita acuñar hm:Lease activo.",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "retiredDate": null
+    },
+    {
+      "term": "prov:wasGeneratedBy",
+      "family": "PROV-O",
+      "reason": "Derivación/generación de artefactos en vista SOLID.",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "retiredDate": null
+    },
+    {
+      "term": "prov:wasDerivedFrom",
+      "family": "PROV-O",
+      "reason": "Cadena de derivación en vista SOLID.",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "retiredDate": null
+    },
+    {
+      "term": "dcterms:Dataset",
+      "family": "DCTERMS",
+      "reason": "Reuso DCTERMS Dataset para artifact.data.",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "verb": "artifact.data",
+      "retiredDate": null
+    },
+    {
+      "term": "dcterms:BibliographicResource",
+      "family": "DCTERMS",
+      "reason": "Reuso DCTERMS BibliographicResource para artifact.spec.",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "verb": "artifact.spec",
+      "retiredDate": null
+    },
+    {
+      "term": "dcterms:identifier",
+      "family": "DCTERMS",
+      "reason": "Digest / identifier en wire = dcterms:identifier (valor digest etiquetado).",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "retiredDate": null
+    },
+    {
+      "term": "dcterms:created",
+      "family": "DCTERMS",
+      "reason": "Metadato temporal de creación en vista.",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "retiredDate": null
+    },
+    {
+      "term": "dcterms:modified",
+      "family": "DCTERMS",
+      "reason": "Metadato temporal de modificación en vista.",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "retiredDate": null
+    },
+    {
+      "term": "dcterms:title",
+      "family": "DCTERMS",
+      "reason": "Título descriptivo en vista; no backbone de tipestate.",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "retiredDate": null
+    },
+    {
+      "term": "hm:PodLease",
+      "family": "hm:",
+      "reason": "No AS2/PROV-O term for bilateral pod lease in the playground simulacro.",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "verb": "pod.lease",
+      "retiredDate": null
+    },
+    {
+      "term": "hm:PodRevoke",
+      "family": "hm:",
+      "reason": "No W3C term for lease revocation scoped to file-backed playground pods.",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "verb": "pod.revoke",
+      "retiredDate": null
+    },
+    {
+      "term": "hm:UnitInflate",
+      "family": "hm:",
+      "reason": "Bilateral inflation ceremony (M requests, H validates) is playground-specific.",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "verb": "unit.inflate",
+      "retiredDate": null
+    },
+    {
+      "term": "hm:UnitStart",
+      "family": "hm:",
+      "reason": "AS2 Rec has no Start activity; unit lifecycle start is playground tipestate.",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "verb": "unit.start",
+      "retiredDate": null
+    },
+    {
+      "term": "hm:UnitPause",
+      "family": "hm:",
+      "reason": "AS2 Rec has no Pause activity for unit tipestate.",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "verb": "unit.pause",
+      "retiredDate": null
+    },
+    {
+      "term": "hm:UnitResume",
+      "family": "hm:",
+      "reason": "AS2 Rec has no Resume activity for unit tipestate.",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "verb": "unit.resume",
+      "retiredDate": null
+    },
+    {
+      "term": "hm:UnitStop",
+      "family": "hm:",
+      "reason": "AS2 Rec has no Stop activity for unit tipestate; Leave/Delete are not equivalent.",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "verb": "unit.stop",
+      "retiredDate": null
+    },
+    {
+      "term": "hm:UnitDebug",
+      "family": "hm:",
+      "reason": "AS2 has no debug activity for unit diagnostics in the simulacro.",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "verb": "unit.debug",
+      "retiredDate": null
+    },
+    {
+      "term": "hm:MachineDeploy",
+      "family": "hm:",
+      "reason": "Deployment of a machine manifest in the playground; not a live FM deploy.",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "verb": "machine.deploy",
+      "retiredDate": null
+    },
+    {
+      "term": "hm:UnitInspect",
+      "family": "hm:",
+      "reason": "Deep unit inspection beyond as:View scope for playground pods.",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "verb": "unit.inspect",
+      "retiredDate": null
+    },
+    {
+      "term": "hm:PipelineGapAnalysis",
+      "family": "hm:",
+      "reason": "Pipeline readiness gap analysis; playground ceremony-specific.",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "verb": "pipeline.gaps",
+      "retiredDate": null
+    },
+    {
+      "term": "hm:ArtifactValidation",
+      "family": "hm:",
+      "reason": "Schema/contract validation of artifact chains in evidence.",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "verb": "artifact.validate",
+      "retiredDate": null
+    },
+    {
+      "term": "hm:CoverageMeasure",
+      "family": "hm:",
+      "reason": "Ceremony coverage measurement over verb matrix; no DCMI term.",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "verb": "coverage.measure",
+      "retiredDate": null
+    },
+    {
+      "term": "hm:CortoDeEjecucion",
+      "family": "hm:",
+      "reason": "Chunk inmutable consultable del log de corrida; no existe término W3C/DCMI para este artefacto de ceremonia (plan cola A §24).",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "retiredDate": null
+    },
+    {
+      "term": "lore:DocumentAnalyze",
+      "family": "lore:",
+      "reason": "AS2 Rec has no Analyze; as:Read is weaker than Bartleby five-section analysis.",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "verb": "document.analyze",
+      "retiredDate": null
+    },
+    {
+      "term": "lore:VectorMockIndex",
+      "family": "lore:",
+      "reason": "Mock vector index with mock=true; no W3C term for deterministic mock embeddings.",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "verb": "vector.mock-index",
+      "retiredDate": null
+    },
+    {
+      "term": "lore:LineMaterialize",
+      "family": "lore:",
+      "reason": "Materialization via @zeus/linea-kit; domain-specific to LORE barrio.",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "verb": "line.materialize",
+      "retiredDate": null
+    },
+    {
+      "term": "lore:GraphBifurcate",
+      "family": "lore:",
+      "reason": "Graph bifurcation into parallel universes; no W3C equivalent.",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "verb": "graph.bifurcate",
+      "retiredDate": null
+    },
+    {
+      "term": "lore:UniverseInstantiate",
+      "family": "lore:",
+      "reason": "Instantiation of a LORE universe runner in the simulacro.",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "verb": "universe.instantiate",
+      "retiredDate": null
+    },
+    {
+      "term": "lore:CortoEmit",
+      "family": "lore:",
+      "reason": "hm:CortoDeEjecucion chunk emission; not literary corto nor AS2.",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "verb": "corto.emit",
+      "retiredDate": null
+    },
+    {
+      "term": "lore:CortoQuery",
+      "family": "lore:",
+      "reason": "Query over hm:CortoDeEjecucion chunks; LORE-specific.",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "verb": "corto.query",
+      "retiredDate": null
+    },
+    {
+      "term": "hm:Lease",
+      "family": "hm:",
+      "reason": "Candidata L03 para tipar Lease como clase; evaluada frente a prov:wasAssociatedWith.",
+      "date": "2026-08-02",
+      "signer": "Worker LORE-HM · WP-SDK-L04",
+      "retiredDate": "2026-08-02",
+      "retireReason": "Reuso PROV-O association + dcterms cubre el hueco en wire/vista; no activar acuñación paralela."
+    }
+  ],
+  "w3cEquivalents": {
+    "_comment": "Superficie de consumo del gate WP-HUB-101 (gateVocabCoining). Derivada de entries con familia AS2|PROV-O|DCTERMS y verb asociado. No es copia del stub hub — es la fuente.",
+    "peer.join": {
+      "term": "as:Join",
+      "namespace": "https://www.w3.org/ns/activitystreams#",
+      "family": "AS2"
+    },
+    "peer.announce": {
+      "term": "as:Announce",
+      "namespace": "https://www.w3.org/ns/activitystreams#",
+      "family": "AS2"
+    },
+    "state.inspect": {
+      "term": "as:View",
+      "namespace": "https://www.w3.org/ns/activitystreams#",
+      "family": "AS2"
+    },
+    "session.exit": {
+      "term": "as:Leave",
+      "namespace": "https://www.w3.org/ns/activitystreams#",
+      "family": "AS2"
+    },
+    "source.ingest": {
+      "term": "prov:Usage",
+      "namespace": "http://www.w3.org/ns/prov#",
+      "family": "PROV-O"
+    },
+    "machine.status": {
+      "term": "as:View",
+      "namespace": "https://www.w3.org/ns/activitystreams#",
+      "family": "AS2"
+    },
+    "artifact.data": {
+      "term": "dcterms:Dataset",
+      "namespace": "http://purl.org/dc/terms/",
+      "family": "DCTERMS"
+    },
+    "artifact.spec": {
+      "term": "dcterms:BibliographicResource",
+      "namespace": "http://purl.org/dc/terms/",
+      "family": "DCTERMS"
+    },
+    "provenance.trace": {
+      "term": "prov:Activity",
+      "namespace": "http://www.w3.org/ns/prov#",
+      "family": "PROV-O"
+    }
+  }
+}

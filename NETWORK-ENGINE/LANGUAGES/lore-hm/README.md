@@ -26,6 +26,8 @@ demostración de semántica no reducible a config plana.
 | [`docs/P1-P5.md`](docs/P1-P5.md) | contrato inception respondido |
 | [`docs/PUERTA-PROMOCION.md`](docs/PUERTA-PROMOCION.md) | gates antes de extraer package |
 | [`docs/NAMESPACE.md`](docs/NAMESPACE.md) | `@logos/*` candidato, sin repo |
+| [`docs/CONSUMO-HUB-101.md`](docs/CONSUMO-HUB-101.md) | contrato: gate hub-101 consume el registro L04 |
+| [`vocab/registro.json`](vocab/registro.json) | registro durable de vocabulario (WP-SDK-L04) |
 | [`src/primitives.ts`](src/primitives.ts) | Peer, Unit, Lease, Activity, Artifact |
 | [`src/projections.ts`](src/projections.ts) | Pod, Línea, Grafo, Universo, Corto, Barrio, Document Machine |
 | [`src/tipestate.ts`](src/tipestate.ts) | phantom states + transiciones legales |
@@ -47,9 +49,11 @@ Todo lo demás (Pod, Línea, Grafo, Universo, Corto, Barrio, Document Machine) e
 
 ```bash
 node NETWORK-ENGINE/LANGUAGES/lore-hm/scripts/verificar-inception-l02.mjs
+node NETWORK-ENGINE/LANGUAGES/lore-hm/vocab/scripts/verificar-vocab-l04.mjs
 ```
 
-Falla si el conteo de primitivas ≠ 5 o si falta la demo tipestate vs flat.
+Falla si el conteo de primitivas ≠ 5, si falta la demo tipestate vs flat, o si
+el registro de vocabulario se mueve / tiene acuñaciones sin razón.
 
 ## Herencia
 

@@ -1,7 +1,12 @@
 # Vocabulario · reuso antes de acuñar
 
 Mandato: AS2 · PROV-O · DCTERMS **antes** de acuñar `hm:` / `lore:`.
-Schema.org sólo como suplemento declarado. Registro durable = WP-SDK-L04.
+Schema.org sólo como suplemento declarado.
+
+**Fuente durable (WP-SDK-L04):**
+[`../../vocab/registro.json`](../../vocab/registro.json) · contrato hub-101:
+[`../../docs/CONSUMO-HUB-101.md`](../../docs/CONSUMO-HUB-101.md).
+Este doc es mapa mínimo wire→vista; no duplica el registro.
 
 ## Prefijos
 
