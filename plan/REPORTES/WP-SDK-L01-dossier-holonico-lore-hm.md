@@ -87,3 +87,7 @@ de ownership y plan de fases sin obra cross-repo.
 
 - **WP-SDK-L02** inception lengua (tras GO custodio post-revisión)
 - **HUB-113** en paralelo si el PO confirma (spike 112)
+
+## Addenda orquestador · PASS
+
+Contrarrevisión PASS. Verde **local**. Tip `2cd85c4`.
