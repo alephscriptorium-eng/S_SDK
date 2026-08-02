@@ -8,7 +8,7 @@
 | rama | `wp/sdk-l05-sellado-de-network-engine` |
 | worktree | `C:/S_LAB/wt/s-sdk-wp-sdk-l05` |
 | HEAD base | `231bd3a` (tip L04) |
-| tip entrega | _(se asienta en commit de reporte)_ |
+| tip entrega | `b1ea7b41cf0a4dcda1bfcad99a5d8b36084f7bd4` |
 | riesgo de revisión | `independiente` |
 | revisor distinto del worker | `sí` · `VEREDICTO_REVISOR: ⏳ pendiente` |
 | estado propuesto | listo para revisión adversarial · **PASS local** |
@@ -106,3 +106,5 @@ Ninguno para entrega L05 en s-sdk.
 ## Revisión del orquestador
 
 _(la rellena el orquestador: aceptado ✅ / devuelto con lista numerada)_
+
+Tip feat: `b1ea7b41cf0a4dcda1bfcad99a5d8b36084f7bd4` · rama `wp/sdk-l05-sellado-de-network-engine`.
