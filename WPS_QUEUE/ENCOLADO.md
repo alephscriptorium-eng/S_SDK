@@ -2,7 +2,7 @@
 
 | dato | valor |
 | ---- | ----- |
-| Estado | **cola A: ENCOLADA · DIFERIDA AL FINAL** (no despachable, no promovida) · **cola B: PROMOVIDA** el 2026-07-31 a ids canónicos de Z `U245–U249`, con ventana de despacho **tras el gate GD** (carril D cerrado en U206) |
+| Estado | **▶ LAS DOS COLAS PROMOVIDAS.** **cola A: PROMOVIDA** el 2026-08-02 por orden del **product owner** — repartida por dueño en **17 fichas**: hub lane `LORE-HM` (`WP-HUB-100`–`111`, gate `GHM`) + `s-sdk` lane `LENGUA` (`WP-SDK-L01`–`L05`). Ya no es carpeta encolada · **cola B: PROMOVIDA** el 2026-07-31 a ids canónicos de Z `U245–U249`, ventana de despacho **abierta desde `GD`** |
 | Decisión | del custodio (2026-07-31, al descongelar el swarm): «encolar y limpiar; fijar la carpeta y la tarea de investigar después» |
 | Quién fija | **Anfitrión** (orquestador del swarm Z·V·G·L·O·HUB) |
 | Quién produjo el material | otra ventana (**S / «Sol»**), en modo investigación READ-ONLY |
@@ -25,6 +25,41 @@ pierda ni interfiera. El veredicto de fondo es la tarea diferida de §4.
 
 **La carpeta entera es cantera, no fuente de verdad operativa** — así lo
 declara su propia cola A, y esta ficha lo ratifica.
+
+## §0 · ✎ PROMOCIÓN DE LA COLA A (2026-08-02) — lo que invalida de esta ficha
+
+Orden del product owner: *«vamos a cambiar una carpeta pendiente de encolar
+por una rama sólida de WPs para el backlog»*. El Anfitrión leyó el material
+entero y ejecutó el triaje `T-S01` en vez de dejarlo diferido.
+
+**Corrección que consta**: el Anfitrión había escrito —aquí en §3 y en la fila
+`U244` de Z— que el programa quedaba parado por una **decisión de reparto
+pendiente del custodio**. Era falso: **el propio material la tiene tomada**.
+`plan.md` §Decisions lo dice sin ambigüedad —*no se crea holón 08 ni `L_SDK`*—
+y la cadena está fijada: `e-sdk` **ya es** el holón 03 con plan propio,
+`a-sdk` entra **RO import-once** (holón 05, cantera), Network-Engine (04) se
+**sella como fuente histórica** y S (07) notaría. No había nada que decidir:
+había trabajo que repartir.
+
+**Reparto resultante** (nada se despacha sin GO; las 17 fichas nacen sin worker):
+
+| destino | fichas | qué se lleva |
+| ------- | ------ | ------------ |
+| hub `C:\S\scriptorium` | `WP-HUB-100`–`111` (lane `LORE-HM`, gate `GHM`) | la obra: kit, schemas, ontología, generador, pods, import Onfalo, cadena determinista, ceremonia bilateral, verificador externo, **mapa 7 holones × 6 distritos × 24 barrios**, despertar de `lore-voz`, negativos y consumidor limpio |
+| `s-sdk` | `WP-SDK-L01`–`L05` (lane `LENGUA`) | dossier holónico · inception de las **cinco primitivas** · capa SOLID de primera clase · registro de vocabulario · sellado del 04 |
+| `z-sdk` | `U245`–`U249` (ya promovidas) | frontera de tipos de los cuatro paquetes |
+| `e-sdk` | — | el `DocumentMachineProvider` real es **obra de E**; el hub sólo define su puerto y una contingencia determinista marcada `contingency=true` |
+
+Las **seis preguntas de §4** quedan contestadas así: **(1)** cola B ortogonal,
+ya remapeada · **(2)** partición hecha, tabla de arriba · **(3)** no se amplía
+el reparto — respuesta que **ya estaba en el material** · **(4)** `L03` absorbe
+el diseño SOLID, `U243` de Z queda aparte y se alimenta de él · **(5)** entra
+**antes que O**, porque la obra es del hub y no depende de O · **(6)** lo
+verificable hoy es lo citado en las fichas; lo caducado queda marcado en `L01`.
+
+**Lo que sigue vigente de esta ficha**: el cerco de §2 (nada se despacha desde
+esta carpeta; la carpeta es cantera) y las divergencias de §3 salvo la de
+reparto, corregida arriba.
 
 ## §2 · Cerco mientras esté encolada (vinculante)
 

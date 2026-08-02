@@ -32,6 +32,7 @@ WORLD_ROOT y no usa submodules como carpetas de trabajo.
 | METHOD-CONSUMER | pin/sync/activación del método publicado |
 | WEB-FOSS | portal, licencia, build y provenance |
 | GOVERNANCE | backlog, prácticas, dependencias y cierre |
+| **LENGUA (LORE-HM)** | **la lengua común: dossier holónico, inception, capa SOLID, vocabulario y sellado del 04** |
 | HORIZONTE | temas futuros sin ejecución |
 
 ---
@@ -234,6 +235,114 @@ WORLD_ROOT y no usa submodules como carpetas de trabajo.
 
 ---
 
+## Lane · LENGUA (LORE-HM)
+
+> **Origen.** Mitad notarial de la rama `LORE-HM`, promovida desde el intake
+> `WPS_QUEUE` **cola A** el **2026-08-02** por orden del product owner. La otra
+> mitad —la obra del playground— vive en el hub como
+> `WP-HUB-100`–`111`; la frontera de tipos de Zeus, en `z-sdk` como
+> `U245`–`U249`. **S guarda la lengua, las junturas y los anclajes; nunca el
+> código de los mundos.**
+
+**La decisión estructural, ya tomada en el material y no reabierta aquí:**
+LORE-HM **no es un holón 08** ni un framework del playground. Es una **lengua
+común** incubada con el método de lenguajes del holón 04, destilada como
+capacidad **Logos (02)**, activada por **E-SDK (03)** para operar Document
+Machine, y demostrada bilateralmente en el playground. Cruza 01–04 y queda
+gobernada y notariada por **07**. `HOLONES.md` sigue con **siete filas**.
+
+### WP-SDK-L01 · dossier-holonico-lore-hm
+- **BRIEF:** dossier `lore-hm-integracion-holonica` con `README`, `FUENTES`,
+  `MAPA-HOLONICO`, `LENGUA`, `SOLID`, `MATRIZ-CONSUMIDORES`, `DECISIONES` y
+  `PLAN`. El mapa fija las escalas **sin confundirlas**: holón 03 = E-SDK ·
+  04 = Network-Engine/AOS y su laboratorio de lenguajes · 07 = S, casa del
+  método y notaría · distrito = `lore-voz` · barrio 20 =
+  `document-machine-sdk` · unidades = Bartleby, Cristalizador, Pipeline,
+  Grafista, Demiurgo, Dramaturgo · playground = **consumidor y banco de
+  conformidad, no dueño del dominio**. Los materiales 05–06 son cantera
+  histórica y contenido, **no dependencias de runtime**.
+- **CA:** toda afirmación marcada **verificada / hipótesis / decisión
+  pendiente**, sin excepción · no crea holón 08 ni `L_SDK` · no confunde E-SDK
+  con un barrio ni con una unidad · `HOLONES.md`, las fichas 02/03/04 y el
+  asiento `HOLONES/03-emmanuel` quedan **sin tocar** en este WP · precedentes
+  citados con ruta: dossier de las tres liturgias, junturas 01↔02, 02↔03 y
+  03↔04, I60/I61 y DS-5.
+- **Pri:** P0
+
+### WP-SDK-L02 · inception-lengua-lore-hm
+- **BRIEF:** definir LORE-HM con el contrato de inception heredado del 04,
+  **sin crear package todavía**. Ontología nuclear limitada a **cinco
+  primitivas y ni una más**: `Peer` (sujeto que actúa — H y M son roles y
+  capacidades, **no tipos de ser**), `Unit`, `Lease`, `Activity`, `Artifact`.
+  Quedan como **proyecciones**: Pod (almacenamiento de Unit), Línea, Grafo,
+  Universo y Corto (clases de Artifact), Barrio (escenario) y Document Machine
+  (capacidad del barrio). Gramática **TypeScript declarativa**: const type
+  parameters, uniones discriminadas, IRIs y digests branded, phantom states
+  para leases y units, chequeo exhaustivo y funciones de proyección. **Sin
+  sintaxis textual ni parser** hasta demostrar que TypeScript no basta.
+  Incubación en `NETWORK-ENGINE/LANGUAGES/lore-hm` sólo por aprovechar el
+  protocolo existente, **sin introducir dependencias del runtime antiguo**.
+- **CA:** P1–P5 respondidas · **al menos una regla imposible de expresar o
+  validar con configuración plana**, demostrada con el intento fallido al lado
+  (candidatas del material: tipestate de Unit, autoridad temporal,
+  `request → grant|deny → materialize`, revocación, causalidad upstream, fallo
+  atómico) · `@logos/*` tratado como **namespace candidato del holón 02**, sin
+  crear repo ni mundo · **puerta de promoción escrita**: Inception Review
+  aprobada + `WP-E01` de E ratificada + una línea sintética cruzando E11 + dos
+  consumidores compilando; sólo entonces se extrae `@logos/lore-hm`, y el
+  origen definitivo **lo decide el custodio con esa evidencia, no antes**.
+- **Pri:** P0 · dep: L01
+
+### WP-SDK-L03 · capa-solid-de-primera-clase
+- **BRIEF:** diseñar **desde v1** la capa completa, con adapters escalonados.
+  Dos representaciones coordinadas: **wire JSON ejecutable**, validado por
+  JSON Schema y sellado por bytes, y **vista JSON-LD/RDF**, validada por
+  SHACL y **no autoritativa** salvo familias con canonicalización semántica
+  explícita. Identidad como **tres credenciales relacionadas y jamás
+  fusionadas** —WebID, PeerCard, ssbId—, cada vínculo una attestation
+  verificable con degradación honesta cuando falte una dimensión.
+  `PodProtocol` separado de sus providers (`LocalPodProvider` files-first del
+  playground con marca explícita de simulación · `SolidPodProvider` futuro
+  contra CSS/LDP); ambos exponen recursos por URI y **sólo el servidor Pod
+  decide acceso**. Autorización WAC/ACP con **relay sin autoridad**: H emite y
+  transporta, el Pod evalúa. Planos **Room/L2 y Solid Notifications/L1
+  separados**, correlacionados por activity id, trace y provenance — nunca
+  reenviados uno como el otro. Bridge MCP↔Solid: resources = passthrough por
+  la misma URI; tools = actividades que pueden producir artefactos en Pod;
+  **un nombre de tool nunca se convierte automáticamente en predicado RDF**.
+- **CA:** conformidad escalonada declarada con **lo que cada peldaño NO
+  garantiza** (v1 local simulado · v1.1 JSON-LD+SHACL · v2 CSS local con
+  WebID/WAC/ACP · v3 notifications y federación) · política de hash **DIC-4**
+  escrita: sha256 de bytes sellados por defecto, RDFC-1.0 sólo donde la
+  igualdad semántica sea requisito medido, y **la vista no altera
+  `huellaLedger`** · `Z_SDK#55` citado con URL, commit y **estado OPEN**, como
+  insumo por curar — prohibido copiarlo o afirmar que está implementado ·
+  reuso AS2 / PROV-O / DCTERMS antes de acuñar.
+- **Pri:** P1 · dep: L02
+
+### WP-SDK-L04 · registro-de-vocabulario
+- **BRIEF:** registro durable de decisiones de vocabulario: término, familia
+  (AS2 · PROV-O · DCTERMS · `hm:` · `lore:`), razón de la elección, fecha y
+  quién firma. Schema.org sólo como suplemento declarado.
+- **CA:** una fila por término acuñado y **cero acuñaciones sin razón** · el
+  gate de `WP-HUB-101` **consume este registro, no una copia** (probado
+  moviéndolo: el gate del hub se pone rojo) · un término que deja de usarse se
+  retira con fecha, no se borra.
+- **Pri:** P1 · dep: L03
+
+### WP-SDK-L05 · sellado-de-network-engine
+- **BRIEF:** sellar la generación anterior como **fuente histórica** del
+  lenguaje: definición, commit y decisiones anclados desde S. Ningún consumidor
+  conserva dependencia de runtime ni path hacia ella.
+- **CA:** grep con exit code = **cero** imports o paths hacia Network-Engine en
+  consumidores · junturas 01↔02, 02↔03 y 03↔04 actualizadas **sólo tras el
+  criterio notarial de madurez** · el asiento `HOLONES/03-emmanuel` **sin
+  inflar** hasta tick explícito del custodio · LORE-HM aparece en `HOLONES.md`
+  como **costura ejecutable, no como fila nueva**.
+- **Pri:** P2 · dep: L02
+
+---
+
 ## Lane · HORIZONTE
 
 ### WP-SDK-X01 · C6-P2P-en-mapa
@@ -258,10 +367,14 @@ WORLD_ROOT y no usa submodules como carpetas de trabajo.
 
 | prioridad | n |
 | --------- | -: |
-| P0 | 7 |
-| P1 | 19 |
-| P2 | 9 |
-| **Total** | **35** |
+| P0 | 9 |
+| P1 | 21 |
+| P2 | 10 |
+| **Total** | **40** |
+
+✎ **2026-08-02**: 35 → 40 por la lane **LENGUA (LORE-HM)** — `L01` y `L02` P0,
+`L03` y `L04` P1, `L05` P2. Promoción de la cola A del intake `WPS_QUEUE` por
+orden del product owner.
 
 ## Dependencias maestras
 
