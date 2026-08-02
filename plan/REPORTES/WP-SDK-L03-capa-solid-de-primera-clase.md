@@ -9,7 +9,7 @@
 | worktree | `C:/S_LAB/wt/s-sdk-wp-sdk-l03` |
 | HEAD base | `7a6ac45` (tip L02) |
 | preflight | `identidad-raiz: PASS` (`WORLD_ROOT`=`CANONICAL`=`C:/S_LAB/wt/s-sdk-wp-sdk-l03`, `READ_ONLY_ROOTS=[]`, `DOWNSTREAM_PATTERNS=[]`) |
-| tip entrega | _(se completa tras commit)_ |
+| tip entrega | `95a010dc695e19e76e0bae243bc6a410363bf139` |
 | riesgo de revisión | `independiente` |
 | revisor distinto del worker | `sí` · `VEREDICTO_REVISOR: ⏳ pendiente` |
 | estado propuesto | listo para revisión adversarial |
@@ -56,6 +56,9 @@ verificar-solid-l03: PASS
   Z_SDK#55: OPEN · 34613c1 · insumo no implementado
   package/PR: sin afirmación de implementado
 ```
+
+Tip feat: `95a010dc695e19e76e0bae243bc6a410363bf139` · rama `wp/sdk-l03-capa-solid-de-primera-clase`.
+
 
 ## Evidencia de riesgo y contrarrevisión
 
