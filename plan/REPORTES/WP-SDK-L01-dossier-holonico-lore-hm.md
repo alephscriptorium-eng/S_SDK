@@ -75,7 +75,7 @@ node DEVOPS/METODOLOGIA/holones/junturas/lore-hm-integracion-holonica/scripts/ve
 
 Comando: `git diff -- DEVOPS/METODOLOGIA/HOLONES.md DEVOPS/METODOLOGIA/holones/02-logos.md DEVOPS/METODOLOGIA/holones/03-revelacion.md DEVOPS/METODOLOGIA/holones/04-ilustracion.md HOLONES/03-emmanuel plan/BACKLOG.md plan/BACKLOG-F2.md`
 
-Resultado esperado: **vacío** (rellenar SHA en commit).
+Resultado: **vacío** · commit dossier `f94ce7cbc283f7e4e0f2b137ecc974cb3be8f7fb`.
 
 ## ¿Listo para revisión adversarial?
 
