@@ -8,6 +8,7 @@
 | rama | `wp/sdk-l02-inception-lengua-lore-hm` |
 | worktree | `C:/S_LAB/wt/s-sdk-wp-sdk-l02` |
 | HEAD base | `3d73075` (tip L01) |
+| tip entrega | `f2d702ad084703f0f6c02b1e53d94c8ef42a026e` |
 | riesgo de revisión | `independiente` |
 | revisor distinto del worker | `sí` · `VEREDICTO_REVISOR: ⏳ pendiente` |
 | estado propuesto | listo para revisión adversarial |
@@ -63,8 +64,13 @@ Check local `verificar-inception-l02.mjs`. Sin editar BACKLOG ni HOLONES.
 
 ```text
 $ node NETWORK-ENGINE/LANGUAGES/lore-hm/scripts/verificar-inception-l02.mjs
-(ver salida literal post-commit en §abajo / tip SHA)
+verificar-inception-l02: PASS
+  primitivas: Peer, Unit, Lease, Activity, Artifact (exactamente 5)
+  demo tipestate vs flat: presente
+  puerta promoción: escrita (sin extraer package)
 ```
+
+Tip push: `f2d702ad084703f0f6c02b1e53d94c8ef42a026e` · rama tracking `origin/wp/sdk-l02-inception-lengua-lore-hm`.
 
 ## Evidencia de riesgo y contrarrevisión
 
