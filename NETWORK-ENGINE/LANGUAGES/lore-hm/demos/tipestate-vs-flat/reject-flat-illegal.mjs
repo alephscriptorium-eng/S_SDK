@@ -202,24 +202,67 @@ const casos = JSON.parse(readFileSync(join(schemaDir, 'casos.json'), 'utf8'));
 }
 
 // ---------------------------------------------------------------------------
-// 6 · el discriminador REAL: exhaustividad, no expresividad
+// 6 · el discriminador, medido en LAS TRES formas
 // ---------------------------------------------------------------------------
+// Historia (WP-ZV-S B2+B4): este bloque cableaba el literal `'paused'` como
+// sonda y exigía que la sonda fuese permisiva. Dos consecuencias, las dos
+// malas:
+//   B2 · añadir la fase `paused` CORRECTAMENTE (tipo + tabla + A/B/C + cita)
+//        ponía el gate ROJO, mientras que añadir `suspended` —misma operación—
+//        pasaba. Misma operación, distinto nombre, distinto veredicto: la
+//        clase exacta que este WP vino a cerrar, estrechada a un nombre. Y
+//        `paused` es justamente el estado del `PodState` que este árbol promete
+//        reconciliar: la reconciliación nacía rota.
+//   B4 · sólo se medía la forma A, y se imprimía la conclusión como general.
+//        Con ajv: A permisiva, **B y C fail-closed** ante el mismo olvido. La
+//        «permisividad silenciosa» era artefacto del ESTILO de esquema, no de
+//        la config plana.
+// Ahora la sonda se DERIVA de un nombre ausente de PHASES y se miden las tres.
 {
-  // Añadimos una fase al enum del esquema SIN añadir su rama `if`.
-  // Es exactamente lo que pasaría al ampliar la máquina y olvidar el esquema.
-  const ampliado = JSON.parse(JSON.stringify(SCHEMAS.A));
-  ampliado.$defs.phase.enum.push('paused');
-  const validaAmpliado = compile(ampliado);
-  const silencioso = validaAmpliado({ from: 'paused', to: 'ready' }).valid;
-  if (!silencioso) {
+  let faseSonda = 'zzz-fase-sonda';
+  for (let i = 0; PHASES.includes(faseSonda); i++) faseSonda = `zzz-fase-sonda-${i}`;
+
+  /** Amplía el alfabeto de fases y NO añade la regla de transición de la nueva. */
+  const ampliarAlfabeto = (schema) => {
+    const s = JSON.parse(JSON.stringify(schema));
+    if (s.$defs?.phase?.enum) s.$defs.phase.enum.push(faseSonda);
+    return s;
+  };
+
+  const veredicto = {
+    A: compile(ampliarAlfabeto(SCHEMAS.A))({ from: faseSonda, to: 'ready' }).valid,
+    B: compile(ampliarAlfabeto(SCHEMAS.B))({ from: faseSonda, to: 'ready' }).valid,
+    C: compile(ampliarAlfabeto(SCHEMAS.C))({
+      unit: { iri: 'urn:lore-hm:unit:fm-mock-1', phase: 'ready' },
+      history: [{ from: faseSonda, to: 'ready' }],
+    }).valid,
+  };
+
+  console.log(
+    `  ·  olvido medido («${faseSonda}» en el alfabeto, sin su regla de transición`,
+  );
+  for (const forma of ['A', 'B', 'C']) {
+    console.log(
+      `       forma ${forma}: ${faseSonda}→ready = ${veredicto[forma] ? 'VÁLIDO (permisiva)' : 'INVÁLIDO (fail-closed)'}`,
+    );
+  }
+
+  // El discriminante que la medición sostiene: A (restricción por excepción)
+  // queda permisiva; B y C (enumeración de lo permitido) quedan fail-closed.
+  // Si esta relación deja de darse, la tesis de la demo cambió otra vez.
+  if (!(veredicto.A === true && veredicto.B === false && veredicto.C === false)) {
     fail(
-      'esperábamos que el esquema ampliado aceptara paused→ready (permisividad silenciosa); ' +
-        'si ya no lo hace, el discriminante de esta demo cambió y hay que reescribirla',
+      `discriminante cambiado: A=${veredicto.A} B=${veredicto.B} C=${veredicto.C} ` +
+        '(se esperaba A permisiva, B y C fail-closed). La conclusión de esta demo ' +
+        'depende de esta relación: vuelve a escribirla, no ajustes la sonda.',
     );
   } else {
-    ok('esquema + fase nueva sin rama `if` ⇒ paused→ready VÁLIDO: permisividad silenciosa, 0 errores');
-    console.log('       ⇒ el mismo olvido en `UnitPhase` pone rojo a tsc (describePhase, chequeo `never`)');
-    console.log('       ⇒ discriminante = EXHAUSTIVIDAD EN COMPILACIÓN, no expresividad');
+    ok('discriminante medido en LAS TRES formas, con sonda derivada (no un nombre cableado)');
+    console.log('       ⇒ la permisividad silenciosa es del ESTILO «restringir por excepción» (forma A),');
+    console.log('         NO de la config plana: la forma B —la tabla plana— es fail-closed, igual que tsc');
+    console.log('       ⇒ lo que aporta el tipestate: en TypeScript la forma cerrada es la única escribible');
+    console.log('         (unión cerrada + `never` en describePhase); en JSON Schema conviven las dos');
+    console.log('         y nada avisa de cuál se escribió');
   }
 
   // Punto ciego de las formas A/B: juzgan una transición, no una corrida.

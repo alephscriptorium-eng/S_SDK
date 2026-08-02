@@ -34,7 +34,7 @@ demostración de semántica no reducible a config plana.
 | [`src/primitives.ts`](src/primitives.ts) | Peer, Unit, Lease, Activity, Artifact |
 | [`src/projections.ts`](src/projections.ts) | Pod, Línea, Grafo, Universo, Corto, Barrio, Document Machine |
 | [`src/tipestate.ts`](src/tipestate.ts) | phantom states + transiciones legales |
-| [`demos/tipestate-vs-flat/`](demos/tipestate-vs-flat/) | regla imposible en config plana |
+| [`demos/tipestate-vs-flat/`](demos/tipestate-vs-flat/) | tipestate vs config plana: la regla **sí** se expresa en JSON Schema (tesis vieja refutada); lo que cambia es el estilo de esquema |
 | [`scripts/verificar-inception-l02.mjs`](scripts/verificar-inception-l02.mjs) | check local |
 
 ## Ontología nuclear (conteo exacto = 5)

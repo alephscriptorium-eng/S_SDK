@@ -9,7 +9,7 @@ import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { compile } from '../../ci/json-schema-mini.mjs';
-import { LEDGER_KEY, digestOf } from './sello-dic4.mjs';
+import { LEDGER_KEY, digestOf, parseWire } from './sello-dic4.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -211,10 +211,13 @@ const viewRaw = read('fixtures/view-activity.jsonld');
 let wire;
 let view;
 try {
-  wire = JSON.parse(read('fixtures/wire-activity.sealed.json'));
-  view = JSON.parse(viewRaw);
+  // `parseWire` rechaza claves duplicadas (B1). Con `JSON.parse` a secas, un
+  // fichero con dos `"actor"` —el primero ATACANTE, el segundo el legítimo—
+  // pasaba en VERDE: JSON.parse aplica último-gana y el digest cuadraba.
+  wire = parseWire(read('fixtures/wire-activity.sealed.json'));
+  view = parseWire(viewRaw);
 } catch (e) {
-  fail(`fixtures JSON inválido: ${e.message}`);
+  fail(`fixtures JSON inválido o con claves duplicadas: ${e.message}`);
 }
 
 if (wire) {
@@ -300,8 +303,66 @@ if (wire) {
         fail('SELLO CIEGO: provenance.wasAssociatedWith mutado NO mueve la huella');
       }
     }
+    // Claves hostiles inyectadas EN EL TEXTO del fichero, que es como llegarían.
+    // `__proto__` desaparecía del payload al canonicalizar sobre `{}` y NO movía
+    // la huella (medido en WP-ZV-S). Ojo: la sonda debe construirse parseando
+    // texto, no con un literal `{__proto__: …}`, que fija el prototipo en vez de
+    // crear una clave propia — construirla mal hace la prueba vacua.
+    {
+      const crudoWire = read('fixtures/wire-activity.sealed.json');
+      for (const [etiqueta, inyeccion] of [
+        ['__proto__ nivel raíz', '"__proto__": {"x": 1},'],
+        ['__proto__ con string', '"__proto__": "MUTADO",'],
+        ['constructor nivel raíz', '"constructor": "MUTADO",'],
+      ]) {
+        const textoHostil = crudoWire.replace(/(\n\s*)"actor":/, `$1${inyeccion}$1"actor":`);
+        probadas++;
+        if (textoHostil === crudoWire) {
+          fail(`no se pudo inyectar «${etiqueta}» en el texto del wire`);
+          inmoviles++;
+          continue;
+        }
+        const hostil = parseWire(textoHostil);
+        if (!Object.prototype.hasOwnProperty.call(hostil, etiqueta.split(' ')[0])) {
+          fail(`sonda inválida: «${etiqueta}» no quedó como clave propia tras parsear`);
+          inmoviles++;
+          continue;
+        }
+        if (digestOf(hostil) === recalculada) {
+          inmoviles++;
+          fail(`SELLO CIEGO: añadir «${etiqueta}» NO mueve la huella`);
+        }
+      }
+    }
     if (inmoviles === 0) {
       ok(`afirmativa: ${probadas} mutaciones del wire, ${probadas} mueven la huella (0 ciegas)`);
+    }
+  }
+
+  // (c2) claves duplicadas en el FICHERO: el sello debe rehusar leerlo.
+  {
+    const crudo = read('fixtures/wire-activity.sealed.json');
+    const conDuplicada = crudo.replace(
+      /(\n\s*)"actor":/,
+      '$1"actor": "urn:lore-hm:peer:ATACANTE",$1"actor":',
+    );
+    if (conDuplicada === crudo) {
+      fail('no se pudo construir la sonda de clave duplicada (¿cambió el fixture?)');
+    } else {
+      let rechazado = false;
+      try {
+        parseWire(conDuplicada);
+      } catch {
+        rechazado = true;
+      }
+      if (!rechazado) {
+        fail(
+          'SELLO CIEGO: un wire con dos claves «actor» se lee sin protestar — ' +
+            'JSON.parse aplica último-gana y el fichero deja de estar ligado',
+        );
+      } else {
+        ok('claves duplicadas en el fichero: rechazadas al leer (el sello liga lo que se leyó)');
+      }
     }
   }
 

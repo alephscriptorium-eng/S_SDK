@@ -1,10 +1,17 @@
 # Demo · tipestate vs config plana (WP-SDK-L02)
 
-> **Esta demo cambió de tesis.** La versión anterior concluía que la regla era
-> *imposible* de expresar en config plana. Es falso, y ahora está medido: los
-> tres esquemas de [`flat-schema/`](flat-schema/) la expresan. Lo que el
-> tipestate da y el esquema no es **exhaustividad en compilación**, no
-> expresividad. Detalle del cambio en `../../REPORTE-ZV-S.md` §⓪.
+> **Esta demo cambió de tesis dos veces, y las dos por medición.**
+>
+> 1. La versión original concluía que la regla era *imposible* de expresar en
+>    config plana. **Falso:** los tres esquemas de [`flat-schema/`](flat-schema/)
+>    la expresan (§⓪ del reporte).
+> 2. La primera corrección dijo que el discriminante era «exhaustividad en
+>    compilación», midiendo **sólo la forma A**. **También demasiado ancho:** la
+>    forma B —la tabla plana— es fail-closed ante el mismo olvido, igual que
+>    `tsc`. El contraejemplo estaba dentro de esta misma demo, sin medir.
+>
+> Lo que queda, con la anchura exacta que la medición sostiene, en §Conclusión.
+> Detalle en `../../REPORTE-ZV-S.md` §⓪ y §B4.
 
 ## La regla
 
@@ -47,36 +54,61 @@ rojo.
 $ node NETWORK-ENGINE/LANGUAGES/lore-hm/demos/tipestate-vs-flat/reject-flat-illegal.mjs
   OK: esquemas A y B ≡ TransitionMap de tipestate.ts: 72 pares, 0 desviaciones
   OK: config plana (JSON Schema 2020-12) RECHAZA declared→ready y ACEPTA declared→leased
-  OK: esquema + fase nueva sin rama `if` ⇒ paused→ready VÁLIDO: permisividad silenciosa, 0 errores
+  ·  olvido medido («zzz-fase-sonda» en el alfabeto, sin su regla de transición
+       forma A: zzz-fase-sonda→ready = VÁLIDO (permisiva)
+       forma B: zzz-fase-sonda→ready = INVÁLIDO (fail-closed)
+       forma C: zzz-fase-sonda→ready = INVÁLIDO (fail-closed)
+  OK: discriminante medido en LAS TRES formas, con sonda derivada (no un nombre cableado)
   OK: punto ciego medido: A acepta inflated→ready aislado; C lo rechaza porque exige la traza entera
   OK: illegalJump literal del fixture → INVÁLIDO por esquema A
 ```
 
 Cotejo del evaluador contra `ajv@8.20.0` (2020-12): **93 comparaciones, 0
-desviaciones** — procedimiento y salida literal en `REPORTE-ZV-S.md` §⓪.
+desviaciones sobre lo que estos tres esquemas ejercitan** — no es equivalencia
+sobre todo el subconjunto implementado. Procedimiento en `REPORTE-ZV-S.md` §⓪.
 
-## Conclusión (reescrita)
+## Conclusión (reescrita dos veces, con la anchura que la medición sostiene)
 
 1. **La regla SÍ se expresa con configuración plana.** JSON Schema 2020-12 la
    escribe en tres formas distintas y las tres rechazan `declared→ready`. La
-   tesis vieja —«≥1 regla imposible con config plana»— queda **refutada por
+   tesis original —«≥1 regla imposible con config plana»— queda **refutada por
    medición**, no matizada.
 
-2. **El discriminante es la exhaustividad, no la expresividad.** Añadir una
-   fase al `enum` del esquema sin añadir su rama `if` deja el esquema
-   *silenciosamente permisivo*: `paused→ready` pasa, cero errores. El mismo
-   olvido en `UnitPhase` pone rojo a `tsc` por el chequeo `never` de
-   `describePhase`. El esquema no tiene forma de saber que le falta una rama;
-   el compilador sí.
+2. **La permisividad silenciosa es del ESTILO de esquema, no de la config
+   plana.** Ante el mismo olvido —ampliar el alfabeto de fases y no añadir la
+   regla de transición de la nueva—:
 
-3. **El esquema juzga documentos; el tipo juzga programas.** La forma A acepta
+   | forma | estilo | veredicto |
+   | ----- | ------ | --------- |
+   | A | restringir **por excepción** (`if`/`then` por caso) | **permisiva** |
+   | B | enumerar **lo permitido** (`anyOf` de pares) | fail-closed |
+   | C | enumeración anidada sobre la traza | fail-closed |
+
+   La forma **B es literalmente «la tabla de configuración»** y es fail-closed
+   *igual que `tsc`*. Decir «el esquema plano no es exhaustivo» sería tan falso
+   como decir que la regla es inexpresable. Lo que falla es un estilo concreto.
+
+3. **Lo que aporta el tipestate: no deja escribir el estilo permisivo.** En
+   TypeScript la forma cerrada es la única disponible —una unión es cerrada, y
+   `never` en `describePhase` comprueba que no falta ninguna rama (medido:
+   `TS2322` al añadir una fase sin su caso)—. En JSON Schema las dos formas son
+   igual de idiomáticas, **nada avisa de cuál se escribió**, y sólo una es
+   segura ante la extensión. La garantía queda a merced de una decisión de
+   estilo que el formato no fuerza ni señala.
+
+4. **El esquema juzga documentos; el tipo juzga programas.** La forma A acepta
    `inflated→ready` aislado aunque la corrida nunca tuviera lease: sólo ve la
    transición que el documento se acordó de traer. La forma C lo cierra
    exigiendo la traza entera — es decir, exigiendo que quien produce el
    documento diga la verdad. El tipestate no pide colaboración: sin la cadena
    no hay manera de *construir* un `UnitState<'ready'>`.
 
-4. **Coste de deriva.** El esquema es un segundo artefacto que hay que
+5. **Coste de deriva.** El esquema es un segundo artefacto que hay que
    mantener sincronizado con la máquina. Esta demo tuvo que añadir un
    cross-check de 72 pares justamente para impedir que naciera una cuarta
    máquina de estados. El tipestate **es** la máquina.
+
+> La sonda del punto 2 **deriva** un nombre ausente de `UnitPhase`; no cablea
+> ninguno. Cablear `'paused'` hacía que añadir esa fase correctamente pusiera
+> el gate rojo mientras `'suspended'` pasaba — y `paused` es justo el estado
+> del `PodState` que este árbol promete reconciliar.

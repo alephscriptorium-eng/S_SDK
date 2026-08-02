@@ -4,9 +4,9 @@
  * Falla si primitivas ≠ 5 o si falta la demo tipestate vs flat.
  * No sustituye CI. Sin deps runtime OASIS.
  */
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
-import { dirname, join } from 'node:path';
+import { dirname, join, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -203,6 +203,66 @@ if (existsSync(pkgPath)) {
   const pkg = JSON.parse(readFileSync(pkgPath, 'utf8'));
   if (pkg.name === '@logos/lore-hm') {
     fail('package.json no debe llamarse @logos/lore-hm antes de la puerta');
+  }
+}
+
+// ---------------------------------------------------------------------------
+// --- B3 · la tesis REFUTADA no puede volver a certificarse en la lengua ---
+// ---------------------------------------------------------------------------
+// Tras refutar «regla imposible en config plana», tres sitios de la propia
+// lengua seguían firmándola —`docs/P1-P5.md` la daba por **verificada**
+// apuntando a la demo que mide lo contrario, `README.md` la repetía en su
+// tabla, y `src/tipestate.ts` la llevaba en la cabecera— y ningún gate miraba
+// ninguno. Este bloque recorre TODO el árbol de la lengua.
+{
+  const AFIRMACIONES_REFUTADAS = [
+    [/regla\s+imposible/i, '«regla imposible»'],
+    [/imposible\s+(de\s+)?(expresar|validar|garantizar|imponer)/i, '«imposible de expresar/validar/garantizar»'],
+    [/(config(uraci[oó]n)?\s+plana|json\s+plano)[^.\n]{0,60}\bno\s+puede\b/i, '«config plana no puede»'],
+    [/\bno\s+puede\b[^.\n]{0,60}(config(uraci[oó]n)?\s+plana|json\s+plano)/i, '«no puede … config plana»'],
+  ];
+  // Una cita queda exenta si su contexto la marca como corregida/histórica.
+  // Los marcadores se comparan sobre el texto con espacios colapsados, para que
+  // un salto de línea en medio de «la tesis \n vieja» no vuelva a esconder nada.
+  const MARCAS_CORRECCION =
+    /refut|tesis\s+vieja|correcci[oó]n|corregid|ya\s+no|s[íi]\s+(se\s+)?expresa|s[íi]\s+puede|es\s+fals|hist[oó]ric|dec[íi]a|lleg[oó]\s+a\s+decir|no\s+hay\b|desmient|antes\s+este/i;
+
+  const exts = new Set(['.md', '.ts', '.mjs', '.json']);
+  const archivos = [];
+  (function walk(dir) {
+    for (const ent of readdirSync(dir, { withFileTypes: true })) {
+      if (ent.name === 'node_modules' || ent.name === '.git') continue;
+      const abs = join(dir, ent.name);
+      if (ent.isDirectory()) walk(abs);
+      else if (exts.has(`.${ent.name.split('.').pop()}`)) archivos.push(abs);
+    }
+  })(ROOT);
+
+  let certificaciones = 0;
+  for (const abs of archivos) {
+    const rel = relative(ROOT, abs).split(sep).join('/');
+    const crudo = readFileSync(abs, 'utf8');
+    // Desnudar el énfasis SIN mover offsets (sustitución carácter a carácter):
+    // `regla **imposible** de expresar` tiene que casar igual que sin negrita.
+    // Es la misma clase que ya escondía la fila 08 en HOLONES.md.
+    const texto = crudo.replace(/[*_`~]/g, ' ');
+    for (const [re, etiqueta] of AFIRMACIONES_REFUTADAS) {
+      for (const m of texto.matchAll(new RegExp(re.source, `${re.flags}g`))) {
+        const ventana = texto
+          .slice(Math.max(0, m.index - 260), Math.min(texto.length, m.index + m[0].length + 260))
+          .replace(/[\s*_`>#|-]+/g, ' ');
+        if (MARCAS_CORRECCION.test(ventana)) continue;
+        const linea = texto.slice(0, m.index).split('\n').length;
+        fail(
+          `${rel}:${linea} certifica la tesis REFUTADA ${etiqueta}: «${m[0].trim()}» — ` +
+            'la medición de demos/tipestate-vs-flat la desmiente; corrígela o márcala como cita histórica',
+        );
+        certificaciones++;
+      }
+    }
+  }
+  if (certificaciones === 0) {
+    ok(`tesis refutada: 0 certificaciones vivas en ${archivos.length} ficheros de la lengua`);
   }
 }
 

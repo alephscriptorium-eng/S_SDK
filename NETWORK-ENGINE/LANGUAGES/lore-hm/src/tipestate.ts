@@ -1,7 +1,17 @@
 /**
  * Tipestate de Unit — phantom states + transiciones legales.
  * Regla: no se puede materializar/ready sin pasar por leased.
- * Imposible de garantizar con JSON plano + schema de strings.
+ *
+ * Esta cabecera decía «Imposible de garantizar con JSON plano + schema de
+ * strings». **Refutado por medición (WP-ZV-S ⓪):** un JSON Schema 2020-12
+ * garantiza la misma regla — ver `demos/tipestate-vs-flat/flat-schema/`, tres
+ * formas, confirmadas con ajv. Lo que aporta el tipestate es que la forma
+ * cerrada es la única escribible en TypeScript, mientras que en JSON Schema
+ * conviven una forma cerrada y una permisiva y nada avisa de cuál se escribió.
+ *
+ * **Este fichero es la máquina canónica.** `reject-flat-illegal.mjs` deriva de
+ * aquí `UnitPhase` y `TransitionMap`; los esquemas planos se cotejan contra
+ * ellos en cada corrida.
  */
 
 import type { Iri } from './brands.js';
