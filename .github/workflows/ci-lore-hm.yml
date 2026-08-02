@@ -1,0 +1,49 @@
+# CI LORE-HM · LENGUA (s-sdk) — gates que BLOQUEAN.
+# Cablea verificar-*.mjs L01–L05 (antes solo corridas manuales en informes).
+# Cero continue-on-error funcionales.
+name: CI LORE-HM
+
+on:
+  push:
+    branches:
+      - main
+      - 'wp/**'
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-lore-hm-sdk-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lengua:
+    name: lore-hm lengua gates
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install (npm ci)
+        run: npm ci
+
+      - name: verificar-dossier-l01
+        run: node DEVOPS/METODOLOGIA/holones/junturas/lore-hm-integracion-holonica/scripts/verificar-dossier-l01.mjs
+
+      - name: verificar-inception-l02
+        run: node NETWORK-ENGINE/LANGUAGES/lore-hm/scripts/verificar-inception-l02.mjs
+
+      - name: verificar-solid-l03
+        run: node NETWORK-ENGINE/LANGUAGES/lore-hm/solid/scripts/verificar-solid-l03.mjs
+
+      - name: verificar-vocab-l04
+        run: node NETWORK-ENGINE/LANGUAGES/lore-hm/vocab/scripts/verificar-vocab-l04.mjs
+
+      - name: verificar-sellado-l05
+        run: node NETWORK-ENGINE/LANGUAGES/lore-hm/scripts/verificar-sellado-l05.mjs
+
+      - name: Suite LENGUA (ROJO-PLANTADO + re-run)
+        run: npm run test:lore-hm-lengua

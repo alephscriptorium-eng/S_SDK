@@ -12,6 +12,7 @@
     "docs:build": "vitepress build docs",
     "skills:sync": "alephscript-skills-sync --runtime claude",
     "changelog:check": "node node_modules/@alephscript/skills-scriptorium/skills/swarm-orquestacion/scripts/verificar-changelog.mjs --role gobierno --backlog plan/BACKLOG.md --changelog CHANGELOG.md --version I9",
+    "test:lore-hm-lengua": "node DEVOPS/METODOLOGIA/holones/junturas/lore-hm-integracion-holonica/scripts/suite-lengua.mjs",
     "scrum:preview": "node node_modules/@alephscript/skills-scriptorium/skills/swarm-orquestacion/scripts/proyectar-backlog.mjs export --dry-run --backlog plan/BACKLOG.md --map plan/.sync-map.json",
     "scrum:preview:city": "node node_modules/@alephscript/skills-scriptorium/skills/swarm-orquestacion/scripts/proyectar-backlog.mjs export --dry-run --backlog plan/SPRINTS/sprint-game-city/BACKLOG.md --map plan/SPRINTS/sprint-game-city/.sync-map.json --alcance todos"
   },
