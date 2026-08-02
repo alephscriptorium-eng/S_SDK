@@ -9,3 +9,11 @@ don y se descarta al donante.
 
 ## Material excedente
 (pendiente)
+
+## Costura LORE-HM (WP-SDK-L05)
+
+⏳ pendiente — criterio notarial de madurez (E01+E11) sigue en 🔴
+(`2026-07-16-dossier-notaria-tres-liturgias.md` §4). **No** se inventa material
+excedente LORE-HM aquí hasta acta 🟢. Sellado histórico de incubación (fuente
+histórica, no runtime): `NETWORK-ENGINE/LANGUAGES/lore-hm/` ·
+`NETWORK-ENGINE/LANGUAGES/lore-hm/docs/SELLADO.md`.

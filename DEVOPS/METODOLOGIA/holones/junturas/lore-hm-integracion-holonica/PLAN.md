@@ -105,9 +105,9 @@
 | - | ---- | ------ |
 | 6.1 | Dos consumidores registry smoke | **decisión pendiente** |
 | 6.2 | Extraer `@logos/lore-hm` fuera de NE | **decisión pendiente** |
-| 6.3 | Sellar NE como fuente histórica | **hipótesis** |
-| 6.4 | Actualizar junturas tras madurez | **decisión pendiente** |
-| 6.5 | `HOLONES.md` sin octava fila | **verificada** — decisión tomada |
+| 6.3 | Sellar NE como fuente histórica | **verificada** — WP-SDK-L05 (`docs/SELLADO.md` + grep-gate) |
+| 6.4 | Actualizar junturas tras madurez | **decisión pendiente** — L05 documentó ⏳ pendiente (madurez 🔴) |
+| 6.5 | `HOLONES.md` sin octava fila | **verificada** — costura LORE-HM en HOLONES.md (L05); 7 filas |
 
 ---
 

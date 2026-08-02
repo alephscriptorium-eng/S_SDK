@@ -76,8 +76,14 @@ dependencias runtime de LORE-HM (`BACKLOG-F2.md` lane LENGUA, CA L01).
 | 03↔04 | `03-04-revelacion-ilustracion.md` | incubación lenguaje en 04; activación en 03 | **verificada** |
 | 01↔03 (notaría) | `2026-07-16-dossier-notaria-tres-liturgias.md` | madurez E01+E11 antes de promover Logos | **verificada** |
 
-**decisión pendiente** — Actualizar texto de junturas 01↔02, 02↔03, 03↔04 con
-costura LORE-HM solo tras criterio notarial de madurez (plan §44).
+**verificada** — WP-SDK-L05: junturas 01↔02·02↔03·03↔04 llevan nota
+`⏳ pendiente` (madurez E01+E11 en 🔴); **no** se inventó cuerpo LORE-HM.
+Actualización de material excedente sigue **decisión pendiente** tras acta 🟢
+(plan §44 · DA-L01-05).
+
+**verificada** — Sellado histórico: `NETWORK-ENGINE/LANGUAGES/lore-hm` =
+incubación/fuente histórica en s-sdk, no consumidor runtime
+(`NETWORK-ENGINE/LANGUAGES/lore-hm/docs/SELLADO.md`).
 
 ## Diagrama de escalas (referencia)
 

@@ -18,7 +18,7 @@
 | S-SDK (07) | notaría | junturas, anclas, pins registry; **no** runtime ajeno | RO + registro | N/A (dueño método) | **verificada** |
 | Logos (02) | destino `@logos/lore-hm` | definición lengua desde incubación 04 | **no existe** | Inception Review + 2 consumidores | **hipótesis** |
 | E-SDK (03) | sound system | implementa `DocumentMachineProvider` gobernado por lengua | **no existe** (e-sdk vacío al medir 112) | E01, E11, E12, E13 | **verificada** — spike 112 |
-| Network-Engine (04) | incubación | protocolo LANGUAGES; árbol `lore-hm` temporal | **no verificado** en L01 | extracción package sin deps runtime | **hipótesis** |
+| Network-Engine (04) | incubación / **fuente histórica** en s-sdk | protocolo LANGUAGES; árbol `lore-hm` sellado L05 — **no** runtime consumer | histórico (L05) | extracción package sin deps runtime | **verificada** — sellado L05; promoción package **decisión pendiente** |
 | Zeus (01) | contratos | `@zeus/linea-kit`, `acta-kit`, `linea-system`, `force-system` | parcial | cola B U245–U249 (fuera L01) | **verificada** — `QUEUE-B-ZEUS-TIPADO` |
 | Playground (hub) | conformidad | lengua + Zeus + provider E o contingencia | **simulacro** | GHM + verificador 107 | **verificada** — spike 112 |
 | Playground | import Onfalo | editoriales RO + manifiesto build-time | **real** (material) | WP-HUB-104 | **verificada** — spike 112 |

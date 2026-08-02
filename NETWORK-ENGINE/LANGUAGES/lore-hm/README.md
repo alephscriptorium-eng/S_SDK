@@ -1,9 +1,11 @@
-# LORE-HM · incubación (WP-SDK-L02)
+# LORE-HM · incubación / fuente histórica (L02–L05)
 
-> **Incubación en s-sdk** bajo protocolo de lenguajes del holón 04
-> (`NETWORK-ENGINE/LANGUAGES/`). **No** es package publicable. **No** introduce
-> dependencias del runtime OASIS. Namespace candidato futuro: `@logos/lore-hm`
-> (holón 02) — ver [`docs/NAMESPACE.md`](docs/NAMESPACE.md).
+> **Incubación sellada en s-sdk** (WP-SDK-L05) bajo protocolo de lenguajes del
+> holón 04 (`NETWORK-ENGINE/LANGUAGES/`). Es **fuente histórica** del lenguaje,
+> **no** runtime consumer ni package publicable. **No** introduce dependencias
+> del runtime OASIS. Namespace candidato futuro: `@logos/lore-hm` (holón 02) —
+> ver [`docs/NAMESPACE.md`](docs/NAMESPACE.md). Sellado:
+> [`docs/SELLADO.md`](docs/SELLADO.md).
 
 ## Mandato
 
@@ -27,6 +29,7 @@ demostración de semántica no reducible a config plana.
 | [`docs/PUERTA-PROMOCION.md`](docs/PUERTA-PROMOCION.md) | gates antes de extraer package |
 | [`docs/NAMESPACE.md`](docs/NAMESPACE.md) | `@logos/*` candidato, sin repo |
 | [`docs/CONSUMO-HUB-101.md`](docs/CONSUMO-HUB-101.md) | contrato: gate hub-101 consume el registro L04 |
+| [`docs/SELLADO.md`](docs/SELLADO.md) | sellado histórico Network-Engine (WP-SDK-L05) |
 | [`vocab/registro.json`](vocab/registro.json) | registro durable de vocabulario (WP-SDK-L04) |
 | [`src/primitives.ts`](src/primitives.ts) | Peer, Unit, Lease, Activity, Artifact |
 | [`src/projections.ts`](src/projections.ts) | Pod, Línea, Grafo, Universo, Corto, Barrio, Document Machine |
@@ -50,10 +53,12 @@ Todo lo demás (Pod, Línea, Grafo, Universo, Corto, Barrio, Document Machine) e
 ```bash
 node NETWORK-ENGINE/LANGUAGES/lore-hm/scripts/verificar-inception-l02.mjs
 node NETWORK-ENGINE/LANGUAGES/lore-hm/vocab/scripts/verificar-vocab-l04.mjs
+node NETWORK-ENGINE/LANGUAGES/lore-hm/scripts/verificar-sellado-l05.mjs
 ```
 
-Falla si el conteo de primitivas ≠ 5, si falta la demo tipestate vs flat, o si
-el registro de vocabulario se mueve / tiene acuñaciones sin razón.
+Falla si el conteo de primitivas ≠ 5, si falta la demo tipestate vs flat, si
+el registro de vocabulario se mueve / tiene acuñaciones sin razón, o si algún
+consumidor conserva import/path runtime hacia `NETWORK-ENGINE`.
 
 ## Herencia
 
