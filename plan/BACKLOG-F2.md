@@ -323,7 +323,7 @@ gobernada y notariada por **07**. `HOLONES.md` sigue con **siete filas**.
 - **Pri:** P1 · dep: L02
 - **Estado:** ✅ ola 3 · tip `397a4c5` · rama `wp/sdk-l03-capa-solid-de-primera-clase` · PASS_CON_ADDENDA · verde **local** · **sin merge main**
 
-### WP-SDK-L04 · registro-de-vocabulario
+### WP-SDK-L04 · registro-de-vocabulario ✅
 - **BRIEF:** registro durable de decisiones de vocabulario: término, familia
   (AS2 · PROV-O · DCTERMS · `hm:` · `lore:`), razón de la elección, fecha y
   quién firma. Schema.org sólo como suplemento declarado.
@@ -332,6 +332,7 @@ gobernada y notariada por **07**. `HOLONES.md` sigue con **siete filas**.
   moviéndolo: el gate del hub se pone rojo) · un término que deja de usarse se
   retira con fecha, no se borra.
 - **Pri:** P1 · dep: L03
+- **Estado:** ✅ ola 4 · tip `231bd3a` · rama `wp/sdk-l04-registro-de-vocabulario` · PASS_CON_ADDENDA (hub-101 stub→consumo documentado; cableado hub pendiente) · verde **local** · **sin merge main**
 
 ### WP-SDK-L05 · sellado-de-network-engine
 - **BRIEF:** sellar la generación anterior como **fuente histórica** del
@@ -392,6 +393,8 @@ verde local; sin merge main).
 
 ✎ **2026-08-02**: ola 3 GO — `WP-SDK-L03` 🔶 despachado (wt
 `C:/S_LAB/wt/s-sdk-wp-sdk-l03`, base tip `7a6ac45`).
+
+✎ **2026-08-02**: ola 4 — `WP-SDK-L04` ✅ (tip `231bd3a`; PASS_CON_ADDENDA; verde local).
 
 ✎ **2026-08-02**: ola 3 — `WP-SDK-L03` ✅ (PASS_CON_ADDENDA; tip `397a4c5`; verde local; sin merge main).
 
