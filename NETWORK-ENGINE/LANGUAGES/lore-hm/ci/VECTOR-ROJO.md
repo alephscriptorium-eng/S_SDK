@@ -18,7 +18,7 @@
 | ------ | ------ | ---------- | --- |
 | arnés verde | [30742441514](https://github.com/alephscriptorium-eng/S_SDK/actions/runs/30742441514) | success | `547cd22` |
 | rojo plantado | [30742459266](https://github.com/alephscriptorium-eng/S_SDK/actions/runs/30742459266) | **failure** | `8d65633` |
-| restaura verde | _este commit_ | | |
+| restaura verde | [30742478102](https://github.com/alephscriptorium-eng/S_SDK/actions/runs/30742478102) | success | `225d21f` |
 
 ## Verificadores cableados
 
